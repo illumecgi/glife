@@ -62,29 +62,28 @@ if $ARGS[0] = 'start':
 		act 'Go to the Venereology':
 			cls
 			'In the waiting room is an advertisement.'
-			*nl
+			''
 			'	Private Sexually Transmitted Infection Clinic provides the following treatment.'
 			'		Complete cure for herpes - 150,000 rubles.'
 			'		Complete cure of syphilis - 350,000 rubles.'
 			'		Complete cure for yeast infection - 50,000 rubles.'
 			'	Treatment requires hospitalization on first Monday of each month'
 
-			act 'Make a VD test (1,000 rubles)'
+			act 'Make a VD test (1,000 rubles)':
 				money -= 1000
 				minut += 60
 				gs 'stat'
 				'You took the tests and after a short wait the doctor called you into his office.'
 
-				if venera > 0:'The doctor pulled a sad mine and said that you are not going smoothly with analyzes.'
+				if venera > 0:'The doctor frowns and tells you that the test did not well.'
 
 				if GerpesOnce = 1:
-					'You have found genital herpes. This disease is not curable and it can only jam at a time.'
+					'You have  genital herpes. This disease is not curable and it can only jam at a time.'
 
 					if Gerpes >= 3:
 						if GerpesNapr = 0:GerpesNapr = 3 & 'Here you have the direction of the shots herpes. Needs a course out of 3 injections, each injection will cost 1,000 rubles.'
 						if GerpesNapr > 0:'Go for shots herpes direction I gave you.'
-
-					else
+					else:
 						'Herpes you in an inactive stage, take vitamins and he does not show himself.'
 					end
 				end
@@ -119,96 +118,97 @@ if $ARGS[0] = 'start':
 
 			if GerpesNapr > 0 and GerpesUkolDay ! day:
 				act 'Go for shots of herpes (1,000 rubles). Remaining <<GerpesNapr>> in the direction of injection':
-				cls
-				money -= 1000
-				minut += 60
-				GerpesUkolDay = day
-				GerpesNapr -= 1
-				gs 'stat'
-				'You made a very painful injection in the ass.'
+					cls
+					money -= 1000
+					minut += 60
+					GerpesUkolDay = day
+					GerpesNapr -= 1
+					gs 'stat'
+					'You made a very painful injection in the ass.'
 
-				if GerpesNapr = 0:Gerpes = -10 & 'It was the last injection'
+					if GerpesNapr = 0:Gerpes = -10 & 'It was the last injection'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
+		
+			if TriperNapr > 0 and money >= 1500 and TriperUkolDay ! day:
+				act 'Go for shots of gonorrhea (1,500 rubles). Remaining <<TriperNapr>> in the direction of injection':
+					cls
+					money -= 1500
+					minut += 60
+					TriperUkolDay = day
+					TriperNapr -= 1
+					gs 'stat'
+					'You made a very painful injection in the ass.'
 
-		if TriperNapr > 0 and money >= 1500 and TriperUkolDay ! day:
-			act 'Go for shots of gonorrhea (1,500 rubles). Remaining <<TriperNapr>> in the direction of injection':
-				cls
-				money -= 1500
-				minut += 60
-				TriperUkolDay = day
-				TriperNapr -= 1
-				gs 'stat'
-				'You made a very painful injection in the ass.'
+					if TriperNapr = 0:Triper = 0 & Venera -= 1 & TriperOnce = 0 & 'It was the last injection'
 
-				if TriperNapr = 0:Triper = 0 & Venera -= 1 & TriperOnce = 0 & 'It was the last injection'
-
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if money >= 5000 and SifNapr > 0 and SifUkolDay ! day:
-			act 'Go to injections of syphilis (5,000 rubles). Remaining <<SifNapr>> in the direction of injection':
-				cls
-				money -= 5000
-				minut += 60
-				SifUkolDay = day
-				SifNapr -= 1
-				gs 'stat'
-				'You made a very painful injection in the ass.'
+			if money >= 5000 and SifNapr > 0 and SifUkolDay ! day:
+				act 'Go to injections of syphilis (5,000 rubles). Remaining <<SifNapr>> in the direction of injection':
+					cls
+					money -= 5000
+					minut += 60
+					SifUkolDay = day
+					SifNapr -= 1
+					gs 'stat'
+					'You made a very painful injection in the ass.'
 
-				if SifNapr = 0:Sifilis = 0 & 'It was the last injection'
+					if SifNapr = 0:Sifilis = 0 & 'It was the last injection'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if GerpesOnce = 1 and money >= 150000 and week = 1 and day <= 10:
-			act 'Go to private clinic for the complete cure of the herpes (150,000 rubles)':
-				cla
-				money -= 150000
-				day += 3
-				week += 3
-				GerpesOnce = 0
-				Gerpes = 0
-				Venera -= 1
-				gs 'stat'
-				'You have lain three days in private clinics and were completely cured of herpes.'
+			if GerpesOnce = 1 and money >= 150000 and week = 1 and day <= 10:
+				act 'Go to private clinic for the complete cure of the herpes (150,000 rubles)':
+					cla
+					money -= 150000
+					day += 3
+					week += 3
+					GerpesOnce = 0
+					Gerpes = 0
+					Venera -= 1
+					gs 'stat'
+					'You have lain three days in private clinics and were completely cured of herpes.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if SifacOnce = 1 and money >= 350000 and week = 1 and day <= 10:
-			act 'Go to private clinics for the complete cure of syphilis. (350,000 rubles)':
-				cla
-				money -= 350000
-				day += 3
-				week += 3
-				SifacOnce = 0
-				Sifilis = 0
-				Venera -= 1
-				gs 'stat'
-				'You have lain three days in private clinics and were completely cured of syphilis.'
+			if SifacOnce = 1 and money >= 350000 and week = 1 and day <= 10:
+				act 'Go to private clinics for the complete cure of syphilis. (350,000 rubles)':
+					cla
+					money -= 350000
+					day += 3
+					week += 3
+					SifacOnce = 0
+					Sifilis = 0
+					Venera -= 1
+					gs 'stat'
+					'You have lain three days in private clinics and were completely cured of syphilis.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if KandidozOnce = 1 and money >= 50000 and week = 1 and day <= 10:
-			act 'Go to private clinics for the complete cure of the thrush. (50,000 rubles)':
-				cla
-				money -= 50000
-				day += 3
-				week += 3
-				KandidozOnce = 0
-				Kandidoz = 0
-				gs 'stat'
-				'You have lain three days in private clinics and were completely cured of thrush.'
+			if KandidozOnce = 1 and money >= 50000 and week = 1 and day <= 10:
+				act 'Go to private clinics for the complete cure of the thrush. (50,000 rubles)':
+					cla
+					money -= 50000
+					day += 3
+					week += 3
+					KandidozOnce = 0
+					Kandidoz = 0
+					gs 'stat'
+					'You have lain three days in private clinics and were completely cured of thrush.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
 		end
 	end

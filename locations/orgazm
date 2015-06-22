@@ -21,7 +21,7 @@ if $ARGS[0] = 'start':
 		horny = 0
 		manna -= 10
 		willpower -= 10
-		'It is your time of the month and, as member rams into you, vaginal blood flows slowly around his girth. Painful sensations and pleasure mix. You moan while his strong <<dick>> centimeter dick fucks your pussy.'
+		'It is your time of the month and, as his member rams into you, vaginal blood flows slowly around his girth. Painful sensations and pleasure mix. You moan while his strong <<dick>> centimeter dick fucks your pussy.'
 	elseif mesec <= 0 and vagina > 0:
 		!!no monthly
 		!!horny - excitement
@@ -100,7 +100,7 @@ if $ARGS[0] = 'start':
 			horny = 0
 			manna -= 15
 			willpower -= 15
-			'You groan in pain when <<$nameV>> enters you; tears flowing from your eyes as a you absorb the feeling of driving a red-hot rod between your legs. You cry and moan while his strong <<dick>> centimeter dick fucks your pussy.'
+			'You groan in pain when <<$nameV>> enters you, tears flowing from your eyes as a you endure the feeling of driving a red-hot rod between your legs. You cry and moan while his strong <<dick>> centimeter dick fucks your pussy.'
 		elseif orgazm = 1:
 			horny -= 10
 			manna -= 10
@@ -110,7 +110,7 @@ if $ARGS[0] = 'start':
 			horny -= 5
 			manna -= 5
 			willpower -= 5
-			'You wince at the sudden pain when <<$nameV>> you enters, the pain between your legs gradually becoming calm and quite tolerable. You try to get aroused while his strong <<dick>> centimeter dick fucks your pussy, but it is not enough.'
+			'You wince at the sudden pain when <<$nameV>> enters you, the pain between your legs gradually calms and becomes quite tolerable. You try to get aroused while his strong <<dick>> centimeter dick fucks your pussy, but it is not enough.'
 		elseif orgazm = 3:
 			!!horny += 5
 			manna += 5
@@ -126,17 +126,15 @@ if $ARGS[0] = 'start':
 			manna += 15
 			willpower += 15
 			orgasm += 1
-			'You gasp at the feeling as  your pussy spreads for his dick. Your groin becomes very warm and pleasant, when his strong <<dick>> centimeter dick hammers your pussy. Gradually a pleasant warmth ripples in your lower abdomen and then the feeling intensifies and your whole body tenses as the hot waves of orgasm rush over you, you can not help screaming in pleasure as you writhe under the sensation.'
+			'You gasp at the feeling as your pussy spreads for his dick. Your groin becomes very warm and pleasant, when his strong <<dick>> centimeter dick hammers your pussy. Gradually the pleasant warmth ripples in your lower abdomen and then the feeling intensifies and your whole body tenses as the hot waves of orgasm rush over you. You can not help screaming in pleasure as you writhe under the sensation.'
 		elseif orgazm = 6:
 			horny += 5
 			manna += 5
 			willpower += 5
-			'You feel his member as <<$nameV>> enters you. The feeling between your legs is pleasant, but his <<dick>> centimeter shaft isn't enough to truly fill you. Gradually a pleasant warmth ripples in your lower abdomen, but the feeling diminishes before building into a true orgasm.'
+			'You feel every inch as his member enters your pussy when <<$nameV>> slides home. It is a pleasant feeling, but his dick is significantly smaller than you prefer and <<dick>> inches is not enough for you. Gradually, a pleasant ripples grows in your lower abdomen, but the feeling never rises to true orgasm.'
 		end
 
-		if vagina <= dick:
-			vagina += 1
-		end
+		if vagina <= dick:vagina += 1
 	elseif vagina = 0 and mesec <= 0:
 		horny = 0
 		manna -= 15
@@ -158,7 +156,7 @@ if $ARGS[0] = 'start':
 				gs 'preg'
 				manna -= 15
 				willpower -= 15
-				'Hell, you could get pregnant, you thought with horror.'
+				'Hell, you could get pregnant, you think in horror.'
 			end
 		elseif finrand = 1:
 			!!out
@@ -172,7 +170,7 @@ if $ARGS[0] = 'start':
 		end
 	elseif protect = 1:
 		protect = 0
-		'<<$nameV>> groans and you feel heat building deep in your pussy. You realize that he has filled the condom.'
+		'<<$nameV>> groans and you feel heat building deep inside. You realize that he has filled the condom.'
 	end
 
 	pose = 0

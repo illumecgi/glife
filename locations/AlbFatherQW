@@ -5,7 +5,7 @@ $din_zajava_albfather = {
 		minut += 1
 		AlbFather = 2
 		gs 'stat'
-		'You've agreed to write a statement. The Captain nodded, "You''re a smart girl, you chose the right side of the law. Come to the car, I have everything there to take down your statement."'
+		'You''ve agreed to write a statement. The Captain nodded, "You''re a smart girl, you chose the right side of the law. Come to the car, I have everything there to take down your statement."'
 
 		act 'Go with Chernov':
 			cls
@@ -25,7 +25,7 @@ $din_zajava_albfather_no2 = {
 		minut += 1
 		AlbFather = -1
 		gs 'stat'
-		'You stubbornly refused to give any information to the officer. The Captain sighed in resignation , "If that's the way you wanna play it, but just remember you just made yourself a bunch of enemies!"'
+		'You stubbornly refused to give any information to the officer. The Captain sighed in resignation , "If that''s the way you wanna play it, but just remember you just made yourself a bunch of enemies!"'
 
 		act 'Warn Albina':
 			cls
@@ -33,7 +33,7 @@ $din_zajava_albfather_no2 = {
 			AlbFrend = 1
 			ZvezdEnd = 1
 			gs 'stat'
-			'You quickly dialed Albina's number. In a harried tone you told her of the events that had just transpired. There was a short pause and Albina thanked you and hung up.'
+			'You quickly dialed Albina''s number. In a harried tone you told her of the events that had just transpired. There was a short pause and Albina thanked you and hung up.'
 
 			act 'Escape':gt 'gorodok'
 		end
@@ -45,7 +45,7 @@ $din_zajava_albfather_no = {
 		cls
 		minut += 1
 		gs 'stat'
-		'You refused to write a statement, yet the captain still tried to persuade you. "Think of the consequences. If we don't catch Albina, then it will be someone else. After all I don't really mind as long as find a culprit, she'll get nothing due to a lack of evidence..."'
+		'You refused to write a statement, yet the captain still tried to persuade you. "Think of the consequences. If we don''t catch Albina, then it will be someone else. After all I don''t really mind as long as find a culprit, she''ll get nothing due to a lack of evidence..."'
 
 		if intel >= 80:
 			act 'Ask him why you should give him information':

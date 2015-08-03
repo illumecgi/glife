@@ -127,7 +127,7 @@ $objskills = {
 		if Suspeh >= 90:pl 'You are an A+ student.'
 		if Suspeh >= 80 and Suspeh < 90:pl 'You are a bright student, just not the top of your class.'
 		if Suspeh >= 70 and Suspeh < 80:pl 'You are an above average student, but you have to work hard to keep up.'
-		if Suspeh >= 60 and Suspeh < 70:pl "You are the typical average student. You're good in the fields you like, but can't be bothered with the rest."
+		if Suspeh >= 60 and Suspeh < 70:pl 'You are the typical average student. You''re good in the fields you like, but can''t be bothered with the rest.'
 		if Suspeh >= 50 and Suspeh < 60:pl 'You''re not very good in school, you wish you could be somewhere else and your grades show it.'
 		if Suspeh >= 40 and Suspeh < 50:pl 'You are not cut out for school, you skip out most of the time. You wonder how you''re going to manage to get passing grades.'
 		if Suspeh < 40:pl 'You are the class nitwit. You''re still not sure how you got this far in the first place.'
@@ -187,16 +187,18 @@ $objstatistika = {
 	end
 
 	if nastjaQW > 0:pl 'Friendship with Nastya <<nastjaqw>>'
+	if tanya > 0:pl 'Friendship with Tanya <<tanya>>'
 	if kat > 0:pl 'Friendship with Kate <<kat>>'
 	if vika > 0:pl 'Friendship with Vika <<vika>>'
 	if Irina > 0:pl 'Friendship with Irene <<Irina>>'
 	if Tamara > 0:pl 'Friendship with Tamara <<Tamara>>'
 	if alla > 0:pl 'Friendship with Alla <<alla>>'
 	if masha > 0:pl 'Friendship with Masha <<masha>>'
-	if Givi > 0:pl 'Friendship Givi K. <<Givi>>'
+	if Givi > 0:pl 'Friendship with Givi K. <<Givi>>'
 	if Ashot > 0:pl 'Friendship with Ashot <<Ashot>>'
 	if Dmitry > 0:pl 'Friendship with Dima <<Dmitry>>'
 	if afra > 0:pl 'Friendship with blacks <<afra>>'
+
 	!!!WD: Formatting
 	if (Irina + Givi + Ashot + Tamara + Dmitry + afra + gosh + vika + kat + nastjaqw + tanya) > 0:nl
 	!!!
@@ -1092,6 +1094,7 @@ $objautosave = {
 
 	gs 'stat'
 }
+
 $menu_character[0] = 'Description:$menu_descrip'
 $menu_character[1] = 'Characteristics:$menu_skills'
 $menu_character[2] = 'Usage:$menu_statistika'
@@ -1140,6 +1143,7 @@ else
 	if $selobj = 'Disable autosave':dynamic $objautosave
 end
 !!old menu: end
+
 !!The new menu: beginning
 if $selobj = 'Character':menu '$menu_character'
 if $selobj = 'See':menu '$menu_lookon'
@@ -1153,6 +1157,11 @@ if $selobj = 'Player':
 	pl 'Growth <<rost>> cm, weight 100 kg.'
 end
 
+! WD: broken 'Menu' fix, remove Menu.Builder
+$menu_mainMenu[0] = 'Statusbar:MenuMainLoc'
+$menu_mainMenu[1] = 'Text notation:MenuMainLoc'
+if $selobj = 'Menu':menu '$menu_mainMenu'
+!'
 if $selobj = 'Menu':
 	clr
 	gs 'Menu.Create', 'mainMenu'
@@ -1160,6 +1169,7 @@ if $selobj = 'Menu':
 	gs 'Menu.Add', 'mainMenu', 'text notation', '', 'MenuMainLoc', '1'
 	gs 'Menu.Call', 'mainMenu'
 end
+'!
 
 unselect
 

@@ -332,7 +332,7 @@ if $ARGS[0] = 'home':
 
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_03.jpg"></center>'
 					'-Certainly sister, i understand, I will walk until late, just do not make noise loud, You do not want to destroy the psyche of our brother, hee-hee.'
-					'-You''re the best", your sister with a cry of joy hugs you.'
+					'"-You''re the best", your sister with a cry of joy hugs you.'
 
 					act 'Finish':gt 'sister', 'home'
 				end
@@ -367,8 +367,8 @@ if $ARGS[0] = 'home':
 					gs 'stat'
 
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_03.jpg"></center>'
-					'-Certainly sister, i understand, I will walk until late, just do not make noise loud, You do not want to destroy the psyche of our brother, hee-hee.'
-					'-You''re my best", your sister with a cry of joy hugs you.'
+					'-Certainly sister, I understand, I will walk until late, just do not make noise loud, You do not want to destroy the psyche of our brother, hee-hee.'
+					'"-You''re my best", your sister with a cry of joy hugs you.'
 
 					act 'Finish':gt 'sister', 'home'
 				end

@@ -29,7 +29,7 @@ act 'Chat':
 		else
 			gt 'kafesvid', '3'
 		end
-	elseif $telsob = 'Katja':
+	elseif $telsob = 'Kate':
 		kat += 1
 
 		if kat >= 20:

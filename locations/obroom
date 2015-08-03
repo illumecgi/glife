@@ -67,7 +67,7 @@ if $ARGS[0] = 'start':
 	end
 
 	if tanga = 0 and clrbelo > 0:
-		act 'Wear underwear':
+		act 'Wear Underwear':
 			cla
 			tanga = 1
 			gt 'obroom', 'start'

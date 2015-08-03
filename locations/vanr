@@ -79,17 +79,17 @@ else
 	'You''ve ran out of shampoo.'
 end
 
-if mosolmaz>0:'On a shelf is a tube of ointment protivomozolnoy, which will be enough for <b><<mosolmaz>><b> applications.'
+if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
 if stiralka > 0:'In the bathroom is a washing machine.'
 
 if tanga = 0 and clrbelo > 0:
-	act 'Wear underwear':
+	act 'Wear Underwear':
 		cla
 		tanga = 1
 		gt 'vanr'
 	end
 else
-	act 'Do not wear underwear':
+	act 'Remove Underwear':
 		cla
 		tanga = 0
 		gt 'vanr'
@@ -244,6 +244,18 @@ elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 	end
 end
 
+! WD: add missing ointment
+if mosolmaz > 0 and mosol > 0:
+	act 'Rub ointment onto your pussy (0:05)':
+		cla
+		minut += 5
+		mosolmaz -= 1
+		mosol -= 5
+		'You take a tube of cream and rub it onto your itchy vulva.'
+
+		act 'Leave':gt $curloc
+	end
+end
 
 if husband > 0 and husbanday > 0 and husporday ! day and poroshok >= 2:
 	act 'Wash your husbands clothes (2 units of washing powder) (1:00)':

@@ -187,16 +187,18 @@ $objstatistika = {
 	end
 
 	if nastjaQW > 0:pl 'Friendship with Nastya <<nastjaqw>>'
+	if tanya > 0:pl 'Friendship with Tanya <<tanya>>'
 	if kat > 0:pl 'Friendship with Kate <<kat>>'
 	if vika > 0:pl 'Friendship with Vika <<vika>>'
 	if Irina > 0:pl 'Friendship with Irene <<Irina>>'
 	if Tamara > 0:pl 'Friendship with Tamara <<Tamara>>'
 	if alla > 0:pl 'Friendship with Alla <<alla>>'
 	if masha > 0:pl 'Friendship with Masha <<masha>>'
-	if Givi > 0:pl 'Friendship Givi K. <<Givi>>'
+	if Givi > 0:pl 'Friendship with Givi K. <<Givi>>'
 	if Ashot > 0:pl 'Friendship with Ashot <<Ashot>>'
 	if Dmitry > 0:pl 'Friendship with Dima <<Dmitry>>'
 	if afra > 0:pl 'Friendship with blacks <<afra>>'
+
 	!!!WD: Formatting
 	if (Irina + Givi + Ashot + Tamara + Dmitry + afra + gosh + vika + kat + nastjaqw + tanya) > 0:nl
 	!!!
@@ -1092,6 +1094,7 @@ $objautosave = {
 
 	gs 'stat'
 }
+
 $menu_character[0] = 'Description:$menu_descrip'
 $menu_character[1] = 'Characteristics:$menu_skills'
 $menu_character[2] = 'Usage:$menu_statistika'
@@ -1140,6 +1143,7 @@ else
 	if $selobj = 'Disable autosave':dynamic $objautosave
 end
 !!old menu: end
+
 !!The new menu: beginning
 if $selobj = 'Character':menu '$menu_character'
 if $selobj = 'See':menu '$menu_lookon'
@@ -1153,6 +1157,11 @@ if $selobj = 'Player':
 	pl 'Growth <<rost>> cm, weight 100 kg.'
 end
 
+! WD: broken 'Menu' fix, remove Menu.Builder
+$menu_mainMenu[0] = 'Statusbar:MenuMainLoc'
+$menu_mainMenu[1] = 'Text notation:MenuMainLoc'
+if $selobj = 'Menu':menu '$menu_mainMenu'
+!'
 if $selobj = 'Menu':
 	clr
 	gs 'Menu.Create', 'mainMenu'
@@ -1160,6 +1169,7 @@ if $selobj = 'Menu':
 	gs 'Menu.Add', 'mainMenu', 'text notation', '', 'MenuMainLoc', '1'
 	gs 'Menu.Call', 'mainMenu'
 end
+'!
 
 unselect
 

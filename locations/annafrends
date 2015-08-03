@@ -1,231 +1,231 @@
 # annafrends
 gs 'stat'
 
-'Around the house drinking beer culture your sister Anja, Lena, Ira, Rex and Roman.'
+'Your sister Anja and her friends Lena, Ira, Rex, and Roman are sitting outside the House of Culture drinking beer.'
 temprand = rand(0, 4)
 
 if temprand = 0:
 	!!Anja
-	'Anja outraged polutoralitrovogo grasping a bottle of beer "Guys! Well you pour beer today or not?"'
+	'Outraged, Anja picks up a bottle of beer and shouts, "Come on guys! Will you pour me some beer today or not?"'
 
 	if rand(0, 1) = 0:
-		'Rex took poltorashku hands of Anja.'
+		'Rex takes the bottle out of Anjas hands.'
 		temprand = rand(0, 4)
 
 		if temprand = 0:
 			*nl
-			'"And why not to shout! now pour!"'
+			'"Stop shouting, I''m pouring!"'
 			temprand = rand(0, 2)
 
 			if temprand = 0:
-				'Anja giggles "I have not yet started to yell, if I start, you oglohnesh."'
+				'Between fits of giggles, Anja says "I haven''t even started to yell. If I do, you''ll know!"'
 			elseif temprand = 1:
-				'Lena resounding slaps on the shoulder Rex "Hurry! And with a jump of dog shit, with jumps!"'
+				'With a resounding slap on Rex'' shoulder, Lena says "Hurry, you piece of dog shit!"'
 			else
-				'Ira smiling "not outraged, Reksik."'
+				'With a smile, Ira says "Don''t get angry, Rex."'
 
-				if rand(0, 10) = 0:'Anja sprinkles in cam "And then put him on a chain."'
+				if rand(0, 10) = 0:'Anja quickly interjects, "We might need to chain him up to keep him calm."'
 			end
 		elseif temprand = 1:
 			*nl
-			'"Well, you always like to be late for the train. Relax rolls. Now everything will be."'
+			'"Well, you always like to be late for the fun. Relax your ass, I''m sorting it all out."'
 			temprand = rand(0, 2)
 
 			if temprand = 0:
-				'Anja giggles, "I have not started to scream if I start, you oglohnesh."'
+				'Between fits of giggles, Anja says "I haven''t even started to yell. If I do, you''ll know!"'
 			elseif temprand = 1:
-				'Lena resounding slaps on the shoulder Rex "Hurry! And with a jump of dog shit, with a jump!"'
+				'With a resounding slap on Rex'' shoulder, Lena says "Hurry, you piece of dog shit!"'
 			else
-				'Roma giggles "Here and stinks. And if she rolls relax, we run the risk of suffocation!"'
+				'Roma giggles and says "It already stinks here, and if she relaxes her ass more, we run the risk of suffocation!"'
 				temprand = rand(0, 2)
 
 				if temprand = 0:
-					'Anja quips, "You''re so forever remain a virgin, Roma."'
+					'Anja quips, "You''ll forever remain a virgin, Roma."'
 					if rand(0, 10) = 0:
-						'Roma grins "It was an offer?"'
+						'Roma grins "Is that an offer?"'
 						temprand = rand(0, 2)
 
 						if temprand = 0:
-							'Anja laughs "Dream on, saffron."'
+							'Anja laughs "Dream on, punk."'
 						elseif temprand = 1:
-							'Anja laughs "Only in your dreams, saffron."'
+							'Anja laughs "Only in your dreams, punk."'
 						else
-							'Anja laughs "Yeah, schazz. Hear the tramp? Already ran to give."'
+							'Anja laughs "Yeah, right. Can you hear that? It''s a whore coming to help you."'
 						end
 					end
 				elseif temprand = 1:
-					'Anja quips "And you udivlyaeshsya that you girls do not give Roma."'
+					'Anja quips "And you''re just sad because you can''t get any girls Roma."'
 
-					if rand(0, 10) = 0:'Rex grins "Yeah, our eternal virgin Roma is able to enliven the conversation on the topic of anal gases."'
+					if rand(0, 10) = 0:'Rex grins "Yeah, our eternal virgin Roma is truly able to enliven the conversation with the topic of anal gases."'
 				else
-					'Anja quips "It''s from you is the smell."'
+					'Anja quips "The smell comes from you."'
 
 					if rand(0, 10) = 0:'Roma grins "Yes, no, it sobachatiny bears."'
 				end
 			end
 		elseif temprand = 2:
 			*nl
-			'"Che, unscrew the plug does not have a hand?"'
+			'"Come on, just unscrew the cork. Don''t you have hands?"'
 			temprand = rand(0, 2)
 
 			if temprand = 0:
 				'Anja giggles "And then what for you need?"'
 
-				if rand(0, 10) = 0:'Rex with mock indignation "Around one operation."'
+				if rand(0, 10) = 0:'With mock indignation, Rex answers "Around one operation."'
 			elseif temprand = 1:
-				'Lena resounding slaps on the shoulder Rex "You talk like a girl?"'
+				'With a resounding slap on Rex'' shoulder, Lena says "You talk like a girl?"'
 
-				if rand(0, 10) = 0:'Rex with mock indignation "In Russian, I speak with her."'
+				if rand(0, 10) = 0:'With mock indignation, Rex answers "I speak russian with her."'
 			else
-				'Ira smiling "not outraged, Reksik."'
+				'Ira smiles, saying "Don''t get angry, Rex."'
 
-				if rand(0, 10) = 0:'Anja sprinkles in cam "And then on the chain to plant."'
+				if rand(0, 10) = 0:'Anja quickly interjects, "We might need to chain him up to a tree to keep him calm."'
 			end
 		elseif temprand = 3:
 			*nl
-			'"Let me be undermined, madam."'
+			'"Allow me, madame."'
 			temprand = rand(0, 2)
 
 			if temprand = 0:
-				'Anja giggles "Cleared, monsieur."'
+				'Anja giggles "Of course, monsieur."'
 			elseif temprand = 1:
-				'Anja with mock indignation says "Do not Madame and Mademoiselle!"'
+				'With mock indignation, Anja says "Don''t you Madame me!"'
 
-				if rand(0, 10) = 0:'Rex bowing gallantly "Miles sorry mademoiselle."'
+				if rand(0, 10) = 0:'Rex bowes gallantly and answers "I''m truly sorry, mademoiselle."'
 			else
-				'Anja says impatiently "Pour already a clown."'
+				'Impatiently, Anja says "Pour it already, you clown."'
 			end
 		else
 			*nl
-			'"Shit! Where cups? Are we not buy them?"'
+			'"Shit! Where''re the cups? Did we not buy any?"'
 			temprand = rand(0, 2)
 
 			if temprand = 0:
-				'Anja takes cups "Here they are, blind monster."'
+				'Anja picks up the cups, "Here they are, you blind monster."'
 			elseif temprand = 1:
-				'Roma says "Rex, you did them in the store took, all memory is that it is not?"'
+				'Roma says "Rex, you''re the one who bought them, is your memory really that bad?"'
 			else
-				'Lena enough cups "Rex, do not pull the rubber."'
+				'Lena holds up the cups and says "Rex, calm down."'
 			end
 		end
 	else
-		'Roma took the bottle out of the hands polutoralitrovogo Anja and began to print. "Hold somebody cups."'
+		'Roma takes the bottle from the hands of Anja and opens it. "Somebody hold the cups."'
 		temprand = rand(0, 2)
 
 		if temprand = 0:
-			'Rex took the cups and Roma began to pour beer on plastic glasses.'
+			'Rex holds the cup while Roma pours beer in the plastic glasses.'
 		elseif temprand = 1:
-			'Rex took the cups "That same armless horseradish. Itself can not what?"'
+			'Rex takes the cups and mutters "That worthless horseradish. Can''t he use both of his arms at once?"'
 		else
-			'Ira took cups "Pour already onion grief."'
+			'Ira takes the cups and says "Pour it already, you onion."'
 		end
 
 		if rand(0, 3) = 0:
-			'Fracture of beer cups and flooded the ground.'
+			'As Roma pours beer in the cups, they suddenly break and spill all the beer on the ground.'
 			temprand = rand(0, 2)
 
 			if temprand = 0:
-				'Rex was outraged. "That thou armless hell! Nothing can trust you!"'
+				'Outraged, Rex screams "You puny, armless ass! No one can trust you!"'
 			elseif temprand = 1:
-				'Rex was outraged. "No, well, how not to spill it?"'
+				'Outraged, Rex says "How the fuck could you spill that?"'
 			else
-				'Anja was indignant. "Always the same, if saffron pours, make sure you will pour."'
+				'Indignantly, Anja says "Always the same, if saffron wants to pour, do it yourself instead."'
 			end
 		end
 	end
 elseif temprand = 1:
 	!!Lena
-	'Lena indignantly, "We came to drink beer or admire it?"'
+	'Indignantly, Lena says "Did we come here to drink beer or to look at it?"'
 elseif temprand = 2:
 	!!Ira
-	'Ira flirting eyes and flapping "Boys, and today we are going to drink beer?"'
+	'With a flirty look, Ira bats her eyelashes and says "Boys, are we going to drink beer today or not?"'
 elseif temprand = 3:
 	!!Rex
 	if rand(0, 1) = 0:
-		'Rex took poltorashku beer and unscrew the plug.'
+		'Rex picks up a bottle of beer and unscrews the cork.'
 		if rand(0, 2) = 0:
 			*nl
-			'"Shit! Where cups? Are we not buy them?"'
+			'"Shit! Where''re the cups? Did we not buy any?"'
 
 			temprand = rand(0, 2)
 
 			if temprand = 0:
-				'Anja takes cups "Here they are, blind monster."'
+				'Anja picks up the cups, "Here they are, you blind monster."'
 			elseif temprand = 1:
-				'Roma says "Rex, you did them in the store took, all memory is that it is not?"'
+				'Roma says "Rex, you''re the one who bought them, is your memory really that bad?"'
 			else
-				'Lena enough cups "Rex, do not pull the rubber."'
+				'Lena holds up the cups and says "Rex, calm down."'
 			end
 		else
 			*nl
-			'"Roman, cups hold this while I pour."'
+			'"Roma, hold the cups while I pour."'
 		end
 	else
-		'Rex took poltorashku beer and handed it to Roma. "Pour, then froze."'
-		'Roma took polutoralitrovogo beer bottle and began to print. "Hold somebody cups."'
+		'Rex picks up a bottle of beer and hands it to Roma. "You pour this time."'
+		'Roma takes the beer bottle from Rex, opens it and says "Somebody hold the cups."'
 		temprand = rand(0, 2)
 
 		if temprand = 0:
-			'Rex took the cups and Roma began to pour beer on plastic glasses.'
+			'Rex holds the cup while Roma pours beer in the plastic glasses.'
 		elseif temprand = 1:
-			'Rex took the cups "That same armless horseradish. Itself can not what?"'
+			'Rex takes the cups and mutters "That worthless horseradish. Can''t he use both of his arms at once?"'
 		else
-			'Ira took cups "Pour already grief onion."'
+			'Ira takes the cups and says "Pour it already, you onion."'
 		end
 
 		if rand(0, 3) = 0:
-			'Fracture of beer cups and flooded the land.'
+			'As Roma pours beer in the cups, they suddenly break and spill all the beer on the ground.'
 			temprand3 = rand(0, 2)
 
 			if temprand3 = 0:
-				'Rex was outraged. "That thou armless hell! Nothing can trust you!"'
+				'Outraged, Rex screams "You puny, armless ass! No one can trust you!"'
 			elseif temprand3 = 1:
-				'Rex was outraged. "No, well, how not to spill it?"'
+				'Outraged, Rex says "How the fuck could you spill that?"'
 			elseif temprand3 = 2:
-				'Anja was indignant. "Always the same, if saffron pours, make sure you will pour."'
+				'Indignantly, Anja says "Always the same, if saffron wants to pour, do it yourself instead."'
 			end
 		end
 	end
 else
 	!!Roma Meynold
-	'Roma took polutoralitrovogo beer bottle and began to print. "Hold somebody cups."'
+	'Roma picks up the bottle of beer, opens it and says "Somebody hold the cups."'
 	temprand = rand(0, 2)
 
 	if temprand = 0:
-		'Rex took the cups and Roma began to pour beer on plastic glasses.'
+		'Rex holds the cup while Roma pours beer in the plastic glasses.'
 	elseif temprand = 1:
-		'Rex took the cups "That same armless horseradish. Itself can not what?"'
+		'Rex takes the cups and mutters "That worthless horseradish. Can''t he use both of his arms at once?"'
 	else
-		'Ira took cups "Pour already onion grief."'
+		'Ira takes the cups and says "Pour it already, you onion."'
 	end
 
 	if rand(0, 3) = 0:
-		'Fracture of beer cups and flooded the ground.'
+		'As Roma pours beer in the cups, they suddenly break and spill all the beer on the ground.'
 		temprand = rand(0, 2)
 
 		if temprand = 0:
-			'Rex was outraged. "That thou armless hell! Nothing can trust you!"'
+			'Outraged, Rex screams "You puny, armless ass! No one can trust you!"'
 		elseif temprand = 1:
-			'Rex was outraged. "No, well, how not to spill it?"'
+			'Outraged, Rex says "How the fuck could you spill that?"'
 		else
-			'Anja was indignant. "Always the same, if saffron pours, make sure you will pour."'
+			'Indignantly, Anja says "Always the same, if saffron wants to pour, do it yourself instead."'
 		end
 	end
 end
 
-'Finally turned into beer cups and you also gave a plastic cup with a cold beer. Are you drunk with all beer.'
+'Once the cups were filled with cold beer, you each took a cup and started drinking.'
 
 if sisboyQW = 1:
-	act 'Meet with a girl sister':
+	act 'Meet your sister''s boyfriend':
 		cls
 		minut += 5
 		sisboyQW = 2
 		gs 'stat'
 
 		'<center><img src="images/qwest/alter/sisterQW/sisboyQW_02.jpg"></center>'
-		'-Sveta, You really wanted to meet with my boyfriend, This is a novel, and this is my sister Sveta, So you met."'
-		'-For acquaintance!!!" He shouted a drunken Rex, and you with all the company continued to drink beer the contrary, Man looking sister.'
-		'Roma, red-haired skinny guy, and very pretty, sister how very lucky you thought.'
+		'-<<$nickname>>, you wanted to meet my boyfriend. This is my boyfriend Roma, and this is my sister <<$nickname>>."'
+		'-To friendship!!!" Rex shouts drunkenly, raising his cup. You pick up a cup full of beer and start drinking, glancing at your sister''s boyfriend.'
+		'Roma, a red-haired and skinny guy, very pretty. You think "Sister, how very lucky you are."'
 
 		act 'Continue to drink beer':gt 'annafrends2'
 	end

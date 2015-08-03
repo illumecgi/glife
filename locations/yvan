@@ -53,13 +53,13 @@ end
 act 'Leave the room':minut += 1 & gt 'ymans'
 
 if tanga = 0:
-	act 'Wear underwear':
+	act 'Wear Underwear':
 		cla
 		tanga = 1
 		gt $curloc
 	end
 elseif tanga = 1:
-	act 'Take off underwear':
+	act 'Remove Underwear':
 		cla
 		tanga = 0
 		gt $curloc

@@ -17,6 +17,8 @@ lcolor = rgb(106, 90, 205)
 'Bathroom cramped and very unpretentious.'
 
 if stanok > 0:'Your razor will suffice for <b><<stanok>></b> time.'
+!WD: heal chafe
+if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
 
 act 'Wash in the shower (0:15)':
 	cls
@@ -92,7 +94,14 @@ act 'Wash in the bathroom (1:00)':
 	end
 end
 
-
+! WD: add Underwear change
+if tanga = 1:
+	act 'Remove Underwear':
+		cla
+		tanga = 0
+		gt $curloc
+	end
+end
 
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Use a tampon (0:05)':

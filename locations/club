@@ -112,7 +112,7 @@ if $ARGS[0] = 'tou':
 	act 'Get off the toilet':gt 'club', 'inside'
 
 	if tanga = 1:
-		act 'Remove your underwear':
+		act 'Remove your Underwear':
 			cla
 			tanga = 0
 			gt 'club', 'toi'

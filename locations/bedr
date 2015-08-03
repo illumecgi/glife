@@ -167,7 +167,7 @@ if husbandrink = 10 and hour > 20 and hour < 23 and husbanstrapon = 0:
 end
 
 if tanga = 0 and clrbelo > 0:
-	act 'Wear underwear':
+	act 'Wear Underwear':
 		cla
 		tanga = 1
 		gt 'bedr'

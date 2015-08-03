@@ -1011,35 +1011,43 @@ end
 
 !
 ! WD: Triggers every 15 minutes if not sleeping
-!
-:Trig15MinuteLoop
-if (totminut - Trig15Minute) >= 15:
+! Update to remove long iterations on loading saves from previous versions
 
-	! Sanity case
-	if horny > 100 or Trig15Minute = 0 or InSleep ! 0:
-		set Trig15Minute = totminut
+! Do Nothing if sleeping, invalid Trig15Minute value or more than 6 hours 16 minute pass
+if InSleep ! 0 or Trig15Minute > totminut or (totminut - Trig15Minute) >= 376:
+	set Trig15Minute = totminut
 
-	! Triggered actions here
-	else
-		set Trig15Minute += 15
+! More than 15 minutes since last check
+else
+	if (totminut - Trig15Minute) >= 15:
 
-		! WD: Fix vibrator arousal to trigger every 15 minutes, moved from 'time' location
-		if vibratorin = 1:horny += rand(1, 5)
+		! begin Loop
+		:Trig15MinuteLoop
 
-		! WD: Fixed Piecing arousal to trigger every 15 minutes, instead of once per day
-		if horny < 70:
-			hornyStat = pirsA + pirsB + pirsC + pirsD + pirsE + pirsN + (pirsF + pirsG) * 5
-			set horny += hornyStat / 4 + rand(1,4) <= hornyStat mod 4 & ! Apply 1/4 of value on average
-		end
+			! Horny Actions
+			if horny > 100:
+				set Trig15Minute = totminut
+			else
+				set Trig15Minute += 15
 
-		! WD: Clothing
-		if Sexual = 1 and horny < 70:set horny += rand(0, 2)
-		if glamur = 1 and horny < 50:set horny += rand(0, 1)
+				! WD: Fix vibrator arousal to trigger every 15 minutes, moved from 'time' location
+				if vibratorin = 1:horny += rand(1, 5)
 
-		jump 'Trig15MinuteLoop'
+				! WD: Fixed Piecing arousal to trigger every 15 minutes, instead of once per day
+				if horny < 70:
+					hornyStat = pirsA + pirsB + pirsC + pirsD + pirsE + pirsN + (pirsF + pirsG) * 5
+					set horny += hornyStat / 4 + rand(1,4) <= hornyStat mod 4 & ! Apply 1/4 of value on average
+				end
+
+				! WD: Clothing
+				if Sexual = 1 and horny < 70:set horny += rand(0, 2)
+				if glamur = 1 and horny < 50:set horny += rand(0, 1)
+			end
+
+		! do loop
+		if (totminut - Trig15Minute) >= 15:jump 'Trig15MinuteLoop'
 	end
 end
-
 
 
 

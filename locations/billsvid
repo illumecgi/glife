@@ -32,7 +32,7 @@ act 'Play':
 		elseif masha < 20:
 			gt 'billsvid', '3'
 		end
-	elseif $telsob = 'Katja':
+	elseif $telsob = 'Kate':
 		kat += 1
 
 		if kat >= 20:

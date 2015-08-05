@@ -214,7 +214,7 @@ elseif nroad = 13:
 elseif nroad = 14:
 	'Near the road is <a href="exec:minut += 15 & gt ''motel''">motel</a>'
 elseif nroad = 15:
-	'Not podaleku from the road is <a href="exec:dynamic $polustanok3">railway stop</a>.'
+	'Not podaleku from the road is <a href="exec:dynamic $polustanok3">railway stop</a>. From the little station leads to a dirt road <a href="exec:minut += 30 & gt ''gadukino''">Village Gadyukino</a>'
 elseif nroad = 16:
 	'Not podaleku is seen from the road abandoned building.'
 elseif nroad = 17:

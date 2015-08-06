@@ -271,7 +271,7 @@ if findvel=1 and hour >= 7 and hour < 20:
 			willpower+=10
 			gs'stat'
 			'<center><img src="images/qwest/gadukino/bike_nude.jpg"></center>'
-			'You ride naked, avoiding crowded places and rejoicing of his boldness. It's hard to say what you most: fear or the desire to be seen.'
+			'You ride naked, avoiding crowded places and rejoicing of his boldness. It''s hard to say what you most: fear or the desire to be seen.'
 			act 'End trip':gt $loc
 			exit
 		end

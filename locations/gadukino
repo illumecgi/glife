@@ -327,7 +327,7 @@ if hour >= 6 and hour < 20:
 	end
 end
 
-act 'Go to the river':minut += 20 & gt'gadriver'
+act 'Go to the river':minut += 20 & gt'Gadriver'
 act 'Exit the highway':minut += 30 & nroad = 15 & gt 'road'
 
 --- gadukino ---------------------------------

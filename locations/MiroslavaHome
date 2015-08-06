@@ -394,7 +394,7 @@ $miratalk = {
 					'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 					'You speak, what you want to see, as Mitka fuck her in the ass for, she told your secret. The world jumps to her feet from such words and looks at you stupidly, but you don`t give her time to recover and continue to emphasize on, Recalling, what`s the deal, and if she is and that his word will not keep, then your friendship will end. Miroslav densely blushes and hesitantly shifting from foot to foot and you, deciding to go all-the Bank, turn around and start to leave...'
 					' - Billeting, - loud shouts you in the back of Miroslav, but you pretend, ignore him and go on.'
-					' - Good, Sveta, - after a couple of seconds comes up you hysterical scream Miroslava, - what I-`ll figure it out!'
+					' - Good, <<$nickname>>, - after a couple of seconds comes up you hysterical scream Miroslava, - what I-`ll figure it out!'
 					act 'Escape':gt 'gadukino'
 				end
 			end
@@ -488,7 +488,7 @@ $mirafather = {
 	minut += 2
 	gs 'stat'
 	'<center><img src="images/qwest/gadukino/MiraFather.jpg"></center>'
-
+	'(No content with Mira''s father yet, unfortunately.)'
 	act 'Escape':gt 'miroslavahome'
 }
 

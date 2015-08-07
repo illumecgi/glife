@@ -34,7 +34,7 @@ if pirsA >= 1 and pirsAsister = 0 and sisterpirsadaytalk ! daystart:
 			cls
 			pirsAsister = 1
 			gs 'stat'
-			'<center><img src="images/picb/pirsA.jpg" ></center>'
+			'<center><img src="images/body/pirsA.jpg" ></center>'
 			'You open your mouth and draw out the tongue, sister showing tongue piercing.'
 			'Your sister smiled: "Well, you give, Sveta! I decided to embellish their appearance?"'
 			act 'Move away':gt $loc, $metka
@@ -50,7 +50,7 @@ if pirsB = 1 and pirsBsister = 0 and sisterpirsbdaytalk ! daystart:
 		cls
 		pirsBsister = 1
 		gs 'stat'
-		'<center><img src="images/picb/pirsB.jpg" ></center>'
+		'<center><img src="images/body/pirsB.jpg" ></center>'
 		'You thank her sister for her compliment your little new thing.'
 		act 'Move away':gt $loc, $metka
 	end

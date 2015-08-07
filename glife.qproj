@@ -256,9 +256,13 @@
       <Location name="Gaddvor"/>
       <Location name="Gadsarai"/>
       <Location name="Gadbana"/>
+	  <Location name="gadriver"/>
       <Location name="pirat"/>
+	  <Location name="piratbreak"/>
       <Location name="mitka"/>
       <Location name="mitkabuh"/>
+	  <Location name="MiroslavaHome"/>
+	  <Location name="Meadow"/>
     </Folder>
     <Folder name="Генератор - Generator">
       <Location name="placer"/>

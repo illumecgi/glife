@@ -66,13 +66,13 @@ if hour >= 6 and hour < 20:
 						elseif miragopQW > 0 and miragopQW < 4:
 							'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 						elseif miragopQW >= 4 and miragopQW < 8:
-							'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+							'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 						elseif miragopQW >= 8 and miragopQW < 12:
-							'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+							'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 						elseif miragopQW >= 12 and miragopQW < 20:
-							'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+							'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 						elseif miragopQW >= 20:
-							'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+							'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 						end
 						'You decide to help the girl, but at the same time out of curiosity and to know what-something about it, as in Gadyukino strangers  - rare, even more fantastic. You walk up to her and gently slap the calf in the ass, after which he immediately begins to move forward. Stranger thanks you between you and myself tied the conversation during that time, while the company decide to help to ward off her animal home. Miroslav turns out to be quite sociable girl and conversation, you`ll quickly learn, they recently were forced to move to the village. From-the huge debts of the father they had to sell all the property, including an apartment in the city center, and on the money, they have left, they could afford to buy a house only in that seedy village... You reach her house and she invites you to come to visit her at any time, and then in the village after the town of boring horrible.'
 						act 'Finish':gt'gadukino'
@@ -193,13 +193,13 @@ if hour >= 6 and hour < 20:
 					elseif miragopQW > 0 and miragopQW < 4:
 						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 					elseif miragopQW >= 4 and miragopQW < 8:
-						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 8 and miragopQW < 12:
-						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 					elseif miragopQW >= 12 and miragopQW < 20:
-						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 20:
-						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 					end
 					'You quietly sneak up to her, but she notices and turns, immediately rapidly blushing. You a few seconds of silently staring at her, and then unceremoniously asked, why is she without panties. Miroslav, pushing eyes, wrinkled from foot and leg, explaining, what happened, very hot, and here it is... You remind her of her second wish, and ask to sit down. Miroslav reluctantly agrees, and when he sits down, you order her, she`ll show you the crotch, and then you are considered bad. The girl mumbles that-incoherently, but then for half a minute lifts up her skirt and gives you a good look at my crotch.'
 					act 'Watch':

@@ -24,13 +24,13 @@ if hour >= 8 and hour <= 22:
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		'You name is Miroslav and in a minute she goes out to you.'
 		if miragopQW = 11:
@@ -90,13 +90,13 @@ if hour >= 8 and hour <= 22:
 					elseif miragopQW > 0 and miragopQW < 4:
 						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 					elseif miragopQW >= 4 and miragopQW < 8:
-						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 8 and miragopQW < 12:
-						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 					elseif miragopQW >= 12 and miragopQW < 20:
-						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 20:
-						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 					end
 					'You ask to Miroslav, all whether it is already in the village met, and when she meets, what no, you propose to introduce her to the local guys and she readily agrees, asking you to wait a couple of minutes, while she changed, then quickly hides in the hut. When she comes out, you must go to thump near your house band...'
 					act 'Further':minut += 15 & temp = 0 & miralko = 0 & gt 'mitkabuh'
@@ -113,13 +113,13 @@ if hour >= 8 and hour <= 22:
 					elseif miragopQW > 0 and miragopQW < 4:
 						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 					elseif miragopQW >= 4 and miragopQW < 8:
-						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 8 and miragopQW < 12:
-						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 					elseif miragopQW >= 12 and miragopQW < 20:
-						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 20:
-						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 					end
 					if miragopQW = 5:
 						'You offer Miroslava drinking with village and she sadly agrees, a whisper telling you, so you waited, when they leave Mitka, and then went to Mitkina home.'
@@ -139,13 +139,13 @@ if hour >= 8 and hour <= 22:
 					elseif miragopQW > 0 and miragopQW < 4:
 						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 					elseif miragopQW >= 4 and miragopQW < 8:
-						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 8 and miragopQW < 12:
-						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 					elseif miragopQW >= 12 and miragopQW < 20:
-						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 20:
-						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 					end
 					'You offer Miroslava together to relax you in the bath. She lingers long, but then agrees and you go to your backyard...'
 					act 'Undress':
@@ -194,13 +194,13 @@ if hour >= 8 and hour <= 22:
 					elseif miragopQW > 0 and miragopQW < 4:
 						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 					elseif miragopQW >= 4 and miragopQW < 8:
-						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 8 and miragopQW < 12:
-						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 					elseif miragopQW >= 12 and miragopQW < 20:
-						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 20:
-						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 					end
 					'You offer her to go to the river to swim or sunbathe and she readily agrees.'
 					act 'To go to the river':minut += 15 & gt 'Gadriver', 'Gadbitch'
@@ -217,13 +217,13 @@ if hour >= 8 and hour <= 22:
 					elseif miragopQW > 0 and miragopQW < 4:
 						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 					elseif miragopQW >= 4 and miragopQW < 8:
-						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 8 and miragopQW < 12:
-						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 					elseif miragopQW >= 12 and miragopQW < 20:
-						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 					elseif miragopQW >= 20:
-						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 					end
 					'You remind the World about the third wish, and she reluctantly nodding you head, Reaffirming, that remembers him. You, mysterious and sinister smile, command her to follow you...'
 					act 'Go to your barn':
@@ -288,13 +288,13 @@ $miratalk = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		'You have ten minutes of fun talking about all sorts of trivia.'
 		act 'Finish':gt 'gadukino'
@@ -308,13 +308,13 @@ $miratalk = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		'You have ten minutes of fun talking about all sorts of trivia, sometimes remembering, how you got drunk with village Aragami...'
 		if mirasextimes > 3:
@@ -341,13 +341,13 @@ $miratalk = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		'You have ten minutes of fun talking about all sorts of trivia, and the World sometimes gets flushed, that-then remembering...'
 		if miragopQW = 3:
@@ -411,13 +411,13 @@ $miratalk = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		'You ten minutes talking about different things, in this World sometimes, blushing, tells you some intimate details of her relationship with Mitka.'
 		if miragopQW = 6:
@@ -444,13 +444,13 @@ $miratalk = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		'You ten minutes sluggish talking about little things, while the World tries not to see you look.'
 		act 'Finish':gt 'gadukino'
@@ -464,13 +464,13 @@ $miratalk = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		if miragopQW < 20:
 			'You ten minutes sluggish talking about little things, you often call her not by name, and called a whore, what she pretends, if nothing notices.'

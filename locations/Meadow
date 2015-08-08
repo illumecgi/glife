@@ -59,13 +59,13 @@ $mirameadow = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		' - And I`m, though short here, but about this place and didn`t know, - fun Miroslav tells you. - Now I know, where to retire, when he wants to be alone, you don`t mind, truth?'
 		act 'To allow her to come here the most':
@@ -78,13 +78,13 @@ $mirameadow = {
 			elseif miragopQW > 0 and miragopQW < 4:
 				'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 			elseif miragopQW >= 4 and miragopQW < 8:
-				'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 			elseif miragopQW >= 8 and miragopQW < 12:
-				'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 			elseif miragopQW >= 12 and miragopQW < 20:
-				'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 			elseif miragopQW >= 20:
-				'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 			end
 			'You are responsible, what you and she can come over, when it pleases, but take her word, so she never told anyone about this place. Miroslav, happy as an elephant, actively nodding you head and says, I`ll take this secret to the grave, and if not, then, as gin, will perform any three of your desires...'
 			act 'Finish':gt 'meadow'
@@ -99,13 +99,13 @@ $mirameadow = {
 			elseif miragopQW > 0 and miragopQW < 4:
 				'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 			elseif miragopQW >= 4 and miragopQW < 8:
-				'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 			elseif miragopQW >= 8 and miragopQW < 12:
-				'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 			elseif miragopQW >= 12 and miragopQW < 20:
-				'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 			elseif miragopQW >= 20:
-				'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+				'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 			end
 			'You answer her, you would not want, so she went here itself, because you found this place, but you offer her to go here together. Miroslava looks pretty upset, though he tries not to let on, but still politely thanks you.'
 			act 'Finish':gt 'meadow'
@@ -116,13 +116,13 @@ $mirameadow = {
 		elseif miragopQW > 0 and miragopQW < 4:
 			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 		elseif miragopQW >= 4 and miragopQW < 8:
-			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira0,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 8 and miragopQW < 12:
-			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira1,<<rand(0,2)>>.jpg"></center>'
 		elseif miragopQW >= 12 and miragopQW < 20:
-			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira2,<<rand(0,5)>>.jpg"></center>'
 		elseif miragopQW >= 20:
-			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 		end
 		'- Wonderful place, it`s so comfortable and Sunny!'
 		if horny >= 60 and miragopQW > 15 and temper >= 25 and sunWeather = 1:

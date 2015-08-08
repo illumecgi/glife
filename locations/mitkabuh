@@ -2,11 +2,9 @@
 gs 'stat'
 
 if miraingop = 0 and alko < 8:
-	act 'Leave':gt 'Gaddvor'
-
 	'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
 	'Set in a secluded spot three village boy, Mitka kingpin, Bob Package and Kolyamba drink moonshine without snacks. Mitka brew pours into a glass and takes you.'
-	act 'Escape':gt'Gaddvor'
+	act 'Leave':gt 'Gaddvor'
 	act 'Drink':
 		cls
 		minut += 30
@@ -16,7 +14,7 @@ if miraingop = 0 and alko < 8:
 		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
 		'You drank moonshine and everything inside burned, breathless you become zanyuhivat sleeve ,because there were no snacks. Mitka said approvingly "Good infection, wade."'
 
-		act 'Catching his breath':gt $curloc
+		act 'Catching your breath':gt $curloc
 	end
 elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 	'<center><img src="images/qwest/gadukino/mitka.jpg"></center>'
@@ -42,12 +40,12 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 
 		'Mitka, I lay down on his side and lit "Fucking!"'
 
-		act 'Escape':gt'Gaddvor'
+		act 'Leave':gt 'Gaddvor'
 	end
 elseif miraingop = 0 and alko >= 8:
 	'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
 	'You got drunk in the trash, leg practically no longer hold you. Mitka noticed your condition keeps you around the waist. It seems, you`ve had enough...'
-	act 'Escape':gt'Gaddvor'
+	act 'Leave':gt 'Gaddvor'
 end
 
 if miraingop = 1 and miragopQW > 0:
@@ -128,7 +126,7 @@ if miraingop = 1 and miragopQW > 0:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/drinking.jpg"></center>'
 				'You take a glass of moonshine and start, coughing and sickly, strain it through your teeth. Miroslav meanwhile shyly responds to impudent questions rural youth.'
-				act 'Catching his breath':gt $curloc
+				act 'Catching your breath':gt $curloc
 			end
 		end
 		if temp = 2:

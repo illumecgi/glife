@@ -9,13 +9,13 @@ $portmirror = {
 	
 	if curly > 0: '<br>Your curly hair will last for another <<curly>> days.'
 	
-	set $makeUpString = ''
+	set $makeUpString = '<br>'
 	
-	if kosmetica > 0: $makeUpString += 'Cosmetics <<kosmetica>>'
-	if kosmetica = 0: $makeUpString += 'You have no makeup.'
+	if kosmetica > 0: $makeUpString += 'Cosmetics: <<kosmetica>>'
+	if kosmetica = 0: $makeUpString += 'You have no makeup'
 
-	if lipbalm > 0: $makeUpString += ' Lip Balm <<lipbalm>>'
-	if lipbalm = 0: $makeUpString += ' You have no lip balm left.'
+	if lipbalm > 0: $makeUpString += ' | Lip Balm: <<lipbalm>>'
+	if lipbalm = 0: $makeUpString += ' | You have no lip balm left'
 	
 	*pl $makeUpString
 

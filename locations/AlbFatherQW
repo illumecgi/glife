@@ -64,7 +64,7 @@ $din_zajava_albfather_no = {
 }
 
 gs 'stat'
-'A car suddenly stops next to you. A man wearing a nice suit emerges from the vehicle. He introduces himself,'"Captain Chernov. State Security Service," as he pulls out his liscence and badge. In surprise you  blurt out,'"Why are you here, what did I do, am I under arrest?" Captain Chernov asks you in a rhetorical manner,'"You are <<$name>> <<$surname>>? Let''s step aside and have a friendly chitchat."'
+'A car suddenly stops next to you. A man wearing a nice suit emerges from the vehicle. He introduces himself,"Captain Chernov. State Security Service," as he pulls out his liscence and badge. In surprise you  blurt out, "Why are you here, what did I do, am I under arrest?" Captain Chernov asks you in a rhetorical manner, "You are <<$name>> <<$surname>>? Let''s step aside and have a friendly chitchat."'
 act 'Move with Chernov':
 	cls
 	minut += 1
@@ -76,8 +76,8 @@ act 'Move with Chernov':
 		minut += 1
 		gs 'stat'
 
-		if age < 18:'You ask the Captain Chernov what he has in mind. Captain Chernov says, '"You give me a written testamony that Albina Barlovskaya coerced you into prostitution, and since you are underage it will harder for Albina to get rid of the accusation."'
-		if age >= 18:'You ask the Captain Chernov what he has in mind. Captain Chernov says, '"You give me a written testamony that Albina Barlovskaya coerced you into prostitution."'
+		if age < 18:'You ask the Captain Chernov what he has in mind. Captain Chernov says, "You give me a written testamony that Albina Barlovskaya coerced you into prostitution, and since you are underage it will harder for Albina to get rid of the accusation."'
+		if age >= 18:'You ask the Captain Chernov what he has in mind. Captain Chernov says, "You give me a written testamony that Albina Barlovskaya coerced you into prostitution."'
 
 		'Captain Chernov pauses, giving you time to think and then continues. "If you write this deposition then you will be charged as the victim and not the culprit. Your name will be kept from the media."'
 
@@ -86,7 +86,7 @@ act 'Move with Chernov':
 				cls
 				minut += 1
 				gs 'stat'
-				'You ask him what is so important with Albina, that they need security service and not the police. A frown forms on Captain Chernov''s brow, '"I underestimated you; you''re a smart girl. Okay, I''ll show you my cards. You know who Albina''s father is? Barlovsky Boris, a retired police colonel. He served as chief of police in this town. He is retired now, but he still communicates with the police. "'
+				'You ask him what is so important with Albina, that they need security service and not the police. A frown forms on Captain Chernov''s brow, "I underestimated you; you''re a smart girl. Okay, I''ll show you my cards. You know who Albina''s father is? Barlovsky Boris, a retired police colonel. He served as chief of police in this town. He is retired now, but he still communicates with the police."'
 
 				if intel >= 75:
 					act 'Tell him that he hasn''t answered your question':

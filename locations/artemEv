@@ -30,12 +30,12 @@ $din_artem_leghump = {
 		horny += 10
 		hump += 1
 
-		if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
+		if npcSex[2] = 0: npcSex[2] = 1 & guy += 1
 
 		leghumpArtem += 1
 		dom += 1
 		dick = 16
-		cumfrot = 0 !!he removes all cum from the players clothes after orgasming
+		cumfrot = 0 & !!he removes all cum from the players clothes after orgasming
 		artempower -= 1
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Ev/artomHump.jpg"></center>'
@@ -46,6 +46,7 @@ $din_artem_leghump = {
 		else
 			act 'Further':artemhomemark = 1 & minut += 5 & gt 'artemhome'
 			act 'Go home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+		end
 	end
 }
 
@@ -542,9 +543,9 @@ $din_artem_lern = {
 				end
 			end
 		end
-		if (artQW = 3 or artQW = 20) and artomkissday ! daystart and (GorSlut < 2 or artemblag = 1):
+		
+		if (artQW = 3 or artQW = 20) and artemkissday ! daystart and (GorSlut < 2 or artemblag = 1):
 			'After training with Artem, he leaned toward your face, what would kiss you.'
-
 			dynamic $artomKiss
 		end
 	end
@@ -555,7 +556,7 @@ $artomKiss = {
 		cls
 		horny += 10
 		minut += 5
-		artomkissday = daystart
+		artemkissday = daystart
 
 		if GorSlut >= 2 and artemblag = 0:
 			cla
@@ -571,11 +572,11 @@ $artomKiss = {
 
 		if artemtimes >= 20 and leghumpArtom = 0:
 			'Artem muttered sheepishly. "Svetulya. I want you so much, maybe we could... well you know... You can touch your ass?"'
-			dynamic $din_artom_leghump
+			dynamic $din_artem_leghump
 		elseif leghumpArtom >= 1:
 			'Artem said shyly. "Svetulya, you are such a wonderful. I enjoyed it so much last time. Can we play one more time?"'
-			dynamic $din_artom_leghump
-			dynamic $din_artom_leghump2
+			dynamic $din_artem_leghump
+			dynamic $din_artem_leghump2
 		end
 
 		if artQW = 3:
@@ -601,9 +602,9 @@ $artomKiss = {
 
 					if lernHome > 0:
 						dynamic $din_artom_lern
-					else
-						act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
 					end
+					
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
 				end
 			elseif horny >= 50:
 				act 'Jerk off Artem':
@@ -620,9 +621,9 @@ $artomKiss = {
 
 					if lernHome > 0:
 						dynamic $din_artom_lern
-					else
-						act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
 					end
+					
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
 				end
 			end
 		end

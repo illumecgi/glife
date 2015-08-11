@@ -29,7 +29,7 @@ end
 'A small village with a rickety wooden houses.'
 
 if StoryLine = 1:'In one <a href="exec:minut += 5 & gt ''Gaddvor''">huts live your grandparents</a>.'
-if miraQW > 0: 'Through the three houses is the house  <a href="exec:minut += 5 & GT ''MiroslavaHome''">Miroslava</a>.'
+if miraQW > 0: 'Through the three houses is the house  <a href="exec:minut += 5 & gt ''MiroslavaHome''">Miroslava</a>.'
 
 if hour >= 6 and hour < 20:
 	if month >= 5 and month <= 9:

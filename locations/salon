@@ -459,7 +459,8 @@ if $ARGS[0] = 'start':
 			act 'View tattoo in the groin "Stars"':
 				cla
 				*clr
-				'<center><img src="images/body/tatvag.jpg"></center>'
+				! WD: Rename missing Image ~ 'tatvag.jpg' to 'tatvag1.jpg' to fix view 'images/body/tatvag<<tatvag>>.jpg'
+				'<center><img src="images/body/tatvag1.jpg"></center>'
 
 				act 'Leave':gt 'salon', 'start'
 

@@ -9,7 +9,7 @@ if miraingop = 0 and alko < 8:
 		cls
 		minut += 30
 		alko += 4
-		gs'stat'
+		gs 'stat'
 
 		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
 		'You drank moonshine and everything inside burned, breathless you become zanyuhivat sleeve ,because there were no snacks. Mitka said approvingly "Good infection, wade."'
@@ -29,7 +29,7 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 		dick = 18
 		pose = 0
 		mitkasextimes += 1
-		gs'stat'
+		gs 'stat'
 
 		'<center><img src="images/qwest/gadukino/mitka.jpg"></center>'
 		'Mitka took you to his house and led to the veranda, There he laid you on the couch and began unceremoniously undressed.'
@@ -64,7 +64,7 @@ if miraingop = 1 and miragopQW > 0:
 			dick = 18
 			pose = 0
 			mitkasextimes += 1
-			gs'stat'
+			gs 'stat'
 
 			'<center><img src="images/qwest/gadukino/mitka.jpg"></center>'
 			'Mitka took you to his house and led to the veranda, There he laid you on the couch and began unceremoniously undressed.'
@@ -75,7 +75,7 @@ if miraingop = 1 and miragopQW > 0:
 
 			'Mityai, I lay down on his side and lit "Fucking!"'
 
-			act 'Escape':miraingop = 0 & gt'Gaddvor'
+			act 'Escape':miraingop = 0 & gt 'Gaddvor'
 		end
 	elseif miralko >= 8:
 		if miragopQW = 5:
@@ -93,7 +93,7 @@ if miraingop = 1 and miragopQW > 0:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/Mirawish1_2.jpg"></center>'
 				'Drunk naked Miroslav was lying on a wooden table, leaning against a fence, and Mitka was measured nailed in her his cock. Each time you push, sickly sickly, softly moaned Peace, and then udaras the top of the fence, and hysterically boards creaked. Peering, you get the idea, what the World has kept its promise, - a member of the Mitki to the eggs included in her ass, which sometimes heard strange squelch, NAC which, however, no one, except you, didn`t pay attention. The loud slaps of the contacting bodies wedged into this animal musical bacchanalia two snoshayuschimisya young people, adding even more spice. Mitka ten minutes was busting my ass wriggling and Miroslav mooing, until finally the whole length of the latter not jerk drove into the girl of his cock and began noisily to erupt... The world at this time drunken eyes searched the surrounding area, sure you looking, but never noticed. Half a minute later Mitka pulled out of her ass his cock and lit, started watching, as the World wipes wipes oozing from the anus sperm...'
-				act 'Escape':miraingop = 0 & minut += 15 & gt'Gaddvor'
+				act 'Escape':miraingop = 0 & minut += 15 & gt 'Gaddvor'
 			end
 		else
 			cls
@@ -102,7 +102,7 @@ if miraingop = 1 and miragopQW > 0:
 			gs 'stat'
 			'<center><img src="images/qwest/gadukino/drunkgirl.jpg"></center>'
 			'Miroslav got blind drunk, my legs are practically holding her, so she leaned against derieva and trying not to fall. She mumbles something completely unintelligible and hardly understands, where is it and what all is around. And you yourself are no better  - head kuritsa, earth and then leaves-under the feet and all, what you now want, it is to lie down on a soft warm bed. You, understanding, what if you drink at least one glass, then you fall right here, decide to leave, therefore say goodbye to the companions and go home.'
-		act 'Escape':miraingop = 0 & gt'Gaddvor'
+		act 'Escape':miraingop = 0 & gt 'Gaddvor'
 		end
 	else
 		if temp = 0:
@@ -188,7 +188,7 @@ if miraingop = 1 and miragopQW > 0:
 												gs 'stat'
 												'<center><img src="images/qwest/gadukino/MiraQW10_4.jpg"></center>'
 												'But Mitka, slapped her on the butt, roughly pulls her pants up to the knees and, opened my pants, starts to fuck her roughly. The world sighs and postanyvat, sometimes Stukas head into a tree, about which took, and trying to sign Mitike. You mark, as Osada you Vasya with Kalambay and saying goodbye, decide to go away from sin...'
-												act 'Escape':miraingop = 0 & minut += 30 & gt'Gaddvor'
+												act 'Escape':miraingop = 0 & minut += 30 & gt 'Gaddvor'
 											end
 										end
 									end
@@ -235,7 +235,7 @@ if miraingop = 1 and miragopQW > 0:
 								'<center><img src="images/qwest/gadukino/MiraQW11_3.jpg"></center>'
 								'Vasya takes the World a little aside and orders her to take off clothes, then, completely naked, starts davidlee his dick...'
 							end
-							act 'Escape':miraingop = 0 & minut += 10 & gt'Gaddvor'
+							act 'Escape':miraingop = 0 & minut += 10 & gt 'Gaddvor'
 						end
 					else
 						minut += 5
@@ -268,7 +268,7 @@ if miraingop = 1 and miragopQW > 0:
 								'<center><img src="images/qwest/gadukino/MiraQW11_7.jpg"></center>'
 								'The boys immediately forgetting about you, surround Miroslav and she turns starting all carefully aspirate, at the same time nadrachivat member hand...'
 							end
-							act 'Escape':miraingop = 0 & minut += 10 & gt'Gaddvor'
+							act 'Escape':miraingop = 0 & minut += 10 & gt 'Gaddvor'
 						end
 					end
 				elseif miragopQW >= 15 and mirapiss = 6:

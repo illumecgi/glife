@@ -9,7 +9,7 @@ lcolor = rgb(106, 90, 205)
 '<center><b><font color="maroon">A cafe</font></b></center>'
 
 if mother_go = 1 and hour = 16:
-	'<center><img src="images/qwest/alter/gkafe.jpg" ></center>'
+	'<center><img src="images/qwest/alter/gkafe.jpg"></center>'
 	'little bedraggled, station cafe.'
 	'Door closed on the lock and the door hangs a plaque "records".'
 
@@ -24,7 +24,7 @@ if mother_go = 1 and hour = 16:
 			cls
 			minut += 5
 			gs 'stat'
-			'<center><img src="images/qwest/alter/placer/momslut.jpg" ></center>'
+			'<center><img src="images/qwest/alter/placer/momslut.jpg"></center>'
 
 			if momslut >= 1:
 				'You climbed on the boxes and looked through the small window. Behind the glass you noticed, your mom does blowjob cafe owner. You have come to see, Mom enthusiastically sucks dick swallowing it up to the eggs.'
@@ -40,7 +40,7 @@ if mother_go = 1 and hour = 16:
 				minut += 5
 				mother_go = 0
 				gs 'stat'
-				'<center><img src="images/qwest/alter/placer/momslut2.jpg" ></center>'
+				'<center><img src="images/qwest/alter/placer/momslut2.jpg"></center>'
 				'Your mother got to her feet and turned his big bare ass to the owner of the cafe. He came up from behind and abruptly drove his cock in her pussy. His movements were strong and flourish, your mother moaned and held on to the wall. Finally the owner of the cafe ass grabbing your mother groaned and finished it in her pussy.'
 
 				act 'Leave':gt 'vokzalG'

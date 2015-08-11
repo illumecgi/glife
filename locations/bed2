@@ -18,7 +18,7 @@ health += 5
 hapri = 0
 InSleep = 1
 cloth_vid = 0
-'<center><img src="images/pics/son.jpg" ></center>'
+'<center><img src="images/pics/son.jpg"></center>'
 
 if analplugIN = 1:analplugIN = 0 & 'Before going to bed you remove a butt plug.'
 if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed you remove a vibrator.'

@@ -1,6 +1,10 @@
 # cikl
 if curly > 0:curly -= 1
 
+! WD: Added daily reduction of braids for Maruda Hair Mod
+if hbraids > 0:hbraids -= 1 &
+
+
 sweat += 1
 
 if tan > 0:tan -= 1

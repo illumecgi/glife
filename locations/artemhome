@@ -164,7 +164,7 @@ elseif artemhomemark = 1:
 		dynamic $artomKiss
 	elseif artQW >= 2 and artQW <= 3 and artemtimes >= 30 and Suspeh >= 90 and GorSlut < 2:
 		artQW = 10
-		gt'artemev2'
+		gt 'artemev2'
 	elseif artQW = 20 and artemkissday ! daystart:
 		'Artem hugs you and kisses'
 		dynamic $artomKiss

@@ -201,7 +201,7 @@ if $ARGS[0] = 'start':
 			minut += 15
 			middildo = 1
 			money -= 1500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 15cm long dildo and paid the cashier.'
 
 			act 'Move away from the counter':gt 'sexshop','start'
@@ -215,7 +215,7 @@ if $ARGS[0] = 'start':
 			minut += 15
 			largedildo = 1
 			money -= 2500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 20cm long dildo and paid the cashier.'
 
 			act 'Move away from the counter':gt 'sexshop','start'
@@ -229,7 +229,7 @@ if $ARGS[0] = 'start':
 			minut += 15
 			bigdildo = 1
 			money -= 4500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 25cm long dildo and paid the cashier.'
 
 			act 'Move away from the counter':gt 'sexshop','start'
@@ -243,7 +243,7 @@ if $ARGS[0] = 'start':
 			minut += 15
 			extradildo = 1
 			money -= 6500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 30cm long dildo and paid the cashier.'
 
 			act 'Move away from the counter':gt 'sexshop','start'
@@ -257,7 +257,7 @@ if $ARGS[0] = 'start':
 			minut += 15
 			superdildo = 1
 			money -= 8500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 35cm long dildo and paid the cashier.'
 
 			act 'Move away from the counter':gt 'sexshop','start'
@@ -271,7 +271,7 @@ if $ARGS[0] = 'start':
 			minut += 15
 			maddildo = 1
 			money -= 12000
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 40cm long dildo and paid the cashier.'
 
 			act 'Move away from the counter':gt 'sexshop','start'

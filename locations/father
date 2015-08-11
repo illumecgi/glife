@@ -268,7 +268,9 @@ if mother_go = 1 and hour = 16 and TouchedByFather = 1 and horny >= 50 or hadsex
 	end
 end
 
-if nude=1:
+! WD: Fix old nude variable
+! if nude = 1:
+if $clothingworntype = 'nude':
 	'Stepfather with a smirk looking at you - "Nifiga! Blyadinka growing. Did you ever be ashamed,I-I`m still the man."'
 	if hadsexwithfather ! 1:
 		if father>=40:
@@ -293,13 +295,17 @@ if nude=1:
 end
 
 if hadsexwithfather=1:fatherwantssex=rand(1,2)
-if nude=1: fatherwantssex=1
+! WD: Fix old nude variable
+! if nude = 1:
+if $clothingworntype = 'nude': fatherwantssex=1
 if hadsexwithfather=1 and fatherwantssex=1 and mother_go = 1 and hour = 16 and father>60:
 	cls
 	gs 'stat'
 	'<center><B><font color=maroon>Stepfather Vladimir Skryabin</font></B></center>'
 	'<center><img src="images/qwest/alter/father.jpg"></center>'
-	if nude=1:'- Wow, I see you`ve prepared, I undressed for "Daddy"'
+	! WD: Fix old nude variable
+	! if nude = 1:
+	if $clothingworntype = 'nude': '- Wow, I see you`ve prepared, I undressed for "Daddy"'
 	'Not having to say a word stepfather, you notice, he unbuttons his pants and pulls out a ready to fight a member: "Svetik, Rejoice old."'
 	act '<B>Move away</B>':gt $loc, $metka
 	act 'Kneel down':dynamic $d_fatherblow_act[4]

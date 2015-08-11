@@ -266,7 +266,9 @@ if findvel=1 and hour >= 7 and hour < 20:
 		manna+=5
 		sweat+=2
 		findvelrand= RAND (0,100)
-		if nude = 1:
+		! WD: Fix old nude variable
+		! if nude = 1:
+		if $clothingworntype = 'nude':
 			horny += 20
 			willpower+=10
 			gs'stat'

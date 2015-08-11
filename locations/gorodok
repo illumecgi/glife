@@ -41,7 +41,7 @@ if NosovRevenge = 2 and daynosovrevenge + 1 >= daystart:
 	cls
 	gs 'stat'
 	'<center><b><font color="maroon"><<$npcName[1]>> <<$npcSurName[1]>></font></b></center>'
-	'<center><img src="images/qwest/alter/npc/1.jpg" ></center>'
+	'<center><img src="images/qwest/alter/npc/1.jpg"></center>'
 	'Near the house "Well slut. If you do not want that to video became public, Now let''s go and talk to me."'
 
 	act 'Go to Dimka':

@@ -108,7 +108,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 		manna = 0
 		gs 'stat'
 		'<center><b><font color="maroon">Mom</font></b></center>'
-		'<center><img src="images/qwest/alter/mother.jpg" ></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
 		'Mom backed hips hands "What''s this about a video of you? How could you be this careless? You DO realize this is going to reflect badly on the entire family..."'
 
 		act 'Apologize':
@@ -118,7 +118,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			mother -= 40
 			gs 'stat'
 			'<center><b><font color="maroon">mom</font></b></center>'
-			'<center><img src="images/qwest/alter/mother.jpg" ></center>'
+			'<center><img src="images/qwest/alter/mother.jpg"></center>'
 			!!placeholder I guess, I''m sure I can come up with something better
 			'"I don''t know what to say, mom... I''m sorry"'
 			'Mother shakes her head, glaring at you, and walks away'

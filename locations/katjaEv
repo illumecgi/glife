@@ -305,13 +305,13 @@ act 'Go with Katja':
 									if frost > 0:frost = 0
 
 									gs 'stat'
-									'<center><img src="images/pics/dush.jpg" ></center>'
+									'<center><img src="images/pics/dush.jpg"></center>'
 									'You kicked out of the shower and Katja closed the door. You got into the shower and began to lather your body washcloth. After washed off the soap and washed her hair with shampoo. Rinse off the shampoo you become completely clean.'
 
 									act 'Get out of the shower':
 										cls
 										gs 'stat'
-										'<center><img src="images/qwest/alter/npc/14.jpg" ></center>'
+										'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 										'You came out of the shower and walked into the room to Katja. You have chatted and Katja said, what she was doing.'
 
 										act 'Say goodbye and go home':minut += 15 & gt 'gorodok'
@@ -333,7 +333,7 @@ act 'Go with Katja':
 									KatjaHorny += 10
 									KatjaLust += 1
 									gs 'stat'
-									'<center><img src="images/qwest/alter/katja/shower.jpg" ></center>'
+									'<center><img src="images/qwest/alter/katja/shower.jpg"></center>'
 									'You undressed and climbed together with Katja in the shower.'
 
 									if lobok <= 0:
@@ -342,7 +342,7 @@ act 'Go with Katja':
 										act 'further':
 											cls
 											gs 'stat'
-											'<center><img src="images/qwest/alter/katja/shower2.jpg" ></center>'
+											'<center><img src="images/qwest/alter/katja/shower2.jpg"></center>'
 											'Katja gently shampooed you gel and rinse with warm shower jets.'
 
 											if KatjaLust >= 10 and KatjaHorny >= 90:
@@ -354,7 +354,7 @@ act 'Go with Katja':
 												act 'Get out of the shower':
 													cls
 													gs 'stat'
-													'<center><img src="images/qwest/alter/npc/14.jpg" ></center>'
+													'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 													'You came out of the shower and walked into the room to Katja. You have chatted and Katja said, what she was doing.'
 
 													act 'Say goodbye and go home':minut += 15 & gt 'gorodok'
@@ -371,7 +371,7 @@ act 'Go with Katja':
 											KatjaHorny += 10
 											KatjaLust += 1
 											gs 'stat'
-											'<center><img src="images/qwest/alter/katja/lobok.jpg" ></center>'
+											'<center><img src="images/qwest/alter/katja/lobok.jpg"></center>'
 											'Katja sat in the bathroom and you lathered your crotch passing lathered his stomach and chest. She took a razor and began to gently shave your hairs between her legs.'
 
 											if KatjaLust >= 10 and KatjaHorny >= 90:
@@ -383,7 +383,7 @@ act 'Go with Katja':
 												act 'Get out of the shower':
 													cls
 													gs 'stat'
-													'<center><img src="images/qwest/alter/npc/14.jpg" ></center>'
+													'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 													'You came out of the shower and walked into the room to Katja. You have chatted and Katja said, what she was doing.'
 
 													act 'Say goodbye and go home':minut += 15 & gt 'gorodok'
@@ -403,13 +403,13 @@ act 'Go with Katja':
 								if frost > 0:frost = 0
 
 								gs 'stat'
-								'<center><img src="images/pics/dush.jpg" ></center>'
+								'<center><img src="images/pics/dush.jpg"></center>'
 								'Katja showed you where the toiletries and came out of the shower. You got into the shower and began to lather your body washcloth. After washed off the soap and washed her hair with shampoo. Rinse off the shampoo you become completely clean.'
 
 								act 'Get out of the shower':
 									cls
 									gs 'stat'
-									'<center><img src="images/qwest/alter/npc/14.jpg" ></center>'
+									'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 									'You came out of the shower and walked into the room to Katja. You have chatted and Katja said, what she was doing.'
 									act 'Say goodbye and go home':minut += 15 & gt 'gorodok'
 								end

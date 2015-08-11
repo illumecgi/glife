@@ -3,8 +3,8 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 '<center><H4>Glade</H4></center>'
 '<center><img src="images/qwest/gadukino/meadow.jpg"></center>'
@@ -44,7 +44,7 @@ end
 if meadow = 3 and mirainmeadow = 0 and miragopQW >= 20 and temper >= 30 and sunWeather = 1 and temp = 9:
 	'In a clearing you see  <a href="exec: dynamic $mirameadow ">The world</a>.'
 end
-act 'Escape':minut += 30 & mirainmeadow = 0 & gt'Gaddvor'
+act 'Escape':minut += 30 & mirainmeadow = 0 & gt 'Gaddvor'
 
 
 !meadow = 1 'You have found the meadow'

@@ -111,10 +111,10 @@ $din_artem_lern = {
 					artomLernQW = -1
 					artemblok = 1
 					grupNPC[2] = 0
-					gs'stat'
+					gs 'stat'
 
 					'You denied Artem, he openly offended "Listen, I have so much time and effort spent, and you... you suck at all in a row, and I do not want... More to me you can not approach."'
-					act 'Going home':gt'gorodok'
+					act 'Going home':gt 'gorodok'
 				end
 			elseif (artemBJQW > 0 and artemBJQW < 10 and artomsex = 0) or (artomStripSee = 3 and artomsex = 0 and artomTouch > daystart):
 				cla
@@ -131,7 +131,7 @@ $din_artem_lern = {
 						minut += 5
 						artomhakday = daystart
 						arthakQW = 1
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/anatomy.jpg"></center>'
 						'You: "Good, I`ll show you everything - but for that you do something for me."'
 						'Artem nodded enthusiastically. "But if you do not keep your promise, I find boys, that you fuck on the nose stretched." You show itself in all its glory.'
@@ -148,7 +148,7 @@ $din_artem_lern = {
 					act 'Agree':
 						cls
 						minut += 5
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/anatomy.jpg"></center>'
 						'"Good, I`ll show you everything, but I really need money for medication for my sister - you will not have 300 r.?"'
 						'Artem gives money: "Take course." You take off their clothes and demonstrate all its charms'
@@ -163,7 +163,7 @@ $din_artem_lern = {
 			elseif artemBJQW > 10 and artomStripSee < 2 and artomsex = 0:
 				artomRand = rand(0,5)
 				cls
-				gs'stat'
+				gs 'stat'
 				if artomRand = 5:
 					'After classes you Artem carefully examined and said, putting 300r. on the table:'
 					'"Let`s repeat the anatomy lesson"'
@@ -189,7 +189,7 @@ $din_artem_lern = {
 				minut += 5
 				artomTouch = daystart + 7
 				artomStripSee = 3
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 				'After class Artem, blushing, appeals to you: "Listen, I have already sufficiently considered - I want to touch you there. I have 500p for lunch - you have enough?"'
 				'"Will you sit on a diet a week?" taking money to ask you.'
@@ -197,7 +197,7 @@ $din_artem_lern = {
 					if horny >= 80:
 						cls
 						minut += 5
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/anatomy3_1.jpg"></center>'
 						'Artem very carefully with one finger touches your recording. You are very pleased by these uncertain touch. You chustvuete both from the pussy profusely starts to separate grease.'
 						'Artem holding his hand on your pussy and begins to caress your clitoris, his hand gently stroking your bottom, and the other stroking your chest.'
@@ -209,7 +209,7 @@ $din_artem_lern = {
 							horny = 0
 							manna = mannamax
 							minut += 5
-							gs'stat'
+							gs 'stat'
 							'<center><img src="images/qwest/alter/artom/anatomy3_2.jpg"></center>'
 							'Artem sticks two fingers inside you and massages you from the inside.'
 							'Artem: "And now a little acrobatics."'
@@ -219,12 +219,12 @@ $din_artem_lern = {
 							'Silently dressed and go home.'
 
 							artomHorny = 1
-							act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 						end
 					else
 						cls
 						minut += 5
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/anatomy3_1.jpg"></center>'
 						'Artem touch your breasts and pussy. After a few touches he removes his hands, unbuttons his pants and pulls out a member of his pants. "On, Svetik, Suck."'
 						artomHorny = 0
@@ -235,7 +235,7 @@ $din_artem_lern = {
 			elseif artomStripSee = 3 and artomsex = 0 and artomTouch <= daystart:
 				cls
 				minut += 5
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 				'During a break in employment, you chatted with Artem.'
 				artomStripSee = 4
@@ -256,11 +256,11 @@ $din_artem_lern = {
 					'You: "Where to hear, there and fuck - nothing that was not. Well, there is no way - Let`s deal with."'
 					'You just do lessons.'
 				end
-				act 'Further':artemhomemark = 1 & gt'artemhome'
+				act 'Further':artemhomemark = 1 & gt 'artemhome'
 			elseif artomStripSee = 4:
 				cls
 				minut += 5
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 				'After class, Artem offers: "I thought about you all the time and came up with the output. Come on, I`ll call my friend and we are on the tabernacle 500 r?"'
 				'You indignantly: "E No - you are not friends with the head - some gangbang? I told you in confidence is offered, and you have all rastryndel?"'
@@ -273,22 +273,22 @@ $din_artem_lern = {
 					artomLernQW = -1
 					artemblok = 1
 					grupNPC[2] = 0
-					gs'stat'
+					gs 'stat'
 					'You: "Oh you - I will before any lohami lights"'
 					'Artem: "Lohami say? Can we fuckers, but not for the money, with all ebemsya proshmandovka. Uebyvay not come over to me - even if you do not goof deals."'
 
-					act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 				act 'Agree':
 					artomAndPetja = 1
 					artomStripSee = 5
 					'"Looking for. Okay, drives in the next time your friend" - you said.'
-					act 'Further':artemhomemark = 1 & gt'artemhome'
+					act 'Further':artemhomemark = 1 & gt 'artemhome'
 				end
 			elseif artomAndPetja = 1:
 				cls
 				minut += 5
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 				'After class Artem leads you to the garage near the house.'
 				'Artem :"Parents can descend - I thought, in garage safer."'
@@ -300,7 +300,7 @@ $din_artem_lern = {
 					cls
 					minut += 5
 					horny += 10
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/ap_anatomy1_1.jpg"></center>'
 					'You`re a little confused, but chustvuya strange excitement, removed from an upper part of the dress.'
 					'Artem: "Okay, let`s not pull - take it off completely."'
@@ -311,7 +311,7 @@ $din_artem_lern = {
 						cls
 						minut += 5
 						horny += 10
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/ap_anatomy1_2.jpg"></center>'
 						'You take the pussy by the edges and stretch. Turning you saw how nerds got their pisyuny and drochat.'
 						'You: "Hey, do not stop me!"'
@@ -330,13 +330,13 @@ $din_artem_lern = {
 							minut += 10
 							money += 1000
 							artomAndPetja = 2
-							gs'stat'
+							gs 'stat'
 							'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 							'Artem: "Petka liked, He would like to make regular extra-curricular lessons, you also need money? The more you have to tell us about sex and... show."'
 							'You: "About the lessons - We need to think - not much lip unroll.. and - if at least someone one word - I will find how to arrange a full fucking."'
 							'You take 1000r. and go.'
 
-							act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 						end
 					end
 				end
@@ -357,7 +357,7 @@ $din_artem_lern = {
 					bj += 2
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
 					if npcSex[6] = 0:npcSex[6] = 1 & guy += 1
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/ap_anatomy2_1.jpg"></center>'
 					'After class Artem again leads you to the garage near the house, where you will find Peter.'
 					'Artem: "Well, do not forget? You promised to spend with us training.." and then hands you two condoms.'
@@ -368,7 +368,7 @@ $din_artem_lern = {
 						minut += 5
 						horny += 10
 						vagina += 1
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/ap_anatomy2_2.jpg"></center>'
 						'Once they are quite excited you put them condoms and said,: "So lie down on the mattress Artem, You stay on the ground." You sit on top of Artyom and feel, as a member enters into you completely. You start to squat on it, along the way to explain: "This is the posture rider. Do you like?" Artem only grunts in response. Do you remember about Petya again take his penis in her mouth.'
 						act 'Exchange seats':
@@ -381,13 +381,13 @@ $din_artem_lern = {
 							gang += 1
 							minut += 10
 							money += 1000
-							gs'stat'
+							gs 'stat'
 							'<center><img src="images/qwest/alter/artom/ap_anatomy2_3.jpg"></center>'
 							'"So. Now, to change their place." Now you Gallop Petit and suck Artem, removing a condom. Peter closed his eyes and you feel,  as the jet of sperm filled his condom: "Something you are very quickly. Do not worry - it happens from inexperience. The next time you repeat. We will repeat until you learn to hold back long enough. And you what Artem?" And you redoubled their efforts. The jet of sperm hit you in the mouth.'
 							'You take 1000r. and go.'
 
 							artomAndPetja += 1
-							act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 						end
 					end
 				end
@@ -401,7 +401,7 @@ $din_artem_lern = {
 				sub += 1
 				cumass += 2
 				gang += 1
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/ap_anatomy3.jpg"></center>'
 				'After class Artem again leads you to the garage near the house, where you will find Peter.'
 				'You speak: "At our last meeting you held out for a long time and almost brought me to orgasm. So today, the next posture - in common with cancer." You get down on all fours and Artem member puts you in the pussy and starts to fuck you. Peter stands by and Fingering.'
@@ -410,7 +410,7 @@ $din_artem_lern = {
 					cls
 					minut += 5
 					money += 1000
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 					'You: "So. The next time you start with cunnilingus - know what it is?"'
 					'Artem: "Yes Nuu.. I will not lick pussy."'
@@ -421,12 +421,12 @@ $din_artem_lern = {
 					'You take 1000r. and go.'
 
 					artomAndPetja = 12
-					act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 			elseif artomAndPetja = 12:
 				minut += 5
 				horny += 10
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/ap_anatomy4_1.jpg"></center>'
 				'After class Artem again leads you to the garage near the house, where you will find Peter.'
 				'You start it explains: "Well, you`ve seen the pussy and fucked, and now try to kiss her. Do not be afraid, Artem. Close your eyes, come here."'
@@ -446,19 +446,19 @@ $din_artem_lern = {
 					cumface += 1
 					gang += 1
 					minut += 10
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/ap_anatomy4_2.jpg"></center>'
 					'"Stop! Now you, Petya, come here, and you have, Artem, I still suck. Petya! Do not stop! Davaaaay! AAAA!" Artem ends your face. You have the strongest orgasm and you end.'
 					'"It was awesome - you`re both geeks - consider, that passed the exam. After this we are almost home. Okay, it is necessary to wash. Petya, I see you are in shock, but you have seen both this girl ends. I think today will be enough impressions."'
 					'Are you going to go home.'
 
 					artomAndPetja = 13
-					act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 			elseif artomAndPetja = 13:
 				cls
 				minut += 5
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 				'After class Artem again leads you to the garage near the house, where you will find Peter.'
 				'Artem asked: "And fuck you in the ass? And then we want to try Petka."'
@@ -479,7 +479,7 @@ $din_artem_lern = {
 					sub += 1
 					cumanus += 1
 					gang += 1
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/ap_anatomy5.jpg"></center>'
 					'You go to the apartment of Artem. Artem gives you an enema, and you go to the bathroom, You make yourself an enema.'
 					'Back in the garage, you get cancer and you say: "So, Now we need grease or petroleum jelly - you have? Look in the medicine cabinet." Artem bring Vaseline.'
@@ -491,19 +491,19 @@ $din_artem_lern = {
 						cls
 						minut += 10
 						money += 1000
-						gs'stat'
+						gs 'stat'
 						'"That is why we must begin with Cooney, but not leading to orgasm, and only then anal - and you and the girl will be fine. I think the lesson is over for today."'
 						'You bring myself up, take away 1000r. and go home.'
 
 						artomAndPetja = 14
-						act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+						act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 					end
 				end
 			elseif artomAndPetja = 14:
 				cls
 				minut += 5
 				horny += 10
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/ap_anatomy6_1.jpg"></center>'
 				'After class, Artem already familiar led you to the garage. In the garage was covered table, a bottle of wine, cups and any-the fruit.'
 				'Artem: "We decided to say thank you and treat wine."'
@@ -522,7 +522,7 @@ $din_artem_lern = {
 					sub += 10
 					gang += 1
 					minut += 30
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/ap_anatomy6_2.jpg"></center>'
 					'"Suck us" You suck. Artem includes the camera on your mobile.'
 					'"Undress" Undress. Plenty naglumivshis over you, Banged in all holes, guys end up in your mouth, but they say that you should not swallow. You have a mouth full of sperm.'
@@ -531,14 +531,14 @@ $din_artem_lern = {
 						cls
 						minut += 5
 						water += 10
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/ap_anatomy6_3.jpg"></center>'
 						'You swallow the sperm and drink all the urine does not even wince. Guys put you out the door, saying that the next time prizodili right into the garage, and you quietly go home knowing that this is just the beginning.'
 
 						artomAndPetja = 15
 						arthakQW = 10
 						artemblok = 1
-						act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
+						act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 					end
 				end
 			end
@@ -565,7 +565,7 @@ $artomKiss = {
 			exit
 		end
 
-		gs'stat'
+		gs 'stat'
 
 		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
 		'You smiled Artem and his face a little closer to it. Artem approached you and kissed you. You started kissing. Finally ending the kiss shyly said Artem. "Sveta, I really like you."'
@@ -584,7 +584,7 @@ $artomKiss = {
 				if lernHome > 0:
 					dynamic $din_artom_lern
 				else
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 
 				act 'Reluctantly masturbate Artem':
@@ -595,7 +595,7 @@ $artomKiss = {
 					hj += 1
 					hja += 1
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
-					gs'stat'
+					gs 'stat'
 
 					'<center><img src="images/qwest/alter/artom/hj.jpg"></center>'
 					'You reluctantly got Artem member of his pants and began to gently move the skin up and down the opening purple head that closing it. Soon, Artem could not resist, and finished in your hands. You went to the bathroom and washed his hands.'
@@ -604,7 +604,7 @@ $artomKiss = {
 						dynamic $din_artom_lern
 					end
 					
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 			elseif horny >= 50:
 				act 'Jerk off Artem':
@@ -614,7 +614,7 @@ $artomKiss = {
 					hja += 1
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
 					dom += 1
-					gs'stat'
+					gs 'stat'
 
 					'<center><img src="images/qwest/alter/artom/hj.jpg"></center>'
 					'Did you get a member of the Artem his pants and began to gently move the skin up and down the opening purple head that closing it. Soon, Artem could not resist, and finished in your hands. You went to the bathroom and washed his hands.'
@@ -623,7 +623,7 @@ $artomKiss = {
 						dynamic $din_artom_lern
 					end
 					
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 			end
 		end
@@ -633,7 +633,7 @@ $artomKiss = {
 				if lernHome > 0:
 					dynamic $din_artom_lern
 				else
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 			elseif horny >= 30:
 				act 'Jerk off Artem':
@@ -642,7 +642,7 @@ $artomKiss = {
 					hj += 1
 					hja += 1
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
-					gs'stat'
+					gs 'stat'
 
 					'<center><img src="images/qwest/alter/artom/hj.jpg"></center>'
 					'Did you get a member of the Artem his pants and began to gently move the skin up and down the opening purple head that closing it. Soon, Artem could not resist, and finished in your hands. You went to the bathroom and washed his hands.'
@@ -650,7 +650,7 @@ $artomKiss = {
 					if lernHome > 0:
 						dynamic $din_artom_lern
 					else
-						act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+						act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 					end
 				end
 				act 'Take in the mouth':
@@ -659,7 +659,7 @@ $artomKiss = {
 					bj += 1
 					bja += 1
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
-					gs'stat'
+					gs 'stat'
 
 					'<center><img src="images/qwest/alter/artom/bj.jpg"></center>'
 					'You keep kissing and unbuttoning clothes so it was convenient. Take his hand and put it on his chest. You feel his caresses excite you.'
@@ -675,7 +675,7 @@ $artomKiss = {
 								minut += 15
 								anala += 1
 								artomanal += 1
-								gs'stat'
+								gs 'stat'
 
 								'<center><img src="images/qwest/alter/artom/anal.jpg"></center>'
 								'You went to the bathroom and made themselves an enema, then came into the room and undressed Artem got cancer.'
@@ -685,14 +685,14 @@ $artomKiss = {
 								if lernHome > 0:
 									dynamic $din_artom_lern
 								else
-									act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+									act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 								end
 							end
 						elseif artomsex >= 10 and artomanal = 0:
 							act 'I month':
 								cls
 								minut += 5
-								gs'stat'
+								gs 'stat'
 
 								'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 								'You: "I`d love to but I have begun...red days... Well, you knew...Let me your mouth or pen..."'
@@ -703,7 +703,7 @@ $artomKiss = {
 									minut += 5
 									swallow += 1
 									cumlip += 1
-									gs'stat'
+									gs 'stat'
 
 									'<center><img src="images/qwest/alter/artom/bjcum.jpg"></center>'
 									'You looked at him wide-eyed "I understand that you grew bolder - but not too much you want?I went home."'
@@ -714,7 +714,7 @@ $artomKiss = {
 									if lernHome > 0:
 										dynamic $din_artom_lern
 									else
-										act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+										act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 									end
 								end
 								act 'Agree':
@@ -722,7 +722,7 @@ $artomKiss = {
 									minut += 15
 									anala += 1
 									artomanal += 1
-									gs'stat'
+									gs 'stat'
 
 									'<center><img src="images/qwest/alter/artom/anal.jpg"></center>'
 									'You: "Yes. But first you need to clean yourself...in short it is necessary to do an enema. You have?"'
@@ -735,7 +735,7 @@ $artomKiss = {
 									if lernHome > 0:
 										dynamic $din_artom_lern
 									else
-										act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+										act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 									end
 								end
 							end
@@ -746,7 +746,7 @@ $artomKiss = {
 							minut += 5
 							sexa += 1
 							if artomsex >= 1:artomsex += 1
-							gs'stat'
+							gs 'stat'
 
 							'<center><img src="images/qwest/alter/artom/sex.jpg"></center>'
 							'You undressed and lay on his back.'
@@ -765,7 +765,7 @@ $artomKiss = {
 							if lernHome > 0:
 								dynamic $din_artom_lern
 							else
-								act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+								act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 							end
 						end
 					end
@@ -784,7 +784,7 @@ $artomKiss = {
 
 						swallow += 1
 						cumlip += 1
-						gs'stat'
+						gs 'stat'
 
 						'<center><img src="images/qwest/alter/artom/bjcum.jpg"></center>'
 						'You accelerate the pace of paying no attention to the words with one hand caressing herself.'
@@ -795,14 +795,14 @@ $artomKiss = {
 						if lernHome > 0:
 							dynamic $din_artom_lern
 						else
-							act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+							act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 						end
 					end
 				end
 			end
 		end
 
-		act 'Going home':artemhomemark = 0 & gt'gorodok'
+		act 'Going home':artemhomemark = 0 & gt 'gorodok'
 	end
 }
 
@@ -840,7 +840,7 @@ $artomSkver = {
 			artomKinoKiss += 1
 		end
 		'After the release of the movie did you decide to go back to Artem.'
-		act 'Go to Artem':gt'artemhome'
+		act 'Go to Artem':gt 'artemhome'
 	end
 	act 'Refuse':
 		cls
@@ -851,7 +851,7 @@ $artomSkver = {
 		dynamic $artomGopSkver
 
 		'Work up you have decided to go back to Artem.'
-		act 'Go to Artem':gt'artemhome'
+		act 'Go to Artem':gt 'artemhome'
 	end
 }
 
@@ -876,7 +876,7 @@ $artomGopSkver = {
 				'You stood between Gopnik and Artem: "Do not touch it! Now I`ll call the police!" Gopnik took out a knife and held it up to your neck: "Well, call me. If you have time."'
 				'You look in his eyes told hooligan: "Come on, we just leave - you can take my money." Gopnik lowers the knife takes all your money and leave you with the thought that Artem has got off lightly.'
 				money = 0
-				act 'Go to Artem':gt'artemhome'
+				act 'Go to Artem':gt 'artemhome'
 			end
 			act 'See silence':
 				cls
@@ -890,7 +890,7 @@ $artomGopSkver = {
 					'"I will not." Answer You. Gopnik came to Artem and foot hit him in the face. You rushed to Artem and hugged him.'
 					'Gopnik looked at you spat at his feet and left: "Live ....while." Company Gopnik went deep into the park.'
 					'You helped Artem climb, He wiped the blood from his face and helped him get home.'
-					act 'Lay Artem':artemhomemark = 0 & minut += 15 & gt'gorodok'
+					act 'Lay Artem':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 				act 'Dance':
 					cls
@@ -920,7 +920,7 @@ $artomGopSkver = {
 							'<center><img src="images/qwest/alter/artom/walk/walk_slap.jpg"></center>'
 							'Artem: "Perhaps we should not see - after, what happened to us."'
 							'You looked at Artem and gave him a slap in the face and then went home.'
-							act 'Escape':artemhomemark = 0 & minut += 15 & artemblok = 1 & gt'gorodok'
+							act 'Escape':artemhomemark = 0 & minut += 15 & artemblok = 1 & gt 'gorodok'
 						end
 					end
 					act 'Try to escape':
@@ -945,7 +945,7 @@ $artomGopSkver = {
 							gs 'stat'
 							'<center><img src="images/qwest/alter/artom/walk/walk_save.jpg"></center>'
 							'Have you looked behind him and shouted hooligan: "Dad!" Gopnik turned in the wrong direction, and you rushed to Artem, grabbed him by the arm, and with all the forces gave tear out of the park.'
-							act 'Go to Artem':gt'artemhome'
+							act 'Go to Artem':gt 'artemhome'
 						else
 							cls
 							minut += 20
@@ -965,7 +965,7 @@ $artomGopSkver = {
 							'"And now to secure lesson!" Gopnik stand around and beginning to piss on you. "Well, now you can go home clean! And if you like it - do you know where to find us!"'
 							'Under rzhach Gopnik you are going, and with Artem go home.'
 							'Artem: "Forgive me, Sveta, - It`s all-for me... I will never betray..." You looked at him sadly and went home.'
-							act 'Escape':artemhomemark = 0 & minut += 15 & artemblag = 1 & gt'gorodok'
+							act 'Escape':artemhomemark = 0 & minut += 15 & artemblag = 1 & gt 'gorodok'
 						end
 					end
 				end
@@ -984,7 +984,7 @@ $artomBibl = {
 	gs 'stat'
 	'<center><img src="images/qwest/alter/artom/walk/library.jpg"></center>'
 	'You, along with Artem exercise library.'
-	act 'Go to Artem':gt'artemhome'
+	act 'Go to Artem':gt 'artemhome'
 }
 
 gs 'stat'

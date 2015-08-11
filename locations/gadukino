@@ -49,7 +49,7 @@ if hour >= 6 and hour < 20:
 
 					'<center><img src="images/qwest/gadukino/meadow.jpg"></center>'
 					'You decide to go on it, but ten minutes later disappointed rested in dense thickets. You was about to leave, but then I notice barely noticeable, clearly laid out what-the wildlife trail. Once you get on it through the brush, you see not long since overgrown with fruiting trees of the garden, which when-then, surely, belonged to a local farm, until it fell apart. After a little more, you see long ago overgrown dirt road  - judging by the grass on it, it has long no one uses. After wandering for about twenty minutes, you sure, what local do not go here, and if we go, it is very rare. You decide to go back and, to your huge surprise, go right in my backyard...'
-					act 'Fine':gt'Gaddvor'
+					act 'Fine':gt 'Gaddvor'
 				end
 			elseif temp >= 4 and temp < 10:
 				if miraQW = 0:
@@ -75,9 +75,9 @@ if hour >= 6 and hour < 20:
 							'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 						end
 						'You decide to help the girl, but at the same time out of curiosity and to know what-something about it, as in Gadyukino strangers  - rare, even more fantastic. You walk up to her and gently slap the calf in the ass, after which he immediately begins to move forward. Stranger thanks you between you and myself tied the conversation during that time, while the company decide to help to ward off her animal home. Miroslav turns out to be quite sociable girl and conversation, you`ll quickly learn, they recently were forced to move to the village. From-the huge debts of the father they had to sell all the property, including an apartment in the city center, and on the money, they have left, they could afford to buy a house only in that seedy village... You reach her house and she invites you to come to visit her at any time, and then in the village after the town of boring horrible.'
-						act 'Finish':gt'gadukino'
+						act 'Finish':gt 'gadukino'
 					end
-					act 'Escape':gt'gadukino'
+					act 'Escape':gt 'gadukino'
 				elseif miraQW > 0 and temp < 7:
 					cls
 					if miraQW < 25:miraQW += 1
@@ -109,7 +109,7 @@ if hour >= 6 and hour < 20:
 									'<center><img src="images/qwest/gadukino/MiraSP5.jpg"></center>'
 									'You say the World, so I dedicated a little bit of her pussy and she relaxed, seemed casual, sits down on those caught near the bench and, quickly glancing around, turned to the side and arched, shows you his naked dumpling...'
 								end
-								act 'Escape':gt'gadukino'
+								act 'Escape':gt 'gadukino'
 							else
 								if temp < 5:
 									'<center><img src="images/qwest/gadukino/MiraSP3.jpg"></center>'
@@ -119,11 +119,11 @@ if hour >= 6 and hour < 20:
 									'<center><img src="images/qwest/gadukino/MiraSP3.jpg"></center>'
 									'You say the World, so I dedicated a little bit of her pussy and she relaxed, seemed casual, sits down on his haunches... You notice, how much Radovana her cunt and pinched the bump sticks out a working anus...'
 								end
-								act 'Escape':gt'gadukino'
+								act 'Escape':gt 'gadukino'
 							end
 						end
 					end
-					act 'Finish':gt'gadukino'
+					act 'Finish':gt 'gadukino'
 				elseif miraQW > 0 and miragopQW < 4 and temp >= 7:
 					cls
 					if miraQW < 25:miraQW += 1
@@ -131,7 +131,7 @@ if hour >= 6 and hour < 20:
 					gs 'stat'
 					'<center><img src="images/qwest/gadukino/Mira2.jpg"></center>'
 					'You meet Miroslav  c the calf and you, fun laughing, remember your acquaintance.'
-					act 'Finish':gt'gadukino'
+					act 'Finish':gt 'gadukino'
 				elseif miraQW > 0 and miragopQW >= 4 and mirasextimes >= 10 and temper >= 15 and sunWeather = 1 and temp < 7:
 					cls
 					horny += 20
@@ -149,7 +149,7 @@ if hour >= 6 and hour < 20:
 					else
 					'Until he finally notices you. She immediately blush rapidly, but it does not stop sucking, only occasionally squints eyes in your direction. Realizing, she noticed you, you, as if not seeing anything unusual, with the most peaceful views go away...'
 					end
-					act 'Escape':gt'gadukino'
+					act 'Escape':gt 'gadukino'
 				elseif miraQW > 0 and miragopQW >= 6 and mirasextimes >= 10 and temper < 18 and sunWeather = 1 and temp >= 7:
 					cls
 					horny += 20
@@ -173,7 +173,7 @@ if hour >= 6 and hour < 20:
 					'<center><img src="images/qwest/gadukino/MiraSexGad3.jpg"></center>'
 					'They are so involved with each other, `re ignoring everything else. You are looking at and understand better, what Mitka Fucks her in the ass, without a condom, so it, surely, so writhing under him. After a while Mitka one jerk drives into her ass his cock until it stops and growling, starts to cum...'
 					end
-					act 'Escape':gt'gadukino'
+					act 'Escape':gt 'gadukino'
 				else
 					'<center><H4>Village Gadyukino</H4></center>'
 					'<center><img src="images/qwest/gadukino/walk.jpg"></center>'
@@ -216,7 +216,7 @@ if hour >= 6 and hour < 20:
 							gs 'stat'
 							'<center><img src="images/qwest/gadukino/Mirawish2_1.jpg"></center>'
 							'Out on the road you say Miroslav, so she posed as a prostitute, this will be the second desire. The world nods sadly, looks around and seeing, the street was quiet, fulfills your desire...'
-							act 'Escape':gt'gadukino'
+							act 'Escape':gt 'gadukino'
 						end
 					end
 				end
@@ -227,7 +227,7 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraSexGad5.jpg"></center>'
 				'Walking through the village, you notice for sheds for Vasya to Mira. The one with moans rides on his cock and, it seems, not anything around sameet, you can not say about the Vasyaney... You decide not to risk it and leave the couple alone.'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif miragopQW >= 11 and temp = 31 and temper >= 25 and sunWeather = 1:
 				cls
 				minut += 5
@@ -235,7 +235,7 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraSexGad6.jpg"></center>'
 				'Walking through the village, you notice for sheds for Vasya to Mira. The one with moans rides on his cock and, it seems, not anything around sameet, you can not say about the Vasyaney... You decide not to risk it and leave the couple alone.'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif miragopQW >= 11 and temp = 32 and temper >= 20 and sunWeather = 1:
 				cls
 				minut += 5
@@ -243,7 +243,7 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraSexGad7.jpg"></center>'
 				'Walking through the village, you notice behind the bushes Kolambu with Mira. The, squatting, passionately smacks her lips on his cock...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif miragopQW >= 15 and temp = 33 and temper >= 20 and sunWeather = 1:
 				cls
 				minut += 5
@@ -251,7 +251,7 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraSexGad8.jpg"></center>'
 				'Walking through the village, you notice behind the bushes Kolambu with Vasya and Mira. That is to see you butt naked on all fours and take turns sucking boys members...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif miragopQW >= 20 and temp = 34 and temper >= 20 and sunWeather = 1:
 				cls
 				minut += 5
@@ -259,7 +259,7 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraHorny.jpg"></center>'
 				'Walking through the village, you see the World. She sits on the fence and constantly looking intensely RUB yourself pussy, when no one is watching...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif miragopQW >= 20 and temp = 35 and temper >= 20 and sunWeather = 1:
 				cls
 				minut += 5
@@ -267,7 +267,7 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraSexGad9.jpg"></center>'
 				'Walking through the village, you notice the World behind fences with Kalambay. She squirms and moans, but dutifully peddles her bare butt Calamba, trying to shove in her bottle...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif miragopQW >= 30 and mirasextimes > 50 and temp = 36 and temper >= 20 and sunWeather = 1:
 				cls
 				minut += 5
@@ -275,7 +275,7 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraSexGad10.jpg"></center>'
 				'Walking through the village, you see the World, facing Mitka with his pants down and sticking his fingers Cebu anus, shows him prolapsed ass...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif miragopQW >= 20 and temp = 36 and temper >= 20 and sunWeather = 1:
 				cls
 				minut += 5
@@ -283,21 +283,21 @@ if hour >= 6 and hour < 20:
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/MiraSexGad11.jpg"></center>'
 				'Walking through the village, you meet the World, which corrects the shoes. However, she without panties and with her pussy white thread sticking out of a tampon...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif temp = 37 and temper >= 20:
 				cls
 				minut += 5
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/GadLol.jpg"></center>'
 				'Walking through the village, you see two grandmas, sawing boards...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif temp = 38 and temper >= 20:
 				cls
 				minut += 5
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/GadLol1.jpg"></center>'
 				'Walking through the village, you see two thieving grannies, load-bearing boards with dilapidated farm...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			elseif temp >= 39 and temp < 50:
 				cls
 				minut += 5
@@ -309,14 +309,14 @@ if hour >= 6 and hour < 20:
 					'<center><img src="images/qwest/gadukino/GadLol2.jpg"></center>'
 					'Walking through the village, you see local elite. They, as if on command, all together subside and hard where to start looking-to the side, as soon as you approach him...'
 				end
-				act 'Pass by':gt'gadukino'
+				act 'Pass by':gt 'gadukino'
 			elseif temp = 50 and temper >= 25 and sunWeather = 1:
 				cls
 				minut += 5
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/GadLol4.jpg"></center>'
 				'Walking through the village, you see the younger generation. They happily smile you teeth and staring with all his eyes...'
-				act 'Escape':gt'gadukino'
+				act 'Escape':gt 'gadukino'
 			else
 				'<center><H4>Village Gadyukino</H4></center>'
 				'<center><img src="images/qwest/gadukino/walk.jpg"></center>'
@@ -327,7 +327,7 @@ if hour >= 6 and hour < 20:
 	end
 end
 
-act 'Go to the river':minut += 20 & gt'Gadriver'
+act 'Go to the river':minut += 20 & gt 'Gadriver'
 act 'Exit the highway':minut += 30 & nroad = 15 & gt 'road'
 
 --- gadukino ---------------------------------

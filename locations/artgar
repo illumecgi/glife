@@ -44,7 +44,7 @@ elseif apmeet = 1:
 		cls
 		anal += 5
 		minut += 15
-		gs'stat'
+		gs 'stat'
 
 		'<center><img src="images/qwest/alter/artom/meet/meet2_2.jpg"></center>'
 		'Artem takes what that bottle of lubricant inserts in back and neck squeezes. And then apply this grease fingers and sticks you in the ass. Gradually he razdrachivaet you point. "Well ka Petruchio pull it from the other side!" Peter smears fingers and inserts two fingers of the other hand - they stretch your point in different directions gradually adding fingers and lubrication.You roll the tears of pain and humiliation. "On-I think enough." Artyom takes the wine bottle plaster it with grease: "Let herself - will surprise us - bottomed inside." You could hardly put in a bottle. The guys applauded came to you "Now suck !"'
@@ -58,21 +58,21 @@ elseif apmeet = 1:
 			facial += 1
 			minut += 15
 			sub += 2
-			gs'stat'
+			gs 'stat'
 
 			'<center><img src="images/qwest/alter/artom/meet/meet2_3.jpg"></center>'
 			'You started to suck their members with a bottle in the ass. Nerds finished your face - but you already do not care "I think that all the taboos removed." - said Artem.'
 			'"Thank you for the show - and until next time!" With sound "FER" You pulled out of a bottle.'
 			'You have gathered something like led myself up and went home on the road thinking how to get out of this situation and all the perverted fantasies. What to do? Maybe back blackmail? And what is the idea! It should be a good think about it.'
 
-			act 'Escape':gt'garmassiv'
+			act 'Escape':gt 'garmassiv'
 		end
 	end
 elseif apmeet = 2:
 	cls
 	apmeet = 3
 	minut += 30
-	gs'stat'
+	gs 'stat'
 	'<center><img src="images/qwest/alter/artom/meet/meet3_1.gif"></center>'
 	'Artem took you by the hand and led her into the garage, where you have been waiting, drink beer, Petka Klyuyev.'
 	'Presenting,  that you will be up,  You, Nonetheless,  dutifully undressed in front of the guys before the goal and took a pose: kneeling before 10 liter bucket. You were blindfolded. Your body was covered with goose bumps, You start to shiver in anticipation of the upcoming action.'
@@ -82,7 +82,7 @@ elseif apmeet = 2:
 		cls
 		minut += 5
 		horny += 5
-		gs'stat'
+		gs 'stat'
 		'<center><img src="images/qwest/alter/artom/meet/meet3_2.gif"></center>'
 		'It was not the blow. Peter just fucked you deep throat. You poked away tongue and holding her mouth wide open, choked by walking across the throat of the male member in a condom. Oiled, sexual organ is easily slid over taut throat.'
 		'Eggs Petka relish slapping on your chin, When his cock was buried in the throat. Peter gripped you by the ears and deep rhythm stick your mouth on his penis. The worst thing was that in this, what do you, I am completely sober, well aware , that you get up to the guys in your class, but did not know how to stop this mockery of a humiliating and treacherous starts to flow from it all. All, What could I do - so it is, give their classmates plenty to enjoy your body, while meeting their absolutely wild ideas...'
@@ -91,7 +91,7 @@ elseif apmeet = 2:
 			cls
 			minut += 5
 			horny += 15
-			gs'stat'
+			gs 'stat'
 			'<center><img src="images/qwest/alter/artom/meet/meet3_3.jpg"></center>'
 			'Feeling your first attempts to vomit, Peter brought his cock out of his mouth. Artem lowered your head in a bucket and held it there, until you problyuetes. Then you turn your head to the side, obpivshiysya beer and Petya began to piss in your mouth, to wash away the remnants of vomit.'
 			'By order of Artema you rinse the mouth with urine and swallow the liquid.'
@@ -100,7 +100,7 @@ elseif apmeet = 2:
 			act 'Swallow':
 				cls
 				minut += 10
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/meet/meet3_4.jpg"></center>'
 				'And it continued on the new... So the guys took turns fucking you in the mouth for half an hour. You vomited into a bucket, and then continued to fuck in the throat again and again. After, Petya "finished", he removed the condom and put it into your mouth. Do you understand, what is expected of you, and began to chew the gum with sperm. Guys neighing, watching their classmate, about which they previously could not even dream, chews and swallows a condom with sperm. Swallowing this abomination, You smiled and showed the guys my empty mouth.'
 				act 'Proceed':
@@ -113,13 +113,13 @@ elseif apmeet = 2:
 					if npcSex[6] = 0:npcSex[6] = 1 & guy += 1
 					gang += 1
 					sub += 2
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/meet/meet3_5.jpg"></center>'
 					'Artem: "It`s my turn to finish - Suck - We do without gum." You started sucking his dick swallowing Artem as deeply as possible. You feel like Artem began to finish you right in the throat.'
 					'Artem: "Do not remove!" You dutifully froze with a member in the mouth and heard after the sperm in the throat you hit urine, you quickly began to swallow, so as not to throw clothes. After all you guys released.'
 					'You have gathered some-how to put themselves in order and went home on the road thinking how to get out of this situation, and fantasies become perverted. What to do? Maybe back blackmail? And what is the idea! It should be a good think about it.'
 
-					act 'Escape':gt'garmassiv'
+					act 'Escape':gt 'garmassiv'
 				end
 			end
 		end
@@ -129,7 +129,7 @@ elseif apmeet = 3:
 	minut += 20
 	sub += 3
 	horny += 5
-	gs'stat'
+	gs 'stat'
 	'<center><img src="images/qwest/alter/artom/meet/meet4_1.jpg"></center>'
 	'Artem took you by the hand and led her into the garage, where you have been waiting for Petka Klyuyev.'
 	'Artem: "Well, Svetik - you learned a lot from us and now we will teach you. We have decided that you will be our bitch and Now for your in training. Take off your clothes and on your knees - bitches walk on all fours!"'
@@ -142,7 +142,7 @@ elseif apmeet = 3:
 		horny += 10
 		spanked = 1
 		spankedtime = totminut
-		gs'stat'
+		gs 'stat'
 		'<center><img src="images/qwest/alter/artom/meet/meet4_2.jpg"></center>'
 		'Artem: "Well-Single, face lift, we want to play with you. You have to please us, otherwise we will be very angry and severely punish. Terms of our games are. You`ll follow me, wherever I go. At the same time you will be constantly kissing my ass. When I want to sit down, you have to guess my desire and then go under me. And as soon as I Spread your legs, You should be provided immediately between them and, you probably already guessed, suck my dick. That`s all the rules. Petruchio will customize your belt, if you slow down. And more, you certainly do not tell, What will happen, if you interrupt the just for a second, or you can not guess what-one of my desires."'
 		'And began training. You ran on all fours to Artem trying to guess what he will do in the next moment, Peter and whipped with a belt on your naked ass.'
@@ -150,7 +150,7 @@ elseif apmeet = 3:
 			cls
 			minut += 5
 			horny += 5
-			gs'stat'
+			gs 'stat'
 			'<center><img src="images/qwest/alter/artom/meet/meet4_3.jpg"></center>'
 			'Strangely, but again you felt like your nipples gradually swell in a rack.'
 			'Seeing this Petruchio clamped between each finger and shook. The pain you bit his lower lip.'
@@ -158,7 +158,7 @@ elseif apmeet = 3:
 			act 'Continue':
 				cls
 				minut += 5
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/meet/meet4_4.jpg"></center>'
 				'Artem: "Warm-up ends. It`s time to start exercising. You take up sex lips and spread them apart."'
 				'"Ouch!" - You cried when Pete attached to the right of sexual lip clamp, which lay to the tight tender flesh. On the ball screw clamp, Peter who began turning until the pain became unbearable.'
@@ -170,7 +170,7 @@ elseif apmeet = 3:
 				act 'Do "weightlifting"':
 					cls
 					minut += 5
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/meet/meet4_4.jpg"></center>'
 					'Peter holds the weights in hand and slowly releases.'
 					'Artem: "Picture - super! Chest - forward! Feet - apart!"'
@@ -183,7 +183,7 @@ elseif apmeet = 3:
 					act 'Ask stop':
 						cls
 						minut += 5
-						gs'stat'
+						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/meet/meet4_5.jpg"></center>'
 						'You mychite no longer able to hold back the pain.'
 						'Artem: "Requests to remove the weights?"'
@@ -196,7 +196,7 @@ elseif apmeet = 3:
 							cls
 							minut += 5
 							anal += 3
-							gs'stat'
+							gs 'stat'
 							'<center><img src="images/qwest/alter/artom/meet/meet4_6.jpg"></center>'
 							'Artem takes a bottle of oil, lubricated points, He begins to push it up the ass.'
 							'Your point resists. Then Peter begins to whip you stronger belt.'
@@ -211,7 +211,7 @@ elseif apmeet = 3:
 								cls
 								minut += 5
 								vagina += 2
-								gs'stat'
+								gs 'stat'
 								'<center><img src="images/qwest/alter/artom/meet/meet4_7.jpg"></center>'
 								'Of course, This is a serious cause for punishment, and you know it well. Artem tells you to stand in a pose cancer, knees wide apart, Area anus paraded. You have a new challenge.'
 								'The bottle is now part of your back gradually, with frictions. At the same time you feel someone-then hand in the pussy. Here you already do not stand. You begin to more actively in the ass and beat podmahivat, lastly, powerful orgasm shakes your body.'
@@ -225,7 +225,7 @@ elseif apmeet = 3:
 									bj += 2
 									cumlip += 1
 									gang += 1
-									gs'stat'
+									gs 'stat'
 									'<center><img src="images/qwest/alter/artom/meet/meet4_8.jpg"></center>'
 									'In response, you dutifully nodded: "How else?" And when Artem erupts from the fountain of life-giving fluid flow, You swallow whole, without a trace, as the highest value, which can not drop a single drop.'
 									'Then comes the turn Petit. After all, you are ordered to lick the crotch, what you do with what-the ineffable pleasure.'
@@ -234,7 +234,7 @@ elseif apmeet = 3:
 										act 'Install the camera':
 											cls
 											minut += 5
-											gs'stat'
+											gs 'stat'
 											'<center><img src="images/qwest/alter/artom/microcam_2.jpg"></center>'
 											'Already preparing to leave, if you pretend that-the lost and say Artem, that something-that forgotten in the garage and ask you to wait a little bit so that you can find the thing. Artem irritated allowed, but I asked to hurry.'
 											'During the search, you will quietly install camera (battery lasts for 48 hours, included - in response to movement, You can shoot in the dark).'
@@ -242,13 +242,13 @@ elseif apmeet = 3:
 											artemIzdev = 5
 											microcamera = 0
 											apmeet = 4
-											act 'Escape':gt'garmassiv'
+											act 'Escape':gt 'garmassiv'
 										end
 									else
 										'You have gathered something like led myself up and went home on the road thinking how to get out of this situation and that fantasy become perverted. What to do? Maybe back blackmail? And what is the idea! It should be a good think about it'
 									end
 
-									act 'Escape':gt'garmassiv'
+									act 'Escape':gt 'garmassiv'
 								end
 							end
 						end
@@ -261,7 +261,7 @@ elseif apmeet = 4:
 	cls
 	minut += 30
 	sub += 1
-	gs'stat'
+	gs 'stat'
 	'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 	'Artem took you by the hand and led her into the garage, where you have been waiting for Petka Klyuyev.'
 	'You sprsil the road: "Well I liked the idea Petka?"'
@@ -271,7 +271,7 @@ elseif apmeet = 4:
 	act 'Post view':
 		cls
 		minut += 10
-		gs'stat'
+		gs 'stat'
 		'<center><img src="images/qwest/alter/artom/meet/meet5_1.jpg"></center>'
 		'You pass by the garage. Artem is at the entrance, and is calling you. You come, at this time it comes from behind Peter and wring your hand, shoving the garage. Artem closes the door, you yelling for help and Testament, trying to escape - Peter barely keeps you. Artem tells you to shut up. You spit in his face. It hits you in the face and neck takes inserts gag (some sort of rag). After that you adhere to the bench. You are trying to escape and mychite. Artem building takes the knife.'
 		'Artem: "If you do not shut up bitch now!, I`ll face so decked - none of the surgeon does not help. You will do what we say - leave alive. Understood?"'
@@ -285,7 +285,7 @@ elseif apmeet = 4:
 			minut += 5
 			spanked = 2
 			spankedtime = totminut
-			gs'stat'
+			gs 'stat'
 			'<center><img src="images/qwest/alter/artom/meet/meet5_2.jpg"></center>'
 			'Artem cut the clothes on you. Men take the power cord and start to whip you on the ass. You want to cry, and you insert the gag in place. You risers, Peter takes the grease and begins to lubricate your point, then fucks you in the ass. Artem at this time connects your boobs rope and pulled in different directions. Peter moves away from you, He takes his place Artem. Peter notices, that his dick in shit. He takes the gag and inserts dick in her mouth. You sick of your shit taste, but you hold vomit gusts. When a member of the cleaning, Peter moves away from you and catches you on the nose hook. You become like a pig. Guys neighing. Artem is coming to you and you brush and a member of shit.'
 
@@ -295,7 +295,7 @@ elseif apmeet = 4:
 				anus += 5
 				minut += 10
 				gang += 1
-				gs'stat'
+				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/meet/meet5_3.jpg"></center>'
 				'"And now tricks!" Artyom takes the camera from the ball sticks it to you in the ass and pumps. When you think that you are here now need to pop it stops its pump.'
 				'Artem cut the rope and tells you to suck it and Peti. As long as you guys suck mock your sisyami. The guys end up on your face, spit at him. You throw scraps of clothing, which-a piece of canvas and kicks kicked you with an inflated chamber in the ass with words "I went away dirty whore, if anyone can tell slaughter fuck."'
@@ -303,7 +303,7 @@ elseif apmeet = 4:
 				act 'Pick up the camera':
 					cls
 					minut += 5
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/microcam_2.jpg"></center>'
 					'Then the boys came and told themselves, it`s time to disperse. Already preparing to leave, if you pretend that-the lost and say Artem, that something-that forgotten in the garage and ask you to wait a little bit so that you can find the thing. Artem irritated allowed, but I asked to hurry. During the search, you will quietly take away the camera.'
 					'You got home quietly. In the bathroom blew the camera and got her off. At the point your two hands free vlazit. "Okay, heals" We think you, hoping, microchamber that all recorded to the last word.'
@@ -312,7 +312,7 @@ elseif apmeet = 4:
 					microcamera = 1
 					apmeet = 5
 
-					act 'Escape':minut += 20 & gt'vanrPar'
+					act 'Escape':minut += 20 & gt 'vanrPar'
 				end
 			end
 		end
@@ -322,7 +322,7 @@ elseif apmeet = 5:
 	minut += 30
 	apmeet = 6
 	dom += 10
-	gs'stat'
+	gs 'stat'
 	'<center><img src="images/qwest/alter/artom/meet/meet6.jpg"></center>'
 	'Today you have decided to go to the home Artem.'
 	'"Sveta, Well, as we did - realistically?"'
@@ -332,7 +332,7 @@ elseif apmeet = 5:
 	'"Take away all my entries. No hint of sex and a lot of small services..."'
 	'Artem agrees to all of your conditions and remove all records with you.'
 
-	act 'Escape':gt'gorodok'
+	act 'Escape':gt 'gorodok'
 end
 
 gs 'stat'

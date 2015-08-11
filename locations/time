@@ -227,6 +227,13 @@ end
 
 pl '<<$pogoda>>'
 
+! WD: Variable not set needed for events in Village Gadyukino
+if osadki < painweather:
+	set sunWeather = 1
+else
+	set sunWeather = 0
+end
+
 if osadki >= painweather and umbrella = 0:
 	if mop > 1:
 		mop = 0

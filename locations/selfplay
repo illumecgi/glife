@@ -239,6 +239,8 @@ if $loc = 'bedrPar':
 	end
 end
 
+! WD: Fix Dildo choice Code
+!{
 if dildo = 1:'Do you have a small long dildo 10 cm.'
 if middildo = 1:'Do you have a long dildo 15 cm.'
 if largedildo = 1:'Do you have a long dildo 20 cm.'
@@ -642,6 +644,8 @@ if horny > 10:
 					act 'rest':gt $curloc
 				end
 			end
+		! WD: Fix Dildo choice Code  ~ refer above
+		!{
 		elseif dildohand = 0:
 			'You do not have a dildo in hand'
 

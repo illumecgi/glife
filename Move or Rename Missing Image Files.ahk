@@ -42,7 +42,10 @@ FileMove, images\picb\spussy.jpg, images\Body\spussy.jpg
 FileMove, images\etogame\ghFinger.jpg, images\etogame\ghFinger5.jpg
 
 ; ! WD: Rename missing Image ~ 'kendraStrap.jpg' to 'kendraStrap1.jpg'
-FileMove, images/pics2/kendraStrap.jpg, images/pics2/kendraStrap1.jpg
+FileMove, images\pics2\kendraStrap.jpg, images\pics2\kendraStrap1.jpg
+
+; ! WD: Rename missing Image ~ 'tatvag.jpg' to 'tatvag1.jpg' to fix view 'images/body/tatvag<<tatvag>>.jpg'
+FileMove, images\body\tatvag.jpg, images\body\tatvag1.jpg
 
 ; ! WD: Rename 'png' clothing images as scripts are only using 'jpg' ~ Fixed code and images
 FileMove, images\clothes\*.png, images\clothes\*.jpg 

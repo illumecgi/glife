@@ -55,7 +55,9 @@ $din_kotov_bj = {
 							act 'Leave.':gt 'gorodok'
 						end
 
-						if kotovBJtimes > 12:
+						! WD: fix logic in if ... elseif
+						! if kotovBJtimes > 12:
+						if kotovBJtimes > 12 and kotovBJtimes <= 15:
 							act 'Swallow.':
 								cls
 								minut += 5

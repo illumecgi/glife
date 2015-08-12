@@ -3,8 +3,8 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 '<center><H4>Glade</H4></center>'
 '<center><img src="images/qwest/gadukino/meadow.jpg"></center>'
@@ -26,9 +26,12 @@ end
 if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 10 and sunWeather = 1 and temp = 4:
 	'In the clearing you notice  <a href="exec: dynamic $mirameadow ">World Vasya</a>.'
 end
+! WD: empty event ~ blank screen error
+!{
 if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 30 and sunWeather = 1 and temp = 5:
 	'In the clearing you notice  <a href="exec: dynamic $mirameadow ">World Vasya</a>.'
 end
+}!
 if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 15 and sunWeather = 1 and temp = 6:
 	'In the clearing you notice  <a href="exec: dynamic $mirameadow ">The world with Mitka, By Vasya and Kalambay</a>.'
 end
@@ -41,7 +44,7 @@ end
 if meadow = 3 and mirainmeadow = 0 and miragopQW >= 20 and temper >= 30 and sunWeather = 1 and temp = 9:
 	'In a clearing you see  <a href="exec: dynamic $mirameadow ">The world</a>.'
 end
-act 'Escape':minut += 30 & mirainmeadow = 0 & gt'Gaddvor'
+act 'Escape':minut += 30 & mirainmeadow = 0 & gt 'Gaddvor'
 
 
 !meadow = 1 'You have found the meadow'
@@ -131,6 +134,8 @@ $mirameadow = {
 				minut += 5
 				if miralick = 0:miralick = 1 & girl += 1
 				orgasm += 1
+				! WD: missing horny adjust
+				set horny = 0
 				gs 'stat'
 				if tanga = 1:
 					'<center><img src="images/qwest/gadukino/MiraLick.jpg"></center>'
@@ -407,12 +412,15 @@ $mirameadow = {
 			act 'Escape':minut += 30 & gt 'gadukino'
 		end
 	end
+	! WD: No exit and does nothing
+	!{
 	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 30 and sunWeather = 1 and temp = 5:
 		cls
 		minut += 5
 		horny += 20
 		gs 'stat'
 	end
+	}
 	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 15 and sunWeather = 1 and temp = 6:
 		cls
 		minut += 15

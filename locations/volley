@@ -22,7 +22,7 @@ if volltime = 0:
 
 	act 'further':volltime=1 & gt $curloc
 elseif volltime = 1:
-	'<center><img src="images/qwest/alter/gdksport.jpg" ></center>'
+	'<center><img src="images/qwest/alter/gdksport.jpg"></center>'
 	'There was a break, and both teams have a rest.'
 
 	if volleysostav = 1:
@@ -51,7 +51,7 @@ elseif volltime = 1:
 
 	act 'further':volltime = 2 & gt $curloc
 elseif volltime=2:
-	'<center><img src="images/qwest/alter/gdksport.jpg" ></center>'
+	'<center><img src="images/qwest/alter/gdksport.jpg"></center>'
 	'Break is over and the team started to play again.'
 
 	if volleysostav = 1:'You are sitting on the bench watching how your team plays.'
@@ -83,7 +83,7 @@ elseif volltime=2:
 	act 'further':volltime = 3 & gt $curloc
 elseif volltime = 3:
 	volsesongame += 1
-	'<center><img src="images/qwest/alter/gdksport.jpg" ></center>'
+	'<center><img src="images/qwest/alter/gdksport.jpg"></center>'
 	'Final whistle.'
 
 	if volpoint > volpointv:

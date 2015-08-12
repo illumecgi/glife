@@ -4,8 +4,8 @@ $loc = $CURLOC
 
 clr
 minut += 5
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 '<center><H4>Yard Miroslava</H4></center>'
 

@@ -69,7 +69,7 @@ act 'Move with Chernov':
 	cls
 	minut += 1
 	gs 'stat'
-	'You start walking with Captain Chernov. Upon closer examination you notice he is holstering a gun under his left armpit. Ogladevshis Chernov begins, "<<$name>>, I know that you are new to Zvezdushki''s entourage. We know that this is just a front. Zvezdushkam''s criminal activities are about to be put on hold, with or without your collaboration. Our little talk is not so important, what is though, is that when this case starts getting coverage, the whole town will know; what you did will be on everyone''s lips. But you did nothing you say. It doesn''t matter your name will be the talk of the town! You won''t go to jail; we''ll give you a big fine, inform your parents and your school, and you''ll have a permanent record with the police. Of course, there is a way we could avoid all this... "'
+	'You start walking with Captain Chernov. Upon closer examination you notice he is holstering a gun under his left armpit. Looking around Chernov begins, "<<$name>>, I know that you are new to Zvezdushki''s entourage. We know that this is just a front. Zvezdushkam''s criminal activities are about to be put on hold, with or without your collaboration. Our little talk is not so important, what is though, is that when this case starts getting coverage, the whole town will know; what you did will be on everyone''s lips. But you did nothing you say. It doesn''t matter your name will be the talk of the town! You won''t go to jail; we''ll give you a big fine, inform your parents and your school, and you''ll have a permanent record with the police. Of course, there is a way we could avoid all this... "'
 
 	act 'Ask him how to avoid it':
 		cls

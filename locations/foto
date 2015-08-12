@@ -15,7 +15,7 @@ if $ARGS[0] = 'start':
 	if artemIzdev = 2 or artemIzdev = 3:
 		act 'Ask about the microcamera':
 			minut += 5
-			gs'stat'
+			gs 'stat'
 			if artemIzdev = 3:'"As I said, we can arrange for the sale of camera, but it is expensive."'
 			if artemIzdev = 2:'"Yes, I can get you the, but it is expensive."' & artemIzdev = 3
 			if money < 70000:
@@ -28,7 +28,7 @@ if $ARGS[0] = 'start':
 					money -= 70000
 					artemIzdev = 4
 					microcamera = 1
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/artom/microcam_1.jpg"></center>'
 					'You bought the photographer microcamera.'
 

@@ -6,6 +6,7 @@ if $ARGS[0] = 'start':
 	gs 'portmirror'
 	$gt1 = 'mirror'
 	$gt2 = 'fin'
+	
 	dynamic $portmirror
 
 	act 'Move away from the mirror':

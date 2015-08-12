@@ -75,10 +75,10 @@ if $ARGS[0] = 'start':
 				gs 'stat'
 				'You took the tests and after a short wait the doctor called you into his office.'
 
-				if venera > 0:'The doctor pulled a sad mine and said that you are not going smoothly with analyzes.'
+				if venera > 0:'The doctor frowns and tells you that the test did not well.'
 
 				if GerpesOnce = 1:
-					'You have found genital herpes. This disease is not curable and it can only jam at a time.'
+					'You have genital herpes. This disease is not curable and it can only jam at a time.'
 
 					if Gerpes >= 3:
 						if GerpesNapr = 0:GerpesNapr = 3 & 'Here you have the direction of the shots herpes. Needs a course out of 3 injections, each injection will cost 1,000 rubles.'

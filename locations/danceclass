@@ -21,8 +21,8 @@ act 'Modern club dancing (2:00)':
 	dance += rand(5, 15)
 	'<center><img src="images/etogame/fit1.jpg"></center>'
 
-	if dance < 100:'You studied modern dance club, which is very popular in discos.'
-	if dance >= 100:'Podcherpnut you tried something new in modern club dancing, but you all already know it.'
+	if dance < 100:'You studied modern dance, which is very popular in clubs.'
+	if dance >= 100:'Though you worked hard, you realize there is nothing more you can learn here.'
 
 	act 'Leave':gt 'fit', 'dressing room'
 end
@@ -40,12 +40,12 @@ act 'Striptease (2:00)':
 
 	if dance >= 100:
 		stripdance += rand(2, 10)
-		'You studied passionately razdevatsya dance music.'
+		'You studied the art of burlesque, imaging yourself stripping to the music.'
 
-		if stripdance >= 100:'But you could not learn anything new, it''s all you have and know how well you know.'
+		if stripdance >= 100:'But you could not learn anything new, since you have already mastered the art.'
 	elseif dance < 100:
 		dance += rand(5, 15)
-		'Striptease for you too complicated, you can not perform the dance moves combining them strip. Teacher recommends that you first learn ordinary club dances.'
+		'You find it impossible to combine dancing and stripping into an erotic act. The teacher recommends that you first learn modern club dancing.'
 	end
 
 	act 'Leave':gt 'fit', 'dressing room'
@@ -67,11 +67,11 @@ act 'Dancing on a pole (2:00)':
 		poledance += rand(2, 5)
 		'You studied various acrobatics on the pole.'
 
-		if poledance >= 100:'But you could not learn anything new, it''s all you have and know how well you know.'
+		if poledance >= 100:'But you could not learn anything new, you''re already a master of the art.'
 	elseif dance < 100 or stripdance < 100 or stren < 80:
-		'Already in the first exercise, you crashed with a pole. It seems this kind of dance you until the teeth'
+		'It took hitting your head on the pole the first time to realize you are out of your league. Maybe you should pick up modern dancing or striptease first.'
 
-		if stren < 80:'The teacher explained that you dance on the pole, except the ability to dance, and still requires physical strength.'
+		if stren < 80:'The instructor tries to be patient while making it clear that you are far too weak for this sort of dance.'
 	end
 
 	act 'Leave':gt 'fit', 'dressing room'

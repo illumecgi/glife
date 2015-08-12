@@ -33,6 +33,7 @@ if vitalbuf < vital:vitalbuf += 1
 if agilbuf > agil:agilbuf -= 1
 if agilbuf < agil:agilbuf += 1
 '!
+
 if anus > 1:
 	if anusK < 0:anusK = 0
 	if anusK < 3:anusK += 1

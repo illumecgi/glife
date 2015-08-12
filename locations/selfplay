@@ -158,8 +158,9 @@ $d_self_fingering2 = {
 	end
 }
 
+! WD: Masturbating at night only has 10% chance to be discovered
 $d_van_vtor = {
-	if indorf = 0:
+	if indorf = 0 and (hour >= 6 or Rand(1, 10) = 1):
 		cls
 		horny -= 50
 		manna -= 10
@@ -178,6 +179,8 @@ $d_van_vtor = {
 		end
 
 		exit
+	else
+		selfplaytime -= 15
 	end
 }
 

@@ -125,6 +125,7 @@
       <Location name="trashplace"/>
       <Location name="RynokHoz"/>
 	  <Location name="BDSM_Club"/>
+	  <Location name="taxi"/>
     </Folder>
     <Folder name="Торговый Представитель - Trade Representative">
       <Location name="torgpred"/>

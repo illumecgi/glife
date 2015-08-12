@@ -12,7 +12,7 @@ $taxi = {
 
 	if money >= 250:
 		money -= 250
-		gt '<<$loc>>'
+		gt $loc, $metka
 	elseif money < 250:
 		'<center><img src="images/picV/car.jpg"></center>'
 		bj += 1

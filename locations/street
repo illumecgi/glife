@@ -177,46 +177,8 @@ act 'Wait':
 	act 'Take a look at the clock':gt curloc
 end
 
-act 'Take a cab':
-	cla
-	*clr
-	minut += 5
-	'<center><img src="images/etogame/taxi1.jpg"></center>'
-	'You caught a passing taxi.'
-	'"The drive will cost you <b>250 rubles</b>", the driver says.'
+gs 'taxi'
 
-	if $loc ! 'street':
-		act 'Go to the Residential Area':
-			$loc = 'street'
-			dynamic $taxi
-			end
-		end
-
-	if $loc ! 'down':
-		act 'Go to the City Center':
-			$loc = 'down'
-			dynamic $taxi
-		end
-		end
-
-	if $loc ! 'Nord':
-		act 'Go to the Northern Area':
-			$loc = 'Nord'
-			dynamic $taxi
-		end
-	end
-
-	if $loc ! 'BDSM_Club' and BDSMClub = 1 and BDSMday ! daystart:
-		act 'To go to BDSM-club':
-			$loc = 'BDSM_Club'
-			$metka = 'start'
-			BDSMtaxi = 1
-			dynamic $taxi
-		end
-	end
-
-	act 'Turn him down and leave':gt '<<$loc>>'
-end
 
 if tanga = 0 and ski = 1 and hour > 6 and hour <= 20 or tanga = 0 and glamur = 1 and hour > 6 and hour <= 20:
 	nurand = rand(0, 100)

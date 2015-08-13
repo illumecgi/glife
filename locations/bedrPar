@@ -13,11 +13,20 @@ lcolor = rgb(106, 90, 205)
 ! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
 '<center><img src="images/qwest/alter/bedrPar.jpg"></center>'
 'Small room in which hardly squeezed <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cabinet</a>, your <a href="exec:gt ''bedPar''">bed</a>, <a href="exec:gt ''stolPar''">desk</a> bed and sisters.'
+if komp = 1:'On the table is your <a href="exec:gorodokKomp = 1 & GT ''Komp'',''start''">laptop</a>.'
+gorodokKomp = 0
+
+if sisboyQW > 10:sisboyQW = 10
+
 gs 'family'
 
 ! if tanga = 0:tanga = 1
 
 act 'Leave the room':gt 'korrPar'
+
+if rexCarCount >= 9 and sisterHere = 1 and hour < 3 and rexSmsDay ! daystart and smsForRex < 13:
+	act 'Take your sisters phone':gt'reks','sms'
+end
 
 ! WD: add Underwear change
 if tanga = 0:

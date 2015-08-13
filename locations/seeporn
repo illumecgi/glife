@@ -10,6 +10,8 @@ act 'watch':
 	horny += (seepornofut + mastr) * 2
 	gs 'stat'
 
+	if evgenQW >= 4 and BjBeerQW >= 3: gt 'seeporn','SeePornPalevo'
+
 	if seepornofut < 3:
 		'Boys looking at what is happening on the screen clearly at ease and embarrassed shoot you in the eyes.'
 	elseif seepornofut >= 3 and seepornofut < 10:
@@ -40,6 +42,35 @@ act 'watch':
 					gs 'stat'
 					'<center><img src="images/qwest/alter/ev2/seepornbbcum.jpg"></center>'
 					'The boys did not last long and become cum on your face, Soon almost all of your face was covered with a layer of smelly mucus and the sperm even hit you on your clothes.'
+
+					evgenrand = rand(1,5)
+
+					dynamic $brotherSexCount
+
+					if brotherSexCount > 0 and brotherSex > 6 and evgenrand = 1:
+						cls
+						minut += 5
+						horny += 10
+						$boy = 'Kolka'
+						dick = brotherDick
+						silavag = 0
+						pose = 1
+						brotherSexCount -= 1
+
+						gs'stat'
+						'Kolka said guys, that will accompany you. As soon as you come out of the house Mishkin, brother whispered:'
+						'"Let''s look for a quiet place, and that of the, it was not enough for me Misha." Soon you will find a secluded spot and Kolka said,:'
+						'"There will be normal. Let''s start."'
+						if rand1<5:'<center><img src="images/qwest/alter/Ev/boysex.jpg"></center>'
+						if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,'+rand(0,2)+'.gif"></center>'
+						if rand1>=30:'<center><img src="images/nigma/gor/publ1,<<rand(0,6)>>.jpg"></center>'
+						'You bent down and framed mooning brother.'
+						dynamic $sexstart
+						dynamic $sexstart2
+						dynamic $sexcum
+
+						dynamic $brotherSexEnd
+					end
 
 					act 'Leave':gt 'gorodok'
 				end
@@ -81,7 +112,7 @@ act 'watch':
 					'<center><img src="images/qwest/alter/ev2/seeporn.hand1,<<rand(0,2)>>.gif"></center>'
 					'You glide skin on both members of their handles, Zhendos rapidly groaned and of its members flew jet of sperm on your foot, immediately joined by Mishan and also finished on your foot.'
 
-					act 'vozmuschatsya':
+					act 'Resent':
 						cls
 						cumfrot += 2
 						gs 'stat'
@@ -245,6 +276,111 @@ act 'watch':
 	end
 
 	act 'Leave':gt 'gorodok'
+end
+
+if $ARGS[0] = 'SeePornPalevo':
+	cla
+	cls
+	bratrand = RAND(0,1)
+	!boyseeporn += 1
+	'Boys watching porn and whispering to each other, casting lustful glances at you'
+	gs'stat'
+
+	if bratrand = 0:
+		cls
+		boyseeporn += 1
+		gs'stat'
+
+		'Zhendos offers "<<$name>>, What about the work mouth? Kolyan told us about your entertainment in the park so you can not build here because of offended innocence." Unless of course you do not want to even somebody found.'
+
+		act 'To be silent':
+			cls
+			bj += 3
+			sub += 3
+			gang += 1
+			gs'stat'
+
+			if rand1<30:'<center><img src="images/qwest/alter/ev2/seepornblowbang.jpg"></center>'
+			if rand1>=30:'<center><img src="images/qwest/alter/ev2/seepornbro0,<<rand(0,2)>>.gif"></center>'
+			'Having decided that silence assent, Zhendos got dick out of his pants and pulled your face to its members, You dutifully wrapped around his lips and began to suck.'
+			'Your brother Kolka and Bear also got members and put them to you to face, you started to masturbate and suck dick. Unusual and piquancy to the situation a little bit excited you.'
+
+			act 'Suck':
+				cls
+				cumface += 3
+				cumlip += 2
+				cumfrot += 1
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/ev2/seepornbbcum.jpg"></center>'
+				'The boys did not last long and become cum on your face covering it with a layer of sperm, Soon almost all of your face was covered with a layer of mucus and fragrant part of the sperm even got your clothes on. The boys laughed "That`s clever, the good girl".'
+
+				act 'Escape':gt'gorodok'
+			end
+		end
+
+		act 'Fuck you':
+			cls
+			BrotherNo = 1
+			!'<center><img src="images/qwest/alter/ev2/seepornHand.jpg"></center>'
+			'You indignantly rejected the offer kids. Brother looked at you askance "In vain you so. Another regret it."'
+
+			act 'Escape':gt'gorodok'
+		end
+	elseif bratrand = 1:
+
+		'Zhendos offers - "<<$name>>, and poorly serve us as the kids in the park? Just two in his mouth to take?"'
+		'You understand, that your brother could not resist and told all his friends. And well, if only they.'
+
+		act 'Well no, not weak':
+			cls
+			bj += 3
+			sub += 3
+			gang += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/ev2/SeePornDouble.jpg"></center>'
+			'You dutifully kneels in front of the guys, pick up their hard dick and start to push them hard in her mouth.'
+			'"I told you that it would take in the mouth like a lamb, and you did not believe me" - laughing Brother. - "Look no choke, sister".'
+
+			act 'Suck':
+				cls
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/ev2/SeePornDouble2.jpg"></center>'
+				'You diligently continue to suck two dick at the same time, guys moaning and moving his hips trying to shove them to you deeper.'
+				'Your brother is looking at it close and Fingering, while loudly and telling details about, What turns you dirty whore.'
+				'Do you feel that this situation is beginning to wind you. Picking up the already steaming cock podrachivat you start them and suck at the same time his brother.'
+				'The boys did not last long and almost simultaneously began to finish on your face. Seen too many damn porn, juvenile perverts.'
+
+				act 'Close your eyes':
+					cls
+					cumface += 3
+					cumlip += 2
+					cumfrot += 1
+
+					gs'stat'
+					'<center><img src="images/qwest/alter/ev2/seepornbjcum<<rand(2,3)>>.jpg"></center>'
+					'Do nothing you close your eyes and sit humbly on his knees, without disturbing them yourself obkanchivat. In the nose hits the pungent smell of sperm.'
+					'You feel like a hot sticky goo covers your entire face, individual droplets fall even on the neck and hair.'
+					'"This is for you, instead of face masks" - laughing boys. Jokers pancake, You are angry with difficulty razleplyaya eyes.'
+
+					act 'Escape':gt'gorodok'
+				end
+			end
+		end
+
+		act 'Mild and generally go to hell with such proposals!':
+			cls
+			BrotherNo = 1
+			!'<center><img src="images/qwest/alter/ev2/seepornHand.jpg"></center>'
+			'You indignantly rejected the offer kids. Brother looked at you askance "In vain you so. Another regret it."'
+
+			act 'Escape':gt'gorodok'
+		end
+	end
 end
 
 --- seeporn ---------------------------------

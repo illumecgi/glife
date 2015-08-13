@@ -1,0 +1,580 @@
+# BDSM_Club
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+if $ARGS[0] = 'Hos':
+	cls
+	minut += 10
+	lesbiday = day
+	BDSMClub = 1
+	alko += 2
+	gs 'stat'
+	'<center><img src="images/BDSM_Club/Hosjaika.jpg"></center>'
+	'After a few visits to the Hostess you are a little closer together. Looking to her one evening, you catch her a little tipsy. Instead of already familiar perversions, you just sit in the kitchen and drink wine, talking about life. In conversation, the Hostess mentions what-the BDSM club. Becomes interesting, you are the Hostess poured glass after glass and slowly pull the details from it. Turns, the city has an elite BDSM-club, and the missus is in it. After much persuasion, she gives you a business card – a piece of cardboard with three-dimensional logo without inscriptions, and explains how to get into the Club.'
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'start':
+	cls
+	minut += 10
+	gs 'stat'
+	'<center><img src="images/BDSM_Club/Club.jpg"></center>'
+	if BDSMtaxi = 1 and BDSMmeet = 0:
+		'Taxi brings you in a gated community outside of town and dropped off at the closed gate of wrought iron. From booth goes guard, you show him a business card. Without saying anything, he opens the gate and shows the direction. You are on marble tiled walkway past the neatly clipped shrubs and flower beds. The other guard meets you, gets into the mansion through an inconspicuous side door.'
+		act 'Log club':gt 'BDSM_Club', 'in'
+	elseif BDSMtaxi = 1 and BDSMmeet = 1:
+		if money < 20000:
+			'You are in a Club with no money, in the hope to negotiate and pay later, but you do not get. Nobody to talk to, in accounting, learning, you are not going to pay, cause protection. You put up the gate.'
+		else
+			if $BDSMrole = 'r':
+				gt 'BDSM_Club', 'in'
+			else
+				msg'<b>Branch MS not yet implemented.</b>'
+				BDSMtaxi = 0
+				gt 'BDSM_Club','start'
+			end
+		end
+	elseif BDSMtaxi = 1 and BDSMmeet > 1 and BDSMmeet < 4:
+		if BDSMpayMonth = month or (BDSMpayMonth = 12 and month = 1 and BDSMpayDay >= day):
+			BDSMpay = 1
+		else
+			if BDSMpayMonth = month - 1 and BDSMpayDay >= day:
+				BDSMpay = 1
+			else
+				BDSMpay = 0
+			end
+		end
+		if BDSMpay = 1 or money >= 10000:
+			gt 'BDSM_Club', 'in'
+		else
+			'You are in a Club with no money, in the hope to negotiate and pay later, but you do not get. Nobody to talk to, in accounting, learning, you are not going to pay, cause protection. You put up the gate.'
+		end
+	else
+		if BDSMmeet = 4 and $BDSMrole = 'r':msg'<b>A branch of the slave is not implemented on.</b>'
+		'You stand in front of BDSM-club'
+	end
+
+	gs 'taxi'
+end
+
+if $ARGS[0] = 'in':
+	cls
+	BDSMmeet += 1
+	BDSMtaxi = 0
+	BDSMday = daystart
+	gs 'stat'
+	if BDSMmeet = 1:
+		cls
+		minut += 10
+		$BDSMrole = ''
+		gs 'stat'
+		'<center><img src="images/BDSM_Club/<<BDSMmeet>>_1.jpg"></center>'
+		'You''re standing in the office, in front of you at the table sits a woman in a strict business suit. Strict gaze as x-rays Shine right through you. You show her the cards, she briefly throws:'
+		'– Candidate? Passport.'
+		'You are trembling hand stretch passport.'
+		'The woman points you to a chair, turns to the computer and starts clicking on the keys. Nods a few times, but says nothing. Then takes the phone and how long speaks-then Vladimir Viktorovich, discussing you: pier, there''s candidacy, but too young, wouldn''t that be a violation of the law. She hangs up, after a few minutes in the office comes a strapping man in a perfectly fitting suit and glasses with gold rim. He says Hello and sits down next to you.'
+		'– What`s your name? Svetlana? Fine. How old are you?'
+		'You answer the questions.'
+		'– Tell me, are you sure you need it?'
+		'You understand, all previous questions he was asking for it.'
+		'Sure!  firmly tell you.'
+		'Well... The age of consent in our country  16 years. You are older, so the law is going smoothly. Let`s sign some papers. A mere formality, to formally record, you have grasped it.'
+		'The man put on the table a sheet of paper that-they included, put videocamera and clicked the button.'
+		'– Read aloud and sign.'
+		'You take the sheet and read "The application for voluntary informed consent" - long, abounding legal terms document, confirming your consent to voluntarily participate in actions of a sexual nature, may be humiliating or boleznennay in nature and be accompanied by mild corporal punishment. You are not a lawyer, but once you understand, what not to undermine what, after, as you sign, to sue on "Club" it would be useless.'
+		'– I agree.'
+		'Well, – a woman puts hands together and looks at you.  Who do you want to be? Top or bottom?'
+		'Well, I do not know,  you shrug. – What does this mean?'
+		'– The mistress or the slave?'
+		act 'Slave':
+			cls
+			minut += 10
+			sub += 1
+			$BDSMrole = 'r'
+			gs 'stat'
+			'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_2.jpg"></center>'
+			'In a woman''s eyes light up the light. She stands up at the table and quietly orders:'
+			'– Stand up!'
+			'Before you jump, than understand, why did. The imperious voice of this Lady throws you in awe.'
+			'– Not sitting lower in the presence of top. You understand?'
+			'– Yes.'
+			'Wrong! Try again!'
+			'– Yes, Mrs....'
+			'So,  the woman nods. – Undress!'
+			'But...'
+			'– So, or undress, or knocked out! – MS has his hand on the table.'
+			'You look at standing with expressionless face man and undress.'
+			'– Sign!'
+			'You sign the document. A man removes the paper in the folder.'
+			'– Listen carefully...'
+			'She explains to you, what is Club membership worth it  10000 rubles a month. First installment –  10000. For slaves there is a discount, if the slave is attending two or more sessions per month, the membership fee shall be deemed paid. To participate in the sessions, you must be trained. Untrained slaves in the Club is not allowed. MS agrees to teach you.'
+			'– Come back tomorrow. All one, to do an enema. Please bring a costume maidservant, and lubricant. Everything is clear?'
+			'But...  I have no maidservant costume... – you whisper.'
+		 	'In that case, bring 10 thousand. Together with the first installment –  20 thousands. We are not a charitable organization, free get nothing. But don''t worry, if you show yourself as a slave, will be able to earn in private sessions. But the main thing – do not talk. We have serious people relax, they don''t need advertising. Everything is clear?'
+			'– Clear... Mrs..'
+			'Are you leaving, thinking, where to get money for a down payment.'
+			act 'Logout':gt 'BDSM_Club', 'start'
+		end
+		act 'Mrs.':
+			cls
+			minut += 10
+			$BDSMrole = 'g'
+			gs 'stat'
+			!'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_2.jpg"></center>'
+			'The woman sighs disappointedly.'
+			'– Sorry, I need a slave. Well, listen conditions.'
+			'She explains to you the rules of the Club.'
+			'First installment –  10 thousand. Yet the same suit for lady. Once you Madam, you need a slave or servant.'
+			'– And where do I find the slave? – you wonder.'
+			'– Where you want, – the lady shrugs.  Find submissive girlfriend and come together. Just keep in mind, before the sessions, you will not allow, will be trained under the guidance of experienced mistress. If you are satisfied, sign this document.'
+			'You sign the document. A man removes the paper in the folder.'
+			'Are you leaving, thinking, where to get money for a down payment and from whom who you can persuade to become your slave.'
+			act 'Leave':gt 'BDSM_Club', 'start'
+		end
+	else
+		if $BDSMrole = 'r':gt 'BDSM_Club', 'inR'
+	end
+end
+
+if $ARGS[0] = 'inR':
+	if BDSMmeet = 2:
+		DSMpayMonth = month
+		BDSMpayDay = day
+		money -= 20000
+		cls
+		minut += 10
+		sub += 5
+		gs 'stat'
+		'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_1.jpg"></center>'
+		'You are in the Club, security checks your name off the list and lets.  You give an elderly bookkeeper money and the security guard takes you into a small outbuilding away from the mansion. Upon entering wnur, you understand, almost the entire wing is a large room for BDSM-sessions. Hanging from the ceiling chains with hooks and ropes, on the walls – lash, whips_ , handcuffs, gags.  Submerged in the darkness of the far end of the hall discern pads, tables, crosses and some-the device, on appointment which you can only guess. You are met by a lady yesterday, laced into the skin.  She holds in her hands glinny stick with glands at the ends.'
+		'– W-Hello, – squeeze you.'
+ 		'Get undressed, – orders MS. _Now!'
+		'She brings the stick to your nose, crackled.'
+		act 'Further':
+			cls
+			minut += 10
+			horny += 5
+			gs 'stat'
+			'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_2.jpg"></center>'
+			' Is electroplast, – explains MS. – Soon you will meet him closer.'
+			'She licked the contacts, she shifted her gaze to you.'
+			'"Are you still dressed, bitch?"'
+			'The whip has touched your skin just below the neck. You sank, waiting for the blow. The lady laughed:'
+			'– Scared? Right!'
+			'She moved away and looked at you. You realize, what to do and quickly took off all my clothes.'
+			'– Spread your legs! Hands behind your back! Another!'
+			'You are exactly fulfilled orders.'
+			act 'Further':
+				cls
+				minut += 10
+				horny += 10
+				gs 'stat'
+				'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_3.jpg"></center>'
+				'The hostess removed from the wall and you put on leather collar, on hands and feet – bracelets with hooks. The collar presses, you reaching out to weaken, but get on his hand. The hostess walked around,  the toe of his boot pushed your feet.'
+				'– That''s right! This posture of attention. In this position makes the slave?'
+				'- Listens, Mrs.! – meet you. Between your legs you burns the flame, you feel, that here-here, and the legs will flow.'
+				'– Listens, – Madam nods.'
+				'She walks around you, unceremoniously grabs and squeezes, salesit fingers into the most secret holes. You feel loudly on the market.'
+				'– Listen to the rules. During the session, all commands are executed quickly and without hesitation. For failure to comply should be punished – always! To use me "Mrs.", in conversations with others to call me "Mistress ELEKTRA". Hope, clear, why''s my name?'
+				'– Yes, Mrs.!'
+				'Mistress removes the hook mnogovato lash.'
+				'Is flower. Burns, but not tears. Like this!'
+				'The whip whistles in the air,  your back in exactly the fire burns. You look at your shoulder and see the red marks.'
+				'– Listen carefully!'
+				act 'Further':
+					cls
+					minut += 10
+					horny += 5
+					gs 'stat'
+					'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_4.jpg"></center>'
+					'MS hits you a few times on the inner thighs.'
+					'– During the session the slave speaks only with permission. Like in the army: "permission to speak!". Without permission slave only breathes. To the toilet with permission, drink, is, to stand or lie – with permission. Cum... cum only with permission. Cum without permission will be punished. You have one minute to cum. No time at the minute for the permit ceases to act. When you come, need to report it.'
+					'The hostess walks around you, patting the whip on her shoulders, ass, back.'
+					'– Now the main thing: have a code word, to stop, this word "red". As soon as you say "red", the session is ended. If your mouth is busy, enough three times shake his head and hum: "and-and". If you can''t shake your head three times to slam the palm of his hand.Clear?'
+					'– Yes, Mrs.!'
+					act 'Further':
+						cls
+						minut += 10
+						horny += 15
+						gs 'stat'
+						'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_5.jpg"></center>'
+						'You feel, what you covers the excitation. The lady sees your condition and puts his hand between you legs.'
+						'– You''re all wet! I knew, what are you perverted bitch. Yes?'
+						'– Yes, Mrs., yes!'
+						'Skillful finger lady finds the right spot and throws you on the wave of bliss.'
+						'– I want to cum, bitch?'
+						'– Daaaa...!'
+						'– What to do?'
+						'You are shaking, are you ready to cum, but mistress knows his stuff, it doesn''t allow you to reach the peak, masterful hold on the crest of a wave.'
+						'– Mrs., PL... , please, let me cum! – I can hardly squeeze you, almost biting the tongue.'
+						'– Can''t hear? – Mrs. pretends, that didn''t catch.'
+						'– Please..the detailed information.. CUM!'
+						'– Early!'
+						'MS withdraws his hand. You look at it, as a child, which gave a sniff candy, and then took. Unable to tolerate, you reach a hand to the crotch.'
+						'TRACH!'
+						'Hand pain shoots. You fall to your knees and how his approach can hear the voice of Mrs.:'
+						'– Do not you dare!'
+						'You understand, what did she hit you with electrosystem.'
+						act 'Further':
+							cls
+							minut += 10
+							horny += 15
+							gs 'stat'
+							'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_6.jpg"></center>'
+							'– Here we found the first topic to practice  - exercise restraint.'
+							'Mrs. manicured finger lifts your chin and looks you in the eye.'
+							'– Cum only with permission, bitch! Clear?'
+							'– Yes, Mrs.! Yes, Mrs.!'
+							act 'Further':
+								cls
+								minut += 10
+								horny += 15
+								gs 'stat'
+								'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_7.jpg"></center>'
+								'Mrs. qualify you for the diagonal cross and latches carbines bracelets. You can''t move or close.'
+								'– Handle naughty fix, so...'
+								'Pasivas, mistress begins to play with your Clit, first fingers, then razlichnye tools. You chuvstvuyete, she is ready to cum, but she is not asleep. Noticing your condition, she puts her hand, takes flower inachines to whip you in the stomach.'
+								'You gradually releases the excitation, but gopage keeps you cool. She again accepted to caress you, alternating caresses with spanking.'
+								act 'Further':
+									cls
+									minut += 10
+									if horny < 100:horny = 100
+									gs 'stat'
+									'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_8.jpg"></center>'
+									'Gradually, you stop noticing the difference between pain and nakazanie. Your face is covered in sweat, you squirm on the cross. You beg mistress to let you cum, but she is adamant:'
+									'– You earn!'
+									$BDSMend = {
+										act 'Further':
+											cls
+											minut += 10
+											horny += 5
+											gs 'stat'
+											'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_10.jpg"></center>'
+											'– Well, enough for today, – you do not immediately understand, what MS announce the completion of the session. – A good start, but there is still work to do.'
+ 											'Is all?  rather than asking you, back in the real world.'
+											'– Almost...'
+											'MS puts you in front of him on his knees and forces you to lick pussy. Session initiated not only you, but Mrs., and she cums from a few movements of your tongue. After, as you licked up every drop of all, what resulted from MS, you go home.'
+											act 'Logout':gt 'BDSM_Club','start'
+										end
+									}
+									act 'To cheat and cum':
+										cls
+										minut += 10
+										horny = 10
+										manna += 25
+										orgasm += 1
+										gs 'stat'
+										'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_9.jpg"></center>'
+										'You decide to cheat and, incredible force of will, take control of the body. It goes unnoticed, MS continues, and you rapidly end up.'
+										'– What''s going on?! – yelling lady in your ear. – You bitch, tricked all-yet!'
+										'She unhooks you from the cross, puts on the knees and slaps a few slaps. You are so happy, I was able to cum, that laugh.'
+										'– Laugh? Well, wait I!'
+										'Mistress picks up the rope and wraps you around Breasts, around left and right around. Pain you start crying, but the lady is not getting through, she hangs up on you on the nipple clamps with weights and forces Crouch, so, the weights were swinging. You hurt, but at the same time and it''s nice, and you execute the command.'
+										dynamic $BDSMend
+									end
+									act 'To hold back':
+										cls
+										minut += 10
+										if horny < 100:horny = 100
+										gs 'stat'
+										'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_8.jpg"></center>'
+										'Mrs. forbids you to cum, and you struggled, hampered.'
+										dynamic $BDSMend
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	else
+		cls
+		sub += 5
+
+		if BDSMpay = 0:
+			BDSMpayMonth = month
+			BDSMpayDay = day
+			money -= 10000
+			'You paid a month in the club'
+		end
+
+		if BDSMmeet = 3:
+			minut += 10
+			horny += 5
+			gs 'stat'
+			'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_1.jpg"></center>'
+			'You are in the Club and go to the training hall. You scary and exciting. The idea of, that you are prepared for the Mrs, between her legs becoming wet.'
+			'Once you sitiv hall, how mistress walks up to you and slaps slap:'
+			'– Late, bitch? I''ll teach you!'
+			'She grabs you by the hair, puts on the knees and bends to the floor.'
+			'"You should kiss the ground, which I go, for the opportunity to join the Club!"'
+			'– Yes, Mrs.!'
+			'You hurriedly undress.'
+			act 'Further':
+				cls
+				minut += 10
+				gs 'stat'
+				'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_2.jpg"></center>'
+				'Mistress puts on you collar, foot and hand bracelets, and puts on the wooden platform.'
+ 				'A good spanking will teach you to be late!'
+				'Mrs. raspalyaet you on the platform face down and picks up the whip.'
+				act 'Further':
+					cls
+					minut += 10
+					horny += 5
+					gs 'stat'
+					'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_3.jpg"></center>'
+					'You are lying on the platform, Mrs. Poret you, changing tools.'
+					act 'Further':
+						cls
+						minut += 10
+						horny += 10
+						gs 'stat'
+						'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_4.jpg"></center>'
+						'You becomes unbearable, and the lady says.'
+						'– Tired, bitch? Take a break!'
+						'The lady sits in front of you squat, raises you head and makes vylizat pussy. You diligently cultivated the language of the labia and clitoris of mistress.'
+						act 'Further':
+							cls
+							minut += 10
+							if horny < 90: horny = 90
+							vagina += 1
+							gs 'stat'
+							'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_5.jpg"></center>'
+							'– Well, you deserve a little encouragement...'
+							'Mistress unties you, flips back and locks again. Includes a huge vibrator and is ready for your pussy. Soon you feel, she is ready to cum. Looking at Mrs., you are asking:'
+							'– Mrs., cum! Please!'
+							'– No! And nefig to look at me with eyes poodle shitting! Not allowed!'
+							'MS almost brings you to orgasm, then takes a vibrator.'
+							act 'Further':
+								cls
+								minut += 10
+								horny += 5
+								gs 'stat'
+								'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_6.jpg"></center>'
+								'Flogging resumes. You are all the time on the brink of pain and pleasure.'
+								act 'Further':
+									cls
+									minut += 10
+									horny += 5
+									gs 'stat'
+									'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_7.jpg"></center>'
+									'– Let''s get weaving...'
+									'Mistress unties you, leads to a large box, makes to climb and become cancer. Squinting eyes, you see, as she unwinds the rope. Immediately obvious, she had a great experience. Ropes cover your ankle wrist, hip, pulling hand, satalaia accountts nose in the box. After a few minutes you understand, that can''t move. Your ass looks at the ceiling, feet apart, revealing the pussy and ass. From helplessness and complete openness you get excited again.'
+									'– Macrame club! – announces MS and spanks you with his palm on the butt.'
+									act 'Further':
+										cls
+										minut += 10
+										horny += 5
+										vagina += 1
+										gs 'stat'
+										'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_8.jpg"></center>'
+										'Mistress puts on a strap-on, makes you lick and comes up behind. You feel, like that-it depends on your pussy, slips inside like clockwork, and begins to move ritmico.'
+										act 'Further':
+											cls
+											minut += 10
+											horny += 5
+											gs 'stat'
+											'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_9.jpg"></center>'
+											'Mistress Fucks you with a strapon and again brings to the highest point, but to not finish gives.'
+ 											'– Boring...  disappointedly pulls Mrs., while you try to catch your breath. – And not to hang you?'
+											'The lady fingers flashed so quickly, you can''t keep up. It changes the location of the ropes, turns to you and begins to rattle chains. You realize with horror, she tied you to hang from the ceiling chain. Jouit motor, and you feel, your body rises.'
+											act 'Further':
+												cls
+												minut += 10
+												horny += 5
+												gs 'stat'
+												'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_10.jpg"></center>'
+												'The ropes cut into the skin, but mistress knows his stuff – it hurts, but not so, to drive away the excitement. You hang upside down, the room slowly rotates around you.'
+												act 'Further':
+													cls
+													minut += 10
+													horny += 5
+													vagina += 1
+													vgape = 2
+													vgapetime = totminut
+													gs 'stat'
+													'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_11.jpg"></center>'
+													'– Well, see, how ready is your hole!'
+													'The lady pulls out a huge Dildo, attached to the stick, and enters you in the pussy. You think, you are torn apart. You scream out and beg pereiti, but it is useless. Mrs. energetically moves the stick up-down, like clearing a clogged toilet.'
+													act 'Further':
+														cls
+														minut += 10
+														horny += 5
+														gs 'stat'
+														'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_12.jpg"></center>'
+														'Just before, as you are ready to scream: "Red!", mistress takes out of you Dildo. Again buzzing motor, you kneel on the floor. Madam binds your hands behind your back and puts on the knees:'
+														'- Rest!'
+														'Leg mistress is in your face, and you understand, what to do. You kiss and lick the foot, sucking fingers.'
+														act 'Further':
+															cls
+															minut += 10
+															horny = 0
+															orgasm += 1
+															manna += 50
+															anus += 1
+															agape = 2
+															agapetime = totminut
+															gs 'stat'
+															'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_13.jpg"></center>'
+															'– And now for the ass! – declares the lady and knocks you sideways.'
+															'Strapon rests on the edge of the anus, Mrs. hisses with displeasure and sharp moves her hips, driving it entirely. You scream and moan, but soon the pain turns to pleasure.'
+															'– GSPOA, cum! Please! – I can hardly squeeze you.'
+															'– Fuck you, bitch! Stop!'
+															'At the same moment you cover the rapid ograsm, behind him almost immediately followed by the second. You squirm so, that even a little-a rope and a tear.'
+															act 'Further':
+																cls
+																minut += 10
+																gs 'stat'
+																'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_14.jpg"></center>'
+																'– Finished?  mistress leans over to you.'
+																'– Yes, Mrs., thank you, Mrs.!  you cry.'
+																'Mistress unties you. For a moment you think, that all ended, but no: rope again pulls the wrist, and mouth plug ball-gag.'
+ 																'Your mouth is closed! Tired of listening to your whining!'
+																'Madam binds you for rocic hanging from the ceiling chain and pulls to the box.'
+																'– Now show, how to please a man!'
+																act 'Further':
+																	cls
+																	minut += 10
+																	horny += 15
+																	vagina += 1
+																	gs 'stat'
+																	'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_15.jpg"></center>'
+																	'The lady lies on her back, forces you to ride her, and you are jumping on a strap-on under the satisfied moans of Mrs.. It can be seen, she had already cum several times.'
+																	'Satisfied, mistress unties you, approvingly slapped on the cheek and lets go, ordered to come tomorrow.'
+																	act 'Logout':gt 'BDSM_Club', 'start'
+																end
+															end
+														end
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		elseif BDSMmeet = 4:
+			minut += 10
+			horny += 10
+			gs 'stat'
+			'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_1.jpg"></center>'
+			'You wear a beautiful dress and come to the Club for the next training session. The mistress said you, this session is the last before, as you will be admitted to General sessions – of course, if you will fulfill all its instructions.'
+			'– Well dressed up-then!  says MS. – Well, ready, mat? Throw off the dress and get over here!'
+			act 'Further':
+				cls
+				minut += 10
+				horny += 10
+				gs 'stat'
+				'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_2.jpg"></center>'
+				'Mistress orders you to get into the cage, similar to a cage for parrots, but more. Your body does not fit entirely, and the legs are out. Your neck captures heavy iron collar, attached by a chain to the bars of the cage. MS pushes a button and the cage rises.'
+				'– Straighten legs! In front of him, here! – orders MS. Your bare heels are in front of her.'
+				act 'Further':
+					cls
+					minut += 10
+					horny += 15
+					gs 'stat'
+					'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_3.jpg"></center>'
+					'Mistress tickles your heels and growls, when you are trying to remove the legs:'
+					'– Returned back!'
+					'You obey. Mistress leans forward and you feel like that-it touches your pussy. Then hear a buzzing sound, and you feel the vibration.'
+					act 'Further':
+						cls
+						minut += 10
+						horny += 15
+						gs 'stat'
+						'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_4.jpg"></center>'
+						'– Leg!'
+						'You are pulling my leg. MS takes the thin twig with a pulling punches you in the heel.'
+						'– Let`s repetition...'
+						'The lady goes on around you and asking questions, at the slightest hitch with the response setting in motion a twig.'
+						act 'Further':
+							cls
+							minut += 10
+							horny += 15
+							gs 'stat'
+							'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_5.jpg"></center>'
+							'You are responsible, feeling, as for body waves spread pleasure. The vibrator buzzing and twitching, driving you crazy. Unable to restrain himself, you shout:'
+							'– Mrs., please! Come!'
+							'– No! Restrain! Restrain!'
+							act 'Further':
+								cls
+								minut += 10
+								horny += 15
+								gs 'stat'
+								'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_6.jpg"></center>'
+								'Mrs. monitors your condition, and for the moment before orgasm turns off the vibrator.'
+								'- Well, you know the rules... Now let''s see you in action...'
+								'Mrs. frees you from the cage and puts on the knees.'
+								'– Come! – imperative she says:, and you understand, she''s not talking to you.'
+								'From a dark corner is shown from head to toe tight skin people. The man – his cock, the only, what is not covered, dangling between his legs, how thick sausage. The head male mask with holes for eyes. He bows to the lady and walks closer.'
+								act 'Further':
+									cls
+									minut += 10
+									horny += 5
+									bj += 1
+									guy += 1
+									gs 'stat'
+									'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_7.jpg"></center>'
+									'– Show, as you know how to suck!'
+									'You obediently take cock in her mouth and carefully suck. Mistress walks around and says:'
+									'– C grade suck, C grade! Need to practice!'
+									act 'Further':
+										cls
+										minut += 10
+										horny += 5
+										vagina += 1
+										sex += 1
+										gs 'stat'
+										'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_8.jpg"></center>'
+										'At a sign from Mrs. the man lies on the box. You climb up, send him a dick in pussy and start to ride. Mistress walks around and encourages twig.'
+										act 'Further':
+											cls
+											minut += 10
+											horny += 5
+											gs 'stat'
+											'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_9.jpg"></center>'
+											'_Stop! – orders MS.'
+											'You stop and translate the spirit. MS gets clothespins, tied to ropes, and begins to give light weight you them. The clothespins hurt, especially on nipples and tongue, but you endure. The sign of the lady you resume movement.'
+											act 'Further':
+												cls
+												minut += 10
+												horny = 0
+												manna += 25
+												orgasm += 1
+												gs 'stat'
+												'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_10.jpg"></center>'
+												'– A jerk! – orders MS.'
+												'You begin to pull at her Clit, while jumping on the dick. Soon you feel, that here-here is Conchita, and ask permission.'
+												'- Finish! – allows the hostess.'
+												'You shout "Cumming!". You are covering an orgasm of unprecedented power. At the peak point, the lady abruptly pulling the strings, tearing clothespins. You think, what you rip off the skin, it is very painful and pleasant at the same time.'
+												act 'Further':
+													cls
+													minut += 10
+													BDSMClubIn = 1
+													gs 'stat'
+													'<center><img src="images/BDSM_Club/<<$BDSMrole>>' + BDSMmeet + '_11.jpg"></center>'
+													'The lady takes you by the hair and turns to his.'
+ 													'– Welcome to the Club, slave!'
+													'You hardly come in and buckling the legs getting in the shower. At the exit you are handed a membership card, you can now pass to the Club as a full member.'
+													act 'Logout':gt 'BDSM_Club','start'
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- BDSM_Club ---------------------------------

@@ -28,7 +28,7 @@ if $ARGS[0] = 'start':
 	'In the middle is a huge bed, and a small side door <a href="exec:gt ''bordel'', ''dysh''">bath</a>.'
 
 	act 'Leave':
-		if $clothingworntype ! 'ero':
+		if $clothingworntype ! 'ero' and $clothingworntype ! 'nude':
 			gt 'down'
 		else
 			cla
@@ -79,7 +79,7 @@ if $ARGS[0] = 'dysh':
 	end
 
 	act 'Locker for clothes':
-		gt 'clothing', 'view_clothing_list', 'wardrobe'
+		gt 'clothing', 'view_clothing_list', 'wardrobe', 'brothel'
 	end
 end
 

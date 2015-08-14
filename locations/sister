@@ -444,7 +444,20 @@ if $ARGS[0] = 'home':
 				if temp = 6:'Anja in detail with enthusiasm tells you about the great virtue Roma, and if it is not, they would have long since parted.'
 				if temp = 7:'Anja shares with you a secret, that her favorite position "horsewoman", and Romke likes to have her cancer.'
 				if temp = 8:'You''re talking to my sister on a very frank things, and she says shyly, that she does not like to swallow cum, but it Roma strong winds, and she was ready for him to swallow.'
-				if temp = 9:'Anja long talks about their company, about Romkinyh friends, and asks you if you wanted to whom any of them meet.'
+				if temp = 9:
+					if reksLike = 0:
+						reksLike = 1
+						rex = 50
+						rexSisTalk = 0
+						rexPark = 0
+						rexCar = 0
+						'Anka long talks about their company, about Romkinyh friends, and asked you if you wanted with someone of them meet.'
+						'"Well... Actually, Rex is nothing so."'
+						'"Hmm.. He`s a nice guy, but sometimes behaves a bit strange. Me she recently told, what Rex just drags on women`s legs. There was a case when Rex was driving without a license in my father`s car and gazed at walking on the sidewalk a girl, walking in stockings and short skirt. Imagine, he was so carried away, he had not noticed ahead standing at the traffic lights, a van firms  «Rex». And it venturella, that paternal dozen can not be repaired. Named him Rex" - Anya smiled. - "Ever notice on his legs his greedy, devouring glance."'
+					else
+						'You ask my sister about Romka, it is a long and happy, he says some good, responsive and courageous.'
+					end
+				end
 				if temp = 10:'Anja says, what you liked Roma, and asks if he likes you.'
 
 				act 'Finish':gt 'sister', 'home'

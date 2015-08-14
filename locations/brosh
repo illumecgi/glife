@@ -65,6 +65,66 @@ elseif evgentipe = 1:
 
 	exit
 elseif evgentipe = 2:
+'At recess you went to your brother nick  "<<$nickname>>! Let`s go behind school, I need to relieve tension."'
+
+act 'Going beyond school':
+	cls
+	gs'stat'
+
+	'At the Kolka you left for school, where they found a nook.'
+
+	act 'Suck Kolka':
+		cls
+		bj += 1
+		sub += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/ev/bj.jpg"></center>'
+		'You sat down on his haunches and took Kolka <<brotherDick>>-five inch penis from his pants pulling your face to its members, You dutifully wrapped around his lips and began to suck.'
+
+		act 'Suck':
+			cls
+			!cumface += 1
+			cumlip += 1
+			swalllow += 1
+			!cumfrot += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alexey/bjcum9.jpg"></center>'
+			'Kolka did not last long and your mouth spurted sperm, you quickly began to swallow.'
+
+			dynamic $din_sekondparturok
+		end
+	end
+	if brotherSex > 6:
+		act 'Bend':
+			cls
+			minut += 5
+			horny += 10
+			$boy = 'Kolka'
+			dick = brotherDick
+			silavag = 0
+			pose = 1
+			rand1=rand(0,100)
+
+			gs'stat'
+			'Did you decide, rotika brother that would not be enough and decided to give him.'
+			if rand1<5:'<center><img src="images/qwest/alter/Ev/boysex.jpg"></center>'
+			if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,<<rand(0,2)>>.gif"></center>'
+			if rand1>=30:'<center><img src="images/nigma/gor/publ1,<<rand(0,6)>>.jpg"></center>'
+			'You bent down and framed mooning brother.'
+			dynamic $sexstart
+			dynamic $sexstart2
+			dynamic $sexcum
+
+			dynamic $brotherSexEnd
+
+			dynamic $din_sekondparturok
+		end
+	end
+end
+exit
+elseif evgentipe = 3:
 	'During the break you came Zhendos and Mishan, friends of your brother "<<$name>>! Come for school, fun_too."'
 
 	act 'Go after school':
@@ -92,4 +152,3 @@ end
 !dynamic $din_sekondparturok
 
 --- brosh ---------------------------------
-

@@ -124,7 +124,7 @@ if husbandrink = 10 and hour > 20 and hour < 23 and husbanstrapon = 0:
 			minut += 10
 			'<center><img src="images/img/hasb/h0.jpg"></center>'
 
-			if analplugin = 1:'You pull the cork out of his ass.'
+			if analplugin = 1:'You pull the plug out of your own anus and immediately shove it up your husbands ass.'
 			if analplugin = 0:'You go take an anal plug and put it into his ass.'
 
 			'<<$husName>> moved, but did not wake up'

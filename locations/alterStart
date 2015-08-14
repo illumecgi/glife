@@ -1,6 +1,14 @@
 # alterStart
 StoryLine = 1
 MagikDostup = 1
+
+!!TODO: check these are actually used somewhere
+prezikProver = 3
+Putsawtatvag=0
+PutsawpirsF=0
+PutsawpirsG=0
+brothersawpirsF = 0
+
 umbrella = 1
 birthday = 5
 birthmonth = 3
@@ -11,22 +19,9 @@ $nickname = 'Svetski'
 !!!
 age = 15
 vidage = 14
-!!age = 17
-!!vidage = 16
 year = 2009
-!!month = 8
 week = 6
 hour = 10
-!!day = 30
-month = 3
-day = 9
-!!!!!!!!!!!!!!!
-!!month = 3
-!!day = 9
-!!week = 6
-!!hour = 10
-!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!
 month = 8
 day = 29
 week = 5
@@ -274,6 +269,7 @@ $npcGo[25] = '<a href="exec:numnpc = 25 & gt ''Snpc''"><<$npcName[25]>> <<$npcSu
 
 $din_alter_start_ev = {
 	cls
+	'<center><img src="images/pic/alterstart7.jpg"></center>'
 	'When you were 13 years old, your period started like most other girls in your class. Your breasts started to grow and your armpit and pubic hair began to sprout. Your skin became covered with acne. When you finished 9th class, you did not drop out of school, and continued to study in the 10th grade.''You''re about to start 10th grade (placeholder until someone comes up with a less terrible intro than was here before)'
 
 	'The summer holiday ends soon and you will go to your new class to start your first of the two years you''re going to study.'
@@ -295,6 +291,7 @@ $din_alter_start_ev = {
 
 clr
 gs 'stat'
+'<center><img src="images/pic/alterstart1.jpg"></center>'
 'You were born in <<birthyear>>.'
 'Your mother and father, Natasha Mikhail <<$surname>>, were quite young and probably didn''t know how to protect themselves.'
 'You have a sister, Anja, who is 2 years older than you.'
@@ -315,7 +312,7 @@ if $nickname = '':$nickname = 'Svetski'
 
 act 'Further':
 	cls
-
+	'<center><img src="images/pic/alterstart2.jpg"></center>'
 	'In the kindergarten where you went everything was fine, but you don''t remember it. When you were 7 years old, you finished kindergarten and went to school.'
 
 	act 'You are completely obsessed with books.':
@@ -365,6 +362,7 @@ act 'Further':
 		money += 2000
 		tan = 30
 		gs 'stat'
+		'<center><img src="images/pic/alterstart4.jpg"></center>'
 		'In school, you put a lot of effort to be an excellent pupil. You didn''t make any friends because you weren''t engaged in sports, but you have excellent grades and your mom is very proud of you.'
 
 		act 'Further':dynamic $din_alter_start_ev
@@ -393,6 +391,7 @@ act 'Further':
 		jeansB[1] = bedra
 		tan = 30
 		gs 'stat'
+		'<center><img src="images/pic/alterstart5.jpg"></center>'
 		'You spent all your free time training your volleyball skills. Because of that you weren''t that good in school and had less friends.'
 
 		act 'Further':dynamic $din_alter_start_ev

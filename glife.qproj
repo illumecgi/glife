@@ -124,6 +124,8 @@
       <Location name="shop"/>
       <Location name="trashplace"/>
       <Location name="RynokHoz"/>
+	  <Location name="BDSM_Club"/>
+	  <Location name="taxi"/>
     </Folder>
     <Folder name="Торговый Представитель - Trade Representative">
       <Location name="torgpred"/>
@@ -401,6 +403,8 @@
       <Location name="budilnik"/>
       <Location name="divan"/>
       <Location name="Komp"/>
+	  <Location name="kompMFC"/>
+	  <Location name="kompMFCtwo"/>
       <Location name="selfPorno"/>
       <Location name="mirror"/>
       <Location name="stol"/>

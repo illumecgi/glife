@@ -276,7 +276,7 @@ if $ARGS[0] = 'blackm':
 
 		act 'What do you want?':
 			cla
-			'Nothing special <<$имя>>. Just to let you do what you like - he nodded at the pictures.'
+			'Nothing special <<$name>>. Just to let you do what you like - he nodded at the pictures.'
 
 			act 'Fucked in front of the camera?':
 				cla
@@ -307,7 +307,7 @@ if $ARGS[0] = 'blackm':
 						act 'Begin to cry':
 							cla
 							*clr
-							'You fell onto the bed and wept. Not bad, tears always look very cool, - said Victor pressing pause. Thus, <<$имя>> tempted, and boys can enjoy.'
+							'You fell onto the bed and wept. Not bad, tears always look very cool, - said Victor pressing pause. Thus, <<$name>> tempted, and boys can enjoy.'
 
 							act 'In the shower':
 								cla

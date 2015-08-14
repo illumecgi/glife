@@ -1018,20 +1018,20 @@ if $ARGS[0] = '2':
 
 	clr
 	carraf = RAND(10,250)
-	gs'stat'
+	gs 'stat'
 
 	'<center><img src="images/studia/casting_<<rand(1,6)>>.jpg"></center>'
 
 	'You spent eight o`clock undressing in front of the casting director, and taking various poses.'
 
 	minut = minut+120
-	gs'stat'
+	gs 'stat'
 	minut = minut+120
-	gs'stat'
+	gs 'stat'
 	minut = minut+120
-	gs'stat'
+	gs 'stat'
 	minut = minut+120
-	gs'stat'
+	gs 'stat'
 
 	if vnesh < carrar:
 		'You do not have to be the, too bad'
@@ -1042,7 +1042,7 @@ if $ARGS[0] = '2':
 	end
 
 	act 'Finish':
-		gt'pornstudio','start'
+		gt 'pornstudio','start'
 	end
 end
 
@@ -1052,8 +1052,8 @@ if $ARGS[0] = '3':
 
 	clr
 	actr = 0
-	gs'stat'
-	gt'bdsm'
+	gs 'stat'
+	gt 'bdsm'
 end
 
 --- pornstudio ---------------------------------

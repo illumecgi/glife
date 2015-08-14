@@ -57,7 +57,7 @@ act 'watch':
 						pose = 1
 						brotherSexCount -= 1
 
-						gs'stat'
+						gs 'stat'
 						'Kolka said guys, that will accompany you. As soon as you come out of the house Mishkin, brother whispered:'
 						'"Let''s look for a quiet place, and that of the, it was not enough for me Misha." Soon you will find a secluded spot and Kolka said,:'
 						'"There will be normal. Let''s start."'
@@ -284,12 +284,12 @@ if $ARGS[0] = 'SeePornPalevo':
 	bratrand = RAND(0,1)
 	!boyseeporn += 1
 	'Boys watching porn and whispering to each other, casting lustful glances at you'
-	gs'stat'
+	gs 'stat'
 
 	if bratrand = 0:
 		cls
 		boyseeporn += 1
-		gs'stat'
+		gs 'stat'
 
 		'Zhendos offers "<<$name>>, What about the work mouth? Kolyan told us about your entertainment in the park so you can not build here because of offended innocence." Unless of course you do not want to even somebody found.'
 
@@ -298,7 +298,7 @@ if $ARGS[0] = 'SeePornPalevo':
 			bj += 3
 			sub += 3
 			gang += 1
-			gs'stat'
+			gs 'stat'
 
 			if rand1<30:'<center><img src="images/qwest/alter/ev2/seepornblowbang.jpg"></center>'
 			if rand1>=30:'<center><img src="images/qwest/alter/ev2/seepornbro0,<<rand(0,2)>>.gif"></center>'
@@ -311,12 +311,12 @@ if $ARGS[0] = 'SeePornPalevo':
 				cumlip += 2
 				cumfrot += 1
 				horny += 10
-				gs'stat'
+				gs 'stat'
 
 				'<center><img src="images/qwest/alter/ev2/seepornbbcum.jpg"></center>'
 				'The boys did not last long and become cum on your face covering it with a layer of sperm, Soon almost all of your face was covered with a layer of mucus and fragrant part of the sperm even got your clothes on. The boys laughed "That`s clever, the good girl".'
 
-				act 'Escape':gt'gorodok'
+				act 'Escape':gt 'gorodok'
 			end
 		end
 
@@ -326,7 +326,7 @@ if $ARGS[0] = 'SeePornPalevo':
 			!'<center><img src="images/qwest/alter/ev2/seepornHand.jpg"></center>'
 			'You indignantly rejected the offer kids. Brother looked at you askance "In vain you so. Another regret it."'
 
-			act 'Escape':gt'gorodok'
+			act 'Escape':gt 'gorodok'
 		end
 	elseif bratrand = 1:
 
@@ -338,7 +338,7 @@ if $ARGS[0] = 'SeePornPalevo':
 			bj += 3
 			sub += 3
 			gang += 1
-			gs'stat'
+			gs 'stat'
 
 			'<center><img src="images/qwest/alter/ev2/SeePornDouble.jpg"></center>'
 			'You dutifully kneels in front of the guys, pick up their hard dick and start to push them hard in her mouth.'
@@ -347,7 +347,7 @@ if $ARGS[0] = 'SeePornPalevo':
 			act 'Suck':
 				cls
 				horny += 10
-				gs'stat'
+				gs 'stat'
 
 				'<center><img src="images/qwest/alter/ev2/SeePornDouble2.jpg"></center>'
 				'You diligently continue to suck two dick at the same time, guys moaning and moving his hips trying to shove them to you deeper.'
@@ -361,13 +361,13 @@ if $ARGS[0] = 'SeePornPalevo':
 					cumlip += 2
 					cumfrot += 1
 
-					gs'stat'
+					gs 'stat'
 					'<center><img src="images/qwest/alter/ev2/seepornbjcum<<rand(2,3)>>.jpg"></center>'
 					'Do nothing you close your eyes and sit humbly on his knees, without disturbing them yourself obkanchivat. In the nose hits the pungent smell of sperm.'
 					'You feel like a hot sticky goo covers your entire face, individual droplets fall even on the neck and hair.'
 					'"This is for you, instead of face masks" - laughing boys. Jokers pancake, You are angry with difficulty razleplyaya eyes.'
 
-					act 'Escape':gt'gorodok'
+					act 'Escape':gt 'gorodok'
 				end
 			end
 		end
@@ -378,7 +378,7 @@ if $ARGS[0] = 'SeePornPalevo':
 			!'<center><img src="images/qwest/alter/ev2/seepornHand.jpg"></center>'
 			'You indignantly rejected the offer kids. Brother looked at you askance "In vain you so. Another regret it."'
 
-			act 'Escape':gt'gorodok'
+			act 'Escape':gt 'gorodok'
 		end
 	end
 end

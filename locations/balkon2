@@ -59,7 +59,8 @@ if $ARGS[0] = 'niz':
 	*clr
 	gs 'stat'
 
-	if alcohol < 12:
+	! WD: Vars never Initialised ~ 'alcohol' USE 'alko'
+	if alko < 12:
 		if $clothingworntype = 'nude':
 			'<center><img src="images/community/balcony_naked2.jpg"></center>'
 		elseif tanga = 1:

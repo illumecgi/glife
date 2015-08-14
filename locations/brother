@@ -91,7 +91,7 @@ if $loc = 'gschool':
 	if evgenQW >= 4 and BJBeerQW >= 3:
 		'Brother grins "Hi <<$nickname>>. But why do you want this football, better go with us to watch porn?'
 
-		act 'Go watch porn':minut += 5 & gt'seeporn'
+		act 'Go watch porn':minut += 5 & gt 'seeporn'
 	elseif evgenQW >= 4:
 		'Guys poshushukavshis together tell you "Yup, Well it this Soccer, Let''s go watch porn."'
 
@@ -147,7 +147,7 @@ end
 if $loc = 'sitrPar' and indorf = 0 and nude = 0 and brothersawpirsF=0 and father_go = 1 and brother > 85 and hour >= 18 and hour < 21 and pirsF > 0:
 	act 'Show pierced nipples':
 		cls
-		gs'stat'
+		gs 'stat'
 		minut+=1
 		horny+=3
 		brothersawpirsF=1
@@ -215,7 +215,7 @@ if $loc = 'sitrPar' and indorf = 0 and brotherSexCount > 0 and brotherDay = day:
 			brotherSex += 1
 			brotherSexCount -= 1
 			brotherMorningSex = day
-			gs'stat'
+			gs 'stat'
 
 			'<center><img src="images/qwest/alexey/bj6.jpg"></center>'
 			'Approaching a brother, you gently pulled back the covers and began to suck it <<brotherDick>> inch dick. After a few minutes, he moaned softly in his sleep, his cock jerked and jet of sperm flew between your lips into your mouth.'
@@ -287,7 +287,7 @@ $brotherSexStart = {
 		minut += 5
 		dick = brotherDick
 		hj += 1
-		gs'stat'
+		gs 'stat'
 
 		'<center><img src="images/qwest/alter/artom/hj.jpg"></center>'
 		'You took it hard and hot cock in his hand and began to masturbate him. Finally brother strangled groan and you saw how his cock flies sperm.'
@@ -301,7 +301,7 @@ $brotherSexStart = {
 			horny += 10
 			bj += 1
 			dick = brotherDick
-			gs'stat'
+			gs 'stat'
 
 			'<center><img src="images/nigma/gor/ш0,'+rand(0,6)+'.gif"></center>'
 			'You sit down in front of bratm and brought his face to his cock.'
@@ -316,7 +316,7 @@ $brotherSexStart = {
 				horny += 10
 				cumlip += 1
 				swallow += 1
-				gs'stat'
+				gs 'stat'
 
 				'<center><img src="images/nigma/gor/с0,'+rand(0,11)+'.gif"></center>'
 
@@ -330,7 +330,7 @@ $brotherSexStart = {
 				horny += 10
 				cumface += 1
 				facial += 1
-				gs'stat'
+				gs 'stat'
 
 				'<center><img src="images/qwest/alter/Ev/cocksuckerFacial.jpg"></center>'
 				'You took out his dick and then your face hit the hot jet of sperm, then another and another, and finally stopped brother cum on your face.'
@@ -347,7 +347,7 @@ $brotherSexStart = {
 					dick = brotherDick
 					silavag = 0
 
-					gs'stat'
+					gs 'stat'
 
 					'<center><img src="images/nigma/gor/ш1,'+rand(0,11)+'.gif"></center>'
 					'You lay on the sofa and brother lay on you from above.'
@@ -371,7 +371,7 @@ $brotherSexStart = {
 			dick = brotherDick
 			silavag = 0
 
-			gs'stat'
+			gs 'stat'
 
 			'<center><img src="images/nigma/gor/ш1,'+rand(0,11)+'.gif"></center>'
 			'You lay on the sofa and brother lay on you from above.'
@@ -391,14 +391,14 @@ $brotherSexEnd = {
 		if $loc = 'sitrPar' and father_go = 1 and hour >= 18 and hour < 21:
 			minut += 15
 
-			gs'stat'
+			gs 'stat'
 
 			'Kolka gave you a break, and then saying,: "Good for, <<$nickname>>, good job, And now let`s wali!", She continued to go about their business.'
 			act 'Escape':gt $loc
 		elseif $loc = 'sitrPar':
 			minut += 15
 
-			gs'stat'
+			gs 'stat'
 
 			'Kolka gave you a break, and then saying,: "Good for, <<$nickname>>, well-tried, And now let`s wali!", asleep.'
 			act 'Escape':gt $loc
@@ -409,14 +409,14 @@ $brotherSexEnd = {
 		if $loc = 'sitrPar' and father_go = 1 and hour >= 18 and hour < 21:
 			minut += 15
 
-			gs'stat'
+			gs 'stat'
 
 			'Kolka gave you a break, and then saying,: "Many thanks, <<$nickname>>, You helped me a lot", She continued to go about their business.'
 			act 'Escape':gt $loc
 		elseif $loc = 'sitrPar':
 			minut += 15
 
-			gs'stat'
+			gs 'stat'
 
 			'Kolka gave you a break, and then saying,: "Thank you, <<$nickname>>, You rescued me very, Now I can finally sleep.", asleep.'
 			act 'Escape':gt $loc

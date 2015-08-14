@@ -8,6 +8,7 @@ gs 'stat'
 '<center><img src="images/etogame/rinok.jpg"></center>'
 'Bustling market, you can buy in the market place to buy clothes or for 30,000 rubles and receive income from the outlet, but for the purchase and delivery of course need to have a car. You can trade yourself or hire a saleswoman.'
 
+! WD: Vars never Initialised ~ '$marka', 'benzin'
 if car = 0:
 	money -= 20
 	'You get on the shuttle bus and pay the fare of 20 rubles.'

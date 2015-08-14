@@ -1,4 +1,7 @@
 # $menu_mobila
+! WD: Location never called
+
+! WD: Vars never Initialised ~ $objmobila
 dynamic $objmobila
 
 --- $menu_mobila ---------------------------------

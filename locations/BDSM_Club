@@ -13,7 +13,7 @@ if $ARGS[0] = 'Hos':
 	gs 'stat'
 	'<center><img src="images/BDSM_Club/Hosjaika.jpg"></center>'
 	'After a few visits to the Hostess you are a little closer together. Looking to her one evening, you catch her a little tipsy. Instead of already familiar perversions, you just sit in the kitchen and drink wine, talking about life. In conversation, the Hostess mentions what-the BDSM club. Becomes interesting, you are the Hostess poured glass after glass and slowly pull the details from it. Turns, the city has an elite BDSM-club, and the missus is in it. After much persuasion, she gives you a business card – a piece of cardboard with three-dimensional logo without inscriptions, and explains how to get into the Club.'
-	act 'Escape':gt'street'
+	act 'Escape':gt 'street'
 end
 
 if $ARGS[0] = 'start':

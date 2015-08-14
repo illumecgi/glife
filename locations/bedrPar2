@@ -23,14 +23,14 @@ if hour > 6 and hour < 21 and prezikday!day:
 		act 'Take condoms from your parents stash':
 			cls
 			cla
-			gs'stat'
+			gs 'stat'
 			minut+=rand(5,7)
 			prezik+=rand(1,3)
 			prezikday=day
 			prezikProver = 0
 			'<center><img src="images/qwest/alter/condoms_steal.jpg"></center>'
 			'You quietly pulled out of the parent caches some condoms. Now you have <<prezik>> pcs.'
-			act 'Exit the room':gt'korrPar'
+			act 'Exit the room':gt 'korrPar'
 		end
 	else
 		'You have recently taken condoms parent caches. If they often carry, something that parents can-the suspect.'

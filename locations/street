@@ -425,7 +425,7 @@ if streetrand >= 100 and money >= 1000 and daystart >= 10 and hour <= 3:
 
 			act 'He was faster than you and you lost sight of him':gt 'street'
 
-		else:
+		else
 			$nameV = 'Rapist'
 			!!stats
 			strenV = 100

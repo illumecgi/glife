@@ -212,7 +212,7 @@ If month = 12 and pogodaday ! day:
 		else
 			$osadki = 'Goes fluffy snow.'
 		end
-	else:
+	else
 		osadki = rand(0, 10)
 
 		if osadki < painweather:

@@ -37,7 +37,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 			'<center><img src="images/camwhore/camwhore22.jpg"></center>'
 			'You marmites pain, when torn your hymen. The blood drains from your torn pussy, and the chat explodes with comments.'
 			'Depriving yourself of virginity, you immediately stopped and leaned back with a sigh of relief on my back, at the same time making yourself a break and giving users the opportunity to enjoy your already not a virgin bleeding pussy.'
-			act'Further':gt'Komp','waitclients'
+			act 'Further':gt 'Komp','waitclients'
 		end
 		act 'In the ass':
 			cls
@@ -85,7 +85,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 				   			'Brushing with saliva the anus, you turn the vibrator on and slowly, gently stick it up your ass.'
 				   			'A little Patrakov yourself, you lay it aside, noticing, the tokens for this you have translated.'
 				   		end
-				   		act'Further':gt'Komp','waitclients'
+				   		act 'Further':gt 'Komp','waitclients'
 				   	end
 				end
 				if dildo = 1:
@@ -125,7 +125,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 				   			'Brushing with saliva the anus, you take a small Dildo and slowly shoves it up your ass.'
 				   			'A little podvigov them in the ass, you lay it aside, noticing, the tokens for this you have translated.'
 				   		end
-				   		act'Further':gt'Komp','waitclients'
+				   		act 'Further':gt 'Komp','waitclients'
 				   	end
 				end
 				if middildo = 1:
@@ -166,7 +166,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 								'You take a small Dildo, put it on the floor and liberally lubricated with saliva the anus, begin gently to sit down on it.'
 								'A little Polozov their anus, you finally lay it to the side, noticing, the tokens for this you have translated.'
 							end
-							act'Further':gt'Komp','waitclients'
+							act 'Further':gt 'Komp','waitclients'
 						end
 					end
 				end
@@ -209,7 +209,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 								'You take a dildo, put it on the floor and liberally lubricated with saliva the anus, begin gently to sit down on it.'
 								'A little Polozov their anus, you finally lay it to the side, noticing, the tokens for this you have translated.'
 							end
-							act'Further':gt'Komp','waitclients'
+							act 'Further':gt 'Komp','waitclients'
 						end
 					end
 				end
@@ -252,7 +252,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 								'You recline and liberally lubricate the anus with saliva, then lift the pelvis slightly and slowly shoves in a Dildo.'
 								'Almost without taking it, you barely-barely moved them in my rectum, after which considered, that the order is executed.'
 							end
-							act'Further':gt'Komp','waitclients'
+							act 'Further':gt 'Komp','waitclients'
 						end
 					end
 				end
@@ -295,7 +295,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 								'You lie down on your back, throw my legs behind my head and lubricate with saliva the anus, after which they start to shove a Dildo up your ass.'
 								'Even with lubrication, you hurt a little, so a couple of minutes you stop.'
 							end
-							act'Further':gt'Komp','waitclients'
+							act 'Further':gt 'Komp','waitclients'
 						end
 					end
 			   	end
@@ -338,7 +338,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 								'You flipped on its side and liberally lubricated with saliva ass, trying to shove her Dildo.'
 								'You can enter only one head, so a little podvigov the tip of the phallus, you can hardly get him.'
 							end
-							act'Further':gt'Komp','waitclients'
+							act 'Further':gt 'Komp','waitclients'
 						end
 					end
 				end
@@ -381,7 +381,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 								'You take your biggest Dildo and put it on the floor, then spit on your fingers and liberally lubricate the anus.'
 								'Are you able to put in only the head of the artificial cock, which immediately dives deep into, forcing a ring of anus frantically to shrink at its base. You tried to go down a bit, but anus so badly tightened around the phallus, what you could do, therefore you a couple of minutes just rocked it from side to side.'
 							end
-							act'Further':gt'Komp','waitclients'
+							act 'Further':gt 'Komp','waitclients'
 						end
 					end
 			   	end
@@ -389,7 +389,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 			act 'Ignore':
 				cls
 				webpopular -= 1
-				gt'Komp','waitclients'
+				gt 'Komp','waitclients'
 			end
 		end
 	elseif vagina > 0:
@@ -438,7 +438,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 					end
 
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			end
 		end
 		if dildo = 1:
@@ -485,7 +485,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 						'Feeling, what excited, you soon stop  - tokens for which you have already received.'
 					end
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			end
 		end
 		if middildo = 1:
@@ -533,7 +533,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 						'A little Patrakov yourself, you soon stop...'
 					end
 		   		end
-		  		act'Further':gt'Komp','waitclients'
+		  		act 'Further':gt 'Komp','waitclients'
 			end
 		end
 		if largedildo = 1:
@@ -581,7 +581,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 						'Your vagina tightly embraces the artificial member, therefore you a couple of minutes gently move them inside...'
 					end
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			end
 		end
 		if bigdildo = 1:
@@ -629,7 +629,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 						'A couple of minutes, your pussy begins to ache, so you decide to stop...'
 					end
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			end
 		end
 		if extradildo = 1:
@@ -678,7 +678,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 							'A couple of minutes you can`t really be seated on it in vagina, while the discomfort from the size is not becomes absolutely unbearable, then stop  ...'
 						end
 					end
-					act'Further':gt'Komp','waitclients'
+					act 'Further':gt 'Komp','waitclients'
 				end
 			end
 		end
@@ -728,7 +728,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 							'A few moments, with his hands against the floor, you move your hips, with each friction feeling, as head rastyagivaet vaginal wall...'
 						end
 					end
-					act'Further':gt'Komp','waitclients'
+					act 'Further':gt 'Komp','waitclients'
 				end
 			end
 		end
@@ -780,7 +780,7 @@ if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 o
 						end
 
 					end
-					act'Further':gt'Komp','waitclients'
+					act 'Further':gt 'Komp','waitclients'
 				end
 			end
 		end
@@ -863,7 +863,7 @@ else
 					'A couple of minutes you felt, what had worked for tokens, Wherefore cease...'
 				end
 			end
-			act'Further':gt'Komp','waitclients'
+			act 'Further':gt 'Komp','waitclients'
 		end
 		act 'Improvised means':
 			cls
@@ -888,11 +888,11 @@ else
 					orgasm += 1
 					horny = 0
 					manna = mannamax
-					'You ate the " handle comb, lubricating it with saliva, then stick it in her ass and start to fuck yourself, and the other hand to pick at her Clit until then, until cumming.'
+					'You ate the handle comb, lubricating it with saliva, then stick it in her ass and start to fuck yourself, and the other hand to pick at her Clit until then, until cumming.'
 				else
 					'A couple of minutes you felt, that quite worked out their tokens, Wherefore cease...'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			elseif anus >= 10 and anus < 15:
 				'<center><img src="images/camwhore/camwhore50.jpg"></center>'
 				'You notice a couple of markers and then decide to use them...'
@@ -904,7 +904,7 @@ else
 				else
 					'Abundantly moistened ass saliva, you are one shove them up your anus, then slowly beginning to fuck them...'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			elseif anus >= 15 and anus < 25:
 				'<center><img src="images/camwhore/camwhore51.jpg"></center>'
 				'Your looking bumps on the remote....'
@@ -916,7 +916,7 @@ else
 				else
 					'A couple of minutes you felt, what had worked for tokens, Wherefore cease...'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			elseif anus >= 25 and anus < 35:
 				'<center><img src="images/camwhore/camwhore52.jpg"></center>'
 				'Fumbling glance around the room you find nothing, but you suddenly strikes and you bring in from the hallway phone...'
@@ -928,7 +928,7 @@ else
 				else
 					'A couple of minutes you felt, what had worked for tokens, Wherefore cease...'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			elseif anus >= 35:
 				'<center><img src="images/camwhore/camwhore53.jpg"></center>'
 				'You charité look around the room and notices hairspray...'
@@ -940,13 +940,13 @@ else
 				else
 					'Your ass is so stretched, what do you, grabbing lacquer, in one fell swoop they are driving it into her ass and begin to furiously masturbate her...'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			end
 		end
 		act 'Ignore':
 			cls
 			webpopular -= 1
-			gt'Komp','waitclients'
+			gt 'Komp','waitclients'
 		end
 	elseif vagina > 0:
 		act 'Do':
@@ -978,7 +978,7 @@ else
 				else
 					'A few minutes Patrakov yourself in the vagina hand, you finally come back from pleasure to reality.'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			elseif vagina >= 25 and anus >= 25:
 				'<center><img src="images/camwhore/camwhore44.jpg"></center>'
 				'You`re taller legs and slowly, under a storm of comments stick in your hand.'
@@ -991,7 +991,7 @@ else
 				else
 					'But soon you come to yourself and remember, doing this not just, and-for the money, so stop...'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			elseif vagina > 15 and vagina < 25:
 				'<center><img src="images/camwhore/camwhore34.jpg"></center>'
 				'You lie down on your back and throw her legs wide, then fuck yourself with two fingers...'
@@ -1003,7 +1003,7 @@ else
 				else
 					'A few minutes after enduring this pace, you finally come back from pleasure to reality.'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			elseif vagina <= 15:
 				'<center><img src="images/camwhore/camwhore35.jpg"></center>'
 				'You roll on your side and high leg toss, then begin to have yourself with one finger.'
@@ -1015,7 +1015,7 @@ else
 				else
 					'In five minutes you finally get tired of this pose, Wherefore cease.'
 				end
-				act'Further':gt'Komp','waitclients'
+				act 'Further':gt 'Komp','waitclients'
 			end
 		end
 	end

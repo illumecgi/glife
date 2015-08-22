@@ -1,6 +1,6 @@
 # Timofei
 minut += 1
-sosedDay = day
+sosedDay = daystart
 gs 'stat'
 '<center><img src="images/qwest/sosed/sosed.jpg"></center>'
 'Timothy shakes ashes in a jar and you nod "Hello."'

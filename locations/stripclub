@@ -12,11 +12,11 @@ if $ARGS[0] = 'start':
 	'<center><img src="images/etogame/stripclub.jpg"></center>'
 	scrand = rand(1, 100)
 
-	if scrand <= 40 and stripday ! day:
-		stripday = day
+	if scrand <= 40 and stripday ! daystart:
+		stripday = daystart
 		cfnm = 1
-	elseif scrand > 40 and stripday ! day:
-		stripday = day
+	elseif scrand > 40 and stripday ! daystart:
+		stripday = daystart
 		cfnm = 0
 	end
 

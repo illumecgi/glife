@@ -769,7 +769,7 @@ $objcheat_menu = {
 	pl ''
 	pl '<a href="exec:health = vital * 10 + stren * 5 + 1000 & willpower = intel * 5 + will * 5 + 1000 & manna = (intel * magik) + magik * 100 + vital * 10 + rikudo & dynamic $objcheat_menu">Complete recovery, manna, reason.</a>'
 	pl '<a href="exec:dynamic $din_cheat_money">Change the amount of money</a>'
-	pl '<a href="exec:money = 0 & dynamic $din_cheat">Zero the money</a>'
+	pl '<a href="exec:money = 0 & dynamic $din_cheat_money">Zero the money</a>'
 
 	pl ''
 	pl '<a href="exec:dynamic $din_cheat_dynamic">Dynamic Input Command</a>'
@@ -965,8 +965,24 @@ $objbloknot = {
 	if bumtolik = 5:pl 'You volunteer to help the homeless service. Office hours 9 prior_to 17, Weekend Saturday and Sunday.' & nl
 
 	if husband > 0 or kid > 0 :'<center><font color="maroon">-- My Family --</font></center>'
-	if husband > 0:pl 'I ve been married for <<husbanday>> days. My husband <<$husName>> <<$husBody>> <<$husFat>> <<$husHair>>. Member <<husDick>> Relationships <<husband>>' & nl
-	if kid > 0:pl 'I have a child <<$kidname[kidDiary]>>, age <<kid[kidDiary]>> days.' & nl
+	if husband > 0:pl 'I''ve been married for <<husbanday>> days. My husband <<$husName>> <<$husBody>> <<$husFat>> <<$husHair>>. Member <<husDick>> Relationships <<husband>>' & nl
+	if kid > 0:
+		i = 1
+		if kid = 1:
+			pl 'I have a child named <<$kidname[i]>>, aged <<kidage[i]>>.'
+		else
+			p 'I have children'
+			:LoopKidCounter
+			if i <= kid:
+				if i > 1: p ','
+				p ' <<$kidname[i]>>, aged <<kidage[i]>>'
+				i += 1
+				jump 'LoopKidCounter'
+			end
+			pl '.'
+		end
+		nl
+	end
 	if $bfsex > 0:pl '<<$bfsex>>'
 	if bfA > 1:pl 'My current boyfriend, <<$boyA>>, is a <<$boybodyA>> <<$boybodA>> <<$boyfaceA>>. He is usually <<$boyCloA>> Our relationship is <<bfA>> and we have met <<dayA>> times.' & nl
 	if harakBoyA = 0 and bfA > 1:pl 'He is calm and self-possessed character.' & nl
@@ -1058,6 +1074,7 @@ $objoldmenu = {
 	addobj 'Tattoos'
 	addobj 'Piercing'
 
+	! WD: Uninitialised ~ 'mobila'
 	if mobila > 0:addobj 'Phone'
 
 	addobj 'Diary'
@@ -1120,6 +1137,7 @@ else
 	$menu_other[5] = 'Disable autosave:$menu_autosave'
 end
 
+! WD: Uninitialised ~ 'mobila'
 if mobila > 0:$menu_other[6] = 'Phone:$menu_mobila'
 
 !!old menu: beginning

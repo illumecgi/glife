@@ -32,6 +32,7 @@ end
 if TV = 0:$TV = 'a great place for a TV, which you don''t have'
 if TV = 1:$TV = 'an ancient <a href="exec:gt ''TV'', ''start''">TV</a>'
 if TV = 2:$TV = 'a huge plasma <a href="exec:gt ''TV'', ''start''">TV</a>'
+! WD: Missing Code to buy / Upgrade Sofa, Uninitialised ~ 'divan'
 if divan = 0:$divan = '<a href="exec:gt ''divan'', ''start''">an old sofa</a>'
 if divan = 1:$divan = 'luxury <a href="exec:gt ''divan'', ''start''">a leather sofa</a>'
 if komp = 0:$komp = ''
@@ -40,6 +41,8 @@ if komp = 1:$komp = 'with a <a href="exec:gt ''Komp'', ''start''">computer</a> o
 if selfPornvidDVD = 0: $selfPornvidDVD = ''
 if selfPornvidDVD > 0: $selfPornvidDVD = 'You have <a href="exec:Dynamic $selfPorno_Take"><<selfPornvidDVD>></a> of your amateur porn videos available.'
 !!!
+
+! WD: Missing Code to buy / Upgrade table, Uninitialised ~ 'stol'
 if stol = 0:$stol = 'decrepit <a href="exec:gt ''stol'', ''start''">table</a>'
 if stol = 1:$stol = 'new <a href="exec:gt ''stol'', ''start''">table</a>'
 if obruch > 0:'<br>A hula hoop stands in corner of the room. '
@@ -53,7 +56,7 @@ if mishka > 0:'On a shelf is <<mishka>> teddy bear'
 sports = 0
 $sportStringPrefix = ''
 
-if obruch > 0 and obruchday ! day:
+if obruch > 0 and obruchday ! daystart:
 	$sitrobr = $sportStringPrefix + ' <a href="exec:dynamic $sitrobrd">twist hoop</a>'
 	sports = 1
 	$sportStringPrefix = ', '
@@ -61,7 +64,7 @@ else
 	$sitrobr = ''
 end
 
-if bookYog > 0 and bookYogday ! day:
+if bookYog > 0 and bookYogday ! daystart:
 	$sitryog = $sportStringPrefix + ' <a href="exec:dynamic $sitryogd">meditation</a>'
 	sports = 1
 	$sportStringPrefix = ', '
@@ -69,7 +72,7 @@ else
 	$sitryog = ''
 end
 
-if skak > 0 and skakday ! day:
+if skak > 0 and skakday ! daystart:
 	$sitrskak = $sportStringPrefix + ' <a href="exec:dynamic $sitrskakd">jumping rope</a>'
 	sports = 1
 	$sportStringPrefix = ', '
@@ -77,7 +80,7 @@ else
 	$sitrskak = ''
 end
 
-if pressday ! day:
+if pressday ! daystart:
 	$sitrpress = $sportStringPrefix + ' <a href="exec:dynamic $sitrpressd">abdominal exercises</a>'
 	sports = 1
 	$sportStringPrefix = ', '
@@ -85,7 +88,7 @@ else
 	$sitrpress = ''
 end
 
-if pushday ! day:
+if pushday ! daystart:
 	$sitrpush = ' <a href="exec:dynamic $sitrpushd">push-ups</a>'
 	sports = 1
 	$sportStringPrefix = ', '
@@ -94,7 +97,7 @@ else
 end
 
 !!!kept, but does not exists in 1.0.5 anymore
-if treadmill > 0 and treadmillday ! day:
+if treadmill > 0 and treadmillday ! daystart:
 	$sitr_tread = $sportStringPrefix + ' <a href="exec:dynamic $sitr_tread_d">treadmill</a>'
 	sports = 1
 	$sportStringPrefix = ', '
@@ -114,7 +117,7 @@ if suhbelo2 > 0:'<br>Lying on the table are <<suhbelo2>> pieces of dried laundry
 !!housegostrand = rand(1, 20)
 !!if husband > 0 and husbandrink ! 10 and week = 5 and hour > 17 and hour < 21 and housegostrand > 15:gt 'sitr', 'guest'
 
-if husband > 0 and husbandrink ! 10 and husbandrinkday ! day:
+if husband > 0 and husbandrink ! 10 and husbandrinkday ! daystart:
 	if week < 6:
 		if hour > 17 and hour <= 22:'<a href="exec:gt ''husb'', ''start''">On the couch sits husband and watching TV.</a>'
 	else

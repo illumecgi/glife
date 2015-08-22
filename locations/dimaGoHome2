@@ -1,14 +1,14 @@
 # dimaGoHome2
 gs 'stat'
 
-if dimaGohomeday = day:
+if dimaGohomeday = daystart:
 	'You come to a beautiful private home and rang the bell. You opened the door to a pretty blonde of about forty years, apparently the mother of Dimka. She looked at you and smiled "Dimka is not at home."'
 
 	act 'Leave':gt 'gorodok'
-elseif dimaGohomeday ! day:
+elseif dimaGohomeday ! daystart:
 	'You come to a beautiful private home and rang the bell. You opened the door to a pretty blonde of about forty years, apparently the mother of Dimka. She looked at you and smiled "You Dimka?" You nodded and mother of Dimka let you in the house.'
 
-	act 'Go into the room Dimka':dimaGohomeday = day & gt 'dimaHome'
+	act 'Go into the room Dimka':dimaGohomeday = daystart & gt 'dimaHome'
 end
 
 --- dimaGoHome2 ---------------------------------

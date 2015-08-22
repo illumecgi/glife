@@ -80,12 +80,12 @@ if hour > 5:
 
 		if SchoolAtestat = 0:
 			if mother >= 80:
-				if motherPayDay = day:
+				if motherPayDay = daystart:
 					'Mother frowned "dochura, I told you already gave the money!"'
 
 				else
 					mother -= 1
-					motherPayDay = day
+					motherPayDay = daystart
 
 					if Suspeh >= 70:
 						if Suspeh < 90:
@@ -108,11 +108,11 @@ if hour > 5:
 					end
 				end
 			elseif mother >= 60 and mother < 80:
-				if motherPayDay = day:
+				if motherPayDay = daystart:
 					'Mother frowned "No docha. I already gave money. Enough for today."'
 				else
 					mother -= 1
-					motherPayDay = day
+					motherPayDay = daystart
 
 					if Suspeh >= 70:
 						if Suspeh < 90:
@@ -135,11 +135,11 @@ if hour > 5:
 					end
 				end
 			elseif mother >= 40 and mother < 60:
-				if motherPayDay = day:
+				if motherPayDay = daystart:
 					'Mother frowned "That thou Velcro. Received nothing!"'
-				elseif motherPayDay ! day:
+				elseif motherPayDay ! daystart:
 					mother -= 1
-					motherPayDay = day
+					motherPayDay = daystart
 
 					if Suspeh >= 70:
 						if Suspeh < 90:
@@ -457,15 +457,15 @@ if motherQW = 1 and mother >= 20 and $loc = 'kuhrPar':
 	end
 end
 
-if alko > 0 and alkomday ! day:
-	alkomday = day
+if alko > 0 and alkomday ! daystart:
+	alkomday = daystart
 	mother -= 1
 	'Mom sniffed "<<$name>> from you smell alcohol, what is this mess? You''re still too young to drink that!"'
 end
 
-if (cumlip > 1 or cumface > 0 or cumfrot > 0) and whoremday ! day:
+if (cumlip > 1 or cumface > 0 or cumfrot > 0) and whoremday ! daystart:
 	cla
-	whoremday = day
+	whoremday = daystart
 	if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
 		mother = 0
 		if motherKnowWhore = 0:motherKnowWhore = 1
@@ -506,7 +506,7 @@ end
 if glamur > 0 and hour > 9:'Mom looked at you, "Why are you so dressed up?"'
 
 if week = 5 and dostupindorf = 1:
-	if hour > 9:'Mom continued to go about their business tells you "<<$nickname>>, tomorrow we will go to the village, at 12 o''clock. If you want us then come to me before 12."'
+	if hour > 9:'Mom continued to go about their business tells you "<<$nickname>>, tomorrow we will go to the village, at 12 c''clock. If you want us then come to me before 12."'
 elseif week = 6 and dostupindorf = 1:
 	if hour > 9 and hour < 12:
 		'Mom asks you "<<$nickname>>, well? Come with us to the village?"'

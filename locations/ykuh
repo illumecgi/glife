@@ -133,14 +133,14 @@ act 'Drink':
 	act 'Get up from the table':gt $curloc
 end
 
-if husband > 0 and husbanday > 0 and huseatday ! day and eda >= 2:
+if husband > 0 and husbanday > 0 and huseatday ! daystart and eda >= 2:
 	act 'Cook a meal for your husband, 2 servings (1:00)':
 		cla
 		*clr
 		husband += 5
 		eda -= 2
 		minut += 60
-		huseatday = day
+		huseatday = daystart
 		manna -= 25
 		'<center><img src="images/pics/cook.jpg"></center>'
 		'You cooked some food for your husband.'
@@ -152,12 +152,12 @@ end
 if lekarstvo > 0:
 	'You have <<lekarstvo>> tablets.'
 
-	if sick > 0 and lekarday ! day:
+	if sick > 0 and lekarday ! daystart:
 		act 'Take a pill':
 			cla
 			*clr
 			minut += 5
-			lekarday = day
+			lekarday = daystart
 			lekarstvo -= 1
 			sick -= sick * 20 / 100
 			lekrand = rand(1, 9)
@@ -172,12 +172,12 @@ end
 if vitamin > 0:
 	'You have <<vitamin>> vitamins.'
 
-	if vitaminday ! day:
+	if vitaminday ! daystart:
 		act 'Take some vitamins':
 			cla
 			*clr
 			minut += 5
-			vitaminday = day
+			vitaminday = daystart
 			vitamin -= 1
 			frost = 0
 

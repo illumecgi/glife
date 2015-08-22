@@ -1,10 +1,8 @@
 # $menu_automatica
-! WD: Location never called
-
-! WD: Missing location
+! WD: Location never called, Missing location ~ 'automatics', Unused ~ '$automatica'
+!{
 gs 'automatics'
-! WD: Vars never Initialised ~ '$automatica'
 dynamic $automatica
-
+}
 --- $menu_automatica ---------------------------------
 

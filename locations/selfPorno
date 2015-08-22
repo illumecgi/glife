@@ -155,7 +155,7 @@ $selfPorno_Dog = {
 $selfPorno_Finish = {
 	clr
 	gs 'stat'
-	webcamday = day
+	webcamday = daystart
 
 	if selfPornVidTime >= 0 and selfPornVidTime < 20:
 		selfPornVidMoney = selfPornVar * 50 * videoOrgasm
@@ -200,7 +200,7 @@ $selfPorno_Finish = {
 $selfPorno_Disk = {
 	clr
 	gs 'stat'
-	webcamday = day
+	webcamday = daystart
 	DVDDisk -= 1
 	selfPornvidDVD += 1
 	minut += 10

@@ -5,7 +5,7 @@ gs 'stat'
 'Swain barely older than you, do you know him from childhood and children together while still bathed in the river.'
 
 if mitkaday = daystart:
-	'Mr. Cho <<$name>>, come in at eight o''clock, buhnem brew, popizdim for life.'
+	'Mr. Cho <<$name>>, come in at eight c''clock, buhnem brew, popizdim for life.'
 elseif mitkaday!daystart:
 	mitkaday = daystart
 	'Hello <<$name>>. How zhituha?'
@@ -15,7 +15,7 @@ elseif mitkaday!daystart:
 		gs 'stat'
 		'<center><b><font color="maroon">Mitka kingpin</font></b></center>'
 		'<center><img src="images/qwest/alter/npc/mitka.jpg"></center>'
-		'You said that you are all well and Mitka smiled offered "Mr. Cho <<$name>>, come in at eight o''clock, buhnem brew, popizdim for life."'
+		'You said that you are all well and Mitka smiled offered "Mr. Cho <<$name>>, come in at eight c''clock, buhnem brew, popizdim for life."'
 
 		if mitkasextimes > 0:
 			'Mitka scratched eggs and added with a grin "Svetuh, Let us go now poebemsya, and that the riser fucking."'

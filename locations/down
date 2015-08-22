@@ -69,7 +69,7 @@ end
 
 gs 'taxi'
 
-if tanya > 0 and tanwork = 0 and hour >= 16 and hour <= 21 and tanday ! day:'<a href="exec:gt ''tanhouse''">Apartment of Thani</a>'
+if tanya > 0 and tanwork = 0 and hour >= 16 and hour <= 21 and tanday ! daystart:'<a href="exec:gt ''tanhouse''">Apartment of Thani</a>'
 if tanwork = 1:'<a href="exec:gt ''house''">Thanis</a> apartment'
 if izoldaQW >= 1:'<a href="exec:gt ''qwIzoldaApp''">Isoldes</a> apartment'
 if mainQW >= 1:'<a href="exec:gt ''lab'', ''start''">Karinas</a> secret hideout'

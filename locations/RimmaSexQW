@@ -1,7 +1,7 @@
 # RimmaSexQW
 cls
 minut += 15
-rimmaday = day
+rimmaday = daystart
 gs 'stat'
 'You came to Rimma that you smiled affably. And she said, I''ll end up, can go to you?'
 

@@ -117,12 +117,12 @@ if $ARGS[0] = 'start':
 				act 'Leave':gt 'poli', 'start'
 			end
 
-			if GerpesNapr > 0 and GerpesUkolDay ! day:
+			if GerpesNapr > 0 and GerpesUkolDay ! daystart:
 				act 'Go for shots of herpes (1,000 rubles). Remaining <<GerpesNapr>> in the direction of injection':
 					cls
 					money -= 1000
 					minut += 60
-					GerpesUkolDay = day
+					GerpesUkolDay = daystart
 					GerpesNapr -= 1
 					gs 'stat'
 					'You made a very painful injection in the ass.'
@@ -134,12 +134,12 @@ if $ARGS[0] = 'start':
 			end
 		end
 
-		if TriperNapr > 0 and money >= 1500 and TriperUkolDay ! day:
+		if TriperNapr > 0 and money >= 1500 and TriperUkolDay ! daystart:
 			act 'Go for shots of gonorrhea (1,500 rubles). Remaining <<TriperNapr>> in the direction of injection':
 				cls
 				money -= 1500
 				minut += 60
-				TriperUkolDay = day
+				TriperUkolDay = daystart
 				TriperNapr -= 1
 				gs 'stat'
 				'You made a very painful injection in the ass.'
@@ -150,12 +150,12 @@ if $ARGS[0] = 'start':
 			end
 		end
 
-		if money >= 5000 and SifNapr > 0 and SifUkolDay ! day:
+		if money >= 5000 and SifNapr > 0 and SifUkolDay ! daystart:
 			act 'Go to injections of syphilis (5,000 rubles). Remaining <<SifNapr>> in the direction of injection':
 				cls
 				money -= 5000
 				minut += 60
-				SifUkolDay = day
+				SifUkolDay = daystart
 				SifNapr -= 1
 				gs 'stat'
 				'You made a very painful injection in the ass.'
@@ -277,12 +277,12 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if sick > 0 and polisickday ! day:
+	if sick > 0 and polisickday ! daystart:
 		if ninelsex = 0:
 			act 'See a Doctor':
 				cla
 				*clr
-				polisickday = day
+				polisickday = daystart
 				terrnd = rand(0, 1)
 
 				if terrnd = 0:gt 'poli', 'drPP'
@@ -292,16 +292,16 @@ if $ARGS[0] = 'start':
 			act 'See Dr. Ninel':
 				cla
 				*clr
-				polisickday = day
+				polisickday = daystart
 				gt 'poli', 'ninel2'
 			end
 		end
 	end
-	if sick <= 0 and horny >= 90 and ninelsex >= 1 and ninelday ! day:
+	if sick <= 0 and horny >= 90 and ninelsex >= 1 and ninelday ! daystart:
 		act 'Search for Dr Ninel':
 			cla
 			*clr
-			ninelday = day
+			ninelday = daystart
 			ninelrand = rand(0, 2)
 
 			if ninelrand = 0:
@@ -366,12 +366,12 @@ if $ARGS[0] = 'start':
 				'The doctor examined your anus and said "oh my God! You need to be careful with his booty obraschatsya, you have the same here now fall intestine. I would rekkomendoval procedures, 1,000 rubles per session, This will help decrease the anus to normal size."'
 			end
 
-			if money >= 1000 and anus > 15 and proktologday ! day:
+			if money >= 1000 and anus > 15 and proktologday ! daystart:
 				act 'Checkout procedure':
 					cls
 					money -= 1000
 					minut += 60
-					proktologday = day
+					proktologday = daystart
 					anus -= 5
 					gs 'stat'
 					'<center><img src="images/body/<<anpic>>.jpg"></center>'
@@ -875,7 +875,8 @@ if $ARGS[0] = 'glavdoc':
 	'"Work will be on weekdays, come with 8 to 9 hours, and come out on the shift will work up to 16 hours. Do not come to you this day will not be counted in the salary. Salary paid on 25th, the spent per shift - 1000 rubles. "'
 	'"Labor should hand over to the personnel department. You understand, will work?"'
 
-	if (work = 0 and workshop = 0 and cheatWork = 0) or (workshop = 0 and cheatWork = 1):
+	! WD: Uninitialised ~ 'workshop' use 'workhosp' 
+	if (work = 0 and workhosp = 0 and cheatWork = 0) or (workhosp = 0 and cheatWork = 1):
 		act 'Find a job':
 			cla
 			workhosp = 1

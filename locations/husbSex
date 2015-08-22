@@ -192,8 +192,9 @@ if $ARGS[0] = 'variant':
 	act 'Give blowjob':gt 'husbsex', 'minet'
 	act 'Masturbate him':gt 'husbsex', 'hand'
 
-	if kundayH ! day:
-		act 'Cooney':gt 'husbsex', 'kuni'
+	! WD: Uninitialised ~ 'kundayH'
+	if kundayH ! daystart:
+		act 'Cooney': kundayH = daystart & gt 'husbsex', 'kuni'
 	end
 
 	if DOM > 0 and harakHusb = 0 and izvratH = 1 and strapon > 0:
@@ -269,7 +270,7 @@ end
 
 if $ARGS[0] = 'kuni':
 	*clr
-	kunday = day
+	kunday = daystart
 	gs 'brosok'
 	DOM += 1
 	kuni += 1
@@ -389,10 +390,10 @@ if $ARGS[0] = 'anal':
 
 	'Finally <<$husName>> grabbed you tight ass and drove for your aching ass dick up to the finished balls inside you.'
 
-	if klismaday ! day:
+	if klismaday ! daystart:
 		husband -= 1
 		'<<$husName>> took out a member of your ass and see on your dick shit said, "Damn. <<$name>> my ass before sex."'
-	elseif klismaday = day:
+	elseif klismaday = daystart:
 		husband += 5
 		'<<$husName>> took out a member of you and kissed you went to the bathroom.'
 	end

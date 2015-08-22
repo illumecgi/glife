@@ -8,13 +8,13 @@ gs 'stat'
 act 'Leave':gt 'clener', 'start'
 
 if svQW = 2:
-	if TorgPredDay ! day:
+	if TorgPredDay ! daystart:
 		if TorgPredZ = 0 and TorgPredZV = 0:
 			act 'Take the job':
 				cls
 				TorgPredZ = 3
 				minut += 5
-				TorgPredDay = day
+				TorgPredDay = daystart
 				gs 'stat'
 				'<center><img src="images/etogame/clener.jpg"></center>'
 				'You came to Stas for the job. He smiled and handed you the paper. "Do not forget. Supermarkets three pieces. You need to arrange the items in all the supermarkets."'

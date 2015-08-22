@@ -69,14 +69,14 @@ if sobaka = 1:'Your dog, <a href="exec:gt ''soba'', ''start''"><<$namesob>></a>,
 if krolik = 1:'Resting on the floor your rabbit <a href="exec:gt ''krol'', ''start''"><<$namekrol>></a>.'
 if popugai = 1:'In the cage sits your parrot <a href="exec:gt ''popu'', ''start''"><<$namepopu>></a>.'
 
-if parkday ! day and parkblackmail = 1:
+if parkday ! daystart and parkblackmail = 1:
 	parkblackmail = 2
-	parkday = day
+	parkday = daystart
 	'A heavy envelope has arrived in the mail. When you open it you can see pictures in it. Damn, it''s pictures of you where you are giving blowjobs to two guys in the park.'
 	'Small note says:'
 	'If you do not want to have these pictures posted on your porch and sent to your work, come to this address (address listed is a Studio)'
 	'PS, if you do not come today, these pictures will be hanging in your entryway tomorrow.'
-elseif parkday ! day and parkblackmail = 2:
+elseif parkday ! daystart and parkblackmail = 2:
 	parkblackmail = 0
 	fotoyousuck = 1
 	'Damn, your photos with sperm on your face and two dicks in your mouth are plastered around porch.'
@@ -85,40 +85,40 @@ end
 if bfA < 0:
 	bfA = 0
 	'<b><font color="red">Your boyfriend <<$boyA>> does not call you, he probably dumped you.</font></b>'
-elseif bfA > 1 and boydayA ! day and hour >= 5 and hour < 20 and vnesh >= vneshBoyA:
+elseif bfA > 1 and boydayA ! daystart and hour >= 5 and hour < 20 and vnesh >= vneshBoyA:
 	ring = 1
 	ringA = 1
 	'<b><font color="red">The phone is ringing</font></b>'
-elseif bfA > 1 and boydayA ! day and hour >= 5 and hour < 20 and vnesh < vneshBoyA:
+elseif bfA > 1 and boydayA ! daystart and hour >= 5 and hour < 20 and vnesh < vneshBoyA:
 	bfA = 0
 	'<b><font color="red">Your guy does not call you, apparently he threw you.</font></b>'
 end
 
-if bfB > 1 and boydayB ! day and hour >= 5 and hour < 20 and vnesh >= vneshBoyB:
+if bfB > 1 and boydayB ! daystart and hour >= 5 and hour < 20 and vnesh >= vneshBoyB:
 	ring = 1
 	ringB = 1
 	'<b><font color="red">The phone is ringing</font></b>'
-elseif bfB > 1 and boydayB ! day and hour >= 5 and hour < 20 and vnesh < vneshBoyB:
+elseif bfB > 1 and boydayB ! daystart and hour >= 5 and hour < 20 and vnesh < vneshBoyB:
 	bfB = 0
 	'<b><font color="red">Your boyfriend <<$boyB>> does not call you, he probably dumped you.</font></b>'
 end
 
-if bfC > 1 and boydayC ! day and hour >= 5 and hour < 20 and vnesh >= vneshBoyC:
+if bfC > 1 and boydayC ! daystart and hour >= 5 and hour < 20 and vnesh >= vneshBoyC:
 	ring = 1
 	ringC = 1
 	'<b><font color="red">The phone is ringing</font></b>'
-elseif bfC > 1 and boydayC ! day and hour >= 5 and hour < 20 and vnesh < vneshBoyC:
+elseif bfC > 1 and boydayC ! daystart and hour >= 5 and hour < 20 and vnesh < vneshBoyC:
 	bfC = 0
 	'<b><font color="red">Your boyfriend <<$boyC>> does not call you, he probably dumped you.</font></b>'
 end
 
-if vladimirday ! day and vladimirQW = 20 and hour >= 15 and hour <= 17:'<a href="exec:gt ''qwloc2''"><font color="red"><b>The phone is ringing</b></font></a>.'
-if vladimirday ! day and vladimirQW = 25 and hour >= 15 and hour <= 17 and week = 6:'<a href="exec:gt ''qwloc3''"><font color="red"><b>The phone is ringing</b></font></a>.'
-if vladimirday ! day and vladimirQW = 35 and hour >= 15 and hour <= 17 and week = 6:'<a href="exec:gt ''qwloc4''"><font color="red"><b>The phone is ringing</b></font></a>.'
-if QWdogreiqTimer = 0 and QWdogReiq = 2 and week = 7 and qwdogiventday ! day and hour >= 12:'<a href="exec:gt ''qwlocdog''"><font color="red"><b>The phone is ringing</b></font></a>.'
+if vladimirday ! daystart and vladimirQW = 20 and hour >= 15 and hour <= 17:'<a href="exec:gt ''qwloc2''"><font color="red"><b>The phone is ringing</b></font></a>.'
+if vladimirday ! daystart and vladimirQW = 25 and hour >= 15 and hour <= 17 and week = 6:'<a href="exec:gt ''qwloc3''"><font color="red"><b>The phone is ringing</b></font></a>.'
+if vladimirday ! daystart and vladimirQW = 35 and hour >= 15 and hour <= 17 and week = 6:'<a href="exec:gt ''qwloc4''"><font color="red"><b>The phone is ringing</b></font></a>.'
+if QWdogreiqTimer = 0 and QWdogReiq = 2 and week = 7 and qwdogiventday ! daystart and hour >= 12:'<a href="exec:gt ''qwlocdog''"><font color="red"><b>The phone is ringing</b></font></a>.'
 
 if bfA = 1 or bfB = 1 or bfC = 1:
-	if bfA = 1 and boydayA ! day and hour > 5 and hour < 20 and ringA = 0:
+	if bfA = 1 and boydayA ! daystart and hour > 5 and hour < 20 and ringA = 0:
 		if bfb = 1:bfb = 0
 		if bfc = 1:bfc = 0
 
@@ -132,7 +132,7 @@ if bfA = 1 or bfB = 1 or bfC = 1:
 		end
 	end
 
-	if bfB = 1 and boydayB ! day and hour > 5 and hour < 20 and ringB = 0:
+	if bfB = 1 and boydayB ! daystart and hour > 5 and hour < 20 and ringB = 0:
 		if bfa = 1:bfa = 0
 		if bfc = 1:bfc = 0
 
@@ -146,7 +146,7 @@ if bfA = 1 or bfB = 1 or bfC = 1:
 		end
 	end
 
-	if bfC = 1 and boydayC ! day and hour > 5 and hour < 20 and ringC = 0:
+	if bfC = 1 and boydayC ! daystart and hour > 5 and hour < 20 and ringC = 0:
 		if bfa = 1:bfa = 0
 		if bfb = 1:bfb = 0
 
@@ -246,7 +246,7 @@ if IvanPodstavaQW = 3 and hour >= 9 and hour <= 20:
 	exit
 end
 
-if IvanPodstavaDay ! day and IvanPodstavaQW = 1 and hour >= 8 and hour <= 20:
+if IvanPodstavaDay ! daystart and IvanPodstavaQW = 1 and hour >= 8 and hour <= 20:
 	'<b><font color="red">The doorbell rings</font></b>'
 
 	act 'Come to the door':
@@ -293,13 +293,13 @@ end
 
 if gopstop > 30:gt 'police', '1'
 
-if sick > 0 and doktorday ! day:
+if sick > 0 and doktorday ! daystart:
 	!'
 	act 'Call a doctor':
 		cla
 		*clr
 		minut += 15
-		doktorday = day
+		doktorday = daystart
 		sick -= 5
 
 		if sick < 1:sick = 1
@@ -311,7 +311,7 @@ if sick > 0 and doktorday ! day:
 	end
 	'!
 
-	act 'Call a doctor':doktorday = day & dynamic $polidin
+	act 'Call a doctor':doktorday = daystart & dynamic $polidin
 end
 
 $ninel0 = {
@@ -623,10 +623,11 @@ $polidin = {
 						minut += timerand * 30
 						'You are lying in bed, shivering in the chill and wrapped in a blanket. Time passes excruciatingly slow - you can not tell how much time passed before the doorbell rang.'
 
+						! WD: Uninitialised ~ 'ninel' use 'ninelmet'
 						act 'Answer the door':
-							if ninel > 0 and sick <= 50:
+							if ninelmet > 0 and sick <= 50:
 								gt 'housecall', 'ninel1'
-							elseif ninel = 0 or sick > 50:
+							elseif ninelmet = 0 or sick > 50:
 								doctrnd = rand(0, 1)
 
 								if doctrnd = 0:dynamic $drPP

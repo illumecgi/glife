@@ -23,7 +23,7 @@ $bobka_inject = {
 
 		if narkoman ! 0:$tempval = ' with trembling hands'
 
-		! WD: Vars never Initialised ~ '$tempname' USE '$boy'
+		! WD: Uninitialised ~ '$tempname' USE '$boy'
 		'You grabbed the syringe and injected yourself<<$tempval>>. While <<$boy>> was looking at you with a smile.'
 
 		if HaveMetBobka = 0:'"By the way I''m Bobka, and you are?" You mumbled "<<$name>>."' & HaveMetBobka = 1
@@ -84,7 +84,7 @@ elseif bobrand = 2:
 		'<center><img src="images/qwest/sosed/anal.jpg"></center>'
 		dynamic $sexstart
 		dynamic $analsex
-		! WD: Vars never Initialised ~ '$tempname' USE '$boy'
+		! WD: Uninitialised ~ '$tempname' USE '$boy'
 		'Finally <<$boy>> stops and you feel like your ass filling with warm sperm.'
 		'He threw you a syringe.'
 		dynamic $bobka_inject

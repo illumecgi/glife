@@ -59,7 +59,8 @@ elseif encounter = 6:
 	!!in the square of the familiar class
 end
 
-if dickfrend > 0:ver_zn = 0
+! WD: Uninitialised ~ 'dickfrend' use 'dick'
+if dick > 0:ver_zn = 0
 
 gs 'placer_man'
 
@@ -69,13 +70,16 @@ if hour >= 22 or hour < 8:'<center><img src="images/gevent/skver.jpg"></center>'
 if Frend_num > 0:
 	'together with <<$ev_name_om>> you have come to a quiet garden square. <<$textEvent>>'
 
-	if dickfrend > 0:
+	! WD: Uninitialised ~ 'dickfrend' use 'dick'
+	if dick > 0:
 		!!your friend guy
 		if kol_man = 1 and $text_znak = '':$kol_man_text_no = 'After the guy looked at you, he turned away.'
 		if kol_man > 1 and $text_znak = '':$kol_man_text_no = 'Once you guys are inspected, they turned their backs.'
 		if kol_man > 0:'You looked <<$kol_man_prefiks>> appreciatively <<$kol_man_text>>. <<$kol_man_text_no>>.'+$text_znak
 		!!action with a guy whom came to the square
-	elseif dickfrend = 0:
+
+	! WD: Uninitialised ~ 'dickfrend' use 'dick'
+	elseif dick = 0:
 		!!your friend girl
 		if ver_zn = 1:
 			'At you with his girlfriend looked <<$kol_man_prefiks>> appreciatively <<$kol_man_text>>.'

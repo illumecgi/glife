@@ -7,7 +7,7 @@ $loc = $CURLOC
 if $ARGS[0] = 'Hos':
 	cls
 	minut += 10
-	lesbiday = day
+	lesbiday = daystart
 	BDSMClub = 1
 	alko += 2
 	gs 'stat'

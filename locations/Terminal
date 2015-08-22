@@ -18,7 +18,7 @@ act 'Leave':
 	gt 'nord'
 end
 
-if TerminalPapper = 1 and DayTerminalPapper = day:
+if TerminalPapper = 1 and DayTerminalPapper = daystart:
 	act 'Classified documents':
 		cls
 		minut += 15
@@ -40,6 +40,7 @@ if money >= 100:
 		gs 'stat'
 		'You went to the office and spoke with the manager about buying small things.'
 
+		! WD: Uninitialised ~ 'tovarskladlevel' allways true
 		if tovarskladlevel = 0:
 			if tovarL >= 30:
 				'Thinking a bit you realize, you just have nowhere to store the goods and decide to unsubscribe from the purchase.'
@@ -77,6 +78,7 @@ if money >= 100:
 			gs 'stat'
 			'You went to the office and spoke with the manager about buying small things.'
 
+			! WD: Uninitialised ~ 'tovarskladlevel' allways true
 			if tovarskladlevel = 0:
 				if GarTorgItem >= 100:
 					'Thinking a bit you realize, you just have nowhere to store the goods and decide to unsubscribe from the purchase.'

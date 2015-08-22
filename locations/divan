@@ -1,5 +1,6 @@
 # divan
-if $ARGS[0] = 'start':
+! WD: Reading book code cant use argument
+if $ARGS[0] = 'start' or $ARGS[0] = '':
 	$divmastr = {
 		cls
 
@@ -43,6 +44,9 @@ if $ARGS[0] = 'start':
 		end
 	end
 
+
+	! WD: Uninitialised ~ 'book'
+	!{
 	if book > 0:
 		act 'Read a book (0:30)':
 			cla
@@ -55,6 +59,13 @@ if $ARGS[0] = 'start':
 			act 'Put the book':gt 'divan', 'start'
 		end
 	end
+	}
+	! WD: Use read book code
+	if f_book <= 0 and fantasybook <= 0 and w_book = 0 and womanbook = 0:
+		#loc = 'divan'
+		dynamic '$d_read_book'
+	end
+
 
 	if horny >= 75:
 		act 'Masturbate (0:15)':dynamic $divmastr

@@ -4,7 +4,7 @@ $dintaniastart = {
 		act 'Molest':
 			cla
 			*clr
-			tanday = day
+			tanday = daystart
 			gs 'stat'
 
 			'<center><img src="images/img/centr/razd1.jpg"></center>'

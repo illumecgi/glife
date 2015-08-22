@@ -20,12 +20,14 @@ $portmirror = {
 
 	*pl $makeUpString
 
+	! WD: Cheat Unused ~ 'AutoHapri'
 	if hapri = 0 and AutoHapri = 1:
 		minut += 3
 		hapri = 1
 		'You brush your hair'
 	end
 
+	! WD: Cheat Unused ~ 'AutoMakeup'
 	if mop = 1 and kosmetica > 0 and AutoMakeup = 1:
 		mop = AutoMakeupType
 		if kosmetica < 3 and mop = 4:mop = 3
@@ -55,6 +57,7 @@ $portmirror = {
 		end
 	end
 
+	! WD: Cheat Unused ~ 'AutoLipBalm'
 	if lipbalm > 0 and lipbalmstat <= 0 and AutoLipBalm = 1:
 		minut -= 10
 		lipbalm -= 1

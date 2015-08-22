@@ -11,7 +11,7 @@ end
 
 act 'Go to the main beach':gt 'lake', 'start'
 
-if katday ! day and kat >= 1:
+if katday ! daystart and kat >= 1:
 	'You see at the beach Cat.'
 
 	act 'Approach the Cat':gt 'Katlake', 'kat'
@@ -60,7 +60,7 @@ if $ARGS[0] = 'zagarat':
 	nzagrand = rand(0, 100)
 
 	if nzagrand >= 60 and nzagrand < 70 and kat > 30 and katkey = 0:gt 'Katlake', 'key'
-	if nzagrand >= 70 and nzagrand < 80 and kat = 0 and katday ! day:gt 'Katlake'
+	if nzagrand >= 70 and nzagrand < 80 and kat = 0 and katday ! daystart:gt 'Katlake'
 	if nzagrand >= 80 and nzagrand < 90:gt 'Vnlake1'
 	if nzagrand >= 90:gt 'Vnlake2'
 

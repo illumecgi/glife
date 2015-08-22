@@ -212,7 +212,7 @@ if $ARGS[0] = 'manager':
 		if hour = 11:'Do not be late, my patience is not eternal, strictly tells you Peter. Vividly honey inspection.'
 		if hour = 12:'What the dick? There''s only one waiting for you. Hurry honey inspection.'
 
-		pfilmday = day
+		pfilmday = daystart
 		act 'Go for medical check-up':
 			cla
 			*clr
@@ -836,7 +836,7 @@ if $ARGS[0] = 'manager':
 	end
 
 	if pfilm > 0 and hour > 12:
-		pfilmday = day
+		pfilmday = daystart
 		'I told you not to be late? Said. Get out of here, I''m out for you a lot of money lost. Actors paid assistants, operator, doctor, and because of you slut, shooting all failed.'
 		'Either you come tomorrow and work for free, or get out and I know you do not want.'
 
@@ -1017,12 +1017,13 @@ if $ARGS[0] = '2':
 	$loc = $CURLOC
 
 	clr
-	carraf = RAND(10,250)
+	! WD: Fix Uninitialised ~ 'carrf' to 'carrar'
+	carrar = RAND(10, 25)
 	gs 'stat'
 
 	'<center><img src="images/studia/casting_<<rand(1,6)>>.jpg"></center>'
 
-	'You spent eight o`clock undressing in front of the casting director, and taking various poses.'
+	'You spent eight hours undressing in front of the casting director, and taking various poses.'
 
 	minut = minut+120
 	gs 'stat'

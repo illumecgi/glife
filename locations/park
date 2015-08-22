@@ -115,11 +115,11 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if sport > 0 and parkrunday ! day:
+	if sport > 0 and parkrunday ! daystart:
 		act 'Jog through the park (1:00)':
 			cla
 			*clr
-			parkrunday = day
+			parkrunday = daystart
 			minut += 30
 			manna -= 10
 			willpower -= 10

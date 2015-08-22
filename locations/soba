@@ -7,7 +7,7 @@ if $ARGS[0] = 'start':
 	gs 'stat'
 	'<center><img src="images/zoo/dog2.jpg"></center>'
 
-	if zoo >= 3 and zoodogonceday ! day:zoodogonceday = day & gt 'soba', 'hardcoredog'
+	if zoo >= 3 and zoodogonceday ! daystart:zoodogonceday = daystart & gt 'soba', 'hardcoredog'
 	if horny >= 50 and vagina > 0 and husband = 0:act 'Play with <<$namesob>>th':gt 'soba', 'gamedog'
 	if husband > 0 and week < 6 and hour < 17 and hour > 7:act 'Play with <<$namesob>>th':gt 'soba', 'gamedog'
 
@@ -20,7 +20,7 @@ if $ARGS[0] = 'start':
 
 		act 'The house':gt 'korr'
 
-		if horny >= 70 and zoo > 0 and streetdogday ! day:act 'Coitus':dynamic $polactdog
+		if horny >= 70 and zoo > 0 and streetdogday ! daystart:act 'Coitus':dynamic $polactdog
 	end
 
 	act 'Leave':gt 'korr'

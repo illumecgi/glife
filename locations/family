@@ -1,6 +1,6 @@
 # family
-if day ! m_day:
-	m_day = day
+if daystart ! m_day:
+	m_day = daystart
 	father_go = rand(0, 1)
 	mother_go = rand(0, 1)
 end

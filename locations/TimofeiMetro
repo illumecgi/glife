@@ -1,6 +1,6 @@
 # TimofeiMetro
 minut += 1
-sosedMetroDay = day
+sosedMetroDay = daystart
 gs 'stat'
 ! Missing Image
 !!'<center><img src="images/qwest/sosed.jpg"></center>'

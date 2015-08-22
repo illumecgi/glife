@@ -24,11 +24,11 @@ lcolor = rgb(106, 90, 205)
 '<center><img src="images/etogame/kom_gor.jpg"></center>'
 'Your room in a hostel. The room is small, there is only the minimum necessary. 2 sleepers, <a href="exec:gt ''gor_mirror'', ''start''">mirror</a>, <a href="exec:gt ''gor_exh'', ''pos1''">hanger</a>, <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cupboard</a> for things and a small TV.'
 
-if cloth_vid = 2 and teachlevel > 20 and parkrunday ! day and hour < 21 and hour > 6:
+if cloth_vid = 2 and teachlevel > 20 and parkrunday ! daystart and hour < 21 and hour > 6:
 	act 'Jogging on the Square (1:00)':
 		cla
 		*clr
-		parkrunday = day
+		parkrunday = daystart
 		minut += 30
 		manna += 10
 		willpower -= 10

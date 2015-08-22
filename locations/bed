@@ -7,7 +7,7 @@ if $ARGS[0] = 'start':
 	housevorrand = rand(0, 200)
 	gs 'stat'
 
-	if hour > 22 and houserabrand < 2 and houserab = 1 and houserabday ! day and son < 10 and tanhouse1 = 1:gt 'bed', 'rab'
+	if hour > 22 and houserabrand < 2 and houserab = 1 and houserabday ! daystart and son < 10 and tanhouse1 = 1:gt 'bed', 'rab'
 	if hour > 22 and housevorrand = 0 and housrA = 1 and husband = 0:gt 'bed', 'vor'
 
 	if $clothingworntype = 'nude':
@@ -184,7 +184,7 @@ if $ARGS[0] = 'start':
 	act 'Get out of bed':gt 'bed', 'fin'
 	act 'Try to sleep':gt 'bed2', 'dosip'
 
-	if zoo > 6 and housrA = 1 and dogday ! day and houserabrand < 4:gt 'bed1', 'sog1'
+	if zoo > 6 and housrA = 1 and dogday ! daystart and houserabrand < 4:gt 'bed1', 'sog1'
 end
 
 if $ARGS[0] = 'fin':
@@ -220,7 +220,7 @@ if $ARGS[0] = 'rab':
 	cla
 	*clr
 	minut += 120
-	houserabday = day
+	houserabday = daystart
 	'<center><img src="images/img/th/r0.jpg"></center>'
 	'Once you get into bed as you mistress comes into the room, "What a bitch sleep going?" she said from the doorway.'
 	'"Yes, " you reply.'

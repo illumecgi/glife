@@ -32,12 +32,12 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if abonement > 0 and fitday ! day:
+	if abonement > 0 and fitday ! daystart:
 		act 'Walk in dressing room':
 			cla
 			frost = 0
 			abonement -= 1
-			fitday = day
+			fitday = daystart
 			razdtumbler = 1
 			gt 'fit', 'dressing room'
 		end
@@ -59,8 +59,10 @@ if $ARGS[0] = 'dressing room':
 	'Recruited girls section races, the winners of the competition receive cash prizes.'
 	'Attention, visit the sports section razreshaetsya only with tracksuits.'
 
-	if razdrand = 0 and tanznak = 0 and tanday ! day:
-		tanday = day
+	! WD: Uninitialised ~ 'razdrand'
+	! if razdrand = 0 and tanznak = 0 and tanday ! daystart:
+	if tanznak = 0 and tanday ! daystart:
+		tanday = daystart
 		'In the locker room you notice <a href="exec:gt ''fitgirl''">cute girl</a>.'
 	elseif tanznak = 2:
 		cls
@@ -160,7 +162,7 @@ if $ARGS[0] = 'fitgirl':
 			act 'Molest':
 				cla
 				*clr
-				tanday = day
+				tanday = daystart
 				gs 'stat'
 				'<center><img src="images/img/centr/razd1.jpg"></center>'
 				'You walk up to a girl and vskhvativ one hand on the buttock deploy to face you.'

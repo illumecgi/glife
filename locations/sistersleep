@@ -32,7 +32,7 @@ if sisboyQW >= 8 and sisterLesb = 0 and horny >= 50:
 		minut += 1
 		horny += 5
 		sisterLesb = 1
-		sisprynight = day
+		sisprynight = daystart
 		gs 'stat'
 
 		'<center><img src="images/qwest/alter/sisterQW/sisboyQW_16.jpg"></center>'
@@ -43,12 +43,12 @@ if sisboyQW >= 8 and sisterLesb = 0 and horny >= 50:
 		act 'Fondle yourself':dynamic $sisboyQW_prycaress
 		act 'Move away':gt 'bedrPar'
 	end
-elseif sisterLesb = 1 and horny >= 60 and sisprynight ! day:
+elseif sisterLesb = 1 and horny >= 60 and sisprynight ! daystart:
 	act 'Touch':
 		cls
 		minut += 1
 		horny += 5
-		sisprynight = day
+		sisprynight = daystart
 		gs 'stat'
 
 		'<center><img src="images/qwest/alter/sisterQW/sisboyQW_18.jpg"></center>'
@@ -126,12 +126,12 @@ elseif sisterLesb = 1 and horny >= 60 and sisprynight ! day:
 		act 'Fondle yourself':dynamic $sisboyQW_prycaress
 		act 'Move away':gt 'bedrPar'
 	end
-elseif sisterLesb = 3 and horny >= 60 and sisprynight ! day:
+elseif sisterLesb = 3 and horny >= 60 and sisprynight ! daystart:
 	act 'Touch':
 		cls
 		minut += 1
 		horny += 5
-		sisprynight = day
+		sisprynight = daystart
 		gs 'stat'
 
 		if sisterLesbScene = 0:

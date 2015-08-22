@@ -34,11 +34,11 @@ if hour >= 6 and hour <= 21:
 
 			act 'Leave':gt 'gpoli'
 		end
-	elseif gpoliuborka > 1 and hour >= 8 and hour <= 21 and gpolicleanday ! day:
+	elseif gpoliuborka > 1 and hour >= 8 and hour <= 21 and gpolicleanday ! daystart:
 		act 'To work as a cleaner':
 			cla
 			*clr
-			gpolicleanday = day
+			gpolicleanday = daystart
 			minut += 60
 			manna -= 15
 			money += 100

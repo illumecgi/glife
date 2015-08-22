@@ -111,12 +111,12 @@ if $ARGS[0] = 'start':
 		end
 		!!
 
-		if klisma = 1 and klismaday ! day:
+		if klisma = 1 and klismaday ! daystart:
 			act 'Give yourself an enema (0:05)':
 				cla
 				*clr
 				minut += 5
-				klismaday = day
+				klismaday = daystart
 				klismaday1= 1
 				'<center><img src="images/picV/klisma.jpg"></center>'
 				'You put yourself an enema and clean intestines, now your ass is ready for anal sex.'
@@ -254,7 +254,7 @@ if $ARGS[0] = 'start':
 
 					act 'Get out and get dressed':gt 'vann', 'fin'
 				end
-			elseif horny >= 40 and hormy < 90:
+			elseif horny >= 40 and horny < 90:
 				act 'Send shower pussy':
 					cla
 					*clr

@@ -16,12 +16,12 @@ if $ARGS[0] = 'start':
 		act 'Go to the House of Culture':gt 'dk', 'holl'
 	end
 
-	if avtoskul >= 1 and avtoskul < 11 and skulday ! day and week >= 6 and money >= 1000 and age >= 18:
+	if avtoskul >= 1 and avtoskul < 11 and skulday ! daystart and week >= 6 and money >= 1000 and age >= 18:
 		act 'Driver Training class (1,000 rubles) (2:00)':
 			cla
 			*clr
 			money -= 1000
-			skulday = day
+			skulday = daystart
 			avtoskul += 1
 			minut += 120
 			'<center><img src="images/etogame/dk2.jpg"></center>'
@@ -82,12 +82,12 @@ if $ARGS[0] = 'holl':
 	if secrDiplom = 0 and sekrObu > 0:sekrObuA = sekrObu - 1 & 'Trained on the Secretary-General <<sekrObuA>> 30 days of'
 
 	if hour >= 9 and hour <= 17 and week < 6:
-		if vokalday ! day and alexeySex > 0 and alexeyVopros = 2:
+		if vokalday ! daystart and alexeySex > 0 and alexeyVopros = 2:
 			act 'Go to singing lessons':
 				cls
 				alexeyQW += 1
 				vokal += 1
-				vokalday = day
+				vokalday = daystart
 				horny += 30
 				gs 'stat'
 				'You are engaged in an hour with Alexei vocal that every now and then caressed your foot, then touch the ass, then stroked his chest.'
@@ -136,24 +136,24 @@ if $ARGS[0] = 'holl':
 					end
 				end
 			end
-		elseif money >= 500 and vokalday ! day and alexeySex > 0 and alexeyVopros = 1:
+		elseif money >= 500 and vokalday ! daystart and alexeySex > 0 and alexeyVopros = 1:
 			act 'Singing lesson cost 500 rubles':
 				cls
 				money -= 500
 				alexeyQW += 1
 				vokal += 1
-				vokalday = day
+				vokalday = daystart
 				gs 'stat'
 				'You are engaged in an hour with Alexei vocals, which gave no indication that when you otduplil it in all holes.'
 
 				act 'Leave':gt 'dk', 'holl'
 			end
-		elseif money >= 500 and vokalday ! day and alexeySex > 0 and alexeyVopros = 0:
+		elseif money >= 500 and vokalday ! daystart and alexeySex > 0 and alexeyVopros = 0:
 			act 'Singing lesson cost 500 rubles':
 				cls
 				alexeyQW += 1
 				vokal += 1
-				vokalday = day
+				vokalday = daystart
 				gs 'stat'
 				'You are logged in to the office to Alexei. He guiltily looked at you and said. "Sorry, this is a musician first and foremost a creative person, and only then, drunken rednecks."'
 				'You could not help smiling at the memory as you dragged the carcass of his teacher sleeping with his back, where he was snoring peacefully.'
@@ -176,14 +176,14 @@ if $ARGS[0] = 'holl':
 					act 'Leave':gt 'dk', 'holl'
 				end
 			end
-		elseif money >= 500 and vokalday ! day and alexeySex = 0:
+		elseif money >= 500 and vokalday ! daystart and alexeySex = 0:
 			act 'Singing lesson cost 500 rubles (1:00)':
 				cls
 				minut += 60
 				money -= 500
 				alexeyQW += 1
 				vokal += 1
-				vokalday = day
+				vokalday = daystart
 				gs 'stat'
 				!!'<center><img src="images/etogame/dk2.jpg"></center>'
 
@@ -295,11 +295,11 @@ if $ARGS[0] = 'holl':
 			end
 		end
 
-		if sekrObu > 0 and sekrObu < 11 and secrday ! day:
+		if sekrObu > 0 and sekrObu < 11 and secrday ! daystart:
 			act 'Learn from the Secretary (2:00)':
 				cla
 				*clr
-				secrday = day
+				secrday = daystart
 				sekrObu += 1
 				minut += 120
 				'<center><img src="images/etogame/kurs.jpg"></center>'
@@ -309,11 +309,11 @@ if $ARGS[0] = 'holl':
 
 				act 'Leave':gt 'dk', 'holl'
 			end
-		elseif sekrObu >= 11 and secrday ! day:
+		elseif sekrObu >= 11 and secrday ! daystart:
 			act 'Get Secretary diploma':
 				cla
 				*clr
-				secrday = day
+				secrday = daystart
 				sekrObu = 0
 				minut += 15
 				secrDiplom = 1
@@ -324,11 +324,11 @@ if $ARGS[0] = 'holl':
 			end
 		end
 
-		if avtoskul >= 1 and avtoskul < 11 and skulday ! day and age >= 18:
+		if avtoskul >= 1 and avtoskul < 11 and skulday ! daystart and age >= 18:
 			act 'Learn from the right (2:00)':
 				cla
 				*clr
-				skulday = day
+				skulday = daystart
 				avtoskul += 1
 				minut += 120
 				'<center><img src="images/etogame/dk2.jpg"></center>'
@@ -338,7 +338,7 @@ if $ARGS[0] = 'holl':
 
 				act 'Leave':gt 'dk', 'holl'
 			end
-		elseif avtoskul >= 11 and skulday ! day and age >= 18:
+		elseif avtoskul >= 11 and skulday ! daystart and age >= 18:
 			act 'Pass on the right (2:00)':
 				cla
 				*clr
@@ -354,15 +354,15 @@ if $ARGS[0] = 'holl':
 			end
 		end
 
-		if money >= 5000 and masash < 10 and masashshoolday ! day:
+		if money >= 5000 and masash < 10 and masashshoolday ! daystart:
 			act 'Learn massage (5,000 rubles)':
 				cla
-				masashshoolday = day
+				masashshoolday = daystart
 				money -= 5000
 				masash += 1
 				minut += 120
 				gs 'stat'
-				'You two o''clock studied massage'
+				'You two c''clock studied massage'
 
 				if masash = 10:'You are issued a certificate of course completion masseurs.'
 

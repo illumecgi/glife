@@ -114,9 +114,9 @@ act 'Wait':
 	act 'Take a look at the clock':gt $curloc
 end
 
-if StoryLine = 1 and hour >= 8 and hour < 23 and cumface > 0 and rand(0, 3) = 0 and sosedday ! day:
+if StoryLine = 1 and hour >= 8 and hour < 23 and cumface > 0 and rand(0, 3) = 0 and sosedday ! daystart:
 	cls
-	sosedday = day
+	sosedday = daystart
 	gs 'stat'
 
 	if sosedknow = 0:

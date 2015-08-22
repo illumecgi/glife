@@ -7,9 +7,9 @@ if $ARGS[0] = 'start':
 	act 'Ring the doorbell':
 		cla
 
-		if klofQW = 2 and hour >= 16 and klofday ! day:
+		if klofQW = 2 and hour >= 16 and klofday ! daystart:
 			gt 'klofdomhouse', 'ev1'
-		elseif klofQW > 2 and hour >= 16 and klofday ! day:
+		elseif klofQW > 2 and hour >= 16 and klofday ! daystart:
 			gt 'klofdomhouse', 'start1'
 		else
 			'No one home'
@@ -24,7 +24,7 @@ end
 if $ARGS[0] = 'ev1':
 	cla
 	*clr
-	klofday = day
+	klofday = daystart
 	minut += 5
 	'<center><img src="images/klof/klof.jpg"></center>'
 	'You rang the doorbell.'
@@ -133,7 +133,7 @@ end
 if $ARGS[0] = 'start1':
 	cla
 	*clr
-	klofday = day
+	klofday = daystart
 	minut += 5
 	gt 'klofdomhouse', 'ev7'
 end
@@ -382,7 +382,7 @@ end
 if $ARGS[0] = 'ev20':
 	cla
 	*clr
-	klofday = day
+	klofday = daystart
 	minut += 5
 	'<center><img src="images/klof/klof.jpg"></center>'
 

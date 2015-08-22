@@ -131,8 +131,8 @@ elseif artemhomemark = 1:
 	'Artem sits in his room on the bed.'
 
 	artemRand = rand(0,1)
-	if artemRand = 1 and artemtimes >= 45 and artemsex > 0 and artemanal > 0 and artemProgul ! day and (GorSlut < 2 or artemblag = 1):
-		artemProgul = day
+	if artemRand = 1 and artemtimes >= 45 and artemsex > 0 and artemanal > 0 and artemProgul ! daystart and (GorSlut < 2 or artemblag = 1):
+		artemProgul = daystart
 		cla
 		gs 'stat'
 		artemRand = rand(0,1)

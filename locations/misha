@@ -19,7 +19,7 @@ if $ARGS[0] = '1':
 				act 'Further':
 					cla
 					*clr
-					dmishaday = day
+					dmishaday = daystart
 					dick = 18
 					sex += 1
 					bj += 1

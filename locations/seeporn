@@ -10,7 +10,8 @@ act 'watch':
 	horny += (seepornofut + mastr) * 2
 	gs 'stat'
 
-	if evgenQW >= 4 and BjBeerQW >= 3: gt 'seeporn','SeePornPalevo'
+	! WD: Unused Var 'BJBeerQW' use 'GorSlut'
+	if evgenQW >= 4 and GorSlut >= 3: gt 'seeporn','SeePornPalevo'
 
 	if seepornofut < 3:
 		'Boys looking at what is happening on the screen clearly at ease and embarrassed shoot you in the eyes.'

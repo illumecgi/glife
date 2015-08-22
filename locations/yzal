@@ -8,6 +8,7 @@ gs 'stat'
 '<center><b><font color="maroon">House</font></b></center>'
 '<center>Living Room</center>'
 !!!does not exists in 0.2.6
+
 if TV = 0:$TV = 'That would be a great place for TV, which you do not have'
 if TV = 1:$TV = 'Ancient <a href="exec:gt ''TV'', ''start''">TV</a>'
 if TV = 2:$TV = 'huge plasma <a href="exec:gt ''TV'', ''start''">TV</a>'

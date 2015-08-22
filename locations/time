@@ -1,6 +1,6 @@
 # time
-If month = 1 and pogodaday ! day:
-	pogodaday = day
+If month = 1 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(-30, 8)
 
 	if temper <= 0:
@@ -24,8 +24,8 @@ If month = 1 and pogodaday ! day:
 	$pogoda = 'On the street there is snow, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 2 and pogodaday ! day:
-	pogodaday = day
+If month = 2 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(-35, 8)
 
 	if temper <= 0:
@@ -49,8 +49,8 @@ If month = 2 and pogodaday ! day:
 	$pogoda = 'On the street there is snow, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 3 and pogodaday ! day:
-	pogodaday = day
+If month = 3 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(-20, 17)
 
 	if temper <= 0:
@@ -74,8 +74,8 @@ If month = 3 and pogodaday ! day:
 	$pogoda = 'On the street there is snow, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 4 and pogodaday ! day:
-	pogodaday = day
+If month = 4 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(2, 20)
 	osadki = rand(0, 10)
 
@@ -92,8 +92,8 @@ If month = 4 and pogodaday ! day:
 	$pogoda = 'On the street the snow melts, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 5 and pogodaday ! day:
-	pogodaday = day
+If month = 5 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(7, 25)
 	osadki = rand(0, 10)
 
@@ -106,8 +106,8 @@ If month = 5 and pogodaday ! day:
 	$pogoda = 'From puddles in the street rastaevshego snow, dirt and debris all around seem after winter, something where new grass pleases the eye with its greenery, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 6 and pogodaday ! day:
-	pogodaday = day
+If month = 6 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(15, 35)
 	osadki = rand(0, 10)
 
@@ -120,8 +120,8 @@ If month = 6 and pogodaday ! day:
 	$pogoda = 'On the street the green grass, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 7 and pogodaday ! day:
-	pogodaday = day
+If month = 7 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(20, 40)
 	osadki = rand(0, 10)
 
@@ -134,8 +134,8 @@ If month = 7 and pogodaday ! day:
 	$pogoda = 'Green grass on the street, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 8 and pogodaday ! day:
-	pogodaday = day
+If month = 8 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(20, 35)
 	osadki = rand(0, 10)
 
@@ -148,8 +148,8 @@ If month = 8 and pogodaday ! day:
 	$pogoda = 'Outdoors green grass, where some are already visible yellowing leaves, temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 9 and pogodaday ! day:
-	pogodaday = day
+If month = 9 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(10, 30)
 	osadki = rand(0, 10)
 
@@ -162,8 +162,8 @@ If month = 9 and pogodaday ! day:
 	$pogoda = 'Street zhuhnet grass, visible yellow leaves, the temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 10 and pogodaday ! day:
-	pogodaday = day
+If month = 10 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(2, 20)
 	osadki = rand(0, 10)
 
@@ -176,8 +176,8 @@ If month = 10 and pogodaday ! day:
 	$pogoda = 'On the street faded grass, falling yellow leaves, mud and puddles around, temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 11 and pogodaday ! day:
-	pogodaday = day
+If month = 11 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(-20, 17)
 
 	if temper <= 0:
@@ -201,8 +201,8 @@ If month = 11 and pogodaday ! day:
 	$pogoda = 'The street is dirty and thin snow cover, temperature <<temper>> degrees Celsius. <<$osadki>>'
 end
 
-If month = 12 and pogodaday ! day:
-	pogodaday = day
+If month = 12 and pogodaday ! daystart:
+	pogodaday = daystart
 	temper = rand(-30, 8)
 	if temper <= 0:
 		osadki = rand(0, 10)

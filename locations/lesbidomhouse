@@ -241,7 +241,7 @@ if $ARGS[0] = 'ev11':
 
 	if ldmistresex = 0:ldmistresex = 1 & girl += 1
 
-	lesbiday = day
+	lesbiday = daystart
 	'Well, I''m almost finished - you moaned.'
 	'-Next lesson - do not let the girl that she has not earned it. Want to come? Please lick my pussy.'
 	'You started with a zeal to lick pussy Mistress, resignedly and without question.'
@@ -300,7 +300,7 @@ end
 if $ARGS[0] = 'ev15':
 	cla
 	*clr
-	lesbiday = day
+	lesbiday = daystart
 	minut += 30
 
 	if callnm = 1:
@@ -434,7 +434,7 @@ end
 if $ARGS[0] = 'ev23':
 	cla
 	*clr
-	lesbiday = day
+	lesbiday = daystart
 	lesbiQW = 8
 	sub += 1
 	lesbian += 1
@@ -496,7 +496,7 @@ if $ARGS[0] = 'ev28':
 	*clr
 	minut += 5
 	horny += 25
-	lesbiday = day
+	lesbiday = daystart
 	energy += 1
 	'<center><img src="images/qwest/lesbi11.jpg"></center>'
 	'You came to the hostess for a new portion of feces and golden rain, among other things - her pussy licked'

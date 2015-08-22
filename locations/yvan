@@ -34,10 +34,10 @@ else
 	'<b><font color="red">You can not wash yourself, because you do not have clean underwear.</font></b>'
 end
 
-if husband > 0 and husbanday > 0 and husporday ! day and poroshok >= 2:
+if husband > 0 and husbanday > 0 and husporday ! daystart and poroshok >= 2:
 	husband += 5
 	poroshok -= 2
-	husporday = day
+	husporday = daystart
 	'Washing machine washed your husbands smelly socks and his clothes.'
 end
 
@@ -135,12 +135,12 @@ if mop ! 1:
 end
 !!
 
-if klisma = 1 and klismaday ! day:
+if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':
 		cla
 		*clr
 		minut += 5
-		klismaday = day
+		klismaday = daystart
 		klismaday1= 1
 		'<center><img src="images/picV/klisma.jpg"></center>'
 		'You put yourself an enema and clean intestines, now your ass is ready for anal sex.'

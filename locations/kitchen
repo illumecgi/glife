@@ -46,9 +46,9 @@ if tanwork = 1:
 		minut += 60
 		nikrand = rand(0, 5)
 
-		if week < 6 and hour >= 6 and hour <= 9 and nikrand = 0 and vnesh > 20 and niksexday ! day:
+		if week < 6 and hour >= 6 and hour <= 9 and nikrand = 0 and vnesh > 20 and niksexday ! daystart:
 			cla
-			niksexday = day
+			niksexday = daystart
 			'The kitchen breakfast Tannin stepfather, Nikolai'
 
 			act 'Go about their business.':gt 'kitchen'
@@ -324,12 +324,12 @@ end
 if lekarstvo > 0:
 	'You have <<lekarstvo>> tablets.'
 
-	if sick > 0 and lekarday ! day:
+	if sick > 0 and lekarday ! daystart:
 		act 'Take a pill':
 			cla
 			*clr
 			minut += 5
-			lekarday = day
+			lekarday = daystart
 			lekarstvo -= 1
 			sick -= sick * 20/100
 			lekrand = rand(1, 9)
@@ -343,12 +343,12 @@ end
 
 if vitamin > 0:
 	'You have <<vitamin>> vitaminok.'
-	if vitaminday ! day:
+	if vitaminday ! daystart:
 		act 'Drink Vitamins (0:05)':
 			cla
 			*clr
 			minut += 5
-			vitaminday = day
+			vitaminday = daystart
 			vitamin -= 1
 			frost = 0
 			skinvan += 1
@@ -365,13 +365,13 @@ end
 
 housekitrand = rand(0, 10)
 
-if hour > 17 and hour < 20 and housekitrand > 8 and nikslut = 1 and niksexday ! day:
+if hour > 17 and hour < 20 and housekitrand > 8 and nikslut = 1 and niksexday ! daystart:
 	cla
 	*clr
 	SUB += 1
 	guy += 1
 	minut += 20
-	niksexday = day
+	niksexday = daystart
 	money += 2000
 	picrand = 36
 	'<center><img src="images/img/th/s1.jpg"></center>'

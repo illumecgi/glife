@@ -171,7 +171,7 @@ if hour >= 15 and hour < 20:
 		:markboyfrendcall
 		numnpcboy += 1
 
-		if otnBoyFrend[numnpcboy] >= 20 and boyinday[numnpcboy]!day:
+		if otnBoyFrend[numnpcboy] >= 20 and boyinday[numnpcboy]!daystart:
 			Gcall = 1
 			jump 'markboyfrendcall2'
 		end

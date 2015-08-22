@@ -51,7 +51,7 @@ $borodachSex = {
 			minut += 5
 			horny += 20
 			gs 'stat'
-			borodachSexDay = day
+			borodachSexDay = daystart
 			sex += 1
 			minut += 30
 			pose = 0
@@ -87,7 +87,7 @@ $ohrhjcum = {
 		cls
 		minut += 15
 		horny += dom
-		borodachSexDay = day
+		borodachSexDay = daystart
 		gs 'stat'
 		'<center><img src="images/qwest/ohrannik/hjcum.jpg"></center>'
 		'Sasha groaned and his cock began to ejaculate a jet of sperm in your palm.'
@@ -129,7 +129,7 @@ $ohrbjcum = {
 			minut += 15
 			horny += 5
 			vaf += 1
-			borodachSexDay = day
+			borodachSexDay = daystart
 			gs 'stat'
 			picrand = rand(1, 3)
 			'<center><img src="images/qwest/ohrannik/swallow<<picrand>>.jpg"></center>'
@@ -145,7 +145,7 @@ $ohrbjcum = {
 
 			if vaf > 0:vaf -= 1
 
-			borodachSexDay = day
+			borodachSexDay = daystart
 			gs 'stat'
 			'<center><img src="images/qwest/ohrannik/spit.jpg"></center>'
 			'You have opened your mouth filling with sperm, that you spat into the sink.'
@@ -161,7 +161,7 @@ $ohrsex = {
 		minut += 5
 		horny += 20
 		gs 'stat'
-		borodachSexDay = day
+		borodachSexDay = daystart
 		sex += 1
 		minut += 30
 		pose = 0

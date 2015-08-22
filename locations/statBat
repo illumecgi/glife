@@ -1,6 +1,6 @@
 # statBat
 clr
-
+! WD: Uninitialised Vars
 if tobiPic = 1:pl '<center><img src="images/picBat/tobi.jpg"></center>'
 if kisamePic = 1:pl '<center><img src="images/picBat/kisame.jpg"></center>'
 if sasoriPic = 1:pl '<center><img src="images/picBat/sasori.jpg"></center>'

@@ -1,5 +1,5 @@
 # dimaRudeEv
-dimarudeday = day
+dimarudeday = daystart
 gs 'stat'
 '<center><b><font color="maroon"><<$npcName[1]>> <<$npcSurName[1]>></font></b></center>'
 ! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc1.jpg"></center>'

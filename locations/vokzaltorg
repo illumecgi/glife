@@ -79,7 +79,7 @@ act 'Leave':
 		manna = 0
 		gs 'stat'
 		'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
-		'You have decided to shake their rights, Police responded to what is to be expected, dragged you to the department, money seized and confiscated goods. Once you promuryzhili two o''clock, you still released.'
+		'You have decided to shake their rights, Police responded to what is to be expected, dragged you to the department, money seized and confiscated goods. Once you promuryzhili two c''clock, you still released.'
 
 		act 'Leave':minut += 1 & gt 'vokzalGin'
 	end

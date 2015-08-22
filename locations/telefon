@@ -156,10 +156,10 @@ if $ARGS[0] = 'start':
 	clr
 	gs 'stat'
 
-	if vladimirday ! day and vladimirQW = 20 and hour = 16:gt 'qwloc2'
-	if vladimirday ! day and vladimirQW = 25 and hour = 16 and week = 6:gt 'qwloc3'
-	if vladimirday ! day and vladimirQW = 35 and hour = 16 and week = 6:gt 'qwloc4'
-	if QWdogreiqTimer = 0 and QWdogReiq = 2 and week = 7 and qwdogiventday ! day and hour >= 12:gt 'qwlocdog'
+	if vladimirday ! daystart and vladimirQW = 20 and hour = 16:gt 'qwloc2'
+	if vladimirday ! daystart and vladimirQW = 25 and hour = 16 and week = 6:gt 'qwloc3'
+	if vladimirday ! daystart and vladimirQW = 35 and hour = 16 and week = 6:gt 'qwloc4'
+	if QWdogreiqTimer = 0 and QWdogReiq = 2 and week = 7 and qwdogiventday ! daystart and hour >= 12:gt 'qwlocdog'
 
 	if ring = 0:
 		if number = 6:'<center><b><<num6>><<num5>>-<<num4>><<num3>>-<<num2>><<num1>></b></center>'
@@ -204,10 +204,10 @@ if $ARGS[0] = 'start':
 		end
 
 		if nastjaqw = 1 and week = 6 and vnesh > 20:act 'Call Nastya':gt 'nastja', 'pos4'
-		if nastjaqw = 2 and week ! 6 and zenit = 0 and nastjaday ! day:act 'Chat with Nastya':gt 'nastja', 'pos13'
-		if hour >= 8 and hour <= 20 and nastjaqw = 2 and week = 6 and vnesh > 20 and nastjaday ! day:act 'On the beach with Nastya':gt 'nastja', 'pos12'
-		if nastjaqw = 5 and week = 6 and nastjaday ! day:act 'Invite Nastya': gt 'nastja', 'pos22'
-		if nastjaqw = 6 and nastjaday ! day:act 'Call Nastya': gt 'nastja', 'pos31'
+		if nastjaqw = 2 and week ! 6 and zenit = 0 and nastjaday ! daystart:act 'Chat with Nastya':gt 'nastja', 'pos13'
+		if hour >= 8 and hour <= 20 and nastjaqw = 2 and week = 6 and vnesh > 20 and nastjaday ! daystart:act 'On the beach with Nastya':gt 'nastja', 'pos12'
+		if nastjaqw = 5 and week = 6 and nastjaday ! daystart:act 'Invite Nastya': gt 'nastja', 'pos22'
+		if nastjaqw = 6 and nastjaday ! daystart:act 'Call Nastya': gt 'nastja', 'pos31'
 
 		act 'Hangup':
 			cla
@@ -241,11 +241,11 @@ if $ARGS[0] = 'boyA':
 	clr
 	ring = 0
 	ringA = 0
-	boydayA = day
+	boydayA = daystart
 	gs 'stat'
 	svetrand = rand(0, 5)
 
-	if svetrand = 0:$$sveta = 'cutie'
+	if svetrand = 0:$sveta = 'cutie'
 	if svetrand = 1:$sveta = 'honey'
 	if svetrand = 2:$sveta = 'sweetie'
 	if svetrand = 3:$sveta = 'baby'
@@ -284,12 +284,12 @@ if $ARGS[0] = 'boyA':
 							act 'Set up a time.':
 								cla
 								meetday = daystart
-								meethour = input ("Set up a time to get picked up. It is now <<hour>> o''clock.")
+								meethour = input ("Set up a time to get picked up. It is now <<hour>> c''clock.")
 
 								if meethour <= hour or meethour > 23:meethour = 20
 
-								'(You) -How about <<meethour>> o''clock?'
-								'(<<$boyA>>) - Okay <<$sveta>>, see you at <<meethour>> o''clock.'
+								'(You) -How about <<meethour>> c''clock?'
+								'(<<$boyA>>) - Okay <<$sveta>>, see you at <<meethour>> c''clock.'
 
 								act 'Hang up.':gt 'telefon', 'fin'
 							end
@@ -342,12 +342,12 @@ if $ARGS[0] = 'boyA':
 
 			act 'Call time.':
 				cla
-				meethour = input ("Set up a time to get picked up. It is now <<hour>> o''clock.")
+				meethour = input ("Set up a time to get picked up. It is now <<hour>> c''clock.")
 
 				if meethour <= hour or meethour > 23:meethour = 20
 
-				'(You) - How about <<meethour>> o''clock?.'
-				'(<<$boyA>>) - Okay <<$sveta>>, see you at <<meethour>> o''clock.'
+				'(You) - How about <<meethour>> c''clock?.'
+				'(<<$boyA>>) - Okay <<$sveta>>, see you at <<meethour>> c''clock.'
 
 				act 'Hang up.':gt 'telefon', 'fin'
 			end
@@ -377,7 +377,7 @@ if $ARGS[0] = 'boyB':
 	clr
 	ring = 0
 	ringB = 0
-	boydayB = day
+	boydayB = daystart
 	gs 'stat'
 	'<<$boyB>> offers a walk.'
 
@@ -417,7 +417,7 @@ if $ARGS[0] = 'boyC':
 	clr
 	ring = 0
 	ringC = 0
-	boydayC = day
+	boydayC = daystart
 	gs 'stat'
 	'<<$boyC>> offers a walk.'
 

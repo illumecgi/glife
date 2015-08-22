@@ -288,7 +288,7 @@ if $ARGS[0] = 'pos13':
 	*clr
 	minut += 30
 	manna += 30
-	nastjaday = day
+	nastjaday = daystart
 	gs 'stat'
 	'<center><img src="images/etogame/tel_talk.jpg"></center>'
 	'Any time you hear beeps. Finally at the end of the call.'
@@ -305,7 +305,7 @@ if $ARGS[0] = 'pos14':
 	*clr
 	minut += 30
 	manna += 30
-	nastjaday = day
+	nastjaday = daystart
 	nastjaqw = 4
 	gs 'stat'
 	'<center><img src="images/etogame/2hello.jpg"></center>'
@@ -436,7 +436,7 @@ if $ARGS[0] = 'pos23':
 	cla
 	*clr
 	minut += 30
-	nastjaday = day
+	nastjaday = daystart
 	gs 'stat'
 
 	'<center><img src="images/etogame/nast_home.jpg"></center>'

@@ -731,10 +731,11 @@ if $ARGS[0] = 'an':
 
 	if anus + lubonus + 2 < dick:
 		if mop > 1:mop = 0
-
 		'You utter a muffled cry and bite down a pillow when his <<dick>> centimeter cock begins to fuck your ass full force.'
-	elseif anus + lubonus + 2 >= dick:'You start to moan rhythmically in time with thrusts of the dick buried in your ass.'
-
+	elseif anus + lubonus + 2 >= dick:
+		'You start to moan rhythmically in time with thrusts of the dick buried in your ass.'
+	end
+	
 	anal += 1
 end
 

@@ -290,7 +290,7 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Vars never Initialised ~ '$rexRep'
+		! WD: Uninitialised ~ '$rexRep'
 		!! dynamic $rexRep
 		'Comes up to you Rex'
 		'- <<$nickname>>, as much as I 2 was given this nickname in the Park waiting for you! As it is not friendly...'
@@ -305,7 +305,7 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Vars never Initialised ~ '$rexRep'
+		! WD: Uninitialised ~ '$rexRep'
 		!! dynamic $rexRep
 		'Comes up to you Rex'
 		'- <<$nickname>>, as much as I  2 hours stuck at the door waiting for you! As it is not friendly...'
@@ -320,7 +320,7 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Vars never Initialised ~ '$rexRep'
+		! WD: Uninitialised ~ '$rexRep'
 		!! dynamic $rexRep
 		'Comes up to you Rex'
 		'- <<$nickname>>, well, you could even out said, I won`t go... I`m a disaster! Next time better tell that will not be able.'
@@ -333,14 +333,14 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Vars never Initialised ~ '$rexRep'
+		! WD: Uninitialised ~ '$rexRep'
 		!! dynamic $rexRep
 		'The Rex with a glass of beer.'
 		act 'Chat':
 			cla
 			rex += 1
 			minut += 5
-			! WD: Vars never Initialised ~ '$rexGdkTalk'
+			! WD: Uninitialised ~ '$rexGdkTalk'
 			!! dynamic $rexGdkTalk
 			gs 'stat'
 		end

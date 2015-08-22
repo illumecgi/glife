@@ -303,7 +303,7 @@ if $ARGS[0] = 'variant':
 	act 'Give blowjob':gt 'sexm', 'minet'
 	act 'Masturbate him':gt 'sexm', 'hand'
 
-	if kunday ! day:
+	if kunday ! daystart:
 		act 'Cooney':gt 'sexm', 'kuni'
 	end
 
@@ -398,7 +398,7 @@ end
 
 if $ARGS[0] = 'kuni':
 	*clr
-	kunday = day
+	kunday = daystart
 	DOM += 1
 	kuni += 1
 	minut += 30
@@ -541,10 +541,10 @@ if $ARGS[0] = 'anal':
 
 		'Finally <<$boyA>> grabbed you tight ass and drove for your aching ass dick up to the finished balls inside you.'
 
-		if klismaday ! day:
+		if klismaday ! daystart:
 			bfA -= 8
 			'<<$boyA>> took out a member of your ass and see on your dick shit said, "Oban, Charlie and the Chocolate Factory, baby, before anal enema should be done, but it is not hygienic to knead the clay by a dick."'
-		elseif klismaday = day:
+		elseif klismaday = daystart:
 			bfA += 5
 			cumanus += 1
 

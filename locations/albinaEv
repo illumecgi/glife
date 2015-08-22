@@ -11,7 +11,7 @@ $din_albina_get_over_car = {
 	end
 }
 
-albinaCarday = day
+albinaCarday = daystart
 gs 'stat'
 '<center><img src="images/qwest/alter/BMW.jpg"></center>'
 'You went out to the car and see Albina sitting in it, nervously looking every which direction. As you approach, she starts the engine.'

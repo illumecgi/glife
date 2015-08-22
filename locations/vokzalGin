@@ -28,10 +28,10 @@ end
 act 'Leave':minut += 3 & gt 'vokzalG'
 
 if vokzalVork >= 1:
-	if cleZalDay ! day:
+	if cleZalDay ! daystart:
 		act 'Mopping the floor in the waiting room':
 			cls
-			cleZalDay = day
+			cleZalDay = daystart
 			minut += 60
 			sweat += 1
 
@@ -46,10 +46,10 @@ if vokzalVork >= 1:
 		end
 	end
 
-	if cleMTDay ! day:
+	if cleMTDay ! daystart:
 		act 'Mopping the floor in the men''s room':
 			cls
-			cleMTDay = day
+			cleMTDay = daystart
 			minut += 30
 			sweat += 1
 
@@ -66,10 +66,10 @@ if vokzalVork >= 1:
 		end
 	end
 
-	if cleWTDay ! day:
+	if cleWTDay ! daystart:
 		act 'Mopping the floor in the women''s restroom':
 			cls
-			cleWTDay = day
+			cleWTDay = daystart
 			minut += 30
 			sweat += 1
 
@@ -85,10 +85,10 @@ if vokzalVork >= 1:
 		end
 	end
 
-	if cleMTDay = day and cleWTDay = day and cleZalDay = day and cleZarplatDay ! day:
+	if cleMTDay = daystart and cleWTDay = daystart and cleZalDay = daystart and cleZarplatDay ! daystart:
 		act 'Get salary':
 			cls
-			cleZarplatDay = day
+			cleZarplatDay = daystart
 			vokzalVork += 1
 			money += 250
 			minut += 3

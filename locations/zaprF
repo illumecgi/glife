@@ -29,8 +29,11 @@ if $ARGS[0] = 'start':
 				zprpay = zprbenz * 30
 				money -= zprpay
 
-				if pol > 0:'<center><img src="images/etogame/zapr1.jpg"></center>'
+				! WD: Uninitialised ~ 'pol'
+				! if pol > 0:'<center><img src="images/etogame/zapr1.jpg"></center>'
 
+				'<center><img src="images/etogame/zapr1.jpg"></center>'
+				
 				'You have filled a full tank and paid <<zprpay>> rubles.'
 
 				act 'Remove gun':gt 'zaprF', 'start'

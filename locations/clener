@@ -54,9 +54,9 @@ if $ARGS[0] = 'start':
 			minut += 5
 			gs 'stat'
 
-			if borodachSexDay = day:'You approach the security guard and say hello. You chat with him a bit, then Sasha was going to crawl and you''re away without becoming disturb him.'
+			if borodachSexDay = daystart:'You approach the security guard and say hello. You chat with him a bit, then Sasha was going to crawl and you''re away without becoming disturb him.'
 
-			if borodachSexDay ! day:
+			if borodachSexDay ! daystart:
 				'You approach the security guard and say hello. He winks at you, I stashed the bubble here, as you look at the cult of mass leisure?'
 
 				act 'Come':
@@ -257,11 +257,11 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if clener > 1 and clenday ! day:
+	if clener > 1 and clenday ! daystart:
 		act 'Mop the floor in the office (1:00)':
 			cla
 			*clr
-			clenday = day
+			clenday = daystart
 			minut += 60
 			clener += 1
 			manna -= 15
@@ -323,11 +323,11 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if clenerT >= 1 and clendayT ! day:
+	if clenerT >= 1 and clendayT ! daystart:
 		act 'Clean toilets (1:00)':
 			cla
 			*clr
-			clendayT = day
+			clendayT = daystart
 			minut += 60
 			clenerT += 1
 			manna -= 25

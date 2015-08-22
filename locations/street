@@ -21,7 +21,7 @@ houseob = 0
 borMir = 0
 $onobjsel = 'onobjsel'
 
-if gopdeath = 1 and vsehsdaladay ! day:
+if gopdeath = 1 and vsehsdaladay ! daystart:
 	over = 6
 	gt 'gameover'
 	exit
@@ -135,8 +135,8 @@ if workDiskAtkPlayer = 1:
 	exit
 end
 
-if vladimirday = day and vladimirQW = 30 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet2''">Before your entrance stands Audi and around the phlegmatic worth waiting for your driver Glory</a>.'
-if vladimirday = day and vladimirQW = 40 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet3''">Before your entrance stands Audi and around the phlegmatic worth waiting for your driver Glory</a>.'
+if vladimirday = daystart and vladimirQW = 30 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet2''">Before your entrance stands Audi and around the phlegmatic worth waiting for your driver Glory</a>.'
+if vladimirday = daystart and vladimirQW = 40 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet3''">Before your entrance stands Audi and around the phlegmatic worth waiting for your driver Glory</a>.'
 
 housrA = 0
 
@@ -155,7 +155,7 @@ if housr = 1:
 			exit
 		end
 
-		if opusk > 0 and hour >= 20 and gorand >= 80 and gopopusday ! day:
+		if opusk > 0 and hour >= 20 and gorand >= 80 and gopopusday ! daystart:
 			gt 'gopnew', 'start'
 			exit
 		end
@@ -225,17 +225,17 @@ if clener >= 1 and hour >= 7 and hour <= 22:'There''s a small office building wh
 
 BDSMRand = rand(1,5)
 if hour >= 8 and lesbiQW >= 1 and lesbiQW < 3:'<a href="exec:gt ''lesbidomhouse'', ''start''">Natalia Petrovnas</a> Apartment'
-if lesbiday ! day and hour >= 8 and (lesbiQW = 3 or lesbiQW = 4):'<a href="exec:gt ''lesbidomhouse'', ''start1''">Mistress''</a> Apartment'
-if lesbiday ! day and hour >= 8 and lesbiQW = 5:'<a href="exec:gt ''lesbidomhouse'', ''ev15''">Mistress''</a> Apartment'
-if lesbiday ! day and hour >= 8 and lesbiQW = 6:'The <a href="exec:gt ''lesbidomhouse'', ''ev22''">Perverts''</a> Apartment'
-if lesbiday ! day and hour >= 8 and lesbiQW > 6 and BDSMRand > 3 and BDSMClub = 0:
+if lesbiday ! daystart and hour >= 8 and (lesbiQW = 3 or lesbiQW = 4):'<a href="exec:gt ''lesbidomhouse'', ''start1''">Mistress''</a> Apartment'
+if lesbiday ! daystart and hour >= 8 and lesbiQW = 5:'<a href="exec:gt ''lesbidomhouse'', ''ev15''">Mistress''</a> Apartment'
+if lesbiday ! daystart and hour >= 8 and lesbiQW = 6:'The <a href="exec:gt ''lesbidomhouse'', ''ev22''">Perverts''</a> Apartment'
+if lesbiday ! daystart and hour >= 8 and lesbiQW > 6 and BDSMRand > 3 and BDSMClub = 0:
 	'Apartmentsa <a href="exec:GT ''BDSM_Club'',''Hos''">Mistress</a>'
 else
-	if lesbiday ! day and hour >= 8 and lesbiQW = 7:'<a href="exec:gt ''lesbidomhouse'', ''ev25''">Mistress''</a> Apartment'
-	if lesbiday ! day and hour >= 8 and lesbiQW = 8:'<a href="exec:gt ''lesbidomhouse'', ''ev28''">Mistress''</a> Apartment'
-	if lesbiday ! day and hour >= 8 and lesbiQW = 9:'<a href="exec:gt ''lesbidomhouse'', ''ev29''">Mistress''</a> Apartment'
+	if lesbiday ! daystart and hour >= 8 and lesbiQW = 7:'<a href="exec:gt ''lesbidomhouse'', ''ev25''">Mistress''</a> Apartment'
+	if lesbiday ! daystart and hour >= 8 and lesbiQW = 8:'<a href="exec:gt ''lesbidomhouse'', ''ev28''">Mistress''</a> Apartment'
+	if lesbiday ! daystart and hour >= 8 and lesbiQW = 9:'<a href="exec:gt ''lesbidomhouse'', ''ev29''">Mistress''</a> Apartment'
 end
-if lesbiday = day and hour >= 8:'You can only visit your Mistress once a day!'
+if lesbiday = daystart and hour >= 8:'You can only visit your Mistress once a day!'
 
 'In the courtyard of the house you live in, you can find the <a href="exec:gt ''trashplace'', ''start''">Wastebaskets</a>'
 

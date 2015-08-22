@@ -28,7 +28,7 @@ if GorSlut = 0:
 
 			act 'See what will':
 				cls
-				strelaDay = day
+				strelaDay = daystart
 				strelaQW = 1
 				gs 'stat'
 				'Fyodor started to rise to his feet and moaned through the broken ruining "Fuck you, gopota fucking." Shulga jumped to Fede and slammed his fist in the face, but managed Fyodor staggered to his feet, but he was immediately on the neck edge of his hand hit Auburn. Fedor legs buckled and he fell on all fours. Shulga giggled "Look pidarok already stood in a pose! Gradually begins to realize." Fedor came to the Wailing Kotov and grabbed him by the collar to his feet, "Well, do you have something else to say?" Fyodor tried to hit Kotova, but he easily parried Fedi hand and hit his forehead on the nose Fedor. Fedor went limp and kept it from falling only Kotov, "Well, well, what do you immediately fall in mind? We''re just talking here, is not it?" By Fyodor jumped back with a run Shulga and kicked him in the kidneys, causing Theodore groaned and began to twitch in the hands Kotova. Kotov said angrily, "What hurts, what? So we just started talking." Suddenly Kotov easily picked Fedor zamli over and threw it on the pavement. Fedor fell with a thud and lay still on the ground. Shulga mocking sat around a broken face Fedor and spat in his face, "Ha, ha, let''s petushnem bychara!" Cats with perplexity at Shulga "You do Rams beguiled, pimples that I had stood up to this shit?" Shulga immediately retorted, "Well then obossym kid, I just want to pee." Redhead said, "Guys, do not mess arrange. Such questions people should decide." Shulga started bristle "And I? Not people?" Redhead grinned, "You syavka people thieves, not you. Can ask the White for this goat. He will decide how to punish him for his insolence. Zabem boom and they could decide what to do with it." Cats nodded "OK, and proceed accordingly." Fyodor lying on the pavement groaned and clutched his head. Auburn went up to him and said, "I hear you, kid. Tomorrow boom score. They look at how to punish you, and mind you, if you do not come, it will be worse." Shulga happily jumped to the fallen Theodore "Come on kid do not come without you decide to take you on the cheek, or will podmahivat ass." Kotov grimaced in disgust and said, "Come on guys drink beer. Enough already with this mess around by shit. <<$name>>, in short we in the park, if that." Cats and Auburn went to the side of the square, Shulga again kicked lying Fedor and disgusting giggling followed the boys.'
@@ -52,6 +52,7 @@ if GorSlut = 0:
 		$ev_name_a = 'Fedor'
 		$ev_name_om = 'Fedor'
 		dick = 17
+
 		silavag = 0
 
 		if gnpcSex[numnpc] = 0:

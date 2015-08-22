@@ -126,27 +126,28 @@ if $ARGS[0] = 'sisboyQW_bedroom':
 					blockBedrPar = 1
 					gs 'stat'
 
+					! WD: Uninitialised ~ 'sisboyQWrand' use 'temp'
 					temp = rand(0, 4)
 
-					if sisboyQWrand = 0:
+					if temp = 0:
 						'<center><img src="images/qwest/alter/sisterQW/sisboyQW_25.jpg"></center>'
 						'Open the door, your ears pierced tight wild sounds of passion sisters and Roma.'
 						'Anja bent, vypyachena his ass and gave it the power of Man, and Roma without delay, boldly and confidently tore ass Anja, tightly clenched buttocks.'
 						'His movements were faster and faster, and their bodies swayed in unison, Anja screamed "..more, more".'
 						'It seems they are so engrossed in each other, that you did not notice, so it''s time to quickly leave the hot couple.'
-					elseif sisboyQWrand = 1:
+					elseif temp = 1:
 						'<center><img src="images/qwest/alter/sisterQW/sisboyQW_26.jpg"></center>'
 						'Peering into the room, you saw, like your sister have a rude cancer.'
 						'Roma almost to the point, suddenly froze for a moment, and fell on his back groaned sister.'
 						'"..You what, again she finished inside?... moron, Get off of me, how many can speak..."'
 						'It seems they need to talk, and you have time to run away, yet you have not noticed.'
-					elseif sisboyQWrand = 2:
+					elseif temp = 2:
 						'<center><img src="images/qwest/alter/sisterQW/sisboyQW_27.jpg"></center>'
 						'Only slightly pushing the door, you heard the sound smacked, Anja happy sucked in Roma.'
 						'The guy lying relaxed, if fallen asleep, but most importantly in Roma sister woke up and continued to play with him.'
 						'Anja so skillful with a member, that have greatly impressed, She can teach you a few lessons when-anything?'
 						'A little carried away, you still go out of the door, not to be discovered.'
-					elseif sisboyQWrand = 3:
+					elseif temp = 3:
 						'<center><img src="images/qwest/alter/sisterQW/sisboyQW_28.jpg"></center>'
 						'Running up impatiently to the door, you had opened it quietly, from enjoying your sister sucking.'
 						'Anja relish swallowing a member to the testicles and taking it out of his mouth, He sobbed heavily, plastered all around his saliva.'

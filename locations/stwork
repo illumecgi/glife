@@ -146,7 +146,7 @@ if $ARGS[0] = 'start':
 
 					act 'Get out and get dressed':dynamic $striptoilet
 				end
-			elseif horny >= 40 and hormy < 90:
+			elseif horny >= 40 and horny < 90:
 				act 'Send shower pussy':
 					cla
 					*clr

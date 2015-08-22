@@ -941,27 +941,27 @@ if $ARGS[0] = 'lezbsort2':
 end
 
 if $ARGS[0] = 'vip':
-	if vipcart = 0 and vipday ! day:
+	if vipcart = 0 and vipday ! daystart:
 		'A security guard stops you from going any further. "I''m sorry, I can''t let your through, because you don''t own a VIP-Card. You can buy one for 10.000 rubles, which will be good for 10 visits."'
 
 		if money >= 10000:
 			act 'Buy a VIP-Card (10,000 rubles)':
 				money -= 10000
 				vipcart = 10
-				vipday = day
+				vipday = daystart
 				gt 'vipclub', 'start'
 			end
 		end
-	elseif vipcart > 0 and vipday ! day:
+	elseif vipcart > 0 and vipday ! daystart:
 		act 'Go to the VIP-Area':
 			vipcart -= 1
 			vipday = 1
-			vipday = day
+			vipday = daystart
 			gt 'vipclub', 'start'
 		end
 	end
 
-	if vipday = day:act 'Go back the main area':gt 'vipclub', 'inside'
+	if vipday = daystart:act 'Go back the main area':gt 'vipclub', 'inside'
 
 	act 'Leave him be and go away':gt 'club', 'inside'
 end

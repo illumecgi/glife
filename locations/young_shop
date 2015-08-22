@@ -56,7 +56,7 @@ if hour = 15 and young_shop_work = 1 and week < 6:
 		young_shop_salary += 1
 		minut += 135
 		gs 'stat'
-		'I cleaned two o''clock in the department to get better and hang clothes, serving customers. Rabotenka not dusty and even pretty good.'
+		'I cleaned two c''clock in the department to get better and hang clothes, serving customers. Rabotenka not dusty and even pretty good.'
 		random = rand(1, 80)
 
 		if random > 50 and random <= 55:gt 'young_shop', '0'
@@ -279,6 +279,7 @@ if hour = 15 and young_shop_work = 1 and week < 6:
 				cla
 				'Before leaving, I take a shirt with a. Girl she did not need, and I am not so rich to almost throw new things.'
 
+				! WD: Uninitialised ~ 'wear_chest_have_' 
 				if wear_chest_have_[6] = 0:
 					'no action'
 				else

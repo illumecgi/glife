@@ -63,7 +63,7 @@ act 'watch':
 						'"Let''s look for a quiet place, and that of the, it was not enough for me Misha." Soon you will find a secluded spot and Kolka said,:'
 						'"There will be normal. Let''s start."'
 						if rand1<5:'<center><img src="images/qwest/alter/Ev/boysex.jpg"></center>'
-						if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,'+rand(0,2)+'.gif"></center>'
+						if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,<<rand(0,2)>>.gif"></center>'
 						if rand1>=30:'<center><img src="images/nigma/gor/publ1,<<rand(0,6)>>.jpg"></center>'
 						'You bent down and framed mooning brother.'
 						dynamic $sexstart

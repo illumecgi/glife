@@ -307,6 +307,29 @@ Loop, Parse, Source, `n, `r  			; Specifying `n prior to `r allows both Windows 
 					}				
 				}
 				
+				else if inStr(Match1, "images\BDSM_Club\<<$BDSMrole>>") ;; BDSM Club
+				{
+					BDSMRegEx := "i)(_\d+)\.jpg"
+					BDSMPos := RegExMatch(Match1, BDSMRegEx , BDSMatch)
+					if (ErrorLevel)
+					{
+						MsgBox, 48, Get Image Paths, RegExMatch runtime error: %ErrorLevel%`n`nFound searching string: %Match1%`n`nusing search: %BDSMRegEx%
+						break
+					}			
+					
+					BDSMRegEx := "i)[rg]?\d+" . BDSMatch1 . "\.jpg"
+					
+					if GetImageFiles("images\BDSM_Club", "*.jpg", OutUsed, BDSMRegEx)
+					{
+						OutAuto	.= Spacer(Match1) . "- Found 'images\BDSM_Club*.jpg'`n"
+					}
+					else
+					{
+						OutMan	.= Spacer(Match1) . "- no files found in 'images\BDSM_Club*.jpg' " . IdxTxt . "`n"
+					}					
+
+				}
+				
 				else if inStr(Match1, "FUNC")										;; Unknown Function - Manual
 				{
 					OutMan	.= Spacer(Match1) . "- Unknown Function " . IdxTxt . "`n"
@@ -354,7 +377,7 @@ Loop, Parse, Source, `n, `r  			; Specifying `n prior to `r allows both Windows 
 		FoundPos := RegExMatch(Haystack, Search2RegEx, Match, FoundPos)				;; Search for 'view' cmd path
 		if (ErrorLevel)
 		{
-			MsgBox, 48, Get Image Paths, RegExMatch runtime error: %ErrorLevel%`n`nFound searching string: %Haystack%`n`nusing search: %SearchRegEx%
+			MsgBox, 48, Get Image Paths, RegExMatch runtime error: %ErrorLevel%`n`nFound searching string: %Haystack%`n`nusing search: %Search2RegEx%
 			break
 		}
 		

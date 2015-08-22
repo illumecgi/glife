@@ -312,7 +312,7 @@ $brotherSexStart = {
 			dick = brotherDick
 			gs 'stat'
 
-			'<center><img src="images/nigma/gor/ш0,'+rand(0,6)+'.gif"></center>'
+			'<center><img src="images/nigma/gor/ш0,<<rand(0,6)>>.gif"></center>'
 			'You sit down in front of bratm and brought his face to his cock.'
 
 			dynamic $dinrandbj
@@ -327,7 +327,7 @@ $brotherSexStart = {
 				swallow += 1
 				gs 'stat'
 
-				'<center><img src="images/nigma/gor/с0,'+rand(0,11)+'.gif"></center>'
+				'<center><img src="images/nigma/gor/с0,<<rand(0,11)>>.gif"></center>'
 
 				dynamic $dinrandswallow
 
@@ -358,7 +358,7 @@ $brotherSexStart = {
 
 					gs 'stat'
 
-					'<center><img src="images/nigma/gor/ш1,'+rand(0,11)+'.gif"></center>'
+					'<center><img src="images/nigma/gor/ш1,<<rand(0,11)>>.gif"></center>'
 					'You lay on the sofa and brother lay on you from above.'
 
 					dynamic $sexstart
@@ -382,7 +382,7 @@ $brotherSexStart = {
 
 			gs 'stat'
 
-			'<center><img src="images/nigma/gor/ш1,'+rand(0,11)+'.gif"></center>'
+			'<center><img src="images/nigma/gor/ш1,<<rand(0,11)>>.gif"></center>'
 			'You lay on the sofa and brother lay on you from above.'
 
 			dynamic $sexstart

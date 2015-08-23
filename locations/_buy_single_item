@@ -13,3 +13,4 @@ set money -= ARGS[2]
 gt $ARGS[4], '<font color="green">You bought a <b><<$ARGS[1]>></b>.</font>'
 
 --- $buy_single_item ---------------------------------
+

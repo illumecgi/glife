@@ -11,7 +11,7 @@ act 'Hello, of course I remember':
 	act 'Oh, I have a lot of things, I just can not today.':
 		cla
 		vladimirQW = 20
-		vladimirday = day
+		vladimirday = daystart
 		'(You) - Oh, I have a lot of things, I just can not segdnya.'
 		'(Vladimir) - Okay. Then I''ll call you tomorrow at 4 pm.'
 
@@ -21,7 +21,7 @@ act 'Hello, of course I remember':
 	act 'I do not mind':
 		cla
 		vladimirQW = 21
-		vladimirday = day
+		vladimirday = daystart
 		'(You) - I do not mind.'
 		'(Vladimir) - Wonderful. Then come to the restaurant in 20 hours.'
 
@@ -30,3 +30,4 @@ act 'Hello, of course I remember':
 end
 
 --- qwloc2 ---------------------------------
+

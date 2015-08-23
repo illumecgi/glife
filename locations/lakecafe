@@ -87,7 +87,7 @@ if $ARGS[0] = 'main':
 		end
 	end
 
-	if LCwork2 >= 1 and LCwork2day ! day and hour = 18:
+	if LCwork2 >= 1 and LCwork2day ! daystart and hour = 18:
 		act 'Help in the kitchen':gt 'LCwork', 'Kitchen'
 	end
 
@@ -188,7 +188,7 @@ if $ARGS[0] = 'barmensha':
 				'<center><img src="images/LakeCafe/LakeBarmensha.jpg"></center>'
 
 				if LCworkwork = 0:
-					'You ask Zhenyu about the "special" work. It tells you that on Monday, at 22 o''clock, in the cafe visitors who need quality "service." Pay from 500 to 2, 000 rubles.'
+					'You ask Zhenyu about the "special" work. It tells you that on Monday, at 22 c''clock, in the cafe visitors who need quality "service." Pay from 500 to 2, 000 rubles.'
 
 					act '...':
 						LCworkwork = 1
@@ -197,7 +197,7 @@ if $ARGS[0] = 'barmensha':
 						gt 'lakecafe', 'barmensha'
 					end
 				elseif LCworkwork = 1:
-					'You ask about the work of Eugene. It reminds you of conditions:on Mondays, at 22 o''clock, you will need to "serve" certain visitors. Paid for it from 500 to 2000 rubles.'
+					'You ask about the work of Eugene. It reminds you of conditions:on Mondays, at 22 c''clock, you will need to "serve" certain visitors. Paid for it from 500 to 2000 rubles.'
 
 					act '...':
 						minut += 3
@@ -212,3 +212,4 @@ if $ARGS[0] = 'barmensha':
 end
 
 --- lakecafe ---------------------------------
+

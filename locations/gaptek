@@ -69,7 +69,7 @@ if motherQW >= 2:
 					'- Here we have all "for the garden." Choose.'
 				else
 					minut += rand(5, 15)
-					if gaprezikday ! day or gatabletkiday ! day:
+					if gaprezikday ! daystart or gatabletkiday ! daystart:
 						'You wait until the last buyer leaves from the pharmacy, and then speak to my aunt.'
 						'- Aunts, my mom would have it ... for a vegetable garden ...'
 						'- Yes, I have understood, you go here, trash - she grins.'
@@ -112,8 +112,8 @@ if motherQW >= 2:
 			end
 		else
 			minut += rand(5, 15)
-			if gaprezikday ! day or gatabletkiday ! day or galubri = 0 or (galubri = 1 and galubriday ! day):
-				if rand(1, 10) = 10 and oluuosegunday ! day:
+			if gaprezikday ! daystart or gatabletkiday ! daystart or galubri = 0 or (galubri = 1 and galubriday ! daystart):
+				if rand(1, 10) = 10 and oluuosegunday ! daystart:
 					cls
 					'<center><b><font color="maroon">Drugstore</font></b></center>'
 					'<center><img src="images/etogame/aptek.jpg"></center>'
@@ -149,7 +149,7 @@ if motherQW >= 2:
 
 					act 'Agree':
 						cla
-						oluuosegunday = day
+						oluuosegunday = daystart
 						if tetyafirst < 2:
 							tetyafirst = 2
 							'- Well, aunt, figs with you, help you, tea is not a stranger. But going to be!'
@@ -242,6 +242,7 @@ if motherQW >= 2:
 											'- Bad? Yes in the ass is a pain that does not pass!'
 											'- I understand - aunt winced, remembering the experience. - What did you, no lubrication or what?'
 
+											! WD: Uninitialised ~ 'ssdostup'
 											if age < 18 and ssdostup = 0:'- Where do you take it? In the adult store I have not allowed. Besides, I do ofigela on its size and disconnected, and woke up when it was too late.'
 											if age >= 18 or ssdostup = 1:'- Yes, I even did not have time to understand. When I saw razmerchik, so we can say disconnected. And when I came it was too late. In addition, far away to the city to go.'
 
@@ -432,7 +433,7 @@ if motherQW >= 2:
 
 					act 'Do not agree':
 						cla
-						oluuosegunday = day
+						oluuosegunday = daystart
 						if tetyafirst = 0:
 							tetyafirst = 1
 							'- You just moved, aunt! Niece of the litter of a black man trying to do!'
@@ -463,7 +464,7 @@ if motherQW >= 2:
 end
 
 if StoryLine = 1:
-	if money >= 100 and motherQW >= 2 and gaptekfirst = 1 and gaprezikday ! day:
+	if money >= 100 and motherQW >= 2 and gaptekfirst = 1 and gaprezikday ! daystart:
 		act 'Buy <b>condoms</b> (100 rubles) <<iif(prezik > 0, ''[left:<b>'' + prezik + ''</b>]'', '''')>>':
 			cla
 			*clr
@@ -477,7 +478,7 @@ if StoryLine = 1:
 				prezik += portion * 5
 				minut += 5 + (portion / 5)
 				money -= portion * 100
-				gaprezikday = day
+				gaprezikday = daystart
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought condoms and paid the money to the cashier.'
 
@@ -513,7 +514,7 @@ if StoryLine = 1:
 	end
 
 	!! you can only buy lube here if your aunt arranged for it and you haven''t bought any today yet
-	if money >= 300 and galubri = 1 and motherQW >= 2 and gaptekfirst = 1 and galubriday ! day:
+	if money >= 300 and galubri = 1 and motherQW >= 2 and gaptekfirst = 1 and galubriday ! daystart:
 		act 'Buy <b>lubricant</b> (300 rubles) <<iif(lubri > 0, ''[left:<b>'' + lubri + ''</b>]'', '''')>>':
 			cla
 			*clr
@@ -526,7 +527,7 @@ if StoryLine = 1:
 				lubri += portion * 5
 				minut += 5 + (portion / 5)
 				money -= portion * 300
-				galubriday = day
+				galubriday = daystart
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought some lubricant and paid the money to the cashier.'
 			else
@@ -538,7 +539,7 @@ if StoryLine = 1:
 	end
 
 	if money >= 500:
-		if gatabletkiday ! day:
+		if gatabletkiday ! daystart:
 			act 'Buy <b>birth control pills</b> (500 rubles) <<iif(tabletki > 0, ''[left:<b>'' + tabletki + ''</b>]'', '''')>>':
 				cla
 				*clr
@@ -550,7 +551,7 @@ if StoryLine = 1:
 					tabletki += portion * 28
 					minut += 5 + (portion / 5)
 					money -= portion * 500
-					gatabletkiday = day
+					gatabletkiday = daystart
 					'<center><img src="images/etogame/kassa.jpg"></center>'
 					'You bought some lubricant and paid the money to the cashier.'
 				else
@@ -700,3 +701,4 @@ if StoryLine = 1:
 end
 
 --- gaptek ---------------------------------
+

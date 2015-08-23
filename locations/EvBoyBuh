@@ -236,7 +236,8 @@ if GorSlut = 0:
 						$nameBoyfrend[numboyFrend] = $bname
 						$nameBoyfrendFull[numboyFrend] = $bnamefull
 						dickBoyFrend[numboyFrend] = dick
-						silavagBoyFrend[numboyFrend] = siladick
+						! WD: Uninitialised ~ 'siladick' use 'silavag'
+						silavagBoyFrend[numboyFrend] = silavag
 						otnBoyFrend[numboyFrend] = 50
 						minut += 30
 						bmFrend[Tboynum] = 1
@@ -701,3 +702,4 @@ end
 !!dynamic $dinrandswallow
 
 --- EvBoyBuh ---------------------------------
+

@@ -28,3 +28,4 @@ if ymanrem[3] >= 1:act 'Cabinet':minut += 1 & gt 'ykabinet'
 if $clothingworntype ! 'nude':act 'Go outside':minut += 5 & gt 'youplace'
 
 --- ymans ---------------------------------
+

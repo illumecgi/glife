@@ -99,11 +99,11 @@ if $shoplocation = 'main':
 	!! This is connected to the trade mission
 	if TorgPredZ > 0:
 		!! the location of the shop hasn''t been done today
-		if ($loc = 'street' and StreetShopTPday ! day) or ($loc = 'Nord' and nordShopTPday ! day) or ($loc = 'down' and downShopTPday ! day):
+		if ($loc = 'street' and StreetShopTPday ! daystart) or ($loc = 'Nord' and nordShopTPday ! daystart) or ($loc = 'down' and downShopTPday ! daystart):
 			act 'Arrange products':
-				if $loc = 'street':StreetShopTPday = day
-				if $loc = 'Nord':nordShopTPday = day
-				if $loc = 'down':downShopTPday = day
+				if $loc = 'street':StreetShopTPday = daystart
+				if $loc = 'Nord':nordShopTPday = daystart
+				if $loc = 'down':downShopTPday = daystart
 
 				cls
 				mtprand = rand(40, 130)
@@ -772,3 +772,4 @@ if $shoplocation = 'icecream':
 end
 
 --- shop ---------------------------------
+

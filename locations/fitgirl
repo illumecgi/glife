@@ -4,7 +4,7 @@ $dintaniastart = {
 		act 'Molest':
 			cla
 			*clr
-			tanday = day
+			tanday = daystart
 			gs 'stat'
 
 			'<center><img src="images/img/centr/razd1.jpg"></center>'
@@ -62,7 +62,8 @@ act 'Going into the shower behind a girl':
 	cls
 	minut = minut + 15
 	sweat = -3
-	horny = horny + (hornyboost/10) - (hornydamp/10) + 1
+	! WD: Remove old Cheat code
+	horny += 1
 	hapri = 0
 	mop = 1
 

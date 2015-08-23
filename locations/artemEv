@@ -87,7 +87,7 @@ $din_artem_lern = {
 		lern += rand(3, 6)
 		intel += rand(1, 2)
 		artemtimes += 1
-		if ArtomBeInHome = 0:ArtomBeInHome = 1
+		if ArtemBeInHome = 0:ArtemBeInHome = 1
 		gs 'stat'
 		act 'Rest':artemhomemark = 1 & gt 'artemhome'
 
@@ -100,15 +100,15 @@ $din_artem_lern = {
 		end
 
 		if GorSlut >= 2 and artemblag = 0:
-			if artemBJQW = 0 and artomsex = 0:
+			if artemBJQW = 0 and artemsex = 0:
 				cla
 				'After class, Artem looked at you, "Sveta, everyone in the school is talking about, you huesoska. I think it will be fair if you have me for otsosesh, I will help thee."'
-				dynamic $din_artom_bj
+				dynamic $din_artem_bj
 
 				act 'No':
 					cls
 					dom += 1
-					artomLernQW = -1
+					artemLernQW = -1
 					artemblok = 1
 					grupNPC[2] = 0
 					gs 'stat'
@@ -116,12 +116,12 @@ $din_artem_lern = {
 					'You denied Artem, he openly offended "Listen, I have so much time and effort spent, and you... you suck at all in a row, and I do not want... More to me you can not approach."'
 					act 'Going home':gt 'gorodok'
 				end
-			elseif (artemBJQW > 0 and artemBJQW < 10 and artomsex = 0) or (artomStripSee = 3 and artomsex = 0 and artomTouch > daystart):
+			elseif (artemBJQW > 0 and artemBJQW < 10 and artemsex = 0) or (artemStripSee = 3 and artemsex = 0 and artemTouch > daystart):
 				cla
 				'Artem unbuttoned pants and pulled out a member of his pants. "On, Svetik, Suck."'
 
-				dynamic $din_artom_bj
-			elseif artemBJQW = 10 and artomsex = 0:
+				dynamic $din_artem_bj
+			elseif artemBJQW = 10 and artemsex = 0:
 				cla
 				'After classes you Artem carefully examined and, a little shy, said:'
 				'"Show me how you all there .... nuuu ... you understand. And I vagina and boobs only seen in pictures."'
@@ -129,7 +129,7 @@ $din_artem_lern = {
 					act 'Agree in exchange for services':
 						cls
 						minut += 5
-						artomhakday = daystart
+						artemhakday = daystart
 						arthakQW = 1
 						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/anatomy.jpg"></center>'
@@ -138,11 +138,11 @@ $din_artem_lern = {
 						'You: "Now about the service. In Dimka Nosov have one bad record with me. It stores it on your computer. Can you crack it and destroy this computer record? Just do not look!"'
 						'Artem: "Okay, I`ll see what can be done. What about recording?"'
 						'"Yes, I dance drunk, and he took it on video and promised my mother tell" - We lied to you'
-						artomStripSee = 1
+						artemStripSee = 1
 						''
 						'Looking at You, Artem unbuttoned pants and pulled out a member of his pants. "On, Svetik, Suck."'
 
-						dynamic $din_artom_bj
+						dynamic $din_artem_bj
 					end
 				else
 					act 'Agree':
@@ -153,21 +153,21 @@ $din_artem_lern = {
 						'"Good, I`ll show you everything, but I really need money for medication for my sister - you will not have 300 r.?"'
 						'Artem gives money: "Take course." You take off their clothes and demonstrate all its charms'
 						money += 300
-						artomStripSee = 1
+						artemStripSee = 1
 						''
 						'Looking at You, Artem unbuttoned pants and pulled out a member of his pants. "On, Svetik, Suck."'
 
-						dynamic $din_artom_bj
+						dynamic $din_artem_bj
 					end
 				end
-			elseif artemBJQW > 10 and artomStripSee < 2 and artomsex = 0:
-				artomRand = rand(0,5)
+			elseif artemBJQW > 10 and artemStripSee < 2 and artemsex = 0:
+				artemRand = rand(0,5)
 				cls
 				gs 'stat'
-				if artomRand = 5:
+				if artemRand = 5:
 					'After classes you Artem carefully examined and said, putting 300r. on the table:'
 					'"Let`s repeat the anatomy lesson"'
-					artomStripSee = 2
+					artemStripSee = 2
 					act 'Undress':
 						minut += 5
 						'<center><img src="images/qwest/alter/artom/anatomy2.jpg"></center>'
@@ -176,19 +176,19 @@ $din_artem_lern = {
 						''
 						'Looking at You, Artem unbuttoned pants and pulled out a member of his pants. "On, Svetik, Suck."'
 
-						dynamic $din_artom_bj
+						dynamic $din_artem_bj
 					end
 				else
 					'Artem unbuttoned pants and pulled out a member of his pants. "On, Svetik, Suck."'
 
-					dynamic $din_artom_bj
+					dynamic $din_artem_bj
 				end
-			elseif artomStripSee = 2 and artomsex = 0:
+			elseif artemStripSee = 2 and artemsex = 0:
 				cls
 				money += 500
 				minut += 5
-				artomTouch = daystart + 7
-				artomStripSee = 3
+				artemTouch = daystart + 7
+				artemStripSee = 3
 				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 				'After class Artem, blushing, appeals to you: "Listen, I have already sufficiently considered - I want to touch you there. I have 500p for lunch - you have enough?"'
@@ -218,7 +218,7 @@ $din_artem_lern = {
 							'Artem: "As seen porn."'
 							'Silently dressed and go home.'
 
-							artomHorny = 1
+							artemHorny = 1
 							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 						end
 					else
@@ -227,19 +227,19 @@ $din_artem_lern = {
 						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/anatomy3_1.jpg"></center>'
 						'Artem touch your breasts and pussy. After a few touches he removes his hands, unbuttons his pants and pulls out a member of his pants. "On, Svetik, Suck."'
-						artomHorny = 0
+						artemHorny = 0
 
-						dynamic $din_artom_bj
+						dynamic $din_artem_bj
 					end
 				end
-			elseif artomStripSee = 3 and artomsex = 0 and artomTouch <= daystart:
+			elseif artemStripSee = 3 and artemsex = 0 and artemTouch <= daystart:
 				cls
 				minut += 5
 				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 				'During a break in employment, you chatted with Artem.'
-				artomStripSee = 4
-				if artomHorny = 1:
+				artemStripSee = 4
+				if artemHorny = 1:
 					'Artem: "Finally, the, I saw a woman ends - you`re finished?"'
 					'You: "I come. Okay, I hope Locked?"'
 					'Artem: "Nuuu ... I was hoping for more .... Nuu..where such sex."'
@@ -257,7 +257,7 @@ $din_artem_lern = {
 					'You just do lessons.'
 				end
 				act 'Further':artemhomemark = 1 & gt 'artemhome'
-			elseif artomStripSee = 4:
+			elseif artemStripSee = 4:
 				cls
 				minut += 5
 				gs 'stat'
@@ -270,7 +270,7 @@ $din_artem_lern = {
 				act 'Takeout':
 					cls
 					dom += 1
-					artomLernQW = -1
+					artemLernQW = -1
 					artemblok = 1
 					grupNPC[2] = 0
 					gs 'stat'
@@ -280,12 +280,12 @@ $din_artem_lern = {
 					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 				act 'Agree':
-					artomAndPetja = 1
-					artomStripSee = 5
+					artemAndPetja = 1
+					artemStripSee = 5
 					'"Looking for. Okay, drives in the next time your friend" - you said.'
 					act 'Further':artemhomemark = 1 & gt 'artemhome'
 				end
-			elseif artomAndPetja = 1:
+			elseif artemAndPetja = 1:
 				cls
 				minut += 5
 				gs 'stat'
@@ -329,7 +329,7 @@ $din_artem_lern = {
 							manna = mannamax
 							minut += 10
 							money += 1000
-							artomAndPetja = 2
+							artemAndPetja = 2
 							gs 'stat'
 							'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
 							'Artem: "Petka liked, He would like to make regular extra-curricular lessons, you also need money? The more you have to tell us about sex and... show."'
@@ -340,16 +340,16 @@ $din_artem_lern = {
 						end
 					end
 				end
-			elseif artomAndPetja >= 2 and artomAndPetja <= 10:
-				if artomAndPetja >= 3:
-					artomAndPetjaRand = rand(0,1)
+			elseif artemAndPetja >= 2 and artemAndPetja <= 10:
+				if artemAndPetja >= 3:
+					artemAndPetjaRand = rand(0,1)
 				else
-					artomAndPetjaRand = rand(0,5)
+					artemAndPetjaRand = rand(0,5)
 				end
-				if artomAndPetjaRand ! 0:
+				if artemAndPetjaRand ! 0:
 					'Artem unbuttoned pants and pulled out a member of his pants. "On, Svetik, Suck."'
 
-					dynamic $din_artom_bj
+					dynamic $din_artem_bj
 				else
 					cls
 					minut += 5
@@ -386,12 +386,12 @@ $din_artem_lern = {
 							'"So. Now, to change their place." Now you Gallop Petit and suck Artem, removing a condom. Peter closed his eyes and you feel,  as the jet of sperm filled his condom: "Something you are very quickly. Do not worry - it happens from inexperience. The next time you repeat. We will repeat until you learn to hold back long enough. And you what Artem?" And you redoubled their efforts. The jet of sperm hit you in the mouth.'
 							'You take 1000r. and go.'
 
-							artomAndPetja += 1
+							artemAndPetja += 1
 							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 						end
 					end
 				end
-			elseif artomAndPetja = 11:
+			elseif artemAndPetja = 11:
 				cls
 				minut += 10
 				horny += 10
@@ -420,10 +420,10 @@ $din_artem_lern = {
 					'"I only - always wanted to taste it." - Peter smiled.'
 					'You take 1000r. and go.'
 
-					artomAndPetja = 12
+					artemAndPetja = 12
 					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
-			elseif artomAndPetja = 12:
+			elseif artemAndPetja = 12:
 				minut += 5
 				horny += 10
 				gs 'stat'
@@ -452,10 +452,10 @@ $din_artem_lern = {
 					'"It was awesome - you`re both geeks - consider, that passed the exam. After this we are almost home. Okay, it is necessary to wash. Petya, I see you are in shock, but you have seen both this girl ends. I think today will be enough impressions."'
 					'Are you going to go home.'
 
-					artomAndPetja = 13
+					artemAndPetja = 13
 					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
-			elseif artomAndPetja = 13:
+			elseif artemAndPetja = 13:
 				cls
 				minut += 5
 				gs 'stat'
@@ -495,11 +495,11 @@ $din_artem_lern = {
 						'"That is why we must begin with Cooney, but not leading to orgasm, and only then anal - and you and the girl will be fine. I think the lesson is over for today."'
 						'You bring myself up, take away 1000r. and go home.'
 
-						artomAndPetja = 14
+						artemAndPetja = 14
 						act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 					end
 				end
-			elseif artomAndPetja = 14:
+			elseif artemAndPetja = 14:
 				cls
 				minut += 5
 				horny += 10
@@ -535,7 +535,7 @@ $din_artem_lern = {
 						'<center><img src="images/qwest/alter/artom/ap_anatomy6_3.jpg"></center>'
 						'You swallow the sperm and drink all the urine does not even wince. Guys put you out the door, saying that the next time prizodili right into the garage, and you quietly go home knowing that this is just the beginning.'
 
-						artomAndPetja = 15
+						artemAndPetja = 15
 						arthakQW = 10
 						artemblok = 1
 						act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
@@ -543,15 +543,15 @@ $din_artem_lern = {
 				end
 			end
 		end
-		
+
 		if (artQW = 3 or artQW = 20) and artemkissday ! daystart and (GorSlut < 2 or artemblag = 1):
 			'After training with Artem, he leaned toward your face, what would kiss you.'
-			dynamic $artomKiss
+			dynamic $artemKiss
 		end
 	end
 }
 
-$artomKiss = {
+$artemKiss = {
 	act 'Kiss Artem':
 		cls
 		horny += 10
@@ -561,7 +561,7 @@ $artomKiss = {
 		if GorSlut >= 2 and artemblag = 0:
 			cla
 			'"I`m not going to kiss huesoska. Better you you want to do so, so love" - After these words, Artem unbuttoned pants and pulled out a member of his pants.'
-			dynamic $din_artom_bj
+			dynamic $din_artem_bj
 			exit
 		end
 
@@ -570,10 +570,10 @@ $artomKiss = {
 		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
 		'You smiled Artem and his face a little closer to it. Artem approached you and kissed you. You started kissing. Finally ending the kiss shyly said Artem. "Sveta, I really like you."'
 
-		if artemtimes >= 20 and leghumpArtom = 0:
+		if artemtimes >= 20 and leghumpArtem = 0:
 			'Artem muttered sheepishly. "Svetulya. I want you so much, maybe we could... well you know... You can touch your ass?"'
 			dynamic $din_artem_leghump
-		elseif leghumpArtom >= 1:
+		elseif leghumpArtem >= 1:
 			'Artem said shyly. "Svetulya, you are such a wonderful. I enjoyed it so much last time. Can we play one more time?"'
 			dynamic $din_artem_leghump
 			dynamic $din_artem_leghump2
@@ -582,7 +582,7 @@ $artomKiss = {
 		if artQW = 3:
 			if horny < 50:
 				if lernHome > 0:
-					dynamic $din_artom_lern
+					dynamic $din_artem_lern
 				else
 					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
@@ -601,9 +601,9 @@ $artomKiss = {
 					'You reluctantly got Artem member of his pants and began to gently move the skin up and down the opening purple head that closing it. Soon, Artem could not resist, and finished in your hands. You went to the bathroom and washed his hands.'
 
 					if lernHome > 0:
-						dynamic $din_artom_lern
+						dynamic $din_artem_lern
 					end
-					
+
 					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 			elseif horny >= 50:
@@ -620,9 +620,9 @@ $artomKiss = {
 					'Did you get a member of the Artem his pants and began to gently move the skin up and down the opening purple head that closing it. Soon, Artem could not resist, and finished in your hands. You went to the bathroom and washed his hands.'
 
 					if lernHome > 0:
-						dynamic $din_artom_lern
+						dynamic $din_artem_lern
 					end
-					
+
 					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
 			end
@@ -631,7 +631,7 @@ $artomKiss = {
 		if artQW = 20:
 			if horny < 30:
 				if lernHome > 0:
-					dynamic $din_artom_lern
+					dynamic $din_artem_lern
 				else
 					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 				end
@@ -648,7 +648,7 @@ $artomKiss = {
 					'Did you get a member of the Artem his pants and began to gently move the skin up and down the opening purple head that closing it. Soon, Artem could not resist, and finished in your hands. You went to the bathroom and washed his hands.'
 
 					if lernHome > 0:
-						dynamic $din_artom_lern
+						dynamic $din_artem_lern
 					else
 						act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 					end
@@ -667,14 +667,14 @@ $artomKiss = {
 					'"I want you..." Hear the voice of Artyom.'
 
 					if mesec > 0:
-						if artomanal > 0:
+						if artemanal > 0:
 							'You are not a long time looking up from a member of said Artem, that you have a month, Artem immediately offered you anal.'
 
 							act 'Agree to anal':
 								cls
 								minut += 15
 								anala += 1
-								artomanal += 1
+								artemanal += 1
 								gs 'stat'
 
 								'<center><img src="images/qwest/alter/artom/anal.jpg"></center>'
@@ -683,12 +683,12 @@ $artomKiss = {
 								dynamic $analsexrude
 
 								if lernHome > 0:
-									dynamic $din_artom_lern
+									dynamic $din_artem_lern
 								else
 									act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 								end
 							end
-						elseif artomsex >= 10 and artomanal = 0:
+						elseif artemsex >= 10 and artemanal = 0:
 							act 'I month':
 								cls
 								minut += 5
@@ -712,7 +712,7 @@ $artomKiss = {
 									'You: "Well, why - maybe ever - I myself will tell you ,when I`m ready and in the mood."'
 
 									if lernHome > 0:
-										dynamic $din_artom_lern
+										dynamic $din_artem_lern
 									else
 										act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 									end
@@ -721,7 +721,7 @@ $artomKiss = {
 									cls
 									minut += 15
 									anala += 1
-									artomanal += 1
+									artemanal += 1
 									gs 'stat'
 
 									'<center><img src="images/qwest/alter/artom/anal.jpg"></center>'
@@ -733,7 +733,7 @@ $artomKiss = {
 									dynamic $analsexrude
 
 									if lernHome > 0:
-										dynamic $din_artom_lern
+										dynamic $din_artem_lern
 									else
 										act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 									end
@@ -745,7 +745,7 @@ $artomKiss = {
 							cls
 							minut += 5
 							sexa += 1
-							if artomsex >= 1:artomsex += 1
+							if artemsex >= 1:artemsex += 1
 							gs 'stat'
 
 							'<center><img src="images/qwest/alter/artom/sex.jpg"></center>'
@@ -755,15 +755,15 @@ $artomKiss = {
 							dynamic $sexstart2
 							dynamic $sexcum
 
-							if artomsex = 0:
-								artomsex = 1
+							if artemsex = 0:
+								artemsex = 1
 								'"Here you are a man"-You say you smile.'
 								'Artem: "Sveta...I...my I love you..."'
 								'In response, you said nothing.'
 							end
 
 							if lernHome > 0:
-								dynamic $din_artom_lern
+								dynamic $din_artem_lern
 							else
 								act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 							end
@@ -793,7 +793,7 @@ $artomKiss = {
 						'Artem: "Very. It was really cool"'
 
 						if lernHome > 0:
-							dynamic $din_artom_lern
+							dynamic $din_artem_lern
 						else
 							act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
 						end
@@ -806,12 +806,12 @@ $artomKiss = {
 	end
 }
 
-$artomSkver = {
+$artemSkver = {
 	!Walk in the park
 	cls
 	minut += 15
 	gs 'stat'
-	dynamic $artomGopSkver
+	dynamic $artemGopSkver
 
 	'<center><img src="images/qwest/alter/artom/walk/walk_<<rand(1,2)>>.jpg"></center>'
 	'You walk through the square and talking about all sorts of trivia. Artem invites you to the movies.'
@@ -821,14 +821,14 @@ $artomSkver = {
 		gs 'stat'
 		'<center><img src="images/qwest/alter/artom/walk/kino_<<rand(1,3)>>.jpg"></center>'
 		'You go to the cinema and watching a movie, sitting in the back row.'
-		artomKino += 1
-		if artomKino > 3 and artomKinoKiss < 5:
+		artemKino += 1
+		if artemKino > 3 and artemKinoKiss < 5:
 			cls
 			'You go to the cinema and watching a movie, sitting in the back row.'
 			'<center><img src="images/qwest/alter/artom/walk/kinokiss_<<rand(1,2)>>.jpg"></center>'
 			'The film turned out to be dull . You are inclined to the Artyom, and kissed him. The residue session you just kissing.'
-			artomKinoKiss += 1
-		elseif artomKinoKiss >= 5:
+			artemKinoKiss += 1
+		elseif artemKinoKiss >= 5:
 			cls
 			'You go to the cinema and watching a movie, sitting in the back row.'
 			'<center><img src="images/qwest/alter/artom/walk/kinobj_<<rand(1,3)>>.jpg"></center>'
@@ -837,7 +837,7 @@ $artomSkver = {
 			bja += 1
 			swallow += 1
 			cumlip += 1
-			artomKinoKiss += 1
+			artemKinoKiss += 1
 		end
 		'After the release of the movie did you decide to go back to Artem.'
 		act 'Go to Artem':gt 'artemhome'
@@ -848,23 +848,23 @@ $artomSkver = {
 		gs 'stat'
 		'"Let`s just have a walk."'
 		'You go for a walk.'
-		dynamic $artomGopSkver
+		dynamic $artemGopSkver
 
 		'Work up you have decided to go back to Artem.'
 		act 'Go to Artem':gt 'artemhome'
 	end
 }
 
-$artomGopSkver = {
-	artomRand = rand(0,10)
-	if artomRand < 2:
+$artemGopSkver = {
+	artemRand = rand(0,10)
+	if artemRand < 2:
 		cls
 		minut += 5
 		gs 'stat'
 		'<center><img src="images/qwest/alter/artom/walk/walkgop.jpg"></center>'
 		'You walk through the square and run into Gopnik.'
 		'"Oh! Sveta! What is this with you drisch?"'
-		act 'Disregard':'You pass by ignoring all.' & act 'Walking further':dynamic $artomSkver
+		act 'Disregard':'You pass by ignoring all.' & act 'Walking further':dynamic $artemSkver
 		act 'Answer':
 			cla
 			'"This is not a drisch Artem!" Gopnik comes to and asks Artem: "Drisch you or drisch?"'
@@ -927,20 +927,20 @@ $artomGopSkver = {
 						cls
 						minut += 5
 						gs 'stat'
-						artomGopRange = speed + agil + beg
-						if artomGopRange < 50:
-							artomRand = rand(0,1)
-						elseif artomGopRange >= 50 and artomGopRange < 100:
-							artomRand = rand(0,2)
-						elseif artomGopRange >= 100 and artomGopRange < 150:
-							artomRand = rand(0,5)
-						elseif artomGopRange >= 150 and artomGopRange < 200:
-							artomRand = rand(0,10)
+						artemGopRange = speed + agil + beg
+						if artemGopRange < 50:
+							artemRand = rand(0,1)
+						elseif artemGopRange >= 50 and artemGopRange < 100:
+							artemRand = rand(0,2)
+						elseif artemGopRange >= 100 and artemGopRange < 150:
+							artemRand = rand(0,5)
+						elseif artemGopRange >= 150 and artemGopRange < 200:
+							artemRand = rand(0,10)
 						else
-							artomRand = rand(0,20)
+							artemRand = rand(0,20)
 						end
 
-						if artomRand ! 0:
+						if artemRand ! 0:
 							dom += 5
 							gs 'stat'
 							'<center><img src="images/qwest/alter/artom/walk/walk_save.jpg"></center>'
@@ -974,7 +974,7 @@ $artomGopSkver = {
 	end
 }
 
-$artomBibl = {
+$artemBibl = {
 	!Walk in bibleotek
 	if lernHome > 0:lernHome = 0
 	cls
@@ -1029,3 +1029,4 @@ act 'Go to Artem':gt 'artemhome'
 !!dynamic $din_artem_lern
 
 --- artemEv ---------------------------------
+

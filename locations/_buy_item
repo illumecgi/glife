@@ -13,3 +13,4 @@ $message = '<font color="green">You bought <<count>> <b><<$item>></b>.</font>'
 gt $location, $message
 
 --- $buy_item ---------------------------------
+

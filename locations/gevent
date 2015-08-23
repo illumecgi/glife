@@ -65,7 +65,7 @@ end
 if $ARGS[0] = '1-1':
 	cla
 	*clr
-	dmishaday = day
+	dmishaday = daystart
 	dick = 18
 	sex += 1
 	bj += 1
@@ -226,3 +226,4 @@ if $ARGS[0] = '7':
 end
 
 --- gevent ---------------------------------
+

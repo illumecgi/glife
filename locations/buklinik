@@ -279,10 +279,10 @@ if $ARGS[0] = 'olga2':
 	'(Olga - groomed and cute brunette with a kind smile.)'
 
 	if bumtolik > 5:'- Hello, <<$name>>!'
-	if buklinikDay = day:'- Today there is no more work, we can relax.'
-	if bumtolik = 7 and buklinikDay ! day:'- <<$name>>, We need help <a href="exec:gt ''buklinik_event'', ''pos6''">feed the needy</a>.'
-	if bumtolik >= 8 and buklinikDay ! day: '- <<$name>>, here is the address of one <a href="exec:GT ''buklinik_event'',''pos8''">elderly man</a>, go see him help with the housework.'
-	if bumtolik = 9 and buklinikDay ! day: '- <<$name>>, Need help persuade a wino not wander the streets, and come to live with <a href="exec:GT ''buklinik_event'',''pos9''">to_us</a>.'
+	if buklinikDay = daystart:'- Today there is no more work, we can relax.'
+	if bumtolik = 7 and buklinikDay ! daystart:'- <<$name>>, We need help <a href="exec:gt ''buklinik_event'', ''pos6''">feed the needy</a>.'
+	if bumtolik >= 8 and buklinikDay ! daystart: '- <<$name>>, here is the address of one <a href="exec:GT ''buklinik_event'',''pos8''">elderly man</a>, go see him help with the housework.'
+	if bumtolik = 9 and buklinikDay ! daystart: '- <<$name>>, Need help persuade a wino not wander the streets, and come to live with <a href="exec:GT ''buklinik_event'',''pos9''">to_us</a>.'
 	if bumtolik = 5:
 		bumtolik = 6
 		'Olga:- Continue along the corridor beds, showers and a dining room where guests can eat for free. See there is nothing special. Well, that''s all. At the reception we sit two girls - Regina and Karina, you''ve seen them.'
@@ -293,3 +293,4 @@ if $ARGS[0] = 'olga2':
 	act 'In the corridor':gt 'buklinik', 'holl'
 end
 --- buklinik ---------------------------------
+

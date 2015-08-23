@@ -17,7 +17,7 @@ if workDolg > 0:'Your debt is <<workDolg>> rubles'
 act 'Go to the sauna':gt 'saunawork'
 
 if workDolg > 0:
-	act 'There are in debt (0:05)':
+	act 'Drink tea with cookies (0:05)':
 		cla
 		*clr
 		minut += 5
@@ -27,7 +27,7 @@ if workDolg > 0:
 		energy = 20
 		water = 20
 		fat += 50
-		salo += 1
+		! salo += 1
 		frost = 0
 		gs 'stat'
 		'<center><img src="images/pics/food.jpg"></center>'
@@ -60,3 +60,4 @@ if water < 20:
 end
 
 --- saunaroom ---------------------------------
+

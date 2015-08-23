@@ -530,7 +530,7 @@ if $ARGS[0] = 'work2':
 								'You felt like like vagina stretched anus clasping member when a customer came in you, he immediately began to have your ass.'
 							end
 
-							if klismaday ! day:
+							if klismaday ! daystart:
 								act 'Escape':
 									cla
 									*clr

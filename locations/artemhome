@@ -131,8 +131,8 @@ elseif artemhomemark = 1:
 	'Artem sits in his room on the bed.'
 
 	artemRand = rand(0,1)
-	if artemRand = 1 and artemtimes >= 45 and artemsex > 0 and artemanal > 0 and artemProgul ! day and (GorSlut < 2 or artemblag = 1):
-		artemProgul = day
+	if artemRand = 1 and artemtimes >= 45 and artemsex > 0 and artemanal > 0 and artemProgul ! daystart and (GorSlut < 2 or artemblag = 1):
+		artemProgul = daystart
 		cla
 		gs 'stat'
 		artemRand = rand(0,1)
@@ -140,14 +140,14 @@ elseif artemhomemark = 1:
 			'"<<$name>>, Let`s go for a walk?"'
 			act 'Agree':
 				'You agree, quickly packed up and went for a walk on the square.'
-				act 'Walk':dynamic $artomSkver
+				act 'Walk':dynamic $artemSkver
 			end
 			act 'Refuse': gt $curloc
 		else
 			'"<<$name>>, Let`s go to bibleotek, to write the essay?"'
 			act 'Agree':
 				'You agreed and went with Artem in bibleotek.'
-				act 'Go':dynamic $artomBibl
+				act 'Go':dynamic $artemBibl
 			end
 			act 'Refuse': gt $curloc
 		end
@@ -161,13 +161,13 @@ elseif artemhomemark = 1:
 	elseif artQW = 3 and artemkissday ! daystart:
 		!!wanker Artem
 		'Artem hugs you and kisses'
-		dynamic $artomKiss
+		dynamic $artemKiss
 	elseif artQW >= 2 and artQW <= 3 and artemtimes >= 30 and Suspeh >= 90 and GorSlut < 2:
 		artQW = 10
 		gt 'artemev2'
 	elseif artQW = 20 and artemkissday ! daystart:
 		'Artem hugs you and kisses'
-		dynamic $artomKiss
+		dynamic $artemKiss
 	end
 
 	if dimaFilm > 0 and arthakQW = 0 and vagina > 0:
@@ -255,3 +255,4 @@ elseif artemhomemark = 2:
 end
 
 --- artemhome ---------------------------------
+

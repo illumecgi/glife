@@ -10,7 +10,7 @@ if nums < NPCnum:jump 'marknulator'
 
 !!QAZAM
 !!PGIF
-$npc[0] = '<font color="green"><b><<$nikname[0]>></b></font> rating <<rating[0]>> <b><<winw[0]>>-<<lossw[0]>>-<<draww[0]>> <<SubWin[0]>>/<<SubLoss[0]>></b> <a href="exec:i = 0 & gt ''npcview''">see</a>'
+$npc[0] = '<font color="green"><b><<$nikname[0]>></b></font> rating <<rating[0]>> <b><<win[0]>>-<<loss[0]>>-<<draw[0]>> <<SubWin[0]>>/<<SubLoss[0]>></b> <a href="exec:i = 0 & gt ''npcview''">see</a>'
 $npc[1] = '<font color="green"><b><<$nikname[1]>></b></font> rating <<rating[1]>> <b><<win[1]>>-<<loss[1]>>-<<draw[1]>> <<SubWin[1]>>/<<SubLoss[1]>></b> <a href="exec:i = 1 & gt ''npcview''">see</a>'
 $npc[2] = '<b><<$nikname[2]>></b> rating <<rating[2]>> <b><<win[2]>>-<<loss[2]>>-<<draw[2]>> <<SubWin[2]>>/<<SubLoss[2]>></b> <a href="exec:i = 2 & gt ''npcview''">see</a>'
 $npc[3] = '<b><<$nikname[3]>></b> rating <<rating[3]>> <b><<win[3]>>-<<loss[3]>>-<<draw[3]>> <<SubWin[3]>>/<<SubLoss[3]>></b> <a href="exec:i = 3 & gt ''npcview''">see</a>'
@@ -760,3 +760,4 @@ end
 !!gs 'OnLoc'
 
 --- ratinglist ---------------------------------
+

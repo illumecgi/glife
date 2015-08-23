@@ -93,6 +93,7 @@ $d_katjaSextalk = {
 				act 'further':minut += 15 & gt 'KatjaHomeTalk'
 			end
 		end
+
 	elseif kattalkrand = 2:
 		if KatjaKnowAnal > 0:
 			'- <<$name>>, tell, how you took in the ass.'
@@ -105,6 +106,8 @@ $d_katjaSextalk = {
 				cls
 				KatjaLust += 5
 				KatjaHorny += 10
+				! WD: Uninitialised ~ 'KatjaKnowAnal'
+				KatjaKnowAnal = 1
 				gs 'stat'
 				'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 				'You told Katja as you gave in the ass and that it felt. Katja blushed and bit her lip.'
@@ -124,6 +127,8 @@ $d_katjaSextalk = {
 				cls
 				KatjaLust += 5
 				KatjaHorny += 10
+				! WD: Uninitialised ~ 'KatjaKnowMastr'
+				KatjaKnowMastr = 1
 				gs 'stat'
 				'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 				'You told Katja how you masturbate in the bathroom. Katja blushed and bit her lip.'
@@ -221,3 +226,4 @@ $d_katjahornykiss = {
 }
 
 --- KatjaHomeDin ---------------------------------
+

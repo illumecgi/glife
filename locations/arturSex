@@ -3,7 +3,7 @@ horny += 10
 
 if arturSex = 0:arturSex = 1 & guy += 1
 
-arturDay = day
+arturDay = daystart
 gs 'stat'
 gs 'arturdin'
 'Arthur put his arm around you, and his hands began to take off your clothes and caress your body.'
@@ -52,3 +52,4 @@ act 'Enjoy':
 end
 
 --- arturSex ---------------------------------
+

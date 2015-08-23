@@ -96,7 +96,7 @@ if week < 6 and hour > 8 and hour < 20:
 					end
 				end
 			end
-		elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid = 1 and niksexday ! day:
+		elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid = 1 and niksexday ! daystart:
 			cla
 			*clr
 			'<center><img src="images/img/centr/nikzal1.jpg"></center>'
@@ -107,7 +107,7 @@ if week < 6 and hour > 8 and hour < 20:
 			act 'Allow':
 				cla
 				*clr
-				niksexday = day
+				niksexday = daystart
 				bj += 1
 				anal += 1
 				guy += 1
@@ -176,10 +176,10 @@ if week < 6 and hour > 8 and hour < 20:
 					end
 				end
 			end
-		elseif hour > 17 and hour < 20 and housezalrand >= 3 and housezalrand <= 5 and niksvid > 1 and niksexday ! day:
+		elseif hour > 17 and hour < 20 and housezalrand >= 3 and housezalrand <= 5 and niksvid > 1 and niksexday ! daystart:
 			cla
 			*clr
-			niksexday = day
+			niksexday = daystart
 			'<center><img src="images/img/th/n2.jpg"></center>'
 			'While you zip over the room with a vacuum cleaner, comes Nicholas sat on the sofa and began to read a newspaper. Soon he looked up from the newspaper and began to watch you as you walk around the room with a vacuum cleaner and bend down periodically, that would vacuum under the furniture, it is not surprising, because every time it will be charmed by your bare buttocks, panties then you are not clothed. Do you like that he looks at you, and you have already started to bend especially where already vacuumed a couple of times and even got up on all fours, pretending to be trying to push the vacuum cleaner away with cupboard under, with your bare ass flaunted in front of him. You squinting nadlyudali he swallows saliva, looking at you with lust.'
 
@@ -201,11 +201,11 @@ if week < 6 and hour > 8 and hour < 20:
 
 		act 'Leave':gt 'house'
 	end
-elseif week = 6 and hour > 5 and hour < 10 and housezalrand < 5 and niksvid > 1 and niksexday ! day:
+elseif week = 6 and hour > 5 and hour < 10 and housezalrand < 5 and niksvid > 1 and niksexday ! daystart:
 	cla
 	*clr
 	minut += 30
-	niksexday = day
+	niksexday = daystart
 	'<center><img src="images/img/th/n0.jpg"></center>'
 	'Entering the room you see Nicholas lying on the sofa, in the clothes. It seems that he is not bad gulnul yesterday, the smell in the room could get drunk and wifey sent him to sleep in the living room.'
 	'"A <<$name>>, pour something" he said, opening his eyes and trying to get up there and then collapsed back vskhvativshis head. "Nah, because you can not drink." he articulated.'
@@ -228,11 +228,11 @@ elseif week = 6 and hour > 5 and hour < 10 and housezalrand < 5 and niksvid > 1 
 	end
 
 	act 'Leave':gt 'house'
-elseif hour > 17 and hour < 20 and housezalrand >= 3 and housezalrand <= 5 and niksvid > 1 and niksexday ! day:
+elseif hour > 17 and hour < 20 and housezalrand >= 3 and housezalrand <= 5 and niksvid > 1 and niksexday ! daystart:
 	cla
 	*clr
 	minut += 10
-	niksexday = day
+	niksexday = daystart
 	'<center><img src="images/img/th/n4.jpg"></center>'
 	'Entering the room you see Nicholas, sitting in a chair and talking on the phone. "<<$name>>, get a drink, " he said see you. You brought him a glass of whiskey, he took the glass and motioned for you to linger. You waited until he finished talking on the phone.'
 	'"What a day, sit down sit with me, " he said, slapping his thigh.'
@@ -245,15 +245,15 @@ elseif hour > 17 and hour < 20 and housezalrand >= 3 and housezalrand <= 5 and n
 		nik += 2
 		minut += 30
 		picrand = 79
-		niksexday = day
+		niksexday = daystart
 		'<center><img src="images/img/th/n5.jpg"></center>'
 		'You sit down on his leg and one arm around his neck, Nicholas hugs you by the waist and held her back in his chair. You almost lying on it, and he does not even try to climb between your legs, it just pushes you to come and sit and eyes closed. Realizing that he was just tired and he wants something to someone was there, you relax and lozhite head on his shoulder. So half an hour passes, Nicholas sits in a chair clutching you to yourself, and you listen to how he breathes, so you like to just relax and start to climb to the head of dreams, that if he was yours and you were sitting here in the evenings and rested. You clung to him more tightly embracing both hands, Nicholas felt as if your desire, and opened his eyes looked at you, after a couple of seconds, you kissed, but not as much as before, with animal passion, as if going to devour each other, and easily and gently, almost kosayas each other lips. Soon, his hands sliding over your body, he raised you and putting on a chair began to cover your body with kisses, descending lower and lower until he reached her thighs.'
 
 		act 'Continue':gt 'sex', 'kuni'
 	end
-elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid > 1 and niksexday ! day:
+elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid > 1 and niksexday ! daystart:
 	cla
-	niksexday = day
+	niksexday = daystart
 	'Entering the room you see Nicholas, sitting in a chair "<<$name>> wanna watch TV?" he asked.'
 
 	act 'Refuse':gt 'house'
@@ -264,7 +264,7 @@ elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid > 1 and niksexda
 		minut += 40
 		nik += 1
 		picrand = 80
-		niksexday = day
+		niksexday = daystart
 		'<center><img src="images/img/th/n6.jpg"></center>'
 		'You sit down beside him on the sofa, Nikolai priobnimaet you and lays down with one hand on hip, you are already prepared for the fact that it will start to stick, but then nothing happened, he just sat and watched TV pressed you to her. You get comfortable and resting her head on his shoulder, too, have begun to look at the TV show which is nonsense, but you did not care, and it seems too. So you sat for about half an hour, occasionally exchanging short phrases, you suddenly become so good and comfortable with him, but your idyll interrupted by football and you yourself do not believe Nicholas when asked to change the channel. "Maybe a little bit of a look?" he asked, as if this is your apartment and your TV.'
 
@@ -287,13 +287,13 @@ elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid > 1 and niksexda
 			end
 		end
 	end
-elseif hour > 17 and hour < 20 and housezalrand < 3 and nikslut = 1 and niksexday ! day:
+elseif hour > 17 and hour < 20 and housezalrand < 3 and nikslut = 1 and niksexday ! daystart:
 	cla
 	*clr
 	SUB += 1
 	guy += 1
 	minut += 20
-	niksexday = day
+	niksexday = daystart
 	money += 2000
 	picrand = 35
 	'<center><img src="images/img/th/s0.jpg"></center>'
@@ -302,13 +302,13 @@ elseif hour > 17 and hour < 20 and housezalrand < 3 and nikslut = 1 and niksexda
 	'"With pleasure, " you reply, kneeling.'
 
 	act 'Start':xgt 'sexdvoe', 'var'
-elseif hour > 17 and hour < 20 and housezalrand > 8 and nikslut = 1 and niksexday ! day:
+elseif hour > 17 and hour < 20 and housezalrand > 8 and nikslut = 1 and niksexday ! daystart:
 	cla
 	*clr
 	SUB += 1
 	guy += 1
 	minut += 20
-	niksexday = day
+	niksexday = daystart
 	money += 2000
 	picrand = 37
 	'<center><img src="images/img/th/s2.jpg"></center>'
@@ -332,3 +332,4 @@ elseif hour > 17 and hour < 20 and housezalrand > 8 and nikslut = 1 and niksexda
 end
 
 --- housezal ---------------------------------
+

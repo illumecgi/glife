@@ -26,7 +26,7 @@ $sitr_tread_d = {
 	cla
 	*clr
 	minut += 15
-	treadmillday = day
+	treadmillday = daystart
 	agil += 2
 	sweat += 1
 	beg += 1
@@ -44,7 +44,7 @@ $sitrobrd = {
 	cla
 	*clr
 	minut += 15
-	obruchday = day
+	obruchday = daystart
 	agil += 1
 	sweat += 1
 	manna -= 1
@@ -59,7 +59,7 @@ $sitryogd = {
 	cla
 	*clr
 	minut += 15
-	bookYogday = day
+	bookYogday = daystart
 	will += 1
 	manna += 5
 
@@ -80,7 +80,7 @@ $sitrskakd = {
 	cla
 	*clr
 	minut += 15
-	skakday = day
+	skakday = daystart
 	speed += 1
 	sweat += 1
 	manna -= 1
@@ -103,7 +103,7 @@ $sitrpressd = {
 	cla
 	*clr
 	minut += 15
-	pressday = day
+	pressday = daystart
 	vital += 1
 	sweat += 1
 	manna -= 1
@@ -126,7 +126,7 @@ $sitrpushd = {
 	cla
 	*clr
 	minut += 15
-	pushday = day
+	pushday = daystart
 	stren += 1
 	sweat += 1
 	manna -= 1
@@ -670,7 +670,7 @@ $butikreiqdi = {
 
 							if RimmaSex = 0:RimmaSex = 1 & girl += 1
 
-							rimmaday = day
+							rimmaday = daystart
 							gs 'stat'
 							'<center><img src="images/zoo/primer.jpg"></center>'
 							'<font color="magenta">Rimma, do you like me? </font> ou asked quietly'
@@ -721,7 +721,7 @@ $butikreiqdi = {
 
 $polactdog = {
 	cls
-	streetdogday = day
+	streetdogday = daystart
 
 	!!if QWdogReiq = 0:QWdogReiq = 1 & QWdogreiqTimer = 7
 
@@ -937,3 +937,4 @@ $youriqwest = {
 }
 
 --- dina ---------------------------------
+

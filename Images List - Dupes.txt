@@ -1,5 +1,5 @@
 DupeMerge 1.070
-                        
+                          
 'images\klof\klof 11.jpg' 15612
 'images\klof\klof 7.jpg' 15612
 
@@ -30,6 +30,9 @@ DupeMerge 1.070
 'images\img\sex\kuni17.jpg' 44067
 'images\qwest\alter\artom\ap_anatomy4_2.jpg' 44067
 
+'images\BDSM_Club\r3_11.jpg' 46176
+'images\BDSM_Club\r3_9.jpg' 46176
+
 'images\img\sexdvanadva\anal12.jpg' 49301
 'images\img\sexdvanadva\uanal12.jpg' 49301
 
@@ -56,7 +59,5 @@ DupeMerge 1.070
 
 'images\img\sex\kuni53.jpg' 79685
 'images\qwest\alter\artom\ap_anatomy4_1.jpg' 79685
-
-
 
 

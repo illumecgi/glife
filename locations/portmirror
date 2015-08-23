@@ -6,26 +6,28 @@ $portmirror = {
 	'<<$hair>> <<$mop>> <<$skin>> <<$vnesh>>'
 	if daystart < 10 and StoryLine = 0:'In the mirror, you looked quite strange woman''s face which is exactly copied all your actions. You hardly get to accept the idea that it is now is you.'
 	if daystart >= 10 and daystart < 30 and StoryLine = 0:'From the mirror looks at you a woman''s face, to which you have become accustomed to, but sometimes, no, no and yes flash the idea that it is not your face.'
-	
+
 	if curly > 0: '<br>Your curly hair will last for another <<curly>> days.'
 	if hbraids > 0: '<br>Your braided hair will last for another <<hbraids>> days.'
-	
+
 	set $makeUpString = '<br>'
-	
+
 	if kosmetica > 0: $makeUpString += 'Cosmetics: <<kosmetica>>'
 	if kosmetica = 0: $makeUpString += 'You have no makeup'
 
 	if lipbalm > 0: $makeUpString += ' | Lip Balm: <<lipbalm>>'
 	if lipbalm = 0: $makeUpString += ' | You have no lip balm left'
-	
+
 	*pl $makeUpString
 
+	! WD: Cheat Unused ~ 'AutoHapri'
 	if hapri = 0 and AutoHapri = 1:
 		minut += 3
 		hapri = 1
 		'You brush your hair'
 	end
 
+	! WD: Cheat Unused ~ 'AutoMakeup'
 	if mop = 1 and kosmetica > 0 and AutoMakeup = 1:
 		mop = AutoMakeupType
 		if kosmetica < 3 and mop = 4:mop = 3
@@ -55,6 +57,7 @@ $portmirror = {
 		end
 	end
 
+	! WD: Cheat Unused ~ 'AutoLipBalm'
 	if lipbalm > 0 and lipbalmstat <= 0 and AutoLipBalm = 1:
 		minut -= 10
 		lipbalm -= 1
@@ -152,3 +155,4 @@ $portmirror = {
 	end
 }
 --- portmirror ---------------------------------
+

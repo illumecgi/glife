@@ -122,11 +122,11 @@ if $ARGS[0] = 'start':
 				act 'Leave':gt 'burger', 'start'
 			end
 		end
-	elseif posuda >= 1 and posudaday ! day and NoBistroWork = 0 and PersSecWork = 0:
+	elseif posuda >= 1 and posudaday ! daystart and NoBistroWork = 0 and PersSecWork = 0:
 		act 'Wash the dishes for 100 rubles (1:00)':
 			cla
 			*clr
-			posudaday = day
+			posudaday = daystart
 			minut += 60
 			posuda += 1
 			manna -= 15
@@ -349,7 +349,7 @@ if $ARGS[0] = 'start':
 
 							act 'Envelope attributed to Ivan':
 								cls
-								IvanPodstavaDay = day
+								IvanPodstavaDay = daystart
 								IvanPodstavaQW = 1
 								NoBistroWork = 1
 								gs 'stat'
@@ -362,7 +362,7 @@ if $ARGS[0] = 'start':
 						act 'Envelope attributed to Ivan':
 							cls
 							$burgerIvanText = 'You took the envelope and close the safe headed out.'
-							IvanPodstavaDay = day
+							IvanPodstavaDay = daystart
 							IvanPodstavaQW = 1
 							NoBistroWork = 1
 							gs 'stat'
@@ -585,11 +585,11 @@ if $ARGS[0] = 'start':
 
 			act 'Leave':gt 'burger', 'start'
 		end
-	elseif posudaA >= 1 and posudaAday ! day and hour < 10 and NoBistroWork = 0 and PersSecWork = 0:
+	elseif posudaA >= 1 and posudaAday ! daystart and hour < 10 and NoBistroWork = 0 and PersSecWork = 0:
 		act 'Wash the floor for 100 rubles(1:00)':
 			cla
 			*clr
-			posudaAday = day
+			posudaAday = daystart
 			minut += 60
 			posuda += 1
 			manna -= 15
@@ -604,3 +604,4 @@ if $ARGS[0] = 'start':
 end
 
 --- burger ---------------------------------
+

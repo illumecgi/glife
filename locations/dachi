@@ -26,3 +26,4 @@ act 'Stroll through the alleys':gt 'etoexhib', 'pos2'
 act 'Exit the highway':minut += 15 & nroad = 5 & gt 'road'
 
 --- dachi ---------------------------------
+

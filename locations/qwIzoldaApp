@@ -2,7 +2,7 @@
 minut += 15
 gs 'stat'
 
-if hour >= 16 and izoldaday ! day:
+if hour >= 16 and izoldaday ! daystart:
 	'<center><b><font color="maroon">Isolda</font></b></center>'
 	'<center><img src="images/qwest/kolan/izolda.jpg"></center>'
 	'Door you opened Isolde. "Hello <<$name>>, come on."'
@@ -12,7 +12,7 @@ if hour >= 16 and izoldaday ! day:
 	act 'Enter the apartment':
 		cla
 		minut += 30
-		izoldaday = day
+		izoldaday = daystart
 		izoldaQW += 1
 		gs 'stat'
 
@@ -112,3 +112,4 @@ else
 end
 
 --- qwIzoldaApp ---------------------------------
+

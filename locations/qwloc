@@ -17,7 +17,7 @@ $qwnamedy = {
 		act 'Dictate the phone number':
 			cla
 			vladimirQW = 20
-			vladimirday = day
+			vladimirday = daystart
 			'You dictated phone Vladimir and he wrote it down in a small notebook in leather cover.'
 
 			act 'Leave':gt 'park', 'luna'
@@ -79,3 +79,4 @@ else
 end
 
 --- qwloc ---------------------------------
+

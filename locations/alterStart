@@ -89,6 +89,8 @@ father = 50
 mother = 50
 sister = 50
 brother = 50
+! WD: Add Uninitialised ~ 'brotherDick'
+brotherDick = rand(13, 17)
 Suspeh = 75
 $npcName[1] = 'Dimka'
 $npcSurName[1] = 'Nosov'
@@ -422,3 +424,4 @@ act 'Further':
 end
 
 --- alterStart ---------------------------------
+

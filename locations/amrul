@@ -33,3 +33,4 @@ end
 act 'Move away from the table':gt 'roulette'
 
 --- amrul ---------------------------------
+

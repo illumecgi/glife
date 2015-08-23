@@ -19,7 +19,7 @@ if $ARGS[0] = '1':
 				act 'Further':
 					cla
 					*clr
-					dmishaday = day
+					dmishaday = daystart
 					dick = 18
 					sex += 1
 					bj += 1
@@ -110,3 +110,4 @@ LColor = RGB(106,90,205)
 end
 
 --- misha ---------------------------------
+

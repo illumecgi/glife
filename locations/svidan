@@ -497,11 +497,11 @@ if $ARGS[0] = 'kvartA':
 				end
 			end
 
-			if DOM > 1 and kunday ! day and mesec <= 0:
+			if DOM > 1 and kunday ! daystart and mesec <= 0:
 				act 'Cooney':
 					cla
 					*clr
-					kunday = day
+					kunday = daystart
 
 					if boyonceA = 0:boyonceA = 1 & guy += 1 & vneshBoyA += 10
 
@@ -538,3 +538,4 @@ if $ARGS[0] = 'kvartA':
 end
 
 --- svidan ---------------------------------
+

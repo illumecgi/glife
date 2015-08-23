@@ -230,12 +230,12 @@ elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 	end
 end
 
-if klisma = 1 and klismaday ! day:
+if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':
 		cla
 		*clr
 		minut += 5
-		klismaday = day
+		klismaday = daystart
 		klismaday1 = 1
 		'<center><img src="images/picV/klisma.jpg"></center>'
 		'You put yourself an enema and clean intestines, now your ass is ready for anal sex.'
@@ -292,3 +292,4 @@ if pregtest > 0:
 end
 
 --- vanrPar ---------------------------------
+

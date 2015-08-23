@@ -115,7 +115,7 @@ if $ARGS[0] = 'start':
 							cla
 							*clr
 							andrei = 2
-							anreiday = day
+							anreiday = daystart
 							guy += 1
 							anal += 1
 							anus += 1
@@ -157,7 +157,7 @@ if $ARGS[0] = 'start':
 			end
 		end
 
-		if anreiday ! day and andrei = 2:
+		if anreiday ! daystart and andrei = 2:
 			'You see on the beach Andrew.'
 
 			act 'Approach to Andrew':gt 'lake', 'andrey1'
@@ -1062,7 +1062,7 @@ if $ARGS[0] = 'andrey1':
 
 	act 'Bathe':
 		cla
-		anreiday = day
+		anreiday = daystart
 		anreirape = 0
 		'<center><img src="images/img/Lake/Andrey1/andrey1.jpg"></center>'
 		'- I see the lady agree - predatory Andrew grinned. - Then let''s go for a swim. He caught you in his arms, laughing your inappropriate attempts to cover him from his chest, dropped your hand and lips gently pinched the right nipple. You sigh, and abdomen began to rise warm wave excitation.'
@@ -1497,3 +1497,4 @@ if $ARGS[0] = 'horse2':
 end
 
 --- lake ---------------------------------
+

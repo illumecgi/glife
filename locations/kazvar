@@ -11,3 +11,4 @@ act 'Sit at the table':gt 'igrkart2'
 act 'Move away from the table':gt 'cards'
 
 --- kazvar ---------------------------------
+

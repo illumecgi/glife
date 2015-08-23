@@ -7,7 +7,7 @@ if boyonceA = 0:
 	$bfsex += '<font color="maroon">'+$boyA+'</font>:He was a '+$boybody+' '+$boybod+' '+$boyface+'. Most of the time he was '+$boyClo+' First time we had sex was on the '+day+'th of '+$month+'. He had a '+dickA+' cm long member'
 
 	if dickA > 20:
-		$bfsex += '[:o].'
+		$bfsex += '[:c].'
 		elseif dickA > 14:
 		$bfsex += '[:)].'
 	else
@@ -34,3 +34,4 @@ if boyonceA = 0:
 end
 
 --- brosok ---------------------------------
+

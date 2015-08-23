@@ -49,7 +49,7 @@ if $ARGS[0] = '1':
 		cla
 		gopdeath = 1
 		minut += 180
-		vsehsdaladay = day
+		vsehsdaladay = daystart
 		gs 'stat'
 		'You told all they knew, and even then what just heard from conversations Gopnik. After that you released.'
 
@@ -58,3 +58,4 @@ if $ARGS[0] = '1':
 end
 
 --- police ---------------------------------
+

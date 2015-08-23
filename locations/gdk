@@ -37,3 +37,4 @@ if hour >= 16 and hour < 18:'Your sister <a href="exec:gt ''sister'', ''drinking
 
 
 --- gdk ---------------------------------
+

@@ -29,8 +29,8 @@ if $ARGS[0] = 'start':
 		act 'Stare at the woman.':gt 'event', 'lesbi'
 	end
 
-	if QWdogreiqTimer = 0 and QWdogReiq = 1 and week = 7 and qwdogiventday ! day:
-		qwdogiventday = day
+	if QWdogreiqTimer = 0 and QWdogReiq = 1 and week = 7 and qwdogiventday ! daystart:
+		qwdogiventday = daystart
 		'Going into the boutique you begin to consider picking dresses on hangers.By casually taking one you try it on in passing it on your back ,you hang with mild grim face.One of the dresses unexpectedly attracts your attention , as you began to study it more closely ,you feel a strange feeling as if you were being watched'
 
 		act 'Disregard':gt 'butik', 'start'
@@ -40,7 +40,7 @@ if $ARGS[0] = 'start':
 	end
 
 	if RimmaSex > 0:
-		if rimmaday ! day:
+		if rimmaday ! daystart:
 			'<a href="exec:gt ''RimmaSexQW''">Rima</a> smiled at you. She bits her lip and starts shooting her eyes in your direction.'
 		else
 			'Rima smiled at you and continued to do her business.'
@@ -73,3 +73,4 @@ if $ARGS[0] = 'start':
 end
 
 --- butik ---------------------------------
+

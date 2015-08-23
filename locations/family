@@ -1,6 +1,6 @@
 # family
-if day ! m_day:
-	m_day = day
+if daystart ! m_day:
+	m_day = daystart
 	father_go = rand(0, 1)
 	mother_go = rand(0, 1)
 end
@@ -65,7 +65,7 @@ if StoryLine = 1:
 			cls
 			minut += 5
 			sisboyparty = -1
-			gs'stat'
+			gs 'stat'
 			'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_7.jpg"></center>'
 			'You forgot to come to the party.'
 			'- Oh well, I hope they at me will not mind much...'
@@ -201,3 +201,4 @@ if StoryLine = 1:
 end
 
 --- family ---------------------------------
+

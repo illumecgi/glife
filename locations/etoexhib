@@ -307,7 +307,7 @@ if $ARGS[0] = 'pos10':
 	*clr
 	minut += 30
 	horny += 10
-	temp = day
+	temp = daystart
 	etoexhib = 12
 	gs 'stat'
 	'<center><img src="images/etogame/dachabust.jpg"></center>'
@@ -324,7 +324,7 @@ if $ARGS[0] = 'pos11':
 	minut += 15
 	etoexhib = 13
 	horny += 10
-	temp = day
+	temp = daystart
 	gs 'stat'
 	'<center><img src="images/etogame/dachaex.jpg"></center>'
 	'You pretend to hang clothes to dry. You can see that through the mall on the site to swarm your neighbor Kuzmich and stole glances at you. Lightly knotted robe is not able to hide your appetizing forms. But, you do not hide them, and give your neighbor enjoy the beauty.'
@@ -358,7 +358,7 @@ if $ARGS[0] = 'pos12':
 		act 'Disagree':
 			cls
 			etoexhib = 15
-			temp = day
+			temp = daystart
 			gs 'stat'
 			'<center><img src="images/etogame/dachabust3.jpg"></center>'
 			'<font color="magenta">You:- While all do, do not get anything</font>.'
@@ -370,7 +370,7 @@ if $ARGS[0] = 'pos12':
 			cls
 			money -= 1500
 			etoexhib = 14
-			temp = day
+			temp = daystart
 			gs 'stat'
 			'<center><img src="images/etogame/dachabust3.jpg"></center>'
 			'Well, here''s a half. But in order for tomorrow morning is all finished.'
@@ -1707,7 +1707,7 @@ if $ARGS[0] = 'pos51':
 		end
 
 		exit
-	elseif sosedQW > 0 and hour >= 16 and sosedDay ! day:
+	elseif sosedQW > 0 and hour >= 16 and sosedDay ! daystart:
 		sosedrand = rand(0, 100)
 
 		if sosedrand >= 70:'Your neighbor, <a href="exec:Gt ''Timofei''">Timothy</a>, is in the hallway. He''s smoking a cigarette, flicking the ashes into a jar.'
@@ -1889,3 +1889,4 @@ if $ARGS[0] = 'pos91':
 end
 
 --- etoexhib ---------------------------------
+

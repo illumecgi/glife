@@ -6,7 +6,7 @@ gs 'stat'
 
 act 'Oh, I have a lot of things, I just can not today':
 	cla
-	qwdogiventday = day
+	qwdogiventday = daystart
 	'(You) - Oh, I have a lot of things, I just can not segdnya.'
 	'(Margarita) - Okay. Then I''ll call in a week.'
 
@@ -16,7 +16,7 @@ end
 act 'I do not mind.':
 	cla
 	QWdogReiq = 3
-	qwdogiventday = day
+	qwdogiventday = daystart
 	'(You) - I do not mind.'
 	'(Margarita) - Wonderful. Then wait in the cafe.'
 
@@ -24,3 +24,4 @@ act 'I do not mind.':
 end
 
 --- qwlocdog ---------------------------------
+

@@ -39,19 +39,19 @@ if $ARGS[0] = 'start':
 			end
 		end
 	else
-		if arturday ! day:
+		if arturday ! daystart:
 			gt 'arturQW', 'arturQW_1'
-		elseif arturday = day:
+		elseif arturday = daystart:
 			cls
 			minut += 5
 			gs 'stat'
 
-			if arturblowday ! day:
+			if arturblowday ! daystart:
 				'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
 				'Arthur smiled kindly and handed you a tangerine. "Wai, work to do, I''m sorry. Unless it''s quick."'
 
 				act 'Go with Arthur':gt 'arturkiosk'
-			elseif arturblowday = day:
+			elseif arturblowday = daystart:
 				'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
 				'Arthur smiled amiably you. "Wai, work to do, I''m sorry."'
 
@@ -136,3 +136,4 @@ if $ARGS[0] = 'work_2':
 end
 
 --- arturRinok ---------------------------------
+

@@ -17,3 +17,4 @@ act 'Talk to a girl at the reception':gt 'Maria1'
 act 'Move away from the rack':gt 'hotel'
 
 --- rack ---------------------------------
+

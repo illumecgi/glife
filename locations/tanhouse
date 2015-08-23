@@ -7,13 +7,13 @@ gs 'stat'
 
 if tanpred = 0:
 	if tanya <= 50:
-		tanday = day
+		tanday = daystart
 		tanya += 3
 		'Neither giving you say a word she pushes you on the bed and rips clothes'
 
 		act 'Sex':xgt 'lezbsex', 'var'
 	elseif tanya > 50 and vnesh <= 20:
-		tanday = day
+		tanday = daystart
 		tanya += 3
 		'Neither giving you say a word she pushes you on the bed and rips clothes'
 
@@ -83,3 +83,4 @@ end
 act 'Leave':gt 'down'
 
 --- tanhouse ---------------------------------
+

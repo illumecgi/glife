@@ -4,3 +4,4 @@ if $clothingworntype ! 'vatnik' and $clothingworntype ! 'sforma' and $clothingwo
 end
 
 --- starenie ---------------------------------
+

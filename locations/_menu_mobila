@@ -1,5 +1,7 @@
 # $menu_mobila
+! WD: Location never called, Uninitialised ~ '$objmobila'
+!{
 dynamic $objmobila
-
+}
 --- $menu_mobila ---------------------------------
 

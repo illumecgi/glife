@@ -159,3 +159,4 @@ elseif money < 1000 and SLomka > 0:
 end
 
 --- narkopriton ---------------------------------
+

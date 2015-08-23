@@ -34,7 +34,7 @@ $qwmeetdin = {
 		minut += 60
 		energy = 21
 		water = 21
-		vladimirday = day
+		vladimirday = daystart
 		vladimirQW = 35
 		gs 'stat'
 		'The restaurant you already met Vladimir. He will spend a reserved table. You drank and ate together with Vladimir, who spoke little and mostly compliments.'
@@ -96,3 +96,4 @@ $qwmeetdin = {
 }
 
 --- qwmeet3 ---------------------------------
+

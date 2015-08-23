@@ -21,7 +21,7 @@ if $ARGS[0] = 'demo1':
 	*clr
 	horny += rand(30, 50)
 	minut += 5
-	sosedBalDay = day
+	sosedBalDay = daystart
 
 	if exhibi = 2:exhibi = 3
 
@@ -42,7 +42,7 @@ if $ARGS[0] = 'palec1':
 	*clr
 	horny += rand(10, 30)
 	minut += 1
-	sosedBalDay = day
+	sosedBalDay = daystart
 	gs 'stat'
 
 	if tanga = 1:'<center><img src="images/community/fuckyou_underwear.jpg"></center>'
@@ -59,7 +59,8 @@ if $ARGS[0] = 'niz':
 	*clr
 	gs 'stat'
 
-	if alcohol < 12:
+	! WD: Uninitialised ~ 'alcohol' USE 'alko'
+	if alko < 12:
 		if $clothingworntype = 'nude':
 			'<center><img src="images/community/balcony_naked2.jpg"></center>'
 		elseif tanga = 1:
@@ -263,3 +264,4 @@ end
 !!!
 
 --- balkon2 ---------------------------------
+

@@ -107,14 +107,18 @@ end
 
 !!!CV edition
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Automatic Stuff
+! WD: Unused Code as DinCheats Setup  has been removed
+!{
 if AutoMakeupType < 2: AutoMakeupType = 2
 
+! WD: Cheat Unused ~ 'AutoHapri'
 if AutoHapri = 1 and greben > 0 and hapri = 0 and InSleep = 0:
 	minut += 3
 	hapri = 1
 	'You brush your hair.'
 end
 
+! WD: Cheat Unused ~ 'AutoMakeup', 'AutoMakeupSleep', 'HasWashed'
 if AutoMakeup = 1 and kosmetitka > 0 and mop = 1 and InSleep = 0 and (AutoMakeupSleep = 1 or (AutoMakeupSleep = 0 and HasWashed = 0)):
 	mop = AutoMakeupType
 
@@ -176,6 +180,7 @@ if AutoMakeup = 1 and kosmetitka > 0 and mop = 1 and InSleep = 0 and (AutoMakeup
 	end
 end
 
+! WD: Cheat Unused ~ 'AutoVibrator'
 if AutoVibrator = 1 and vibrator = 1 and vibratorIN=0:
 	if $CurLoc = 'vanr' or $CurLoc = 'vanrPar':
 		minut += 5
@@ -186,15 +191,17 @@ if AutoVibrator = 1 and vibrator = 1 and vibratorIN=0:
 	end
 end
 
-if AutoEnema = 1 and klismaday ! day:
+! WD: Cheat Unused ~ 'AutoEnema'
+if AutoEnema = 1 and klismaday ! daystart:
 	if $CurLoc = 'vanr' or $CurLoc = 'vanrPar':
 		minut += 5
-		klismaday = day
+		klismaday = daystart
 		klismaday1 = 1
 		'You give yourself an enema and clean your intestines. Your ass is now ready for anal sex.'
 	end
 end
 
+! WD: Cheat Unused ~ 'AutoEnema', 'AutoButtPlug'
 if AutoButtPlug = 1 and AutoEnema = 1 and analplug = 1 and analplugIN = 0:
 	if $CurLoc = 'vanr' or $CurLoc = 'vanrPar':
 		minut += 5
@@ -214,6 +221,7 @@ if AutoButtPlug = 1 and AutoEnema = 1 and analplug = 1 and analplugIN = 0:
 	end
 end
 
+! WD: Cheat Unused ~ 'AutoLipBalm'
 if lipbalm > 0 and lipbalmstat <= 0 and AutoLipBalm = 1:
 	minut -= 10
 	lipbalm -= 1
@@ -228,9 +236,10 @@ if lipbalm > 0 and lipbalmstat <= 0 and AutoLipBalm = 1:
 	'You apply a lip balm, to moisterize them.'
 end
 
-if AutoVitamins = 1 and vitamin > 0 and vitaminday ! day:
+! WD: Cheat Unused ~ 'AutoVitamins'
+if AutoVitamins = 1 and vitamin > 0 and vitaminday ! daystart:
 	minut += 5
-	vitaminday = day
+	vitaminday = daystart
 	vitamin -= 1
 	frost = 0
 	skinvan += 1
@@ -240,13 +249,14 @@ if AutoVitamins = 1 and vitamin > 0 and vitaminday ! day:
 	if SifacOnce = 1 and Sifilis >= 10:Sifilis -= rand(0, 1)
 	if skinvan = 20:skinvan = 0 & skin += 1
 end
+}!
 !!!
 
 !!!CHEATS!!!
 if cheatWork = 1:work = 0
 if cheatWorkKiskis = 1:young_shop_miss = 0
 if cheatHapri = 1:hapri = 1
-if cheatKlisma = 1:klismaday = day & klismaday1 = 1
+if cheatKlisma = 1:klismaday = daystart & klismaday1 = 1
 
 if cheatNomakeup = 1:
 	if mop = 0:mop = 1
@@ -607,7 +617,7 @@ if minut >= 60:
 	if SLomka > 0:SLomka += 1 & manna -= 500
 	if SLomka > 100 and StrongNarkota <= 0:SLomka = 0 & SNarkTimes = 0
 
-	if narkoman = 1 and narkday ! day:
+	if narkoman = 1 and narkday ! daystart:
 		health -= 5
 		willpower -= 5
 		manna -= 10
@@ -956,11 +966,17 @@ If month = 12:$month = 'December' & $mons = 'December'
 if minut < 10:$nilmin = '0'
 if minut >= 10:$nilmin = ''
 if kid > 0:
-	if year > yearkid[1] and markyear[1] ! year:
-		if monthkid[1] = month and daykid[1] = day:
-			markyear[1] = year
-			kidage[1] += 1
+	i = 1
+	:LoopKidAgeCounter
+	if i <= kid:
+		if year > yearkid[i] and markyear[i] ! year:
+			if monthkid[i] = month and daykid[i] = day:
+				markyear[i] = year
+				kidage[i] += 1
+			end
 		end
+		i += 1
+		jump 'LoopKidAgeCounter'
 	end
 end
 !!moodlet
@@ -1208,10 +1224,10 @@ if (month = 3 and day >= 25):$holyday = '<b>Spring Break.</b>' & kanikuli = 3
 if (month = 5 and day >= 25) or month = 6 or month = 7 or month = 8:$holyday = '<b>Summer holidays.</b>' & kanikuli = 4
 if month = 1 and day = 1:$holyday = '<b>New Year!</b>' & kanikuli = 5
 
-if hour >= 8 and hour < 16 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 0 and schoolProgulDay ! day:
+if hour >= 8 and hour < 16 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 0 and schoolProgulDay ! daystart:
 	!!absence from school
 	schoolprogul += 1
-	schoolProgulDay = day
+	schoolProgulDay = daystart
 end
 
 !!!!!!!!!!!!!!!!!!!!!
@@ -1418,7 +1434,7 @@ if Sifilis >= 50:pl '<b><font color="red">syphilitic rash covers your whole body
 if Triper > 2:pl '<b><font color="red">From the vaginal white discharge come out strong and stinging when urinating. Just out of the vagina hard and nasty smells.</font></b>'
 if Kandidoz > 30:pl '<b><font color="red">Do you thrush.</font></b>'
 if SLomka > 0:pl '<b><font color="red">You are very bad and hurt all the bones. Do you break-up</font></b>'
-if narkday ! day and narkoman = 1:pl '<b><font color="red">You are very bad and hurt all the bones. Urgently need pale lady</font></b>'
+if narkday ! daystart and narkoman = 1:pl '<b><font color="red">You are very bad and hurt all the bones. Urgently need pale lady</font></b>'
 if fingal > 0:pl '<b><font color="red">You have a black eye on the face.</font></b>'
 if cloth_vid = 1:
 	pl '<b><a href="exec:dynamic $din_exhibiTakeOffBimbo">You are dressed in the image bimbo</a></b>'
@@ -1435,12 +1451,12 @@ if mosol >= 30 and mosol < 50:pl '<b><font color="red">Pisya flushed and itchy, 
 if mosol >= 50:pl '<b><font color="red">Pisya hurts and each step is given through the pain, she Crimson and visible scuffs from walking without underwear.</font></b>'
 if analplugIN = 1:pl '<b><font color="red">You have inserted your butt plug into your ass.</font></b>'
 if vibratorin = 1:pl '<b><font color="red">You have inserted your vibrator into your vagina.</font></b>'
-if young_shop_work = 1 and hour = 14 and week < 6:pl '<b><font color="red">At 15 o''clock you have to be at work in the shop Keys Pussy.</font></b>'
+if young_shop_work = 1 and hour = 14 and week < 6:pl '<b><font color="red">At 15 c''clock you have to be at work in the shop Keys Pussy.</font></b>'
 if young_shop_work = 1 and hour = 16 and week < 6 and inWorkYoungShop = 0:young_shop_miss += 1 & pl '<b><font color="red">You squandered work.</font></b>'
 
 if workrin = 1:
 	if week = 2 or week = 4 or week = 6:
-		if hour = 7:pl '<b><font color="red">At 8 o''clock you work on the market.</font></b>'
+		if hour = 7:pl '<b><font color="red">At 8 c''clock you work on the market.</font></b>'
 		if hour = 8:pl '<b><font color="red">You need to work on the market.</font></b>'
 	end
 end
@@ -1465,7 +1481,7 @@ if alko > 0:
 	if alko >= 6:pl '<b><font color="red">You''re wasted.</font></b>'
 end
 if day = 29 and month = 12 and year = 2010 and StoryLine = 1:
-	if hour >= 5 and hour <= 14:pl 'At 14 o''clock a New Year''s party will be held.'
+	if hour >= 5 and hour <= 14:pl 'At 14 c''clock a New Year''s party will be held.'
 end
 gs 'din_bad'
 
@@ -1478,6 +1494,8 @@ proverka3 = 0
 proverka4 = 0
 proverka5 = 0
 
+! WD: Code for updating from old clothing system pre CE
+!{
 !!clothing repair, for old saved.
 if remdrop = 0:
 	remdrop = 1
@@ -1566,5 +1584,7 @@ if remdrop = 0:
 	if odekis8 = 1:odekis[9] = 1 & odekisH[9] = 50 & odekisB[9] = bedra
 	if odekis9 = 1:odekis[10] = 1 & odekisH[10] = 50 & odekisB[10] = bedra
 end
+}
 
 --- stat ---------------------------------
+

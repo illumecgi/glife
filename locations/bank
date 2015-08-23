@@ -13,7 +13,7 @@ if $ARGS[0] = 'start':
 
 	if karta > 0:'In the bank <<karta>> rubles'
 
-	if BankPapper = 1 and dayBankPapper = day:
+	if BankPapper = 1 and dayBankPapper = daystart:
 		act 'Give documents':
 			cls
 			minut += 15
@@ -65,3 +65,4 @@ if $ARGS[0] = 'start':
 end
 
 --- bank ---------------------------------
+

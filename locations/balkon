@@ -28,7 +28,7 @@ if $ARGS[0] = 'start':
 	end
 
 	if $clothingworntype = 'nude':
-		if sosedBalDay ! day:
+		if sosedBalDay ! daystart:
 			if rand(1, 4) = 4:
 				'A neighbor from the opposite building is out on his balcony and looking at your naked body.'
 				act 'Look at the neighbor':gt 'balkon2', 'sosed'
@@ -53,3 +53,4 @@ if $ARGS[0] = 'start':
 end
 
 --- balkon ---------------------------------
+

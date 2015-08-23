@@ -57,7 +57,7 @@ if $ARGS[0] = 'sogn':
 	*clr
 	horny += 10
 	minut += 10
-	dogday = day
+	dogday = daystart
 	'You undressed and lay down on the bed <<$namesob>> brazenly jumped into bed and began to lick your pussy'
 	'<center><img src="images/zoo/2.jpg"></center>'
 
@@ -316,3 +316,4 @@ if $ARGS[0] = 'fin':
 end
 
 --- bed1 ---------------------------------
+

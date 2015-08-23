@@ -6,7 +6,8 @@ if mass_ver_zn > 0:
 	rand_vero = rand(0, 1)
 
 	if vn_ver < vnesh and rand_vero = 0:ver_zn = 1
-	if dickfrend > 0:ver_zn = 0
+	! WD: Uninitialised ~ 'dickfrend' use 'dick'
+	if dick > 0:ver_zn = 0
 	if kol_man = 1:$kol_man_text = 'guy' & $kol_man_text_a = 'man' & $kol_man_prefiks = '' & $kol_man_prefiks_he = 'he'
 	if kol_man = 2:$kol_man_text = 'two guys' & $kol_man_text_a = 'man' & $kol_man_prefiks = 'и' & $kol_man_prefiks_he = 'they'
 	if kol_man = 3:$kol_man_text = 'three guys' & $kol_man_text_a = 'man' & $kol_man_prefiks = 'и' & $kol_man_prefiks_he = 'they'
@@ -91,3 +92,4 @@ if mass_ver_zn > 0:
 end
 
 --- placer_man ---------------------------------
+

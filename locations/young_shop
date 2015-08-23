@@ -279,6 +279,7 @@ if hour = 15 and young_shop_work = 1 and week < 6:
 				cla
 				'Before leaving, I take a shirt with a. Girl she did not need, and I am not so rich to almost throw new things.'
 
+				! WD: Uninitialised ~ 'wear_chest_have_'
 				if wear_chest_have_[6] = 0:
 					'no action'
 				else
@@ -754,3 +755,4 @@ if $ARGS[0] = '5':
 end
 
 --- young_shop ---------------------------------
+

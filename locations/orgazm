@@ -7,7 +7,7 @@ if $ARGS[0] = 'start':
 	if tabletki <= 0 and prezik > 0 and prosta = 0:
 		prezik -= 1
 		protect = 1
-		'You gave the guy a condom and he dressed him in silence.'
+		'You gave the guy a condom and he put it on in silence.'
 	elseif tabletki >= 0 and prezik > 0 and prosta > 0:
 		prezik -= 1
 		protect = 1
@@ -21,7 +21,7 @@ if $ARGS[0] = 'start':
 		horny = 0
 		manna -= 10
 		willpower -= 10
-		'Do you monthly and while yet a member of the rams you, vaginal blood flows slowly. Painful sensations and pleasant. You moan while strong <<dick>> centimeter dick fuck your pussy.'
+		'It is your time of the month and, as his member rams into you, vaginal blood flows slowly around his girth. Painful sensations and pleasure mix. You moan while his strong <<dick>> centimeter dick fucks your pussy.'
 	elseif mesec <= 0 and vagina > 0:
 		!!no monthly
 		!!horny - excitement
@@ -100,38 +100,38 @@ if $ARGS[0] = 'start':
 			horny = 0
 			manna -= 15
 			willpower -= 15
-			'You groaned in pain when <<$nameV>> you entered, tears flowed from her eyes and between her legs feeling as if you drove a red-hot rod. You cry and moan until strong <<dick>> centimeter dick fuck your pussy.'
+			'You groan in pain when <<$nameV>> enters you, tears flowing from your eyes as a you endure the feeling of driving a red-hot rod between your legs. You cry and moan while his strong <<dick>> centimeter dick fucks your pussy.'
 		elseif orgazm = 1:
 			horny -= 10
 			manna -= 10
 			willpower -= 10
-			'You bite my lip in pain when <<$nameV>> you entered, between the legs painful. You are frowning and moaning in pain while strong <<dick>> centimeter dick fucks your pussy.'
+			'You bite your lip in pain when <<$nameV>> enters you, a twinge of pain between your legs. Frowning, you moan in in pain while his strong <<dick>> centimeter dick fucks your pussy.'
 		elseif orgazm = 2:
 			horny -= 5
 			manna -= 5
 			willpower -= 5
-			'You winced at the sudden pain when <<$nameV>> you entered, between the legs pain that gradually become calm and quite tolerable. Are you trying to get aroused while strong <<dick>> centimeter dick fucks your pussy, but you do not go out.'
+			'You wince at the sudden pain when <<$nameV>> enters you, the pain between your legs gradually calms and becomes quite tolerable. You try to get aroused while his strong <<dick>> centimeter dick fucks your pussy, but it is not enough.'
 		elseif orgazm = 3:
 			!!horny += 5
 			manna += 5
 			willpower += 5
-			'You startled by the feeling that your pussy is stretched when <<$nameV>> you entered. Between the legs becomes a little pleased when strong <<dick>> centimeter dick fucks your pussy.'
+			'You are startled by the feeling as your pussy is stretched when <<$nameV>> enters you. A shiver of pleasure starts from between your legs and travels up your spine as each stroke of his <<dick>> centimeter fucks into your pussy.'
 		elseif orgazm = 4:
 			!!horny += 10
 			manna += 10
 			willpower += 10
-			'You startled by the feeling that your pussy is stretched when <<$nameV>> you entered. Between the legs becomes a little pleased when strong <<dick>> centimeter dick fucks your pussy. Gradually a pleasant warmth and ripple grow in the lower abdomen, and then feeling a little decrease and remain until the end.'
+			'You are startled by the feeling as your pussy is stretched when <<$nameV>> enters you. A shiver of pleasure starts from between your legs and travels up your spine as each stroke of his <<dick>> centimeter fucks into your pussy. Gradually a pleasant warmth and ripple grows in the lower abdomen, but the feeling never peaks, instead decreasing in strength even as it remains with you until the end.'
 		elseif orgazm = 5:
 			horny = 0
 			manna += 15
 			willpower += 15
 			orgasm += 1
-			'You flinched from a pleasant feeling when your pussy rastyagivatsya start taking a dick. Between the legs becomes very warm and pleasant, when strong <<dick>> centimeter dick fuck your pussy. Gradually a pleasant warmth and ripple grow in the lower abdomen, and then the feeling came down on you and your whole body cover hot waves of orgasm, you can not help screaming pleasure writhing on edge.'
+			'You gasp at the feeling as your pussy spreads for his dick. Your groin becomes very warm and pleasant, when his strong <<dick>> centimeter dick hammers your pussy. Gradually the pleasant warmth ripples in your lower abdomen and then the feeling intensifies and your whole body tenses as the hot waves of orgasm rush over you. You can not help screaming in pleasure as you writhe under the sensation.'
 		elseif orgazm = 6:
 			horny += 5
 			manna += 5
 			willpower += 5
-			'You feel as a member enters your pussy when <<$nameV>> you entered. Between the legs nicely, but a member of your pussy significantly less and <<dick>> inches enough for you. Gradually a pleasant warmth and ripple grow in the lower abdomen, and then feeling a little decrease and remain until the end.'
+			'You feel every inch as his member enters your pussy when <<$nameV>> slides home. It is a pleasant feeling, but his dick is significantly smaller than you prefer and <<dick>> inches is not enough for you. Gradually, a pleasant ripples grows in your lower abdomen, but the feeling never rises to true orgasm.'
 		end
 
 		if vagina <= dick:vagina += 1
@@ -140,7 +140,7 @@ if $ARGS[0] = 'start':
 		manna -= 15
 		willpower -= 15
 		vagina += 1
-		'You bite my lip in pain and tears gushed from his eyes when <<$nameV>> you entered, breaking your hymen. You moan while weeping and strong <<dick>> centimeter dick fucks your bloody pussy.'
+		'You bite your lip in pain and tears gush from your eyes when <<$nameV>> enters you, breaking your hymen. You moan while weeping as his strong <<dick>> centimeter dick fucks your bloody pussy.'
 	end
 
 	if protect ! 1:
@@ -150,30 +150,31 @@ if $ARGS[0] = 'start':
 		if finrand = 0:
 			!!inside
 			cumpussy += 1
-			'<<$nameV>> groaned and you feel like jet of sperm hit you inside your body.'
+			'<<$nameV>> groans and you feel each jet of sperm paint the walls of your womb with seed.'
 
 			if tabletki <= 0 and mesec <= 0:
 				gs 'preg'
 				manna -= 15
 				willpower -= 15
-				'Hell, because after all, you can fly, you thought with horror.'
+				'Hell, you could get pregnant, you think in horror.'
 			end
 		elseif finrand = 1:
 			!!out
 			if pose = 0:
 				cumbelly += 1
-				'<<$nameV>> groaned and removing a member of you finished your stomach.'
+				'<<$nameV>> shouts, pulling out to finish on your stomach.'
 			elseif pose = 1:
 				cumass += 1
-				'<<$nameV>> groaned and removing a member of you finished on your ass.'
+				'<<$nameV>> shudders, pulling out just in time to paint your ass white with semen.'
 			end
 		end
 	elseif protect = 1:
 		protect = 0
-		'<<$nameV>> groaned and you realized that he had finished in the condom.'
+		'<<$nameV>> groans and you feel heat building deep inside. You realize that he has filled the condom.'
 	end
 
 	pose = 0
 end
 
 --- orgazm ---------------------------------
+

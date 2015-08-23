@@ -14,3 +14,4 @@ act 'Leave':gt 'gdk'
 if sisboyparty = 2 and sisboyparty_day + 1 = daystart and hour = 18:act 'Go to the party':gt 'sisterQW', 'sisboyQW_party', 'start'
 
 --- annafrendtoilet ---------------------------------
+

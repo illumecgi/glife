@@ -7,11 +7,11 @@ if $ARGS[0] = 'start':
 	act 'Ring the doorbell':
 		cla
 
-		if klofQW = 2 and hour >= 16 and klofday ! day:
-			klofday = day
+		if klofQW = 2 and hour >= 16 and klofday ! daystart:
+			klofday = daystart
 			gt 'klofdomhouse', 'ev1'
-		elseif klofQW > 2 and hour >= 16 and klofday ! day:
-			klofday = day
+		elseif klofQW > 2 and hour >= 16 and klofday ! daystart:
+			klofday = daystart
 			gt 'klofdomhouse', 'start1'
 		else
 			'No one home'
@@ -26,7 +26,7 @@ end
 if $ARGS[0] = 'start1':
 	cla
 	*clr
-	klofday = day
+	klofday = daystart
 	minut += 5
 	kloftimes += 1
 	gs 'stat'
@@ -44,7 +44,7 @@ end
 if $ARGS[0] = 'ev1':
 	cla
 	*clr
-	klofday = day
+	klofday = daystart
 	minut += 5
 	kloftimes += 1
 	gs 'stat'
@@ -397,7 +397,7 @@ end
 if $ARGS[0] = 'ev20':
 	cla
 	*clr
-	klofday = day
+	klofday = daystart
 	minut += 5
 	'<center><img src="images/klof/klof.jpg"></center>'
 	'If you want to talk serious business with our boss'
@@ -985,3 +985,4 @@ end
 !!Jesus, what hueta, I cried tears of blood
 
 --- klofdomhouse ---------------------------------
+

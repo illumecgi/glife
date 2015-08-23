@@ -1,74 +1,74 @@
 # portnoi2
 poshvalldrop = 0
-o = 0
+c = 0
 :jensmet
-o += 1
+c += 1
 
-if jeans[o] = 1 and jeansB[o]!bedra:poshvalldrop += 1
-if o ! 5:jump 'jensmet'
+if jeans[c] = 1 and jeansB[c]!bedra:poshvalldrop += 1
+if c ! 5:jump 'jensmet'
 
-o = 0
+c = 0
 :shortmet
-o += 1
+c += 1
 
-if short[o] = 1 and shortB[o]!bedra:poshvalldrop += 1
-if o ! 5:jump 'shortmet'
+if short[c] = 1 and shortB[c]!bedra:poshvalldrop += 1
+if c ! 5:jump 'shortmet'
 
-o = 0
+c = 0
 :skirtmet
-o += 1
+c += 1
 
-if skirt[o] = 1 and skirtB[o]!bedra:poshvalldrop += 1
-if o ! 5:jump 'skirtmet'
+if skirt[c] = 1 and skirtB[c]!bedra:poshvalldrop += 1
+if c ! 5:jump 'skirtmet'
 
-o = 0
+c = 0
 :dressmet
-o += 1
+c += 1
 
-if dress[o] = 1 and dressB[o]!bedra:poshvalldrop += 1
-if o ! 24:jump 'dressmet'
+if dress[c] = 1 and dressB[c]!bedra:poshvalldrop += 1
+if c ! 24:jump 'dressmet'
 
-o = 0
+c = 0
 :profimet
-o += 1
+c += 1
 
-if profi[o] = 1 and profiB[o]!bedra:poshvalldrop += 1
-if o ! 2:jump 'profimet'
+if profi[c] = 1 and profiB[c]!bedra:poshvalldrop += 1
+if c ! 2:jump 'profimet'
 
-o = 0
+c = 0
 :pantsmet
-o += 1
+c += 1
 
-if pants[o] = 1 and pantsB[o]!bedra:poshvalldrop += 1
-if o ! 5:jump 'pantsmet'
+if pants[c] = 1 and pantsB[c]!bedra:poshvalldrop += 1
+if c ! 5:jump 'pantsmet'
 
-o = 0
+c = 0
 :latexmet
-o += 1
+c += 1
 
-if latex[o] = 1 and latexB[o]!bedra:poshvalldrop += 1
-if o ! 2:jump 'latexmet'
+if latex[c] = 1 and latexB[c]!bedra:poshvalldrop += 1
+if c ! 2:jump 'latexmet'
 
-o = 0
+c = 0
 :hookermet
-o += 1
+c += 1
 
-if hooker[o] = 1 and hookerB[o]!bedra:poshvalldrop += 1
-if o ! 5:jump 'hookermet'
+if hooker[c] = 1 and hookerB[c]!bedra:poshvalldrop += 1
+if c ! 5:jump 'hookermet'
 
-o = 0
+c = 0
 :odekismet
-o += 1
+c += 1
 
-if odekis[o] = 1 and odekisB[o]!bedra:poshvalldrop += 1
-if o ! 10:jump 'odekismet'
+if odekis[c] = 1 and odekisB[c]!bedra:poshvalldrop += 1
+if c ! 10:jump 'odekismet'
 
-o = 0
+c = 0
 :newclomet
-o += 1
+c += 1
 
-if newclo[o] = 1 and newcloB[o]!bedra:poshvalldrop += 1
-if o ! 130:jump 'newclomet'
+if newclo[c] = 1 and newcloB[c]!bedra:poshvalldrop += 1
+if c ! 130:jump 'newclomet'
 
 if money < poshvalldrop * 500:
 	'You do not have enough money to resize all of your clothing. The total cost would be <<poshvalldrop * 500>> rubles.'
@@ -78,75 +78,75 @@ if money < poshvalldrop * 500:
 	exit
 elseif money >= poshvalldrop * 500:
 	money -= poshvalldrop * 500
-	o = 0
+	c = 0
 	:jensmet1
-	o += 1
+	c += 1
 
-	if jeans[o] = 1 and jeansB[o]!bedra:jeansB[o] = bedra
-	if o ! 5:jump 'jensmet1'
+	if jeans[c] = 1 and jeansB[c]!bedra:jeansB[c] = bedra
+	if c ! 5:jump 'jensmet1'
 
-	o = 0
+	c = 0
 	:shortmet1
-	o += 1
+	c += 1
 
-	if short[o] = 1 and shortB[o]!bedra:shortB[o] = bedra
-	if o ! 5:jump 'shortmet1'
+	if short[c] = 1 and shortB[c]!bedra:shortB[c] = bedra
+	if c ! 5:jump 'shortmet1'
 
-	o = 0
+	c = 0
 	:skirtmet1
-	o += 1
+	c += 1
 
-	if skirt[o] = 1 and skirtB[o]!bedra:skirtB[o] = bedra
-	if o ! 5:jump 'skirtmet1'
+	if skirt[c] = 1 and skirtB[c]!bedra:skirtB[c] = bedra
+	if c ! 5:jump 'skirtmet1'
 
-	o = 0
+	c = 0
 	:dressmet1
-	o += 1
+	c += 1
 
-	if dress[o] = 1 and dressB[o]!bedra:dressB[o] = bedra
-	if o ! 24:jump 'dressmet1'
+	if dress[c] = 1 and dressB[c]!bedra:dressB[c] = bedra
+	if c ! 24:jump 'dressmet1'
 
-	o = 0
+	c = 0
 	:profimet1
-	o += 1
+	c += 1
 
-	if profi[o] = 1 and profiB[o]!bedra:profiB[o] = bedra
-	if o ! 2:jump 'profimet1'
+	if profi[c] = 1 and profiB[c]!bedra:profiB[c] = bedra
+	if c ! 2:jump 'profimet1'
 
-	o = 0
+	c = 0
 	:pantsmet1
-	o += 1
+	c += 1
 
-	if pants[o] = 1 and pantsB[o]!bedra:pantsB[o] = bedra
-	if o ! 5:jump 'pantsmet1'
+	if pants[c] = 1 and pantsB[c]!bedra:pantsB[c] = bedra
+	if c ! 5:jump 'pantsmet1'
 
-	o = 0
+	c = 0
 	:latexmet1
-	o += 1
+	c += 1
 
-	if latex[o] = 1 and latexB[o]!bedra:latexB[o] = bedra
-	if o ! 2:jump 'latexmet1'
+	if latex[c] = 1 and latexB[c]!bedra:latexB[c] = bedra
+	if c ! 2:jump 'latexmet1'
 
-	o = 0
+	c = 0
 	:hookermet1
-	o += 1
+	c += 1
 
-	if hooker[o] = 1 and hookerB[o]!bedra:hookerB[o] = bedra
-	if o ! 5:jump 'hookermet1'
+	if hooker[c] = 1 and hookerB[c]!bedra:hookerB[c] = bedra
+	if c ! 5:jump 'hookermet1'
 
-	o = 0
+	c = 0
 	:odekismet1
-	o += 1
+	c += 1
 
-	if odekis[o] = 1 and odekisB[o]!bedra:odekisB[o] = bedra
-	if o ! 10:jump 'odekismet1'
+	if odekis[c] = 1 and odekisB[c]!bedra:odekisB[c] = bedra
+	if c ! 10:jump 'odekismet1'
 
-	o = 0
+	c = 0
 	:newclomet1
-	o += 1
+	c += 1
 
-	if newclo[o] = 1 and newcloB[o]!bedra:newcloB[o] = bedra
-	if o ! 130:jump 'newclomet1'
+	if newclo[c] = 1 and newcloB[c]!bedra:newcloB[c] = bedra
+	if c ! 130:jump 'newclomet1'
 
 	'You resize all clothing for <<poshvalldrop*500>> rubles.'
 
@@ -156,3 +156,4 @@ elseif money >= poshvalldrop * 500:
 end
 
 --- portnoi2 ---------------------------------
+

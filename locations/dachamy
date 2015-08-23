@@ -23,3 +23,4 @@ end
 act 'Exit the alley':minut += 15 & gt 'dachi'
 
 --- dachamy ---------------------------------
+

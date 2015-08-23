@@ -31,3 +31,4 @@ sumcard = nomcard[1]+nomcard[2]
 act 'Remove card':gt $loc
 
 --- blackjack ---------------------------------
+

@@ -111,3 +111,4 @@ gs 'namer'
 if i < NPCnum:jump 'markgenernpc'
 
 --- npc ---------------------------------
+

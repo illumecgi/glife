@@ -86,10 +86,11 @@ lcolor = rgb(106, 90, 205)
 
 if kotovLoveQW > 0 and hour = 16:
 	'Do you see how the club is included <a href="exec:minut += 3 & gt ''kotovEv''">Vitek Kotov</a> with a large sports bag.'
-elseif grupNPC[3] >= 80 and hour = 17 and ivansportday ! day:
+elseif grupNPC[3] >= 80 and hour = 17 and ivansportday ! daystart:
 	'Do you see how the club included <a href="exec:minut += 3 & gt ''IvanEv''">Ivan Prokhorov</a> with a large sports bag.'
 end
 
+! WD: Uninitialised ~ 'UNSTARTER' allways false
 if grupNPC[5] >= 80 and fedorKozlovQW = 0 and GorSlut = 0 and UNSTARTER = 1:
 	!!event does not have to start over because they do not
 	cls
@@ -670,11 +671,11 @@ if gsAboVolley > 0 and volleysostav = 0 and sport = 1:
 end
 
 if volleysostav > 0 and sport = 1:
-	if week ! 6 and volkomday ! day:
+	if week ! 6 and volkomday ! daystart:
 		act 'To engage with the team':
 			cla
 			*clr
-			volkomday = day
+			volkomday = daystart
 			minut += 120
 			speed += rand(1, 3)
 			agil += rand(1, 3)
@@ -697,7 +698,7 @@ if volleysostav > 0 and sport = 1:
 			act 'Leave':gt 'gdksport'
 			act 'Go to coaching':gt 'Voltrener'
 		end
-	elseif week = 6 and sorevday ! day:
+	elseif week = 6 and sorevday ! daystart:
 		act 'Check out the competition with a team':
 			cla
 			*clr
@@ -705,7 +706,7 @@ if volleysostav > 0 and sport = 1:
 			if poverkomand = 0:poverkomand = 600
 
 			volltime = 0
-			sorevday = day
+			sorevday = daystart
 			minut += 180
 			speed += rand(1, 3)
 			agil += rand(1, 3)
@@ -730,3 +731,4 @@ if volleysostav > 0 and sport = 1:
 end
 
 --- gdksport ---------------------------------
+

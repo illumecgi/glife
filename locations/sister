@@ -21,7 +21,7 @@ if $clothingworntype = 'nude':
 end
 
 if pirsA >= 1 and pirsAsister = 0 and sisterpirsadaytalk ! daystart:
-	sisterrpirsadaytalk = daystart
+	sisterpirsadaytalk = daystart
 	if rand(1,100) >= 75:
 		'Sister looks you in the mouth: "<<$name>>, and what have you got there in the language?"'
 		act 'Nothing':
@@ -591,3 +591,4 @@ if $ARGS[0] = 'home':
 end
 
 --- sister ---------------------------------
+

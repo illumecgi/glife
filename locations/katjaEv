@@ -130,7 +130,7 @@ $din_katja_kiss = {
 	end
 }
 
-katjaMeynoldday = day
+katjaMeynoldday = daystart
 gs 'stat'
 gs 'KatjaHomeDin'
 gs 'katjaEvDin'
@@ -432,3 +432,4 @@ act 'Go with Katja':
 end
 
 --- katjaEv ---------------------------------
+

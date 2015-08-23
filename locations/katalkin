@@ -220,3 +220,4 @@ end
 if katalkinNoexit = 0:act 'Leave':minut += 1 & gt 'vokzalGin'
 
 --- katalkin ---------------------------------
+

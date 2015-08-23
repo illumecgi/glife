@@ -136,3 +136,4 @@ end
 act 'Move away':gt $loc, $metka
 
 --- albinaEv ---------------------------------
+

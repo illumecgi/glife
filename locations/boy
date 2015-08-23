@@ -122,3 +122,4 @@ if randizvrat < 80:izvrat = 0
 if randizvrat >= 80:izvrat = 1
 
 --- boy ---------------------------------
+

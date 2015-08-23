@@ -1029,3 +1029,4 @@ act 'Go to Artem':gt 'artemhome'
 !!dynamic $din_artem_lern
 
 --- artemEv ---------------------------------
+

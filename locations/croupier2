@@ -19,3 +19,4 @@ end
 act 'Move away from the dealer':gt 'kazvar'
 
 --- croupier2 ---------------------------------
+

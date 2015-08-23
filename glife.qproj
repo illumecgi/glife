@@ -124,8 +124,8 @@
       <Location name="shop"/>
       <Location name="trashplace"/>
       <Location name="RynokHoz"/>
-	  <Location name="BDSM_Club"/>
-	  <Location name="taxi"/>
+      <Location name="BDSM_Club"/>
+      <Location name="taxi"/>
     </Folder>
     <Folder name="Торговый Представитель - Trade Representative">
       <Location name="torgpred"/>
@@ -403,8 +403,8 @@
       <Location name="budilnik"/>
       <Location name="divan"/>
       <Location name="Komp"/>
-	  <Location name="kompMFC"/>
-	  <Location name="kompMFCtwo"/>
+      <Location name="kompMFC"/>
+      <Location name="kompMFCtwo"/>
       <Location name="selfPorno"/>
       <Location name="mirror"/>
       <Location name="stol"/>
@@ -610,6 +610,7 @@
       <Location name="Menu.Chosen"/>
       <Location name="Menu.Time"/>
       <Location name="Menu.Destroy"/>
+      <Location name="Menu.{Treatment}"/>
     </Folder>
     <Folder name="Казино - Casino">
       <Location name="casino"/>

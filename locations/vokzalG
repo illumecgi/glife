@@ -99,3 +99,4 @@ act 'Go to the town':minut += 15 & gt 'gorodok'
 act 'Exit to the northern highway':minut += 15 & nroad = 20 & gt 'road'
 
 --- vokzalG ---------------------------------
+

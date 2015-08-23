@@ -188,3 +188,4 @@ if Gcall > 0:'In the hallway rings <a href="exec:gt ''gtelefon''">phone</a>.'
 if motherWorry = 1:gt 'mother'
 
 --- korrPar ---------------------------------
+

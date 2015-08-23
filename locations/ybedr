@@ -16,3 +16,4 @@ if ymanrem[4] = 2:'Bright and beautiful room, with a nice <a href="exec:gt ''bed
 act 'Leave the room':minut += 1 & gt 'ymans'
 
 --- ybedr ---------------------------------
+

@@ -11,3 +11,4 @@ gs 'stat'
 act 'Go to your house':minut += 5 & gt 'youplace'
 
 --- ybass ---------------------------------
+

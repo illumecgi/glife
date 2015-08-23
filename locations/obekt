@@ -30,3 +30,4 @@ act 'Penetrate to the construction site':
 	act 'Go on the road':minut += 15 & nroad = 16 & gt 'road'
 
 --- obekt ---------------------------------
+

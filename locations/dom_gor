@@ -199,3 +199,4 @@ end
 if gor_dorm > 0:act 'In a shared bathroom':gt 'etoexhib', 'pos41'
 
 --- dom_gor ---------------------------------
+

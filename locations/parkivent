@@ -679,7 +679,7 @@ $parkivent6 = {
 																													act '...':
 																														cla
 																														*clr
-																														cumbelly += 1																														cumbelly += 1
+																														cumbelly += 1
 																														cumass += 1
 																														cumlip += 1
 																														cumface += 1
@@ -832,3 +832,4 @@ $parkivent9 = {
 }
 
 --- parkivent ---------------------------------
+

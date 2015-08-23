@@ -250,3 +250,4 @@ if $ARGS[0] = 'peewhore':
 	act 'Leave':minut += 10 & gt 'street'
 end
 --- bobka ---------------------------------
+

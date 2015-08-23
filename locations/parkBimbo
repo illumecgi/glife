@@ -31,3 +31,4 @@ if $ARGS[0] = 'pos2':
 	act 'finish':gt 'gskver'
 end
 --- parkBimbo ---------------------------------
+

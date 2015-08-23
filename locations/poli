@@ -875,7 +875,7 @@ if $ARGS[0] = 'glavdoc':
 	'"Work will be on weekdays, come with 8 to 9 hours, and come out on the shift will work up to 16 hours. Do not come to you this day will not be counted in the salary. Salary paid on 25th, the spent per shift - 1000 rubles. "'
 	'"Labor should hand over to the personnel department. You understand, will work?"'
 
-	! WD: Uninitialised ~ 'workshop' use 'workhosp' 
+	! WD: Uninitialised ~ 'workshop' use 'workhosp'
 	if (work = 0 and workhosp = 0 and cheatWork = 0) or (workhosp = 0 and cheatWork = 1):
 		act 'Find a job':
 			cla
@@ -989,3 +989,4 @@ if $ARGS[0] = '2':
 end
 
 --- poli ---------------------------------
+

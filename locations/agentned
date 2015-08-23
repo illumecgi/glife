@@ -41,3 +41,4 @@ end
 if ArendHouseSL > 0:'Your residential house has <<ArendHouseSL>> rental days left.'
 
 --- agentned ---------------------------------
+

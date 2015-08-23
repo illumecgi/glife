@@ -238,3 +238,4 @@ $mirapunish = {
 	act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
 }
 --- Gadriver ---------------------------------
+

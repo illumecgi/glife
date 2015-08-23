@@ -28,3 +28,4 @@ if $ARGS[0] = 'pos2':
 	act 'Dress and come':gt 'etoexhib', 'pos33'
 	end
 --- ptu_dush ---------------------------------
+

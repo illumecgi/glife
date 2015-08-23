@@ -33,7 +33,7 @@ if $ARGS[0] = 'start':
 				! if pol > 0:'<center><img src="images/etogame/zapr1.jpg"></center>'
 
 				'<center><img src="images/etogame/zapr1.jpg"></center>'
-				
+
 				'You have filled a full tank and paid <<zprpay>> rubles.'
 
 				act 'Remove gun':gt 'zaprF', 'start'
@@ -68,3 +68,4 @@ if $ARGS[0] = 'start':
 end
 
 --- zaprF ---------------------------------
+

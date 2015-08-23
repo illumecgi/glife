@@ -130,3 +130,4 @@ if StoryLine = 1 and hour >= 8 and hour < 23 and cumface > 0 and rand(0, 3) = 0 
 end
 
 --- gorodok ---------------------------------
+

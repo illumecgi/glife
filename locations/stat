@@ -975,8 +975,9 @@ if kid > 0:
 				kidage[i] += 1
 			end
 		end
-	i += 1
-	jump 'LoopKidAgeCounter'
+		i += 1
+		jump 'LoopKidAgeCounter'
+	end
 end
 !!moodlet
 !!mannamax
@@ -1586,3 +1587,4 @@ end
 }
 
 --- stat ---------------------------------
+

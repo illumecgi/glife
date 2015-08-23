@@ -14,3 +14,4 @@ lcolor = rgb(106, 90, 205)
 act 'Go to your house':minut += 5 & gt 'youplace'
 
 --- yban ---------------------------------
+

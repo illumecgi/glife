@@ -342,6 +342,7 @@
       <Location name="annafrends"/>
       <Location name="annafrends2"/>
       <Location name="annafrendtoilet"/>
+	  <Location name="reks"/>
     </Folder>
     <Folder name="Ивенты спортзала городка - Event gym town">
       <Location name="danceGev"/>

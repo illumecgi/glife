@@ -503,12 +503,6 @@ if $ARGS[0] = 'rabota':
 		if hour < 20 and hour > 7:act 'Search more':gt 'Komp', 'rabota'
 
 		act 'Finish':gt 'Komp', 'brows'
-	elseif komprabota > 4:
-		'You did not find anything suitable.'
-
-		if hour < 20 and hour > 7:act 'Search more':gt 'Komp', 'rabota'
-
-		act 'Finish':gt 'Komp', 'brows'
 	elseif komprabota > 4 and komprabota < 8 and StoryLine > 0 and Suspeh >= 90 and camwhore = 0:
 		'You stumbled on the ad, which says, that one of the thematic websites require web models.'
 		act 'Interest':
@@ -1239,4 +1233,3 @@ if $ARGS[0] = 'waitclients':
 end
 
 --- Komp ---------------------------------
-

@@ -12,10 +12,10 @@ end
 act 'Set Alarm Clock':gt 'budilnik', 'start'
 
 !!if son < 10:
-	act 'Undress and go to bed':
-		if disable_autosave = 0:
-			if StoryLine = 0:
-				savegame 'autosave.sav'
+act 'Undress and go to bed':
+	if disable_autosave = 0:
+		if StoryLine = 0:
+			savegame 'autosave.sav'
 		else
 			savegame 'autosave_alt.sav'
 		end
@@ -82,4 +82,3 @@ act 'Get out of bed':
 end
 
 --- bedPar ---------------------------------
-

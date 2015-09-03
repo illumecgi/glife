@@ -1,5 +1,6 @@
 # annafrends
 gs 'stat'
+gs 'reks'
 
 'Your sister Anja and her friends Lena, Ira, Rex, and Roman are sitting outside the House of Culture drinking beer.'
 temprand = rand(0, 4)
@@ -291,8 +292,7 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Uninitialised ~ '$rexRep'
-		!! dynamic $rexRep
+		dynamic $rexRep
 		'Comes up to you Rex'
 		'- <<$nickname>>, as much as I 2 was given this nickname in the Park waiting for you! As it is not friendly...'
 		act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt 'annafrends2'
@@ -306,8 +306,7 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Uninitialised ~ '$rexRep'
-		!! dynamic $rexRep
+		dynamic $rexRep
 		'Comes up to you Rex'
 		'- <<$nickname>>, as much as I  2 hours stuck at the door waiting for you! As it is not friendly...'
 		act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt 'annafrends2'
@@ -321,8 +320,7 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Uninitialised ~ '$rexRep'
-		!! dynamic $rexRep
+		dynamic $rexRep
 		'Comes up to you Rex'
 		'- <<$nickname>>, well, you could even out said, I won`t go... I`m a disaster! Next time better tell that will not be able.'
 		act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt 'annafrends2'
@@ -334,15 +332,13 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 		gs 'reks'
 		gs 'stat'
 		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
-		! WD: Uninitialised ~ '$rexRep'
-		!! dynamic $rexRep
+		dynamic $rexRep
 		'The Rex with a glass of beer.'
 		act 'Chat':
 			cla
 			rex += 1
 			minut += 5
-			! WD: Uninitialised ~ '$rexGdkTalk'
-			!! dynamic $rexGdkTalk
+			dynamic $rexGdkTalk
 			gs 'stat'
 		end
 		act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt 'annafrends2'
@@ -351,4 +347,3 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 end
 
 --- annafrends ---------------------------------
-

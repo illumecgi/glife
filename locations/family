@@ -135,14 +135,23 @@ if StoryLine = 1:
 		end
 
 		if $loc = 'sitrPar':
-			if hour < 7 or hour >= 21:'Sleeps on the couch your younger brother Kolka.'
+			if hour < 7 or hour >= 21:
+				'Sleeps on the couch your younger brother <a href="exec:GT ''brother''">Kolka</a>.'
+			end
 
 			if week < 6:
 				if father_go = 0:
-					if hour >= 16 and hour < 21:'Sitting on the couch <a href="exec:gt ''father''">stepfather</a> and watching TV.'
+					if hour >= 16 and hour < 21:
+						'Sitting on the couch <a href="exec:gt ''father''">stepfather</a> and watching TV.'
+					end
 				end
-				if hour >= 18 and hour < 20:'Sitting at the table your little brother <a href="exec:gt ''brother''">Kolka</a> and teaches lessons.'
-				if hour = 20:'Sitting on the couch your younger brother <a href="exec:gt ''brother''">Kolka</a> and watching TV.'
+
+				if hour >= 18 and hour < 20:
+					'Sitting at the table your little brother <a href="exec:gt ''brother''">Kolka</a> and teaches lessons.'
+				end
+				if hour = 20:
+					'Sitting on the couch your younger brother <a href="exec:gt ''brother''">Kolka</a> and watching TV.'
+				end
 			end
 
 			if week >= 6:

@@ -28,12 +28,12 @@ if marudatestinterface = 1:
 
 	!!! General Content Locations
 
-	*p 'This disticts <a href="exec:GT ''gdk''">House of Culture</a>'
+	*p '<a href="exec:GT ''gdk''">House of Culture</a>'
 	*p ' - '
 	*p '<a href="exec:GT ''gskver'',''park''">A small park</a>'
 	*p ' - '
 	if SchoolBlock = 0: 
-		*p 'Local <a href="exec: GT ''gschool''">school</a>'
+		*p '<a href="exec: GT ''gschool''">Local school</a>'
 		elseif SchoolBlock = 1: *p 'You have been expelled from school'
 	end
 	*p ' - '
@@ -57,7 +57,7 @@ if marudatestinterface = 1:
 	end
 	*p ' - '
 	if hour >= 8 and hour <= 20: 
-		*p 'The <a href="exec: minut += 15 & GT ''gaptek'',''start''">Drugstore</a>'
+		*p '<a href="exec: minut += 15 & GT ''gaptek'',''start''">Drugstore</a>'
 			else *p 'Closed until 8 AM'
 	end
 	*p ' - '
@@ -86,8 +86,7 @@ if marudatestinterface = 1:
 	*p ' - '
 	if ArtemBeInHome > 0 and artemblok = 0:
 		*p '<a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarevs home</a>'
-		elseif ArtemBeInHome <= 0 and artemblock = 0: *p 'Artem is not at home'
-		elseif artemblock = 1: *p 'Location locked'
+		else *p 'Location locked'
 	end
 	*p ' - '
 	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:

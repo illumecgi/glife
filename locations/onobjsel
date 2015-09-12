@@ -773,7 +773,12 @@ $objcheat_menu = {
 
 	pl ''
 	pl '<a href="exec:dynamic $din_cheat_dynamic">Dynamic Input Command</a>'
+	pl ''
+	!!!! Test Interface
+	if marudatestinterface <= 0:pl '<a href="exec:set marudatestinterface = 1 & gt ''street'',''start''">Initilize Test Interface</a>'
+	if marudatestinterface >= 1:pl '<a href="exec:set marudatestinterface = 0 & gt ''street'',''start''">Deactivate Test Interface</a>'
 }
+
 $objmagic = {
 	clr
 

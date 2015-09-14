@@ -134,11 +134,35 @@ act 'Chat':
 		exit
 	end
 
-	gs 'nogorslut'
-	gs 'yesgorslut'
+	if numnpc = 3 and IvanShowerYes = 0 and IvanShowerQW = 11:
+		cla
+		'Ivan Oratov to you with a question: "<<$nickname>>, I remember as mentioned earlier, but it is possible I will be with you in the shower after school section?'
+		act 'Agree':
+			IvanShowerYes = 1
+			cla
+			'"I agree" you said.'
+			if $curloc ! 'gdkin':dynamic $din_sekondparturok
+			if $curloc = 'gdkin':act 'Move away':gt $loc, $metka
+		end
+		act 'Refuse':
+			IvanShowerYes = 2
+			cla
+			'Having thought you said "No"'
+			if $curloc ! 'gdkin':dynamic $din_sekondparturok
+			if $curloc = 'gdkin':act 'Move away':gt $loc, $metka
+		end
+	elseif numnpc = 13 and lariskaHelp = -1:
+		'Leave me alone, fool!'
 
-	if $loc ! 'gdkin':dynamic $din_sekondparturok
-	if $loc = 'gdkin':act 'Move away':gt $loc, $metka
+		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
+	else
+		gs 'nogorslut'
+		gs 'yesgorslut'
+
+		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
+	end
 end
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -323,4 +347,3 @@ if $loc ! 'gdkin':dynamic $din_sekondparturok
 if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 
 --- Snpc ---------------------------------
-

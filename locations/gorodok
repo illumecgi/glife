@@ -12,7 +12,110 @@ music_on = 0
 
 '<center><h4>The Village</h4></center>'
 '<center><img src="images/etogame/gorodok.jpg"></center>'
-'A quiet province village, if you had no idea of you where abouts, you couldn''t differ this village from others. It''s tallest building is the chuches tower.'
+'<center>A quiet province village, if you had no idea of you where abouts, you couldn''t differ this village from others. It''s tallest building is the chuches tower.</center>'
+
+if marudatestinterface = 1:
+	!!!!!
+	!!! Transportation
+
+	'<center>'
+	*p '<a href="exec:minut += 15 & GT ''vokzalG''">The Train Station</a>'
+	*p ' - '
+	*p '<a href="exec:GT ''zaprF'',''start''">Gas Station</a>'
+
+	*nl
+	*nl
+
+	!!! General Content Locations
+
+	*p '<a href="exec:GT ''gdk''">House of Culture</a>'
+	*p ' - '
+	*p '<a href="exec:GT ''gskver'',''park''">A small park</a>'
+	*p ' - '
+	if SchoolBlock = 0: 
+		*p '<a href="exec: GT ''gschool''">Local school</a>'
+		elseif SchoolBlock = 1: *p 'You have been expelled from school'
+	end
+	*p ' - '
+	if workPTU > 2: 
+		*p '<a href="exec GT ''etoexhib'',''pos40''">Vocational School Hostel</a>'
+			else *p 'Location Locked'
+	end
+
+	*nl
+	*nl
+	!!! Shopping Locations
+
+	if hour >= 8 and hour <= 22: 
+		*p '<a href="exec: dynamic $kiosksig">Kiosk</a>'
+			else *p 'Closed until 8 AM'
+	end
+	*p ' - '
+	if hour >= 8 and hour <= 20: 
+		*p '<a href="exec: GT ''shop'',''start''">Supermarket</a>'
+			else *p 'Closed until 8 AM'
+	end
+	*p ' - '
+	if hour >= 8 and hour <= 20: 
+		*p '<a href="exec: minut += 15 & GT ''gaptek'',''start''">Drugstore</a>'
+			else *p 'Closed until 8 AM'
+	end
+	*p ' - '
+	if hour >= 8 and hour <= 17:
+		*p '<a href="exec: minut += 3 & gt ''barbershop'', ''start''">The Barbershop</a>'
+			else *p 'Closed until 8 AM'
+	end
+
+	*nl
+	*nl
+
+	!!! Work Locations
+
+	*p '<a href="exec:minut += 15 & GT ''gpoli''">The Clinic</a>'
+
+	*nl
+	*nl
+
+	!!! Locations bound to Characters - Location Locked = Player does not meet requirements yet (obviously)
+
+	if StoryLine = 1 and ParHomeBlock = 0: 
+		*p '<a href="exec: minut += 15 & GT ''korrPar''">Your parents apartement</a>'
+			elseif StoryLine = 0: *p 'A house with several apartements'
+			elseif StoryLine = 1 and ParHomeBlock = 1: *p 'Your parents do not welcome you anymore'
+	end
+	*p ' - '
+	if ArtemBeInHome > 0 and artemblok = 0:
+		*p '<a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarevs home</a>'
+		else *p 'Location locked'
+	end
+	*p ' - '
+	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:
+		*p '<a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosovs home</a>'
+		elseif DimaBeHomeOnce = 0 or DimaRudeBlock = 1: *p 'Location locked'
+	end
+	*p ' - '
+	if BeInNatBelHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:
+		*p '<a href="exec:minut += 15 & gt ''NatBelHome''">Natasha Belovas home</a>'
+		elseif BeInNatBelHome = 1 and hour < 18 and hour > 20 and week > 6 or hour < 8 and hour > 20 and week < 6: *p 'You can''t visit Natasha now.'
+		elseif BeInNatBelHome = 0:*p 'Location locked'
+	end
+	*p ' - '
+	if BeInJulMilHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:
+		*p '<a href="exec:minut += 15 & gt ''JuliaMilHome''">Julia Milovas home</a>'
+		elseif BeInJulMilHome = 1 and hour < 18 and hour > 20 and week > 6 or hour < 8 and hour > 20 and week < 6: *p 'You can''t visit Julia now.'
+		elseif BeInJulMilHome = 0:*p 'Location locked'
+	end
+	*p ' - '
+	if beinalbinahome > 0:
+		*p '<a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>'
+		else *p 'Location locked'
+	end
+	*nl
+	*nl
+
+end
+
+!!!!! End of marudatestinterface
 
 if GorSlut = 6 and rand(1, 20) = 20:
 	'To you a guy came up and offered to move into the bushes to get laid for a hundred.'
@@ -71,36 +174,40 @@ if car > 0 and cardrive = 20:
 	'In the parking stands <a href="exec:gs ''carF'', ''start''">your <<$car>></a>.'
 end
 
-if StoryLine = 1 and ParHomeBlock = 0:'Your home is in one of the houses, it''s an <a href="exec:minut += 15 & gt ''korrPar''">apartment</a> your parents own.'
+if marudatestinterface = 0:
 
-'The <a href="exec:minut += 15 & gt ''vokzalG''">Train Station</a>.'
-'The <a href="exec:minut += 15 & gt ''gpoli''">Clinic</a>.'
+	if StoryLine = 1 and ParHomeBlock = 0:'Your home is in one of the houses, it''s an <a href="exec:minut += 15 & gt ''korrPar''">apartment</a> your parents own.'
 
-if hour >= 8 and hour <= 20:'The <a href="exec: minut += 15 & gt ''gaptek'', ''start''">Pharmacy</a>.'
-if hour >= 8 and hour <= 17:'<a href="exec: minut += 3 & gt ''barbershop'', ''start''">The local barbershop</a>.'
-if hour >= 8 and hour <= 22:'A kiosk selling <a href="exec:dynamic $kiosksig">cigarettes</a>.'
+	'The <a href="exec:minut += 15 & gt ''vokzalG''">Train Station</a>.'
+	'The <a href="exec:minut += 15 & gt ''gpoli''">Clinic</a>.'
 
-'<a href="exec:gt ''zaprF'', ''start''">Gas Station</a>.'
-'<a href="exec:gt ''gdk''">House of Culture</a>.'
+	if hour >= 8 and hour <= 20:'The <a href="exec: minut += 15 & gt ''gaptek'', ''start''">Pharmacy</a>.'
+	if hour >= 8 and hour <= 17:'<a href="exec: minut += 3 & gt ''barbershop'', ''start''">The local barbershop</a>.'
+	if hour >= 8 and hour <= 22:'A kiosk selling <a href="exec:dynamic $kiosksig">cigarettes</a>.'
 
-if SchoolBlock = 0:'Local <a href="exec:gt ''gschool''">school</a>.'
-if hour >= 7 and hour <= 18:'The <a href="exec:gt ''etoexhib'', ''pos20''">Vocational School</a>.'
-if hour >= 8 and hour <= 20:'The only major store in town is the <a href="exec:gt ''shop'', ''start''">supermarket</a>.'
+	'<a href="exec:gt ''zaprF'', ''start''">Gas Station</a>.'
+	'<a href="exec:gt ''gdk''">House of Culture</a>.'
 
-'Small city <a href="exec:gt ''gskver'', ''park''">park</a>, in which people are going.'
-'Aside from residential buildings is <a href="exec:minut += 5 & gt ''garmassiv''">Garage array</a>.'
+	if SchoolBlock = 0:'Local <a href="exec:gt ''gschool''">school</a>.'
+	if hour >= 7 and hour <= 18:'The <a href="exec:gt ''etoexhib'', ''pos20''">Vocational School</a>.'
+	if hour >= 8 and hour <= 20:'The only major store in town is the <a href="exec:gt ''shop'', ''start''">supermarket</a>.'
 
-if ArtemBeInHome > 0 and artemblok = 0:'Apartment <a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarev</a>.'
-if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:'Private house in which he lives <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.'
-if katjaFirstKiss >= 1:'Private house in which <a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a> lives.'
-if BeInNatBelHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'The house where the apartment <a href="exec:minut += 15 & gt ''NatBelHome''">Natasha Belova</a>.'
-if BeInJulMilHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'The house where the apartment <a href="exec:minut += 15 & gt ''JuliaMilHome''">Julia Milova</a>.'
-if beinalbinahome > 0:'Luxurious mansion in which he lives <a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>.'
+	'Small city <a href="exec:gt ''gskver'', ''park''">park</a>, in which people are going.'
+	'Aside from residential buildings is <a href="exec:minut += 5 & gt ''garmassiv''">Garage array</a>.'
 
-'Urban development enterprise <a href="exec:minut += 15 & gt ''Gshveyfab''">Garment factory named Paris Commune</a>.'
+	if ArtemBeInHome > 0 and artemblok = 0:'Apartment <a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarev</a>.'
+	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:'Private house in which he lives <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.'
+	if katjaFirstKiss >= 1:'Private house in which <a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a> lives.'
+	if BeInNatBelHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'The house where the apartment <a href="exec:minut += 15 & gt ''NatBelHome''">Natasha Belova</a>.'
+	if BeInJulMilHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'The house where the apartment <a href="exec:minut += 15 & gt ''JuliaMilHome''">Julia Milova</a>.'
+	if beinalbinahome > 0:'Luxurious mansion in which he lives <a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>.'
 
-if workPTU > 2:act '<b>Go to the hostel</b>':gt 'etoexhib', 'pos40'
+	'Urban development enterprise <a href="exec:minut += 15 & gt ''Gshveyfab''">Garment factory named Paris Commune</a>.'
 
+	if workPTU > 2:act '<b>Go to the hostel</b>':gt 'etoexhib', 'pos40'
+
+end
+!!!!! End of marudatestinterface
 act 'Wait':
 	cla
 	waiting = input ("How long would you like to wait? (Not more than 120 minutes)")

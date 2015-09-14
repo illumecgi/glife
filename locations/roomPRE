@@ -9,7 +9,7 @@ lcolor = rgb(106, 90, 205)
 
 if pre = 0:
 	pre = 1
-	'Alarm rang. Wife Luda sluggishly rolled over. Habitual movement you have it turned off. God, how can you not want to work. Okay, enough rassusolivat.'
+	'You wake up to the sound of your alarm clock. You hear Luda, your wife, next to you mumbling something about "don''t want to" and "too early", then she pulls her blanket up and rolls over. You reach over to your clock and turn it of. <i>There are days, I just want to keep on sleeping</i>, you think to yourself. <i>But it''s not going to happen today.</i>'
 
 	act 'Go to the bathroom':
 		cla
@@ -18,7 +18,7 @@ if pre = 0:
 		clr
 		gs 'statPRE'
 		'<center><img src="images/picPRE/self.jpg"></center>'
-		'Quietly, that would not wake up daughter, you have gone to the bathroom and began to brush up.'
+		'Quietly, so that you won''t wake up your daughter, you go to the bathroom and take care of your morning routine.'
 
 		act 'Leave the apartment':
 			cla
@@ -27,7 +27,7 @@ if pre = 0:
 			clr
 			gs 'statPRE'
 			'<center><img src="images/picPRE/carPRE1.jpg"></center>'
-			'In the parking lot near the house was your car. You went to her and pressed a button on the key fob opening the central locking and removing the alarm.'
+			'In the parking lot near the house stands your car. As you approach it, press the button on your key and unlock it.'
 
 			act 'Go to work':
 				cla
@@ -36,7 +36,7 @@ if pre = 0:
 				clr
 				gs 'statPRE'
 				'<center><img src="images/picPRE/carPRE.jpg"></center>'
-				'You got behind the wheel, started the car and drove to work. On the road, as was always going to jam you and dragged themselves on something like a traffic jam to the office.'
+				'You get behind the wheel, turn the key to start the car and drive off to work. The roads are filled with cars, but it''s the morning rush hour, so what else to expect. You drive for approximately an eternity, plus/minus and hour, but you eventually reach your office. At least the music on the radio was pleasent.'
 
 				act 'Park at the office':
 					cla
@@ -45,18 +45,21 @@ if pre = 0:
 					clr
 					gs 'statPRE'
 					'<center><img src="images/picPRE/officePRE.jpg"></center>'
-					'You put the car to the parking lot near the office and went into the building. Greeted with a security guard and went upstairs to his office.'
-					'To you the director''s secretary came and brought you travel documents. You looked at her. "Did I go to business trip?" you asked. "Probably yes. Vsyevolodovitch ears stands in the morning, what that PE in the construction industry. More I do not know." Oksana said. You have prepared travel documents, now we have to sign the director.'
+					'You pull into the parking lot near the office and manage to find a good parking spot. You greet the security guard on your way into the building and go upstairs, into your office.'
+					'Shortly after you sat down at your desk and booted up your office computer, your bosses secretary comes in and hands your folder with several travel documents.' 
+					'"Am I going on business trip or something?" you ask her.' 
+					'"Yes, Boss said it had something to do with a construction project outside somewhere in the middle of nowhere, but that''s pretty much all I know" Oksana said.' 
+					'After she left, you read over the travel documents and fill them out. Time to go to the director.'
 
-					act 'By Director':
+					act 'Go to your Boss':
 						cla
 						*clr
 						minut += 20
 						clr
 						gs 'statPRE'
 						'<center><img src="images/picPRE/man.jpg"></center>'
-						'Going to the office of the Director, you greeted him and submitting papers to sign sat in the chair. Roman Gromov ran the text and paper podmahnul wide authoritative stroke.'
-						'"Glavbukh probably already in place, go get travel. While I make a few calls, and then come back to me, discuss your trip." director said thoughtfully.'
+						'You head into the office of the Director, you greet him and give him the papers to sign. Roman Gromov scans through the text before giving his wide authoritative stroke.'
+						'"Ms. Glavbukh is probably already in the office. Go get the travel money while I make a few calls. We''ll discuss your trip when you get back." Roman said.'
 
 						act 'Go to the chief accountant for travel':
 							cla
@@ -66,18 +69,18 @@ if pre = 0:
 							clr
 							gs 'statPRE'
 							'<center><img src="images/picPRE/glavbuh.jpg"></center>'
-							'Marina was already in his office, you have filed her application, she grumbled a bit, but has given you money. Did you get their names in the statements, and came out of her office.'
+							'Marina is indeed already in the office. After filing the signed travel form, she grumbles a bit before giving you money.'
 
-							act 'Go to the director':
+							act 'Go back to the director':
 								cla
 								*clr
 								minut += 15
 								clr
 								gs 'statPRE'
 								'<center><img src="images/picPRE/man.jpg"></center>'
-								'When you entered the director Roman Gromov gestured you to a chair, and he continued to talk on the phone.'
-								'"Yes, I understand. Utryasem Once all the questions so I will immediately send you Michael, my deputy. Tell workers that they output. Igor, a guard at the pit and let no one there no fuss, take care that would nobody got wind, you know, may prohibit the construction and this can not be allowed. Okay, let''s be engaged. " Roman hung up.'
-								'He turned and spoke to you. "Tonight, during operations in the pit at our complex construction workers stumbled upon what that space. Backhoe struck the wall there. Okay Igor was close by and realized stop the excavations. Damn, is not clear on what we would encounter. Maybe abandoned bunker or something . But in any case there is any voids under pits and further construction of the complex may not be possible. So what you need as quickly as possible to go to the construction site. Understand that there''s what. Zanochuesh in hotel. general, solve itself, according to circumstances. "'
+								'When you enter the director''s office again, Roman Gromov talks on the phone and gestured you to sit down on one of the chairs across from him.'
+								'"Yes, I understand...yes. I will send Michael over ASAP, he''ll represent me. ...Yes... Tell your men to work on some other parts of the project in the meantime. Have Igor guard the pit and let no one make any fuss, make sure noone gets wind and, you know, try to halt the construction. ...Okay, we''ll keep in touch." Roman hangs up.'
+								'Roman turns to you. "Last night, while excavating the pit for the base, the workers stumbled upon something. One of the Excavators dug into a hollow space of some sort. Igor was luckily close by and realized he needed to stop the excavation. Damn! It is not clear on what it is exactly. Maybe an abandoned bunker or something . But in any case if there are any more open chambers under the foundation, further construction of the complex may not be possible. So what I want you to do is to go to the construction site, figure out what it is and solve this mess as quickly as possible."'
 
 								act 'I should at least meet':
 									cla
@@ -86,7 +89,8 @@ if pre = 0:
 									clr
 									gs 'statPRE'
 									'<center><img src="images/picPRE/man.jpg"></center>'
-									'"I though we should get" had begun to pull you bagpipes, but the director interrupted you. "Michael, do not you catch up? We scored credits on the ears on this construction, we still have not even agreed on a construction project, and we dig a pit. You understand, moreover, that if a foundation pit of emptiness, we can not continue to build and find ourselves on the brink of ruin, so we can still what important object destroyed while still on trial zagremit. situation must be addressed urgently. This force majeure. I have to be here to catch in which case someone should grease the time, so you go . "'
+									'"I think we should get-" you say, but are quickly interrupted by your boss.'
+									'"Michael, do you realize what''s at stake here? We''re near the end of our credit line, we still have unfinalized agreements on the projects contract and we already have guys digging the pit. You understand that if there''s a too big a hole under the foundation, we cannot continue building and find ourselves on the brink of ruin. So this mysterious structure situation must be addressed immediately. I have to stay here to keep a lid on things and buy us the time"'
 
 									act 'Okay, then I will not waste any more time':gt 'roadPRE'
 								end
@@ -98,6 +102,5 @@ if pre = 0:
 		end
 	end
 end
-
 --- roomPRE ---------------------------------
 

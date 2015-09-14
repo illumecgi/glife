@@ -61,9 +61,9 @@ if $ARGS[0] = 'start' or $ARGS[0] = '':
 	end
 	}
 	! WD: Use read book code
-	if f_book <= 0 and fantasybook <= 0 and w_book = 0 and womanbook = 0:
-		#loc = 'divan'
-		dynamic '$d_read_book'
+	if f_book > 0 or fantasybook > 0 or w_book > 0 or womanbook > 0:
+		$loc = 'divan'
+		dynamic $d_read_book
 	end
 
 

@@ -350,6 +350,7 @@ if $ARGS[0] = 'work2':
 				'You pulled his lips a condom on the penis'
 
 				if $ARGS[1] = 'blow job':
+					money += ProsMoney * 100
 					'Your lips slide down the barrel client until he cums in a condom.'
 
 					act 'Finish':gt 'prostitute', 'start'
@@ -364,6 +365,7 @@ if $ARGS[0] = 'work2':
 						minut += 15
 						sex += 1
 						protect = 1
+						money += ProsMoney * 100
 						gs 'stat'
 
 						if rand(0, 1) = 0:
@@ -433,6 +435,7 @@ if $ARGS[0] = 'work2':
 
 					if $ARGS[1] = 'blow job':
 						bjrand = rand(1, 100)
+						money += ProsMoney * 100
 
 						if bjrand <= 50:
 							if bj <= 15:
@@ -478,6 +481,7 @@ if $ARGS[0] = 'work2':
 							prosti = 0
 							minut += 15
 							sex += 1
+							money += ProsMoney * 100
 							gs 'stat'
 							prostRand = rand(1, 100)
 

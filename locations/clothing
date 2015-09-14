@@ -97,7 +97,7 @@ if $ARGS[0] = 'view_clothing_list':
 	:loophooker
 		if hooker[i] = 1 and ($clothingworntype ! 'hooker' or clothingwornnumber ! i):dyneval($clothing_list_line, $ARGS[1], 'hooker', i)
 		i += 1
-	if i <= 5:jump 'loophooker'
+	if i <= 205:jump 'loophooker'
 
 	i = 1
 	:loopodekis

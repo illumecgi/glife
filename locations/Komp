@@ -401,6 +401,7 @@ if $ARGS[0] = 'kabtv':
 	else
 		'You don''t even own a TV yet!'
 		act 'Leave':gt 'Komp', 'start'
+	end
 	act 'Leave':gt 'Komp', 'start'
 end
 

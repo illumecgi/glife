@@ -1,3 +1,5 @@
+# budgetclothes
+
 $budgetshort = {
 	cla
 
@@ -265,3 +267,5 @@ $budgetjeansdepartment = {
 	act 'Leave this department':gt $loc
 
 }
+
+--- budgetclothes ---------------------------------

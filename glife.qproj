@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <QGen-project version="4.0.0 beta 1">
   <Structure>
     <Location name="start"/>
@@ -342,11 +342,11 @@
       <Location name="annafrends"/>
       <Location name="annafrends2"/>
       <Location name="annafrendtoilet"/>
-	  <Location name="reks"/>
-	  <Location name="VolleyTrenCentr"/>
-	  <Location name="VolleyTrenerSpeak"/>
-	  <Location name="Voltrenersex"/>
-	  <Location name="VoltrenerSexShower"/>
+      <Location name="reks"/>
+      <Location name="VolleyTrenCentr"/>
+      <Location name="VolleyTrenerSpeak"/>
+      <Location name="Voltrenersex"/>
+      <Location name="VoltrenerSexShower"/>
     </Folder>
     <Folder name="Event gym town">
       <Location name="danceGev"/>
@@ -616,7 +616,6 @@
       <Location name="Menu.Chosen"/>
       <Location name="Menu.Time"/>
       <Location name="Menu.Destroy"/>
-      <!--Location name="Menu.{Treatment}"/-->
     </Folder>
     <Folder name="Casino">
       <Location name="casino"/>
@@ -744,5 +743,6 @@
       <Location name="card"/>
       <Location name="blackjack"/>
     </Folder>
+    <Location name="Menu.{Treatment}"/>
   </Structure>
 </QGen-project>

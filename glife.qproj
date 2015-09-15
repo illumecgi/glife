@@ -343,6 +343,10 @@
       <Location name="annafrends2"/>
       <Location name="annafrendtoilet"/>
 	  <Location name="reks"/>
+	  <Location name="VolleyTrenCentr"/>
+	  <Location name="VolleyTrenerSpeak"/>
+	  <Location name="Voltrenersex"/>
+	  <Location name="VoltrenerSexShower"/>
     </Folder>
     <Folder name="Event gym town">
       <Location name="danceGev"/>

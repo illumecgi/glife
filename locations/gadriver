@@ -1,4 +1,4 @@
-# Gadriver
+# gadriver
 $metka = $ARGS[0]
 $loc = $CURLOC
 
@@ -237,5 +237,5 @@ $mirapunish = {
 
 	act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
 }
---- Gadriver ---------------------------------
+--- gadriver ---------------------------------
 

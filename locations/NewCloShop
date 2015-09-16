@@ -59,7 +59,7 @@ act 'Leave':
 	mag = 0
 	minut += 15
 	view
-	gt 'down'
+	gt 'torgcentr'
 end
 !!!
 

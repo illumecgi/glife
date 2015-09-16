@@ -124,7 +124,7 @@ lcolor = rgb(106, 90, 205)
 act 'Leave the store':
 	cla
 	minut = minut + 3
-	gt 'down'
+	gt 'torgcentr'
 end
 
 ! WD: Rename 'png' clothing images as scripts are only using 'jpg' ~
@@ -269,3 +269,4 @@ $budgetjeansdepartment = {
 }
 
 --- budgetclothes ---------------------------------
+

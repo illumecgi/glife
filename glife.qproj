@@ -616,6 +616,7 @@
       <Location name="Menu.Chosen"/>
       <Location name="Menu.Time"/>
       <Location name="Menu.Destroy"/>
+	  <Location name="Menu.{Treatment}"/>
     </Folder>
     <Folder name="Casino">
       <Location name="casino"/>
@@ -743,6 +744,5 @@
       <Location name="card"/>
       <Location name="blackjack"/>
     </Folder>
-    <Location name="Menu.{Treatment}"/>
   </Structure>
 </QGen-project>

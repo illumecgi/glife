@@ -347,3 +347,4 @@ if $loc ! 'gdkin':dynamic $din_sekondparturok
 if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 
 --- Snpc ---------------------------------
+

@@ -767,3 +767,4 @@ if $ARGS[0] = 'party':
 	act 'Move away':gt 'sbReksHome', 'party_home'
 end
 --- reks ---------------------------------
+

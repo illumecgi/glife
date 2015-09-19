@@ -11,7 +11,7 @@ lcolor = rgb(106, 90, 205)
 $name = 'Svetlana'
 $surname = 'Lebedev'
 !!!0.2.6 addition
-$nickname = 'Svetski'
+$nickname = 'Sveta'
 !!!
 age = 18
 vidage = 16
@@ -89,18 +89,18 @@ act 'Look at yourself':
 	"This is the first time I changed the gender of a person, therefore I just HAD to see you reaction. Totally worth it. But you turned out beautiful. For a first try that is of course. I miscalculated something, for example due to sharp hormonal change you got bad acme on the face. Failed to change your eyes and lips, but on the bright side, your body will change much faster than the one of a natural born woman. That means it will be easy to gain and lose weight and change facial features. All in all you turned your quite well. By the way, your new ''equipment'' down there is fully functional, so if you don''t want to be a mommy, you should think about taking contraceptives."'
 	'You angrily look at Karin, "So you think I''m a complete woman? On the outside I''ll look like one, but guess what, I''m still the 34-years-old me."'
 	'"Well, yes. Do won''t argue about that." Karin agrees. "It''s your life and your decisions what you are going to do with it, but for the time being, you cannot go back to your old life, so deal with it. On a side note, I already took care of alibi. Today Michael crashed his car into the pit and died, now just on the TV news." With these words, Karin pressed the remote button to turn on the TV.'
-	$name = input("What is your first name?")
+	$name = input("What is your first name? (Leave blank for default)")
 
 	if $name = '':$name = 'Svetlana'
 
-	$surname = input("What is your last name?")
+	$surname = input("What is your last name? (Leave blank for default)")
 
 	if $surname = '':$surname = 'Lebedev'
 
 	!!!0.2.6 addition
-	$nickname = input("What is your nickname?")
+	$nickname = input("What is your nickname? (Note: If you chose a custom name, you have to enter something here!)")
 
-	if $nickname = '':$nickname = 'Svetski'
+	if $nickname = '':$nickname = 'Sveta'
 	!!!
 
 	act 'Watch TV':

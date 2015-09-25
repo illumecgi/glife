@@ -39,6 +39,13 @@ if hour >= 8 and hour <= 18 and young_shop_work = 0 and week < 6:
 	end
 end
 
+if hour >= 8 and hour <= 18 and young_shop_work = 3 and week < 6:
+	act '<font color="navy">Go to the manager, maybe he will hire you again</font>':
+		minut += 1
+		gt 'andrey'
+	end
+end
+
 act '<b>Get out of the shop</b>':
 	minut += 3
 	gt 'torgcentr'
@@ -591,7 +598,8 @@ if hour = 15 and young_shop_work = 1 and week < 6:
 	end
 end
 
-if hour >= 8 and hour <= 18 and young_shop_work = 1 and young_shop_miss >= 3 and week < 6:gt 'andrey'
+
+if hour >= 8 and hour <= 18 and young_shop_miss >= 3 and week < 6 and young_shop_work = 1:gt 'andrey'
 
 ! WD: Change trading hours to consistant with the other shops
 ! if hour > 21 or hour < 8 or week >= 6:

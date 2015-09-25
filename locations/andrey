@@ -25,9 +25,8 @@ if young_shop_work = 0:
 				work = 1
 				young_shop_work = 1
 				minut += 5
-
-				if week >= 1 and week <= 4:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Your first workday is tomorrow.</center></b>'
-				if week = 5:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Your first workday is on Monday.</center></b>'
+				if week >= 1 and week <= 4:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Starting TODAY at 15:00!!!</center></b>'
+				if week = 5:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Your first workday is on Monday at 15:00.</center></b>'
 
 				gt 'young_shop'
 			end
@@ -35,13 +34,15 @@ if young_shop_work = 0:
 	end
 
 	act 'Leave':gt 'young_shop'
+end
+
 elseif young_shop_work = 1:
 	'You knock on the door and open it. Inside, you see the stores manager Andrew M. Sobulyagin. Normally he''d be reading some papers, but you notice he''s currently looking at pictures of naked girls on his monitor.'
 
-	if week = 5 and young_shop_salary > 0:
+	if week = 5 and young_shop_salary > 0 and young_shop_miss < 3:
 		'- Hello <<$name>>. Have you come for your salary?'
 
-		act 'Get salary':
+		act 'Get salary and leave':
 			minut += 15
 
 			!'
@@ -59,22 +60,70 @@ elseif young_shop_work = 1:
 			'!
 
 			money += young_shop_salary * 800 + young_shop_bonus * 200
-			young_shop_salary = 0
-			young_shop_bonus = 0
+
+
 			msg '<center>I''ve worked <b><<young_shop_salary>></b> days and got paid <b><<young_shop_salary * 800>></b> rubles, with a bonus of <b><<young_shop_bonus * 200>></b> rubles. Total income is <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles</center>'
 			'The manager counts out <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles and, after having received my signature, puts his nose back in the papers.'
 
-			act 'Leave':gt 'young_shop'
-		end
+			! reset money,young_shop_salary,young_shop_bonus to zero for a new week
 
-		exit
+			young_shop_salary = 0
+			young_shop_bonus = 0
+			money += young_shop_salary * 800 + young_shop_bonus * 200
+			
+			gt 'young_shop'
+			
+			end
+
+		end
+			
+	end
+
+	if young_shop_miss < 3 and young_shop_work = 1:
+
+		act 'Resign':
+			cla
+			'- "I would like to resign" You say as you walk up to the managers table.'
+			'- "Are you sure? If you''re sure I can arrange everything right away." Andrew M. scratches his head - "But why so suddenly?"'
+
+			act 'Change your mind':
+				'- "You know, I should think about it some more" You say as you''re moving back towards the door. - "I''ll come back some other time."'
+				'- "Right, is there something else you wanted?"'
+
+				act 'Leave':gt 'young_shop'
+			end
+
+			act 'Resign, get paid out and leave':
+				young_shop_work = 3
+				young_shop_miss = 0
+				work = 0
+				'- "No, I already thought about it very thoroughly!" You say'
+				'"Okay", Andrew M. says and starts filling out several forms before handing them over to you for signatures.'
+
+				if young_shop_salary > 0 or young_shop_bonus > 0:
+					money += young_shop_salary * 800 + young_shop_bonus * 200
+
+					msg '<center>For working <b><<young_shop_salary>></b> days I got paid <b><<young_shop_salary * 800>></b> rubles, with a bonus of <b><<young_shop_bonus * 200>></b> rubles. Total income is <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles</center>'
+					'Andrew M. counts out <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles.'
+
+					! reset money,young_shop_salary,young_shop_bonus to zero for a new week
+					young_shop_salary = 0
+					young_shop_bonus = 0
+					money += young_shop_salary * 800 + young_shop_bonus * 200
+			
+					gt 'young_shop'
+				end
+
+				act 'Leave':gt 'young_shop'
+			end
+		end
 	end
 
 	if young_shop_miss >= 3:
 		cla
 		'- What a piece of work you are! - Andrew M. leans back in his chair. - Where have you been? We agreed that missing work three times are terms for immediate dismissal.'
 
-		act 'Agree to dismissal':
+		act 'Agree your dismissal, get paid out and leave':
 			cla
 			young_shop_work = 2
 			young_shop_miss = 0
@@ -88,16 +137,21 @@ elseif young_shop_work = 1:
 
 			if young_shop_salary > 0 or young_shop_bonus > 0:
 				money += young_shop_salary * 800 + young_shop_bonus * 200
-				young_shop_salary = 0
-				young_shop_bonus = 0
+
 				msg 'For working <b><<young_shop_salary>></b> days you get paid <b><<young_shop_salary * 800>></b>, with a bonus of <b><<young_shop_bonus * 200>></b> rubles. Total income is <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles'
 				'Andrew M. counts out <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles.'
+
+				! reset money,young_shop_salary,young_shop_bonus to zero for a new week
+				young_shop_salary = 0
+				young_shop_bonus = 0
+				money += young_shop_salary * 800 + young_shop_bonus * 200
+			
+				gt 'young_shop'
 			end
 
-			act 'Leave':gt 'young_shop'
 		end
 
-		act 'Beg to not be fired':
+		act 'Beg to get not fired':
 			cla
 			'- "Please, I can''t lose my job! It''s very important to me, please don''t fire me!" As you say this, tears begin rolling down your cheeks.'
 			'- "Then you have only one option; lock the door and show me how good your lips are at convincing me" Andrew M. rises to his feet and cups his balls with his right hand.'
@@ -131,6 +185,7 @@ elseif young_shop_work = 1:
 				act 'Leave':gt 'young_shop'
 			end
 		end
+
 		if cheatWork = 1:
 			act 'Reset counter truancy (Cheat)':
 				young_shop_miss = 0
@@ -151,40 +206,11 @@ elseif young_shop_work = 1:
 				end
 			end
 		end
-	elseif young_shop_miss < 3:
-		act 'Resign':
-			cla
-			'- "I would like to resign" You say as you walk up to the managers table.'
-			'- "Are you sure? If you''re sure I can arrange everything right away." Andrew M. scratches his head - "But why so suddenly?"'
 
-			act 'Change your mind':
-				'- "You know, I should think about it some more" You say as you''re moving back towards the door. - "I''ll come back some other time."'
-				'- "Right, is there something else you wanted?"'
-
-				act 'Leave':gt 'young_shop'
-			end
-
-			act 'Resign':
-				young_shop_work = 3
-				young_shop_miss = 0
-				work = 0
-				'- "No, I already thought about it very thoroughly!" You say'
-				'"Okay", Andrew M. says and starts filling out several forms before handing them over to you for signatures.'
-
-				if young_shop_salary > 0 or young_shop_bonus > 0:
-					money += young_shop_salary * 800 + young_shop_bonus * 200
-					young_shop_salary = 0
-					young_shop_bonus = 0
-					msg '<center>For working <b><<young_shop_salary>></b> days I got paid <b><<young_shop_salary * 800>></b> rubles, with a bonus of <b><<young_shop_bonus * 200>></b> rubles. Total income is <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles</center>'
-					'Andrew M. counts out <b><<young_shop_salary * 800 + young_shop_bonus * 200>></b> rubles.'
-				end
-
-				act 'Leave':gt 'young_shop'
-			end
-		end
+		
 	end
 
-	act 'Leave':gt 'young_shop'
+
 elseif (work = 0 and young_shop_work = 2 and cheatWork = 0) or (young_shop_work = 2 and cheatWork = 1):
 	act 'Beg to return to work':
 		cla
@@ -217,7 +243,8 @@ elseif (work = 0 and young_shop_work = 2 and cheatWork = 0) or (young_shop_work 
 			'You slowly stand up, still a little disoriented. Your anus hurts <i>a lot</i>, and as you''re dressing you gently touch your anus with a finger. It stings, and looking at your finger you notice it''s now covered in disgusting brown sperm.'
 			'- "Thank you very much!" You say, trying and failing to keep a smile on your face.'
 
-			if week >= 1 and week <= 4:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Starting tomorrow</center></b>'
+			if week >= 1 and week <= 4 and hour <=15:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Starting TODAY at 15:00!!!</center></b>'
+			if week >= 1 and week <= 4 and hour >15:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Starting tomorrow at 15:00</center></b>'
 			if week = 5:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Starting on Monday</center></b>'
 
 			act 'Leave':gt 'young_shop'
@@ -225,10 +252,12 @@ elseif (work = 0 and young_shop_work = 2 and cheatWork = 0) or (young_shop_work 
 	end
 
 	act 'Leave':gt 'young_shop'
+
+
 elseif young_shop_work = 3:
 	'The manager is not against you coming back to work, since you quit yourself and were not fired due to skipping work.'
 
-	act 'Back to work':
+	act 'Accept your previous work':
 		cla
 		work = 1
 		young_shop_work = 1
@@ -236,7 +265,8 @@ elseif young_shop_work = 3:
 		'- "We''ve been waiting for you to come back!" Andrew M. gives you a few forms. - "I even told Valera from the male department that you''d come back to us!"'
 		'You fill out the forms and return them to the manager.'
 
-		if week >= 1 and week <= 4:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Your first workday is tomorrow</center></b>'
+		if week >= 1 and week <= 4 and hour <=15:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Starting TODAY at 15:00!!!</center></b>'
+		if week >= 1 and week <= 4 and hour >15:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Starting tomorrow at 15:00</center></b>'
 		if week = 5:msg '<b><center>You got a job in the youth clothing store ''Kies pussy''. Your first workday is on Monday</center></b>'
 
 		act 'Leave':gt 'young_shop'

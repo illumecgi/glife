@@ -7,17 +7,18 @@ bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 money -= 3000
 '<center><img src="images/picPRE/otelPRE.jpg"></center>'
-'Your trip to the Hotel is quite uneventful compared to your tomb raiding spiel. You park your car go to the receptionist to get a room.'
-'There are only double rooms available, but you since your company is paying for your stay, you don''t really seem to care. You take your key and go to your room.'
+'Your trip to the hotel is quite uneventful compared to your tomb raiding adventure.'
+*nl 
+'You park your car and go to the receptionist to get a room. There are only double rooms available, but since your company is paying for your stay, it doesn''t really bother you much. You take your key and go to your room.'
 
-act 'Up to the room.':
+act 'Head upstairs to your room.':
 	cla
 	*clr
 	minut += 5
 	clr
 	gs 'statPRE'
 	'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
-	'You lay down on one of the beds and start to wonder who built that crypt and what it''s purpose was. You also think about that amulet you''ve found, the fact that you touched it half an hour ago, but you still feel wonderful, baffles you.'
+	'Lying down on one of the beds, you start to wonder just who built that crypt and what it''s purpose was. You thoughts also drift to that amulet you''ve found; the fact that thing you touched half and hour ago still make you feel wonderful baffles you.'
 
 	act 'Call the director.':
 		cla
@@ -26,8 +27,10 @@ act 'Up to the room.':
 		clr
 		gs 'statPRE'
 		'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
-		'You decide to dial Roman''s number and after a few rings, he picks up. You told him the details of what you found at the site with Igor: the ancient tomb, human bones, the scrolls in a mysterious language and the altar in that room.'
-		'The director keeps silent, while you tell him all about it... then he decides it would be best to stop the construction. He tells you to stay and over the site until further notice.'
+		'You decide to dial Roman''s number and after a few rings, he picks up. You report to him the details of what you found at the site with Igor: an ancient tomb, human bones, scrolls in a mysterious language and the altar in that room.'
+		*nl 
+		'The director stays silent while you give your report. A few moments later, he decides that it would be best to stop the construction. He tells you to stay and keep watch over the site until further notice.'
+		*nl 
 		'You put the phone away. <i>Looks like this journey is going to be longer than expected</i>, you think to yourself.'
 
 		act 'Go to bed.':
@@ -37,10 +40,13 @@ act 'Up to the room.':
 			clr
 			gs 'statPRE'
 			'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
-			'It doesn''t take you long to drift into sleep'
-			'Visions begin to form in your mind and soon you find yourself in a middle of a dream. You see the amulet in front of you and out comes a ghost of some sort. Before realizing you find yourself staring deep into the ghost''s eyes as it reflects a moon.'
+			'It doesn''t take you long to drift off to sleep'
+			*nl 
+			'Images begin to form in your mind and you soon find yourself in a middle of a dream. The amulet stands before you and out comes a ghost of some sort. Before you even realise what you are doing, you find yourself staring deep into the ghost''s eyes in which you see a moon.'
+			*nl 
 			'"Look at the world. People see the world, but not as it really is."'
-			'Suddenly you feel the motel room around you in your dream, but you are not alone.'
+			*nl 
+			'Suddenly your sesnes return from your dream as you feel the hotel room around you, but this time, you are not alone.'
 
 			act 'Open your eyes.':
 				cla
@@ -49,8 +55,9 @@ act 'Up to the room.':
 				clr
 				gs 'statPRE'
 				'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
-				'As you open your eyes, you see a black figure standing in your room. He wears a long black coat and a strange orange mask on his face; the mask only had a single one hole for the eyes.'
-				'He approaches you, "Where is the amulet?"'
+				'As you open your eyes, you see a black figure standing in the room. He is wearing a long black coat and some strange orange mask on his face; a mask with only one hole to see with.'
+				*nl 
+				'"Where is the amulet?" he approchaes you.'
 
 				act 'Who are you?':
 					cla
@@ -59,10 +66,13 @@ act 'Up to the room.':
 					clr
 					gs 'statPRE'
 					'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
-					'"Who are you?" you ask puzzled. The man''s sudden appearence and dress feels out of this world.'
-					'"Listen, don''t cause any probles now, give me the amulet, close the construction site and all be fine. After all that place belongs to us," the stranger said in a firm voice.'
-					'Belongs to us? His response leaves you bewildered, wondering who he is and what this is all about.'
-					'"Well, how about I give you a small taste of my power." the man said, and out of nowhere you feel a burning desire to give him the amulet.'
+					'"Who are you?" you ask puzzledly. The man''s sudden appearence and dress feels not of this world.'
+					*nl 
+					'"Listen, don''t cause any problems now. Give me the amulet, close the construction site, and all will be fine. After all that place belongs to us," he says in a firm voice'
+					*nl 
+					'<i>Belongs to us?</i> His response leaves you bewildered, wondering who he is and what this is all about.'
+					*nl 
+					'"Well, how about I give you a small taste of my power." the man says, and out of nowhere comes a burning desire to give him the amulet.'
 
 					act 'Give him the amulet':
 						cla
@@ -71,11 +81,14 @@ act 'Up to the room.':
 						clr
 						gs 'statPRE'
 						'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
-						'You get out of the bed and give him the statue, you had put in your pants earlier. The man takes it, steps back and then without a warning, you see something in his single eye begin to spin like a whirlwind, causing your eyes to blur as if the mask somehow spins with it. A few seconds later your vision clears and the man somehow disappeared into thin air.' 
-						'You rub your eyes, "What the hell is going on here? Was that a dream?. No, can''t be, I wouldn''t walk around in a dream. I think." You check your pants, the amulet is indeed gone. You sit down on the bed trying to make sense of what just happened.'
-						'Lost in thought, you hear a knock on the door. You get up to get to the door, you aren''t expecting visitors this late at night.'
-						'"...who''s there?", you ask, still being a confused.'
-						'A woman''s voice responds that she''s the hotels receptionist and she needs to talk to you on an urgent matter.'
+						'You get out of the bed and give him the stone figure you had put in your pants earlier. The man takes it, steps back, then without a warning, you see something in his eye begin to spin like a whirlwind, causing your own eyes to blur as if the mask was somehow spinning with it. A few seconds later your vision clears with the man having somehow disappeared into thin air.' 
+						*nl 
+						'You rub your eyes, "What the hell is going on here? Was that a dream?. No, can''t be. I wouldn''t walk around in a dream. I think." You check your pants, the amulet is indeed gone. You sit down on the bed trying to make sense of what just happened.'
+						*nl 
+						'While lost in thought, you hear a knock on the door. You get up to open the door, although you aren''t expecting any visitors this late at night.'
+						'"...Who''s there?", you ask, still confused.'
+						*nl 
+						'A woman''s voice responds that she''s the hotels receptionist and that she needs to talk to you on an urgent matter.'
 
 						act 'Answer the door':
 							cla
@@ -84,9 +97,11 @@ act 'Up to the room.':
 							clr
 							gs 'statPRE'
 							'<center><img src="images/picPRE/karinPRE.jpg"></center>'
-							'You open the door, but you don''t remember the woman infront you from the reception desk, the woman from earlier didn''t have red hair and glasses. After entering the room she quickly examines the place, before locking her eyes on you.'
+							'You open the door, but don''t recall the woman in front you being at the reception desk; the woman from earlier didn''t have red hair and glasses. After entering the room she quickly examines the place, before locking her eyes on you.'
+							*nl 
 							'"Michael, right?" - You nod.'
-							'"Last night you went to a certain place and took out something very valuable and powerful." the woman tells you.'
+							*nl 
+							'"Last night you went to a certain place and took out something very valuable and powerful." the woman speaks to you.'
 
 							act 'Listen, there was already someone like you here.':
 								cla
@@ -95,8 +110,12 @@ act 'Up to the room.':
 								clr
 								gs 'statPRE'
 								'<center><img src="images/picPRE/karinPRE.jpg"></center>'
-								'<i>Again?</i> You sigh, irritated that not only you''ve been disturbed in the middle of the night, these idiots apparently can not even agree among themselves who is going to disturb you.'
+								'<i>Again?</i>
+								*nl 
+								You sigh, irritated that not only you''ve been disturbed in the middle of the night, these idiots apparently cannot even agree among themselves who the one to disturb you is.'
+								*nl 
 								'"Listen, you''re starting to bother me. That other guy already showed up asking for the damn amulet."'
+								*nl 
 								'She looks at you with surprise. "What? Someone already came here? Who was it?"'
 
 								act 'Tell her':
@@ -106,8 +125,10 @@ act 'Up to the room.':
 									clr
 									gs 'statPRE'
 									'<center><img src="images/picPRE/karinPRE.jpg"></center>'
-									'"It was some man in a black cloak with red clouds and orange mask with one hole for the eyes. He already took the amulet." you answered.'
-									'The girl''s face fell. "Damn it! Okay... Michael, we better have our chat at another place, Juugo, come here." says the girl at the door.'
+									'"It was some man in a black cloak with red clouds and orange mask with one hole for the eyes. He already took the amulet." you answer.'
+									*nl 
+									'The girl''s face goes down. "Damn it! Okay... Michael, we better have our chat at another place, Juugo, come here." says the girl at the door.'
+									*nl 
 									'A tall man enters the room'
 
 									act 'Prepare to fight':
@@ -152,6 +173,5 @@ act 'Up to the room.':
 		end
 	end
 end
-
 --- otelPRE ---------------------------------
 

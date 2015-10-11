@@ -3,25 +3,25 @@ brotherAge = age - 2
 gs 'stat'
 '<center><b><font color="maroon">Kolca</font></b></center>'
 '<center><img src="images/qwest/alter/brother.jpg"></center>'
-'Your brother Kolka younger than you and he <<brotherAge>> years. Kolka born unlike you and your sister already from his stepfather. He goes to the same school as you and enjoys football.'
+'Your brother Kolka is younger than you he`s <<brotherAge>> years old. Unlike your sister, Kolkas'' dad is your stepfather. He is a student at the same school as you, and enjoys soccer.'
 
-if brother < 20:'You and your brother scandal.'
-if brother >= 20 and brother < 40:'You and your brother tensions.'
-if brother >= 40 and brother < 60:'You and your brother normal relations.'
-if brother >= 60 and brother < 80:'You and your brother good relationship.'
-if brother >= 80:'You and your brother a great relationship.'
+if brother < 20:'You and your brother argue all the time.'
+if brother >= 20 and brother < 40:'You and your brother bicker sometimes.'
+if brother >= 40 and brother < 60:'You and your brother have a normal relationship.'
+if brother >= 60 and brother < 80:'You have a good relationship with your brother.'
+if brother >= 80:'You have a great relationship with your brother.'
 
 ! WD: Fix old nude variable
 if cumbelly > 0 and $clothingworntype = 'nude':
-	'- Go wash yourself, you look disgusting covered in all that cum.'
-	if brothersex = 0:
-		brother -= 1
+	'"Go wash yourself, you''re covered in cum and it''s disgusting."'
+	if brotherSex = 0:
+		brother -=1
 		act 'Move away':gt $loc, $metka
+		exit
 	end
-end
 
 if  cumface > 0 :
-	'- Wash your face, looking disgusted at all this cum.'
+	'"Is that cum on your face? That`s disgusting, Wash it off."'
 	if brotherSex = 0:
 		brother -=1
 		act 'Move away':gt $loc, $metka
@@ -31,7 +31,7 @@ end
 
 ! WD: Fix old nude variable
 if cumass > 0 and $clothingworntype = 'nude' and tanga =0:
-	'- Go wash yourself, all the ass in concho.'
+	'"Go wash yourself, you''ve got something on your butt."'
 	if brotherSex = 0:
 		brother -=1
 		act 'Move away':gt $loc, $metka
@@ -41,20 +41,20 @@ end
 
 ! WD: Fix old nude variable
 if cumfrot > 0 and $clothingworntype ! 'nude':
-	'- You have all the clothes are dirty. Wash, or mother ask.'
+	'"Your clothes are dirty. Wash them, or atleast get mum to do it."'
 end
 
 if spanked > 1 and $clothingworntype = 'nude' and tanga=0:
-	'What`s with booty? Punished for that-then?'
+	'"Got a sore bum? Did someone punish you? You bad girl."'
 end
 
 if $clothingworntype = 'nude' and lobok > 2 and tanga = 0:
-	'- You would have shaved, - brother makes you a comment, - or not Demetriou all your thickets'
+	'"You should have shaved," your brother comments, "it looks like you''re growing a forest."'
 elseif $clothingworntype = 'nude':
 	if brotherSex >= 1:
 		'"<<$nickname>>, you have an amazing body"'
 	else
-		'Very best look. You what, nudism decided to do?'
+		'"What a view! Have you decided to be a nudist?"'
 		brother += 1
 	end
 end
@@ -88,20 +88,20 @@ act 'Move away':gt $loc, $metka
 
 if $loc = 'gschool':
 	if brother < 40:
-		'Brother frowns "Get off me pridurochnaya!"'
+		'Your brother frowns "I come here to get away from you!"'
 		exit
 	end
 	! WD: Unused Var 'BJBeerQW' use 'GorSlut'
 	if evgenQW >= 4 and GorSlut >= 3:
-		'Brother grins "Hi <<$nickname>>. But why do you want this football, better go with us to watch porn?"'
+		'Your brother grins "Hello, Sis. Why play football, when you can go with us to watch porn?"'
 
 		act 'Go watch porn':minut += 5 & gt 'seeporn'
 	elseif evgenQW >= 4:
-		'Guys poshushukavshis together tell you "Yup, Well it this Soccer, Let''s go watch porn."'
+		'The guys gather together and tell you "We just finished playing soccer, Let''s go watch porn."'
 
 		act 'Go watch porn':minut += 5 & gt 'seeporn'
 	elseif evgenQW < 4:
-		'Brother grins "Hi <<$nickname>>. Play football?"'
+		'Your brother grins "Hi <<$nickname>>. Fancy a game of football?"'
 
 		act 'Play football':
 			cls
@@ -112,24 +112,24 @@ if $loc = 'gschool':
 			sweat += 3
 			beg += rand(2, 5)
 			gs 'stat'
-			'You ran for an hour on the field chasing a ball with my brother and his friends Bear and Zhendosom.'
+			'You spend an hour running around chasing the ball across the field with your brother and his friends Beshin and Zhendos.'
 
 			if rand(0, 1) = 0 and seepornofut = 0:
-				'Boys whispering among themselves discussing something.'
+				'The boys are whispering something to each other.'
 
-				act 'You are talking about here?':
+				act 'What you are talking about?':
 					cls
 					gs 'stat'
-					'Boys hesitated, so much so, nothing.'
+					'The boys hesitate, "Err.. nothing".'
 
 					act 'Move away':gt $loc, $metka
 
 					if dom > 0:
-						'You''re a bit pressed on them "Are you as malyshnya, sekretiki what that you." One of the boys immediately split "Yes."'
-						act 'Take me':
+						'You press them on it "What are you? A bunch of girls whispering about which boy you want to kiss?." One of the boys immediately spits out "No, we want to go look at porn, but didn''t think. a girl like you could handle it."'
+						act 'Prove them wrong':
 							cls
 							gs 'stat'
-							'you asked, what would you also have to look porn. Guys nemnog oposmuschalis, but agreed.'
+							'You tell them, if they`re going to look porn, they''ll need a babysitter. The guys aren''t pleased, but you don''t give them a choice.'
 
 							act 'Go watch porn':minut += 5 & gt 'seeporn'
 						end
@@ -137,7 +137,7 @@ if $loc = 'gschool':
 				end
 			end
 			if seepornofut >= 1:
-				'Guys poshushukavshis together tell you "<<$nickname>>, go look porn?"'
+				'The guys gather together and ask you "<<$nickname>>, want to watch some porn?"'
 
 				act 'Go watch porn':minut += 5 & gt 'seeporn'
 			end
@@ -150,7 +150,7 @@ end
 
 ! WD: Fix old nude variable
 if $loc = 'sitrPar' and indorf = 0 and $clothingworntype ! 'nude' and brothersawpirsF=0 and father_go = 1 and brother > 85 and hour >= 18 and hour < 21 and pirsF > 0:
-	act 'Show pierced nipples':
+	act 'Show off your nipple piercings':
 		cls
 		gs 'stat'
 		minut+=1
@@ -158,13 +158,13 @@ if $loc = 'sitrPar' and indorf = 0 and $clothingworntype ! 'nude' and brothersaw
 		brothersawpirsF=1
 		brother += 3
 		'<center><img src="images/qwest/alter/placer/9vh2v.jpg" ></center>'
-		'- Look, I have, - you come to the Kolka closer and bare chest, showing my brother the decoration in your nipple,- do not be shy, you can touch.
-		Brother, dumbfounded by your suggestion, hesitantly touches of piercing in your nipple, calling a relaxed moan.'
+		'"Look what I have," you walk up to Kolka, your chest bare, showing off your nipple pircings, "Don''t be shy, you can touch them."
+		Your brother, dumbfounded by your suggestion, hesitantly touches the piercing in one of your nipples, causing you to moan gently.'
 		if  brotherSex = 0:
-			'Kolka abruptly withdraws his hand and apologizes for his rudeness. You have no choice, how to assure, it wasn`t his fault and to hide the chest.'
+			'He abruptly withdraws his hand and apologizes for his rudeness. You have no choice, but to appologise, that wasn''t fair. You cover your chest.'
 		else
-			'Seeing, that manipulation nipple pleasure, Kolka begins harder to play with piercings, sometimes squeezing the exposed Breasts.'
-			'After playing, he lets go of your breast, and says that such decoration he really likes'
+			'Seeing the pleasure playing with your nipples brings you, he begins to play harder with your piercings, sometimes squeezing your exposed Breasts. 
+			After playing for a while, he lets go of your breasts, and says, "I really like your these new additions."'
 		end
 		horny+=10
 		act '<B>Move away</B>':gt $loc, $metka
@@ -176,27 +176,27 @@ $clothingworntype ! 'nude'
 if $loc = 'sitrPar' and indorf = 0 and $clothingworntype = 'nude' and pirsF>0 and brothersawpirsF =0:
 	if  brotherSex = 0:
 		if brother>=70:
-			'- Good on you, - brother, wink, indicates your pierced nipples.'
+			'"Good on you," your brother winks, and points toward your pierced nipples.'
 			brother += 1
 			brothersawpirsF=1
 			act '<B>Move away</B>':gt 'sitrPar'
 			exit
 		else
-			'-Don`t understand, why would you do that to yourself,- Kolka noticed your pierced nipples.'
+			'"I don''t get it, why would you do that to yourself," Kolka says noticing your pierced nipples.'
 			brothersawpirsF=1
 			act '<B>Move away</B>':gt 'sitrPar'
 			exit
 		end
 	else
 		if father_go = 1 and hour >= 18 and hour < 21:
-			'-How lovely, - Kolka plays with your pierced nipples'
+			'"How lovely," Kolka plays with your pierced nipples'
 			brother += 3
 			brothersawpirsF=1
 			horny+=10
 			act '<B>Move away</B>':gt 'sitrPar'
 			exit
 		elseif father_go = 0 and hour >= 18 and hour < 21:
-			'-Beauty, - Kolka quietly puts his hand on your Breasts and stroking pierced nipple.'
+			'"Beautiful," Kolka gently cups your breasts and strokes your pierced nipples.'
 			brother += 3
 			brothersawpirsF=1
 			horny+=10
@@ -211,8 +211,8 @@ dynamic $brotherSexCount
 if $loc = 'sitrPar' and indorf = 0 and brotherSexCount > 0 and brotherDay = daystart:
 	brotherRand = rand(0,10)
 	if hour >= 5 and hour < 7 and brotherSex > 0 and brotherMorningSex ! daystart and brotherRand < 2:
-		'Going up in the morning to the sleeping brother, you saw the mound under the blanket.'
-		act 'On-quiet morning to solve the problem of his brother':
+		'Going up to your sleeping brother, you see he''s pitching a tent.'
+		act 'Solve your brothers morning problem':
 			cls
 			minut += 5
 			horny += 10
@@ -225,35 +225,35 @@ if $loc = 'sitrPar' and indorf = 0 and brotherSexCount > 0 and brotherDay = days
 			gs 'stat'
 
 			'<center><img src="images/qwest/alexey/bj6.jpg"></center>'
-			'Approaching a brother, you gently pulled back the covers and began to suck it <<brotherDick>> inch dick. After a few minutes, he moaned softly in his sleep, his cock jerked and jet of sperm flew between your lips into your mouth.'
-			'Your mouth quickly filled with warm sperm and you feel its sharp taste.'
-			'Swallowing semen, you gently trimmed blanket and, looking at a slight smile sleeping brother, gone.'
+			'Approaching your brother, you gently pull back the covers and begin to suck his <<brotherDick>> cm dick. After a few minutes, he moans softly in his sleep and his cock twitches.'
+			'Your mouth quickly fills with warm sperm and you feel its sharp taste.'			
+			'Swallowing the semen, you gently replace the blanket and, seeing a slight smile on your sleeping brother, leave.'
 
 			act 'Move away':gt $loc, $metka
 		end
 	end
 
 	if hour >= 21 and hour < 24 and brotherSex > 0 and brotherNightSex ! daystart:
-		'When you come closer, he suddenly opened his eyes and said,:'
+		'When you get close, he suddenly opens his eyes and says,:'
 		! WD: Unused Var 'BJBeerQW' use 'GorSlut'
 		if sub > 0 or (evgenQW >= 4 and GorSlut >= 3):
-			'"<<$nickname>>, help me sleep." Then he threw a blanket, and you saw him strut.'
+			'"<<$nickname>>, help me sleep." Then he throws back the blanket, revealing his erection.'
 			brotherSexCount -= 1
 			brotherNightSex = daystart
 
 			dynamic $brotherSexStart
 		else
-			'"<<$nickname>>, I did not get to sleep, can you tell me how-the help?" Then he looks pointed mound under the blanket.'
+			'"Sis, I didn`t get any sleep, can you help?" He points to the mound under his blanket.'
 			cla
 			act 'Help him':
-				'"Yes, I know, what to do" Then he pulled back the blanket and saw him strut.'
+				'"Yes, I know what to do" Then he pulls back the blanket and reveals his erection.'
 				brotherSexCount -= 1
 				brotherNightSex = daystart
 
 				dynamic $brotherSexStart
 			end
-			act 'Let him solve his problem':
-				'"I`m not going to help with this!" Then you turned around and left.'
+			act 'He`s on his own there':
+				'"You''ve got 2 perfectly good hands, I mean eww...", You turn around and leave.'
 				cla
 				act 'Escape':gt $loc
 			end
@@ -261,26 +261,26 @@ if $loc = 'sitrPar' and indorf = 0 and brotherSexCount > 0 and brotherDay = days
 	end
 
 	if father_go = 1 and hour >= 18 and hour < 21 and brotherSex > 0 and brotherEvSex ! daystart:
-		'When you come closer, He turned to you and said,:'
+		'When you get close, He turns to you and says,:'
 		! WD: Unused Var 'BJBeerQW' use 'GorSlut'
 		if sub > 0 or (evgenQW >= 4 and GorSlut >= 3):
-			'"<<$nickname>>, Come on you-quiet here you will work, to ancestors have not heard." Then he dropped his pants, and you have seen his hard <<brotherDick>> inch dick.'
+			'"<<$nickname>>, Come on you have work to do, and quitely, you don''t want to wake our parents up." Then he drops his pants, and you see his hard <<brotherDick>> cm dick.'
 			brotherSexCount -= 1
 			brotherEvSex = daystart
 
 			dynamic $brotherSexStart
 		else
-			'"<<$nickname>>, I`ve got a problem, can you tell me how-something to help solve it?" Then he looks pointed hump in his pants.'
+			'"Sis, I''ve got a problem, can you help me solve it?" Then he looks points at the hump in his pants.'
 			cla
 			act 'Help him':
-				'"I know, which will help solve this problem, only-quiet and take your pants off." Once your words Kolka smiled and took off his pants, exposing his standing <<brotherDick>> inch dick.'
+				'"I know, what will solve this problem, quietly now, take off your pants." With those words Kolka smiles and takes off his pants, exposing his erect <<brotherDick>> cm dick.'
 				brotherSexCount -= 1
 				brotherEvSex = daystart
 
 				dynamic $brotherSexStart
 			end
-			act 'Let him solve his problem':
-				'"I can not help" Then you turned around and left.'
+			act 'That is so his problem':
+				'"Dearest brother they sell porn in the shop, I''m sure you`ll work out the rest" You leave.'
 				cla
 				act 'Escape':gt $loc
 			end
@@ -291,7 +291,7 @@ end
 $brotherSexStart = {
 	cla
 	if brotherSex = 0:brotherSex = 1 & guy += 1
-	act 'Jerk brother':
+	act 'Jerk your brother':
 		cls
 		minut += 5
 		dick = brotherDick
@@ -299,12 +299,12 @@ $brotherSexStart = {
 		gs 'stat'
 
 		'<center><img src="images/qwest/alter/artom/hj.jpg"></center>'
-		'You took it hard and hot cock in his hand and began to masturbate him. Finally brother strangled groan and you saw how his cock flies sperm.'
+		'You take his hard and hot cock in your hand and begin to masturbate him. Finally your brother groans and you watch his cock erupt.'
 
 		dynamic $brotherSexEnd
 	end
 	if brotherSex > 4:
-		act 'Suck my brother':
+		act 'Suck your brother':
 			cls
 			minut += 5
 			horny += 10
@@ -313,11 +313,11 @@ $brotherSexStart = {
 			gs 'stat'
 
 			'<center><img src="images/nigma/gor/ш0,<<rand(0,6)>>.gif"></center>'
-			'You sit down in front of bratm and brought his face to his cock.'
+			'You sit down in front of your brother and move your face toward his cock.'
 
 			dynamic $dinrandbj
 
-			'Soon groaned Kolka "<<$nickname>>, I`ll finish."'
+			'Soon Kolka groans "<<$nickname>>, I`m cumming."'
 
 			act 'Suck on':
 				cls
@@ -333,7 +333,7 @@ $brotherSexStart = {
 
 				dynamic $brotherSexEnd
 			end
-			act 'Remove from the mouth':
+			act 'Remove from your mouth':
 				cls
 				minut += 5
 				horny += 10
@@ -342,12 +342,12 @@ $brotherSexStart = {
 				gs 'stat'
 
 				'<center><img src="images/qwest/alter/Ev/cocksuckerFacial.jpg"></center>'
-				'You took out his dick and then your face hit the hot jet of sperm, then another and another, and finally stopped brother cum on your face.'
+				'You take his dick out of your mouth and then a hot jet of sperm hits your face, then another and another, until finally your brother is spent and your face as covered in cum.'
 
 				dynamic $brotherSexEnd
 			end
 			if brotherSex > 6:
-				act 'Surrender':
+				act 'Give yourself to your brother':
 					if brotherSex > 10: brotherSex = 10
 					cls
 					minut += 5
@@ -359,7 +359,7 @@ $brotherSexStart = {
 					gs 'stat'
 
 					'<center><img src="images/nigma/gor/ш1,<<rand(0,11)>>.gif"></center>'
-					'You lay on the sofa and brother lay on you from above.'
+					'You lie on the sofa and brother lies on top of you.'
 
 					dynamic $sexstart
 					dynamic $sexstart2
@@ -371,7 +371,7 @@ $brotherSexStart = {
 		end
 	end
 	if brotherSex > 6:
-		act 'Give yourself to brother':
+		act 'Give yourself to your brother':
 			if brotherSex > 10: brotherSex = 10
 			cls
 			minut += 5
@@ -383,7 +383,7 @@ $brotherSexStart = {
 			gs 'stat'
 
 			'<center><img src="images/nigma/gor/ш1,<<rand(0,11)>>.gif"></center>'
-			'You lay on the sofa and brother lay on you from above.'
+			'You lie on the sofa and brother lies on top of you.'
 
 			dynamic $sexstart
 			dynamic $sexstart2
@@ -403,17 +403,17 @@ $brotherSexEnd = {
 
 			gs 'stat'
 
-			'Kolka gave you a break, and then saying,: "Good for, <<$nickname>>, good job, And now let`s wali!", She continued to go about their business.'
+			'Kolka catches his breath, then says, "Nice one <<$nickname>>, good job, just remember this is our little secret!", He continues to go about his business.'
 			act 'Escape':gt $loc
 		elseif $loc = 'sitrPar':
 			minut += 15
 
 			gs 'stat'
 
-			'Kolka gave you a break, and then saying,: "Good for, <<$nickname>>, well-tried, And now let`s wali!", asleep.'
+			'Kolka catches his breath, then says, "Nice one <<$nickname>>, you''re well trained. Now don''t tell anyone!", and falls asleep.'
 			act 'Escape':gt $loc
 		else
-			'Kolka said: "Good for, <<$nickname>>, well-tried, And now let`s wali!", gone.'
+			'Kolka says, "Nice one <<$name>>, you`re well-tried, Now don''t tell anyone!", and leaves.'
 		end
 	else
 		if $loc = 'sitrPar' and father_go = 1 and hour >= 18 and hour < 21:
@@ -421,17 +421,17 @@ $brotherSexEnd = {
 
 			gs 'stat'
 
-			'Kolka gave you a break, and then saying,: "Many thanks, <<$nickname>>, You helped me a lot", She continued to go about their business.'
+			'Kolka catches his breath, then says, "Many thanks, <<$name>>, You helped me a lot", He continues to go about his business.'
 			act 'Escape':gt $loc
 		elseif $loc = 'sitrPar':
 			minut += 15
 
 			gs 'stat'
 
-			'Kolka gave you a break, and then saying,: "Thank you, <<$nickname>>, You rescued me very, Now I can finally sleep.", asleep.'
+			'Kolka catches his breath, then says, "Thank you, <<$name>>, You saved me , now I can finally sleep.", and sleeps.'
 			act 'Escape':gt $loc
 		else
-			'Kolka said: "Thanks for all, Sis. Well, I went.", gone.'
+			'Kolka says, "Thanks for everything, Sis. Well, I`m off.", leaves.'
 		end
 	end
 }

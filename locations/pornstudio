@@ -12,40 +12,41 @@ if $ARGS[0] = 'start':
 	act 'Leave':gt 'down'
 
 	if hour < 10 or hour > 22:
-		'The Porn studio is closed. Come again between 10 and 22'
+		'The Porn studio is closed. Opening hours are between 10 and 22'
 		exit
 	end
 
-	'Manager''s office opened.'
+	'Manager''s office open.'
 
 	act 'Go to the manager':gt 'pornstudio', 'manager'
 
-	act 'Visit the manager assistant':
+	act 'Visit the managers PA':
 		cla
 		*clr
 		minut += 5
 		gs 'stat'
 		'There is a young guy tapping on the computer keyboard in a small office.'
-		'<font color="#0D42C0"> "How can I help you?"</font>'
 
-		if pfilmSTOP = 0:
-			act 'What''s the rating of my videos?':
-				cla
-				minut += 5
-				gs 'stat'
+		if film = 0:
+		'"Who are you? This office is for staff only."'
+		else
+			'<font color="#0D42C0"> "Hi <<$pfname>>, what can I do for you?"</font>'
+			if pfilmSTOP = 0:
+				act 'What''s the rating of my videos?':
+					cla
+					minut += 5
+					gs 'stat'
 
-				if film = 0:
-					'"You have no videos."'
-				else
-					'"Do you <<film>> videos. Their rating is still very low, quite simply, almost nobody is looking them."'
-					'The guy whispers "By the way if you want, I can contribute to remove them from the network - for a good price of course."'
+					'"You''ve made <<film>> films. Their rating is still very low, simply put, almost nobody is watching them."'
+					'The guy whispers "By the way, if you wanted, I could completely remove them from the network - for a good price of course."'
 
 					act 'Tell me more':
 						cla
 						minut += 5
 						films_stop_payment = film * 40000
 						gs 'stat'
-						'If you have that few views for your video, we are not very interested in them. I can remove them, but you will have to pay all the costs of the studio, about 40, 000 each. A total amount of <<films_stop_payment>>. In addition, site-hoster does not love these models, who are deleting their videos, so if you are deletng too many videos you will not get a job with us again.'
+						'Seeing as you''re not well known, it''s unlikely anyone would notice. However, to remove them you''d have to cover the studios potential future profits, 40,000 rubles per film. That''s a total of <<films_stop_payment>> rubles.'
+						'Also, that would piss off your co-stars and our director. It would end your porn career.'
 
 						if money >= films_stop_payment:
 							act 'Agree':
@@ -54,7 +55,7 @@ if $ARGS[0] = 'start':
 								pfilmSTOP = 1
 								film = 0
 								gs 'stat'
-								'So, your video got removed. Have a nice day.'
+								'We never met. Have a nice day, and don''t come back'
 
 								act 'Leave':gt 'pornstudio', 'start'
 							end
@@ -63,9 +64,10 @@ if $ARGS[0] = 'start':
 						act 'Leave':gt 'pornstudio', 'start'
 					end
 				end
-
-				act 'Leave':gt 'pornstudio', 'start'
 			end
+
+			act 'Leave':gt 'pornstudio', 'start'
+
 		end
 
 		act 'Leave':gt 'pornstudio', 'start'
@@ -76,32 +78,34 @@ if $ARGS[0] = 'start':
 			cls
 			minut += 15
 			gs 'stat'
-			'We made inquiries about you, and have decided that you come to us. The essence is this:We give you a couple of drives, and deliver them to you in the sauna, where you are given an envelope, you bring it to us immediately. Upon return now 5000. Shuttling need every Friday after opening the studio. If you agree, then passes on Friday unacceptable, choose safe mode of transport.'
+			'We made inquiries about you, and everything seems in order. Essentially, we give you a thumb drive, you deliver it to the sauna, they give you an envelope and you bring it to us. Immediately.'
+			'Upon delivery of envolope you get 5000 rubles. Deliveries available every Friday, after the studio has opened. If you agree, then visit any Friday, choose a safe mode of transport.'
 
-			act 'No, I do not fit (to leave)':bomzQW = -1 & gt 'down'
+			act 'No, I don''t think it''s for me (leave)':bomzQW = -1 & gt 'down'
 
 			act 'Agree to work':
 				cls
 				minut += 15
 				gs 'stat'
-				'Today, it will take you to our people. In the future, will get themselves because Fridays control us increase, but watch out for each lonely girl coming from us - too costly for them.'
+				'Just this time, we will take you. In the future you''ll have to make your onwn way, because Fridays are getting risky for us, but we need to intruduce you to our colleagues.'
 
-				act 'Well, show':
+				act 'Let''s go':
 					cls
 					workDisk = 1
 					minut += 15
 					gs 'stat'
-					'You slipped into a jeep standing at the entrance, and you have brought to the sauna.'
+					'You slip into a jeep by the entrance, and your driven to the sauna.'
 
 					if saunasex = 1:
-						'You recall how you were brought into the sauna, but then you were so excited that they could not remember anything sensible.'
+						'You recall going to this sauna. You had some pretty energetic sex here.'
 					elseif sauna > 0:
-						'A sauna, you recall it, it close to your home.'
+						'Oh, it''s the sauna near your home.'
 					else
 						'This sauna is located near your home, it is strange that you did not notice it before.'
 					end
 
-					'You went to the sauna, you have presented to local managers. Lucidly explained to you who need to deliver, and that it is necessary to return the envelope on the same day when you gave him. Do not forget to remind about the use of secure transport. On this with you goodbye until tomorrow.'
+					'You go to the sauna, and you''re introduced to the local managers. it is explained to you who you need to deliver to, and reminded that it is necessary to return the envelope the same day you receive it.'
+					'"Don''t forget to use secure transport. We''ll see you on Fridays and don''t fuck up."'
 
 					act 'Leave':bomzQW = 2 & gt 'street'
 				end
@@ -115,7 +119,9 @@ if $ARGS[0] = 'start':
 			minut += 5
 			workDisk = 2
 			gs 'stat'
-			'You are given a disk, and specify whether you remember all the instructions. You nod with your head and goes for the exit with the disc. Moving away from the studio near you heard someone else came out of a nearby building and head for you. <font color="magenta"> "Avoid deserted places, maybe this will blow over"</font> you had hoped, and went on.'
+			'You are given a thumb drive, and asked if you remember all the instructions. You nod your head and leave with the drive.'
+			'Moving away from the studio near you hear someone else came out of a nearby building and follow for you.'
+			'<font color="magenta"> "Avoid deserted places, maybe this will blow over"</font> you reassure yourself, and carry on.'
 
 			act 'Leave':gt 'down'
 		end
@@ -129,16 +135,17 @@ if $ARGS[0] = 'start':
 			if konvert = 0:
 				workDolg = 200000
 				workDolgDay = 7
-				'Starting to dig in your things you begin to panic. No envelope. You search everything again, but you didn''t find the envelope.'
-				'-WHAT!! But how could you let this happen! You know into what you have gotten now?!'
-				'You stand there not squeezing out a single word. Sounds like your situation is really deplorable.'
-				'The Manager grabs the phone explaining the situation to the other party. After listening to a couple of minutes, he hung up.'
-				'<font color="#0D42C0"> So-so</font>  - he said - <font color="#0D42C0"> his boss was in a good mood, so I have good news. You have a week. Until next Friday evening you shall bring into the studio 200000. If you bring - we separate. But you can not work for us anymore.</font>'
-				'<font color="#0D42C0">Otherwise, there will be consequences.</font>'
+				'Digging through your things you begin to panic. No envelope. You search everything again, but you don''t find the envelope.'
+				'SHIT!! But how could you let this happen! What have you gotten into now?!'
+				'You stand there unable to speak. Looks like you''re fucked.'
+				'The Manager grabs his phone and makes a call. You can''t hear exactly what he is saying because your heart is beating so loud, he hangs up.'
+				'"You are very lucky, the boss is in a good mood. So has given you one week to cover his losses."'
+				'"You have until next Friday evening to bring me 200,000 rubles. Do this and we''re done, you will never work for us anymore.'
+				'<font color="#0D42C0">Fail, and bad things will happen to you.</font>'
 			else
 				konvert = 0
 				money += 5000
-				'You gave the envelope to the manager and he gave you 5,000 rubles.'
+				'You give the envelope to the manager and he gives you 5,000 rubles.'
 			end
 
 			act 'Leave':gt 'down'
@@ -153,7 +160,7 @@ if $ARGS[0] = 'start':
 			money -= workDolg
 			workDolg = 0
 			gs 'stat'
-			'You gave the money that you owed to the studio.'
+			'You give the money that you owe to the studio.'
 
 			act 'Leave':gt 'pornstudio', 'start'
 		end
@@ -166,7 +173,7 @@ if $ARGS[0] = 'start':
 			pfilmNoVenera = 0
 			pfilmNO = 0
 			gs 'stat'
-			'You gave a certificate that your sexually transmitted diseases is cured. They promised to consider your reinstatement as a porn actress.'
+			'You hand over your medical certificate showing that you are STD free. They promise to consider your reinstatement as a porn actress.'
 
 			act 'Leave':gt 'pornstudio', 'start'
 		end
@@ -180,37 +187,38 @@ if $ARGS[0] = 'manager':
 	gs 'stat'
 	! WD: Correct Image path ~ "images/studia/studiа_0.jpg" Cyrillic characters
 	'<center><img src="images/studia/studia_0.jpg"></center>'
-	'The boss of the porn studio welcomes you and gestured you to sit down on the couch.'
+	'The boss of the porn studio welcomes you and gestures for you to sit down on the couch.'
 
 	if pfilmNO = 1:
-		'You''re blacklisted, no decent studio will hire you as porn actress, goodbye.'
+		'You''re blacklisted, no decent porn studio will hire you, goodbye.'
 		act 'Leave':gt 'pornstudio', 'start'
 		exit
 	end
 
 	if pfilmSTOP = 1:
-		'I''m sorry I thought you were retired...'
+		'I''m sorry I thought you had retired...'
 		act 'Leave':gt 'pornstudio', 'start'
 		exit
 	end
 
 	if pfilmday = daystart and pfilm > 0:
-		'Do not distract me from my work. Like I said, the shooting is tomorrow.'
+		'Do not distract me from my work. Like I said, we shoot tomorrow.'
 		act 'Leave':gt 'pornstudio', 'start'
 		exit
 	end
 
 	if pfilmday >= daystart + 2:
 		pfilmNO = 1
-		'You did not come to the shooting. Plucked them. I paid a lot of money for assistants, actors, cameramen, plus rental studio, and you took it and threw me. No, I do not want to work with you and I''m adding your name to the blacklist.'
+		'You did not come to the shoot. You fucked me. I paid a lot of money for assistants, actors, cameramen, plus studio rental, and you took it and threw it in my face.'
+		'No, I do not want to work with you and moreover, you''re blacklisted.'
 		act 'Leave':gt 'pornstudio', 'start'
 		exit
 	end
 
 	if pfilm > 0 and hour >= 10 and hour <= 12:
-		if hour = 10:'Come on honey inspection.'
-		if hour = 11:'Do not be late, my patience is not eternal, tells you Peter strictly. Vividly honey inspection.'
-		if hour = 12:'What the hell? There''s only one waiting for you. Hurry up honey, inspection is waiting.'
+		if hour = 10:'"Come on honey, inspection."'
+		if hour = 11:'"You''re late, my patience is not eternal", Peter says, strictly. Quickly now, inspection.'
+		if hour = 12:'What the hell? Everyone''s waiting for you. Hurry up honey, inspection. Now!.'
 
 		pfilmday = daystart
 		act 'Go for medical check-up':
@@ -218,9 +226,9 @@ if $ARGS[0] = 'manager':
 			*clr
 			minut += 5
 			gs 'stat'
-			'You went into the office where the doctor was waiting in a white robe. He quickly pulled on rubber gloves and briefly told you to undress.'
-			'You removed the clothes and sat on the gynecological chair. The doctor came up to you and started check up. After inspection, he took a syringe and took some blood out of your veins.'
-			'After half an hour the tests will be ready. If you have at least something, the blood tests will show.'
+			'You go into the office where the doctor was waiting in a white robe. He quickly pulls on rubber gloves and tells you to undress.'
+			'You removed the clothes and sit on the gynecological chair. The doctor comes up to you and starts the check up. After inspection, he takes a blood sample.'
+			'After half an hour the tests are completed. If you have caught something, it''ll show in the blood tests.'
 
 			act 'Wait':
 				cla
@@ -231,11 +239,11 @@ if $ARGS[0] = 'manager':
 				if venera > 0:
 					pfilmNO = 1
 					pfilmNoVenera = 1
-					'Your analysis showed a sexually transmitted disease. doctor told you and called Peter. Peter looked at the piece of paper with analyzes.'
-					'Well, as long as you have an STD you cannot make films.'
+					'Your analysis showed an STD. The doctor tells you and calls Peter. Peter looks at the test results.'
+					'Sorry, but as long as you have an STD you cannot make films.'
 					act 'Leave':gt 'pornstudio', 'start'
 				else
-					'Well Well, you are clean. Go into the dressing room'
+					'Very good, you are clean. Go to the dressing room'
 
 					act 'Go to the dressing room':
 						cla
@@ -244,9 +252,9 @@ if $ARGS[0] = 'manager':
 						hapri = 1
 						mop = 4
 						gs 'stat'
-						'In the dressing room was already a skinny and whiter-haired woman waiting for you.'
+						'In the dressing room a skinny whiter-haired woman is waiting for you.'
 
-						if pfilm > 3:'The first cases you put a powerful enema.'
+						if pfilm > 3:'First you are given a powerful enema.'
 
 						'You put on some makeup and get your hair done.'
 						!!if the scene with anal, then enema.
@@ -270,8 +278,8 @@ if $ARGS[0] = 'manager':
 								if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
 								if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
 
-								'On the site already bustling assistants installing lighting, so that there were no shadows.'
-								'On one side stands the actor <<$pakter>>, stroking his member.'
+								'The set is already bustling with assistants setting up lighting, so that there are no shadows.'
+								'To the side stands the actor <<$pakter>>, stroking his member.'
 
 								act 'Undress and start':
 									cla
@@ -280,16 +288,16 @@ if $ARGS[0] = 'manager':
 									hj += 1
 									gs 'stat'
 									'<center><img src="images/studia/hj.gif"></center>'
-									'<<$pakter>> lay on the bed. You lay down beside him and took his penis in your hand. You began to stroke his penis.'
+									'<<$pakter>> lies on the bed. You lie down beside him and take his penis in your hand. You begin to stroke his penis.'
 
 									act 'Masturbate him':
 										cla
 										*clr
 										minut += 5
 										'<center><img src="images/studia/hjcumontits.gif"></center>'
-										'<<$pakter>> began to caress your chest, and you continued to jerk his cock squeezing his hot cum on himself.'
+										'<<$pakter>> begins to caress your chest, and you continues to jerk his cock squirting his hot cum on you.'
 
-										act 'Walk in shower with him':
+										act 'Have a shower':
 											cla
 											*clr
 											minut += 5
@@ -303,7 +311,7 @@ if $ARGS[0] = 'manager':
 											cumlip = 0
 											cumface = 0
 											'<center><img src="images/pics/dush.jpg"></center>'
-											'You entered with him the shower cubicle. Turned on the shower and gently washed off all traces of semen from his body.'
+											'You enter the shower cubicle. Turn on the shower and gently wash all traces of semen from your.'
 
 											act 'Go to Peter':gt 'pornstudio', 'postvideo'
 										end
@@ -327,8 +335,8 @@ if $ARGS[0] = 'manager':
 								if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
 								if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
 
-								'On the site already bustling assistants installing lighting, so that there were no shadows.'
-								'On one side stands the actor <<$pakter>>, stroking his member.'
+								'The set is already bustling with assistants setting up lighting, so that there are no shadows.'
+								'To the side stands the actor <<$pakter>>, stroking his member.'
 
 								act 'Undress and start':
 									cla
@@ -337,25 +345,25 @@ if $ARGS[0] = 'manager':
 									hj += 1
 									gs 'stat'
 									'<center><img src="images/studia/hj.gif"></center>'
-									'<<$pakter>> lay on the bed. You lay down beside him and took his penis in your hand. You began to stroke his penis.'
+									'<<$pakter>> lay on the bed. You lie down beside him and take his penis in your hand. You begin to stroke his penis.'
 
-									act 'Take him by mouth':
+									act 'Suck it':
 										cla
 										*clr
 										bj += 1
 										minut += 5
 										'<center><img src="images/studia/bj.gif"></center>'
-										'<<$pakter>> sat on the bed. You have settled down between his legs, taking his cock into your mouth and began sucking the head of his penis.'
+										'<<$pakter>> sits on the bed. You settle down between his legs, take his cock in your mouth and begin sucking the head of his penis.'
 
 										act 'Keep sucking':
 											cla
 											*clr
 											minut += 5
 											'<center><img src="images/studia/deep.gif"></center>'
-											'<<$pakter>> began to fuck you in the mouth by driving his cock down your throat every move.'
-											'Finally he took his member out of you. You wipe your mouth with your hand.'
+											'<<$pakter>> begins to fuck your mouth, driving his cock down your throat with every thrust.'
+											'Finally he takes his cock out. You wipe the saliva from your mouth.'
 
-											act 'Sit on your knees and open your mouth':
+											act 'Open your mouth':
 												cla
 												*clr
 												minut += 5
@@ -363,9 +371,9 @@ if $ARGS[0] = 'manager':
 												facial += 1
 												gs 'stat'
 												'<center><img src="images/studia/cum.gif"></center>'
-												'<<$pakter>> shoots his hot stream of sperm into your mouth, down your throat.'
+												'<<$pakter>> shoots hot streams of sperm into your mouth and down your throat.'
 
-												act 'Clean his cock with your mouth':
+												act 'Clean his cock':
 													cla
 													*clr
 													minut += 5
@@ -373,9 +381,9 @@ if $ARGS[0] = 'manager':
 													swallow += 1
 													gs 'stat'
 													'<center><img src="images/studia/bj2.gif"></center>'
-													'You keep looking into his eyes, while you gently clean his sperm covered cock with your mouth.'
+													'You keep your eyes fixed on his, as you gently lick every last drop of sperm from his cock.'
 
-													act 'Walk in shower':
+													act 'Shower':
 														cla
 														*clr
 														minut += 5
@@ -389,7 +397,7 @@ if $ARGS[0] = 'manager':
 														cumlip = 0
 														cumface = 0
 														'<center><img src="images/pics/dush.jpg"></center>'
-														'You entered the shower cubicle. Turned on the shower and gently washed off all traces of semen from your body.'
+														'You enter the shower cubicle. Turned on the shower and gently wash all traces of semen from your body.'
 
 														act 'Go to Peter':gt 'pornstudio', 'postvideo'
 													end
@@ -416,8 +424,8 @@ if $ARGS[0] = 'manager':
 								if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
 								if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
 
-								'On the site already bustling assistants installing lighting, so that there were no shadows.'
-								'On one side stands the actor <<$pakter>> , stroking his member.'
+								'The set is already bustling with assistants setting up lighting, so that there are no shadows.'
+								'To the side stands the actor <<$pakter>>, stroking his inviting member.'
 
 								act 'Undress and start':
 									cla
@@ -426,33 +434,33 @@ if $ARGS[0] = 'manager':
 									hj += 1
 									gs 'stat'
 									'<center><img src="images/studia/hj.gif"></center>'
-									'<<$pakter>> lay on the bed. You lay down beside him and took his penis in your hand. You began to stroke his penis.'
+									'<<$pakter>> lies on the bed. You lie down beside him and take his penis in your hand. You begin to pleasure him.'
 
-									act 'Take by mouth':
+									act 'Blow him':
 										cla
 										*clr
 										bj += 1
 										minut += 5
 										'<center><img src="images/studia/bj.gif"></center>'
-										'<<$pakter>> sat on the bed. You have settled down between his legs, taking his cock into your mouth and began sucking the head of his penis.'
+										'<<$pakter>> sits on the edge of the bed. You kneel down between his legs, and passionately suck the head of his penis like it''s the most delicious lollipop.'
 
-										act 'Suck':
+										act 'Suck more':
 											cla
 											*clr
 											minut += 5
 											'<center><img src="images/studia/deep.gif"></center>'
-											'<<$pakter>> began to fuck you in the mouth by driving his cock down your throat every move.'
+											'<<$pakter>> begins to fuck your mouth deeply, occasionally withdrawing completely to allow you to catch your breath, before returning more vigorously.'
 
-											act 'Stand up doggy style':
+											act 'Doggy style':
 												cla
 												*clr
 												sex += 1
 												vagina += 1
 												minut += 15
 												'<center><img src="images/studia/sex.gif"></center>'
-												'You got up on all fours and <<$pakter>> put his dick deep into your pussy. He began to fuck you hard-hitting from behind.'
+												'You turn around and get on all fours, <<$pakter>> guides his dick deep into your pussy. He begins to fuck you from behind, hard.'
 
-												act 'Sit on your knees and open your mouth':
+												act 'Kneel down and open your mouth':
 													cla
 													*clr
 													minut += 5
@@ -460,7 +468,7 @@ if $ARGS[0] = 'manager':
 													facial += 1
 													gs 'stat'
 													'<center><img src="images/studia/cum.gif"></center>'
-													'<<$pakter>> shoots his hot stream of sperm into your mouth, down your throat.'
+													'<<$pakter>> holds his cock to your open mouth and fills it with sperm.'
 
 													act 'Clean his cock with your mouth':
 														cla
@@ -470,9 +478,9 @@ if $ARGS[0] = 'manager':
 														swallow += 1
 														gs 'stat'
 														'<center><img src="images/studia/bj2.gif"></center>'
-														'You keep looking into his eyes, while you gently clean his sperm covered cock with your mouth.'
+														'Looking it to his eyes adoringly, you meticulously lick all the cum off his dick.'
 
-														act 'Walk in shower':
+														act 'Shower':
 															cla
 															*clr
 															minut += 5
@@ -486,7 +494,7 @@ if $ARGS[0] = 'manager':
 															cumlip = 0
 															cumface = 0
 															'<center><img src="images/pics/dush.jpg"></center>'
-															'You entered the shower cubicle. Turned on the shower and gently washed off all traces of semen from your body.'
+															'You enter the shower cubicle. Turn on the shower and gently wash all traces of semen from your body.'
 
 															act 'Go to Peter':gt 'pornstudio', 'postvideo'
 														end
@@ -514,8 +522,8 @@ if $ARGS[0] = 'manager':
 								if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
 								if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
 
-								'On the site already bustling assistants installing lighting, so that there were no shadows.'
-								'On one side stands the actor <<$pakter>> , stroking his member.'
+								'The set is already bustling with assistants setting up lighting, so that there are no shadows.'
+								'To the side stands the actor <<$pakter>>, stroking his impressive member.'
 
 								act 'Undress and start':
 									cla
@@ -524,43 +532,44 @@ if $ARGS[0] = 'manager':
 									hj += 1
 									gs 'stat'
 									'<center><img src="images/studia/hj.gif"></center>'
-									'<<$pakter>> lay on the bed. You lay down beside him and took his penis in your hand. You began to stroke his penis.'
+									'<<$pakter>> lies on the bed. You lie down beside him, place your hand on his penis and begin to stroke it.'
 
-									act 'Take by mouth':
+									act 'Blow him':
 										cla
 										*clr
 										bj += 1
 										minut += 5
 										'<center><img src="images/studia/bj.gif"></center>'
-										'<<$pakter>> sat on the bed. You have settled down between his legs, taking his cock into your mouth and began sucking the head of his penis.'
+										'<<$pakter>> sits up. You have crouch down on the floor, he swings his legs over and you suddenly have his cock right in front of your face.'
+										'After admiring the impressive sight, you remember you''re being filmed and begin sucking the head of his penis.'
 
-										act 'Suck':
+										act 'Suck further':
 											cla
 											*clr
 											minut += 5
 											'<center><img src="images/studia/deep.gif"></center>'
-											'<<$pakter>> began to fuck you in the mouth by driving his cock down your throat every move.'
+											'<<$pakter>> relaxes as you take control with your mouth trying to take the full length of his cock down your throat.'
 
-											act 'Stand up doggy style':
+											act 'Doggy style':
 												cla
 												*clr
 												sex += 1
 												vagina += 1
 												minut += 5
 												'<center><img src="images/studia/sex.gif"></center>'
-												'You got up on all fours and <<$pakter>> put his dick deep into your pussy. He began to fuck you hard-hitting from behind.'
-												'Finally <<$pakter>> pulled his cock out of your pussy. You feel his cock is pushing against your anus.'
+												'You turn around and get on all fours, <<$pakter>> guides his dick deep into your pussy. He begins to fuck you from behind, hard.'
+												'Just as you''re really getting into it, <<$pakter>> pulls his cock out. You feel him pressing against your anus.'
 
-												act 'Relax the anus':
+												act 'Anal':
 													cla
 													*clr
 													anal += 1
 													anus += 1
 													minut += 5
 													'<center><img src="images/studia/sex.gif"></center>'
-													'You tried as best as you could to relax your anus. Suddenly <<$pakter>> pushed into your ass and began to peck it like a steam hammer.'
+													'You try as best you can to relax your anus. Suddenly <<$pakter>> pushes into your ass and goes at t like a jack-hammer.'
 
-													act 'Sit on your knees and open your mouth':
+													act 'Kneel down and open your mouth':
 														cla
 														*clr
 														minut += 5
@@ -568,7 +577,7 @@ if $ARGS[0] = 'manager':
 														facial += 1
 														gs 'stat'
 														'<center><img src="images/studia/cum.gif"></center>'
-														'<<$pakter>> shoots his hot stream of sperm into your mouth, down your throat.'
+														'<<$pakter>> brings his cock to your mouth, and feeds you the contents of his balls.'
 
 														act 'Clean his cock with your mouth':
 															cla
@@ -578,9 +587,9 @@ if $ARGS[0] = 'manager':
 															swallow += 1
 															gs 'stat'
 															'<center><img src="images/studia/bj2.gif"></center>'
-															'You keep looking into his eyes, while you gently clean his sperm covered cock with your mouth.'
+															'You keep look deep into his eyes, then lick and kiss his sperm covered cock until it''s thoughly cleaned.'
 
-															act 'Go to the shower':
+															act 'Shower':
 																cla
 																*clr
 																minut += 5
@@ -594,7 +603,7 @@ if $ARGS[0] = 'manager':
 																cumlip = 0
 																cumface = 0
 																'<center><img src="images/pics/dush.jpg"></center>'
-																'You entered the shower cubicle. Turned on the shower and gently washed off all traces of semen from your body.'
+																'You enter the shower cubicle. Turn on the shower and gently wash all traces of semen from your body.'
 
 																act 'Go to Peter':gt 'pornstudio', 'postvideo'
 															end
@@ -637,8 +646,8 @@ if $ARGS[0] = 'manager':
 								if akrand2 = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
 								if akrand2 = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
 
-								'On the site already bustling assistants installing lighting, so that there were no shadows.'
-								'Actors <<$pakter>> and <<$pakter2>>, each holding a porn magazin in the one and his dick in the other hand, getting their cocks ready for you...'
+								'The set is already bustling with assistants setting up lighting, so that there are no shadows.'
+								'Actors <<$pakter>> and <<$pakter2>>, are watching porn on a monitor, getting their cocks ready for you...'
 
 								act 'Undress and kneel':
 									cla
@@ -647,15 +656,16 @@ if $ARGS[0] = 'manager':
 									bj += 2
 									gs 'stat'
 									'<center><img src="images/studia/tbj.gif"></center>'
-									'<<$pakter>> and <<$pakter2>> bash their fully errect cocks into your face.'
+									'<<$pakter>> and <<$pakter2>> slap their fully errect cocks against your face.'
 
-									act 'Suck':
+									act 'Suck them':
 										cla
 										*clr
 										minut += 15
 										gs 'stat'
 										'<center><img src="images/studia/tbj2.gif"></center>'
-										'You started to suck both members trying to deprive no one attention, caressing them with your tongue and lips.'
+										'You start by sucking both members trying to please them both. Then, using your tounge, you draw circles under <<$pakter>>s gland, making him moan.'
+										'Then you push your lips tightly against <<$pakter2>>s head, until your mouth is forced open, the look in his eyes tells you he''s ready'
 
 										act 'Fuck':
 											cla
@@ -665,7 +675,7 @@ if $ARGS[0] = 'manager':
 											vagina += 1
 											gs 'stat'
 											'<center><img src="images/studia/three.gif"></center>'
-											'You got up on all fours and <<$pakter>> drove his dick into your pussy while you suck <<$pakter2>>.'
+											'You bend over and <<$pakter>> drives his dick into your pussy while you suck <<$pakter2>>.'
 
 											act 'Anal':
 												cla
@@ -675,7 +685,8 @@ if $ARGS[0] = 'manager':
 												anus += 1
 												gs 'stat'
 												'<center><img src="images/studia/threea.gif"></center>'
-												'<<$pakter>> shoots his load into your ass while you keep sucking <<$pakter2>>.'
+												'<<$pakter>> takes his cock out of your pusssy, and plunges it into your ass. The change and the extra tightness quickly overwelms him.'
+												'He shoots his load into your ass, all the while you keep sucking <<$pakter2>>.'
 
 												act 'Cum on face':
 													cla
@@ -685,9 +696,9 @@ if $ARGS[0] = 'manager':
 													facial += 1
 													gs 'stat'
 													'<center><img src="images/studia/tcum.gif"></center>'
-													'<<$pakter2>> shoots his hot stream of sperm into your mouth, down your throat.'
+													'You move around to clean up <<$pakter>>, when <<$pakter2>> grabs your head and feeds you his cum saying the most depraved things as it slowly trickles down your throat.'
 
-													act 'Go to the shower':
+													act 'Shower':
 														cla
 														*clr
 														minut += 5
@@ -701,7 +712,7 @@ if $ARGS[0] = 'manager':
 														cumlip = 0
 														cumface = 0
 														'<center><img src="images/pics/dush.jpg"></center>'
-														'You entered the shower cubicle. Turned on the shower and gently washed off all traces of semen from your body.'
+														'You enter the shower cubicle. Turn on the shower and gently wash the cum from your face and ass.'
 
 														act 'Go to Peter':gt 'pornstudio', 'postvideo'
 													end
@@ -742,8 +753,8 @@ if $ARGS[0] = 'manager':
 								if akrand2 = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
 								if akrand2 = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
 
-								'On the site already bustling assistants installing lighting, so that there were no shadows.'
-								'Actors <<$pakter>> and <<$pakter2>>, each holding a porn magazin in the one and his dick in the other hand, getting their cocks ready for you...'
+								'The set is already bustling with assistants setting up lighting, so that there are no shadows.'
+								'Actors <<$pakter>> and <<$pakter2>>, are watching porn on a monitor, getting their cocks ready for you...'
 
 								act 'Undress and start':
 									cla
@@ -760,7 +771,7 @@ if $ARGS[0] = 'manager':
 										minut += 15
 										gs 'stat'
 										'<center><img src="images/studia/tbj2.gif"></center>'
-										'You started to suck both members trying to deprive no one attention, caressing them with your tongue and lips.'
+										'You started to suck both members trying to please them both, it feels so good, all this cock and it''s all for you.'
 
 										act 'Fuck':
 											cla
@@ -770,7 +781,7 @@ if $ARGS[0] = 'manager':
 											vagina += 1
 											gs 'stat'
 											'<center><img src="images/studia/three.gif"></center>'
-											'You got up on all fours and <<$pakter>> drove his dick into your pussy while you suck <<$pakter2>>.'
+											'You got on all fours and <<$pakter>> fucks you like a dog while you suck <<$pakter2>>.'
 
 											act 'Anal':
 												cla
@@ -780,7 +791,7 @@ if $ARGS[0] = 'manager':
 												anus += 1
 												gs 'stat'
 												'<center><img src="images/studia/threea.gif"></center>'
-												'<<$pakter>> shoots his load into your ass while you keep sucking <<$pakter2>>.'
+												'<<$pakter>> switches it up and sticks his cock into your ass while you keep sucking <<$pakter2>>.'
 
 												act 'Double Penetration':
 													cla
@@ -790,9 +801,11 @@ if $ARGS[0] = 'manager':
 													vagina += 1
 													gs 'stat'
 													'<center><img src="images/studia/three2.gif"></center>'
-													'<<$pakter>> got his dick out of your ass and lay down. Seems like <<$pakter>> wanted some more. You sat down on his cock. You feel how his cock fill your pussy while <<$pakter2>> came up from behind and pushed his penis into your ass. The guys started to peck your holes, you moan loudly.'
+													'<<$pakter>> takes his dick out of your ass and lies down. Knowing <<$pakter>> wants more, you straddle his cock.'
+													'You feel how his cock fill your pussy while <<$pakter2>> cames up from behind you and pushes his penis into your ass.'
+													'The guys find a rhythm and grind away at your holes, you moan loudly.'
 
-													act 'Suck and cum':
+													act 'Finish in mouth':
 														cla
 														*clr
 														minut += 5
@@ -800,9 +813,10 @@ if $ARGS[0] = 'manager':
 														facial += 1
 														gs 'stat'
 														'<center><img src="images/studia/tcum.gif"></center>'
-														'The guys leave your holes. You grab the cock of <<$pakter>> and began to suck. Suddenly your head got pulled up by your hais and <<$pakter2>> shoots his hot stream of sperm into your face and mouth.'
+														'The guys tell you they''re close and disengage. You grab the cock of <<$pakter>> and began to suck.'
+														'Suddenly your head gets turned around and <<$pakter2>> shoots his load on your face and in your mouth.'
 
-														act 'Walk in shower':
+														act 'Shower':
 															cla
 															*clr
 															minut += 5
@@ -816,7 +830,7 @@ if $ARGS[0] = 'manager':
 															cumlip = 0
 															cumface = 0
 															'<center><img src="images/pics/dush.jpg"></center>'
-															'You entered the shower cubicle. Turned on the shower and gently washed off all traces of semen from your body.'
+															'You enter the shower cubicle. Turn on the shower and gently wash all traces of semen from your body.'
 
 															act 'Go to Peter':gt 'pornstudio', 'postvideo'
 														end
@@ -837,16 +851,17 @@ if $ARGS[0] = 'manager':
 
 	if pfilm > 0 and hour > 12:
 		pfilmday = daystart
-		'I told you not to be late? Said. Get out of here, I spend for you a lot of money. I had to pay actors, assistants, the operator and the doctor for doing nothing! The shooting failed, just because of you slut!'
-		'Either you come tomorrow and work for free, or get out!'
+		'Didn''t I tell you not to be late? Where the fuck where you?, I''ve wasted a lot of money. I had to pay actors, assistants, the director and the doctor just to sit on their asses!'
+		'The whole shoot was a write off, just because of you, slut!'
+		'I''ll give you one chance, come tomorrow and work for free, or we''re done!'
 
-		act 'Fuck you! Moron! Goodbye!!!':
+		act 'Fuck him. Who needs this idiot':
 			pfilmNO = 1
 			pfilm = 0
 			gt 'pornstudio', 'start'
 		end
 
-		act 'Well, in return for free':
+		act 'Fine, i will do it':
 			pfilmNOPAY = 1
 			gt 'pornstudio', 'start'
 		end
@@ -854,64 +869,62 @@ if $ARGS[0] = 'manager':
 	end
 
 	if firstkasting = 0:
-		'You sat down on the sofa and asked the boss. I see you for the first time with us. Do you want to be a porn star?'
-
-		act 'I changed my mind':gt 'pornstudio', 'start'
+		'You sit down on the sofa and greet the boss. "I see it''s your first time with us. Do you want to be a porn star?'
 
 		act 'Yes':
 			cla
 			minut += 5
 			gs 'stat'
-			'You have confirmed your desire to play in a porn movie. The boss nodded. All right. First we need to make a casting.'
-			'Take off your clothes and let me see your body.'
+			'You confirm your desire to act in a porn movie. The boss nods, "All right. First we''ll need to do a casting."'
+			'"Take off your clothes and let me see your body."'
 
-			act 'I changed my mind':gt 'pornstudio', 'start'
+			act 'Make excusses and leave':gt 'pornstudio', 'start'
 
 			act 'Undress':
 				cla
 				minut += 5
 				gs 'stat'
-				'You undressed in front of the boss, he got up from his chair and walked around you. "Lie down on the couch and spread your legs."'
+				'You undress in front of the boss, he gets up from his chair and walks towards you. "Lie down on the couch and spread your legs."'
 
-				act 'I changed my mind':gt 'pornstudio', 'start'
+				act 'Grab your clothes and run out':gt 'pornstudio', 'start'
 
-				act 'Lie down on the sofa and spread your legs ':
+				act 'Lie down on the sofa and spread your legs':
 					cla
 					minut += 5
 					gs 'stat'
-					'You lay down on the couch and spread your legs. The boss took his photo camera and took a few pictures, explaining that it is for the portfolio. After that, the boss asked you to kneel.'
+					'You lie down on the sofa and spread your legs. The boss takes a few pictures on his phone, explaining that it is for the portfolio. After that, the boss asks you to kneel.'
 
 					act 'Kneel':
 						cla
 						minut += 5
 						gs 'stat'
-						'You got up from the couch and knelt in front of the boss. He took a few more pictures. "Now open your mouth and stick out your tongue like I want to finish on your face."'
+						'You get up from the sofa and kneel in front of the boss. He takes a few more pictures. "Now open your mouth and stick out your tongue as if I was about to finish on your face."'
 
 						act 'Open your mouth and stick out your tongue':
 							cla
 							minut += 5
 							gs 'stat'
-							'You have opened your mouth and stuck out your tongue. The boss said to you, "Not bad, now suck my thumb"'
+							'You have open your mouth and stuck out your tongue. The boss says, "Not bad, now suck my thumb."'
 
 							act 'Suck his thumb':
 								cla
 								minut += 5
 								gs 'stat'
-								'You started to suck his thumb trying to look as sexy as possible. Meanwhile he touched your breast with the other hand while you were busy with his finger.'
-								'He pulled his finger out of your mouth and said curtly to you, "get dressed". He sat down at the table. You quickly got dressed and sat on the couch.'
-								'(Boss) - I can call Peter. But first you will need a nickname for filming.'
+								'You start to suck his thumb trying to look as sexy as possible. Meanwhile he touchs your breast with his other hand while you are busy with his finger.'
+								'He pulls his finger out of your mouth and curtly tells you, "get dressed". He sits down at his desk. You quickly got dressed and sat down.'
+								'"You can call me Peter. You are going to need a pornstar name.'
 
-								act 'Choose your porn pseudonym':
+								act 'Choose your pornstar name':
 									cla
 									firstkasting = 1
-									$pfname = input ("What will be your porn pseudonym?")
+									$pfname = input ("What will be your pornstar name?")
 
 									if $pfname <= 0:$pfname = '<<$name>> BimboStar'
 
-									'<<$pfname>>, wonderful name. Now listen, before shooting starts you have to pass the medical examination. If we find any sign of a sexually transmitted disease, you are out, forever. This point is clear? Take care of your health.'
-									'We shoot films not so often. About once a month.'
+									'<<$pfname>>, wonderful name. Now listen, before shooting starts you have to pass the medical examination. If we find any sign of a sexually transmitted disease, you are out, no exceptions.'
+									'You''re all registered, we only shoot about one film a month, remember to take care of your health.'
 									''
-									'We will see.'
+									'Come see me when you''re ready to work.'
 
 									act '.....':gt 'pornstudio', 'start'
 								end
@@ -922,30 +935,31 @@ if $ARGS[0] = 'manager':
 			end
 		end
 	elseif film = 0 and pfilm = 0:
-		'So, you are the new girl, and we just have here an new order for a brand new girl. In the genre hand job. You will have to masturbate a guy, and he would finish on your chest. All this for 3,000.'
+		'So, you''re the new girl, and we as luck would have it, we are looking for a brand new girl. It''s called ''Girls jerk guys 36''.'
+		'Guess what? You have to jerk off a guy, in this one he will finish on you tits. It pays 3,000 rubles.'
 
 		act 'Agree':
 			cla
 			pfilm = 1
 			pfilmday = daystart
-			'Thus, the survey will be tomorrow. Come at 10 and do not be late.'
+			'Cool, we shoot tomorrow. Get here between 10 and 11, do not be late.'
 
 			act 'Leave':gt 'pornstudio', 'start'
 		end
 
-		act 'I changed my mind':gt 'pornstudio', 'start'
+		act 'I don''t think I''m ready':gt 'pornstudio', 'start'
 	elseif film > 0:
 		if daystart > pffilmday and pfilm = 0:
-			'Come on <<$pfname>>. So, let''s see what I can pick up for you.'
+			'Come on <<$pfname>>. Let''s see what I can offer for you.'
 			frand = rand(1, 6)
-			if frand = 1:'Do a hand job, until the guy comes on his chest. 2000.'
-			if frand = 2:'Do blowjob guy, finishing in your mouth and on your face. 3000.'
-			if frand = 3:'Classical, first blowjob, then sex until they finish in your mouth and on your face. 5000.'
-			if frand = 4:'Tough classic, first blowjob, then sex, then anal and ending up in your mouth and on your face. 6000.'
-			if frand = 5:'Group sex with two guys in all holes, but without double penetration. 7000.'
-			if frand = 6:'Threesome with two guys with double penetration. 9000.'
+			if frand = 1:'Jerk a guy, until he cums on your chest. 2000.'
+			if frand = 2:'Blowjob, finish with a facial. 3000.'
+			if frand = 3:'Classic, first blowjob, then sex, finish with a facial. 5000.'
+			if frand = 4:'Classic with anal, blowjob, sex, anal and facial finish. 6000.'
+			if frand = 5:'Threesome, no dp, finish in ass and facial. 7000.'
+			if frand = 6:'Threesome with dp, double facial. 9000.'
 
-			act 'Perhaps wait for more suitable suggestions':
+			act 'I''ll wait for something else':
 				pffilmday = daystart + 1
 				gt 'pornstudio', 'start'
 			end
@@ -954,18 +968,18 @@ if $ARGS[0] = 'manager':
 				cla
 				pfilm = frand
 				pfilmday = daystart
-				'Thus, the survey will be tomorrow. Come at 10 and do not be late.'
+				'Cool, we shoot tomorrow. Come between 10 and 11. don''t be late.'
 
 				act 'Leave':gt 'pornstudio', 'start'
 			end
 		else
 			if pffilmday - daystart > 0:
-				'Sorry <<$pfname>>, there is no work for you now. Come back <<pffilmday-daystart>> days.'
+				'Sorry <<$pfname>>, there is no work for you now. Come back in <<pffilmday-daystart>> days.'
 			elseif pffilmday - daystart = 0:
 				'Sorry <<$pfname>>, there is no work for you now. Come back tomorrow.'
 			end
             
-                'Peter said on the phone, he covers up the phone for a second. "Listen, maybe you can come another time."'
+                'Peter is on the phone, he covers the receiver, "I''m busy right now, come back later."'
 			
             act 'Leave':gt 'pornstudio', 'start'
 		end
@@ -983,21 +997,21 @@ if $ARGS[0] = 'postvideo':
 	film += 1
 	gs 'stat'
 
-	if pfilm = 1:pfcash = 2000 & $filmtext = ' where you snimalilis as otdrachivali guy and he descended on your boobs.'
-	if pfilm = 2:pfcash = 3000 & $filmtext = ' where you snimalilis aspirated as a member of the guy and he goes down you in the mouth and face.'
-	if pfilm = 3:pfcash = 5000 & $filmtext = ' where you snimalilis aspirated as a member of the guy, then he fucked you and cum in your mouth.'
-	if pfilm = 4:pfcash = 6000 & $filmtext = ' where you snimalilis aspirated as a member of the guy, then he fucked you in the pussy and ass and pulled you into his mouth.'
-	if pfilm = 5:pfcash = 7000 & $filmtext = ' where you snimalilis as you in all holes hollows two men.'
-	if pfilm = 6:pfcash = 9000 & $filmtext = ' where you snimalilis as you hammering in all holes two men and even double penetration.'
+	if pfilm = 1:pfcash = 2000 & $filmtext = ' where you jerked a guy and he came on your tits.'
+	if pfilm = 2:pfcash = 3000 & $filmtext = ' where you blew a guy and got facialized.'
+	if pfilm = 3:pfcash = 5000 & $filmtext = ' where you blew and fucked guy, then got a facial.'
+	if pfilm = 4:pfcash = 6000 & $filmtext = ' where you blew and fucked guy (pussy and ass), then got facialized.'
+	if pfilm = 5:pfcash = 7000 & $filmtext = ' where you two guys fucked you in all you holes.'
+	if pfilm = 6:pfcash = 9000 & $filmtext = ' where you two guys fucked you in all your holes with double penetration.'
 
 	$pfilmhistory += film + ') shot on '+year+'.'+$month+'.'+day+':'+$filmtext+'<br>'
 
 	if pfilmNOPAY = 0:
 		money += pfcash
-		'Peter you counted <<pfcash>> per shot in the film and wished good luck.'
+		'Peter counts <<pfcash>> rubles out for your film and wishs good luck.'
 	else
 		pfilmNOPAY = 0
-		'You have fulfilled his sentence and the film was made for free.'
+		'You have fulfilled your obligation and the made the film for free.'
 	end
 
 	pfilm = 0
@@ -1009,7 +1023,7 @@ if $ARGS[0] = 'postvideo':
 	pffilmday = daystart+(film + filmkoef)
 	pfilmday = 0
 
-	'I think we will have a job for you not earlier than <<pffilmday-daystart>> day(s).'
+	'I think we will have a job for you in no less than <<pffilmday-daystart>> day(s).'
 
 	act 'Leave':gt 'pornstudio', 'start'
 end
@@ -1025,7 +1039,7 @@ if $ARGS[0] = '2':
 
 	'<center><img src="images/studia/casting_<<rand(1,6)>>.jpg"></center>'
 
-	'You spent eight hours undressing in front of the casting director, and taking various poses.'
+	'You spent eight hours possing in a variety of sexy underwears, for the casting director.'
 
 	minut = minut+120
 	gs 'stat'
@@ -1037,11 +1051,11 @@ if $ARGS[0] = '2':
 	gs 'stat'
 
 	if vnesh < carrar:
-		'You do not have to be the, too bad'
+		'You don''t have what it takes, sorry'
 	elseif vnesh >= carrar:
 		actr = 1
 
-		'You got the Role'
+		'You get the Role'
 	end
 
 	act 'Finish':

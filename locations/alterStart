@@ -271,6 +271,7 @@ $npcGo[25] = '<a href="exec:numnpc = 25 & gt ''Snpc''"><<$npcName[25]>> <<$npcSu
 
 $din_alter_start_ev = {
 	cls
+	'<center><img src="images/pic/alterstart7.jpg"></center>'
 	'As with all girls, you reached the milestone of puberty. For you it started when you were 13 years old, like most normal girls. You had your first period, which sucked, but that was the start of your changes.'
 	*nl
 	'Your chest then felt strange and you discovered your breasts were growing, which excited you, wondering how big they will get. Hair also began to form in your armpits and privates, and at the same time, you felt... things, things you learned to become intimate with. You eventually learned how to manage your developing body, your troublesome complexion included, and survived the transition to womanhood.'
@@ -294,6 +295,7 @@ $din_alter_start_ev = {
 
 clr
 gs 'stat'
+'<center><img src="images/pic/alterstart1.jpg"></center>'
 'You were born in <<birthyear>>.'
 'Your mother and father, Natasha Mikhail <<$surname>>, were quite young and probably didn''t know how to protect themselves.'
 'You have a sister, Anja, who is 2 years older than you.'
@@ -315,6 +317,7 @@ if $nickname = '':$nickname = 'Sveta'
 act 'Further':
 	cls
 
+	'<center><img src="images/pic/alterstart2.jpg"></center>'
 	'When you were young you had a fine childhood. Although you don''t remember much from kindergarten, you do remember going to elementary school when you were 7 years old.'
 	*nl
 	'Like many other kids, you tried out all sort of things at school. But the one thing that really defined you is...'
@@ -342,6 +345,7 @@ act 'Further':
 		nerdism = 100
 		fantasybook = 5
 		gs 'stat'
+		'<center><img src="images/pic/alterstart3.jpg"></center>'
 		'You spent virtually all your free time at home reading books. While you''ve definitely learned a decent bit from them, you''ve always been rather frail as a result, and too many nights of trying to read in poor light have taken a toll on your eyesight.'
 
 		act 'Further':dynamic $din_alter_start_ev
@@ -366,6 +370,7 @@ act 'Further':
 		money += 2000
 		tan = 30
 		gs 'stat'
+		'<center><img src="images/pic/alterstart4.jpg"></center>'
 		'In school, you put a lot of effort to be an excellent pupil. You didn''t make any friends because you weren''t engaged in sports, but you have excellent grades and your mom is very proud of you.'
 
 		act 'Further':dynamic $din_alter_start_ev
@@ -394,6 +399,7 @@ act 'Further':
 		jeansB[1] = bedra
 		tan = 30
 		gs 'stat'
+		'<center><img src="images/pic/alterstart5.jpg"></center>'
 		'As soon as you tried out volleyball you got really into it and spent all your free time improving your skills in the sport. Because of that you weren''t that good in school and had less friends.'
 
 		act 'Further':dynamic $din_alter_start_ev

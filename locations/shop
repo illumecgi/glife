@@ -43,21 +43,22 @@ if $shoplocation = 'main':
 	if $loc = 'street':
 		if rand(1, 20) = 20:
 			if dimaQW = 0:
-				'In the lobby of the store looks at you appreciatively what that man.'
-				act 'See it':gt 'event', 'dima'
+				'By the store entrance a man is looking at you appreciatively.'
+				act 'Return the look':gt 'event', 'dima'
 			elseif dimaQW = 1:
-				'In the lobby of the store you notice Dima and binds you fear, you can not move.'
-				act 'See it':gt 'event', 'scoreslut1'
+				'In the lobby of the store you notice Dima and you are frozen with fear, you want to run, but your legs wont respond.'
+				'Your heart is thumping in your chest, your vision narrows, you feel faint.'
+				act 'Pass out':gt 'event', 'scoreslut1'
 			else
-				'You met the same Dima who boyfriend fucking amuse you. Dima cocky grin came to you and said hello.'
+				'You meet the same Dima whos friend fucked and abused you. Dima grins confidently and says, "Hello."'
 
 				act 'Hello':
 					cla
-					'Come to me, I have no wife at home said Dima.'
+					'"Come with me, My wife''s away", says Dima.'
 
-					act 'No':gt 'shop', 'start'
+					act 'Fuck no':gt 'shop', 'start'
 
-					act 'Come':
+					act 'I deserve this':
 						cla
 						*clr
 
@@ -69,9 +70,10 @@ if $shoplocation = 'main':
 							cumlip += 1
 							swallow += 1
 							horny = 0
-							'Dima took you to his house and there has ordered you to kneel. You got on his knees and he calling you a bitch and fuck you cocksucker began in the mouth.'
+							minut += 10
+							'Dima takes you to his house and orders you to lie across the sofa. You get on into position, he calls you a bitch and a starts fucking you in the mouth.'
 							'<center><img src="images/pics/gostDT2.jpg"></center>'
-							'Dima finally finished your mouth, you obediently swallowed and licked the remnants of sperm with his big cock.'
+							'Dima finally finishes in your mouth, you obediently swallow and lick the remnants of sperm off his big cock.'
 
 							act 'Leave':gt 'street'
 						else
@@ -82,9 +84,11 @@ if $shoplocation = 'main':
 							spank += 1
 							boom = 5
 							horny = 0
-							'Dima has brought you to my house and right in the corridor began to kiss you and undress. After he stripped you he took you to the bathroom. There he sat in the bathroom and you unscrewing the showerhead put a water hose you in the ass. Quickly the feeling of fullness and Dima put you on the toilet. After an enema, he made you cancer and put you in the ass his big dick.'
+							minut += 30
+							'Dima has brings you to his house and right in the corridor begins to kiss and undress you. When you are naked he takes you to the bathroom.'
+							'There he unscrews the showerhead and puts the hose in your ass. Quickly you feel the fullness and Dima sits you on the toilet. After he rough enema, he bends you over and puts his big dick in your ass.'
 							'<center><img src="images/pics/gostAnal2.jpg"></center>'
-							'Dima long you fucked in the ass and beat his hands, you first it was painful, but gradually you got the taste and began to catch the buzz finally your ass filled with hot liquid and Dima moan grabbed your buttocks.'
+							'Dima fucks you in the ass whilst slapping your butt, at first it is painful, but gradually you get it and it feels amazing. Finally, your ass fills with hot liquid and Dima moans and grabs your buttocks.'
 
 							act 'Leave':gt 'street'
 						end

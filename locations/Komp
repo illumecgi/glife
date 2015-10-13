@@ -5,7 +5,7 @@ if $ARGS[0] = 'start':
 	elektro += 5
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'With the computer happily welcomes you start window.'
+	'Your computer starts up and loads Windows.'
 
 	act 'Play Patience (0:15)':gt 'Komp', 'pasians'
 
@@ -17,17 +17,17 @@ if $ARGS[0] = 'start':
 
 	if internet > 0:
 		internet = internetM / 60
-		'You''ve got <<internet>> hours of Internet'
+		'You have <<internet>> hours of Internet access remaining.'
 
 		act 'Browser':gt 'Komp', 'brows'
 	end
 
 	if karta >= 10:
-		'You can pay online through your bank account. 1 hour internet costs 10 rubles. On account of <<karta>>rubles.'
+		'You can pay online through your bank account. 1 hour of internet access costs 10 rubles. You have <<karta>>rubles in your account.'
 
-		act 'Pay online bank account':
+		act 'Buy more account access':
 			cla
-			intinp = input ("How much money to put on the internet? (h = 10 rubles)")
+			intinp = input ("How much money do you wish to spend on internet access? (h = 10 rubles)")
 
 			if intinp <= 0 or intinp * 10 > karta:
 				'Invalid amount.'
@@ -36,14 +36,14 @@ if $ARGS[0] = 'start':
 				karta -= inttime
 				internetM += intinp * 60
 				internet = internetM / 60
-				'You paid <<inttime>> hours of Internet, you now have <<internet>> hours of the Internet. Your account was removed <<intinp>> rubles.'
+				'You paid for <<inttime>> hours of Internet access, you have <<internet>> hours of the Internet access remianing. <<intinp>> rubles were removed from your account.'
 			end
 
-			act 'Get out of the payment system':gt 'Komp', 'start'
+			act 'Exit payment system':gt 'Komp', 'start'
 		end
 	end
 
-	act 'Shut down the computer':
+	act 'Shut your computer down':
 		cla
 		gt 'Komp', 'fin'
 	end
@@ -55,36 +55,36 @@ if $ARGS[0] = 'brows':
 	*clr
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You entered into a search engine.'
+	'You go to Google.'
 
 	'<a href="exec:GT ''Komp'',''agent''">Site agentsvo property</a>'
 
-	act 'Apartment repair site (0:15)':gt 'Komp', 'remont'
+	act 'Interior design website (0:15)':gt 'Komp', 'remont'
 
-	if housr = 1 and husband = 0:act 'Rent your apartment':gt 'Komp', 'sale'
+	if housr = 1 and husband = 0:act 'Rent your apartment out':gt 'Komp', 'sale'
 
-	act 'Porno (0:15)':gt 'Komp', 'porno'
-	act 'Singles (0:15)':gt 'Komp', 'znak'
+	act 'Porn (0:15)':gt 'Komp', 'porno'
+	act 'Search for love (0:15)':gt 'Komp', 'znak'
 
-	if hour < 20 and hour > 7:act 'Jobs.su':gt 'Komp', 'rabota'
+	if hour < 20 and hour > 7:act 'Jobs site':gt 'Komp', 'rabota'
 
 	act 'Cable TV services (0:15)':gt 'Komp', 'kabtv'
-	act 'Online game':gt 'KGstart'
+	act 'Online gaming':gt 'KGstart'
 
-	if shantfoto > 0:act 'Search photos heroine in "In the ass."':gt 'Komp', 'foto'
-	if gor_dorm = 7:act 'Read letter from Evgeniya':gt 'etoexhib', 'pos91'
+	if shantfoto > 0:act 'Search for the heroine you photoed on "In the ass" wesite':gt 'Komp', 'foto'
+	if gor_dorm = 7:act 'Read letter from Eugene':gt 'etoexhib', 'pos91'
 	if camwhore = 1:act 'Go to MyFreeCams.org':gt 'Komp', 'mfc'
-	if student > 0:act 'The Institute for Education Measurement':gt 'Komp', 'study'
+	if student > 0:act 'The Institute for Education wesite':gt 'Komp', 'study'
 	act 'Exit the browser':gt 'Komp', 'start'
 
 	if internet = 0:
 		cls
 		'<center><b>Browser</b></center>'
 		'<center><img src="images/pics/komp/eror.jpg"></center>'
-		'You need to fill up online.'
+		'You need to buy more Internet access.'
 	end
 
-	act '<B>Quit your browser</B>':gt 'Komp','start'
+	act '<B>Close the browser</B>':gt 'Komp','start'
 end
 
 if $ARGS[0] = 'sale':
@@ -98,7 +98,7 @@ if $ARGS[0] = 'sale':
 
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You are logged in to the site for free ads.'
+	'You log into to a popular free ads website.'
 
 	if obkvsdam = 0 and housrA = 1:
 		act 'Rent out your apartment':obkvsdam = 1 & gt 'Komp', 'sale'
@@ -106,15 +106,15 @@ if $ARGS[0] = 'sale':
 		act 'Check responses to your ad':
 			cla
 			if obkvsdam = 1:
-				'No one has responded to your apartment ad'
+				'No one has responded to your apartment advert'
 			elseif obkvsdam > 1:
 				if obkvsdam = 2:predsumm = 7000
 				if obkvsdam = 2:predsumm = 8000
 				if obkvsdam = 2:predsumm = 9000
 				if obkvsdam = 2:predsumm = 10000
-				'Want to stay in your apartment for a month (<<predsumm>> rubles).'
+				'Wants to stay in your apartment for a month (<<predsumm>> rubles).'
 
-				act 'Rent':
+				act 'Rent it out':
 					sdaday = day
 					sdamonth = month + 1
 					housr = 0
@@ -140,7 +140,7 @@ if $ARGS[0] = 'remont':
 	internet -= 1
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You are logged in apartment repairs.'
+	'You are log in to a local interior designers website.'
 
 	if housr = 1:
 		if rembedr = 0:
@@ -149,10 +149,10 @@ if $ARGS[0] = 'remont':
 					cla
 					rembedr = 1
 					money -= 50000
-					'You pay for repairs and you did it the same, just Dzhumshut Ravshan and wizards.'
+					'You pay the money and just like magic, it''s all done and looks fabulous.'
 				else
 					cla
-					'Unfortunately, you will not have enough money.'
+					'Unfortunately, you do not have enough money.'
 				end
 
 				act 'Leave':gt 'Komp', 'remont'
@@ -165,10 +165,10 @@ if $ARGS[0] = 'remont':
 					cla
 					remsitr = 1
 					money -= 50000
-					'You pay for repairs and you did it the same, just Dzhumshut Ravshan and wizards.'
+					'You pay the money and just like magic, it''s all done and looks fabulous.'
 				else
 					cla
-					'Unfortunately, you will not have enough money.'
+					'Unfortunately, you do not have enough money.'
 				end
 
 				act 'Leave':gt 'Komp', 'remont'
@@ -181,10 +181,10 @@ if $ARGS[0] = 'remont':
 					cla
 					remkorr = 1
 					money -= 50000
-					'You pay for repairs and you did it the same, just Dzhumshut Ravshan and wizards.'
+					'You pay the money and just like magic, it''s all done and looks fabulous.'
 				else
 					cla
-					'Unfortunately, you will not have enough money.'
+					'Unfortunately, you do not have enough money.'
 				end
 
 				act 'Leave':gt 'Komp', 'remont'
@@ -197,10 +197,10 @@ if $ARGS[0] = 'remont':
 					cla
 					remvanr = 1
 					money -= 50000
-					'You pay for repairs and you did it the same, just Dzhumshut Ravshan and wizards.'
+					'You pay the money and just like magic, it''s all done and looks fabulous.'
 				else
 					cla
-					'Unfortunately, you will not have enough money.'
+					'Unfortunately, you do not have enough money.'
 				end
 
 				act 'Leave':gt 'Komp', 'remont'
@@ -213,10 +213,10 @@ if $ARGS[0] = 'remont':
 					cla
 					remkuhr = 1
 					money -= 50000
-					'You pay for repairs and you did it the same, just Dzhumshut Ravshan and wizards.'
+					'You pay the money and just like magic, it''s all done and looks fabulous.'
 				else
 					cla
-					'Unfortunately, you will not have enough money.'
+					'Unfortunately, you do not have enough money.'
 				end
 
 				act 'Leave':gt 'Komp', 'remont'
@@ -241,7 +241,7 @@ if $ARGS[0] = 'porno':
 	internet -= 1
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You went to a porn site.'
+	'You go to a porn site.'
 
 	$pornomastr = {
 		cls
@@ -253,12 +253,13 @@ if $ARGS[0] = 'porno':
 
 		gs 'stat'
 		'<center><img src="images/pics/kompmas.jpg"></center>'
-		'You get comfortable in front of the computer with one hand and began to fondle her breasts, a finger of the other hand you started rubbing and stroking a small bump between his legs that responded to the touch of pleasant languor covering your entire body.'
+		'You get comfortable in front of your computer and with one hand begin to fondle your breasts, then click on a link to something really dirty.'
+		'You let go of the mouse and start rubbing your pussy, imagining you''re the woman in the video. The fantasy and your touching are getting you hot and bothered.'
 
 		if horny >= 100:
 			orgasm += 1
 			horny = 0
-			'Suddenly a nice cramp brought your body and you covered powerful orgasm from which you groan.'
+			'Suddenly a your muscles tighten and you cum powerfully, moaning gently.'
 		end
 
 		act 'Finish':divanmastr = 0 & gt 'Komp', 'porno'
@@ -290,10 +291,10 @@ if $ARGS[0] = 'pasians':
 
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You entertained for an hour unfolding of solitaire on the computer.'
+	'You entertain yourself for an hour playing solitaire on the computer.'
 
-	act 'Lay another 20 minutes':gt 'Komp', 'pasians'
-	act 'Close Solitaire':gt 'Komp', 'start'
+	act 'Play for another 20 minutes':gt 'Komp', 'pasians'
+	act 'Enough Solitaire':gt 'Komp', 'start'
 end
 
 if $ARGS[0] = 'znak':
@@ -307,51 +308,51 @@ if $ARGS[0] = 'znak':
 	internet -= 1
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You are logged on to a dating site.'
-	'Selection of boys is only possible if there is no boyfriend.'
+	'You are log on to a dating site.'
+	'There''s plenty of hot men, if you''re single.'
 
 	if bfA <= 0:
-		act 'To pick up a guy with a gentle disposition':
+		act 'Look for a kind man':
 			cla
 			gs 'boy'
 			gs 'boyfrend', 'start'
 			stopboy = 0
 			harakBoyA = 0
-			'You wrote a guy named <<$boyA>>and talked with him and left him number hoping that he will call you.'
+			'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
 
 			act 'Leave':gt 'Komp', 'brows'
 		end
 
-		act 'To pick up a guy with a common character':
+		act 'Look for a normal guy':
 			cla
 			gs 'boy'
 			gs 'boyfrend', 'start'
 			stopboy = 0
 			harakBoyA = 1
-			'You wrote a guy named <<$boyA>>and talked with him and left him number hoping that he will call you.'
+			'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
 
 			act 'Leave':gt 'Komp', 'brows'
 		end
 
-		act 'To pick up a guy with a strong character':
+		act 'Look for a strong man':
 			cla
 			gs 'boy'
 			gs 'boyfrend', 'start'
 			stopboy = 0
 			harakBoyA = 2
-			'You wrote a guy named <<$boyA>>and talked with him and left him number hoping that he will call you.'
+			'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
 
 			act 'Leave':gt 'Komp', 'brows'
 		end
 	end
 
 	if gor_dorm = 8:
-		act 'Pick of suitors for Eugenia':
+		act 'Pick someone suitable for Eugenia':
 			cla
 			gor_dorm = 9
 
-			'You shoveled dozens of profiles, Before choosing a suitable in all respects candidates and sent them a letter with a proposal to meet.'
-			'Now we have to wait her turn, what_is-anything with them or not.'
+			'You shovel through dozens of profiles, before choosing a candidate suitable in all regards and send them a message with a proposal to meet.'
+			'Now the waiting game, let''s hope it works out for her.'
 
 			act 'Leave':gt 'Komp', 'brows'
 		end
@@ -369,37 +370,37 @@ if $ARGS[0] = 'kabtv':
 	internet -= 1
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You are logged in to the website provider of cable TV.'
+	'You are log in to the website of the local cable TV provider.'
 
 	if kabel = 1:
-		'Do you have a cable TV (subscription fee of 300 rubles per month lifted the 25th day of)'
+		'You have a cable TV (subscription: 300 rubles per month payable on the 25th)'
 
-		act 'Abandon cable TV':
+		act 'Cancel cable TV':
 			cla
-			kabel = 1
+			kabel = 0
 			money -= 300
-			'You have disconnected cable channels, paying the current month'
+			'Your cable channels have been canceled, diconnection charge 300 rubles'
 			gt 'Komp', 'kabtv'
 		end
 	elseif kabel = 0 and TV = 1:
-		'You do not have a cable TV'
+		'You do not have cable TV'
 
 		act 'Connect cable TV':
 			cla
-			'Unfortunately for viewing cable television requires a more modern TV'
+			'Unfortunately your TV is too old for cable'
 			gt 'Komp', 'kabtv'
 		end
 	elseif kabel = 0 and TV >= 2:
-		'You do not have a cable TV'
+		'You do not have cable TV'
 
 		act 'Connect Cable TV (300 rubles per month)':
 			cla
 			kabel = 1
-			'You hooked up cable TV services'
+			'You''re hooked up to cable TV services'
 			gt 'Komp', 'kabtv'
 		end
 	else
-		'You don''t even own a TV yet!'
+		'You don''t even have a TV!'
 		act 'Leave':gt 'Komp', 'start'
 	end
 	act 'Leave':gt 'Komp', 'start'
@@ -413,7 +414,7 @@ if $ARGS[0] = 'foto':
 	internet -= 1
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You are logged in to the social network "in the ass."'
+	'You are log in to the social network site "in the ass."'
 
 	if shantfoto > 0:
 		act 'Search':
@@ -429,25 +430,25 @@ if $ARGS[0] = 'foto':
 
 			if fotsearchrand > 7:
 				shantfoto -= 1
-				'You found the heroine a photo shoot'
+				'You found the heroine from the photo shoot'
 				gerofotorand = rand(0, 100)
 
 				if gerofotorand > 30:
-					'Judging by the photos on her page this poor girl and take her with nothing.'
+					'Judging by the photos on her page this poor girl and not worth blackmailing.'
 
 					act 'Finish':gt 'Komp', 'foto'
 				end
 
 				if gerofotorand >= 5 and gerofotorand <= 30:
 					shantsr += 1
-					'Judging by the photos on her page is non-existent girl from the middle classes. You send her photo and asked to be transferred to your account 5000.'
+					'Judging by the photos on her page she is an unknown middle class girl. You send her photo and ask for 5000 rubles to be transferred to your account.'
 
 					act 'Finish':gt 'Komp', 'foto'
 				end
 
 				if gerofotorand < 5:
 					shantbog += 1
-					'Judging by the photos on her page is very secured lady. You send her photo and asked to be transferred to your account 30000.'
+					'Judging by the photos on her page this lady has a position in society worth protecting. You send her photo and ask for 30,000 rubles to be transferred to your account.'
 
 					act 'Finish':gt 'Komp', 'foto'
 				end
@@ -469,60 +470,60 @@ if $ARGS[0] = 'rabota':
 	'<center><img src="images/pics/komp.jpg"></center>'
 
 	if komprabota = 0 and gorodokKomp = 0:
-		'You found an ad:"Wanted girl model looks for advertising underwear, cash on filming zavershinii 2000 rubles."'
+		'You find an ad: "Wanted female underwear model, for photoshoot. Pay 2000 rubles."'
 
 		if vnesh < 30:
-			'But you are under this description does not fit'
+			'This knid of work isn''t for you'
 		elseif vnesh >= 30:
-			act 'Go at':gt 'qjob', 'var1'
+			act 'Do it':gt 'qjob', 'var1'
 		end
 
 		if hour < 20 and hour > 7:act 'Search more':gt 'Komp', 'rabota'
 
 		act 'Finish':gt 'Komp', 'brows'
 	elseif komprabota = 1 and gorodokKomp = 0:
-		'You found an ad:"Wanted girl model looks for advertising underwear, cash on filming zavershinii 2000 rubles."'
+		'You find an ad: "Wanted female underwear model, for photoshoot. Pay 2000 rubles."'
 
-		if vnesh < 30:'But you are under this description does not fit'
+		if vnesh < 30:'This knid of work isn''t for you'
 
 		if vnesh >= 30:
-			act 'Go at':gt 'qjob', 'var2'
+			act 'Do it':gt 'qjob', 'var2'
 		end
 
 		if hour < 20 and hour > 7:act 'Search more':gt 'Komp', 'rabota'
 
 		act 'Finish':gt 'Komp', 'brows'
 	elseif komprabota > 1 and komprabota < 5 and gorodokKomp = 0:
-		'You found an ad:"The artist is required naturschitsa, simpotichnoy appearance, cash 1, 000 rubles."'
+		'You find an ad: "Artist requires female real life model, well presented, cash, 1000 rubles."'
 
 		if vnesh < 15:
-			'But you are under this description does not fit'
+			'This knid of work isn''t for you'
 		elseif vnesh >= 15:
-			act 'Go at':gt 'qjob', 'var3'
+			act 'Do it':gt 'qjob', 'var3'
 		end
 
 		if hour < 20 and hour > 7:act 'Search more':gt 'Komp', 'rabota'
 
 		act 'Finish':gt 'Komp', 'brows'
 	elseif komprabota > 4 and komprabota < 8 and StoryLine > 0 and Suspeh >= 90 and camwhore = 0:
-		'You stumbled on the ad, which says, that one of the thematic websites require web models.'
+		'You stumble across on the ad, which says that a website requires webcam models.'
 		act 'Interest':
 			cls
 			minut += 5
 			gs 'stat'
 			'<center><img src="images/camwhore/camwhore1.jpg"></center>'
-			'Quickly walking up the look of the ad, you know, what is this job you will have to expose her body in front of customers, fulfilling their wishes.'
-			'For which, naturally, you will pay virtual currency, which management of the site will transfer real money to your Bank account.'
-			'Resource of English language and registration from the CIS are prohibited there, so the chance, what who-you know in real life, very few.'
-			'The amount of payment depends on the popularity of your room, the more you will be able to attract users, the more you earn, that is, it all depends on you.'
+			'Quickly reading through the ad, you know, that for this job you will have to expose your body in front of customers, fulfilling their wishes.'
+			'For which, naturally, you will be paid on-line, which the site admin will transfer to your Bank account.'
+			'The site prevents access for customers in your region, so the chance of you being seen by someone you know in real life, is very low.'
+			'The amount of payment depends on the popularity of your chatroom, the more you will be able to attract users, the more you earn. Basically, it all depends on you.'
 
-			act 'To fill in the questionnaire':
+			act 'Fill in the questionnaire':
 				cls
 				camwhore += 1
 				minut += 20
 				gs 'stat'
 				'<center><img src="images/camwhore/camwhore2.jpg"></center>'
-				'Go to the website, you have registered yourself on it as a model. Ten minutes later, the questionnaire had already been approved and you can now earn money web model'
+				'You go to the website, and register yourself on it as a model. Ten minutes later, the questionnaire has already been approved and you can now earn money as a webcam girl.'
 				act 'Finish':gt 'Komp','brows'
 			end
 			act 'Return':gt 'Komp','brows'
@@ -531,7 +532,7 @@ if $ARGS[0] = 'rabota':
 		if hour < 20 and hour > 7:act 'Search More':gt 'Komp','rabota'
 		act '<B>Finish</B>':gt 'Komp','brows'
 	else
-		'We did not find anything suitable.'
+		'You did not find anything suitable.'
 
 		if hour < 20 and hour > 7:act 'Search More':gt 'Komp','rabota'
 		act '<B>Finish</B>':gt 'Komp','brows'
@@ -550,7 +551,7 @@ if $ARGS[0] = 'kursak':
 	if kursovik > 100:kursovik = 100
 	'<center><b>Coursework</b></center>'
 	'<center><img src="images/pics/komp/kursak.jpg"></center>'
-	'You were an hour over the course work and prepare it on <<kursovik>>%.'
+	'You spend an hour on your course work and have now completed <<kursovik>>%.'
 
 	act '<B>Finish</B>':gt 'Komp','start'
 end
@@ -566,18 +567,18 @@ if $ARGS[0] = 'agent':
 	gs 'stat'
 	'<center><b>CAit estate agency</b></center>'
 	'<center><img src="images/pics/komp/agent.jpg"></center>'
-	'You are logged in estate agency.'
-	'Here you can rent an apartment online in 6000 rubles.'
+	'You log on to an estate agents website.'
+	'Here you can rent an apartment online for 6000 rubles.'
 	''
 	if ArendHouseSL > 0:'You have <B><<ArendHouseSL>> days</B> rental.'
 	if karta >= 6000 and BuyHous ! 1:
-		act 'Apartment for rent online':
+		act 'Rent apartment online':
 			cla
 			karta -= 6000
 			housr = 1
 			BuyHous = 2
 			ArendHouseSL += 30
-			'You get easy to rent an apartment in a residential area on the 30 days. Now you <B><<ArendHouseSL>> days</B> rental.'
+			'You get the easy to rent apartment in the residential area for 30 days. Now you have <B><<ArendHouseSL>> days</B> rental.'
 			act '<B>Finish</B>':gt 'Komp','start'
 		end
 	end
@@ -590,12 +591,12 @@ end
 
 if $ARGS[0] = 'mfc':
 	if sisterHere = 0:
-		act 'Go to your mfc startpage':
+		act 'Go to your mfc homepage':
 			cls
 			minut += 2
 			gs 'stat'
 			'<center><img src="images/camwhore/camwhore3.jpg"></center>'
-			'You walked to your room on the website. At the moment you  <<camclients>> visitors.'
+			'You enter your chatroom on the website. At the moment you have <<camclients>> visitors.'
 
 			act 'Further':gt 'komp','startpagemfc'
 		end
@@ -629,7 +630,7 @@ if $ARGS[0] = 'mfc':
 		camclients = 0
 		gs 'stat'
 		'<center><img src="images/camwhore/camwhore2.jpg"></center>'
-		'You month, but because you have too unwell for the show  - sick, stomach hurts, dizzy, generally, not the best time to earn your money body...'
+		'You time of the month, you are too unwell for the show  - sick, stomachache , dizzy, generally not the best time to earn money with your body...'
 		act 'Close tab':gt 'Komp','brows'
 	end
 end
@@ -638,7 +639,7 @@ if $ARGS[0] = 'startpagemfc':
 	if vgape > 0 or agape > 0:
 		cls
 		gs 'stat'
-		'You feel bad too, to put on a show.'
+		'You feel too bad to put on a show.'
 		act 'Close tab':
 			karta += tokens/2
 			gt 'Komp','mfc'
@@ -647,8 +648,8 @@ if $ARGS[0] = 'startpagemfc':
 		cls
 		gs 'stat'
 		'<center><img src="images/camwhore/camwhore3.jpg"></center>'
-		'In your room  <<camclients>> visitors.'
-		act 'To enable the webcam':gt 'komp','waitclients'
+		'In your chatroom  <<camclients>> visitors.'
+		act 'Turn on webcam':gt 'komp','waitclients'
 		act 'Logout':
 			karta += tokens/2
 			gt 'Komp','mfc'
@@ -817,7 +818,7 @@ if $ARGS[0] = 'waitclients':
 		'<center><img src="images/camwhore/camwhore6.jpg"></center>'
 	end
 
-	'In your room  <<camclients>> visitors.'
+	'In your chatroom  <<camclients>> visitors.'
 	'You have <<tokens>> tokens.'
 
 	act 'Wait for visitors':gt 'komp','waitclients'
@@ -825,8 +826,8 @@ if $ARGS[0] = 'waitclients':
 	if topmfc = 1 and clientask >= 98:
 		cls
 		gs 'stat'
-		'It seems, one of the visitors willing to pay you for, so you bared Breasts...'
-		act 'To remove a bra':
+		'It seems, one of the visitors is willing to pay you for you to bare your breasts...'
+		act 'Remove a bra':
 			cls
 			webpopular += 1
 			minut += 2
@@ -844,9 +845,9 @@ if $ARGS[0] = 'waitclients':
 			gs 'stat'
 
 			'<center><img src="images/camwhore/camwhore7.jpg"></center>'
-			'You stood up and so, so the camera could see better Breasts, slowly removed her bra, what immediately got the tokens.'
+			'You stand up so the camera can see your breasts better, slowly you remove your bra, which immediately earns tokens.'
 
-			act 'Further':gt 'Komp','waitclients'
+			act 'Carry on':gt 'Komp','waitclients'
 		end
 		act 'Ignore':
 			cls
@@ -857,7 +858,7 @@ if $ARGS[0] = 'waitclients':
 	if backmfc = 1 and clientask >= 96 and clientask < 98:
 		cls
 		'One of the visitors asks you to remove your panties...'
-		act 'Do':
+		act 'Do it':
 			cls
 			webpopular += 1
 			minut += 2
@@ -875,8 +876,8 @@ if $ARGS[0] = 'waitclients':
 			gs 'stat'
 
 			'<center><img src="images/camwhore/camwhore8.jpg"></center>'
-			'You slowly pulled off her panties, then briefly brought the camera, giving a better look at her pussy.'
-			act 'Further':gt 'Komp','waitclients'
+			'You slowly pulled off your panties, then briefly adjust the camera, giving a better view of your pussy.'
+			act 'Carry on':gt 'Komp','waitclients'
 		end
 		act 'Ignore':
 			cls
@@ -887,7 +888,7 @@ if $ARGS[0] = 'waitclients':
 	if topmfc = 0 and clientask >= 94 and clientask < 96:
 		cls
 		'One of the visitors asks you to fondle your Breasts...'
-		act 'Do':
+		act 'Do it':
 			cls
 			webpopular += 1
 			minut += 2
@@ -905,15 +906,15 @@ if $ARGS[0] = 'waitclients':
 			gs 'stat'
 
 			'<center><img src="images/camwhore/camwhore10.jpg"></center>'
-			'You lie down comfortably and start to knead and squeeze his hands over his chest, sometimes putting his mouth to one nipple, then to the second...'
+			'You lie down comfortably and start to knead and squeeze your tits, sometimes putting your mouth to a nipple, then to the other...'
 			if horny >= 100:
 				orgasm += 1
 				horny = 0
 				manna = mannamax
 				gs 'stat'
-				'But the excitement is so great, what you are not able to sustain them, but because capacete hand between her legs and then cum.'
+				'The excitement is so great, that you are unable to hold back, and placing your hand between her legs and you cum.'
 			end
-			act 'Further':gt 'Komp','waitclients'
+			act 'Carry on':gt 'Komp','waitclients'
 		end
 		act 'Ignore':
 			cls
@@ -923,8 +924,8 @@ if $ARGS[0] = 'waitclients':
 	end
 	if backmfc = 0 and clientask = 93:
 		cls
-		'One of the visitors asks you to play with her pussy...'
-		act 'Do':
+		'One of the visitors asks you to play with your pussy...'
+		act 'Do it':
 			cls
 			webpopular += 1
 			minut += 2
@@ -941,15 +942,15 @@ if $ARGS[0] = 'waitclients':
 			gs 'stat'
 
 			'<center><img src="images/camwhore/camwhore12.jpg"></center>'
-			'You lie down comfortably and passing a hand between her legs, are the fingers rubbing her labia.'
+			'You lie down comfortably and pressing a hand between your legs, you rub your labia back and forth with your fingers.'
 			if horny >= 100:
 				orgasm += 1
 				horny = 0
 				manna = mannamax
 				gs 'stat'
-				'In the process you yourself on notice, as the approaching wave of orgasm, but because roughly cum.'
+				'In the process you suddenly notice, you are approaching orgasm, then you quickly cum.'
 			end
-			act 'Further':gt 'Komp','waitclients'
+			act 'Carry on':gt 'Komp','waitclients'
 		end
 		act 'Ignore':
 			cls
@@ -959,8 +960,8 @@ if $ARGS[0] = 'waitclients':
 	end
 	if backmfc = 0 and clientask = 92:
 		cls
-		'One of the visitors asks you to show him the closer your vagina...'
-		act 'Do':
+		'One of the visitors asks you to show him a close-up of your vagina...'
+		act 'Do it':
 			cls
 			webpopular += 1
 			minut += 2
@@ -995,8 +996,8 @@ if $ARGS[0] = 'waitclients':
 			if vagina > 35 and analplugIN = 0:
 				'<center><img src="images/camwhore/camwhore17.jpg"></center>'
 			end
-			'You do a request to the client for the coveted tokens.'
-			act 'Further':gt 'Komp','waitclients'
+			'Doing a request for the client earns you tokens.'
+			act 'Carry on':gt 'Komp','waitclients'
 		end
 		act 'Ignore':
 			cls
@@ -1006,7 +1007,7 @@ if $ARGS[0] = 'waitclients':
 	end
 	if backmfc = 0 and anus >= 30 and webpopular >= 50 and clientask = 91:
 		cls
-		'One of the visitors asks you to push on camera ass...'
+		'One of the visitors asks you to push the camera up your ass...'
 		act 'To push':
 			cls
 			webpopular += 2
@@ -1032,19 +1033,19 @@ if $ARGS[0] = 'waitclients':
 			if analplugIN = 0:
 				if cumanus > 0:
 					'<center><img src="images/camwhore/camwhore74.jpg"></center>'
-					'You turn your ass to the computer and extending his arms buttocks, begin to push, with shame feeling, as from your rectum follows the male sperm...'
-					'Chat is broken from vulgar, and sometimes insulting comments, therefore, you soon stop this humiliating lesson...'
+					'You turn your ass to the computer and reaching you hand behind you, begin to push, with a feeling of shame, from your rectum follows male sperm...'
+					'Chat is filled with vulgar, and sometimes insulting comments, therefore, you soon stop this humiliating activity...'
 				else
 					'<center><img src="images/camwhore/camwhore20,<<rand(0,7)>>.jpg"></center>'
-					'You gettin ` on your knees and extending his arms buttocks, begin to push, with shame feeling, how to get out of your rectum.'
-					'But greed overcomes the inconvenience, so you suffer a couple of seconds, giving foreigners a better look at your worn out ass...'
+					'You get on your knees and reaching around to you ass, begin to push, with a feeling of shame, wondering how get the cam back out of your rectum.'
+					'But greed overcomes the inconvenience, so you suffer for a couple of seconds, giving customers a better look at your worn out ass...'
 				end
 			else
 				'<center><img src="images/camwhore/camwhore21.jpg"></center>'
-				'You get up from the bed and bending the knees a little, squat down in front of the door, throwing his hands behind his head.'
-				'Your ass is butt plug, so you try not to overdo it, so she jumped...'
+				'You get up from the bed and bending your knees a little, squat down in front of the door, then throw your hands behind your head.'
+				'Your ass is plugged, so you try not to overdo it...'
 			end
-			act 'Further':gt 'Komp','waitclients'
+			act 'Carry on':gt 'Komp','waitclients'
 		end
 		act 'Ignore':
 			cls
@@ -1104,12 +1105,12 @@ if $ARGS[0] = 'waitclients':
 
 	if backmfc = 0 and clientask = 90:
 		cls
-		'One of the visitors asked, do you have a vibrator or Dildo...'
+		'One of the visitors asks, "Do you have a vibrator or Dildo..."'
 		gt 'kompMFC'
 	end
 
 	if topmfc = 1 and clientask < 80:
-		act 'To remove a bra':
+		act 'Remove your bra':
 			cls
 			minut += 2
 			topmfc = 0
@@ -1122,13 +1123,13 @@ if $ARGS[0] = 'waitclients':
 			if backmfc = 0:
 				'<center><img src="images/camwhore/camwhore5.jpg"></center>'
 			end
-			'You slowly, on the camera I take off my bra, Stripping his young maiden breast.'
+			'You slowly, on the camera I take off my bra, Stripping my young maiden breast.'
 			act 'Further':gt 'Komp','waitclients'
 		end
 	end
 
 	if topmfc = 0 and clientask < 80:
-		act 'Play around with the chest':
+		act 'Play around with your chest':
 			cls
 			if webpopular < 15:
 				camclients += RAND(3,6)
@@ -1154,14 +1155,14 @@ if $ARGS[0] = 'waitclients':
 			else
 				'<center><img src="images/camwhore/camwhore9.jpg"></center>'
 			end
-			'You played with my Breasts, deliberately pretending, completely forgot about the camera and focus is entirely on having fun.'
+			'You play with your breasts, lost in fantasy, you completely forget about the camera and focus entirely on having fun.'
 			if horny >= 100:
 				webpopular -= 1
 				orgasm += 1
 				horny = 0
 				manna = mannamax
 				gs 'stat'
-				'But, It seems, you have not calculated your endurance, and therefore, unable to resist, run a hand between her legs and cumming in front of  <<camclients>> users completely free of charge.'
+				'It seems, you have not calculated your endurance, and therefore, unable to hold back, you run a hand between your legs and cum in front of <<camclients>> users, completely free of charge.'
 			end
 			act 'Further':gt 'Komp','waitclients'
 		end
@@ -1180,12 +1181,12 @@ if $ARGS[0] = 'waitclients':
 			if topmfc = 0:
 				'<center><img src="images/camwhore/camwhore6.jpg"></center>'
 			end
-			'You slowly, on camera, panties came off, exposing my crotch.'
+			'You slowly, on camera, take your panties off, exposing your crotch.'
 			act 'Further':gt 'Komp','waitclients'
 		end
 	end
 	if backmfc = 0 and clientask < 80:
-		act 'Play with the pussy':
+		act 'Play with your pussy':
 			cls
 			if webpopular < 15:
 				camclients += RAND(5,10)
@@ -1205,21 +1206,21 @@ if $ARGS[0] = 'waitclients':
 			gs 'stat'
 
 			'<center><img src="images/camwhore/camwhore11.jpg"></center>'
-			'You with one hand playing with her pussy, another printing in the chat, so you were given tokens for more.'
+			'You with one hand playing with your pussy, another typing in the chat, you are given more tokens.'
 			if horny >= 100:
 				webpopular -= 1
 				orgasm += 1
 				horny = 0
 				manna = mannamax
 				gs 'stat'
-				'But, It seems, you have not calculated your endurance, Wherefore came before  <<camclients>> users completely free of charge.'
+				'It seems, you have not calculated your endurance. Therefore, you cum before <<camclients>> users completely free of charge.'
 			end
 			act 'Further':gt 'Komp','waitclients'
 		end
 	end
 	gs 'family'
 	if sisterHere = 0:
-		act 'To turn off the webcam':gt 'Komp','startpagemfc'
+		act 'Turn off the webcam':gt 'Komp','startpagemfc'
 	elseif sisterHere > 0:
 		cls
 		topmfc = 1
@@ -1227,8 +1228,8 @@ if $ARGS[0] = 'waitclients':
 		karta += tokens/2
 		gs 'stat'
 		'<center><img src="images/camwhore/camwhore2.jpg"></center>'
-		'Suddenly you hear, how clacking handle locked doors, and a moment later you hear persistent  "Light, let me in!"'
-		'It seems, the show is over for today, so you start frantically to freshen up...'
+		'Suddenly you hear, the clacking handle of your locked door, and a moment later you hear, "<<$nickname>>, let me in!"'
+		'It seems that the show is over for today, so you frantically freshen up...'
 		act 'Further':gt 'Komp','mfc'
 	end
 end

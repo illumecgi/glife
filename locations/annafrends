@@ -277,7 +277,6 @@ if reksLike = 1 and toiletRexSex = 0 and sisboypartyQW > 1:
 			horny += 5
 			rex += 1
 			gs 'stat'
-			! WD: Correct Image path ~ "images/qwest/alter/Reks/rexda.jpg"
 			'<center><img src="images/qwest/alter/Reks/rexda.gif"></center>'
 			'You, laughing, waited until Rex will finish wipe your foot.  While you are giggling, gradually, the sleeve was replaced by a palm, which is getting closer to your underpants. You feel, as Rex finger almost touched your panties, then you woke up and hurriedly took his hand away Rex with words: "Hey..."'
 			act 'Continue to drink beer':gt 'annafrends2'

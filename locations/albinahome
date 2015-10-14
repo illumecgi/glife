@@ -179,7 +179,6 @@ if hour < 20:
 					manna -= 8
 					sweat += 3
 					gs 'stat'
-					! WD: Remove Dupe Images ~ '<center><img src="images/pic/stripdance.jpg"></center>'
 					'<center><img src="images/etogame/stripdance.jpg"></center>'
 
 					if dance >= 100:

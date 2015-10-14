@@ -79,7 +79,6 @@ if numnpc = 9 and grupNPC[numnpc] >= 80 and GorSlut = 0 and kotovLoveQW >= 0:
 						cls
 						minut += 15
 						gs 'stat'
-						! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc9.jpg"></center>'
 						'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 						'You came out of discos and went in the direction where he lives Witek with him while holding his arm. Soon you with Victor approached the dilapidated house he opened the door and led you to the poor and not well-kept apartment in a room where clothes lying crumpled heaps on the floor was littered with empty bottles.'
 

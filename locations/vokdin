@@ -13,7 +13,6 @@ $din_vokzalg_kassi = {
 			money -= 200
 			minut += 15
 			gs 'stat'
-			! WD: Remove Dupe Images ~ '<center><img src="images/pic/electri.jpg"></center>'
 			'<center><img src="images/etogame/electri.jpg"></center>'
 			'You paid for the ticket and boarded the train going in the town.'
 			'After 15 minutes the train stopped at the station.'
@@ -22,7 +21,6 @@ $din_vokzalg_kassi = {
 				cls
 				minut += 15
 				gs 'stat'
-				! WD: Remove Dupe Images ~ '<center><img src="images/pic/electri.jpg"></center>'
 				'<center><img src="images/etogame/electri.jpg"></center>'
 				'After 15 minutes the train stopped at the station.'
 
@@ -30,7 +28,6 @@ $din_vokzalg_kassi = {
 					cls
 					minut += 15
 					gs 'stat'
-					! WD: Remove Dupe Images ~ '<center><img src="images/pic/electri.jpg"></center>'
 					'<center><img src="images/etogame/electri.jpg"></center>'
 					'After 15 minutes the train stopped at the station.'
 
@@ -38,7 +35,6 @@ $din_vokzalg_kassi = {
 						cls
 						minut += 15
 						gs 'stat'
-						! WD: Remove Dupe Images ~ '<center><img src="images/pic/electri.jpg"></center>'
 						'<center><img src="images/etogame/electri.jpg"></center>'
 						'After 15 minutes the train stopped at the Centre.'
 
@@ -104,7 +100,6 @@ $din_vokzalg_toilet_deyst = {
 		act 'Apply makeup':
 			cla
 			*clr
-			! WD: Remove Dupe Images ~ '<center><img src="images/pic/mop.jpg"></center>'
 			'<center><img src="images/etogame/mop.jpg"></center>'
 
 			act 'Light makeup (0:03)':
@@ -183,7 +178,6 @@ $din_vokzalg_toilet_deyst = {
 			cumface = 0
 			sweat -= 1
 			minut += 5
-			! WD: Remove Dupe Images ~ '<center><img src="images/pic/facesp.jpg"></center>'
 			'<center><img src="images/etogame/facesp.jpg"></center>'
 			'You clean your face and got rid of any trace of cum.'
 
@@ -198,7 +192,6 @@ $din_vokzalg_toilet_deyst = {
 			*clr
 			cumfrot = 0
 			minut += 10
-			! WD: Remove Dupe Images ~ '<center><img src="images/pic/frotsp.jpg"></center>'
 			'<center><img src="images/etogame/frotsp.jpg"></center>'
 			'You remove traces of cum from your clothes.'
 
@@ -247,7 +240,6 @@ $din_vokzalg_toilet_f = {
 	vokzalToilet = 1
 	gs 'stat'
 	'<center><h4>The ladies'' room</h4></center>'
-	! WD: Remove Dupe Images ~ '<center><img src="images/pic/PublicToilet.jpg"></center>'
 	'<center><img src="images/etogame/PublicToilet.jpg"></center>'
 	'You opened the door to the ladies'' room and went in.'
 
@@ -261,7 +253,6 @@ $din_vokzalg_toilet_m = {
 	vokzalToilet = 2
 	gs 'stat'
 	'<center><h4>The men''s room</h4></center>'
-	! WD: Remove Dupe Images ~ '<center><img src="images/pic/PublicToilet.jpg"></center>'
 	'<center><img src="images/etogame/PublicToilet.jpg"></center>'
 	'You opened the door to the men''s room and went in.'
 

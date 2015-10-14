@@ -46,7 +46,7 @@ $din_trener_discoSex={
 								minut += 20
 								gs 'stat'
 								*clr & cla
-								'<center><img src="images/pic/gorodok.jpg"></center>'
+								'<center><img src="images/etogame/gorodok.jpg"></center>'
 								'You are on the jagged road town, to his house, next is the coach and looks at you.'
 								dynamic $din_trener_Speak
 							end
@@ -62,7 +62,7 @@ $din_trener_discoSex={
 				minut += 20
 				gs 'stat'
 				*clr & cla
-				'<center><img src="images/pic/gorodok.jpg"></center>'
+				'<center><img src="images/etogame/gorodok.jpg"></center>'
 				'You are on the jagged road town, to his house, next is the coach and looks at you.'
 				dynamic $din_trener_Speak
 			end
@@ -310,7 +310,7 @@ if volleysostav > 0:
 			minut += 20
 			gs 'stat'
 			*clr & cla
-			'<center><img src="images/pic/gorodok.jpg"></center>'
+			'<center><img src="images/etogame/gorodok.jpg"></center>'
 			'You are on the jagged road town, to his house, next is the coach and looks at you.'
 			 dynamic $din_trener_Speak
 		end

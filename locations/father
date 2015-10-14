@@ -46,7 +46,7 @@ if pirsA >= 1 and pirsAfather=0 and pirsadaytalk!daystart:
 			cls
 			pirsAfather=1
 			gs'stat'
-			'<center><img src="images/picb/pirsA.jpg" ></center>'
+			'<center><img src="images/body/pirsA.jpg" ></center>'
 			'You open your mouth and stick out your tongue, showing him your piercing.'
 			if TouchedByFather=0:'Stepfather shakes his head: "<<$nickname>>, tongue piercings are only for lewd women who use their mouth to please men."'
 			if TouchedByFather>0:'Stepfather grins: "Does it help you work your mouth better?"'
@@ -64,7 +64,7 @@ if pirsB = 1 and pirsBfather=0 and pirsbdaytalk!daystart:
 		cls
 		pirsBfather=1
 		gs'stat'
-		'<center><img src="images/picb/pirsB.jpg" ></center>'
+		'<center><img src="images/body/pirsB.jpg" ></center>'
 		'You shrug your shoulders and say you just like the way lip rings look, so you decided to get one yourself.'
 		if TouchedByFather=0:
 			'Your stepfather shakes his head: "You kids, always adding new holes to yourselves..."'
@@ -102,7 +102,7 @@ if tatlip>0 and fatherTatLip=0 and father>=60:
 		fatherTatLip=1
 		minut+=1
 		gs'stat'
-		'<center><img src="images/picBody/tatlip<<tatlip>>.jpg" ></center>'
+		'<center><img src="images/body/tatlip<<tatlip>>.jpg" ></center>'
 		if tatlip = 2: $textFatherTatLip = 'A tattoo in your lip?! That can''t have felt good... it is cute, though.'
 		if tatlip ! 2: $textFatherTatLip = 'That''s crazy! Why would you get something like that written on you, much less there?! No one would even think of doing that when I was your age.'
 		'You wrenched his lip and showing a tattoo on the inside of the lip. Stepfather looks surprised look: "<<$textFatherTatLip>>"'

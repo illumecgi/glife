@@ -1,7 +1,6 @@
 # IgorEv
 gs 'stat'
 '<center><b><font color="maroon"><<$npcName[4]>> <<$npcSurName[4]>></font></b></center>'
-! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc4.jpg"></center>'
 '<center><img src="images/qwest/alter/npc/4.jpg"></center>'
 
 if fedorKozlovQW >= 10 and $loc = 'gdkin':

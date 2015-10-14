@@ -166,7 +166,6 @@ if $ARGS[0] = 'start':
 
 				if anus < 30:anus += 5
 
-				! WD: Remove Dupe Images ~ '<center><img src="images/etogame/analplug.jpg"></center>'
 				'<center><img src="images/body/analplug.jpg"></center>'
 
 				if butpluguse > 0:'You bent over and inserted the butt plug.'
@@ -185,7 +184,6 @@ if $ARGS[0] = 'start':
 
 				if anus < 30:anus += 1
 
-				! WD: Remove Dupe Images ~ '<center><img src="images/etogame/analplug.jpg"></center>'
 				'<center><img src="images/body/analplug.jpg"></center>'
 
 				'You bent over and took out the butt plug.' & !!0.2.6: Removed unneccessary var check

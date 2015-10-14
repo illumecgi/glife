@@ -148,7 +148,6 @@ $din_igor__disco = {
 	act 'Go to the street':
 		cls
 		gs 'stat'
-		! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc4.jpg"></center>'
 		'<center><img src="images/qwest/alter/npc/4.jpg"></center>'
 		'You went out with Igor. Igor passionately took you by the hand and began to say "<<$name>>, you''re such a pretty girl when I see you, I have immediately podnimaetsya mood. I like you very nravishsya. I''d really like to start a relationship with you."'
 
@@ -158,7 +157,6 @@ $din_igor__disco = {
 			cls
 			IgorLoverQW = 1
 			gs 'stat'
-			! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc4.jpg"></center>'
 			'<center><img src="images/qwest/alter/npc/4.jpg"></center>'
 			'You agreed to meet with Igor and he blossomed smile "<<$name>>, you can get a kiss?"'
 
@@ -168,7 +166,6 @@ $din_igor__disco = {
 					dom += 5
 					IgorDominaQW = 1
 					gs 'stat'
-					! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc4.jpg"></center>'
 					'<center><img src="images/qwest/alter/npc/4.jpg"></center>'
 					'You grin skazale Igor that he would kill. Igor blushed and knelt "<<$name>>, I beg you as a slave, on his knees, just one kiss!"'
 

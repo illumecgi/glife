@@ -114,7 +114,6 @@ $din_katja_kiss = {
 						KatjaHorny -= 10
 						KatjaLust += 1
 						gs 'stat'
-						! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 						'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 						'You removed her hands and smiled Katja fun.'
 
@@ -135,7 +134,6 @@ gs 'stat'
 gs 'KatjaHomeDin'
 gs 'katjaEvDin'
 '<center><b><font color="maroon"><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
-! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 '<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 'Katja looks at you smiling. "<<$name>>, come to me, with the lessons learned."'
 
@@ -149,7 +147,6 @@ act 'Go with Katja':
 	manna += 100
 	gs 'stat'
 	'<center><b><font color="maroon"><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
-	! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 	'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 	'You walk down the streets of the town, along with Katja to her house. You are chatting together about all sorts of trivia and fun.'
 
@@ -170,7 +167,6 @@ act 'Go with Katja':
 		manna += 100
 		gs 'stat'
 		'<center><b><font color="maroon"><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
-		! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 		'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 		'The room Katja did not quite clean and circle are her things. Katja throws her to the floor and ryukzachek lacking textbooks and notebooks.'
 
@@ -183,7 +179,6 @@ act 'Go with Katja':
 			intel += rand(0, 1)
 			katjaLernTimes += 1
 			gs 'stat'
-			! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 			'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 			'For half an hour that you do with Katja you fully learned the lessons and pretty well understood the materials.'
 
@@ -203,7 +198,6 @@ act 'Go with Katja':
 					act 'Yes':
 						cls
 						gs 'stat'
-						! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 						'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 						'You smiled at Katja and said that of course you kissing boys. Katja shy even more. "You see the <<$name>>, I like this guy, he''s older than me, and I am afraid that when we start to kiss, I''ll do something wrong. Could you teach me how to kiss?"'
 						dynamic $din_katja_kiss
@@ -213,7 +207,6 @@ act 'Go with Katja':
 							katjaLernQW = 0
 							katjaLernTimes = 1
 							gs 'stat'
-							! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 							'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 							'You refused to kiss with Katja and she was mad at you.'
 
@@ -224,7 +217,6 @@ act 'Go with Katja':
 					act 'No':
 						cls
 						gs 'stat'
-						! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 						'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 						'You shook their heads and said they did not kiss. Katja shy even more. "You see the <<$name>>, I like this guy, he''s older than me, and I am afraid that when we start to kiss, I''ll do something wrong. Maybe we could try to kiss, what to learn?"'
 						dynamic $din_katja_kiss
@@ -234,7 +226,6 @@ act 'Go with Katja':
 							katjaLernQW = 0
 							katjaLernTimes = 1
 							gs 'stat'
-							! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc14.jpg"></center>'
 							'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 							'You refused to kiss with Katja and she was mad at you.'
 							act 'Say goodbye and go home':minut += 15 & gt 'gorodok'

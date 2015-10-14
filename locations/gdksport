@@ -221,7 +221,7 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 							minut += 5
 							horny += 20
 							gs 'stat'
-							'<center><img src="images/qwest/alter/ev/shower.jpg"></center>'
+							'<center><img src="images/qwest/alter/Ev/shower.jpg"></center>'
 							'You took a washcloth and began to lather body of Ivan. His cock began to get up and touched your thigh. Ivan began to hug you and caress your body with your hands.'
 
 							act 'Give blowjob':
@@ -233,7 +233,7 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 								if npcSex[3] = 0:npcSex[3] = 1 & guy += 1
 
 								gs 'stat'
-								'<center><img src="images/qwest/alter/ev/shover.jpg"></center>'
+								'<center><img src="images/qwest/alter/Ev/shover.jpg"></center>'
 								'You slowly sank to his knees in front of Ivan and his cock was in front of your face. Ivan spent impatiently you head lips mouth open and you let his cock. Your lips tightly wraps solid rod Ivan and you sucked in the shower under the streams of water. Suddenly Ivan took a member of your mouth and taking you by the hand raised to his feet, he dug his lips to your breast and began to suck. You swept bliss. Ivan turned your back to him and pushed you back.'
 
 								act 'stand cancer':
@@ -245,7 +245,7 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 									dick = 17
 									lubonus = 2
 									gs 'stat'
-									'<center><img src="images/qwest/alter/ev/shover2.jpg"></center>'
+									'<center><img src="images/qwest/alter/Ev/shover2.jpg"></center>'
 									'You bent over and felt the hand of Ivan stroking your ass and anus.'
 									dynamic $analsex
 									'Ivan pulls a member of your buttocks and you feel like you are on the back and buttocks land warm trickle of sperm.'

@@ -233,7 +233,6 @@ act 'watch porn':
 					sub += 1
 					evgenqw = 2
 					gs 'stat'
-					! WD: Correct Image path ~ "images/qwest/alter/ev2/seepornHand.jpg"
 					'<center><img src="images/qwest/alter/ev2/seeporn.jpg"></center>'
 					'You sit on the couch turning red as a lobster enjoying having your butt rubbed.'
 

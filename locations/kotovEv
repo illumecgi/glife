@@ -1,7 +1,6 @@
 # kotovEv
 gs 'stat'
 '<center><b><font color="maroon"><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
-! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc9.jpg"></center>'
 '<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 
 if kotovLoveQW > 0 and GorSlut > 0:
@@ -40,7 +39,6 @@ if $loc = 'gdksport':
 			cls
 			gs 'stat'
 			'<center><b><font color="maroon"><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
-			! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc9.jpg"></center>'
 			'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 			'You asked Vic what he was doing. Witek snickered "You cho? Since I''ve been boxing for 11 years doing. Candidate Master of Sports is the second place in the championship held in the region."'
 
@@ -49,7 +47,6 @@ if $loc = 'gdksport':
 				kotovKnowSport = 1
 				gs 'stat'
 				'<center><b><font color="maroon"><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
-				! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc9.jpg"></center>'
 				'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 				'Were you surprised Witek every day thumps and smokes as he combines with sports. Witek chuckled, "Ha. Coach says I have a talent. Kick like a cannon, and the reaction is great. It''s in my dad, who was a drunkard goner. 6t walker on the area and died of cirrhosis, but move into the jug could always so that flew from sneakers. course bluing slightly hampered, but what the fuck? tossed and I would drink and smoke, but in boxing, no dating and money, CCM is the ceiling. though I can wriggle inside, but the master of sports will not. I''ve on the region, took 2nd place, I beat the champion in the shit, he twice knocked down lying. And gave him the victory. So for me right now is boxing, so they do out of habit, but that would be in the form behave. "'
 
@@ -70,7 +67,6 @@ elseif $loc = 'gskver':
 		cls
 		minut += 5
 		gs 'stat'
-		! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc9.jpg"></center>'
 		'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 		'Witek pours beer into a plastic cup. "In short, <<$name>>, let''s have a cup pivasom."'
 
@@ -87,7 +83,6 @@ elseif $loc = 'gskver':
 			act 'Okay, I gotta go.':
 				cls
 				gs 'stat'
-				! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc9.jpg"></center>'
 				'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 				'Vitek came up to you and hugged, kissed her on the lips. "Slysh <<$name>>, come to me."'
 
@@ -97,7 +92,6 @@ elseif $loc = 'gskver':
 					cls
 					minut += 15
 					gs 'stat'
-					! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc9.jpg"></center>'
 					'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 					'You went through the square to the side where he lives Witek. Soon you with Vic came to a dilapidated house he opened the door and led you to the poor and not well-kept apartment in a room where clothes lying crumpled heaps on the floor was littered with empty bottles.'
 

@@ -2,7 +2,6 @@
 ivansportday = daystart
 gs 'stat'
 '<center><b><font color="maroon"><<$npcName[3]>> <<$npcSurName[3]>></font></b></center>'
-! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc3.jpg"></center>'
 '<center><img src="images/qwest/alter/npc/3.jpg"></center>'
 
 if $loc = 'gdksport':

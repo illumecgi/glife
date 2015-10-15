@@ -71,7 +71,7 @@ if $ARGS[0] = 'brows':
 	act 'Cable TV services (0:15)':gt 'Komp', 'kabtv'
 	act 'Online gaming':gt 'KGstart'
 
-	if shantfoto > 0:act 'Search for the heroine you photoed on "In the ass" wesite':gt 'Komp', 'foto'
+	if shantfoto > 0:act 'Search for the heroine you photoed on "Assbook" wesite':gt 'Komp', 'foto'
 	if gor_dorm = 7:act 'Read letter from Eugene':gt 'etoexhib', 'pos91'
 	if camwhore = 1:act 'Go to MyFreeCams.org':gt 'Komp', 'mfc'
 	if student > 0:act 'The Institute for Education wesite':gt 'Komp', 'study'
@@ -414,7 +414,7 @@ if $ARGS[0] = 'foto':
 	internet -= 1
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
-	'You are log in to the social network site "in the ass."'
+	'You are log in to the social network site "Assbook."'
 
 	if shantfoto > 0:
 		act 'Search':

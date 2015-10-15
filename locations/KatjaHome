@@ -2,12 +2,12 @@
 gs 'stat'
 
 if hour >= 17 and week < 6 and kanikuli = 0 and hour < 20 or hour >= 9 and week >= 6 and kanikuli = 0 and hour < 20 or hour >= 9 and kanikuli > 0 and hour < 20:
-	'The door opened to you mom Katja "Hello World. Kate is now in her room. Come."'
+	'The door is opened by Katjas mum. "Hello <<$name>>. Kate is in her room. Come in."'
 
-	act 'Go into the room Katja':gt 'KatjaHomeTalk'
+	act 'Go to Katjas room':gt 'KatjaHomeTalk'
 else
-	if hour >= 9:'The door opened to you mom Katja "oh, hello World. And Katja is not at home."'
-	if hour < 9:'The door opened to you mom Katja "<<$name>>. Night Street, come no earlier than nine."'
+	if hour >= 9:'The door is opened by Katjas mum. "Oh, hello <<$name>>. Katja isn''t home right now."'
+	if hour < 9:'The door is opened by Katjas mum. "<<$name>>. Shouldn''t you be in bed? You shouldn''t come around before nine."'
 
 	act 'Say goodbye and go home':gt 'gorodok'
 end

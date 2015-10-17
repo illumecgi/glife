@@ -3,7 +3,7 @@ $din_street_cum = {
 	if cumfrot > 0 or cumface > 0:
 		if hour >= 7 and hour <= 21:
 			manna -= 10
-			'Passers puzzled turn around staring at you. Some pictures on the phone you do not entirely hiding and giggling at you. You clearly noticeable sperm.'
+			'Puzzled passerbys turn around and stare at you. Some take pictures on their phones, not entirely hiding that they are giggling at you. The sperm on you is clearly noticeable.'
 		end
 	end
 }
@@ -14,16 +14,16 @@ $d_read_book = {
 		gs 'stat'
 		'<center><img src="images/pics/book.jpg"></center>'
 
-		if f_book <= 0 and fantasybook <= 0 and w_book = 0 and womanbook = 0:'You scratch your head looking at already read the book "Eh, even read nothing, a walk or something on the market for a new book?"'
+		if f_book <= 0 and fantasybook <= 0 and w_book = 0 and womanbook = 0:'You scratch your head looking at the book you already read, thinking. "Damn, nothing to read, maybe I''ll take a walk or search the market for a new book?"'
 
 		if f_book > 0:
 			if fantasybook <= 0:fantasybook = 5 & f_book -= 1
 
-			'You still <<f_book>> do not read fantasy novels.'
+			'You still have <<f_book>> unread fantasy novels.'
 		end
 
 		if fantasybook > 0:
-			act 'Read fantasy book. There are <<fantasybook * 100>> more pages to read (1:00)':
+			act 'Read fantasy book. There are <<fantasybook * 100>> pages left (1:00)':
 				cls
 				fantasybook -= 1
 
@@ -46,24 +46,24 @@ $d_read_book = {
 
 					if stren > 1:stren -= 1
 					if vital > 5:vital -= 1
-					'Within an hour you enthusiastically read the book completely live in what is happening.'
+					'For an hour you enthusiastically read the book, completely immersed in the authors world.'
 				else
 					manna += 10
-					'Within an hour you read the book.'
+					'For an hour you read the book.'
 				end
 
-				act 'close this book':gt $loc
+				act 'Close the book':gt $loc
 			end
 		end
 
 		if w_book > 0:
 			if womanbook <= 0:womanbook = 5 & w_book -= 1
 
-			'You still <<w_book>> not read the novel female.'
+			'You still have <<w_book>> unread women''s novels.'
 		end
 
 		if womanbook > 0:
-			act 'Read Women''s Novel. There are <<womanbook * 100>> more pages to read (1:00)':
+			act 'Read Women''s Novel. There are <<womanbook * 100>> pages left (1:00)':
 				cls
 				womanbook -= 1
 
@@ -87,18 +87,18 @@ $d_read_book = {
 					if stren > 1:stren -= 1
 					if vital > 5:vital -= 1
 
-					'Within an hour you enthusiastically read the book completely live in what is happening.'
+					'For an hour you enthusiastically read the book, completely immersed in the story.'
 				else
 					manna += 10
 					horny += 3
-					'Within an hour you read the book.'
+					'For an hour you read the book.'
 				end
 
-				act 'Close this book':gt $loc
+				act 'Close the book':gt $loc
 			end
 		end
 
-		act ' Close this book':gt $loc
+		act ' Close the book':gt $loc
 	end
 }
 

@@ -7,7 +7,7 @@ $din_show_tits = {
 $objdescrip = {
 	clr
 	pl 'Your name is <<$name>> <<$surname>>.'
-	pl 'You are <<age>> <<$letgoda>>, but looking at you, people would guess you are <<vidage>> <<$letgoda2>>.'
+	pl 'You are <<age>> <<$letgoda>> old, but you look <<vidage>>.'
 
 	!!!0.2.6 extension
 	if StoryLine > 0:
@@ -17,11 +17,11 @@ $objdescrip = {
 	end
 	!!!
 
-	if birthday > 0 and birthmonth > 0:pl 'Your date of birth is <<birthday>>.0<<birthmonth>>.<<birthyear>>, the'
+	if birthday > 0 and birthmonth > 0:pl 'Your date of birth is <<birthday>>.0<<birthmonth>>.<<birthyear>>.'
 
-	pl 'You are <<rost>> cm tall, you weigh <<ves>> pounds.'
+	pl 'You are <<rost>> cm tall and weigh <<ves>> kgs.'
 	pl '<<$body>>'
-	pl '<a href="exec:dynamic $objbody"><<grudi>> - <<talia>> - <<bedra>> </a>, <a href="exec:dynamic $din_show_tits">the size of your breasts are <<tits>></a>, the difference between your hips and your waist is <<bedra-talia>> cm'
+	pl '<a href="exec:dynamic $objbody"><<grudi>> - <<talia>> - <<bedra>> </a>, <a href="exec:dynamic $din_show_tits">you have size <<tits>> breasts<<tits>></a>, the difference between your hips and your waist is <<bedra-talia>> cm'
 	pl '<<$anus>>'
 	pl '<<$vnesh>>'
 	pl '<<$hair>>'
@@ -35,12 +35,12 @@ $objdescrip = {
 	pl '<<$vagina>>'
 	nl
 
-	if salo = 0 and musle > 0 and dounspell = 0:pl '<b><font color="red">You are showing signs undernourishment. You should probably eat more and more often.</font></b>'
+	if salo = 0 and musle > 0 and dounspell = 0:pl '<b><font color="red">You are showing signs of malnourishment. You should probably eat more and more often.</font></b>'
 	if salo = 0 and musle = 0 and dounspell = 0:pl '<b><font color="red">You are dangerously malnourished, which has led to a loss in muscle mass. You''re in a critical condition and likely to pass out!</font></b>'
 	if curly > 0:pl 'Your curls are good for another <<curly>> days.'
 	if zub = 1:$zuba = ' tooth'
 	if zub >= 2:$zuba = ' teeth'
-	if zub > 0:pl 'You have <<zub>><<$zuba>>.'
+	if zub > 0:pl 'You have lost <<zub>><<$zuba>>.'
 
 	!!pl 'vnesh <<vnesh>>'
 	!!pl 'curlykoef <<curlykoef>> a maximum of 1'
@@ -106,22 +106,22 @@ $objskills = {
 
 	!!pl 'Muscles <<$musle>>'
 
-	if magik > 0:pl 'Magic <<magik>>'
+	if magik > 0:pl 'Magic - <<magik>>'
 	if Jab > 0:pl 'Jab - <<Jab>>'
 	if Punch > 0:pl 'Power Strikes - <<Punch>>'
 	if Kik > 0:pl 'Kicks - <<Kik>>'
 	if KikDef > 0:pl 'Protection against - <<KikDef>>'
-	if beg > 0:pl 'Skill Run - <<beg>>'
-	if volleyboll > 0:pl 'Skill volleyball - <<volleyboll>>'
-	if oficiant > 0:pl 'Skills waitresses - <<oficiant>>'
-	if vokal > 0:pl 'Vocal skills <<vokal>>'
-	if dance > 0:pl 'Skill Dance - <<dance>>'
+	if beg > 0:pl 'Running skill - <<beg>>'
+	if volleyboll > 0:pl 'Volleyball skill - <<volleyboll>>'
+	if oficiant > 0:pl 'Waitress skill - <<oficiant>>'
+	if vokal > 0:pl 'Vocal skill - <<vokal>>'
+	if dance > 0:pl 'Dancing skill - <<dance>>'
 	if dancePRO > 0:pl 'Regular dancing skilllevel - <<dancePRO>>'
 	if stripdance > 0:pl 'Striptease skilllevel - <<stripdance>>'
 	if poledance > 0:pl 'Poledancing skilllevel- <<poledance>>'
 	if shoot > 0:pl 'Shooting Accuracy - <<shoot>>'
-	if kid = 1:pl 'You have a child, <<$polreb[1]>> name <<$kidname[1]>>. Born <<daykid[1]>>.<<monthkid[1]>>.<<yearkid[1]>>y. Age <<kidage[1]>>'
-	if workPTU > 1:pl 'Reputation teachers <<teachlevel>>'
+	if kid = 1:pl 'You have a child, <<$polreb[1]>> named <<$kidname[1]>>. Born <<daykid[1]>>.<<monthkid[1]>>.<<yearkid[1]>>y. Age <<kidage[1]>>'
+	if workPTU > 1:pl 'Reputation as a teacher <<teachlevel>>'
 
 	if SchoolAtestat = 0 and StoryLine > 0:
 		if Suspeh >= 90:pl 'You are an A+ student.'
@@ -132,14 +132,14 @@ $objskills = {
 		if Suspeh >= 40 and Suspeh < 50:pl 'You are not cut out for school, you skip out most of the time. You wonder how you''re going to manage to get passing grades.'
 		if Suspeh < 40:pl 'You are the class nitwit. You''re still not sure how you got this far in the first place.'
 
-		if schoolprogul > 1:pl 'Absenteeism in school <<schoolprogul>>'
+		if schoolprogul > 1:pl 'Absenteeism in school - <<schoolprogul>> days'
 	end
 }
 
 $objstatistika = {
 	clr
-	if opPRE = 0:pl 'It has been <<daystart>> the game has started.'
-	if BuyHous = 2 and ArendHouseSL >0:pl 'You have rented an apartment in the residential area <<ArendHouseSL>> days.'
+	if opPRE = 0:pl 'It has been <<daystart>> days since the game started.'
+	if BuyHous = 2 and ArendHouseSL >0:pl 'You have rented an apartment in the residential area for <<ArendHouseSL>> days.'
 
 	if KikWinPro > 0 or KikLossPro > 0 or KikDrawPro > 0:
 		pl 'Professional Kickboxing Record:Win (Victory KO) - Loss (Defeat KO) - Draw'
@@ -167,13 +167,13 @@ $objstatistika = {
 		nl
 	end
 
-	if kolsorev > 0:pl 'You have participate <<kolsorev>> in a running race'
-	if bronzebeg > 0:pl '<<bronzebeg>> - bronze medals on the run'
-	if silverbeg > 0:pl '<<silverbeg>> - silver medals for event'
-	if goldbeg > 0:pl '<<goldbeg>> - gold medals in running'
-	if razradbegEB > 0:pl '<<razradbegEB>> times bronze medalist of European Championship'
-	if razradbegES > 0:pl '<<razradbegES>> fold vice champion of Europe'
-	if razradbegEG > 0:pl '<<razradbegEG>> time European champion.'
+	if kolsorev > 0:pl 'You have run in <<kolsorev>> races'
+	if bronzebeg > 0:pl '<<bronzebeg>> - bronze medals for running'
+	if silverbeg > 0:pl '<<silverbeg>> - silver medals for running'
+	if goldbeg > 0:pl '<<goldbeg>> - gold medals for running'
+	if razradbegEB > 0:pl '<<razradbegEB>> times bronze medalist at European Championship'
+	if razradbegES > 0:pl '<<razradbegES>> runner up at European Championship'
+	if razradbegEG > 0:pl '<<razradbegEG>> times European champion.'
 
 	if razradbeg > 0:
 		if razradbeg = 1:pl 'You have third sports category for event'
@@ -202,19 +202,19 @@ $objstatistika = {
 	!!!WD: Formatting
 	if (Irina + Givi + Ashot + Tamara + Dmitry + afra + gosh + vika + kat + nastjaqw + tanya) > 0:nl
 	!!!
-	if exhibi > 0:pl 'Experienced exhibitionism <<exhibi>>'
-	if maxdamage > 0:pl 'The impact force on the dynamometer <<maxdamage>> kN' & nl
-	if modelfoto > 0:pl 'You filmed naked <<modelfoto>> times'
+	if exhibi > 0:pl 'Experienced exhibitionism <<exhibi>> times'
+	if maxdamage > 0:pl 'The impact force on the dynamometer <<maxdamage>> kgN' & nl
+	if modelfoto > 0:pl 'You have been photographed naked <<modelfoto>> times'
 
 	if stripdancesum > 0:pl '<<stripdancesum>> times dancing in the stripclub'
-	if profiDanceTime > 0:pl 'You danced <<profiDanceTime>> professionally.'
+	if profiDanceTime > 0:pl 'You danced <<profiDanceTime>> times professionally.'
 	if SchoolAtestat = 1:pl 'You have finished school.'
 	if diplom = 1:pl 'You graduated.'
 	if teachlevel > 0:pl 'Your credibility as a teacher is <<teachlevel>>'
 	!!!WD:FORMATING
 	if (exhibi + maxdamage + modelfoto + stripdancesum + profiDanceTime + SchoolAtestat + diplom + teachlevel) > 0:nl
 	!!!
-	if mastr > 0:pl 'Masturbated <<mastr>> time'
+	if mastr > 0:pl 'Masturbated <<mastr>> times'
 	if throat > 0:pl '<<$throat>>'
 	if vagina > 0:pl '<<$vagina>>'
 	if vagina = 0 and sex = 0:pl 'You are a virgin.'
@@ -233,26 +233,26 @@ $objstatistika = {
 	end
 
 	if guy > 0:pl 'You had <<guy>> guys.'
-	if divorced > 0:pl 'You have <<divorced>> husbands.'
-	if suprdolg > 0:pl 'Performed conjugal duty to her husband <<suprdolg>> time'
+	if divorced > 0:pl 'You were married <<divorced>> times.'
+	if suprdolg > 0:pl 'Performed conjugal duty for your husband <<suprdolg>> times'
 	if gang > 0:pl 'Group sex <<gang>> times'
 	if sex > 0 and sexa = 0:pl 'Vaginal sex <<sex>> times.'
-	if sex > 0 and sexa > 0:pl 'Vaginal sex <<sex>> times from them <<sexa>> times with her boyfriend.'
+	if sex > 0 and sexa > 0:pl 'Vaginal sex <<sex>> times, of them <<sexa>> times with your boyfriend.'
 
 	if bj > 0:
 		if gloryhole = 0 and balls = 0 and bja = 0:pl 'Blowjob done <<bj>> times.'
 		if gloryhole = 0 and balls = 0 and bja > 0:pl 'Blowjob done <<bj>> times, of which <<bja>> times her boyfriend'
-		if gloryhole > 0 and balls = 0 and bja = 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> time suck strangers through a hole in the wall.'
-		if gloryhole > 0 and balls = 0 and bja > 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> time suck strangers through a hole in the wall. Just one <<bja>> times her boyfriend'
+		if gloryhole > 0 and balls = 0 and bja = 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> times suck strangers through a hole in the wall.'
+		if gloryhole > 0 and balls = 0 and bja > 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> times suck strangers through a hole in the wall. Just one <<bja>> times her boyfriend'
 		if gloryhole = 0 and balls > 0 and bja = 0:pl 'Blowjob done <<bj>> times, sucked balls <<balls>> times.'
 		if gloryhole = 0 and balls > 0 and bja > 0:pl 'Blowjob done <<bj>> times, sucked balls <<balls>> times. Just one <<bja>> times her boyfriend'
-		if gloryhole > 0 and balls > 0 and bja = 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> time suck strangers through a hole in the wall. Sucked balls <<balls>> times.'
-		if gloryhole > 0 and balls > 0 and bja > 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> time suck strangers through a hole in the wall. Sucked balls <<balls>> times. Just one <<bja>> times her boyfriend'
+		if gloryhole > 0 and balls > 0 and bja = 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> times suck strangers through a hole in the wall. Sucked balls <<balls>> times.'
+		if gloryhole > 0 and balls > 0 and bja > 0:pl 'Blowjob done <<bj>> times, of which you <<gloryhole>> times suck strangers through a hole in the wall. Sucked balls <<balls>> times. Just one <<bja>> times her boyfriend'
 	end
 
 	if hj > 0:
-		if hja = 0:pl 'Guys jerking off <<hj>> times'
-		if hja > 0:pl 'Guys jerking off <<hj>> times from them <<hja>> times masturbate her boyfriend'
+		if hja = 0:pl 'Jerked off guys <<hj>> times'
+		if hja > 0:pl 'Jerked off guys <<hj>> times of them <<hja>> times masturbate her boyfriend'
 	end
 
 	if hump > 0:pl 'About you wanker member <<hump>> times'
@@ -260,25 +260,25 @@ $objstatistika = {
 
 	if anal > 0:
 		if anala = 0:pl 'Anal <<anal>> times'
-		if anala > 0:pl 'Anal <<anal>> times from them <<anala>> times with her boyfriend'
+		if anala > 0:pl 'Anal <<anal>> times of them <<anala>> times with her boyfriend'
 	end
 
-	if kuni > 0:pl 'You did cunnilingus <<kuni>> times'
-	if pegging > 0:pl 'Pegging <<pegging>> times'
-	if spank > 0:pl 'You ran your ass <<spank>> times'
+	if kuni > 0:pl 'You received cunnilingus <<kuni>> times'
+	if pegging > 0:pl 'Pegged <<pegging>> times'
+	if spank > 0:pl 'You have had your ass spanked <<spank>> times'
 	!!!WD:FORMATING
 	if (guy + divorced + suprdolg + gang + sex + bj + hj + hump + rape + anal + kuni + pegging + spank) > 0:nl
 	!!!
 
 	if slutty > 0:
-		if bordelslutty = 0:pl 'Sold your love <<slutty>> time.'
-		if bordelslutty > 0:pl 'Sold your love <<slutty>> times, including in a brothel <<bordelslutty>> times.'
+		if bordelslutty = 0:pl 'Sold your body <<slutty>> times.'
+		if bordelslutty > 0:pl 'Sold your body <<slutty>> times, including <<bordelslutty>> times in a brothel.'
 	end
 
 	if pfilmSTOP = 1:
-		pl 'In the porn industry you were known by the name of <<$pfname>>. You have retired from the porn business.'
+		pl 'In the porn industry you were known as <<$pfname>>. You have retired from the porn business.'
 	elseif film > 0:
-		pl 'In the porn industry you are known by the name of <<$pfname>>. You starred in porn <<film>> times.'
+		pl 'In the porn industry you are known as <<$pfname>>. You starred in <<film>> pornos.'
 		pl '<<$pfilmhistory>>'
 		nl
 	end
@@ -287,16 +287,16 @@ $objstatistika = {
 	if analorgasm > 0 :pl 'You''ve had <<analorgasm>> anal orgasms.'
 	if swallow > 0:pl 'Sperm swallowed <<swallow>> times.'
 	if facial > 0:pl 'You have taken <<facial>> facials.'
-	if frot > 0:pl 'Come on you truck <<frot>> times.'
-	if VAF > 0:pl 'Vaflizm <<VAF>>.'
-	if zoo > 0:pl 'Having sex with animals <<zoo>> times.'
+	if frot > 0:pl 'Your clothes have been come on <<frot>> times.'
+	if VAF > 0:pl 'Orgasmed while sucking cock <<VAF>> times.'
+	if zoo > 0:pl 'Had sex with animals <<zoo>> times.'
 	if pee > 0:pl 'You pissing <<pee>> times.'
-	if swallowpee > 0:pl 'You swallow urine <<swallowpee>> time.'
+	if swallowpee > 0:pl 'You swallowed urine <<swallowpee>> times.'
 	!!!WD:FORMATING
 	if (slutty + pfilmSTOP + film + orgasm + analorgasm + swallow + facial + frot + VAF + zoo + pee) > 0:nl
 	!!!
-	if girl > 0:pl 'You have <<girl>> girls.'
-	if lesbian > 0:pl 'You do lecbiyskim sex <<lesbian>> times.'
+	if girl > 0:pl 'You have had sex with <<girl>> girls.'
+	if lesbian > 0:pl 'You have had lesbian sex <<lesbian>> times.'
 	if sexfuta > 0:pl 'You''ve had sex with tgirls <<sexfuta>> times.'
 }
 

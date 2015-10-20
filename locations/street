@@ -130,7 +130,7 @@ end
 end
 !!!!!
 
-if opusk > 0 and housr > 0:'Near the entrance to the house you live there something written on the wall. It says:<b>"<<$name>> from apartment 69 is a cheap slut!"</b>'
+if opusk > 0 and housr > 0:'Near the entrance to where you live there is something written on the wall. It says:<b>"<<$name>> from apartment 69 is a cheap slut!"</b>'
 
 clr
 gs 'stat'
@@ -170,15 +170,15 @@ if shantpopala > 0:
 	anal += 1
 	shantpopala -= 1
 	'<center><img src="images/img/centr/rape.jpg"></center>'
-	'On the street close to you, a black jeep suddenly hit the brakes. You turn your head to see what''s happening and see two large men jump of it and start to run towards you in. Before you can react and run away, they grap you and drag you into the car.'
-	'"You''re doing this for a living? Taking pictures of naked people in the park?", one of the shouts, holding one of the pictures to your face you''ve made awhile back and sent someone over a social network, hoping they would pay the ransom.'
+	'On the street close to you, a black jeep suddenly screechs to a halt. You turn your head to see what''s happening and see two large men jump of it and start to run towards you in. Before you can react and run away, they grab you and drag you into the car.'
+	'"You''re doing this for a living? Taking pictures of naked people in the park?", one of them shouts, holding one of the pictures to your face that you took awhile back and sent someone over the internet, hoping they would pay the ransom.'
 	'"No...what? What the hell is going on? I don''t know what you''re talking about!", you try to explain.'
-	'"Don''t lie to use you stupid bitch.", as he said that, he hits you on your head and you pass out.'
+	'"Don''t lie to use you stupid bitch.", as he says that, he hits you on your head and you pass out.'
 	'You wake up somewhere out of town, you''re tied up and naked. You look down on yourself and notice traces of cum on your body, it also seems like that cum is flowing from your ass and your pussy.'
-	'You notice that the blokes, who captured you sit next to you and seem to have a break, some of them are smoking.'
-	'"Oh, she is finally awake, then the next fuck-cycle will be far more fun.", one of the men said, as he noticed you moving. Some of them are starting to get a evil grin on their face.'
-	'They got up and came back at you, barely a minute later you wished your were still knocked out, as these jackasses had their ways with. You tried to resist, but the tape hindered you from moving. Not long after, everything faded to black and you lost you consciousness again.'
-	'You feel groggy as you wake up, but it feels like someone is grapping you by the hair and shouts at you. "Let this be a lesson for you, bitch.", he shouts, then kicks you into the stomach and leaves. As you collapse on the ground holding your stomach in pain, you take a glimpse at the street and see the assholes driving away in their black jeep. The mainroad is about 200m away, you crawl most of the way there, but soon you can walk again and eventually you find your way back to one of the mainstreets.'
+	'You notice that the blokes, who captured you are sitting next to you and seem to be having a break, some of them are smoking.'
+	'"Oh, she is finally awake, then the next fuck-cycle will be far more fun.", one of the men said, as he notices you moving. Some of them are starting to get a evil grin on their faces.'
+	'They get up and came back at you, barely a minute later you wished your were still knocked out, as these jackasses had their ways with. You tried to resist, but the tape hindered you from moving. Not long after, everything faded to black and you lost you consciousness again.'
+	'You feel groggy as you wake up, it feels like someone is grabbing you by the hair. He shouts at you. "Let this be a lesson for you, bitch.", then kicks you in the stomach and leaves. As you collapse on the ground holding your stomach in pain, you take a glimpse at the street and see the assholes driving away in their black jeep. The mainroad is about 200m away, you crawl most of the way there, but soon you can walk again and eventually you find your way back to one of the mainstreets.'
 
 	act 'Leave':gt $curloc
 	exit
@@ -190,12 +190,12 @@ if workDolgDay <= 0 and workDolg > 0:
 	gs 'time'
 	workDisk = 0
 	'<center><img src="images/sauna/bug.jpg"></center>'
-	'Near the entrance to the house you see two large guys, you notice that both are carrying guns. They notice you and walk up to you. "It''s time for you to pay back your depts."'
+	'Near the entrance to your home you see two large guys, you notice that both are carrying guns. They notice you and walk up to you. "It''s time for you to pay back your debts."'
 
 	if money >= workDolg:
 		money -= workDolg
 		workDolg = 0
-		'You gave money Bugay, they counted them.'
+		'You give the money to the guys, they count it.'
 
 		act 'Leave':gt $curloc
 
@@ -207,7 +207,7 @@ if workDolgDay <= 0 and workDolg > 0:
 			karta = 0
 			money -= workDolg
 			workDolg = 0
-			'"I have enough at home. Follow me.", you say, going up to your apartment. You quickly hush inside, take the money out of the drawer and go back to pay. They count it, look at each other nod, then they leave again.'
+			'"I have enough at home. Follow me.", you say, going up to your apartment. You quickly rush inside, take the money out of the drawer and go back to pay them. They count it, look at each other nod, then leave.'
 
 			act 'Leave':gt 'korr'
 
@@ -219,15 +219,15 @@ if workDolgDay <= 0 and workDolg > 0:
 			workDolg -= money
 			money = 0
 			workDolg += 10000
-			'You tell them that you don''t have enough money. They smack you, push you into your apartment and search everything. They find you stash and plunder it.'
-			'Brutes took everything that you have been told. In short, you have a duty to <<workDolg>>. Debt grows by 10 pieces, and since you can not pay off, then we will help you. Brutes dragged you into the car and thrown into the back seat. Car started and you went somewhere.'
+			'You tell them that you don''t have enough money. They smack you, push you into your apartment and search everything. They find your stash and plunder it.'
+			'The brutes take everything that you have. Then explain your situation. In short, you have a dubt of <<workDolg>>. Your debt has grown by 10k, and since you can not pay off, they will help you. The brutes drag you into the car and throw you into the back seat. You are driven somewhere.'
 
 			act 'Out of the car':
 				cls
 				minut += 30
 				gs 'stat'
-				'You have come to the sauna. Bandits have been dragged into what that room and started to explain. "You''re going to live here and work until not rasplatishsya debt. All clear? Try that buzz or escape, all we''ll bullet to the head and stabbed in the woods bury, truncated?"'
-				'You frightened nodded, realizing that they are not joking.'
+				'You are at the sauna. The brutes drag you into a room and start to explain. "You''re going to live here and work until you have cleared your debt. All clear? Try to contact the authorities or escape, we''ll put a bullet in your head and bury you in the woods, understand?"'
+				'Your frightened and nod, realizing that they are not joking.'
 
 				act 'Look around':gt 'saunaroom'
 			end
@@ -241,17 +241,17 @@ if workDiskAtkPlayer = 1:
 	workDisk = 1
 	workDiskAtkPlayer = 0
 	'<center><img src="images/sauna/car.jpg"></center>'
-	'Grab and throw you into the back seat of the car. Right and left of you sit two Ambala. In the front seat - porn studio manager. Where is the envelope - he asked.'
+	'You are grabed and thrown into the back seat of the car. Right and left of you sit two angry Indian men. In the front seat - the porn studio manager. "Where is the envelope?" he demands.'
 
 	if konvert = 0:
 		workDolg = 200000
 		workDolgDay = 7
-		'Stolen.'
-		'-WHAT! But how could this happen! You know, in what you got dibs?! Term give you until next Friday. In my office, you bring 200,000. If not - Pingyao itself.'
+		'"Stolen."'
+		'"WHAT! But how could this happen! Do you realise, what you have done?! I''ll give you until next Friday. In my office, you bring me 200,000 rubles. If not - Pain itself."'
 	else
 		konvert = 0
 		money += 5000
-		'You gave the envelope. He warned you that such delays in the future may be harmful to your business relationships.'
+		'You give the envelope. He warns you that such delays in the future may be harmful to your business relationships.'
 	end
 
 	act 'Leave':gt $curloc
@@ -259,14 +259,14 @@ if workDiskAtkPlayer = 1:
 	exit
 end
 
-if vladimirday = daystart and vladimirQW = 30 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet2''">Before your entrance stands Audi and around the phlegmatic worth waiting for your driver Glory</a>.'
-if vladimirday = daystart and vladimirQW = 40 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet3''">Before your entrance stands Audi and around the phlegmatic worth waiting for your driver Glory</a>.'
+if vladimirday = daystart and vladimirQW = 30 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet2''">Before your entrance sits an Audi and standing beside it waits your indifferent driver Glory</a>.'
+if vladimirday = daystart and vladimirQW = 40 and hour >= 16 and week = 6:'<a href="exec:gt ''qwmeet3''">Before your entrance sits an Audi and standing beside it waits your indifferent driver Glory</a>.'
 
 housrA = 0
 
 if car > 0 and cardrive = 1:
 	cardrive = 1
-	'In the parking lot is worth <a href="exec:GS ''carF'', ''start''">your <<$car>></a>.'
+	'In the parking lot is <a href="exec:GS ''carF'', ''start''">your <<$car>></a>.'
 end
 
 if marudatestinterface = 0:
@@ -313,8 +313,8 @@ if tanga = 0 and ski = 1 and hour > 6 and hour <= 20 or tanga = 0 and glamur = 1
 		manna -= 5
 		SUB += 1
 		horny += SUB
-		'You heard a loud whisper deliberately grandmothers on the bench, "That whore! Walks in a short skirt and no panties, then mandischey shines!"'
-		'You blushed in shame after caustic remarks old ladies.'
+		'You hear a deliberately loud whisper from grandmothers on the bench, "That whore! Walks in a short skirt and no panties, everyone can see her ass!"'
+		'You blush in shame from the old ladies caustic remarks.'
 	end
 end
 
@@ -323,8 +323,8 @@ if magik >= 1 and mainQW = 0 and StoryLine = 0:
 	*clr
 	mainQW = 1
 	'<center><img src="images/qwest/main.jpg"></center>'
-	'At the entrance you see Karin and Juugo. Karin adjusts glasses and looks around, Juugo seems to head in the clouds and not as strange look on his face is not visible tattoos.'
-	'Karin closely looks around you, "I felt a burst of energy.''m Not attacking the magician?"'
+	'At the entrance you see Karin and Juugo. Karin adjusts glasses and looks around, Juugo seems to have his head in the clouds and a strange look on his face as his tattoos are not visible.'
+	'Karin closely looks around you, "I felt a burst of energy. Were you attacked by a magician?"'
 
 	act 'No':gt 'mainQW'
 
@@ -332,12 +332,12 @@ if magik >= 1 and mainQW = 0 and StoryLine = 0:
 end
 if marudatestinterface = 0:
 	if katkey = 1:'<a href="exec:gt ''katspalnya'', ''start''">Katies</a> apartment'
-	if IrinaQW >= 1:'<a href="exec:gt ''IrinaRoom'', ''start''">Irenes</a> Apartment is not far away from yours.'
+	if IrinaQW >= 1:'<a href="exec:gt ''IrinaRoom'', ''start''">Irenes</a> apartment is not far away from yours.'
 	if hour >= 16 and hour < 22 and dimaQW > 0:'<a href="exec:gt ''dima'', ''start''">Dimas</a> apartment'
 	if klofQW >= 2:'<a href="exec:gt ''klofdomhouse'', ''start''">Joras</a> apartment'
 	if hour >= 5 and hour <= 23:'The <a href="exec:gt ''metro'', ''start''">Metro</a> Station is within a 5 minute walk from here.'
 	if hour >= 8 and hour <= 20:'Not far from your house is a <a href="exec:gt ''shop'', ''start''">Supermarket</a>'
-	if hour >= 8 and hour <= 20:'<a href="exec:gt ''poli'', ''start''">the clinic</a> isn''t far from your apartement either'
+	if hour >= 8 and hour <= 20:'<a href="exec:gt ''poli'', ''start''">The clinic</a> isn''t far from your apartement either'
 	if hour >= 6 and hour <= 9 and military = 1 and week = 6:'There is a <a href="exec:minut += 60 & gt ''Military'', ''start''">military bus</a> waiting on the other side of the street.'
 	if hour >= 8 and hour <= 14 and week ! 1:'At the local, but noisy, <a href="exec:gt ''rinok'', ''start''">marketplace</a> you can go for a small shopping trip'
 	if hour >= 11 and hour < 12 and week > 1 and week < 5 and workKafe = 1:'The side door at the <a href="exec:gt ''kafe'', ''work''">cafe</a> open, so work staff can get in begin their shift.'
@@ -350,16 +350,16 @@ if marudatestinterface = 0:
 	'24 Hour <a href="exec:$loc = ''street'' & gt ''pharmacy'', ''start''">Pharmacy</a>.'
 	
 	BDSMRand = rand(1,5)
-	if hour >= 8 and lesbiQW >= 1 and lesbiQW < 3:'<a href="exec:gt ''lesbidomhouse'', ''start''">Natalia Petrovnas</a> Apartment'
-	if lesbiday ! daystart and hour >= 8 and (lesbiQW = 3 or lesbiQW = 4):'<a href="exec:gt ''lesbidomhouse'', ''start1''">Mistress''</a> Apartment'
-	if lesbiday ! daystart and hour >= 8 and lesbiQW = 5:'<a href="exec:gt ''lesbidomhouse'', ''ev15''">Mistress''</a> Apartment'
-	if lesbiday ! daystart and hour >= 8 and lesbiQW = 6:'The <a href="exec:gt ''lesbidomhouse'', ''ev22''">Perverts''</a> Apartment'
+	if hour >= 8 and lesbiQW >= 1 and lesbiQW < 3:'<a href="exec:gt ''lesbidomhouse'', ''start''">Natalia Petrovnas</a> apartment'
+	if lesbiday ! daystart and hour >= 8 and (lesbiQW = 3 or lesbiQW = 4):'<a href="exec:gt ''lesbidomhouse'', ''start1''">Mistress''</a> apartment'
+	if lesbiday ! daystart and hour >= 8 and lesbiQW = 5:'<a href="exec:gt ''lesbidomhouse'', ''ev15''">Mistress''</a> apartment'
+	if lesbiday ! daystart and hour >= 8 and lesbiQW = 6:'The <a href="exec:gt ''lesbidomhouse'', ''ev22''">Perverts''</a> apartment'
 	if lesbiday ! daystart and hour >= 8 and lesbiQW > 6 and BDSMRand > 3 and BDSMClub = 0:
-		'Apartmentsa <a href="exec:GT ''BDSM_Club'',''Hos''">Mistress</a>'
+		'<a href="exec:GT ''BDSM_Club'',''Hos''">Mistress</a> apartment'
 	else
-		if lesbiday ! daystart and hour >= 8 and lesbiQW = 7:'<a href="exec:gt ''lesbidomhouse'', ''ev25''">Mistress''</a> Apartment'
-		if lesbiday ! daystart and hour >= 8 and lesbiQW = 8:'<a href="exec:gt ''lesbidomhouse'', ''ev28''">Mistress''</a> Apartment'
-		if lesbiday ! daystart and hour >= 8 and lesbiQW = 9:'<a href="exec:gt ''lesbidomhouse'', ''ev29''">Mistress''</a> Apartment'
+		if lesbiday ! daystart and hour >= 8 and lesbiQW = 7:'<a href="exec:gt ''lesbidomhouse'', ''ev25''">Mistress''</a> apartment'
+		if lesbiday ! daystart and hour >= 8 and lesbiQW = 8:'<a href="exec:gt ''lesbidomhouse'', ''ev28''">Mistress''</a> apartment'
+		if lesbiday ! daystart and hour >= 8 and lesbiQW = 9:'<a href="exec:gt ''lesbidomhouse'', ''ev29''">Mistress''</a> apartment'
 	end
 	if lesbiday = daystart and hour >= 8:'You can only visit your Mistress once a day!'
 	
@@ -372,9 +372,9 @@ end
 !!! End of marudatestinterface = 0
 
 if hour = meethour:
-	if svidanieA = 1:'<b><a href="exec:gt ''meet'', ''start''"><<$boyA>></a> waits next to the entrance to the house your apartment is in.</b>'
-	if svidanieB = 1:'<b><a href="exec:gt ''svidan'', ''start''"><<$boyA>></a> waits next to the entrance to the house your apartment is in.</b>'
-	if svidanieC = 1:'<b><a href="exec:gt ''svidan'', ''start''"><<$boyA>></a> waits next to the entrance to the house your apartment is in.</b>'
+	if svidanieA = 1:'<b><a href="exec:gt ''meet'', ''start''"><<$boyA>></a> waits next to the entrance to your apartment block.</b>'
+	if svidanieB = 1:'<b><a href="exec:gt ''svidan'', ''start''"><<$boyA>></a> waits next to the entrance to your apartment block.</b>'
+	if svidanieC = 1:'<b><a href="exec:gt ''svidan'', ''start''"><<$boyA>></a> waits next to the entrance to your apartment block.</b>'
 end
 
 streetrand = rand(0, 100)
@@ -398,17 +398,17 @@ if streetrand >= 100 and hour <= 3:
 		if prezik > 0:
 			protect = 1
 			prezik -= 1
-			'You give him a condom. "At least wear protection asshole. I don''t want a bastards child.", you tell him. He nods in silence, the puts it on.'
+			'You give him a condom. "At least wear protection asshole. I don''t want a bastards child.", you tell him. He nods in silence, then puts it on.'
 		end
 
-		'"Get ready, bitch.", he says pushing you onto your knees. He moves behind you and takes you doggy-style. You can feel his hard cock entering your vagina.'
+		'"Get ready, bitch." He says pushing you onto your knees. He moves behind you and takes you doggy-style. You can feel his hard cock entering your vagina.'
 
 		if horny >= 90:
 			horny = 0
 			manna += 15
 			willpower += 15
 			orgasm += 1
-			'Gradually a pleasant warmth and ripple grow in the lower abdomen, then descend upon the feeling you and your entire body covered hot waves of orgasm, you involuntarily scream with pleasure writhing on elde.'
+			'Gradually a pleasantly warm ripple grows in your lower abdomen, then hits you full force as your entire body is covered in hot waves of orgasm, you involuntarily scream with pleasure writhing on your attacker.'
 		end
 
 		if protect ! 1:
@@ -418,22 +418,22 @@ if streetrand >= 100 and hour <= 3:
 			if finrand = 0:
 				!!inside
 				cumpussy += 1
-				'Man groaned and you feel like jet of sperm hit you inside your body.'
+				'The man groans and you feel like a jet of sperm hit you inside your body.'
 
 				if tabletki <= 0 and mesec <= 0:
 					gs 'preg'
 					manna -= 15
 					willpower -= 15
-					'Hell, because after all, you can fly, you thought with horror.'
+					'Damn, after all, you could get pregnant, you think with horror.'
 				end
 			else
 				!!out
 				cumass += 1
-				'<<$nameV>> groaned and removing a member of you finished on your ass.'
+				'<<$nameV>> groans and removing his member, he finished on your ass.'
 			end
 		else
 			protect = 0
-			'Guy cums in a condom. Member pulls out of you and removing the condom throws him to the ground, after pulls his pants and leaves.'
+			'Guy cums in a condom. Pulls his member out of you and removing the condom throws it to the ground, afterward he pulls his pants up and leaves.'
 		end
 
 		act 'Leave':gt 'street'
@@ -485,12 +485,12 @@ if streetrand >= 100 and money >= 1000 and daystart >= 10 and hour <= 3:
 		clr
 		money = 0
 		gs 'stat'
-		'He took all the money you had on your hand'
+		'He took all the money you had on you'
 
 		act 'Leave':gt 'street'
 	end
 
-	act 'Stand up to him and fight back':
+	act 'Fight':
 		cla
 		'The robber throws heavy insults at you.'
 
@@ -536,7 +536,7 @@ if streetrand >= 100 and money >= 1000 and daystart >= 10 and hour <= 3:
 	'<center><img src="images/etogame/street.jpg"></center>'
 	'You have been robbed. A thief grapped your purse and ran away.'
 
-	act 'Not run, I did not catch':
+	act 'Leave it, I can''t catch him':
 		cla
 		clr
 		money = 0
@@ -592,13 +592,13 @@ elseif streetrand >= 10 and bfa < 1:
 	if vnerand <= vnesh:
 		gs 'boy'
 		'To you came <<$boybody>> <<$boybod>> <<$boyface>>. he <<$boyClo>>'
-		'The guy introduced himself as <<$boy>> and asked for your telefonchik.'
+		'The guy introduces himself as <<$boy>> and asked for your telephone number.'
 
-		act 'Tell him your phone':
+		act 'Tell him your number':
 			cla
 			gs 'boyfrend', 'start'
 			stopboy = 0
-			'<<$boyA>> record your phone and left.'
+			'<<$boyA>> takes your number and leaves.'
 
 			act 'complete the walk':gt 'street'
 		end

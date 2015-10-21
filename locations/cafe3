@@ -21,7 +21,7 @@ if $ARGS[0] = 'house':
 			minut += 15
 			horny += 10
 			gs 'stat'
-			'You triy to remove his hands from your crotch, but <<$boy>> turns to you begins to fondle your breasts through your clothes with his hands.'
+			'You try to remove his hands from your crotch, but <<$boy>> turns to you begins to fondle your breasts through your clothes with his hands.'
 
 			act 'Come':gt 'BDsex', 'start'
 		end

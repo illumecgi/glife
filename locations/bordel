@@ -5,11 +5,11 @@ gs 'stat'
 '<center><img src="images/img/centr/bordel.jpg"></center>'
 
 if vnesh < 0:
-	'"Listen, you have some sort of infection, go to undergo treatment."'
+	'"Listen, you have some sort of infection, get it treated."'
 
 	act 'Leave':gt 'down'
 elseif vnesh >= 0 and vnesh < 25:
-	'"Look at you, for such a product no one will pay cleaned up and come back."'
+	'"Look at you, no one will pay for such a product, get cleaned up and come back."'
 
 	act 'Leave':gt 'down'
 elseif vnesh >= 25:
@@ -24,33 +24,33 @@ if $ARGS[0] = 'start':
 	gs 'stat'
 	'<center><b>Your room in a brothel</b></center>'
 	'<center><img src="images/img/centr/borroom.jpg"></center>'
-	'In a brothel and a lot of competition in order to avoid massacre introduced a rule no more than two clients per day'
-	'In the middle is a huge bed, and a small side door <a href="exec:gt ''bordel'', ''dysh''">bath</a>.'
+	'In a brothel there is a lot of competition, in order to avoid a massacre they introduced a rule - no more than two clients per day'
+	'In the middle is a huge bed, there is a small side door to the <a href="exec:gt ''bordel'', ''dysh''">bathroom</a>.'
 
 	act 'Leave':
 		if $clothingworntype ! 'ero' and $clothingworntype ! 'nude':
 			gt 'down'
 		else
 			cla
-			'You need to change into my clothes.'
+			'You need to change into suitable clothes.'
 
-			act 'In the bathroom':gt 'bordel', 'dysh'
+			act 'Go to the bathroom':gt 'bordel', 'dysh'
 		end
 	end
 
-	act 'Going to the gym, waiting for customers':
+	act 'Go to the reception room and wait for customers':
 		if $clothingworntype ! 'ero':
 			cla
-			'You need to change into something more appropriate, in a locker in the bathroom is all there.'
+			'You need to change into something more appropriate, all you need is in the locker in the bathroom.'
 
-			act 'In the bathroom':gt 'bordel', 'dysh'
+			act 'Go to the bathroom':gt 'bordel', 'dysh'
 		end
 
 		if cumbelly > 0 or cumpussy > 0 or cumass > 0 or cumlip > 0 or cumface > 0 or cumfrot > 0 or cumanus > 0 or mop < 2 or leghair > 0 or lobok > 0 or sweat > 0 or hapri = 0:
 			cla
 			'You need to freshen up.'
 
-			act 'In the bathroom':gt 'bordel', 'dysh'
+			act 'Go to the bathroom':gt 'bordel', 'dysh'
 		else
 			gt 'bordel', 'var'
 		end
@@ -66,7 +66,7 @@ if $ARGS[0] = 'dysh':
 
 	'<center><img src="images/img/centr/bordysh.jpg"></center>'
 
-	act 'In the room':gt 'bordel', 'start'
+	act 'Go to your room':gt 'bordel', 'start'
 
 	act 'Bathroom':
 		bordysh = 1
@@ -78,7 +78,7 @@ if $ARGS[0] = 'dysh':
 		gt 'mirror', 'start'
 	end
 
-	act 'Locker for clothes':
+	act 'Clothes locker':
 		gt 'clothing', 'view_clothing_list', 'wardrobe', 'brothel'
 	end
 end
@@ -90,7 +90,7 @@ if $ARGS[0] = 'var':
 	borrand = rand(0, 10)
 
 	if borrand = 0:
-		'Customer ordered one girl, the price of 1,000 rubles.'
+		'Customer orders one girl (1,000 rubles).'
 
 		act 'Refuse':gt 'bordel', 'start'
 
@@ -107,7 +107,7 @@ if $ARGS[0] = 'var':
 			gt 'sex', 'start'
 		end
 	elseif borrand = 1:
-		'Customer ordered two girls, the price of 1,000 rubles.'
+		'Customer orders two girls (1,000 rubles).'
 
 		act 'Refuse':gt 'bordel', 'start'
 
@@ -124,7 +124,7 @@ if $ARGS[0] = 'var':
 			gt 'podrsex', 'start'
 		end
 	elseif borrand = 2:
-		'Two clients booked one girl, the price of 1,500 rubles.'
+		'Two clients book one girl (1,500 rubles).'
 
 		act 'Refuse':gt 'bordel', 'start'
 
@@ -141,7 +141,7 @@ if $ARGS[0] = 'var':
 			gt 'sexdvoe', 'start'
 		end
 	elseif borrand = 3:
-		'Two clients booked two girls, the price of 1,500 rubles.'
+		'Two clients book two girls (1,500 rubles).'
 
 		act 'Refuse':gt 'bordel', 'start'
 
@@ -158,7 +158,7 @@ if $ARGS[0] = 'var':
 			gt 'sexdvanadva', 'start'
 		end
 	elseif borrand = 4:
-		'Customer group ordered one girl, price 2,000 rubles.'
+		'Group of customers order one girl, price 2,000 rubles.'
 
 		act 'Refuse':gt 'bordel', 'start'
 
@@ -175,10 +175,10 @@ if $ARGS[0] = 'var':
 			gt 'paysex', 'start'
 		end
 	elseif borrand > 4:
-		'You will not chose.'
+		'You are not chosen.'
 
-		act 'Go into the room':gt 'bordel', 'start'
-		act 'Wait another':gt 'bordel', 'var'
+		act 'Go to your room':gt 'bordel', 'start'
+		act 'Wait for another':gt 'bordel', 'var'
 	end
 end
 

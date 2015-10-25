@@ -1,7 +1,7 @@
 # tanhouse
 $sexloc = $CURLOC
 gs 'stat'
-'<center><b>Apartment Thani</b></center>'
+'<center><b>Tanyas apartment</b></center>'
 '<center><img src="images/img/centr/house.jpg"></center>'
 'Tanya opens up and quickly guides you to her room.'
 

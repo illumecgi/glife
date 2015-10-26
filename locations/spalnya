@@ -14,7 +14,7 @@ act 'Study (2:00)':
 	cla
 	minut += 120
 	intel += 1
-	'You prozanimavshis two hours seems something in your head postponed'
+	'You spend two hours studying and now feel a little smarter.'
 
 	act 'Finish':gt 'spalnya'
 end

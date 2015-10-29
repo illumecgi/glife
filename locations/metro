@@ -60,10 +60,10 @@ if $ARGS[0] = 'vagon':
 	'<center><b><font color="maroon">Subway car</font></b></center>'
 	if hour < 5 or hour > 10 and hour < 15 or hour > 24:
 		'<center><img src="images/etogame/vagon.jpg"></center>'
-		'In the car just a few passengers sadly examines advertising in the car.'
+		'In the car are just a few passengers vacantly reading magazines and papers.'
 	elseif hour >= 5 and hour <= 10 or hour >= 15 and hour <= 24:
 		'<center><img src="images/etogame/vagonFull.jpg"></center>'
-		'In the car, a lot of people all standing like statues without paying the slightest attention to others.'
+		'In the car there are lots of people all standing like statues, trying not to make eye conteact with each other.'
 		frotrand = rand(0, 100)
 
 		if frotrand >= 90 - (frot * 10) and frot < 3:
@@ -95,7 +95,7 @@ if $ARGS[0] = 'vagon':
 	if cumfrot > 0 or cumface > 0:
 		if hour >= 7 and hour <= 21:
 			manna -= 10
-			'Several passengers were hatched at you looking at where you cum smeared.'
+			'Several passengers are shocked, looking at where you are cum smeared.'
 		end
 	end
 

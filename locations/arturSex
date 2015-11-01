@@ -13,7 +13,7 @@ act 'Kneel down':
 	minut += 5
 	gs 'stat'
 	'<center><img src="images/qwest/alter/artur/bj.jpg"></center>'
-	'You sat down on his knees before Arthur and began stroking his long, thick cock. Arthur impatiently stroking your head his sinewy hand.'
+	'You sat down on your knees before Arthur and began stroking his long, thick cock. Arthur impatiently strokes your head with his sinewy hand.'
 
 	act 'Suck':
 		cls
@@ -21,7 +21,7 @@ act 'Kneel down':
 		artbj += 1
 		gs 'stat'
 		'<center><img src="images/qwest/alter/artur/bj2.jpg"></center>'
-		'You have opened my mouth and my lips wrapped around a hefty cock and began to suck.'
+		'You have opened you mouth and wrapped your lips around a hefty cock and begun to suck.'
 
 		act 'Further':
 			cls
@@ -33,12 +33,12 @@ act 'Kneel down':
 	act 'Masturbate him':
 		cls
 		bj += 1
-		$artbef = 'You began to masturbate member and Arthur immediately lost patience.'
+		$artbef = 'You began to masturbate his member and Arthur immediately lost patience.'
 		dynamic $d_art_facefuck
 	end
 end
 
-act 'Enjoy':
+act 'Enjoy his touch':
 	cls
 	minut += 5
 	horny += 10

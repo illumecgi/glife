@@ -7,7 +7,7 @@ else
 	'<center><img src="images/pics/son.jpg"></center>'
 end
 
-'You lie on the bed. Clock wound <<timer>> hours <<timerM>> minutes.'
+'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes.'
 
 act 'Set Alarm Clock':gt 'budilnik', 'start'
 
@@ -38,13 +38,25 @@ act 'Undress and go to bed':
 
 	if analplugIN = 1:analplugIN = 0 & 'Before going to bed you remove your butt plug.'
 	if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed you remove your vibrator'
-	if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared on the face, you think, that looks bad for sleeping with makeup, skin aging faster from this.'
+	if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smears your face, you think that it looks bad sleeping in makeup, and your skin will age faster from this.'
 
 	'You sleep and you dream about nothing.'
 
 	if hour = timer and minut = timerM:
 		manna -= 10
-		'Alarm goes off'
+		'Alarm goes off.'
+		
+		if week < 6 and hour < 9:
+			act 'Get up out of bed and get dressed for school (0:15)':
+				cla
+				gs 'clothing', 'wear', 'sforma'
+				InSleep = 0
+				minut += 15
+				tanga = 1
+				gt $locM, $metkaM
+			end
+		end
+		
 		act 'Get out of bed and get dressed (0:15)':
 			cla
 			gs 'clothing', 'wear_last_worn'
@@ -58,7 +70,18 @@ act 'Undress and go to bed':
 	end
 
 	if son > 23 and dosip = 0:
-		'You woke up on, that slept'
+		'You wake up, no longer tired.'
+		
+		if week < 6 and hour < 9:
+			act 'Get up out of bed and get dressed for school (0:15)':
+				cla
+				gs 'clothing', 'wear', 'sforma'
+				InSleep = 0
+				minut += 15
+				tanga = 1
+				gt $locM, $metkaM
+			end
+		end
 
 		act 'Get out of bed and get dressed (0:15)':
 			cla

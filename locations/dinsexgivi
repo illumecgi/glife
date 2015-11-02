@@ -1,6 +1,6 @@
 # dinsexgivi
 $threesomedin = {
-	act Sit on his penis':
+	act 'Sit on his penis':
 		cls
 		minut += 5
 		gs 'stat'

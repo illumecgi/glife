@@ -18,3 +18,4 @@ act 'Exit the highway':minut += 15 & nroad = 1 & gt 'road'
 if placeMansion > 0:'<a href="exec:gt ''youplace''">Your Land</a>.'
 
 --- locmansion ---------------------------------
+

@@ -87,7 +87,7 @@ $d_gorodok_boy_hj={
 			cls
 			minut += 5
 			sub += 1
-			gs'tboyopr'
+			gs 'tboyopr'
 			bmHJ[Tboynum] += 1
 			gs 'stat'
 			evhjrand = rand(0, 1)
@@ -97,12 +97,12 @@ $d_gorodok_boy_hj={
 				if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
 
 				hj += 1
-				'<center><img src="images/qwest/alter/Ev/hj.jpg" ></center>'
+				'<center><img src="images/qwest/alter/Ev/hj.jpg"></center>'
 				'You got it hard and hot cock out of his pants and took his hand. You started kissing Man, while masturbate his penis. Finally the guy strangled groan and you will see how a member of his sperm flies.'
 
 				act 'Leave':gt 'gdkin'
 			elseif evhjrand = 1:
-				'<center><img src="images/qwest/alter/Ev/hj.jpg" ></center>'
+				'<center><img src="images/qwest/alter/Ev/hj.jpg"></center>'
 				'You got it hard and hot cock out of his pants and took his hand. You started kissing Man, while masturbate his penis. The guy pushes you on the shoulders forcing squat.'
 				dynamic $din_gorodok_boy_bj
 			end
@@ -151,7 +151,7 @@ if GorSlut = 0:
 
 							if boynumBlock = 0:boy += 1
 
-							gs'tboyopr'
+							gs 'tboyopr'
 							bmSEX[Tboynum] += 1
 							$boy = $bname3
 
@@ -236,7 +236,8 @@ if GorSlut = 0:
 						$nameBoyfrend[numboyFrend] = $bname
 						$nameBoyfrendFull[numboyFrend] = $bnamefull
 						dickBoyFrend[numboyFrend] = dick
-						silavagBoyFrend[numboyFrend] = siladick
+						! WD: Uninitialised ~ 'siladick' use 'silavag'
+						silavagBoyFrend[numboyFrend] = silavag
 						otnBoyFrend[numboyFrend] = 50
 						minut += 30
 						bmFrend[Tboynum] = 1
@@ -701,3 +702,4 @@ end
 !!dynamic $dinrandswallow
 
 --- EvBoyBuh ---------------------------------
+

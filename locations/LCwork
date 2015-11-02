@@ -125,7 +125,7 @@ if $ARGS[0] = 'start4':
 
 	act '...':
 		cls
-		gs'stat'
+		gs 'stat'
 		'<center><img src="images/LakeCafe/LakeWork/4b.jpg"></center>'
 		'You went out of their apartment and came to the house. For this you got <<randLCpay>> rubles.'
 
@@ -191,7 +191,7 @@ if $ARGS[0] = 'Kitchen':
 	minut += 90
 	LCwork2 += 1
 	money += 175
-	LCwork2day = day
+	LCwork2day = daystart
 	'<center><img src="images/LakeCafe/KitchenWorkCafe.jpg"></center>'
 	'You wash the dishes, floors, chop vegetables, cook food for half an hour, for what you give your deserved 175 rubles.'
 
@@ -202,3 +202,4 @@ if $ARGS[0] = 'Kitchen':
 end
 
 --- LCwork ---------------------------------
+

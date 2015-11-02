@@ -115,11 +115,11 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if sport > 0 and parkrunday ! day:
+	if sport > 0 and parkrunday ! daystart:
 		act 'Jog through the park (1:00)':
 			cla
 			*clr
-			parkrunday = day
+			parkrunday = daystart
 			minut += 30
 			manna -= 10
 			willpower -= 10
@@ -268,7 +268,7 @@ if $ARGS[0] = 'luna':
 				'You paid 50 rubles and sat in the carousel.'
 				'You have a great ride, already dazzled.'
 
-				act 'move_away':gt'park','luna'
+				act 'move_away':gt 'park','luna'
 			end
 		end
 
@@ -413,7 +413,7 @@ if $ARGS[0] = 'whore':
 		'<center><img src="images/etogame/glpark.jpg"></center>'
 		'Cars passing on the road past the park and there is not seen nothing interesting.'
 	else
-		'<center><img src="images/pic/park1.jpg"></center>'
+		'<center><img src="images/etogame/park1.jpg"></center>'
 		'Cars drive on the road past the park and then not see anything interesting.'
 	end
 
@@ -487,7 +487,7 @@ if $ARGS[0] = 'prost':
 			gt 'fight', 'start'
 		end
 	end
-	if whoreQW > 1 and hook = 1:
+	if whoreQW > 1 and $clothingworntype = 'hooker':
 		act 'Search client (0:15)':
 			cla
 			*clr
@@ -667,3 +667,4 @@ if $ARGS[0] = 'rape1':
 end
 
 --- park ---------------------------------
+

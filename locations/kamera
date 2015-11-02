@@ -45,7 +45,7 @@ act 'Hello':
 					cla
 					gopdeath = 1
 					minut += 180
-					vsehsdaladay = day
+					vsehsdaladay = daystart
 					gs 'stat'
 					'You told all they knew, and even then what just heard from conversations Gopnik. After that you released.'
 
@@ -112,3 +112,4 @@ act 'Hello':
 end
 
 --- kamera ---------------------------------
+

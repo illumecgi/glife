@@ -211,7 +211,7 @@ $din_otel_man_beforesex = {
 				money += 3000
 				gs 'stat'
 				'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
-				'You stretched palm and man shaking hands you counted five thousand. After that <<$bname>> threw you on the bed and spread your legs.'
+				'You stretched palm and man shaking hands you counted three thousand. After that <<$bname>> threw you on the bed and spread your legs.'
 				dynamic $sexstart
 				dynamic $sexstart2
 				dynamic $sexcum
@@ -302,3 +302,4 @@ if DPtipe = 2:
 end
 
 --- EvOtelMan ---------------------------------
+

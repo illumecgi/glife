@@ -16,21 +16,26 @@ bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 if hour ! 18 and blockBedrPar = 1:blockBedrPar = 0
 
-if blockBedrPar = 0 and sisboyday + 1 = day and hour = 18 and (sisboyQW = 3 or sisboyQW = 5 or sisboyQW = 7):
-	act 'Go to your room':gt 'sisterQW','sisboyQW_bedroom'
-elseif blockBedrPar = 0:
-	act 'Go to your room':gt 'bedrPar'
+if blockBedrPar = 0:
+	if sisboyday + 1 = daystart and hour = 18 and sisboytrioQW = 1:
+		act 'Go to your room':gt 'sisterQW', 'sisboytrioQW_bedroom', 'start'
+	elseif sisboyday + 1 = daystart and hour = 18 and (sisboyQW = 3 or sisboyQW = 5 or sisboyQW = 7 or sisboyQW = 9):
+		act 'Go to your room':gt 'sisterQW', 'sisboyQW_bedroom'
+	else
+		act 'Go to your room':gt 'bedrPar'
+	end
 end
+
 act 'Go to my parents'' room':gt 'bedrPar2'
 act 'Going to the living room':gt 'sitrPar'
 act 'Go to the bathroom':gt 'vanrPar'
 act 'Go to the kitchen':gt 'kuhrPar'
 
 act '<b>Go to the street</b>':
-	if nude = 0:
+	if $clothingworntype ! 'nude':
 		gt 'gorodok'
 	else
-		msg 'You are not dressed'
+		msg 'You are not dressed.'
 		gt $curloc
 	end
 end
@@ -84,10 +89,10 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 				cls
 				mothervideotalk = 1
 				minut += 5
-				gs'stat'
+				gs 'stat'
 				'<center><b><font color="maroon">A_Mother</font></b></center>'
 				'<center><img src="images/qwest/alter/mother.jpg"></center>'
-				'"Come on -come_on - call the father! I`ll tell you what his daughter! And who went!"'
+				'"Come on -come_on - call the father! I''ll tell you what his daughter! And who went!"'
 				'Mother is looking at you and spit on the floor leaves.'
 
 				act 'Move away':gt $curloc
@@ -103,7 +108,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 		manna = 0
 		gs 'stat'
 		'<center><b><font color="maroon">Mom</font></b></center>'
-		'<center><img src="images/qwest/alter/mother.jpg" ></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
 		'Mom backed hips hands "What''s this about a video of you? How could you be this careless? You DO realize this is going to reflect badly on the entire family..."'
 
 		act 'Apologize':
@@ -113,7 +118,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			mother -= 40
 			gs 'stat'
 			'<center><b><font color="maroon">mom</font></b></center>'
-			'<center><img src="images/qwest/alter/mother.jpg" ></center>'
+			'<center><img src="images/qwest/alter/mother.jpg"></center>'
 			!!placeholder I guess, I''m sure I can come up with something better
 			'"I don''t know what to say, mom... I''m sorry"'
 			'Mother shakes her head, glaring at you, and walks away'
@@ -135,6 +140,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			SchoolBlock = 1
 			ParHomeBlock = 1
 			schoolprogul = 0
+			if $clothingworntype = 'sforma':gs 'clothing', 'strip'
 			'In the corridor you vsrechaet mother, her eyes thundered. "Doprygat? Thee out of high school. All live the way you want, I am no longer a mother!" Mother gathered your things in a bag, put the bag in your hands and thrown by the scruff of the apartment.'
 
 			act 'Leave':gt 'gorodok'
@@ -165,7 +171,7 @@ if hour >= 15 and hour < 20:
 		:markboyfrendcall
 		numnpcboy += 1
 
-		if otnBoyFrend[numnpcboy] >= 20 and boyinday[numnpcboy]!day:
+		if otnBoyFrend[numnpcboy] >= 20 and boyinday[numnpcboy]!daystart:
 			Gcall = 1
 			jump 'markboyfrendcall2'
 		end
@@ -182,3 +188,4 @@ if Gcall > 0:'In the hallway rings <a href="exec:gt ''gtelefon''">phone</a>.'
 if motherWorry = 1:gt 'mother'
 
 --- korrPar ---------------------------------
+

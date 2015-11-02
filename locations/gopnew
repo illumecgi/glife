@@ -86,14 +86,14 @@ if $ARGS[0] = 'start':
 			cla
 			'To you came Gopnik'
 
-			if gopopusday ! day:
+			if gopopusday ! daystart:
 				'Babosy you brought us?.'
 
 				if money >= 2000:
 					act 'Giving money':
 						cla
 						money -= 2000
-						gopopusday = day
+						gopopusday = daystart
 						'You gave money goparyam.'
 
 						act 'Leave.':gt 'street'
@@ -114,7 +114,7 @@ if $ARGS[0] = 'start':
 						act 'In the car':gt 'gopnew', 'degrading'
 					end
 				end
-			elseif gopopusday = day:
+			elseif gopopusday = daystart:
 				if GLust > 0:
 					cla
 					'<<$gopnik>>'
@@ -133,11 +133,11 @@ if $ARGS[0] = 'start':
 			cla
 			'You tried to pretend that did not see Gopnik and went to his house.'
 
-			if gopopusday = day:
+			if gopopusday = daystart:
 				'Gopnik neighing "Looking as rushed. Probably her fresh dick kisnet there, and we distract her."'
 
 				act 'Run into the apartment.':gt 'street'
-			elseif gopopusday ! day:
+			elseif gopopusday ! daystart:
 				'Gopnik immediately overtaken and surrounded you. "You slut struhnya in ears or something hit? Slyshish Not that appeal to you."'
 				'Babosy you brought us?.'
 
@@ -145,7 +145,7 @@ if $ARGS[0] = 'start':
 					act 'Giving money':
 						cla
 						money -= 2000
-						gopopusday = day
+						gopopusday = daystart
 						'You gave money goparyam.'
 
 						act 'Leave.':gt 'street'
@@ -190,6 +190,7 @@ if $ARGS[0] = 'start':
 		exit
 	end
 
+	! WD: Uninitialised ~ 'rosetka'
 	if rosetka > 0:
 		'Hey socket shout you Gopnik. <<$gopnik>>'
 
@@ -421,7 +422,7 @@ if $ARGS[0] = 'pivas':
 		end
 
 		if frotknow = 1:
-			'Gray looked at you and evil grin. "Hold on guys, I''ll tell you one prikolyuhu now. Anyway, I for one huylo pogonyalom Grater such prikolyuhu said he rides on the subway and babsky zhoptsam sticks that would rub on them. So says was got on the subway faultless slut ready suffering always ass podstvait friendship. He sfotkal it on mobile. So this is your <<$name>> is the very slut underground, in a joke right?'
+			'Gray looked at you and evil grin. "Hold on guys, I''ll tell you one prikolyuhu now. Anyway, I for one huylo pogonyalom Grater such prikolyuhu said he rides on the subway and babsky zhoptsam sticks that would rub on them. So says was got on the subway faultless slut ready suffering always ass podstvait friendship. He sfotkal it on mobile. So this is your <<$name>> is the very slut underground, in a joke right?"'
 			'Bob angrily threw a beer bottle to the side. "You bastard beer obschakovoe their fucking lips zafarshmachila. Come on, you have to market."'
 
 			act 'Go through the gate with boys':gt 'gopnew', 'bazar'
@@ -475,7 +476,7 @@ if $ARGS[0] = 'pivas':
 		end
 
 		if frotknow = 1:
-			'Gray looked at you and evil grin. "Hold on guys, I''ll tell you one prikolyuhu now. Anyway, I for one huylo pogonyalom Grater such prikolyuhu said he rides on the subway and babsky zhoptsam sticks that would rub on them. So says was got on the subway faultless slut ready suffering always ass podstvait friendship. He sfotka it on mobile. So this is your <<$name>> is the very slut underground, in a joke right?'
+			'Gray looked at you and evil grin. "Hold on guys, I''ll tell you one prikolyuhu now. Anyway, I for one huylo pogonyalom Grater such prikolyuhu said he rides on the subway and babsky zhoptsam sticks that would rub on them. So says was got on the subway faultless slut ready suffering always ass podstvait friendship. He sfotka it on mobile. So this is your <<$name>> is the very slut underground, in a joke right?"'
 			'Bob angrily threw a beer bottle to the side. "You bastard beer obschakovoe their fucking lips zafarshmachila. Come on, you have to market."'
 
 			act 'Go through the gate with boys':gt 'gopnew', 'bazar'
@@ -516,7 +517,8 @@ if $ARGS[0] = 'bazar':
 	'(Gopar) - You''re a bitch is not particularly right. I Vasya nail. I know the area at all, and you saucy slut specifically roughened. You owe me!'
 	'Bob rudely shook you by the shoulders, "you agree bitch?"'
 
-	if magic > 0:'At this point, you felt someone''s evil and powerful magical force that suppresses your and does not use against Gopnik.'
+	! WD: Uninitialised ~ 'magic' use 'magik'
+	if magik > 0:'At this point, you felt someone''s evil and powerful magical force that suppresses your and does not use against Gopnik.'
 		act 'Agree':
 			cla
 			*clr
@@ -1044,7 +1046,7 @@ if $ARGS[0] = 'degrading':
 	anal += 1
 	sex += 1
 	rape += 1
-	gopopusday = day
+	gopopusday = daystart
 	gs 'stat'
 
 	if VasanTut = 3 and vasansex = 0:vasansex = 1 & guy += 1
@@ -1092,7 +1094,7 @@ if $ARGS[0] = 'degrading':
 
 	$namgopsum = '<<$namgop>> <<$namgop2>> <<$namgop3>> <<$namgop4>> <<$namgop5>> <<$namgop6>> got its members and began to strip off your clothes.'
 
-	degrand = rand(1, 9)
+	degrand = rand(1, 8)
 	'<center><img src="images/pictures/deg<<picrand>>.jpg"></center>'
 	'Gopota mocks you, you hit on the cheeks and breasts. Tuck in pussy different objects and spit in your face. After playing Gopnik release you.'
 
@@ -1100,3 +1102,4 @@ if $ARGS[0] = 'degrading':
 end
 
 --- gopnew ---------------------------------
+

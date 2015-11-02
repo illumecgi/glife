@@ -10,7 +10,7 @@ chi = 100
 x_rul = 100
 gs 'stat'
 '<center><img src="images/casino/amrul.jpg"></center>'
-'You leaned over the table.'
+'You lean over the table.'
 
 act 'Make a bet':
 	st_1 = input 'Enter the amount'
@@ -19,10 +19,10 @@ act 'Make a bet':
 		msg 'You have enough money'
 		gt 'roulette'
 	elseif st_1 < 0:
-		msg 'Wrong, try again'
+		msg 'You can''t bet a negative amount.'
 		gt 'amrul'
 	elseif st_1 > 1000:
-		msg 'The maximum rate of 1000 rubles'
+		msg 'The maximum rate is 1000 rubles'
 		gt 'amrul'
 	end
 
@@ -33,3 +33,4 @@ end
 act 'Move away from the table':gt 'roulette'
 
 --- amrul ---------------------------------
+

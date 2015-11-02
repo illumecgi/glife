@@ -22,7 +22,7 @@ if week = 6:
 		canpar = 1
 		'In the bath can be steamed'
 
-		if banaday!day:
+		if banaday ! daystart:
 			act 'Steamed in the sauna (2:00)':
 				cls
 				minut += 120
@@ -31,11 +31,14 @@ if week = 6:
 				mop = 1
 				sweat = -3
 
+				! WD: Missing Var ~ 'banaday'
+				banaday = daystart
+
 				if frost > 0:frost = 0
 
 				skinvan += 5
 
-				if skinvan >= 20:skinvan = 0 & skin += 1
+				if skinvan >= 20:skinvan -= 20 & skin += 1
 
 				gs 'stat'
 
@@ -95,7 +98,7 @@ if mop ! 1:
 		cumface = 0
 		minut += 15
 		gs 'stat'
-		'<center><img src="images/pic/facesp.jpg"></center>'
+		'<center><img src="images/etogame/facesp.jpg"></center>'
 		'You washed off your makeup.'
 
 		act 'Finish':gt $curloc
@@ -110,7 +113,7 @@ if cumfrot > 0:
 		cumfrot = 0
 		minut += 10
 		gs 'stat'
-		'<center><img src="images/pic/frotsp.jpg"></center>'
+		'<center><img src="images/etogame/frotsp.jpg"></center>'
 		'You remove traces of cum from your clothes.'
 
 		act 'Finish':gt $curloc
@@ -119,3 +122,4 @@ end
 !!
 
 --- Gadbana ---------------------------------
+

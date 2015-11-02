@@ -9,3 +9,4 @@ gs 'stat'
 act 'Move away':gt $loc, $metka
 
 --- sistersobir ---------------------------------
+

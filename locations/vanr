@@ -33,10 +33,10 @@ if remvanr = 0:'<center><img src="images/etogame/vanr.jpg"></center>'
 if remvanr = 1:'<center><img src="images/etogame/vanr2.jpg"></center>'
 
 if stiralka > 0:
-	if husband > 0 and husbanday > 0 and husporday ! day and poroshok >= 2:
+	if husband > 0 and husbanday > 0 and husporday ! daystart and poroshok >= 2:
 		husband += 5
 		poroshok -= 2
-		husporday = day
+		husporday = daystart
 		'Washing machine washed smelly socks husband and his prossannye and properdannye truselya.'
 	end
 
@@ -79,17 +79,17 @@ else
 	'You''ve ran out of shampoo.'
 end
 
-if mosolmaz>0:'On a shelf is a tube of ointment protivomozolnoy, which will be enough for <b><<mosolmaz>><b> applications.'
+if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
 if stiralka > 0:'In the bathroom is a washing machine.'
 
 if tanga = 0 and clrbelo > 0:
-	act 'Wear underwear':
+	act 'Wear Underwear':
 		cla
 		tanga = 1
 		gt 'vanr'
 	end
 else
-	act 'Do not wear underwear':
+	act 'Remove Underwear':
 		cla
 		tanga = 0
 		gt 'vanr'
@@ -167,12 +167,12 @@ if mop ! 1:
 end
 !!
 
-if klisma = 1 and klismaday ! day:
+if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':
 		cla
 		*clr
 		minut += 5
-		klismaday = day
+		klismaday = daystart
 		klismaday1= 1
 		'<center><img src="images/picV/klisma.jpg"></center>'
 		'You give yourself an enema and clean your intestines. Your ass is now ready for anal sex.'
@@ -195,7 +195,7 @@ if vibrator = 1 and vibratorIN = 1:
 
 		act 'Finish':gt 'vanr'
 	end
-elseif vibrator = 1 and vibratorIN = 1:
+elseif vibrator = 1 and vibratorIN = 0:
 	act 'Insert the vibrator in your vagina (0:05)':
 		cla
 		*clr
@@ -219,8 +219,9 @@ if analplug = 1 and analplugin = 1:
 
 		if anus < 30:anus += 1
 
-		'<center><img src="images/etogame/analplug.jpg"></center>'
-		'You bent over and took out the butt plug.' !!0.2.6: Removed unneccessary var check
+		'<center><img src="images/body/analplug.jpg"></center>'
+
+		'You bent over and took out the butt plug.' & !!0.2.6: Removed unneccessary var check
 
 		act 'Finish':gt $curloc
 	end
@@ -235,7 +236,8 @@ elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 		if anus < 10:anus = anus + 5
 		if anus >= 10 and anus < 20:anus += rand(1, 2)
 		if anus >= 20 and anus < 30:anus += rand(0, 1)
-		'<center><img src="images/etogame/analplug.jpg"></center>'
+
+		'<center><img src="images/body/analplug.jpg"></center>'
 
 		if butpluguse > 0:'You bent over and inserted the butt plug.'
 		if butpluguse = 0:butpluguse = 1 & '"If I don''t use it then why did I buy it!" you thought. You decided to take a closer look while thinking, "It is necessary to start developing my ass so I could have great adventures someday, you could even say a huge and thick adventures with crimson heads, uh, now I got carried away." You scratched your head. Then you directed it in your ass, it was a bit painful at first, but as soon as the widest part was plunged into the murky depths of your anus it became easier to push it all the way.'
@@ -244,15 +246,27 @@ elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 	end
 end
 
+! WD: add missing ointment
+if mosolmaz > 0 and mosol > 0:
+	act 'Rub ointment onto your pussy (0:05)':
+		cla
+		minut += 5
+		mosolmaz -= 1
+		mosol -= 5
+		'You take a tube of cream and rub it onto your itchy vulva.'
 
-if husband > 0 and husbanday > 0 and husporday ! day and poroshok >= 2:
+		act 'Leave':gt $curloc
+	end
+end
+
+if husband > 0 and husbanday > 0 and husporday ! daystart and poroshok >= 2:
 	act 'Wash your husbands clothes (2 units of washing powder) (1:00)':
 		cla
 		*clr
 		husband += 5
 		poroshok -= 2
 		minut += 60
-		husporday = day
+		husporday = daystart
 		manna -= 25
 		'<center><img src="images/etogame/stir.jpg"></center>'
 		'You spend an hour washing your husbands smelly socks and his prossannye and properdannye truselya.'
@@ -261,13 +275,13 @@ if husband > 0 and husbanday > 0 and husporday ! day and poroshok >= 2:
 	end
 end
 
-if husband > 0 and husbanday > 0 and huspolday ! day:
+if husband > 0 and husbanday > 0 and huspolday ! daystart:
 	act 'Clean the apartment (1:00)':
 		cla
 		*clr
 		husband += 5
 		minut += 60
-		huspolday = day
+		huspolday = daystart
 		manna -= 25
 		!!'<center><img src="images/pics/cook.jpg"></center>'
 		'You take a rag and start cleaning the apartment.'
@@ -295,3 +309,4 @@ if pregtest > 0:
 end
 
 --- vanr ---------------------------------
+

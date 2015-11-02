@@ -9,13 +9,16 @@ $din_trener_bj = {
 		if volleysostav > 0:trenerepa += 2
 
 		gs 'stat'
-		'<center><img src="images/qwest/alter/ev/tren.jpg"></center>'
+		'<center><img src="images/qwest/alter/Ev/tren.jpg"></center>'
 		'You squatted in front of the coach and stroked his crotch and felt how his cock stood up. You reached into his sweatpants gum holding with the other hand and groped hot cock trainer. You pulled the standing member of sweatpants and leaned toward him around his lips.'
 
-		cumlip += 1
-		swallow += 1
-		gs 'stat'
-		'Coach groaned slightly and your mouth spurted warm jet of sperm. You started to swallow warm liquid fills your mouth.'
+		if tipTrsex = 0:
+			cumlip += 1
+			swallow += 1
+			gs'stat'
+
+			'Coach slightly groaned and squirted into your mouth warm jet of sperm. You began to swallow the warm liquid fills your mouth.'
+		end
 
 		if volleysostav = 0:
 			volleysostav = 1
@@ -23,7 +26,7 @@ $din_trener_bj = {
 			'Coach bosses cock in his pants. "Okay <<$surname>>, you are very diligent girl, maybe you will come out of sense, consider that you have a team, but of course in replacement players."'
 		end
 
-		act 'Leave':gt 'gdksport'
+		if tipTrsex = 0:act 'Leave':gt 'gdksport'
 	end
 }
 $din_trener_gorslut = {
@@ -49,7 +52,7 @@ $din_trener_gorslut = {
 }
 
 gs 'stat'
-'<center><img src="images/qwest/alter/gdksport.jpg"></center>'
+'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
 'You went into the room the coach in which there are cups, balls, sports equipment and a different table where sometimes sitting coach and fills various papers. Coach Mikhail Vlasov does not only lovers but also in the section just coach a professional team volleybolistok.'
 
 if volleysostav > 0:
@@ -70,9 +73,51 @@ if volleysostav > 0:
 
 end
 
+if lariskaTrenerTalk > 0:
+	'"A, Lebedev and Gruzdev, chevo wanted?"'
+	if lariskaTrenerTalk = 1:
+		'You and Lariska tried to persuade the coach to take Lariska, but he threw all of your arguments to deny you.'
+	elseif lariskaTrenerTalk = 2:
+		if dom >= 10:
+			'You managed to convince the coach to take a team Lariska.'
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take Lariska, but he refused you.'
+		end
+	elseif lariskaTrenerTalk = 3:
+		if dom >= 20:
+			'You managed to convince the coach to take you both to the team.'
+			volleysostav = 1
+			trenerepa = 30
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take you both to the team, but he threw all of your arguments to deny you.'
+		end
+	elseif lariskaTrenerTalk = 4:
+		if trenerepa >= 60:
+			'You managed to convince the coach to take a team Lariska.'
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take Lariska, but he refused to you.'
+		end
+	end
+	if LariskaProfi = 1:
+		$npcText[13] = 'Lariska athletic girl, but it is very dependent on other people''s opinions. Lariska has changed a lot, Her sparkle in the eyes, and almost always in a good mood.  After joining the team quickly went into the main part and is now one of the best players'
+		'When you come out of the coach Lariska hugged you and said,: "Thank you, <<$nickname>>!"'
+		grupNPC[13] += 20
+	end
+	minut += 10
+	gs 'stat'
+
+	lariskaTrenerTalk = 0
+	act 'Escape':gt 'gdksport'
+	exit
+end
+
 act 'Talk with the coach':
 	cls
 	gs 'stat'
+	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
 
 	if volleysostav = -1:
 		if trenerSex = 0:
@@ -169,15 +214,36 @@ act 'Talk with the coach':
 	else
 		if trenerSex = 0:
 			'Coach looked at you "And <<$surname>>. Do not distract me from things."'
+			'The coach looked at you "But <<$surname>>. Your volleyball skills  <<volleyboll>> , And team stats: Number of games <<volsesongame>>, Win - <<volsesonwin>>, defeats - <<volsesonloss>>, draws - <<volsesondraw>>."'
 		else
-			'Coach looked at you "And <<$surname>>. Done for coming."'
+			'Coach looked at you "And <<$surname>>. Well done for coming."'
+			'"Your volleyball skills <<volleyboll>> , And team stats: Number of games <<volsesongame>>, Win - <<volsesonwin>>, defeats - <<volsesonloss>>, draws - <<volsesondraw>>."'
 
-			act 'Coach put his hand on her knee':
+			act 'Put your hand on coach''s knee':
 				cls
 				gs 'stat'
 				'You leaned forward slightly and put her palm on his knee coach grin you whispered "Need a little demonstration of my skills? I understand you correctly?" Coach leaned back in his chair, "You''re a smart girl of <<$name>>, go on."'
 				dynamic $din_trener_bj
 			end
+		end
+
+		n = 20 - volsesongame
+
+		'For a trip to the Junior Cup, we need:'
+
+		r = volsesonloss - volsesonwin
+
+		if volsesongame < 20:
+			'To play a minimum of 20 games, need to play at least <<n>> more games, and we need to win more matches than we loose.'
+		elseif volsesongame => 20 and volsesonwin => volsesonloss:
+			'To play in the same key does not relax, we have good stats, you have fulfilled the conditions but we need to improve the chemistry of the team, to competition look boots.'
+		elseif volsesongame => 20 and volsesonwin < volsesonloss:
+			'Win a <<r>> victories, and managed not to lose so need to get together and to make every effort.'
+		end
+		i=rand(0,3)
+		if i=0:
+			trenerskaia=1
+			dynamic  $din_trener_Speak
 		end
 	end
 
@@ -187,3 +253,4 @@ end
 act 'Leave':gt 'gdksport'
 
 --- Voltrener ---------------------------------
+

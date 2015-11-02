@@ -15,6 +15,7 @@ $tracklist_fight[0] = 'music/fight.mp3'
 $tracklist_fight[1] = 'music/fight1.mp3'
 $tracklist_orochimaru[0] = 'music/orochimaru.mp3'
 
+! WD: Uninitialised ~ 'club'
 if club = 1:
 	clubrand = rand(0, 5)
 
@@ -34,3 +35,4 @@ if club = 1:
 end
 
 --- init_music ---------------------------------
+

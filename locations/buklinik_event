@@ -3,7 +3,7 @@ if $ARGS[0] = 'pos1':
 	cla
 	*clr
 	minut += 30
-	buklinikDay = day
+	buklinikDay = daystart
 	gs 'stat'
 	'<center><img src="images/etogame/bukli_spal.jpg"></center>'
 	'The room was a male and you have decided that it is necessary to introduce them.'
@@ -34,7 +34,7 @@ if $ARGS[0] = 'pos2':
 
 	'You seated at a small table in the center of the room. On all sides surround you face strangers. Mostly elderly, but as one with a hangover.'
 
-	'Vladimir:- Meet it Vitaly is Paul Afanasyevitch Oleg O., Kostya and lame Albert.'
+	'Vladimir:- Meet it Vitaly is Paul Afanasyevitch Oleg c., Kostya and lame Albert.'
 	'From the crowd:- So you''ll help us, it''s good to help me not hurt. Long time I did not help women.'
 	'- Yeah, and me! So young, smooth skin and smells delicious.'
 
@@ -107,7 +107,7 @@ end
 if $ARGS[0] = 'pos7':
 	cla
 	*clr
-	buklinikDay = day
+	buklinikDay = daystart
 	gs 'stat'
 	'<center><img src="images/etogame/bukli_eat2.jpg"></center>'
 	if bumtolik > 7:
@@ -127,7 +127,7 @@ if $ARGS[0] = 'pos8':
 
 	if bumtolik = 8:bumtolik = 9
 
-	buklinikDay = day
+	buklinikDay = daystart
 	minut += 120
 	manna += 20
 	gs 'stat'
@@ -139,7 +139,7 @@ end
 if $ARGS[0] = 'pos9':
 	cla
 	*clr
-	buklinikDay = day
+	buklinikDay = daystart
 	minut += 120
 	gs 'stat'
 	'<center><img src="images/etogame/bukli_mission.jpg"></center>'
@@ -176,3 +176,4 @@ if $ARGS[0] = 'pos10':
 end
 
 --- buklinik_event ---------------------------------
+

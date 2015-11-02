@@ -6,6 +6,7 @@ if $ARGS[0] = 'start':
 	gs 'portmirror'
 	$gt1 = 'mirror'
 	$gt2 = 'fin'
+
 	dynamic $portmirror
 
 	act 'Move away from the mirror':
@@ -17,8 +18,8 @@ end
 if $ARGS[0] = 'fin':
 	cla
 	gt $locM, $metkaM
-
-	!'if housr = 1 and housrA = 1 and housrMir = 0 and fitMir = 0 and saunaYouRoom = 0:
+!'
+	if housr = 1 and housrA = 1 and housrMir = 0 and fitMir = 0 and saunaYouRoom = 0:
 		housrA = 0
 			gt 'korr'
 		end
@@ -31,7 +32,8 @@ if $ARGS[0] = 'fin':
 
 		if housrA = 0 and fitMir = 1 and saunaYouRoom = 0:
 			fitMir = 0
-			gt 'fit', 'razd'
+			! WD: Argument is 'dressing room'
+			gt 'fit', 'dressing room'
 		end
 
 		if housrA = 0 and stripMir = 1 and saunaYouRoom = 0:
@@ -62,7 +64,9 @@ if $ARGS[0] = 'fin':
 		if housrA = 0 and tanhouse1 = 1:
 			tanhouse1 = 0
 			gt 'spalnya'
-		end'!
+		end
+'!
 end
 
 --- mirror ---------------------------------
+

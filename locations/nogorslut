@@ -116,3 +116,4 @@ elseif grupNPC[numnpc] >= 80 and talkmarkeronce = 0:
 end
 
 --- nogorslut ---------------------------------
+

@@ -13,7 +13,7 @@ if $ARGS[0] = 'start':
 
 	act 'Leave':gt 'korr'
 
-	act 'Grant on skewers for meat':
+	act 'Make a delicious rabbit pie and sell it to the local cafe':
 		krolik = 0
 		minut += 60
 		money += 200
@@ -22,3 +22,4 @@ if $ARGS[0] = 'start':
 end
 
 --- krol ---------------------------------
+

@@ -1,12 +1,13 @@
 # sexshop
 if $ARGS[0] = 'start':
+	$loc = $CURLOC
+	$metka = $ARGS[0]
 	$sexloc = $CURLOC
 	cla
 	*clr
-	shrand = rand(0, 100)
 
-	if kendra > 0 and shrand < 10:gt 'sexshop', 'kendra'
-	if tanga = 0 and shrand > 90:gt 'sexshop', 'shprod'
+	if kendra > 0 and rand(1, 10) = 10:gt 'sexshop', 'kendra'
+	if tanga = 0 and rand(1, 10) = 10:gt 'sexshop', 'shprod'
 
 	minut += 5
 	$metkaM = $ARGS[0]
@@ -32,10 +33,8 @@ if $ARGS[0] = 'start':
 		gt 'down'
 	end
 
-	if SUB >= 100 and analplug = 1 and dildo = 1 and vnesh > 26 and Peter < 1:
-		Peterrand = rand(0, 100)
-
-		if Peterrand > 50 :
+	if SUB >= 100 and analplug = 1 and dildo = 1 and vnesh > 26 and Peter = 0:
+		if rand(0, 1) = 1:
 			'You see an interesting looking middle-aged man, apparently he is the owner of this store.'
 
 			act 'Introduce yourself to the owner of the store' :
@@ -61,7 +60,91 @@ if $ARGS[0] = 'start':
 	if gloryhole >= 20 and pornstudio = 0:
 		'You notice out of the corner your eye, that the seller is trying to get your attention.'
 
-		act 'Approach to learn what we wants':gt 'sexshop', 'porn'
+		act 'Approach to learn what we wants':
+			cla
+			*clr
+			minut += 5
+			'In general, you give a great blowjob, everyone knows that. Do you want to earn extra money in the porn business as an actress? The pay there is certainly better than here, and cocks, maybe even more. Well? Other options will not be as good!'
+
+			act 'Agree':
+				cla
+				*clr
+				minut += 5
+				gs 'stat'
+				'<center><img src="images/studia/Pierre_1.jpg"></center>'
+				'You came to the studio, looking for someone to look, who to approach to the issue.'
+				'To you approached by a young man who introduced Peter, you are greeted and met.'
+
+				act 'Set out the purpose of your visit':
+					cla
+					*clr
+					minut = minut + 60
+					'<center><img src="images/studia/Pierre_2.jpg"></center>'
+					'Peter smiled and said that the new actresses are always welcome, just terrible, of course, in the business do not take. On the first couple of auditions will take place, if you like the public - you can not take them.'
+					'I''ll tell you that here and how, but under one condition - you have to undress.'
+
+					act 'Undress':
+						cla
+						*clr
+						'<center><img src="images/studia/casting_3.jpg"></center>'
+						'First there is a casting actresses - as I said, if you are terrible - you can not hope only comes when you have a beautiful appearance.'
+
+						act '......':
+							cla
+							*clr
+							'<center><img src="images/studia/model_0.jpg"></center>'
+							'Then she selected for the lead role.'
+							'Here you have to be the most beautiful.'
+
+							act '......':
+								cla
+								*clr
+								'<center><img src="images/studia/Film_0.jpg"></center>'
+								'Well then filming itself - an interesting and exciting process'
+								'And the output we get ....'
+
+								act '......':
+									cla
+									*clr
+									'<center><img src="images/studia/dvd-disс.jpg"></center>'
+									'Then on what I make money.'
+
+									act 'Everything is clear, but how and where everything is for sale? Maybe I want to see for yourself ..':
+										cla
+										*clr
+										'<center><img src="images/studia/Pierre_2.jpg"></center>'
+										'The sauna is in a residential area we have one man .. And in a sex shop, how could you understand there garters. Now here are thinking about selling in the university. If we have this who helped - increased profits used well, with dividend entitlements assistant, of course.'
+
+										act 'And any problems with the law?':
+											cla
+											*clr
+											'<center><img src="images/studia/ment_0.jpg"></center>'
+											'Specifically for you - yet. We''ve got their contracts with the cops, maybe in the future you will be able to help us to keep them in power, but for now - I told you all have to try on the weekend.'
+
+											act 'Well like all realized':
+												cla
+												*clr
+												'<center><img src="images/studia/Pierre_2.jpg"></center>'
+												'Boy, girl, enjoy yourself and do not take away I have more time'
+												pornstudio = 3
+												gt 'pornstudio', 'start'
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+
+			act 'Refuse':
+				cla
+				*clr
+				pornstudio = 1
+				gt 'sexshop', 'start'
+			end
+		end
 	end
 
 	if money >= 300:
@@ -93,7 +176,7 @@ if $ARGS[0] = 'start':
 			gs 'stat'
 			'You bought a porn magazine and paid the cashier.'
 
-			act 'Move away from the counter':gt'sexshop','start'
+			act 'Move away from the counter':gt 'sexshop','start'
 		end
 	end
 
@@ -118,10 +201,10 @@ if $ARGS[0] = 'start':
 			minut += 15
 			middildo = 1
 			money -= 1500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 15cm long dildo and paid the cashier.'
 
-			act 'Move away from the counter':gt'sexshop','start'
+			act 'Move away from the counter':gt 'sexshop','start'
 		end
 	end
 
@@ -132,10 +215,10 @@ if $ARGS[0] = 'start':
 			minut += 15
 			largedildo = 1
 			money -= 2500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 20cm long dildo and paid the cashier.'
 
-			act 'Move away from the counter':gt'sexshop','start'
+			act 'Move away from the counter':gt 'sexshop','start'
 		end
 	end
 
@@ -146,10 +229,10 @@ if $ARGS[0] = 'start':
 			minut += 15
 			bigdildo = 1
 			money -= 4500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 25cm long dildo and paid the cashier.'
 
-			act 'Move away from the counter':gt'sexshop','start'
+			act 'Move away from the counter':gt 'sexshop','start'
 		end
 	end
 
@@ -160,10 +243,10 @@ if $ARGS[0] = 'start':
 			minut += 15
 			extradildo = 1
 			money -= 6500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 30cm long dildo and paid the cashier.'
 
-			act 'Move away from the counter':gt'sexshop','start'
+			act 'Move away from the counter':gt 'sexshop','start'
 		end
 	end
 
@@ -174,10 +257,10 @@ if $ARGS[0] = 'start':
 			minut += 15
 			superdildo = 1
 			money -= 8500
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 35cm long dildo and paid the cashier.'
 
-			act 'Move away from the counter':gt'sexshop','start'
+			act 'Move away from the counter':gt 'sexshop','start'
 		end
 	end
 
@@ -188,10 +271,10 @@ if $ARGS[0] = 'start':
 			minut += 15
 			maddildo = 1
 			money -= 12000
-			'<center><img src="images/etogame/kassa.jpg" ></center>'
+			'<center><img src="images/etogame/kassa.jpg"></center>'
 			'You bought a 40cm long dildo and paid the cashier.'
 
-			act 'Move away from the counter':gt'sexshop','start'
+			act 'Move away from the counter':gt 'sexshop','start'
 		end
 	end
 
@@ -238,217 +321,12 @@ if $ARGS[0] = 'start':
 	end
 
 	if money >= 1000:
-		if hooker[1] = 0:
-			act 'Inspect clothes prostitutes. Number 1':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker1.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[1] = 1
-					hookerH[1] = 200
-					hookerB[1] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[2] = 0:
-			act 'Inspect clothes prostitutes. Number 2':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker2.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[2] = 1
-					hookerH[2] = 200
-					hookerB[2] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[3] = 0:
-			act 'Inspect clothes prostitutes. Number 3':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker3.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[3] = 1
-					hookerH[3] = 200
-					hookerB[3] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[4] = 0:
-			act 'Inspect clothes prostitutes. Number 4':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker4.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[4] = 1
-					hookerH[4] = 200
-					hookerB[4] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[5] = 0:
-			act 'Inspect clothes prostitutes. Number 5':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker5.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[5] = 1
-					hookerH[5] = 200
-					hookerB[5] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[201] = 0:
-			act 'Inspect clothes prostitutes. Number 201':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker201.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[201] = 1
-					hookerH[201] = 200
-					hookerB[201] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		!!!WD: Probably community edition
-		if hooker[202] = 0:
-			act 'Inspect clothes prostitutes. Number 202':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker202.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[202] = 1
-					hookerH[202] = 200
-					hookerB[202] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[203] = 0:
-			act 'Inspect clothes prostitutes. Number 203':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker203.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[203] = 1
-					hookerH[203] = 200
-					hookerB[203] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[204] = 0:
-			act 'Inspect clothes prostitutes. Number 204':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker204.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[204] = 1
-					hookerH[204] = 200
-					hookerB[204] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-
-		if hooker[205] = 0:
-			act 'Inspect clothes prostitutes. Number 205':
-				cla
-				*clr
-				'<center><img src="images/clothes/hooker205.jpg"></center>'
-				'Clothing for prostitutes.'
-				'Costs 1,000 rubles.'
-
-				act 'Leave':gt 'sexshop', 'start'
-
-				act 'Buy (1,000 rubles)':
-					cla
-					money -= 1000
-					hooker[205] = 1
-					hookerH[205] = 200
-					hookerB[205] = bedra
-					gt 'sexshop', 'start'
-				end
-			end
-		end
-		!!!
+		i = 1
+		:loophooker
+			if hooker[i] = 0:dynamic 'act ''Look at hooker outfit <<i>>'':gt ''clothing'', ''view_clothing_item'', ''shop'', ''hooker'', <<i>>, 1000'
+			i += 1
+			if i = 6:i = 201
+		if i <= 205:jump 'loophooker'
 	end
 end
 
@@ -599,6 +477,7 @@ if $ARGS[0] = 'pip':
 	if ghnow > 0:'You served <<ghnow>> cocks.'
 
 	act 'Get out of the booth':gt 'sexshop', 'podval'
+
 	if money >= 50 and hour < 23:
 		act 'Stick 50 rubles in the machine':
 			cla
@@ -609,39 +488,39 @@ if $ARGS[0] = 'pip':
 			'Once you have paid the money the TV on the wall showing porn.'
 			'You sat in a chair and watched porn, you began to get a little excited.'
 
-		act 'The movie ended':gt 'sexshop', 'pip'
+			act 'The movie ended':gt 'sexshop', 'pip'
 
-		if horny >= 50:
-			act 'Masturbate':
-				cla
-				horny += 10
-				manna += 10
-				'You caress your pussy with your fingers and enjoy the pleasant sensation between your legs.'
+			if horny >= 50:
+				act 'Masturbate':
+					cla
+					horny += 10
+					manna += 10
+					'You caress your pussy with your fingers and enjoy the pleasant sensation between your legs.'
 
-				if horny >= 100:
-					orgasm += 1
-					horny = 0
-					manna += 15
-					willpower += 15
-					mastr += 1
-					'Gradually the pleasurable sensations spread throughout the body and you orgasm.'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna += 15
+						willpower += 15
+						mastr += 1
+						'Gradually the pleasurable sensations spread throughout the body and you orgasm.'
+					end
+
+					act 'The movie ended':gt 'sexshop', 'pip'
 				end
-
-				act 'The movie ended':gt 'sexshop', 'pip'
 			end
-		end
 
-		ghrand = rand(0, 10)
 
-		if ghrand >= 10 - (cumlip * 2):
-			'You hear the TV turn on in the next stall.'
+			if rand(1, 10) >= 10 - (cumlip * 2):
+				'You hear the TV turn on in the next stall.'
 
-			act 'Stick a finger in the hole (to serve the stranger)':
+				act 'Stick a finger in the hole (to serve the stranger)':
 					cla
 					*clr
 					ghnow += 1
 					money += 300
 					fingerRand = rand(1, 5)
+					! WD: Rename missing Image ~  'ghFinger.jpg' to 'ghFinger5.jpg'
 					'<center><img src="images/etogame/ghFinger<<fingerRand>>.jpg"></center>'
 					'You poke your finger in the hole showing that you are ready to serve the stranger.'
 					'The stranger slipped 300 rubles into the hole, and then his cock stuck out of the hole.'
@@ -680,27 +559,6 @@ if $ARGS[0] = 'pip':
 	end
 end
 
-if $ARGS[0] = 'porn':
-	cla
-	*clr
-	minut += 5
-	'In general, you give a great blowjob, everyone knows that. Do you want to earn extra money in the porn business as an actress? The pay there is certainly better than here, and cocks, maybe even more. Well? Other options will not be as good !'
-
-	act 'Agree':
-		cla
-		*clr
-		pornstudio = 2
-		gt 'pornstudio', '1'
-	end
-
-	act 'Refuse':
-		cla
-		*clr
-		pornstudio = 1
-		gt 'sexshop', 'start'
-	end
-end
-
 if $ARGS[0] = 'kendra':
 	cla
 	*clr
@@ -722,7 +580,7 @@ if $ARGS[0] = 'kendra':
 		lesbian += 1
 		'<center><img src="images/img/centr/shkend1.jpg"></center>'
 		'You quickly throw off clothes and knelt before her pussy and lick her eagerly. As long as you carefully suck Kendra as squeals and praises your tongue, saying that no tounge has pleased her much as yours.'
-		'"Now pick anything from the toys" says Kendra"'
+		'"Now pick anything from the toys" says Kendra'
 
 		act 'Give her a dildo':gt 'sexshop', 'kendra1'
 		act 'Give her a strapon':gt 'sexshop', 'kendra2'
@@ -753,7 +611,7 @@ if $ARGS[0] = 'kendra1':
 			sweat += 1
 			'<center><img src="images/img/centr/shkend4.jpg"></center>'
 			'Suddenly, when she is ready to cum, Kendra begin pissin, her urine flowing allong the dildo and your coating your hand.'
-			'Damn!" you cried out and were about to drop the dildo.'
+			'"Damn!" you cried out and were about to drop the dildo.'
 			'"Let''s finish up, slut!" cried Kendra'
 
 			act 'Leave her':gt 'sexshop', 'kendra3'
@@ -792,7 +650,7 @@ if $ARGS[0] = 'kendra2':
 	minut += 10
 	gs 'stat'
 	'<center><img src="images/img/centr/shkend8.jpg"></center>'
-	'Kendra slides on the strapon and looking at you asks, "Well, beauty in which hole do you want it?'
+	'Kendra slides on the strapon and looking at you asks, "Well, beauty in which hole do you want it?"'
 
 	act 'In the vagina':
 		cla
@@ -862,7 +720,7 @@ if $ARGS[0] = 'kendra4':
 	if picrand = 11:'Kendra kneels down and begins to lick your pussy, her tongue slides all over your sex, your sensitive clit and dipping into the vagina a few minutes of her effort, you left off.'
 	if picrand = 12:'Kendra kneels down and her tongue sticks out tryign to slide into your ass, you writhe as she her tounge saneks and twists inside your ass. Her fingers penetrating your pussy for a few minutes, and the feeling of her tounge in your ass and her fingers in your pussy brings you to a shuddering orgasm.'
 
-	'"Well, I will try to fulfill your desires?" Kendra says, catching her breath. "Now my turn.'
+	'"Well, I will try to fulfill your desires?" Kendra says, catching her breath. "Now my turn."'
 
 	act 'Give her strapon':gt 'sexshop', 'kendra2'
 
@@ -870,26 +728,26 @@ if $ARGS[0] = 'kendra4':
 end
 
 if $ARGS[0] = 'shprod':
-cla
-*clr
-minut += 5
-'<center><img src="images/img/centr/shprod.jpg"></center>'
-'The cashier is right infortn of you offering to help and holdign a miniskirt "Girl this is very you, will you try it on"'
-
-act 'Refuse':gt 'sexshop', 'start'
-
-act 'Try':
 	cla
 	*clr
-	picrand = 47
-	'<center><img src="images/img/centr/shprod1.jpg"></center>'
-	'You wear the skirt out of the booth and pose in the mirror, you do not have panties on and the skirt is so short that looks more like a belt and does not cover anything.  All your charms are visible from all directions.'
-	'Approaching the mirror you are considering this so-called skirt, and the cashier kneels behind you and starts praising your ass in that skirt, his hands already wander around your hips and he get his lips as close to your butt as he can, he says that he wants to kiss on your skin.  Words soon cease and just the touch of his lips to your skin remains, closer and closer to your pussy.'
+	minut += 5
+	'<center><img src="images/img/centr/shprod.jpg"></center>'
+	'The cashier is right in front of you offering to help and holding a miniskirt "Girl this is very you, will you try it on"'
 
-	act 'Push him away':gt 'sexshop', 'start'
-	act 'Let him':gt 'sex', 'kuni'
+	act 'Refuse':gt 'sexshop', 'start'
 
+	act 'Try':
+		cla
+		*clr
+		picrand = 47
+		'<center><img src="images/img/centr/shprod1.jpg"></center>'
+		'You wear the skirt out of the booth and pose in the mirror, you do not have panties on and the skirt is so short that looks more like a belt and does not cover anything.  All your charms are visible from all directions.'
+		'Approaching the mirror you are considering this so-called skirt, and the cashier kneels behind you and starts praising your ass in that skirt, his hands already wander around your hips and he get his lips as close to your butt as he can, he says that he wants to kiss on your skin.  Words soon cease and just the touch of his lips to your skin remains, closer and closer to your pussy.'
+
+		act 'Push him away':gt 'sexshop', 'start'
+		act 'Let him':gt 'sex', 'kuni'
 	end
 end
 
 --- sexshop ---------------------------------
+

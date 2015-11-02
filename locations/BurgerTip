@@ -130,7 +130,7 @@ $burger_work_din = {
 
 			if bosstiprand = 0:
 				TerminalPapper = 1
-				DayTerminalPapper = day
+				DayTerminalPapper = daystart
 				'Came out of the office Anatoly Borisovich and walked up to you. "<<$name>>, take these documents to the North area, in a storage terminal, then you can be free today."'
 
 				act 'Leave':gt 'down'
@@ -148,7 +148,7 @@ $burger_work_din = {
 
 			elseif bosstiprand = 2:
 				BankPapper = 1
-				dayBankPapper = day
+				dayBankPapper = daystart
 				'Came out of the office Anatoly Borisovich and walked up to you. "<<$name>>, run to the bank with these documents. How otneseshsya documents can be free today."'
 
 				act 'Leave':gt 'down'
@@ -417,7 +417,7 @@ $burger_work_din = {
 		end
 
 		if gossipBU >= 10:
-			'Lady you looked contemptuously and angrily opened the door to Anatoly Borisovich, you heard her shrill voice, "Tolia, I know all about your adventures with his sekretutkoy, and if you do not immediately vygonish this slut from work, then I myself leave you, you understand? " Anatoly Borisovich zabubnil "Yes, dear, you know, I just love you." He was red in the face out of the office and you threw the paper on the table, ''Write on his own! "'
+			'Lady you looked contemptuously and angrily opened the door to Anatoly Borisovich, you heard her shrill voice, "Tolia, I know all about your adventures with his sekretutkoy, and if you do not immediately vygonish this slut from work, then I myself leave you, you understand? " Anatoly Borisovich zabubnil "Yes, dear, you know, I just love you." He was red in the face out of the office and you threw the paper on the table, "Write on his own!"'
 
 			act 'Write a statement of resignation':
 				cls
@@ -835,3 +835,4 @@ $din_Ivan_work4 = {
 }
 
 --- BurgerTip ---------------------------------
+

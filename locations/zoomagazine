@@ -24,7 +24,7 @@ if $ARGS[0] = 'start':
 				cla
 				*clr
 				'<center><img src="images/zoo/1277894267_dsc_0544.jpg" width = 650 height = 450 ></center>'
-				'<center><b>Sorry, but we were only male dogs.</center></b>'
+				'<center><b>Sorry, but we only have male dogs.</center></b>'
 
 				act 'Buy a dog':
 					cla
@@ -33,7 +33,7 @@ if $ARGS[0] = 'start':
 					sobaka += 1
 					money -= 3000
 					'<center><img src="images/zoo/dog1.jpg" width = 600 height = 500 ></center>'
-					'<center><b>You bought a dog-Dalmatians.</center></b>'
+					'<center><b>You bought a Dalmatian dog.</center></b>'
 					$namesob = input ('I''ll call the dog ...')
 
 					act 'Move away from the counter':gt 'zoomagazine', 'start'
@@ -78,3 +78,4 @@ if $ARGS[0] = 'start':
 end
 
 --- zoomagazine ---------------------------------
+

@@ -1,32 +1,32 @@
 # tanhouse
 $sexloc = $CURLOC
 gs 'stat'
-'<center><b>Apartment Thani</b></center>'
+'<center><b>Tanyas apartment</b></center>'
 '<center><img src="images/img/centr/house.jpg"></center>'
-'Tanya opens up and you quickly navigate to my room.'
+'Tanya opens up and quickly guides you to her room.'
 
 if tanpred = 0:
 	if tanya <= 50:
-		tanday = day
+		tanday = daystart
 		tanya += 3
-		'Neither giving you say a word she pushes you on the bed and rips clothes'
+		'Not giving you a chance to say a word, she pushes you on the bed and rips off clothes.'
 
 		act 'Sex':xgt 'lezbsex', 'var'
 	elseif tanya > 50 and vnesh <= 20:
-		tanday = day
+		tanday = daystart
 		tanya += 3
-		'Neither giving you say a word she pushes you on the bed and rips clothes'
+		'Not giving you a chance to say a word, she pushes you on the bed and rips off clothes.'
 
 		act 'Sex':xgt 'lezbsex', 'var'
 	elseif tanya > 50 and vnesh > 20:
-		'"<<$name>>, I very best idea, mother just fired guvernatku, let me suggest you take a stepfather, he pays good 25,000 rubles per month, and the business is in the morning to cook breakfast, evening dinner and tidy up a bit well, and you will live right here with us . "protorotorila Tanya.'
-		'"And where did you get that your stepfather take me, I used in this field did not work, " you asked.'
-		'"Believe me, if I say take it." Tanya smiled lasciviously'
+		'"<<$name>>, I have the very best idea, mother just fired our governess, let me suggest you to my stepfather, he pays good, 25,000 rubles per month. It''s really easy in the morning you cook breakfast, dinner in the evening and tidy up a bit as well, and you will live right here with us." Proclaims Tanya.'
+		'"And where did you get the idea that your stepfather would employ me? I''ve never worked in this field." You say.'
+		'"Believe me, if I say, he does it." Tanya smiles lasciviously.'
 
 		act 'Refuse':
 			cla
 			tanya = 0
-			'"I offer second time will not, do not want to be around me piss" Tanya furious pushes you out of the apartment.'
+			'"I will not offer a second time, if you do not want to be around me, piss off." Tanya furiously pushes you out of the apartment.'
 
 			act 'Leave':gt 'down'
 		end
@@ -37,8 +37,8 @@ if tanpred = 0:
 				cla
 				tanya += 5
 				tanpred = 1
-				'"Okay, but I first need to quit"'
-				'"So what are you waiting, already run" exclaimed happily Tanya'
+				'"Okay, but first I need to quit"'
+				'"So what are you waiting for? Go now, run." Exclaims Tanya, happily.'
 
 				act 'Leave':gt 'down'
 			elseif (work = 0 and tanwork = 0 and cheatWork = 0) or (tanwork = 0 and cheatWork = 1):
@@ -47,25 +47,25 @@ if tanpred = 0:
 				tanwork = 1
 				work = 1
 				'"Well, I agree."'
-				'"Go and tell ur stepfather" exclaimed happily Tanya'
+				'"I''ll go and tell my stepfather." Exclaims Tanya, happily.'
 
 				act 'Leave':gt 'tanhouse', 'sex'
 			end
 		end
 	end
 else
-	'"Well quit?"'
+	'"Well, have you quit?"'
 
 	if (work = 0 and tanwork = 0 and cheatWork = 0) or (tanwork = 0 and cheatWork = 1):
 		tanwork = 1
 		work = 1
-		'"Yeah, quit"'
-		'"Go and tell ur stepfather" exclaimed happily Tanya'
+		'"Yeah, I quit"'
+		'"I''ll go and tell my stepfather." Exclaims Tanya, happily.'
 
 		act 'Leave':gt 'tanhouse', 'sex'
 	else
 		'"Not yet"'
-		'"So what are you waiting, already run"'
+		'"So what are you waiting for? Go now, run."'
 
 		act 'Leave':gt 'down'
 	end
@@ -75,7 +75,7 @@ if $ARGS[0] = 'sex':
 	cla
 	*clr
 	'<center><img src="images/img/centr/tananal.jpg"></center>'
-	'Walking down the hall you hear the groans of one room, opened the door a little bit you can see Tanya standing apart buttocks against the wall with your hands until her stepfather fucks in the ass. So here''s how it achieves from his stepfather that he wants.'
+	'Walking down the hall you hear groans from one of the rooms, opening the door a little bit you can see Tanya standing with her hands against the wall buttocks spread as her stepfather fucks her in the ass. So that''s how she gets what she wants from her stepfather.'
 
 	act 'Leave':gt 'down'
 end
@@ -83,3 +83,4 @@ end
 act 'Leave':gt 'down'
 
 --- tanhouse ---------------------------------
+

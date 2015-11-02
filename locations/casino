@@ -11,3 +11,4 @@ act 'Back in the northern area':gt 'nord'
 !!if tobiQW < 1000:tobiQW = 1000
 
 --- casino ---------------------------------
+

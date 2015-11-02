@@ -10,3 +10,4 @@ act 'Sit at the table':gt 'igrkart1'
 act 'Move away from the table':gt 'cards'
 
 --- bldzh ---------------------------------
+

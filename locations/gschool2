@@ -167,7 +167,7 @@ $din_sekondparturok = {
 
 					grupNPC[18] = 100
 					gs 'stat'
-					'<center><img src="images/qwest/alter/ev/fiz.jpg"></center>'
+					'<center><img src="images/qwest/alter/Ev/fiz.jpg"></center>'
 					'You squatted before the coach next to Christine and kissed fizruka member. Then around his lips and began to suck. Christina squatted and looked like you were aspirated. Then she took the dick in his mouth and began to lick you a solid trunk and balls fizruka. Fizruk finally broke down and began to cum in her mouth Christina.'
 
 					act 'Leave':gt 'gschool'
@@ -219,7 +219,7 @@ $din_sekondparturok = {
 
 									grupNPC[18] = 100
 									gs 'stat'
-									'<center><img src="images/qwest/alter/ev/fiz.jpg"></center>'
+									'<center><img src="images/qwest/alter/Ev/fiz.jpg"></center>'
 									'You squatted before the coach next to Christine and kissed fizruka member. Then around his lips and began to suck. Christina squatted and looked like you were aspirated. Then she took the dick in his mouth and began to lick you a solid trunk and balls fizruka. Fizruk finally broke down and began to cum in her mouth Christina.'
 
 									act 'Leave':gt 'gschool'
@@ -281,8 +281,8 @@ $din_bigperemena = {
 
 		act 'Go with Katja':
 			cls
-			gs'stat'
-			'<center><img src="images/qwest/alter/katja/petting.jpg" ></center>'
+			gs 'stat'
+			'<center><img src="images/qwest/alter/katja/petting.jpg"></center>'
 			'Katja brought you into a small room where it was stored inventory for cleanup. She barely closed the door immediately dug into your lips on my lips and whispered passionately "<<$name>>, I want you."'
 
 			act 'Lick Katja':
@@ -294,7 +294,7 @@ $din_bigperemena = {
 				KatjaSlut += 1
 				KatjaHorny = 0
 				gs 'stat'
-				'<center><img src="images/qwest/alter/katja/lesbian.jpg" ></center>'
+				'<center><img src="images/qwest/alter/katja/lesbian.jpg"></center>'
 				'You sat on his haunches and Kate lifted her skirt and pulled down pants. You nuzzled into her crotch and began to caress his tongue deftly tiny clitoris Katie ,Soon Kate moaned and clutched your hair cum.'
 				dynamic $din_sekondparturok
 			end
@@ -380,7 +380,7 @@ $din_bigperemena = {
 					swallow += 1
 					sub += 1
 					gs 'stat'
-					'<center><img src="images/qwest/alter/Ev/toiletBJ2.jpg" ></center>'
+					'<center><img src="images/qwest/alter/Ev/toiletBJ2.jpg"></center>'
 					'You obediently sat down on his haunches and the guy ran his purple head you lips. You wrapped around his own <<$liptalk3>> hard cock and started to suck his hard cock absorbing into his mouth. After a while the man groaned and you feel like a warm jet of sperm hit you in the mouth. that would not choke you immediately started to swallow sperm and dosasyvat member. Finally went limp dick and a guy hid in his pants.'
 					dynamic $din_sekondparturok
 				end
@@ -541,3 +541,4 @@ if hour <= 8:
 end
 
 --- gschool2 ---------------------------------
+

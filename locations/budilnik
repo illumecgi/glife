@@ -18,9 +18,9 @@ if $ARGS[0] = 'start':
 	'<center><b><a href="exec:gt ''budilnik'', ''4''">4</a> <a href="exec:gt ''budilnik'', ''5''">5</a> <a href="exec:gt ''budilnik'', ''6''">6</a></b></center>'
 	'<center><b><a href="exec:gt ''budilnik'', ''7''">7</a> <a href="exec:gt ''budilnik'', ''8''">8</a> <a href="exec:gt ''budilnik'', ''9''">9</a></b></center>'
 	'<center><b><a href="exec:gt ''budilnik'', ''0''">0</a></b></center>'
-	'<center><b><a href="exec:gt ''budilnik'', ''Reset''">Reset</a> <a href="exec:gt ''budilnik'', ''Time''">Set the time</a></b></center>'
+	'<center><b><a href="exec:gt ''budilnik'', ''Reset''">Reset</a> <a href="exec:gt ''budilnik'', ''Time''">Set Alarm</a></b></center>'
 
-	act 'Put Service':
+	act 'Leave':
 		cla
 		bud1 = 0
 		bud2 = 0
@@ -50,9 +50,9 @@ if $ARGS[0] = 'Time':
 	if timer > 23:timer = 0
 	if timerM > 60:timerM = 0
 
-	'Clock wound <<timer>> hours <<timerM>> minutes.'
+	'Alarm set for <<timer>> hours <<timerM>> minutes.'
 
-	act 'Service put in place':
+	act 'Confirm':
 		cla
 		gt 'budilnik', 'fin'
 	end
@@ -202,3 +202,4 @@ if $ARGS[0] = 'fin':
 end
 
 --- budilnik ---------------------------------
+

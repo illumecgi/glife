@@ -31,7 +31,7 @@ act 'Watch a movie':
 		else
 			gt 'kinosvid', '3'
 		end
-	elseif $telsob = 'Katja':
+	elseif $telsob = 'Kate':
 		kat += 1
 
 		if kat >= 20:
@@ -274,3 +274,4 @@ if $ARGS[0] = '3':
 end
 
 --- kinosvid ---------------------------------
+

@@ -17,12 +17,12 @@ if $ARGS[0] = 'start':
 	if komp = 1:'<a href="exec:gt ''Komp'', ''start''">Computer</a>.'
 
 	act 'In the corridor':
-		if nude = 0:
+		if $clothingworntype ! 'nude':
 			odkomp = 0
 			minut += 5
 			gt 'dorm', 'korr'
 		else
-			'You need to dress'
+			'You need to get dressed.'
 		end
 	end
 
@@ -58,8 +58,7 @@ if $ARGS[0] = 'start':
 	end
 
 	act 'Cupboard':
-		obLoker = 1
-		gt 'loker', 'start'
+		gt 'clothing', 'view_clothing_list', 'wardrobe'
 	end
 
 	act 'In bed':
@@ -68,7 +67,7 @@ if $ARGS[0] = 'start':
 	end
 
 	if tanga = 0 and clrbelo > 0:
-		act 'Wear underwear':
+		act 'Wear Underwear':
 			cla
 			tanga = 1
 			gt 'obroom', 'start'
@@ -159,3 +158,4 @@ if $ARGS[0] = 'vika':
 end
 
 --- obroom ---------------------------------
+

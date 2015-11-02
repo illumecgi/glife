@@ -35,7 +35,7 @@ if $ARGS[0] = '1':
 	bcolor = rgb(255, 255, 255)
 	lcolor = rgb(106, 90, 205)
 	'<center><b><font color="maroon">Bank</font></b></center>'
-	'<center><img src="images/etogame/bank1.jpg"></center>'
+	'<center><img src="images/etogame/bank.jpg"></center>'
 
 	if bankfond > 0:'Personal account <<bankfond>> rubles'
 
@@ -82,3 +82,4 @@ if $ARGS[0] = '1':
 end
 
 --- restaurant ---------------------------------
+

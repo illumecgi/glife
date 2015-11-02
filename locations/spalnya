@@ -8,19 +8,19 @@ gs 'stat'
 '<center><img src="images/img/centr/spaln.jpg"></center>'
 if komp = 1:'<a href="exec:gt ''Komp'', ''start''">Computer</a>.'
 
-act 'In the corridor':gt 'house'
+act 'Goto the corridor':gt 'house'
 
-act 'Learn lesson (2:00)':
+act 'Study (2:00)':
 	cla
 	minut += 120
 	intel += 1
-	'You prozanimavshis two hours seems something in your head postponed'
+	'You spend two hours studying and now feel a little smarter.'
 
 	act 'Finish':gt 'spalnya'
 end
 
 if student > 0 and kursovik < 100:
-	act 'Write kursovik (1:00)':
+	act 'Write course work (1:00)':
 		cla
 		*clr
 		minut += 60
@@ -30,18 +30,18 @@ if student > 0 and kursovik < 100:
 
 		manna -= 10
 		'<center><img src="images/etogame/study.jpg"></center>'
-		'You sat on the course work and prepared her <<kursovik>> percent.'
+		'You work on your course work and have now completed <<kursovik>> percent.'
 
 		act 'Finish':gt 'spalnya'
 	end
 end
 
 act 'Mirror':gt 'mirror', 'start'
-act 'Cupboard':gt 'loker', 'start'
-act 'In bed':gt 'bed', 'start'
+act 'Cupboard':gt 'clothing', 'view_clothing_list', 'wardrobe'
+act 'Your bed':gt 'bed', 'start'
 
 if tanga = 0 and clrbelo > 0:
-	act 'Wear underwear':
+	act 'Wear Underwear':
 		cla
 		tanga = 1
 		gt 'spalnya'
@@ -55,3 +55,4 @@ else
 end
 
 --- spalnya ---------------------------------
+

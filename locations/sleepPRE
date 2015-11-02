@@ -11,7 +11,7 @@ lcolor = rgb(106, 90, 205)
 $name = 'Svetlana'
 $surname = 'Lebedev'
 !!!0.2.6 addition
-$nickname = 'Svetski'
+$nickname = 'Sveta'
 !!!
 age = 18
 vidage = 16
@@ -55,9 +55,7 @@ hcol = 1
 vidageday = 300
 housrA = 1
 sarafan[1] = 1
-nude = 0
 sarafanH[1] = 30
-odevnesh = 0
 lobok = 3
 leghair = 3
 mop = 1
@@ -65,24 +63,20 @@ housr = 1
 tanga = 1
 clr
 gs 'stat'
-numdres = 1
-odetjeans = 1
-numdress = 1
 jeans[1] = 1
 jeansH[1] = 100
 jeansB[1] = 70
+gs 'clothing', 'wear', 'jeans', 1
 cltarelka = 1
 fairy = 10
 eda = 5
 clrbelo = 2
 poroshok = 5
 shampoo = 5
-nude = 0
-$nude = 'In the corridor'
 clr
 gs 'stat'
 '<center><img src="images/picPRE/karinPRE.jpg"></center>'
-'"You''re awake? Rather woke up." Karin said looking into your eyes.'
+'"You''re awake?." Karin says looking into your eyes.'
 
 act 'Look at yourself':
 	cla
@@ -91,21 +85,22 @@ act 'Look at yourself':
 	clr
 	gs 'stat'
 	'<center><img src="images/picPRE/povPRE.jpg"></center>'
-	'"Fuck, " you said and shut his mouth. Voice was too feminine. Karin giggled. "The first time I changed the gender of the person. Therefore waited with curiosity how you''d react to his new body. Masterpiece. Course in something I miscalculated, for example due to sharply increased hormonal status you went pimples on the face. Failed to change the eyes and lips, but your body will be much easier to change than the body of an ordinary woman, you will be easier to gain weight, lose weight, can change facial features. Nothing, you live now in the women''s clothing. Yes, you are quite normal woman, you can fly. "'
-	'You angrily looked at Karin, "You think I''m here and so turned into a woman and immediately ran to find eldu which can jump? I''m still the same old tridtsatipyati man."'
-	'"Well, yes. Do not argue." Karin agreed. "Actually, it''s your life and only you decide what to do with it. Yeah, I already took care of alibi. Today you in his car fell into the pit and died, now just on the TV show." With these words, Karin pressed a button on the remote and the TV has earned.'
-	$name = input("What is your first name?")
+	'"Fuck," you say and immediately shut your mouth again. Your voice ... it''s so feminine. Karin giggles. 
+	"This is the first time I changed the gender of a person, therefore I just HAD to see you reaction. Totally worth it. But you turned out beautiful. For a first try that is of course. I miscalculated something, for example due to sharp hormonal change you got bad acme on the face. Failed to change your eyes and lips, but on the bright side, your body will change much faster than the one of a natural born woman. That means it will be easy to gain and lose weight and change facial features. All in all you turned your quite well. By the way, your new ''equipment'' down there is fully functional, so if you don''t want to be a mommy, you should think about taking contraceptives."'
+	'You angrily look at Karin, "So you think I''m a complete woman? On the outside I''ll look like one, but guess what, I''m still the 34-years-old me."'
+	'"Well, yes. Do won''t argue about that." Karin agrees. "It''s your life and your decisions what you are going to do with it, but for the time being, you cannot go back to your old life, so deal with it. On a side note, I already took care of alibi. Today Michael crashed his car into the pit and died, now just on the TV news." With these words, Karin pressed the remote button to turn on the TV.'
+	$name = input("What is your first name? (Leave blank for default)")
 
 	if $name = '':$name = 'Svetlana'
 
-	$surname = input("What is your last name?")
+	$surname = input("What is your last name? (Leave blank for default)")
 
 	if $surname = '':$surname = 'Lebedev'
 
 	!!!0.2.6 addition
-	$nickname = input("What is your nickname?")
+	$nickname = input("What is your nickname? (Note: If you chose a custom name, you have to enter something here!)")
 
-	if $nickname = '':$nickname = 'Svetski'
+	if $nickname = '':$nickname = 'Sveta'
 	!!!
 
 	act 'Watch TV':
@@ -115,9 +110,10 @@ act 'Look at yourself':
 		clr
 		gs 'stat'
 		'<center><img src="images/picPRE/car2.jpg"></center>'
-		'On TV is reporting that as a businessman who arrived on a mission yesterday afternoon breaking the fence fell into the pit. Businessman died in hospital without regaining consciousness.'
-		'You dumbfounded looked at Karin. She smiled enigmatically, "Well, I still magician and something that I can. Toby Now even lose track forever. Whoever killed in BMW, at the time of death was perfect your copy of Energy and to fillings in his teeth. Yeah, here''s the documents on apartment, passport, passport. Now you <<$name>> <<$surname>>, 18 years old girl in the city nobody knows you, but you at least have an apartment in the property. This is a gift to you from Juugo. Now get up, you''ve got to go to his new home and equip a new life. "'
-		'Entered the room Juugo redhead with a tattoo on his face. He looked at you and said, "I''ll take you."'
+		'On TV there is a news report about about a businessman, who drove his car into a construction hole. The man died later in hospital without regaining consciousness.'
+		'You look at Karin, with a bewildered look. She has an enimatic smile, "Well, I''m still a magician and that''s something that I can do. Toby has definitely lost the trail. The body that ''died'' behind the wheel of the BMW was a perfect copy of your old self, from your absorbed amulet energy down to the placement of every single hair."' 
+		'"Anyways, here are your new legal documents, including a new passport. Starting today, you are <<$name>> <<$surname>>, 18 years old, female and live in the city. Nobody knows you, but you at least have an apartment to call home. This is a gift to you from Juugo. Here are the keys to it. Now get up, you''ve got to go to your new home and start a new life."'
+		'Juugo, the redhead with a tattoo on his face entered the room. He looked at you and said, "I''ll take you."'
 
 		act 'Go with Juugo':
 			cla
@@ -126,9 +122,12 @@ act 'Look at yourself':
 			clr
 			gs 'stat'
 			'<center><img src="images/picPRE/jugoPRE.jpg"></center>'
-			'Juugo silently carried you to the garage and there you sat in a huge black jeep. Juugo sat behind the wheel and raced around the track. You silently speculated about what you do now.'
-			'Juugo is not looking at you said. "I''m sorry I beat you so much. I can not control himself during a fight. You were a little grow larger and for a second I thought you might be dangerous for me, so I hit with full force." You looked at him. "Forget it, listen Juugo that I do now?" Juugo nodded and said, "Well, I would advise you to start to buy food at the store, all sorts of washing powders, detergents, dish and laundry. The apartment has a little something of course, but not enough. There''s even no TV. Then get a job. Podaleku not from your house there is a restaurant, she works with 12, every day except Monday. approach a master, he will take the job for you, it just requires a waitress. Do not forget to monitor the health status, mood and mind. Now your mind is very weak, you can not survive and go crazy. You need to eat well, sleep regularly, have fun, do not generally become despondent, but then ended his days in a madhouse. Karin We do not seek, you will not find in the first place, and secondly, if you give us need you, we ourselves will find you. "'
-			'You arrived at the five-story home Khrushchev era buildings. Juugo stopped the car and pointed a finger at the entrance. "Your apartment number 69, are the key. Go. Thing to remember is you it''s not unusual, but not give up, keep an eye on the health and life will improve. How ever I look in on you."'
+			'Juugo silently takes you to the garage and you entered the black jeep. Juugo got behind the wheel and drives you into the city. You silently speculate about what to do now.'
+			'After a few minutes, while keeping his eyes on the road, Juugo speaks. "I''m sorry I beat you up. I have trouble controlling myself during a fight. You had a larger figure and for a second I thought you might be dangerous for me, so I ended up hitting with full force."'
+			'You look at him. "Forget it. Listen Juugo... what do I do now?"'
+			'Juugo nods and says, "Well, I would advise you to start to buy food, all sorts of washing powders, laundry detergents and dishes. There are very few supplies already in the apartment, but they''ll only last you a day or two. There''s no TV either. Then get a job. Not far from your new home is a small café, if I remember correctly there was a vacant waitress position not long too ago. You should talk to the owner of the café about the job. Do not forget to monitor your health, keep your mood up and have a clear mind."'
+			'"Now your mind is very weak, if you don''t take care of yourself you will go crazy. You need to eat well, sleep regularly, have fun, do not generally become depressive or else you end up in a madhouse. Don''t go looking for Karin, you will not find her anyway, and secondly, if we need to contact, we will find you."'
+			'You arrived at the five-story home Khrushchev era buildings. Juugo stopped the car and pointed a finger at the entrance. "Your apartment number 69, Karin already gave you the key. Now go. Remember don''t just give up, not everyone gets an entirely new chance at life. Karina and me will keep an eye out for you."'
 
 			act 'Out of the car':
 				cla
@@ -145,3 +144,4 @@ act 'Look at yourself':
 end
 
 --- sleepPRE ---------------------------------
+

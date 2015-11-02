@@ -111,12 +111,12 @@ if $ARGS[0] = 'start':
 		end
 		!!
 
-		if klisma = 1 and klismaday ! day:
+		if klisma = 1 and klismaday ! daystart:
 			act 'Give yourself an enema (0:05)':
 				cla
 				*clr
 				minut += 5
-				klismaday = day
+				klismaday = daystart
 				klismaday1= 1
 				'<center><img src="images/picV/klisma.jpg"></center>'
 				'You put yourself an enema and clean intestines, now your ass is ready for anal sex.'
@@ -166,7 +166,7 @@ if $ARGS[0] = 'start':
 
 				if anus < 30:anus += 5
 
-				'<center><img src="images/etogame/analplug.jpg"></center>'
+				'<center><img src="images/body/analplug.jpg"></center>'
 
 				if butpluguse > 0:'You bent over and inserted the butt plug.'
 				if butpluguse = 0:butpluguse = 1 & '"If I don''t use it then why did I buy it!" you thought. You decided to take a closer look while thinking, "It is necessary to start developing my ass so I could have great adventures someday, you could even say a huge and thick adventures with crimson heads, uh, now I got carried away." You scratched your head. Then you directed it in your ass, it was a bit painful at first, but as soon as the widest part was plunged into the murky depths of your anus it became easier to push it all the way.'
@@ -184,8 +184,9 @@ if $ARGS[0] = 'start':
 
 				if anus < 30:anus += 1
 
-				'<center><img src="images/etogame/analplug.jpg"></center>'
-				'You bent over and took out the butt plug.' !!0.2.6: Removed unneccessary var check
+				'<center><img src="images/body/analplug.jpg"></center>'
+
+				'You bent over and took out the butt plug.' & !!0.2.6: Removed unneccessary var check
 
 				act 'Finish':gt 'vann', 'start'
 			end
@@ -251,7 +252,7 @@ if $ARGS[0] = 'start':
 
 					act 'Get out and get dressed':gt 'vann', 'fin'
 				end
-			elseif horny >= 40 and hormy < 90:
+			elseif horny >= 40 and horny < 90:
 				act 'Send shower pussy':
 					cla
 					*clr
@@ -606,3 +607,4 @@ if $ARGS[0] = 'v4':
 end
 
 --- vann ---------------------------------
+

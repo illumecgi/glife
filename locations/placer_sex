@@ -37,7 +37,7 @@ elseif dormrape = 1:
 
 	gs 'stat'
 
-	if ciklkm > 0:jump'markdormrape'
+	if ciklkm > 0:jump 'markdormrape'
 
 	'Finally it''s all over, guys got dressed and left the room. You sluggishly began to brush up.'
 
@@ -45,3 +45,4 @@ elseif dormrape = 1:
 end
 
 --- placer_sex ---------------------------------
+

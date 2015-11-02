@@ -1,5 +1,5 @@
 # gtelefon
-boyinday[numnpcboy] = day
+boyinday[numnpcboy] = daystart
 Gcall = 0
 minut += 3
 gs 'stat'
@@ -48,3 +48,4 @@ if GvstreBoy = 0:
 end
 
 --- gtelefon ---------------------------------
+

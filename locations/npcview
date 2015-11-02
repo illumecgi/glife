@@ -2,9 +2,12 @@
 '<center><b><<$nikname[i]>></b></center>'
 'rating <<rating[i]>>'
 
+! WD: Uninitialised ~ 'winw', 'lossw', 'draww'
+!{
 if i > 0:'record <<win[i]>> Win - <<loss[i]>> lesions - <<draw[i]>>draws <<SubWin[i]>> wins by submission/<<SubLoss[i]>> lesions surrender'
-if i = 0:'record <<winw[i]>> Win - <<lossw[i]>> lesions - <<draww[i]>>draws <<SubWin[i]>> wins by submission/<<SubLoss[i]>> lesions surrender'
-
+if i = 0:'record <<win[i]>> Win - <<loss[i]>> lesions - <<draw[i]>>draws <<SubWin[i]>> wins by submission/<<SubLoss[i]>> lesions surrender'
+}
+'record <<win[i]>> Win - <<loss[i]>> lesions - <<draw[i]>>draws <<SubWin[i]>> wins by submission/<<SubLoss[i]>> lesions surrender'
 ''
 ''
 'power <<musle[i]>>'
@@ -17,6 +20,7 @@ if i = 0:'record <<winw[i]>> Win - <<lossw[i]>> lesions - <<draww[i]>>draws <<Su
 'Protective equipment <<Zteh[i]>>'
 ''
 
+! WD: Uninitialised ~ 'porno'
 if slut[i] > 0 and porno = 1:'Packed with a brand whore.'
 
 ''
@@ -51,3 +55,4 @@ if i ! 1:
 end
 
 --- npcview ---------------------------------
+

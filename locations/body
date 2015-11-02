@@ -1,31 +1,31 @@
 # body
 if analplugIN = 0:
-	if anus = 0:anpic = 0 & $anus = 'You have a virgin <a href="exec:view''images/picb/0.jpg''">anus</a>.'
-	if anus > 0 and anus <= 5:anpic = 1 & $anus = 'Your <a href="exec:view''images/picb/1.jpg''">anus</a> is barely used, but you wouldn''t really see that.'
-	if anus > 5 and anus <= 10:anpic = 2 & $anus = 'Your <a href="exec:view''images/picb/2.jpg''">anus</a> has the shape of an asterisk.'
-	if anus > 10 and anus <= 15:anpic = 3 & $anus = 'Your <a href="exec:view''images/picb/3.jpg''">anus</a> is now slightly parted, has it has been used quite often.'
-	if anus > 15 and anus <= 25:anpic = 4 & $anus = 'Your <a href="exec:view''images/picb/4.jpg''">anus</a> look like a wide hole, anyone will definitely think that the only thing you do is anal sex.'
-	if anus > 25 and anus <= 35:anpic = 5 & $anus = 'Your <a href="exec:view''images/picb/5.jpg''">anus</a> doesn''t fully close on its own anymore. You could put a fist through it and it wouldn''t stretch at all.'
-	if anus > 35:anpic = 6 & $anus = 'Your <a href="exec:view''images/picb/6.jpg''">anus</a> is almost completely wrecked. Even with conscious effort it''s hard to close it.' & $anustipe = 'destroyed'
+	if anus = 0:anpic = 0 & $anus = 'You have a virgin <a href="exec:view''images/body/0.jpg''">anus</a>.'
+	if anus > 0 and anus <= 5:anpic = 1 & $anus = 'Your <a href="exec:view''images/body/1.jpg''">anus</a> is barely used, but you wouldn''t really see that.'
+	if anus > 5 and anus <= 10:anpic = 2 & $anus = 'Your <a href="exec:view''images/body/2.jpg''">anus</a> has the shape of an asterisk.'
+	if anus > 10 and anus <= 15:anpic = 3 & $anus = 'Your <a href="exec:view''images/body/3.jpg''">anus</a> is now slightly parted, has it has been used quite often.'
+	if anus > 15 and anus <= 25:anpic = 4 & $anus = 'Your <a href="exec:view''images/body/4.jpg''">anus</a> look like a wide hole, anyone will definitely think that the only thing you do is anal sex.'
+	if anus > 25 and anus <= 35:anpic = 5 & $anus = 'Your <a href="exec:view''images/body/5.jpg''">anus</a> doesn''t fully close on its own anymore. You could put a fist through it and it wouldn''t stretch at all.'
+	if anus > 35:anpic = 6 & $anus = 'Your <a href="exec:view''images/body/6.jpg''">anus</a> is almost completely wrecked. Even with conscious effort it''s hard to close it.' & $anustipe = 'destroyed'
 else
-	$anus = 'Your <a href="exec:view''images/picb/analplug.jpg''">anus</a> is currently filled with your butt plug.'
+	$anus = 'Your <a href="exec:view''images/body/analplug.jpg''">anus</a> is currently filled with your butt plug.'
 end
 
-if throat = 0:thpic = 0 & $throat = 'You chaste <a href="exec:view''images/picb/th0.jpg''">mouth</a>.' & $throattipe = 'absolutely unusual'
-if throat > 0 and throat <= 5:thpic = 1 & $throat = 'You inexperienced <a href="exec:view''images/picb/th1.jpg''">mouth</a>.' & $throattipe = 'virgin'
-if throat > 5 and throat <= 10:thpic = 2 & $throat = 'You work her mouth and sensitive <a href="exec:view''images/picb/th2.jpg''">throat</a>.' & $throattipe = 'sensitive'
-if throat > 10 and throat <= 15:thpic = 3 & $throat = 'You have experienced mouth and slightly stretched <a href="exec:view''images/picb/th3.jpg''">throat</a>.' & $throattipe = 'slightly stretched'
-if throat > 15 and throat <= 25:thpic = 4 & $throat = 'You capacious mouth and trained <a href="exec:view''images/picb/th4.jpg''">throat</a>.' & $throattipe = 'stretched'
-if throat > 25 and throat <= 35:thpic = 5 & $throat = 'Your deep tin <a href="exec:view''images/picb/th5.jpg''">throat</a> may adopt any member.' & $throattipe = 'tinned'
-if throat > 35:thpic = 6 & $throat = 'You completely absent gag reflex, Your razebannaya <a href="exec:view''images/picb/th6.jpg''">throat</a> like a bottomless pit' & $throattipe = 'bottomless'
+if throat = 0:thpic = 0 & $throat = 'You chaste <a href="exec:view''images/body/th0.jpg''">mouth</a>.' & $throattipe = 'absolutely unusual'
+if throat > 0 and throat <= 5:thpic = 1 & $throat = 'You inexperienced <a href="exec:view''images/body/th1.jpg''">mouth</a>.' & $throattipe = 'virgin'
+if throat > 5 and throat <= 10:thpic = 2 & $throat = 'You work her mouth and sensitive <a href="exec:view''images/body/th2.jpg''">throat</a>.' & $throattipe = 'sensitive'
+if throat > 10 and throat <= 15:thpic = 3 & $throat = 'You have experienced mouth and slightly stretched <a href="exec:view''images/body/th3.jpg''">throat</a>.' & $throattipe = 'slightly stretched'
+if throat > 15 and throat <= 25:thpic = 4 & $throat = 'You capacious mouth and trained <a href="exec:view''images/body/th4.jpg''">throat</a>.' & $throattipe = 'stretched'
+if throat > 25 and throat <= 35:thpic = 5 & $throat = 'Your deep tin <a href="exec:view''images/body/th5.jpg''">throat</a> may adopt any member.' & $throattipe = 'tinned'
+if throat > 35:thpic = 6 & $throat = 'You completely absent gag reflex, Your razebannaya <a href="exec:view''images/body/th6.jpg''">throat</a> like a bottomless pit' & $throattipe = 'bottomless'
 
-if vagina = 0:puspic = 0 & $vagina = 'You virgin <a href="exec:view''images/picb/vag0.jpg''">membrane</a>.' & $vaginatipe = 'virgin'
-if vagina > 0 and vagina <= 5:puspic = 1 & $vagina = 'Your pussy <a href="exec:view''images/picb/vag1.jpg''">pussy</a> has a tiny hole.' & $vaginatipe = 'narrow'
-if vagina > 5 and vagina <= 10:puspic = 2 & $vagina = 'You close, similar to the slit <a href="exec:view''images/picb/vag2.jpg''">vagina</a>.' & $vaginatipe = 'close'
-if vagina > 10 and vagina <= 15:puspic = 3 & $vagina = 'You have a slightly stretched elastic <a href="exec:view''images/picb/vag3.jpg''">vagina</a>.' & $vaginatipe = 'tight'
-if vagina > 15 and vagina <= 25:puspic = 4 & $vagina = 'You have a well-developed <a href="exec:view''images/picb/vag4.jpg''">vagina</a>.' & $vaginatipe = 'developed'
-if vagina > 25 and vagina <= 35:puspic = 5 & $vagina = 'Between the legs you have not closed a hefty <a href="exec:view''images/picb/vag5.jpg''">dyren</a>' & $vaginatipe = 'broken-down'
-if vagina > 35:puspic = 6 & $vagina = 'The fact that you have in place pussy, more like <a href="exec:view''images/picb/vag6.jpg''">well</a> with deep Mariana Trench' & $vaginatipe = 'dimensionless'
+if vagina = 0:puspic = 0 & $vagina = 'You virgin <a href="exec:view''images/body/vag0.jpg''">membrane</a>.' & $vaginatipe = 'virgin'
+if vagina > 0 and vagina <= 5:puspic = 1 & $vagina = 'Your pussy <a href="exec:view''images/body/vag1.jpg''">pussy</a> has a tiny hole.' & $vaginatipe = 'narrow'
+if vagina > 5 and vagina <= 10:puspic = 2 & $vagina = 'You close, similar to the slit <a href="exec:view''images/body/vag2.jpg''">vagina</a>.' & $vaginatipe = 'close'
+if vagina > 10 and vagina <= 15:puspic = 3 & $vagina = 'You have a slightly stretched elastic <a href="exec:view''images/body/vag3.jpg''">vagina</a>.' & $vaginatipe = 'tight'
+if vagina > 15 and vagina <= 25:puspic = 4 & $vagina = 'You have a well-developed <a href="exec:view''images/body/vag4.jpg''">vagina</a>.' & $vaginatipe = 'developed'
+if vagina > 25 and vagina <= 35:puspic = 5 & $vagina = 'Between the legs you have not closed a hefty <a href="exec:view''images/body/vag5.jpg''">dyren</a>' & $vaginatipe = 'broken-down'
+if vagina > 35:puspic = 6 & $vagina = 'The fact that you have in place pussy, more like <a href="exec:view''images/body/vag6.jpg''">well</a> with deep Mariana Trench' & $vaginatipe = 'dimensionless'
 !!!!!!!!!!!!!!!!
 !!!!!SIZE AND WEIGHT!!!
 !!!!!!!!!!!!!!!!
@@ -92,16 +92,19 @@ if hairlength <= 80:
 	hscrunchw = 0
 	hpingripw = 0
 	curly = 0
+	hbraids = 0
+	if hairlength <= 30 and hbangs = 1:hbangs = 0
 end
 
-if hairlength > 400:hpingripw = 0
+if hairlength > 400:
+	hpingripw = 0
+	hbraids = 0
+end
 
 if hairlength > 400 and hpigtail >= 1:
 	hscrunchw = 0
 	hpigtail = 0
 end
-
-if hairlength <= 80:hbraids = 0
 
 if hbraids >= 1:
 	curly = 0
@@ -157,7 +160,6 @@ if hairlength > 400:$hair = 'You have a very long <<$hcol>> hair<<$hbangs>>, tha
 !!if hcol = 3:$hair = 'You have a <<$hapri>> <<$curly>>, blonde hair.'
 !!! Maruda Hair Mod
 
-if lip > 4:lip = 4
 if lip > 4:lip = 4
 if lip < 0:lip = 0
 
@@ -231,17 +233,30 @@ if leghair > 5:legkoef = 0 & $leghair = 'You have long hair standing out on your
 if pirsG = 1:$pirsG = 'There are several piercings hanging from the lips of your vagina.'
 if pirsG = 0:$pirsG = ''
 
-if lobok <= 0:lobkoef = 3 & $lobok = 'You have a smoothly <a href="exec:view''images/picb/pussy.jpg''">shaved pussy</a>. <<$pirsG>>'
-if lobok > 0 and lobok <= 2:lobkoef = 0 & $lobok = 'You have a light but visible hair above your <a href="exec:view''images/picb/spussy.jpg''">crotch</a>. <<$pirsG>>'
-if lobok > 2:lobkoef = 0 & $lobok = 'You have a full delta of thick <a href="exec:view''images/picb/hpussy.jpg''">pubic hair</a>. <<$pirsG>>'
+! WD: Move missing Image ~ "pussy.jpg" from "images\picb" to "images\Body"
+if lobok <= 0:lobkoef = 3 & $lobok = 'You have a smoothly <a href="exec:view''images/body/pussy.jpg''">shaved pussy</a>. <<$pirsG>>'
+if lobok > 0 and lobok <= 2:lobkoef = 0 & $lobok = 'You have a light but visible hair above your <a href="exec:view''images/body/spussy.jpg''">crotch</a>. <<$pirsG>>'
+
+! WD: Move missing Image ~ "hpussy.jpg" from "images\picb" to "images\Body"
+if lobok > 2:lobkoef = 0 & $lobok = 'You have a full delta of thick <a href="exec:view''images/body/hpussy.jpg''">pubic hair</a>. <<$pirsG>>'
 
 bodytipe = bedra - talia
-
+! WD: Scale bodykoef
+!{
 if bodytipe < 20:bodykoef = 0
 if bodytipe >= 20 and bodytipe < 25:bodykoef = 2
 if bodytipe >= 25 and bodytipe < 30:bodykoef = 4
 if bodytipe >= 30 and bodytipe < 35:bodykoef = 8
 if bodytipe >= 35:bodykoef = 4
+}!
+if bodytipe >= 36:
+	set bodykoef = 8 - (bodytipe - 36) / 3
+elseif bodytipe >= 30:
+	set bodykoef = 8
+else
+	set bodykoef = (bodytipe - 15) / 3
+end
+if bodykoef < 0:set bodykoef = 0
 
 if tan > 0:
 	tanKoef = 1
@@ -249,7 +264,9 @@ else
 	tanKoef = 0
 end
 
-if curly > 0:
+
+! WD: Add braids (Maruda Hair Mod) to bonus to vnesh
+if curly > 0 or hbraids > 0:
 	curlykoef = 1
 else
 	curlykoef = 0
@@ -333,3 +350,4 @@ if musle >= salo:
 	$fat = $body
 
 --- body ---------------------------------
+

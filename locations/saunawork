@@ -99,12 +99,12 @@ act 'Sit on the couch (1:00)':
 	act 'Leave':gt $curloc
 end
 
-if clenerSauna ! day:
+if clenerSauna ! daystart:
 	act 'Clean toilets (1:00)':
 		cla
 		*clr
 		minut += 60
-		clenerSauna = day
+		clenerSauna = daystart
 		manna -= 25
 		workDolg -= 100
 		sweat += 3
@@ -115,12 +115,12 @@ if clenerSauna ! day:
 	end
 end
 
-if clenerSauna2 ! day:
+if clenerSauna2 ! daystart:
 	act 'Scrubbing floors (1:00)':
 		cla
 		*clr
 		minut += 60
-		clenerSauna2 = day
+		clenerSauna2 = daystart
 		manna -= 25
 		workDolg -= 100
 		sweat += 3
@@ -163,7 +163,7 @@ act 'Take a shower (0:15)':
 
 			act 'Get out and get dressed':gt $curloc
 		end
-	elseif horny >= 40 and hormy < 90:
+	elseif horny >= 40 and horny < 90:
 		act 'Send shower pussy':
 			cla
 			*clr
@@ -217,3 +217,4 @@ $saunabrit = {
 }
 
 --- saunawork ---------------------------------
+

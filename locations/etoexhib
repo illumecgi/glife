@@ -307,7 +307,7 @@ if $ARGS[0] = 'pos10':
 	*clr
 	minut += 30
 	horny += 10
-	temp = day
+	temp = daystart
 	etoexhib = 12
 	gs 'stat'
 	'<center><img src="images/etogame/dachabust.jpg"></center>'
@@ -324,7 +324,7 @@ if $ARGS[0] = 'pos11':
 	minut += 15
 	etoexhib = 13
 	horny += 10
-	temp = day
+	temp = daystart
 	gs 'stat'
 	'<center><img src="images/etogame/dachaex.jpg"></center>'
 	'You pretend to hang clothes to dry. You can see that through the mall on the site to swarm your neighbor Kuzmich and stole glances at you. Lightly knotted robe is not able to hide your appetizing forms. But, you do not hide them, and give your neighbor enjoy the beauty.'
@@ -358,7 +358,7 @@ if $ARGS[0] = 'pos12':
 		act 'Disagree':
 			cls
 			etoexhib = 15
-			temp = day
+			temp = daystart
 			gs 'stat'
 			'<center><img src="images/etogame/dachabust3.jpg"></center>'
 			'<font color="magenta">You:- While all do, do not get anything</font>.'
@@ -370,7 +370,7 @@ if $ARGS[0] = 'pos12':
 			cls
 			money -= 1500
 			etoexhib = 14
-			temp = day
+			temp = daystart
 			gs 'stat'
 			'<center><img src="images/etogame/dachabust3.jpg"></center>'
 			'Well, here''s a half. But in order for tomorrow morning is all finished.'
@@ -1292,7 +1292,7 @@ if $ARGS[0] = 'pos40':
 	if gor_dorm = 2:act 'Search commandant':gt 'comendant', 'pos3'
 	if gor_dorm >= 3:act 'Inspect the barn':gt 'etoexhib', 'pos43'
 
-	act 'Get_Away':gt'gorodok'
+	act 'Get_Away':gt 'gorodok'
 end
 
 if $ARGS[0] = 'pos41':
@@ -1316,7 +1316,7 @@ if $ARGS[0] = 'pos41':
 			poroshok -= 1
 			dirtbelo = 0
 			manna = manna - 10
-			'<center><img src="images/pic/stir.jpg"></center>'
+			'<center><img src="images/etogame/stir.jpg"></center>'
 			'You soaked clothes in the basin and poured the powder there, then you become a wash clothes, until it finally became clear.'
 
 			act 'Finish':gt 'etoexhib', 'pos41'
@@ -1361,7 +1361,7 @@ if $ARGS[0] = 'pos41':
 			'<center><img src="images/pics/wash5.jpg"></center>'
 			'You gave yourself a catlick, thus removing any traces of cum.'
 
-			act 'Finish'gt 'etoexhib', 'pos41'
+			act 'Finish':gt 'etoexhib', 'pos41'
 		end
 	end
 
@@ -1390,7 +1390,7 @@ if $ARGS[0] = 'pos41':
 			cumface = 0
 			minut += 15
 			gs 'stat'
-			'<center><img src="images/pic/facesp.jpg"></center>'
+			'<center><img src="images/etogame/facesp.jpg"></center>'
 			'You washed off your makeup.'
 
 			act 'Finish':gt 'etoexhib', 'pos41'
@@ -1502,7 +1502,7 @@ if $ARGS[0] = 'pos49':
 			poroshok -= 1
 			dirtbelo = 0
 			manna -= 10
-			'<center><img src="images/pic/stir.jpg"></center>'
+			'<center><img src="images/etogame/stir.jpg"></center>'
 			'You soaked clothes in the basin and poured the powder there, then you become a wash clothes, until it finally became clear.'
 
 			act 'Finish':gt 'etoexhib', 'pos41'
@@ -1547,7 +1547,7 @@ if $ARGS[0] = 'pos49':
 			'<center><img src="images/pics/wash5.jpg"></center>'
 			'You gave yourself a catlick, thus removing any traces of cum.'
 
-			act 'Finish'gt 'etoexhib', 'pos41'
+			act 'Finish':gt 'etoexhib', 'pos41'
 		end
 	end
 
@@ -1576,7 +1576,7 @@ if $ARGS[0] = 'pos49':
 			cumface = 0
 			minut += 15
 			gs 'stat'
-			'<center><img src="images/pic/facesp.jpg"></center>'
+			'<center><img src="images/etogame/facesp.jpg"></center>'
 			'You washed off your makeup.'
 
 			act 'Finish':gt 'etoexhib', 'pos41'
@@ -1703,7 +1703,7 @@ if $ARGS[0] = 'pos51':
 		end
 
 		exit
-	elseif sosedQW > 0 and hour >= 16 and sosedDay ! day:
+	elseif sosedQW > 0 and hour >= 16 and sosedDay ! daystart:
 		sosedrand = rand(0, 100)
 
 		if sosedrand >= 70:'Your neighbor, <a href="exec:Gt ''Timofei''">Timothy</a>, is in the hallway. He''s smoking a cigarette, flicking the ashes into a jar.'
@@ -1712,14 +1712,14 @@ if $ARGS[0] = 'pos51':
 	act 'Go to the street':
 		cls
 
-		if sick <= 72 and nude = 0:
-			xgt 'street'
-		elseif nude = 0:
-			'<b><font color="red">YOU ARE TOO SICK TO WALK TO THE STREET.</font></b>'
+		if $clothingworntype = 'nude':
+			'<b><font color="red">You need to get dressed.</font></b>'
+			xgt $curloc
+		elseif sick > 72:
+			'<b><font color="red">You are too ill to walk to the street.</font></b>'
 			xgt $curloc
 		else
-			'<b><font color="red">YOU NEED TO GET DRESSED.</font></b>'
-			xgt $curloc
+			xgt 'street'
 		end
 	end
 
@@ -1816,7 +1816,7 @@ if $ARGS[0] = 'pos90':
 	cla
 	*clr
 	minut += 5
-	gs'stat'
+	gs 'stat'
 
 	'<center><img src="images/etogame/memory.jpg"></center>'
 	'Your school magazine.'
@@ -1830,13 +1830,13 @@ if $ARGS[0] = 'pos90':
 
 			'<center><img src="images/etogame/ptu_tech.jpg"></center>'
 			'Once, biting in the teacher asked you to Eugene A., chemistry teacher.'
-			'- Sveta, you are always so attractive. There must be a lot of you know men.'
-			'- I think I understand what you`re? Want to someone-introduce a.'
+			'- <<$nickname>>, you are always so attractive. There must be a lot of you know men.'
+			'- I think I understand what you''re? Want to someone-introduce a.'
 			'- Do not get me wrong, I know soon 30, and married so no one takes. Yes, men in our backwoods.'
 			'- I_See, do so skinte mail me your most beautiful pictures, a bit of erotica will not prevent. And I will find you a good husband on a dating site.'
 			'- erotica! oh, you think, it is necessary?'
 			'- it is necessary, men at the sight of a beautiful female body lose their heads.'
-			'- Ok, I`ll try to take a picture as possible erotic.'
+			'- Ok, I''ll try to take a picture as possible erotic.'
 
 			act 'Finish':gt 'etoexhib', 'pos24'
 		end
@@ -1885,3 +1885,4 @@ if $ARGS[0] = 'pos91':
 end
 
 --- etoexhib ---------------------------------
+

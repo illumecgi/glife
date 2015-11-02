@@ -4,12 +4,12 @@ if BeInJulMilHome = 0:BeInJulMilHome = 1
 gs 'stat'
 '<center><b><font color="maroon"><<$npcName[12]>> <<$npcSurName[12]>></font></b></center>'
 '<center><img src="images/qwest/alter/npc/12.jpg"></center>'
-'Not a bad room, with quality furnishings, forced by all the books.'
+'Nice room, with high quality furnishings, covered in books.'
 
 if lernHome ! 0:
-	'Julia arranges books on the table.'
+	'Julia arranges some books on the table.'
 
-	act 'Engage with Julia':
+	act 'Homework with Julia':
 		cls
 		minut += 60
 		!grupNPC[14] += 10
@@ -18,7 +18,7 @@ if lernHome ! 0:
 		intel += rand(1, 2)
 		gs 'stat'
 		'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
-		'You are within an hour engaged with Julia and lessons learned.'
+		'You spend an hour working with Julia and with her help, manage to learn quite a lot.'
 
 		act 'rest':gt $curloc
 	end
@@ -26,9 +26,9 @@ elseif lernHome = 0:
 	'Julia is sitting on her bed.'
 
 	if eatJulMilDay!daystart:
-		'Julia smiles at you and offers to eat together.'
+		'Julia smiles at you and offers you something to eat.'
 
-		act 'Go to the kitchen with Julia':
+		act 'Eat with Julia':
 			cls
 			minut += 15
 			fat += 3
@@ -37,7 +37,7 @@ elseif lernHome = 0:
 			eatJulMilDay = daystart
 			gs 'stat'
 			'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
-			'You went into the kitchen with Julia and ate together. Then went back to her room'
+			'You go into the kitchen with Julia and eat together. Then return to her room.'
 
 			act 'rest':gt $curloc
 		end
@@ -49,7 +49,7 @@ elseif lernHome = 0:
 		end
 	else
 		if wine = 1:
-			act 'Drink wine with Julia':
+			act 'Drink your wine with Julia':
 				cls
 				minut += 30
 				wine = 0
@@ -58,7 +58,7 @@ elseif lernHome = 0:
 				horny += 10
 				gs 'stat'
 				'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
-				'You offered Julia wine and she agreed. Julia brought a corkscrew and a bottle you have printed, then poured the wine by the glass. For half an hour you drank a bottle of wine along with Julia.'
+				'You offer Julia some wine and she agrees. Julia gets a corkscrew and opens your bottle, then pours the wine into glasses. For half an hour you drink the bottle of wine and gossip with Julia.'
 
 				act 'rest':gt $curloc
 
@@ -71,20 +71,22 @@ elseif lernHome = 0:
 
 						gs 'stat'
 						'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
-						'You began to discuss sexual topics with Julia'
+						'You steer the conversation towards sexual topics.'
 
 						if SexTalkJulia = 1:
-							'Suddenly.'
+							'Julia is a little embarrassed and it looks like you killed the conversation.'
 						elseif SexTalkJulia = 2:
-							'Julia while talking boasted that no longer a virgin.'
+							'Julia, trying to get involved boasts that she is no longer a virgin.'
 
-							act 'inquire details':
+							act 'Inquire':
 								cls
 								minut += 5
 								horny += 10
 								gs 'stat'
 								'<center><img src="images/qwest/alter/ev2/outdoor.jpg"></center>'
-								'Julia smiled mysteriously and began to tell "I went to summer camp to rest. There met a guy named Vova. We met with him the whole shift and at the end of the evening shift observed in the forest. There began obnimatsya, kiss, it was so nice, Besides. He first dropped me on my back, but there I was stuck between the blades of what that stone, she did not understand how was on all fours, so even without a skirt and panties. And then he walked me. It hurt. she know, it does not say a hymen is also part of the body, and then break it. If you honestly the first time I was just waiting for cancer when it all finally ends. Well at least it did not last long and the guy had finished on the ground."'
+								'Julia smiles mysteriously and begins to tell you, "My parents sent me to summer camp. There I met a guy named Vovka. He was a young counselor and at the end of the evening shift we found ourselves alone in the forest."'
+								'"There we began flirting and kissed, it was so nice. He first laid me on my back, but the ground was all rocky, so i asked him if I could kneel. He did not understand and removed my skirt and panties, before getting me on to all fours."'
+								'"Then he started having sex with me. It hurt. Noone tells you that your hymen is also part of the body, and it tears. Honestly, the first time I was just bent over waiting for it to end. Well at least it did not last long and the guy finished on the ground."'
 
 								act 'rest':gt $curloc
 							end
@@ -99,14 +101,16 @@ elseif lernHome = 0:
 								horny += 10
 								gs 'stat'
 								'<center><img src="images/qwest/alter/ev2/otrad.jpg"></center>'
-								'Julia smiled mysteriously and began to tell "Well. But I still managed to sleep with Vovka before leaving the camp. We afternoon when no one was in the bedroom waded along with Vovka, he again began to harass me. Then I undressed and lay on the bed, terribly afraid that will hurt again, but it was well tolerated, Only in the beginning was a bit painful, but it quickly passed. Although I was unable to be stimulated, I was afraid, Now that the detachment somebody logs in and sees us. but there were. After that. He is from the city, I have his telefonchik. But it''s not really him vstrechatsya."'
+								'Julia smiles mysteriously and begins to tell you, "Well. I still managed to sleep with Vovka before leaving the camp. One afternoon when no one was in the cabin I bumped into Vovka, again he began to harass me. He was cute though and I let him."'
+								'"I undressed and lay on the bed, terribly afraid that it would hurt again, but it was much better. In the beginning was a bit painful, but it quickly passed. Although I didn''t get stimulated, probably because I was afraid that somebody would come in and sees us."'
+								'"Noone did and we didn''t meet like that again. He is from the city, I have his telephone number, but it''s not really him I fancy."'
 
 								act 'rest':gt $curloc
 							end
 
 							exit
 						elseif SexTalkJulia = 4:
-							'Julia embarrassed and tells you "You''re such a funny girl <<$nickname>>. I''m with you myself am feeling absolutely no compulsion." She suddenly tilts her face to your wants and kiss you.'
+							'Julia is embarrassed and says, "You''re such a funny girl <<$nickname>>. I''m with you, just being myself and I feel this compulsion." She suddenly moves her face to yours wanting to kiss you.'
 
 							act 'Kiss Julia':
 								cls
@@ -114,7 +118,7 @@ elseif lernHome = 0:
 								horny += 20
 								gs 'stat'
 								'<center><img src="images/qwest/alter/ev2/julkiss.jpg"></center>'
-								'You kiss with Julia feeling her soft, smelling lips on her lips and her delicate nimble tongue gets into your mouth. Her hands gently hugs you and you chustvuete as she wraps her palms of your chest and begins to gently caress.'
+								'You kiss Julia, feeling her soft, sweet smelling lips on your lips and her delicate, nimble tongue explores inside your mouth. Her hands gently hug you and you sigh as she wraps her hands around your chest and begins to gently caress.'
 
 								act 'relax':
 									cls
@@ -122,9 +126,9 @@ elseif lernHome = 0:
 									horny += 20
 									gs 'stat'
 									'<center><img src="images/qwest/alter/ev2/jultit.jpg"></center>'
-									'Julia gets your chest and slowly lowered her kisses. Finally you chustvuete as she kisses and caresses your nipples breasts. Her fingers you climb between her legs pushing your panties.'
+									'Julia bares your chest and slowly lowers to her kisses. Finally you moan as she kisses and caresses your nipples. Her fingers climb between your legs, pushing your panties.'
 
-									act 'relax':
+									act 'relax further':
 										cls
 										minut += 15
 
@@ -135,16 +139,18 @@ elseif lernHome = 0:
 										orgasm += 1
 										gs 'stat'
 										'<center><img src="images/qwest/alter/ev2/julick.jpg"></center>'
-										'You Julia undressed and lay you on your back, Julia threw her leg over your head and buried his face between her legs you, while exposing you to their expiring crack. You touched tongue to juicy vagina and began licking her , chustvuya with the tongue Julia treat you between the legs. Soon you covered real fire and your body convulsed orgasm. Julia chustvuya your arousal and also finished her pussy convulsed start sokraschatsya front of your face, and her body pierced shiver.'
+										'You and Julia undress and you lay on your back, Julia throws her leg over your head and buries her face between your legs, while exposing you to her Budding flower.'
+										'You touch your tongue to her juicy vagina and begin licking, Julias tongue caresses you between the legs and soon you feel the fire spread and your body convulses in orgasm.'
+										'Julia, turned on by your arousal, also finishes. Her pussy convulses and soaks the front of your face, and her body shivers.'
 
 										act 'rest':gt $curloc
 									end
 								end
 
-								act 'Oh you Julia, leave_me_alone':dom += 1 & gt $curloc
+								act 'Tell Julia to leave you alone':dom += 1 & gt $curloc
 							end
 
-							act 'Oh you Julia, leave_me_alone':dom += 5 & gt $curloc
+							act 'Tell Julia to leave you alone':dom += 5 & gt $curloc
 
 							exit
 						end
@@ -161,10 +167,10 @@ elseif lernHome = 0:
 			JulMilBestFrend += 1
 			gs 'stat'
 			'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
-			'You talked to Julia about any nonsense.'
+			'You talked to Julia about nonsense.'
 			tiprand = rand(0, 5)
 
-			if tiprand = 0:'Julia mentions in passing that the earlier a friend of Natasha Belova, but she constantly took the money and did not give and Julia got sick.'
+			if tiprand = 0:'Julia mentions in passing that she used to be friends with Natasha Belova, but she kept borrowing money and not paying it back. Julia frowns.'
 
 			act 'rest':gt $curloc
 		end
@@ -174,3 +180,4 @@ end
 act 'go home':gt 'gorodok'
 
 --- JuliaMilHome ---------------------------------
+

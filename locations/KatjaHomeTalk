@@ -5,17 +5,17 @@ gs 'stat'
 '<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 
 if sweat > 0:
-	'Katja wrinkled her nose "<<$name>>, you''re all sweaty, go to the shower?"'
+	'Katja wrinkles her nose "<<$name>>, you''re all sweaty. Do you want to use my shower?"'
 
-	act 'Go to the shower':
+	act 'Have a shower':
 		cls
 		minut += 15
 		gs 'stat'
 
 		if KatjaHorny >= 50:
-			'Katja held you in the shower. She blushed and said "I, Come join Pomo."'
+			'Katja takes you in the bathroom. Blushing, she says, "I think I''ll join you."'
 
-			act 'one wash':
+			act 'Wash alone':
 				cls
 				dynamic $showerdin
 				minut += 15
@@ -27,8 +27,10 @@ if sweat > 0:
 				if frost > 0:frost = 0
 
 				gs 'stat'
-				'<center><img src="images/dush.jpg"></center>'
-				'You kicked out of the shower and Katja closed the door. You got into the shower and began to lather your body washcloth. After washed off the soap and washed her hair with shampoo. Rinse off the shampoo you become completely clean.'
+				! WD: Correct Image path ~ "images/dush.jpg"
+				'<center><img src="images/pics/dush.jpg"></center>'
+				'You kick Katja out of the bathroom and close the door. You get into the shower and begin to lather your body with a cloth.'
+				'After washing off the soap you wash your hair with shampoo. Then, rinse off the shampoo you are completely clean.'
 
 				act 'Get out of the shower':gt $curloc
 			end
@@ -49,30 +51,30 @@ if sweat > 0:
 				KatjaLust += 1
 				gs 'stat'
 				'<center><img src="images/qwest/alter/katja/shower.jpg"></center>'
-				'You undressed and climbed together with Katja in the shower.'
+				'You and Katja undress and both climb into the shower.'
 
 				if lobok <= 0:
-					'Katja eyes slid over your body a little lingering on your breasts and pussy. Katja took a shower together and you became watered.'
+					'Katjas eyes slide over your body lingering a little on your breasts and pussy. Katja moves close to you and you rinse yourself and Katja.'
 
 					act 'further':
 						cls
 						gs 'stat'
 						'<center><img src="images/qwest/alter/katja/shower2.jpg"></center>'
-						'Katja gently shampooed you gel and rinse with warm shower jets.'
+						'Katja gently rubs shampoo into your hair then rinses it out with warm shower jets.'
 
 						if KatjaLust >= 10 and KatjaHorny >= 90:
-							'Katja washed with soap your pussy and breasts gentle stroking his little palms. Her cheeks were flushed and her eyes glistened.'
+							'Katja washes your pussy and breasts with soap, gently stroking her palms against you. Her cheeks are flushed and her eyes glistening.'
 							dynamic $katja_shower_kiss_home
 						else
-							'Katja finally finished and you wash herself pomylas.'
+							'You and Katja wash yourselves.'
 
 							act 'Get out of the shower':gt $curloc
 						end
 					end
 				elseif lobok > 0:
-					'Katja eyes slid over your body a little lingering on her breasts and pubic hair. Katja smiled "<<$name>>, you got such vegetation, it is no longer fashionable, I''ll let sbreyu hair."'
+					'Katja eyes slide over your body lingering a little on your breasts and pubic hair. Katja smiles, "<<$name>>, you''ve got too much hair, it''s not fashionable. I''ll shave it off."'
 
-					act 'Shave the hair between her legs ':
+					act 'Get shaved':
 						cls
 						minut += 5
 						lobok = -3
@@ -80,13 +82,13 @@ if sweat > 0:
 						KatjaLust += 1
 						gs 'stat'
 						'<center><img src="images/qwest/alter/katja/lobok.jpg"></center>'
-						'Katja sat in the bathroom and you lathered your crotch passing lathered his stomach and chest. She took a razor and began to gently shave your hairs between her legs.'
+						'Katja sat in the bath and you lathers your crotch (and most of your stomach and chest) with shaving gel. She takes a razor and begins to gently shave the hair between your legs.'
 
 						if KatjaLust >= 10 and KatjaHorny >= 90:
-							'Katja washed with soap your pussy and breasts gentle stroking his little palms. Her cheeks were flushed and her eyes glistened.'
+							'Katja washes your pussy and breasts with soap, gently stroking her palms against you. Her cheeks are flushed and her eyes glistening.'
 							dynamic $katja_shower_kiss_home
 						else
-							'Katja finally shaved all your hair between her legs and began to wash off with soap you.'
+							'Katja, having finally shaved all the hair between your legs, washes you off with soap.'
 
 							act 'Get out of the shower':gt $curloc
 						end
@@ -105,7 +107,8 @@ if sweat > 0:
 
 			gs 'stat'
 			'<center><img src="images/pics/dush.jpg"></center>'
-			'Katja showed you where the toiletries and came out of the shower. You got into the shower and began to lather your body washcloth. After washed off the soap and washed her hair with shampoo. Rinse off the shampoo you become completely clean.'
+			'Katja shows you where the toiletries are and leaves you to have a shower. You get into the shower and begin to lather your body with a cloth.'
+			'After washing off the soap you wash your hair with shampoo. Then, rinse off the shampoo you are completely clean.'
 
 			act 'Get out of the shower':gt $curloc
 		end
@@ -124,7 +127,7 @@ else
 			'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
 
 			if katjaPreg = 0 or knowKatjaPreg >= 1:
-				if KatjaHorny < 50:'Katka talks about the lessons, cosmetics, the latest fashion trends in clothing and other very important things.'
+				if KatjaHorny < 50:'Katka talks about school lessons, cosmetics, the latest fashion trends and other very important things.'
 
 				if KatjaHorny >= 50:
 					dynamic $d_katjaSextalk
@@ -132,14 +135,14 @@ else
 				end
 			elseif katjaPreg > 0 and knowKatjaPreg = 0:
 				if knowKatjaPreg = 0:
-					'Katja biting her lip without looking you in the eye, Finally typed determination and says "<<$name>>, i am pregnant."'
+					'Katja biting her lip and without looking you in the eye, finally plucks up the courage and says, "<<$name>>, i am pregnant."'
 
-					act 'From whom?':
+					act 'Whos is it?':
 						cls
 						minut += 5
 						knowKatjaPreg = 1
 						gs 'stat'
-						'You asked dumbfounded "from." Katja wrinkled her nose, "Santa Claus! Yes by Voinov, I was with him at the Christmas party school slept. And flew. Jesus, what to do now that?"'
+						'Dumbfounded, you ask, "Who?" Katja wrinkles her nose, "Santa Claus? Well, it was Voinov. I was with him at the Christmas party at school, we slept together and boom! Jesus, what do I do now?"'
 
 						act 'I have no idea':gt $curloc
 					end
@@ -163,7 +166,7 @@ else
 			end
 		end
 	elseif hour >= 20:
-		'Katja says, she wants to go to the disco.'
+		'Katja says, "Let''s go to the disco."'
 
 		if money >= 25:act 'Go to the disco':money -= 25 & minut += 15 & gt 'gdkin'
 	end
@@ -172,3 +175,4 @@ end
 act 'Say goodbye and go home':gt 'gorodok'
 
 --- KatjaHomeTalk ---------------------------------
+

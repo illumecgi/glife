@@ -30,3 +30,4 @@ KGDneedExp6 = KGDneedExpNextLvl6 - KGDexp6
 if KGDneedExp6 <= 0 and KGDlvl6 > KGDlvlr6:KGDlvlr6 = KGDlvl6 & KGDlvl6 += 1 & KGDexp6 = 0 & KGDHP6 += 10 & KGDdam6 += 5
 
 --- KGDexp ---------------------------------
+

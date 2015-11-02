@@ -5,3 +5,4 @@ gs 'stat'
 act 'Leave':gt $loc, $metka
 
 --- motherkafeboss ---------------------------------
+

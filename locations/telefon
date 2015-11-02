@@ -2,15 +2,15 @@
 $objmobilaraz = {
 	cla
 	telotvet = rand(0, 10)
-	'"Yes, I''m listening, " said a voice from the speaker.'
+	'"Yes, I''m listening," says a voice from the speaker.'
 
 	if month > 5 and temper > 20 and osadki < painweather:
-		act 'Invite a walk in the park':
+		act 'Invite to the park':
 			cla
-			'YOU:Let''s go take a walk in the park.'
+			'"Let''s go for a walk in the park."'
 
 			if telotvet > 3:
-				'<<$telsob>>:Well let an hour in the park.'
+				'<<$telsob>>, "See you in the park in an hour."'
 
 				act 'Go':gt 'parksvid'
 			elseif telotvet <= 3:
@@ -19,24 +19,24 @@ $objmobilaraz = {
 		end
 	end
 
-	act 'Invite to movie':
+	act 'Invite to a movie':
 		cla
-		'YOU:Come with me to the movies?'
+		'"Want to go see a movie?"'
 
 		if telotvet > 3:
-			'<<$telsob>>:Well let an hour in the theater.'
+			'<<$telsob>>, "See you at the movie theater in an hour."'
 			act 'Go':gt 'kinosvid'
 		elseif telotvet <= 3:
 			dynamic $telotkaz
 		end
 	end
 
-	act 'Invite billiards':
+	act 'Invite to the pool hall':
 		cla
-		'YOU:Let''s go to the pool.'
+		'"Let''s play pool."'
 
 		if telotvet > 3:
-			'<<$telsob>>:Well let an hour of billiards.'
+			'<<$telsob>>, "See you at the pool hall in an hour."'
 
 			act 'Go':gt 'billsvid'
 		elseif telotvet <= 3:
@@ -44,12 +44,12 @@ $objmobilaraz = {
 		end
 	end
 
-	act 'Invite a cafe':
+	act 'Invite to the cafe':
 		cla
-		'YOU:Let''s go to the cafe.'
+		'"Let''s go to the cafe."'
 
 		if telotvet > 3:
-			'<<$telsob>>:Well let an hour in the cafe.'
+			'<<$telsob>>, "See you at the cafe in an hour."'
 
 			act 'Go':gt 'kafesvid'
 		elseif telotvet <= 3:
@@ -57,12 +57,12 @@ $objmobilaraz = {
 		end
 	end
 
-	act 'Invite casino':
+	act 'Invite to the casino':
 		cla
-		'YOU:Let''s go to the casino go.'
+		'"Let''s go to the casino."'
 
 		if telotvet > 3:
-			'<<$telsob>>:Well let an hour at the casino.'
+			'<<$telsob>>, "See you in the casino in an hour."'
 
 			act 'Go':gt 'kazinosvid'
 		elseif telotvet <= 3:
@@ -76,15 +76,15 @@ $objmobilaraz = {
 $objmobilarazboy = {
 	cla
 	telotvet = rand(0, 10)
-	'"Yes, I''m listening, " said a voice from the speaker.'
+	'"Yes, I''m listening," says a voice from the speaker.'
 
 	if month > 5 and temper > 20 and osadki < painweather:
-		act 'Invite a walk in the park':
+		act 'Invite to the park':
 			cla
-			'YOU:Let''s go take a walk in the park.'
+			'"Let''s go for a walk in the park."'
 
 			if telotvet > 3:
-				'<<$telsob>>:Well let an hour in the park.'
+				'<<$telsob>>, "See you in the park in an hour."'
 
 				act 'Go':gt 'svidboy', 'parksvid'
 			elseif telotvet <= 3:
@@ -93,12 +93,12 @@ $objmobilarazboy = {
 		end
 	end
 
-	act 'Invite to movie':
+	act 'Invite to a movie':
 		cla
-		'YOU:Come with me to the movies?'
+		'"Want to go see a movie?"'
 
 		if telotvet > 3:
-			'<<$telsob>>:Well let an hour in the theater.'
+			'<<$telsob>>, "See you at the movie theater in an hour."'
 
 			act 'Go':gt 'svidboy', 'kinosvid'
 		elseif telotvet <= 3:
@@ -106,12 +106,12 @@ $objmobilarazboy = {
 		end
 	end
 
-	act 'Invite billiards':
+	act 'Invite to the pool hall':
 		cla
-		'YOU:Let''s go to the pool.'
+		'"Let''s play pool."'
 
 		if telotvet > 3:
-			'<<$telsob>>:Well let an hour of billiards.'
+			'<<$telsob>>, "See you at the pool hall in an hour."'
 
 			act 'Go':gt 'svidboy', 'billsvid'
 		elseif telotvet <= 3:
@@ -119,12 +119,12 @@ $objmobilarazboy = {
 		end
 	end
 
-	act 'Invite a cafe':
+	act 'Invite to the cafe':
 		cla
-		'YOU:Let''s go to the cafe.'
+		'"Let''s go to the cafe."'
 
 		if telotvet > 3:
-			'<<$telsob>>:Well let an hour in the cafe.'
+			'<<$telsob>>, "See you at the cafe in an hour."'
 
 			act 'Go':gt 'svidboy', 'kafesvid'
 		elseif telotvet <= 3:
@@ -138,7 +138,7 @@ $objmobilarazboy = {
 $telotkaz = {
 	cla
 	minut += 10
-	'<<$telsob>>:Sorry I''m busy, come next time.'
+	'<<$telsob>>, "Sorry I''m busy, maybe next time."'
 
 	act 'Hangup':gt 'telefon', 'fin'
 }
@@ -146,7 +146,7 @@ $telotkaz = {
 $telotkazboy = {
 	cla
 	minut += 10
-	'<<$boyA>>:Sorry, I''m busy right now, come next time.'
+	'<<$boyA>>, "Sorry, I''m busy right now, maybe next time."'
 
 	act 'Hangup':gt 'telefon', 'fin'
 }
@@ -156,10 +156,10 @@ if $ARGS[0] = 'start':
 	clr
 	gs 'stat'
 
-	if vladimirday ! day and vladimirQW = 20 and hour = 16:gt 'qwloc2'
-	if vladimirday ! day and vladimirQW = 25 and hour = 16 and week = 6:gt 'qwloc3'
-	if vladimirday ! day and vladimirQW = 35 and hour = 16 and week = 6:gt 'qwloc4'
-	if QWdogreiqTimer = 0 and QWdogReiq = 2 and week = 7 and qwdogiventday ! day and hour >= 12:gt 'qwlocdog'
+	if vladimirday ! daystart and vladimirQW = 20 and hour = 16:gt 'qwloc2'
+	if vladimirday ! daystart and vladimirQW = 25 and hour = 16 and week = 6:gt 'qwloc3'
+	if vladimirday ! daystart and vladimirQW = 35 and hour = 16 and week = 6:gt 'qwloc4'
+	if QWdogreiqTimer = 0 and QWdogReiq = 2 and week = 7 and qwdogiventday ! daystart and hour >= 12:gt 'qwlocdog'
 
 	if ring = 0:
 		if number = 6:'<center><b><<num6>><<num5>>-<<num4>><<num3>>-<<num2>><<num1>></b></center>'
@@ -193,7 +193,7 @@ if $ARGS[0] = 'start':
 
 			if telkat > 0:
 				act 'Call Kate':
-					$telsob = 'Katia'
+					$telsob = 'Kate'
 					dynamic $objmobilaraz
 				end
 			end
@@ -204,10 +204,10 @@ if $ARGS[0] = 'start':
 		end
 
 		if nastjaqw = 1 and week = 6 and vnesh > 20:act 'Call Nastya':gt 'nastja', 'pos4'
-		if nastjaqw = 2 and week ! 6 and zenit = 0 and nastjaday ! day:act 'Chat with Nastya':gt 'nastja', 'pos13'
-		if hour >= 8 and hour <= 20 and nastjaqw = 2 and week = 6 and vnesh > 20 and nastjaday ! day:act 'On the beach with Nastya':gt 'nastja', 'pos12'
-		if nastjaqw = 5 and week = 6 and nastjaday ! day:act 'Invite Nastya': gt 'nastja', 'pos22'
-		if nastjaqw = 6 and nastjaday ! day:act 'Call Nastya': gt 'nastja', 'pos31'
+		if nastjaqw = 2 and week ! 6 and zenit = 0 and nastjaday ! daystart:act 'Chat with Nastya':gt 'nastja', 'pos13'
+		if hour >= 8 and hour <= 20 and nastjaqw = 2 and week = 6 and vnesh > 20 and nastjaday ! daystart:act 'Go to the beach with Nastya':gt 'nastja', 'pos12'
+		if nastjaqw = 5 and week = 6 and nastjaday ! daystart:act 'Invite Nastya around': gt 'nastja', 'pos22'
+		if nastjaqw = 6 and nastjaday ! daystart:act 'Call Nastya': gt 'nastja', 'pos31'
 
 		act 'Hangup':
 			cla
@@ -241,11 +241,11 @@ if $ARGS[0] = 'boyA':
 	clr
 	ring = 0
 	ringA = 0
-	boydayA = day
+	boydayA = daystart
 	gs 'stat'
 	svetrand = rand(0, 5)
 
-	if svetrand = 0:$$sveta = 'cutie'
+	if svetrand = 0:$sveta = 'cutie'
 	if svetrand = 1:$sveta = 'honey'
 	if svetrand = 2:$sveta = 'sweetie'
 	if svetrand = 3:$sveta = 'baby'
@@ -256,79 +256,79 @@ if $ARGS[0] = 'boyA':
 
 	act 'Normally':
 		cla
-		'(You) - Pretty good, you?'
-		'(<<$boyA>>) - just great, but I kind of miss you, can we meet today?'
+		'"Pretty good, you?"'
+		'<<$boyA>>, "Great, but I kind of miss you, can we meet today?"'
 
 		if pregtime <= dayA and pregtime >= 7 and pregtalk = 0:
-			act 'Honey, you will soon become a dad.':
+			act 'Tell him he''s going to be a dad':
 				cla
 				pregtalk = 1
-				'(You) - Honey, I''m pregnant with your child.'
+				'"Honey, I''m pregnant with your child."'
 
 				if harakBoyA = 0:
 					if bfA >= 90:
 						love = 1
-						'(<<$boyA>>) - This is wonderful! We have to celebrate!'
-						'You started talking about living together. <<$boyA>> told you that he is not against it in principle, but first he wants you to meet his parents.'
-						'He warns you that his mother is very demanding and rigorous. <<$boyA>> says that he loves his mother and does not want to upher. Therefore, you must look gorgeous, wear a dress from a boutique, have well-groomed and curled hair and makeup in moderation.'
+						'<<$boyA>>, "This is wonderful! We have to celebrate!"'
+						'You start talking about living together. <<$boyA>> tells you that he is not against it in principle, but first he wants you to meet his parents.'
+						'He warns you that his mother is very demanding and rigorous. <<$boyA>> says that he loves his mother and does not want to upset her. Therefore, you must look gorgeous, wear a dress from a boutique, have well-groomed and curled hair and makeup in moderation.'
 						'When you are totally ready <<$boyA>> will take you to their parents.'
 
-						act 'Hang up.':gt 'telefon', 'fin'
+						act 'Hang up':gt 'telefon', 'fin'
 
 						act 'Meet tonight':
 							cla
 							svidanieA = 1
-							'(You) - How about this evening?'
-							'(<<$boyA>>) - Sounds great! When can I come to pick you up?'
+							'"How about this evening?"'
+							'<<$boyA>>, "Sounds great! When can I come to pick you up?"'
 
-							act 'Set up a time.':
+							act 'Pick a time':
 								cla
 								meetday = daystart
-								meethour = input ("Set up a time to get picked up. It is now <<hour>> o''clock.")
+								meethour = input ("When do you want to be picked up? It is now <<hour>> c''clock.")
 
 								if meethour <= hour or meethour > 23:meethour = 20
 
-								'(You) -How about <<meethour>> o''clock?'
-								'(<<$boyA>>) - Okay <<$sveta>>, see you at <<meethour>> o''clock.'
+								'"How about <<meethour>> o''clock?"'
+								'<<$boyA>>, "Okay <<$sveta>>, see you at <<meethour>> o''clock."'
 
-								act 'Hang up.':gt 'telefon', 'fin'
+								act 'Hang up':gt 'telefon', 'fin'
 							end
 						end
 					elseif bfA < 90:
 						money += 20000
-						'(<<$boyA>>) - I''m not yet ready to become a dad. I''ll give you the money for an abortion. Go out and get rid of the child.'
+						'<<$boyA>> "I''m not yet ready to become a dad. I''ll give you the money for an abortion. Get rid of the child.'
 
-						act 'Hang up.':gt 'telefon', 'fin'
+						act 'Hang up':gt 'telefon', 'fin'
 					end
 				elseif harakBoyA = 1:
 					money += 20000
-					'(<<$boyA>>) - I''m not yet ready to become a dad. I''ll give you the money for an abortion. Go out and get rid of the child.'
+					'<<$boyA>> "I''m not yet ready to become a dad. I''ll give you the money get an abortion.'
 
-					act 'Hang up.':gt 'telefon', 'fin'
+					act 'Hang up':gt 'telefon', 'fin'
 				elseif harakBoyA = 2:
 					bfA = 0
 					pregtalk = 0
-					'(<<$boyA>>) - What? Yes you ohuel! Somewhere tucked pussy and now dumped on me. Come on you dick.'
+					'<<$boyA>>, "What? You whore! Someone fucked your pussy and now you drop it on me. You''re dumped.'
 
-					act 'Hang up.':gt 'telefon', 'fin'
+					act 'Hang up':gt 'telefon', 'fin'
 				end
 			end
 		elseif pregtime > dayA and pregtime >= 7 and pregtalk = 0:
-			act 'Honey, you will soon become a dad.':
+			act 'Honey, you will soon become a dad':
 				cla
 				bfA = 0
-				'(You) - Honey, I''m pregnant with your child.'
-				'(<<$boyA>>) - How the fuck dad? We meet with you less than you''re pregnant. Sprained whore who is here, and go to him. Everything. I can not call. Goodbye.'
+				'"Honey, I''m pregnant with your child."'
+				'<<$boyA>>, "How the fuck did I manage that? Unless I own a time-machine and went back to before we met and fucked you, it''s someone elses, go and tell him. I don''t want to see you again, goodbye."'
 
 				act 'Hang up.':gt 'telefon', 'fin'
 			end
 		elseif week > 1 and week < 5 and workKafe = 1:
-			act 'Sorry, I''m working today.':
+			act 'Sorry, I''m working today':
 				cla
-				'(You) - Oh, sorry, I''m working today.'
-				'(<<$boyA>>) - Okay, I''ll call tomorrow.'
+				'"Sorry, I''m working today."'
+				'<<$boyA>>, "Okay, I''ll call tomorrow."'
 
-				act 'Hang up.':gt 'telefon', 'fin'
+				act 'Hang up':gt 'telefon', 'fin'
 			end
 		end
 
@@ -337,31 +337,31 @@ if $ARGS[0] = 'boyA':
 			bfA += 1
 			svidanieA = 1
 			meetday = daystart
-			'(You) - How about this evening?'
-			'(<<$boyA>>) - Sounds great! When can I come to pick you up?'
+			'"How about this evening?"'
+			'<<$boyA>>, "Sounds great! When can I come to pick you up?"'
 
-			act 'Call time.':
+			act 'Pick a time':
 				cla
-				meethour = input ("Set up a time to get picked up. It is now <<hour>> o''clock.")
+				meethour = input ("When do you want to be picked up. It is now <<hour>> c''clock.")
 
 				if meethour <= hour or meethour > 23:meethour = 20
 
-				'(You) - How about <<meethour>> o''clock?.'
-				'(<<$boyA>>) - Okay <<$sveta>>, see you at <<meethour>> o''clock.'
+				'"How about <<meethour>> o''clock?."'
+				'<<$boyA>>, "Okay <<$sveta>>, see you at <<meethour>> o''clock."'
 
-				act 'Hang up.':gt 'telefon', 'fin'
+				act 'Hang up':gt 'telefon', 'fin'
 			end
 		end
 
-		act 'I''m busy today. Call tomorrow.':
+		act 'Maybe tomorrow':
 			cla
 			bfA -= 1
-			'(You) - I''m busy today. Call tomorrow.'
+			'"I''m busy today. Call tomorrow."'
 
-			if bfa <= 0:bfa = 0 & '(<<$boyA>>) - damn, you''ve fucked me, come on dick.'
+			if bfa <= 0:bfa = 0 & '<<$boyA>>, Are you fucking me, you know what. Suck my dick.'
 			if bfa > 0:'(<<$boyA>>) -  Okay, I''ll call tomorrow.'
 
-			act 'Hang up.':gt 'telefon', 'fin'
+			act 'Hang up':gt 'telefon', 'fin'
 		end
 	end
 
@@ -377,9 +377,9 @@ if $ARGS[0] = 'boyB':
 	clr
 	ring = 0
 	ringB = 0
-	boydayB = day
+	boydayB = daystart
 	gs 'stat'
-	'<<$boyB>> offers a walk.'
+	'<<$boyB>> wants to go for a walk.'
 
 	act 'Leave':
 		cla
@@ -391,8 +391,8 @@ if $ARGS[0] = 'boyB':
 		cla
 		bfB -= 1
 
-		if bfB <= 0:bfB = 0 & '<<$boyB>> said he throws you.'
-		if bfB > 0:'<<$boyB>> angry and hung up.'
+		if bfB <= 0:bfB = 0 & '<<$boyB>> dumps you.'
+		if bfB > 0:'<<$boyB>> is angry and hangs up.'
 
 		gt 'telefon', 'fin'
 	end
@@ -401,13 +401,13 @@ if $ARGS[0] = 'boyB':
 		cla
 		bfB += 1
 		svidanieB = 1
-		'<<$boyB>> asked how much he come to your house.'
+		'<<$boyB>> asks when he should come to your house.'
 
-		act 'Let 20 hours.':
+		act 'How about 20 hours':
 			cla
-			'You are warmly said goodbye and ended the conversation on this.'
+			'You say goodbye warmly and end the conversation.'
 
-			act 'Hang up.':gt 'telefon', 'fin'
+			act 'Hang up':gt 'telefon', 'fin'
 		end
 	end
 end
@@ -417,9 +417,9 @@ if $ARGS[0] = 'boyC':
 	clr
 	ring = 0
 	ringC = 0
-	boydayC = day
+	boydayC = daystart
 	gs 'stat'
-	'<<$boyC>> offers a walk.'
+	'<<$boyC>> wants to go for a walk.'
 
 	act 'Leave':
 		cla
@@ -431,8 +431,8 @@ if $ARGS[0] = 'boyC':
 		cla
 		bfC -= 1
 
-		if bfC <= 0:bfC = 0 & '<<$boyC>> said he throws you.'
-		if bfC > 0:'<<$boyC>> angry and hung up.'
+		if bfC <= 0:bfC = 0 & '<<$boyC>> dumps you.'
+		if bfC > 0:'<<$boyC>> is angry and hangs up.'
 
 		gt 'telefon', 'fin'
 	end
@@ -441,11 +441,11 @@ if $ARGS[0] = 'boyC':
 		cla
 		bfC += 1
 		svidanieC = 1
-		'<<$boyC>> asked how much he come to your house.'
+		'<<$boyC>> asks when he should come to your house.'
 
-		act 'Let 20 hours.':
+		act 'How about 20 hours':
 			cla
-			'You are warmly said goodbye and ended the conversation on this.'
+			'You say goodbye warmly and end the conversation.'
 
 			act 'Hang up.':gt 'telefon', 'fin'
 		end
@@ -456,11 +456,11 @@ if $ARGS[0] = 'Call':
 	cla
 
 	if num6 = 0 and num5 = 0 and num4 = 0 and num3 = 0 and num2 = 0 and num1 = 1:
-		'Allo. This firehouse. Speak.'
+		'Allo. This is the firehouse. Speak.'
 	elseif num6 = 0 and num5 = 0 and num4 = 0 and num3 = 0 and num2 = 0 and num1 = 2:
 		'Allo. This is the police. Speak.'
 	elseif num6 = 0 and num5 = 0 and num4 = 0 and num3 = 0 and num2 = 0 and num1 = 3:
-		'Allo. This ambulance. Speak.'
+		'Allo. This ambulance service. Speak.'
 	else
 		'Dialtone'
 	end
@@ -643,3 +643,4 @@ if $ARGS[0] = 'fin':
 end
 
 --- telefon ---------------------------------
+

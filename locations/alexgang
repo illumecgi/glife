@@ -2,17 +2,17 @@
 minut += 30
 horny += 10
 gs 'stat'
-'Arriving at the apartment Lech that hour dragged various alcohol and made a starter, then you sat down at a table in the hall talking to each other.'
-'At this moment, the doorbell rang, Lech went to open. You heard a man''s voice in the hallway, "Hi Lech, I do not opazdal?" Lech said, "Come."'
+'Arriving at Alexey''s apartment, he offers you various alcoholic beverages before sitting down at a table in the hall to talk to each other.'
+'Suddenly the doorbell rings, and Alexey walks to the door. You hear a man''s voice in the hallway: "Hi Alexey, I hope I''m not disturbing?" Alexey answers, "Come in."'
 
 if alexgangbang = 0:
-	'You''re a little surprised, who would it be. At this moment entered the room Alexander E., nightclub owner. He greeted you and sat down on a chair.'
-	'Alex began pouring alcohol and you have been drinking threesome.'
-	'Alex finally put down the bottle aside and got dick out of his pants. "Crawl here" You looked at him in surprise and looked at Sasha. Lech urged you "C''mon, do not tushuysya, everything is fine."'
+	'You''re a little surprised and wondering who it could be. Then you see Alexander E., nightclub owner, enter the room. He greets you and sits down on a chair.'
+	'Alexey pours alcohol in three glasses, and you spend some time drinking.'
+	'After a while, Alexey puts the bottle aside and pulls his dick out of his pants. "Get over here.", he says. You look at him in surprise and glance at Sasha. Alexey urges you on ,"C''mon, don''t worry, everything is fine."'
 else
-	'Entered the room Alexander E., nightclub owner. He greeted you and sat down on a chair.'
-	'Alex began pouring alcohol and you have been drinking threesome.'
-	'Alex finally put down the bottle aside and got dick out of his pants. "Crawl here"'
+	'You see Alexander E., nightclub owner, enter the room. He greets you and sits down on a chair.'
+	'Alexey pours alcohol in three glasses, and you spend some time drinking.'
+	'After a while, Alexey puts the bottle aside and pulls his dick out of his pants. "Get over here.", he says.'
 end
 
 act 'Get on your knees and give head':
@@ -24,9 +24,12 @@ act 'Get on your knees and give head':
 	gs 'stat'
 	picrand = rand(1, 14)
 	'<center><img src="images/qwest/alexey/bj<<picrand>>.jpg"></center>'
-	'You knelt before him and clasped his dick <<$liptalk>> began to suck. Alexei sat relaxed and caught the buzz finally he dismissed you from the members and led to the bed.'
+	'Kneeling before him, you unbutton his pants and take a firm grasp of his erect cock.'
+	'Leaning in closer, you give it a quick kiss with your <<$liptalk>> before guiding it your mouth.'
+	'As you suck on his hard dick, Alexey relaxes in his chair letting you take care of his needs.'
+	'Suddenly, he removes his penis from your mouth, pulls you up on your feet and leads you to the bedroom.'
 	gs 'oral', '0'
-	'Lech you lifted and moved to the bed where Sasha was sitting. He put you on all fours, face to Sasha.'
+	'Alexey lifts you up and puts you down in front of the bed, where Sasha is sitting. He puts you on all fours, facing Sasha.'
 
 	act 'Give Sasha a blowjob':
 		cls
@@ -48,14 +51,16 @@ act 'Get on your knees and give head':
 		gs 'stat'
 		picrand = rand(1, 10)
 		'<center><img src="images/qwest/alexey/gang<<picrand>>.jpg"></center>'
-		'Standing on all fours, you started to suck Sasha. He was not big and soft dick hard standing in your mouth. Working hard but you got his cock stiffen.'
+		'Standing on all fours, you start sucking Sasha''s limp cock. As you lick, suck and roll your tongue around his dick, you can feel it slowly stiffening in your mouth.'
 		dynamic $sexstart
-		'Dangle your body from bumps in the ass during frictions and Lehi nebilo you need to move your head during a blow job, you just have to work on the lips clasping member tightly.'
+		'The position you''re in doesn''t make it easy for you to move your head the right way. However, with some determination you manage to keep Sasha''s cock in your mouth.'
 		dynamic $sexstart2
-		'Sasha came too in your mouth. Sperm was not much and you can easily swallow all.'
+		'After a while, you feel Sasha''s hard cock begin to throb in your mouth. With a low grunt, he thrusts his hips forward and you feel his sperm coat the insides of your mouth.'
+		'He doesn''t cum a whole lot, and you easily manage to swallow all of it.'
 
 		act 'Leave':gt 'nord'
 	end
 end
 
 --- alexgang ---------------------------------
+

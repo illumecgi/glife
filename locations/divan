@@ -1,5 +1,6 @@
 # divan
-if $ARGS[0] = 'start':
+! WD: Reading book code cant use argument
+if $ARGS[0] = 'start' or $ARGS[0] = '':
 	$divmastr = {
 		cls
 
@@ -11,9 +12,10 @@ if $ARGS[0] = 'start':
 
 		gs 'stat'
 		'<center><img src="images/pics/divmas.jpg"></center>'
-		'You lay down on the sofa and began to fondle her one-handed chest with a finger of the other hand you started rubbing and stroking a small bump between his legs that responded to the touch of pleasant languor covering your entire body.'
+		'You lie down on the sofa and began to fondle your chest with one hand while you slide the other hand down your stomach and across your mound.'
+		'With your middle finger you start rubbing and stroking your clit, which responds to the touch by bringing a sensual warmth to your entire body.'
 
-		if horny >= 100:orgasm += 1 & horny = 0 & 'Suddenly a nice cramp brought your body and you covered powerful orgasm from which you groan.'
+		if horny >= 100:orgasm += 1 & horny = 0 & 'Suddenly a sumptuous jolt hits your body and you delight in a powerful orgasmn.'
 
 		act 'Get off the couch':divanmastr = 0 & gt 'divan', 'fin'
 
@@ -24,11 +26,11 @@ if $ARGS[0] = 'start':
 	clr
 	gs 'stat'
 	'<center><img src="images/pics/divan.jpg"></center>'
-	'You lay down on the sofa.'
+	'You lie down on the sofa.'
 
-	act 'Lie':
+	act 'Chill out':
 		cla
-		waiting = input ("How many minutes to wait? (Not more than 120 minutes)")
+		waiting = input ("For how many minutes do you chill out? (No more than 120 minutes)")
 
 		if waiting <= 0 or waiting > 120:minut += 15
 		if waiting > 0 and waiting <= 120:minut += waiting
@@ -43,6 +45,9 @@ if $ARGS[0] = 'start':
 		end
 	end
 
+
+	! WD: Uninitialised ~ 'book'
+	!{
 	if book > 0:
 		act 'Read a book (0:30)':
 			cla
@@ -55,6 +60,13 @@ if $ARGS[0] = 'start':
 			act 'Put the book':gt 'divan', 'start'
 		end
 	end
+	}
+	! WD: Use read book code
+	if f_book > 0 or fantasybook > 0 or w_book > 0 or womanbook > 0:
+		$loc = 'divan'
+		dynamic $d_read_book
+	end
+
 
 	if horny >= 75:
 		act 'Masturbate (0:15)':dynamic $divmastr
@@ -79,3 +91,4 @@ if $ARGS[0] = 'fin':
 end
 
 --- divan ---------------------------------
+

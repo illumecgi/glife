@@ -4,7 +4,7 @@ gs 'stat'
 
 act 'Oh, I have a lot of things, I just can not today':
 	cla
-	vladimirday = day
+	vladimirday = daystart
 	'(You) - Oh, I have a lot of things, I just can not segdnya.'
 	'(Vladimir) - Okay. Then I''ll call you tomorrow at 4 pm.'
 
@@ -14,7 +14,7 @@ end
 act 'I do not mind':
 	cla
 	vladimirQW = 30
-	vladimirday = day
+	vladimirday = daystart
 	'(You) - I do not mind.'
 	'(Vladimir) - Wonderful. Now for you to come my driver and drive Thank you.'
 
@@ -22,3 +22,4 @@ act 'I do not mind':
 end
 
 --- qwloc3 ---------------------------------
+

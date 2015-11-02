@@ -34,7 +34,7 @@ if $ARGS[0] = 'start':
 		gt 'down'
 	end
 
-	if vladimirday = day and vladimirQW = 21 and hour = 20:gt 'qwmeet'
+	if vladimirday = daystart and vladimirQW = 21 and hour = 20:gt 'qwmeet'
 end
 
 if $ARGS[0] = 'zal':
@@ -52,9 +52,9 @@ if $ARGS[0] = 'zal':
 	!!etogame
 	nastjarand = rand(0, 100)
 
-	if nastjarand > 80 and nastjaqw = 0 and energy > 15 and nastjaday ! day:
+	if nastjarand > 80 and nastjaqw = 0 and energy > 15 and nastjaday ! daystart:
 		cls
-		nastjaday = day
+		nastjaday = daystart
 		gs 'stat'
 		'<center><img src="images/etogame/nastja1.jpg"></center>'
 		'In the hall you notice a pretty girl, wondering why she was sitting alone. She looks pretty good. While you looked at prekrastno stranger she caught your eye on himself and suddenly looked at you.'
@@ -126,3 +126,4 @@ if $ARGS[0] = 'vip':
 	end
 end
 --- restoran ---------------------------------
+

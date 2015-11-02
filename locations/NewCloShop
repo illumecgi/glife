@@ -59,7 +59,7 @@ act 'Leave':
 	mag = 0
 	minut += 15
 	view
-	gt 'down'
+	gt 'torgcentr'
 end
 !!!
 
@@ -89,3 +89,4 @@ if hour >= 9 and hour <= 21:
 end
 
 --- NewCloShop ---------------------------------
+

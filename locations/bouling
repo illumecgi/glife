@@ -7,9 +7,9 @@ gs 'stat'
 act 'Leave':gt 'torgcentr'
 
 if hour >= 8 and hour <= 20:
-	act 'Play 300 rubles (1:00)':
+	act 'Play (300 rubles) (1:00)':
 		if money < 300:
-			'You have no money'
+			'You don''t have enough money.'
 		else
 			money -= 300
 			minut += 60
@@ -19,19 +19,19 @@ if hour >= 8 and hour <= 20:
 
 			if boulrand = 0:
 				cla
-				'To suit you two guys and offer to play with them'
+				'You see two guys and they challenge you to a game.'
 
-				act 'Gamble, bet 2000':boulvar = 1 & gt 'bouling', 'randwin'
+				act 'Gamble (2000 rubles)':boulvar = 1 & gt 'bouling', 'randwin'
 				act 'Leave':gt 'torgcentr'
 			elseif boulrand = 1:
 				cla
-				'To suit you two girls and offer to play with them against two guys prize 5000, at a loss of sex.'
+				'You meet two girls and they suggest challenging two guys to a game: Prize 5000 rubles, lose and they have sex with you.'
 
 				act 'Play':boulvar = 2 & gt 'bouling', 'randwin'
 				act 'Leave':gt 'torgcentr'
 			elseif boulrand > 1:
 				cla
-				'You played billiards'
+				'You play a game.'
 
 				act 'Leave':gt 'torgcentr'
 			end
@@ -66,7 +66,7 @@ if $ARGS[0] = 'randwin':
 		money += 300
 		'You won and received 300 rubles.'
 
-		act 'Get_Away':gt'torgcentr'
+		act 'Get_Away':gt 'torgcentr'
 	elseif boulwin > 10 and boulvar = 1:
 		money += 2000
 		'You won and received 2,000 rubles.'
@@ -87,20 +87,20 @@ if $ARGS[0] = 'randwin':
 		if money >= 2000:
 			'You lose and have to pay 2,000 rubles.'
 
-			act 'Offer in-kind':xgt 'sexdvoe', 'var'
+			act 'Offer sex instead':xgt 'sexdvoe', 'var'
 
 			act 'Pay':
 				money -= 2000
 				gt 'torgcentr'
 			end
 		else
-			'You lost, but you do not have money to pay, only one payment method.'
+			'You lost, but you do not have money to pay, only one thing for it.'
 
-			act 'In kind':xgt 'sexdvoe', 'var'
+			act 'Offer sex instead':xgt 'sexdvoe', 'var'
 		end
 	elseif boulwin <= 10 and boulvar = 2:
 		picrand = 11
-		'You lose, will push the legs.'
+		'You lose, open those legs.'
 
 		act 'Pay':gt 'sexorg', 'var'
 	end
@@ -114,3 +114,4 @@ if $ARGS[0] = 'start':
 end
 
 --- bouling ---------------------------------
+

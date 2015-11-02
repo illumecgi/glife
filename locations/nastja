@@ -288,7 +288,7 @@ if $ARGS[0] = 'pos13':
 	*clr
 	minut += 30
 	manna += 30
-	nastjaday = day
+	nastjaday = daystart
 	gs 'stat'
 	'<center><img src="images/etogame/tel_talk.jpg"></center>'
 	'Any time you hear beeps. Finally at the end of the call.'
@@ -305,7 +305,7 @@ if $ARGS[0] = 'pos14':
 	*clr
 	minut += 30
 	manna += 30
-	nastjaday = day
+	nastjaday = daystart
 	nastjaqw = 4
 	gs 'stat'
 	'<center><img src="images/etogame/2hello.jpg"></center>'
@@ -427,7 +427,7 @@ if $ARGS[0] = 'pos22':
 	'Do_You: - Nastya, hi! How is it going? Why are you so sad?'
 	'Nastya: - Hello! Yup, like_this, trouble at work.'
 	'Do_You: - Fair_Enough, come to me, open a bottle of wine, and you tell me everything. What have you got there at work.'
-	'Nastya: - Thank_U, Sveta! I will come!'
+	'Nastya: - Thank_U, <<$nickname>>! I will come!'
 
 	act 'Hang up':gt 'nastja', 'pos23'
 end
@@ -436,14 +436,14 @@ if $ARGS[0] = 'pos23':
 	cla
 	*clr
 	minut += 30
-	nastjaday = day
+	nastjaday = daystart
 	gs 'stat'
 
 	'<center><img src="images/etogame/nast_home.jpg"></center>'
 	'After half-hours doorbell rings.'
 	'You see Nastya. Without makeup and in casual clothes, she looks so cute.'
 	'You Nastya is convenient to arrange a room on the couch, open a bottle of wine and start telling each other their secrets.'
-	'From the conversation , everyone thinks Nastya, just beautiful and you agree with them. She is a good student and is constantly looking for-something new in life. She has quite a strong character, You `ve seen how she argued with those who were older or more of its. Also, who_are, as it considers, below its status. however, this does not prevent her from making friends, whom she had a whole sea.'
+	'From the conversation , everyone thinks Nastya, just beautiful and you agree with them. She is a good student and is constantly looking for-something new in life. She has quite a strong character, You ''ve seen how she argued with those who were older or more of its. Also, who_are, as it considers, below its status. however, this does not prevent her from making friends, whom she had a whole sea.'
 	'Also, Nastya could not last long at any work. First, and then fired under various pretexts, or she goes, speaking, what_is "such work is not for me".'
 	'Do_You: - Is_Not_Clear, What you can not work, because the location is excellent?!'
 	'Nastya: - Yup,but_the...'
@@ -466,11 +466,11 @@ if $ARGS[0] = 'pos24':
 
 	'<center><img src="images/etogame/wines.jpg"></center>'
 	'In the meantime.'
-	'Do_You: - It would be necessary that-something to eat. Come `ll order pizza, reluctantly cook.'
+	'Do_You: - It would be necessary that-something to eat. Come ''ll order pizza, reluctantly cook.'
 	'(You call to order a pizza and order a large pizza hot.)'
 	''
 	'(you see, Nastya for a moment about what-then thought .)'
-	'Nastya: - Sveta, Let`s listen to fun too. I `ve seen on the Internet. Girl orders a pizza, and she throws a towel over his naked body, type of the shower ran. Well, towel "by_chance" flies down. I have long dreamed of such, but one house nizachto would not risk. And you is not scared.'
+	'Nastya: - <<$nickname>>, Let''s listen to fun too. I ''ve seen on the Internet. Girl orders a pizza, and she throws a towel over his naked body, type of the shower ran. Well, towel "by_chance" flies down. I have long dreamed of such, but one house nizachto would not risk. And you is not scared.'
 
 	act 'agree':gt 'nastja', 'pos26'
 	act 'Opt_Out':gt 'nastja', 'pos25'
@@ -485,7 +485,7 @@ if $ARGS[0] = 'pos25':
 	gs 'stat'
 
 	'<center><img src="images/etogame/nast_home.jpg"></center>'
-	'Nastya: - hmmm, bore you Sveta!'
+	'Nastya: - hmmm, bore you <<$nickname>>!'
 	'You have half an hour chattering, eat pizza delivered and followed up Nastya taxi.'
 
 	act 'Back_Home':gt 'korr'
@@ -533,7 +533,7 @@ if $ARGS[0] = 'pos28':
 
 	'<center><img src="images/etogame/towel.jpg"></center>'
 	'You give money and at this point the towel fall to the ground. "oh" you scream and stretch the money, but boy standing stock-still and staring at your body. Then you bend to pick up a towel and overlook your ass. At_Last, one hand holding a towel, and the other holding money. You say goodbye to a peddler.'
-	'- oh,oh, oh i`m sorry, how can it be!'
+	'- oh,oh, oh i''m sorry, how can it be!'
 	'- nothing, heh. This_Happens. You have a beautiful body...heh.'
 
 	act 'close the door':gt 'nastja', 'pos30'
@@ -567,8 +567,8 @@ if $ARGS[0] = 'pos30':
 	'- ahaha, damn_it, pipets!!!.'
 	'(You Nastya squealing in delight from PROGRESS)'
 
-	if exhibi = 1:'- Sveta, I put the phone on the record and all filmed.'
-	if exhibi = 2:'- Sveta, I shot everything on camera, Do not be afraid of your face there to be seen.'
+	if exhibi = 1:'- <<$nickname>>, I put the phone on the record and all filmed.'
+	if exhibi = 2:'- <<$nickname>>, I shot everything on camera, Do not be afraid of your face there to be seen.'
 
 	'You talked about their experiences. revised video. How else can come up with mischief.'
 	'Looks like you both liked naked in public, this caused a huge surge of adrenaline.'
@@ -587,7 +587,7 @@ if $ARGS[0] = 'pos31':
 
 	'<center><img src="images/etogame/tel_talk.jpg"></center>'
 	'what-While you hear beeps. Finally.'
-	'Nastya: - Hello, Sveta, hi! I have the news, remember our video with a pizza delivery?'
+	'Nastya: - Hello, <<$nickname>>, hi! I have the news, remember our video with a pizza delivery?'
 	'Do_You: - This will not forget!'
 	'Nastya: - so, I showed it to my friend the photographer, sorry could not resist, he said, would buy it from me for good money. '
 	'Do_You: - come on, cool.'
@@ -600,3 +600,4 @@ if $ARGS[0] = 'pos31':
 end
 
 --- nastja ---------------------------------
+

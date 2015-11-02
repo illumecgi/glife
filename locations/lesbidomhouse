@@ -10,13 +10,13 @@ if $ARGS[0] = 'start':
 	gs 'stat'
 
 	if lesrand = 1:
-		'You called, but the door no one answered you. To re-call too, no one responded'
+		'You ring the doorbell and no one answers, you ring it again, still no response.'
 
 		act 'Leave':gt 'street'
 	else
-		'You rang the doorbell several times. Once you opened the third.'
+		'You ring the doorbell several times. Finally the door opens.'
 
-		act 'Stop by':gt 'lesbidomhouse', 'ev1'
+		act 'Enter':gt 'lesbidomhouse', 'ev1'
 		act 'Leave':gt 'street'
 	end
 end
@@ -26,13 +26,12 @@ if $ARGS[0] = 'ev1':
 	*clr
 	minut += 5
 	'<center><img src="images/qwest/lesbi.jpg"></center>'
-	'Rang the doorbell.'
-	'You do not open and you want to leave, but the desire to learn povelevaniyu girls overpower you and you called again.'
-	'And finally you have opened.'
-	'-Hello - told <<$name>>'
-	'Ah, it''s you, the lady said dismissively, come.'
+	'You are nervous and you want to leave, but the desire to learn about controling girls over comes your fears.'
+	'Slowly, you enter the house.'
+	'"Hello, it''s <<$name>>"'
+	'"Ah, it''s you," the lady says dismissively. "Come."'
 
-	act 'Stop by':gt 'lesbidomhouse', 'ev2'
+	act 'Follow her':gt 'lesbidomhouse', 'ev2'
 end
 
 if $ARGS[0] = 'ev2':
@@ -40,18 +39,18 @@ if $ARGS[0] = 'ev2':
 	*clr
 	minut += 5
 	'<center><img src="images/etogame/irinaroom.jpg"></center>'
-	'You looked around the apartment was very clean, but it did not cause comfort.'
-	'How something is not cozy at you - you said, and immediately met with a cold stare ladies.'
+	'You look around the apartment and it is very clean, but it doesn''t feel comfortable.'
+	'"It''s not the most cozy of appartments." you say, and you''re immediately met with silence and a cold stare.'
 	'You become very uncomfortable.'
-	'-Sorry - you said'
-	'Nothing, you have to get used to this situation. After all, what would make a girl, you need to make her feel uncomfortable, weak, defenseless.'
-	'-Well, I remember that. I never asked your name.'
-	'- Call me Mistress.'
+	'"Sorry."'
+	'"Indeed. You have to get used to this situation. After all, even the smallest of things, like the right choice of word need to be right, to make a girl feel uncomfortable, weak, defenseless."'
+	'"OK, I''ll remember that. I never asked your name."'
+	'"Call me, Mistress."'
 
 	act 'Agree':gt 'lesbidomhouse', 'ev4'
 
 	if sub < 30 and horny < 75:
-		act 'Brawl':gt 'lesbidomhouse', 'ev3'
+		act 'Run away!':gt 'lesbidomhouse', 'ev3'
 	end
 end
 
@@ -65,7 +64,7 @@ if $ARGS[0] = 'ev3':
 	if sub > 0:sub -= 5
 
 	'<center><img src="images/qwest/pnx.jpg"></center>'
-	'You''ve decided that she wants to make you a slave and nothing more, so you yell at the woman and went'
+	'You''ve decided that she wants to make you a slave and nothing more, so you yell at the woman and leave.'
 
 	act 'Leave':gt 'street'
 end
@@ -75,12 +74,12 @@ if $ARGS[0] = 'ev4':
 	*clr
 	minut += 5
 	'<center><img src="images/qwest/lesbi.jpg"></center>'
-	'You think she wants to make you a slave, not to teach. But still did not say anything.'
-	'-good hostess. And where do we start my training?'
-	'-The first thing is not to hurry. You should know well the victim. For example, to begin with, have a drink and rub in credibility. With this'
-	'and start, you''ll be the object on which I''ll show you all my tricks.'
+	'You think she wants to make you a slave, not teach you. But you don''t say anything.'
+	'"OK, Mistress, when do we start my training?"'
+	'"The first thing is not to hurry. You should get to known the victim well. For example, begin with having a drink, get to know them and earn their trust."'
+	'"To start with, you be the subject on and I''ll show you all my tricks."'
 
-	act 'Play on':gt 'lesbidomhouse', 'ev5'
+	act 'Play along':gt 'lesbidomhouse', 'ev5'
 end
 
 if $ARGS[0] = 'ev5':
@@ -88,7 +87,7 @@ if $ARGS[0] = 'ev5':
 	*clr
 	minut += 5
 	'<center><img src="images/qwest/zst.jpg"></center>'
-	'You agreed, went into the room where there were already cooked drinking and snack.'
+	'You agree, and she leads you into another room where there is already drinks and snacks laid out.'
 
 	act 'Drink':gt 'lesbidomhouse', 'ev6'
 end
@@ -100,10 +99,10 @@ if $ARGS[0] = 'ev6':
 	minut += 5
 	lesbiQW = 3
 	'<center><img src="images/qwest/zst.jpg"></center>'
-	'You started drinking and soon your stiffness and uncertainty disappeared and you began to tell his adventures Mistress, '
-	'how much you guys have many times given in the ass as otsasali and drinking even told that sex was even'
-	'unfamiliar guys in clubs and other park and your adventures.'
-	'End drunk you decided to go home. The hostess did not accompany you, but you were so drunk that scored it.'
+	'You started drinking and soon your nerves and uncertainty disappear and you begin to tell Mistress about your adventures.'
+	'How many you guys you''ve had, many times you''ve had anal, all kinds of details.'
+	'As you drink more, you even tell her about the sex with strangers, different locations, all manor of kinky and perverted things.'
+	'Eventually, quite drunk you decide to go home. Your hostess doesn''t accompany you, but you are so drunk you think nothing of it.'
 
 	if oral >= anal and oral >= sex:
 		callnm = 1
@@ -127,15 +126,15 @@ if $ARGS[0] = 'start1':
 	gs 'stat'
 
 	if lesrand = 1:
-		'You called, but the door no one answered you. To re-call too, no one responded'
+		'You ring the doorbell and no one answers, you ring it again, still no response.'
 
 		act 'Leave':gt 'street'
 	end
 
 	if lesrand >= 2:
-		'You rang the doorbell several times. Once you opened the third.'
+		'You ring the doorbell several times. Finally the door opens.'
 
-		act 'Stop by':gt 'lesbidomhouse', 'ev7'
+		act 'Enter':gt 'lesbidomhouse', 'ev7'
 		act 'Leave':gt 'street'
 	end
 end
@@ -145,8 +144,8 @@ if $ARGS[0] = 'ev7':
 	*clr
 	minut += 5
 	'<center><img src="images/qwest/lesbi.jpg"></center>'
-	'You decided to go to, hmmm, Mistress? find out whether there was something to be ashamed of yesterday and what lesson you should train'
-	'had to endure? as you remember little from that day.'
+	'You decide to go visit, erm... Mistress? To find out whether you embarrassed yourself last time and what your need to train (endure?) next.'
+	'That''s strange, you remember little of your last visit.'
 
 	act 'Hello':gt 'lesbidomhouse', 'ev8'
 end
@@ -157,23 +156,23 @@ if $ARGS[0] = 'ev8':
 	minut += 5
 
 	if callnm = 1:
-		$callnm = 'nipple'
+		$callnm = 'blowjob betty'
 	elseif callnm = 2:
-		$callnm = 'analschitsa'
+		$callnm = 'analwhore'
 	elseif callnm = 3:
-		$callnm = 'davalka'
+		$callnm = 'penis fly trap'
 	elseif callnm = 4:
-		$callnm = 'spermoedka'
+		$callnm = 'spermaholic'
 	end
 
 	'<center><img src="images/qwest/lesbi.jpg"></center>'
-	'-Hello, Mistress.'
+	'"Hello, Mistress."'
 	'Hi <<$callnm>>'
 
-	'-as you call me? - You were taken aback. And blushed, because the hostess told the truth.'
-	'-This is lesson number 2. Humiliate their target. Use what you learned about it.'
+	'"What did you call me?" You are taken aback and blush, because your hostess speaks the truth.'
+	'"This is lesson number 2. Humiliate your target. Use what you learnt about her.'
 
-	act 'Ask not to call you that':gt 'lesbidomhouse', 'ev9'
+	act 'Ask not to be called that':gt 'lesbidomhouse', 'ev9'
 end
 
 if $ARGS[0] = 'ev9':
@@ -182,35 +181,33 @@ if $ARGS[0] = 'ev9':
 	minut += 5
 
 	if callnm = 1:
-		$callnm = 'nipple'
+		$callnm = 'bobble head'
 	elseif callnm = 2:
-		$callnm = 'analschitsa'
+		$callnm = 'butt slut'
 	elseif callnm = 3:
-		$callnm = 'davalka'
+		$callnm = 'whore'
 	elseif callnm = 4:
-		$callnm = 'spermoedka'
+		$callnm = 'cum guzzler'
 	end
 
-	'-No, you should feel on their skin all <<$callnm>>'
-	'-Continue training. If what you know about the girl, touches her, I believe that it''s yours. Make it do what it'
-	'loves most.'
-	'-but if she loves anal and eblyu members or suck and swallow cum, I''ll make her do it? I havent a member and I do not'
-	'any thread is fantasy feet.'
-	'On this account, do not worry, I''ll give you (maybe) a special strap, he may issue streams of sperm.'
+	'"Please don''t call me that, Mistress."'
+	'"No! You have to get under their skin, <<$callnm>>"'
+	'"Back to training. If what you know about the girl, touches her, she believes that she''s yours. Then make her do what she loves most.'
+	'You point out, "What if she loves anal, fucking cock or sucking and swallowing cum, how do I make her do it? I havent got a cock or a foot fetish.'
+	'"Don''t worry about that, I (might) give you a special strapon, one capable of ejaculating.'
 
-	act 'Try to ask':gt 'lesbidomhouse', 'ev10'
+	act 'What''s that?':gt 'lesbidomhouse', 'ev10'
 end
 
 if $ARGS[0] = 'ev10':
 	cla
 	*clr
 	minut += 5
-	'On and I did not know about these, you can try it on?'
-	'-Not yet, I told you, first you try everything on myself.'
-	'-Well - you said uncertainly.'
-	'-Proceed.'
+	'"Oh, I''ve never heard about something like this, can I try it on?"'
+	'"Not yet. As I told you, first I show you so you can learn.'
+	'"I guess." you say with uncertainty.'
 
-	act 'Start':gt 'lesbidomhouse', 'ev10a'
+	act 'Proceed':gt 'lesbidomhouse', 'ev10a'
 end
 
 if $ARGS[0] = 'ev10a':
@@ -221,14 +218,14 @@ if $ARGS[0] = 'ev10a':
 	'<center><img src="images/qwest/lesbi2.jpg"></center>'
 
 	if callnm = 1 or callnm = 4:
-		'Hostess beginning you have. First, it made you suck plastic cock and then shoved a plastic dick in your throat and began shamelessly fuck you there. You were close to the peak of pleasure as hostess suddenly stopped.'
+		'Mistress wears the strapon. First, she makes you suck the plastic cock and then shoves the plastic dick down your throat and begins to shamelessly fuck your face. You are close to your peak as misstress suddenly stops.'
 	elseif callnm = 2:
-		'The hostess sat down to have you. First, it made you suck plastic cock then you deployed and began mercilessly fuck your pussy. You were close to the peak of pleasure as hostess suddenly stopped.'
+		'Mistress sits in front of you. First, she makes you suck the plastic cock then she pulls you onto her lap and begins to mercilessly fuck your pussy. You are close to your peak as misstress suddenly stops.'
 	elseif callnm = 3:
-		'The hostess sat down to have you. First, it made you suck plastic cock then you deployed and began mercilessly nasilovt your ass. You were close to the peak of pleasure as hostess suddenly stopped.'
+		'Mistress sits in front of you. First, she makes you suck the plastic cock then she turns you around and begins to mercilessly fuck your ass. You are close to your peak as misstress suddenly stops.'
 	end
 
-	act 'Indignant':gt 'lesbidomhouse', 'ev11'
+	act 'More':gt 'lesbidomhouse', 'ev11'
 end
 
 if $ARGS[0] = 'ev11':
@@ -241,11 +238,11 @@ if $ARGS[0] = 'ev11':
 
 	if ldmistresex = 0:ldmistresex = 1 & girl += 1
 
-	lesbiday = day
-	'Well, I''m almost finished - you moaned.'
-	'-Next lesson - do not let the girl that she has not earned it. Want to come? Please lick my pussy.'
-	'You started with a zeal to lick pussy Mistress, resignedly and without question.'
-	'After due pleasure hostess put her hand on your head and let down your tongue to her anus.'
+	lesbiday = daystart
+	'"Please, I''m almost finished," you moan.'
+	'"Next lesson, do not give the girl that which she has not earned. Want to come? Lick my pussy."'
+	'You are resigned to zealously licking Mistresses pussy, without question.'
+	'After due pleasure Mistress puts her hand on your head and guides your tongue to her anus.'
 
 	act 'Protest':gt 'lesbidomhouse', 'ev12'
 	act 'Lick ass':gt 'lesbidomhouse', 'ev13'
@@ -255,8 +252,8 @@ if $ARGS[0] = 'ev12':
 	cla
 	*clr
 	minut += 5
-	'Fu, he''s not washed, then callas - you started to step back.'
-	'Requirements should not be easy, otherwise the girl will not be so submissive. But then it will wait for a very good encouragement.'
+	'Fuck that, it''s disgusting," you start to back away.'
+	'Requirements should not be easy, otherwise the girl will not be submissive enough. Then she will work hard for her encouragement.'
 	act 'Leave':
 		lesbiQW = -1
 		gt 'street'
@@ -272,12 +269,12 @@ if $ARGS[0] = 'ev13':
 	minut += 5
 	energy += 1
 	'<center><img src="images/qwest/lesbi3.jpg"></center>'
-	'You reluctantly began to lick the anus Mistress. You almost puked, but more excitement and a desire to know what kind of reward awaits her after forced you to continue.'
-	'Mistress of all shuddered, grabbing you by the hair. She finished.'
-	'-Well, what reward awaits me, Mistress?'
-	'-No ...'
+	'You reluctantly began to lick Mistresses anus. You almost puke, but more excitement and a desire to know what kind of reward awaits you afterwards, forces you to continue.'
+	'Mistress shudders and grabs you by the hair. She has finished.'
+	'"Well, what reward awaits me, Mistress?"'
+	'"No."'
 
-	act 'Uncomprehending look':gt 'lesbidomhouse', 'ev14'
+	act 'Question her':gt 'lesbidomhouse', 'ev14'
 
 	act 'Leave':
 		lesbiQW = -1
@@ -290,9 +287,9 @@ if $ARGS[0] = 'ev14':
 	*clr
 	lesbiQW = 5
 	'<center><img src="images/qwest/lesbi9.jpg"></center>'
-	'-Chtoooo? You told me then that will be rewarded!'
-	'-This is another lesson, the girl can not give awards at once. She must understand that to get something not so easy. All go.'
-	'I''ll meet you tomorrow!'
+	'"No...? You told me that I would be rewarded!'
+	'"This is another lesson, the girl can not get her rewards all at once. She must understand that to get something is not easy. Now go."'
+	'"I''ll meet you tomorrow!"'
 
 	act 'Leave':gt 'street'
 end
@@ -300,22 +297,22 @@ end
 if $ARGS[0] = 'ev15':
 	cla
 	*clr
-	lesbiday = day
+	lesbiday = daystart
 	minut += 30
 
 	if callnm = 1:
-		$callnm = 'nipple'
+		$callnm = 'blowjob betty'
 	elseif callnm = 2:
-		$callnm = 'analschitsa'
+		$callnm = 'analwhore'
 	elseif callnm = 3:
-		$callnm = 'davalka'
+		$callnm = 'penis fly trap'
 	elseif callnm = 4:
-		$callnm = 'spermoedka'
+		$callnm = 'spermaholic'
 	end
 
-	'-Come, <<$callnm>>'
-	'-Hello, Mistress.'
-	'-Well, you know what to do to get the reward.'
+	'"Come, <<$callnm>>"'
+	'"Hello, Mistress."'
+	'"Now, you know what to do to get the reward."'
 
 	act 'Lick Mistress':gt 'lesbidomhouse', 'ev16'
 end
@@ -328,11 +325,11 @@ if $ARGS[0] = 'ev16':
 	horny += 20
 	energy += 1
 	'<center><img src="images/qwest/lesbi4.jpg"></center>'
-	'You began to lick pussy Mistress first and then unwashed anus ... you could not understand why, but you start to like it.'
-	'When the hostess enjoyed in abundance, she stood up and said:'
-	'-Well, slut, and now it''s time to reward you.'
-	'-And what is the reward? - <<$name>> did not even resent her so called, just so she felt.'
-	'Get up-cancer.'
+	'"You begin to lick Mistresses pussy first and then her unwashed anus ... you can not understand why, but you start to like it."'
+	'"When Mistress has reveled in bliss, she stands up and says,'
+	'"Well, slut, now it''s time to reward you."'
+	'"And what is the reward?" You don''t even resent her name calling, or dare to say anything.'
+	'"Strip, and bend over."'
 
 	act 'Do as told':gt 'lesbidomhouse', 'ev17'
 end
@@ -343,16 +340,16 @@ if $ARGS[0] = 'ev17':
 	minut += 5
 	horny = 95
 	'<center><img src="images/qwest/lesbi5.jpg"></center>'
-	'You, in anticipation of bliss, got on all fours and relaxed.'
-	'First pussy entered one finger and began to move her.'
-	'then the second.'
-	'Him third.'
-	'You started having fun ... and were on the verge, as in pussy entered the fourth finger.'
-	'Vagina start to move apart more and you hit the pain, you cried.'
-	'But if he had not heard the hostess, she began to insert whole hand.'
-	'You screamed in pain again and were ready to jump to his feet.'
+	'You, anticipating bliss, get on all fours and relax.'
+	'Your pussy is entered by a finger and it begins to move.'
+	'Then it is joined by a second.'
+	'Then a third.'
+	'You start having fun. It is driving close to your limit, when your pussy is entered by a fourth finger.'
+	'Your vagina starts to part more and you are hit by pain. You cry out.'
+	'It seems Mistress does not hear you, as she begins to insert her whole hand.'
+	'You scream in pain again and are ready to jump to your feet.'
 
-	act 'Yell and go':gt 'lesbidomhouse', 'ev18'
+	act 'Yell and leave':gt 'lesbidomhouse', 'ev18'
 	act 'Meekly tolerate':gt 'lesbidomhouse', 'ev19'
 end
 
@@ -363,8 +360,8 @@ if $ARGS[0] = 'ev18':
 	minut += 5
 	lesbiQW = 6
 	'<center><img src="images/qwest/pnx.jpg"></center>'
-	'-Fuck you, pervert crappy!! and is a reward for your fucking ass! Fuck you!'
-	'You grabbed clothes and rushed naked in his apartment.'
+	'"Fuck you, you creapy pervert!! How''s this for a reward for licking your ass! Fuck you!"'
+	'You grab your clothes and rushed naked from the apartment.'
 
 	act 'Leave':gt 'street'
 end
@@ -380,7 +377,9 @@ if $ARGS[0] = 'ev19':
 	horny = 5
 	orgasm += 1
 	'<center><img src="images/qwest/lesbi6.jpg"></center>'
-	'You were wildly painful, but you, no matter what, suffered pain. Even the tears gushed from his eyes. But the hostess continued to move his hand, and you did not even know that your pussy can get into a fist. But in the end, you even felt like it, and you hit an orgasm.'
+	'It is wildly painful, but you, no matter what, endure the pain. Even so tears gush from his eyes.'
+	'Mistess continues to move her hand, and you did not even know that your pussy could take a fist.'
+	'But in the end, you even discover that you like it, and you hit orgasm.'
 
 	act 'Leave':gt 'street'
 	act 'Thank mistress':gt 'lesbidomhouse', 'ev20'
@@ -392,11 +391,11 @@ if $ARGS[0] = 'ev20':
 	lesbiQW = 8
 	minut += 3
 	'<center><img src="images/qwest/lesbi4.jpg"></center>'
-	'You have got to the vagina mistress, so thank her for such a powerful orgasm, which she grinned and said:'
-	'"And you''re a quick study, <<$name>> Do you just learn, or you just like to do whatever you ordered?"'
+	'You go to the Mistresses vagina, to thank her for such a powerful orgasm. She grins and says,'
+	'"And you''re a quick study, <<$name>>. Do you just learn, or do you just like to do whatever you''re told?"'
 
-	act 'Indignant':gt 'lesbidomhouse', 'ev18'
-	act 'Silently licking pussy':gt 'lesbidomhouse', 'ev21'
+	act 'Yell and Leave':gt 'lesbidomhouse', 'ev18'
+	act 'Silently lick pussy':gt 'lesbidomhouse', 'ev21'
 end
 
 if $ARGS[0] = 'ev21':
@@ -407,7 +406,7 @@ if $ARGS[0] = 'ev21':
 	lesbian += 1
 	minut += 30
 	'<center><img src="images/qwest/lesbi4.jpg"></center>'
-	'After a few minutes of work vvash skillful tongue, Mistress shuddered in orgasm. You said nothing, got up and went home'
+	'After a few minutes work with your skillful tongue, Mistress shudders in orgasm. You say nothing, get up and go home.'
 
 	act 'Leave':gt 'street'
 end
@@ -418,36 +417,35 @@ if $ARGS[0] = 'ev22':
 	minut += 5
 	horny += 50
 	'<center><img src="images/qwest/lesbi.jpg"></center>'
-	'By thought, "fuck this bitch." But after all the stairs, remembered how dirty ass licked and how do you like it ...'
-	'Damn, she used me, and not taught ... And to hell with it ..'
-	'thought you decided to visit pervert, but just to lick her.'
-	'-Mistress, I came here this .. well .. in general ..'
-	'-Like to obey me? - The hostess asked - well, but you insulted me. This is not good!'
-	'-I am ready to lick his guilt in front of you ... but without it, your fisting ..'
-	'-That would be little need to do something else!'
-	'I hope no-battering?'
-	'-do not worry.'
+	'Although you''re thinking, "Fuck this bitch," after all her shit, and remembering licking her ass and how you liked it ...'
+	'Damn, she used you, not taught you... To hell with it. You''ll visit the pervert, but just to lick her.'
+	'"Mistress, I come here to... well... err..."'
+	'"You like to obey me?" Mistress asks, "OK, but you insulted me. This is not good!"'
+	'"I am ready to lick his guilt from you, but the fisting, I can''t it''s too much."'
+	'"Then I will have to think of something different for you."'
+	'"Please, not a beating."'
+	'"Do not worry, too much."'
 
-	act 'Correct their actions':gt 'lesbidomhouse', 'ev23'
+	act 'Do it':gt 'lesbidomhouse', 'ev23'
 end
 
 if $ARGS[0] = 'ev23':
 	cla
 	*clr
-	lesbiday = day
+	lesbiday = daystart
 	lesbiQW = 8
 	sub += 1
 	lesbian += 1
 	minut += 30
 	asslick += 1
 	'<center><img src="images/qwest/lesbi7.jpg"></center>'
-	'You have again started to lick Mistress of all places and you will definitely like it.'
+	'Once more you lick Mistress in all her places and realise you definitely like it. This time you need no directions and don''t even consider stopping until she cannot take anymore.'
 
-	if sub < 50 or vaf < 100:'"What does it mean to me" - you thought'
+	if sub < 50 or vaf < 100:'"What is becoming of me", you think.'
 
-	'-Well, now on his knees and open your mouth - Hostess said.'
+	'"Good, now on your knees and open your mouth".'
 
-	act 'Get on your knees and open your mouth':gt 'lesbidomhouse', 'ev24'
+	act 'Obey':gt 'lesbidomhouse', 'ev24'
 end
 
 if $ARGS[0] = 'ev24':
@@ -461,9 +459,9 @@ if $ARGS[0] = 'ev24':
 	horny += 5
 	water += 1
 	'<center><img src="images/qwest/lesbi8.jpg"></center>'
-	'Mistress stood over you and start writing your mouth. Urine hit all over the face, mouth and body.'
-	'You covered indescribable orgasm seems like you become obey.'
-	'Thank you once again licked pussy dripping with drops of urine. Pocle this hostess pointed to the door.'
+	'Mistress stands over you and starts pissing in your mouth. Urine hits all over your face, mouth and body.'
+	'You experience an indescribable orgasm. It seems like you like to obey.'
+	'You thank her once again by licked from her pussy drops of urine. With this hostess points to the door.'
 
 	act 'Leave':gt 'street'
 end
@@ -474,10 +472,10 @@ if $ARGS[0] = 'ev25':
 	minut += 5
 	horny += 25
 	'<center><img src="images/qwest/lesbi.jpg"></center>'
-	'You came to the hostess for a new portion of fisting, but she said that you did very poorly, without thanking her, and so do not get anything.'
-	'Strange, but such a ban have filed nly'
+	'You go to the hostess for a new session of fisting, but she says that you did very poorly, and didn''t thanking her, and so you will get nothing.'
+	'Strange, but such a ban only makes you horny.'
 
-	act 'Learn how to make amends':gt 'lesbidomhouse', 'ev26'
+	act 'Make amends':gt 'lesbidomhouse', 'ev26'
 end
 
 if $ARGS[0] = 'ev26':
@@ -486,7 +484,7 @@ if $ARGS[0] = 'ev26':
 	minut += 5
 	horny += 25
 	'<center><img src="images/qwest/lesbi10.jpg"></center>'
-	'To start the hostess took off panties (smell of a dirty hit out of the vagina), and ordered you to do regular work tab.'
+	'Mistress starts by taking off her panties and you know by the smell whatis expected of you. You are ordered to do your regular duties.'
 
 	act 'Lick':gt 'lesbidomhouse', 'ev23'
 end
@@ -496,18 +494,18 @@ if $ARGS[0] = 'ev28':
 	*clr
 	minut += 5
 	horny += 25
-	lesbiday = day
+	lesbiday = daystart
 	energy += 1
 	'<center><img src="images/qwest/lesbi11.jpg"></center>'
-	'You came to the hostess for a new portion of feces and golden rain, among other things - her pussy licked'
+	'You go to Mistress for a new session of feces and golden rain, among other things and of course licking her pussy.'
 	lrnd = rand(1, 10)
 
 	if lrnd > 7:
-		'During all these perversions you covered orgasm'
+		'During all these perversions, you climax.'
 		orgasm += 1
 	elseif lrnd <= 7:
 		horny += 75
-		'Unfortunately, you do not get an orgasm, but very excited.'
+		'Unfortunately, you do not orgasm, but have gotten very excited.'
 	end
 
 	pee += 1
@@ -526,9 +524,10 @@ if $ARGS[0] = 'ev29':
 	minut += 5
 	horny += 25
 	'<center><img src="images/qwest/lesbi3.jpg"></center>'
-	'You came to the hostess once again to lick her all that you can, but she said that she had a small gift for such a nice girl like you, but the tongue to start work will still have to'
+	'You go to Mistress once again to lick her for all that you''re worth, but she says that she has a small gift for a nice girl like you, but you will still have to carry out your tongue duties.'
 
 	act 'Do what you came for':gt 'lesbidomhouse', 'ev23'
 end
 
 --- lesbidomhouse ---------------------------------
+

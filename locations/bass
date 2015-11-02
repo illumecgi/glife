@@ -14,7 +14,7 @@ if $ARGS[0] = 'start':
 
 	act 'Leave':minut += 5 & gt 'down'
 
-	if db >= 1 and bikini > 0 and Goraday ! day:act 'Search ZHoru':Goraday = day & gt 'klofdomhouse', 'ev42'
+	if db >= 1 and bikini > 0 and Goraday ! daystart:act 'Search ZHoru':Goraday = daystart & gt 'klofdomhouse', 'ev42'
 
 	if money >= 100 and bikini > 0:
 		act 'Pay to swim in the pool for an hour (100 rubles)':
@@ -157,3 +157,4 @@ if $ARGS[0] = 'a':
 end
 
 --- bass ---------------------------------
+

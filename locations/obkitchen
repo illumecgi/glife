@@ -144,12 +144,12 @@ end
 if lekarstvo > 0:
 	'You have <<lekarstvo>> tablets.'
 
-	if sick > 0 and lekarday ! day:
+	if sick > 0 and lekarday ! daystart:
 		act 'Take a pill':
 			cla
 			*clr
 			minut += 5
-			lekarday = day
+			lekarday = daystart
 			lekarstvo -= 1
 			sick -= sick * 20 / 100
 			lekrand = rand(1, 9)
@@ -164,12 +164,12 @@ end
 if vitamin > 0:
 	'You have <<vitamin>> vitaminok.'
 
-	if vitaminday ! day:
+	if vitaminday ! daystart:
 		act 'Take vitamins (0:05)':
 			cla
 			*clr
 			minut += 5
-			vitaminday = day
+			vitaminday = daystart
 			vitamin -= 1
 			frost = 0
 			skinvan += 1
@@ -184,3 +184,4 @@ if vitamin > 0:
 end
 
 --- obkitchen ---------------------------------
+

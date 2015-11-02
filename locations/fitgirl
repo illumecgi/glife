@@ -4,24 +4,26 @@ $dintaniastart = {
 		act 'Molest':
 			cla
 			*clr
-			tanday = day
+			tanday = daystart
 			gs 'stat'
+
 			'<center><img src="images/img/centr/razd1.jpg"></center>'
-			'You walk up to a girl and vskhvativ one hand on the buttock deploy to face him'
+			'You come to the girl and grabbed the buttocks with one hand deploy to face him'
 
 			if vnesh < 20:
-				'Girl puts you off, and shouting something about you and all your other relative, out of the locker room'
+				'She pushes you, and shouting that-something about you and all your relatives, out of the locker room'
 
-				act '...':gt 'fit', 'razd'
+				act '...':gt 'fit', 'dressing room'
 			elseif vnesh >= 20:
-				'Girl vskhvatila your hand squeezing her ass, but stopped for a moment considering you, she probably expected to see a guy or girl does.'
+				'Girl vskhvatila your hand squeezes her ass, but stopped for a moment looking at you, She probably expected to see a man and certainly not for a Woman.'
 
 				act 'Take advantage of the confusion':
 					cla
 					*clr
 					gs 'stat'
+
 					'<center><img src="images/img/centr/razd2.jpg"></center>'
-					'While she was trying to understand what is happening you pulled up her shirt and began to fondle her nipples tongue, and now her hand stroking your buttocks'
+					'While she was trying to understand what''s going on, you pulled up her shirt and began licking her nipples, and now her hand stroking your buttocks'
 
 					act 'Further':tanznak = 1 & gt 'lezbsex', 'start'
 				end
@@ -31,14 +33,14 @@ $dintaniastart = {
 					gs 'stat'
 
 					if vnesh < 30:
-						'Girl smiling at you, but removes your hand and leaves, sending you a kiss.'
+						'She smiles at you, but removes your hand, and leaves, I am sending you a kiss.'
 
-						act '...':gt 'fit', 'razd'
+						act '...':gt 'fit', 'dressing room'
 					elseif vnesh >= 30:
 						cla
 						*clr
 						'<center><img src="images/img/centr/razd3.jpg"></center>'
-						'The girl pressed to you even stronger and kisses your lips.'
+						'She pressed harder for you and kisses your lips.'
 
 						act 'Further':
 							tanznak = 1
@@ -52,25 +54,31 @@ $dintaniastart = {
 }
 
 gs 'stat'
-'Girl notices your look and smile turns. Girl undressing and taking toiletries goes into the shower.'
 
-act 'Turn':gt 'fit', 'razd'
+'She notices your look and smile turns. She undresses and toiletries are taking the shower.'
 
-act 'Walk-in shower behind a girl':
+act 'Turn':gt 'fit', 'dressing room'
+act 'Going into the shower behind a girl':
 	cls
-	minut += 15
+	minut = minut + 15
 	sweat = -3
+	! WD: Remove old Cheat code
 	horny += 1
 	hapri = 0
 	mop = 1
+
 	dynamic $showerdin
+
 	shovertania += 1
 	gs 'stat'
+
 	'<center><img src="images/pics/dush.jpg"></center>'
-	'Logged-in shower. There''s no one, except this girl. The girl looked around and see you smile again turned away.'
+	'You are logged in shower. There''s no one, except this girl. She looked back and saw you smiling back turned.'
+
 	dynamic $dintaniastart
 
-	act 'Out of the shower':gt 'fit', 'razd'
+	act 'Exit out of the shower':gt 'fit','dressing room'
 end
 
 --- fitgirl ---------------------------------
+

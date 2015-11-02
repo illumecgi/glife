@@ -212,3 +212,4 @@ if hour >= 12 and hour < 20 and pirsG = 1 and money >= 25000:'<a href="exec:dyna
 act 'Leave':gt 'nord'
 
 --- pirsingsalon ---------------------------------
+

@@ -18,7 +18,7 @@ act 'Kneel down':
 		cumlip += 1
 		swallow += 1
 		money += 500
-		arturblowday = day
+		arturblowday = daystart
 		gs 'stat'
 		'<center><img src="images/qwest/alter/artur/cocksuckercum.jpg"></center>'
 		'Arthur began to cum in your mouth and you become immediately swallow sperm. After that Arthur grinned, bosses cock in his pants and said "Wai Svetka, You''re a real nipple. Here''s from Uncle Arturchik, Buy sebe konfetok." he handed to you 500 rubles.'
@@ -28,3 +28,4 @@ act 'Kneel down':
 end
 
 --- arturkiosk ---------------------------------
+

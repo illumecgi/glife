@@ -1,32 +1,27 @@
 # alterStart
 StoryLine = 1
 MagikDostup = 1
+
+!!TODO: check these are actually used somewhere
+prezikProver = 3
+Putsawtatvag=0
+PutsawpirsF=0
+PutsawpirsG=0
+brothersawpirsF = 0
+
 umbrella = 1
 birthday = 5
 birthmonth = 3
 $name = 'Svetlana'
 $surname = 'Lebedev'
 !!!0.2.6 addition
-$nickname = 'Svetski'
+$nickname = 'Sveta'
 !!!
 age = 15
 vidage = 14
-!!age = 17
-!!vidage = 16
 year = 2009
-!!month = 8
 week = 6
 hour = 10
-!!day = 30
-month = 3
-day = 9
-!!!!!!!!!!!!!!!
-!!month = 3
-!!day = 9
-!!week = 6
-!!hour = 10
-!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!
 month = 8
 day = 29
 week = 5
@@ -61,19 +56,15 @@ vidageday = 300
 housrA = 0
 sarafan[1] = 1
 sarafanH[1] = 30
-nude = 0
-odevnesh = 0
 lobok = 3
 leghair -= 5
 mop = 1
 housr = 0
 tanga = 1
-numdres = 1
-odetjeans = 1
-numdress = 1
 jeans[1] = 1
 jeansH[1] = 100
 jeansB[1] = 70
+gs 'clothing', 'wear', 'jeans', 1
 cltarelka = 0
 fairy = 0
 eda = 0
@@ -83,7 +74,6 @@ shampoo = 0
 tampon = 20
 opPRE = 0
 daystart = 0
-newclo[131] = 1
 yoga[15] = 1
 yogaH[15] = 100
 dress[5] = 1
@@ -99,6 +89,8 @@ father = 50
 mother = 50
 sister = 50
 brother = 50
+! WD: Add Uninitialised ~ 'brotherDick'
+brotherDick = rand(13, 17)
 Suspeh = 75
 $npcName[1] = 'Dimka'
 $npcSurName[1] = 'Nosov'
@@ -279,9 +271,12 @@ $npcGo[25] = '<a href="exec:numnpc = 25 & gt ''Snpc''"><<$npcName[25]>> <<$npcSu
 
 $din_alter_start_ev = {
 	cls
-	'When you were 13 years old, your period started like most other girls in your class. Your breasts started to grow and your armpit and pubic hair began to sprout. Your skin became covered with acne. When you finished 9th class, you did not drop out of school, and continued to study in the 10th grade.''You''re about to start 10th grade (placeholder until someone comes up with a less terrible intro than was here before)'
-
-	'The summer holiday ends soon and you will go to your new class to start your first of the two years you''re going to study.'
+	'<center><img src="images/pic/alterstart7.jpg"></center>'
+	'As with all girls, you reached the milestone of puberty. For you it started when you were 13 years old, like most normal girls. You had your first period, which sucked, but that was the start of your changes.'
+	*nl
+	'Your chest then felt strange and you discovered your breasts were growing, which excited you, wondering how big they will get. Hair also began to form in your armpits and privates, and at the same time, you felt... things, things you learned to become intimate with. You eventually learned how to manage your developing body, your troublesome complexion included, and survived the transition to womanhood.'
+	*nl
+	'When you finished 9th class, you did well enough continue with your secondary education and chose to continue. The summer holiday ends soon and you''re getting ready to start 10th grade.'
 	!!'You weaned these two classes and you only have a few months before graduation.'
 
 	act 'Start the game':
@@ -300,28 +295,32 @@ $din_alter_start_ev = {
 
 clr
 gs 'stat'
+'<center><img src="images/pic/alterstart1.jpg"></center>'
 'You were born in <<birthyear>>.'
 'Your mother and father, Natasha Mikhail <<$surname>>, were quite young and probably didn''t know how to protect themselves.'
 'You have a sister, Anja, who is 2 years older than you.'
 'You do not remember your real father because your parents divorced when you were still too young to remember. Your mom found another man and they had your little brother Nick.'
-$name = input("What is your first name?")
+$name = input("What is your first name? (Leave blank for default)")
 
 if $name = '':$name = 'Svetlana'
 
-$surname = input("What is your last name?")
+$surname = input("What is your last name? (Leave blank for default)")
 
 if $surname = '':$surname = 'Lebedev'
 
 !!!0.2.6 addition
-$nickname = input("What is your nick name?")
+$nickname = input("What is your nick name? (Note: If you chose a custom name, you have to enter something here!)")
 
-if $nickname = '':$nickname = 'Svetski'
+if $nickname = '':$nickname = 'Sveta'
 !!!
 
 act 'Further':
 	cls
 
-	'In the kindergarten where you went everything was fine, but you don''t remember it. When you were 7 years old, you finished kindergarten and went to school.'
+	'<center><img src="images/pic/alterstart2.jpg"></center>'
+	'When you were young you had a fine childhood. Although you don''t remember much from kindergarten, you do remember going to elementary school when you were 7 years old.'
+	*nl
+	'Like many other kids, you tried out all sort of things at school. But the one thing that really defined you is...'
 
 	act 'You are completely obsessed with books.':
 		cls
@@ -346,6 +345,7 @@ act 'Further':
 		nerdism = 100
 		fantasybook = 5
 		gs 'stat'
+		'<center><img src="images/pic/alterstart3.jpg"></center>'
 		'You spent virtually all your free time at home reading books. While you''ve definitely learned a decent bit from them, you''ve always been rather frail as a result, and too many nights of trying to read in poor light have taken a toll on your eyesight.'
 
 		act 'Further':dynamic $din_alter_start_ev
@@ -370,6 +370,7 @@ act 'Further':
 		money += 2000
 		tan = 30
 		gs 'stat'
+		'<center><img src="images/pic/alterstart4.jpg"></center>'
 		'In school, you put a lot of effort to be an excellent pupil. You didn''t make any friends because you weren''t engaged in sports, but you have excellent grades and your mom is very proud of you.'
 
 		act 'Further':dynamic $din_alter_start_ev
@@ -398,12 +399,13 @@ act 'Further':
 		jeansB[1] = bedra
 		tan = 30
 		gs 'stat'
-		'You spent all your free time training your volleyball skills. Because of that you weren''t that good in school and had less friends.'
+		'<center><img src="images/pic/alterstart5.jpg"></center>'
+		'As soon as you tried out volleyball you got really into it and spent all your free time improving your skills in the sport. Because of that you weren''t that good in school and had less friends.'
 
 		act 'Further':dynamic $din_alter_start_ev
 	end
 
-	act 'You spent time outdoors':
+	act 'You spent time with you friends outdoors':
 		cls
 		clr
 		stren = 10
@@ -426,5 +428,5 @@ act 'Further':
 	end
 
 end
-
 --- alterStart ---------------------------------
+

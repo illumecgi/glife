@@ -1,6 +1,6 @@
 # qwbereg2
 minut += 15
-vladimirday = day
+vladimirday = daystart
 vladimirQW = 35
 gs 'stat'
 '<center><img src="images/qwest/vladimir/car.jpg"></center>'
@@ -11,3 +11,4 @@ gs 'stat'
 act 'Go home':gt 'street'
 
 --- qwbereg2 ---------------------------------
+

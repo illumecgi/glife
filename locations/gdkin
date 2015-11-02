@@ -4,7 +4,7 @@ $din_kotov_love = {
 		cls
 		gs 'stat'
 		'<center><b><font color="maroon"><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
-		'<center><img src="images/qwest/alter/npc9.jpg"></center>'
+		'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 		'To you and the guy fits Witek. "Che garbage? Who''s that bloke?" Witek takes for male breast and angrily said, "Well, ka sebal horrified by my heifer, and now the mug smashed into smithereens. Understood?"'
 
 		if DPgrup = 1:
@@ -105,7 +105,8 @@ $din_dance_otkaz = {
 	if alko <= 2 and horny <= 75:
 		act 'Refuse':
 			cls
-			willpower += rand(0, 1)
+			! WD: Should be will not willpower
+			will += rand(0, 1)
 			gt 'gdkin'
 		end
 	end
@@ -115,11 +116,11 @@ $din_vibor_tipe_dance = {
 	!'
 	if dance >= 50 and alko > 0 and horny >= 50:
 		act 'Sexy dance':
-		cls
-		dance += 1
-		gs 'stat'
+			cls
+			dance += 1
+			gs 'stat'
 
-		gt $curloc
+			gt $curloc
 		end
 	end
 	'!
@@ -321,7 +322,7 @@ if hour >= 20 and hour <= 23:
 		if dance < 50 and agil >= dance:dance += 1
 
 		manna += 10
-		willpower += 10
+		willpower += 10 & ! WD: Should be willpower as is mood
 		frost = 0
 		gs 'stat'
 
@@ -449,3 +450,4 @@ end
 act 'Go outside':gt 'gdk'
 
 --- gdkin ---------------------------------
+

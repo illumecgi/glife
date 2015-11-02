@@ -17,7 +17,7 @@ $qwmeetdy = {
 
 minut += 5
 vladimirQW = 25
-vladimirday = day
+vladimirday = daystart
 gs 'stat'
 '<center><b><font color="maroon">Vladimir</font></b></center>'
 '<center><img src="images/qwest/vladimir/001.jpg"></center>'
@@ -110,3 +110,4 @@ act 'Mark bouquet and go to a restaurant with Vladimir':
 end
 
 --- qwmeet ---------------------------------
+

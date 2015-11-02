@@ -1,4 +1,6 @@
 # FSstart
+! WD: Missing code ~ Fight opponent does not get any variables set.
+
 minut += 1
 nosave = 1
 gs 'stat'
@@ -55,3 +57,4 @@ end
 act 'Leave':nosave = 0 & gt 'Komp', 'start'
 
 --- FSstart ---------------------------------
+

@@ -12,10 +12,13 @@ fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 '<center><b><font color="maroon">Bath</font></b></center>'
-'<center><img src="images/qwest/alter/<<$loc>>.jpg"></center>'
+! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
+'<center><img src="images/qwest/alter/vanrPar.jpg"></center>'
 'Bathroom cramped and very unpretentious.'
 
 if stanok > 0:'Your razor will suffice for <b><<stanok>></b> time.'
+!WD: heal chafe
+if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
 
 act 'Wash in the shower (0:15)':
 	cls
@@ -56,42 +59,49 @@ act 'Wash in the bathroom (1:00)':
 	'Turn on the water, you got into the bathroom and went into the warm water. Ponaslazhdatsya pleasant warmth you lathered his body sponge and hair shampoo. Then all you have washed off with water.'
 
 	act 'Out of the bath':gt $locM, $metkaM
-		if horny >= 90:
-			act 'Direct water on pussy':
-				cla
-				*clr
-				horny = 0
-				minut += 30
-				mastr += 1
-				orgasm += 1
-				manna += 15
-				willpower += 15
-				'<center><img src="images/pics/wash7.jpg"></center>'
-				'You sent a water faucet on pussy and tight jet of warm water began to caress you. Soon you will feel like a warm wave covers your entire body and you began to shudder in orgasm.'
+	if horny >= 90:
+		act 'Direct water on pussy':
+			cla
+			*clr
+			horny = 0
+			minut += 30
+			mastr += 1
+			orgasm += 1
+			manna += 15
+			willpower += 15
+			'<center><img src="images/pics/wash7.jpg"></center>'
+			'You sent a water faucet on pussy and tight jet of warm water began to caress you. Soon you will feel like a warm wave covers your entire body and you began to shudder in orgasm.'
 
-				act 'Get out and get dressed':gt $locM, $metkaM
-			end
-		elseif horny >= 40 and horny < 90:
-			act 'Direct water on pussy':
-				cla
-				*clr
-				horny += 5
-				minut += 30
-				manna += 10
-				willpower += 10
-				'<center><img src="images/pics/wash7.jpg"></center>'
-				'You sent a water faucet on pussy and tight jet of warm water began to caress you. At first it was not even bad, but then sleep and arousal, even as it was not nice. So you stopped masturbating.'
-
-				act 'Get out and get dressed':gt $locM, $metkaM
-			end
+			act 'Get out and get dressed':gt $locM, $metkaM
 		end
+	elseif horny >= 40 and horny < 90:
+		act 'Direct water on pussy':
+			cla
+			*clr
+			horny += 5
+			minut += 30
+			manna += 10
+			willpower += 10
+			'<center><img src="images/pics/wash7.jpg"></center>'
+			'You sent a water faucet on pussy and tight jet of warm water began to caress you. At first it was not even bad, but then sleep and arousal, even as it was not nice. So you stopped masturbating.'
 
-		if horny >= 50:
-			act 'Masturbate':gt 'selfplay'
+			act 'Get out and get dressed':gt $locM, $metkaM
 		end
+	end
+
+	if horny >= 50:
+		act 'Masturbate':gt 'selfplay'
 	end
 end
 
+! WD: add Underwear change
+if tanga = 1:
+	act 'Remove Underwear':
+		cla
+		tanga = 0
+		gt $curloc
+	end
+end
 
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Use a tampon (0:05)':
@@ -109,8 +119,6 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 	end
 end
 
-!!0.2.6 extension: Removed sweat =- 1 when cum is wiped off clothes
-!!Washing off cosmetics also removes cum from face
 if mop ! 1:
 	act 'Wash off cosmetics (0:15)':
 		cla
@@ -137,7 +145,22 @@ if cumfrot > 0:
 		act 'Finish':gt $curloc
 	end
 end
-!!
+
+if cumlip > 0 or cumface > 0:
+	act 'Clean your face from sperm (0:05)':
+		cla
+		*clr
+		mop = 1
+		cumlip = 0
+		cumface = 0
+		sweat -= 1
+		minut += 5
+		'<center><img src="images/etogame/facesp.jpg"></center>'
+		'You clean your face and got rid of any trace of cum.'
+
+		act 'Finish':gt $curloc
+	end
+end
 
 if leghair > 0 and stanok > 0:
 	act 'Shave your legs (0:15)':
@@ -178,8 +201,9 @@ if analplug = 1 and analplugin = 1:
 
 		if anus < 30:anus += 1
 
-		'<center><img src="images/etogame/analplug.jpg"></center>'
-		'You bent over and took out the butt plug.' !!0.2.6: Removed unneccessary var check
+		'<center><img src="images/body/analplug.jpg"></center>'
+
+		'You bent over and took out the butt plug.' & !!0.2.6: Removed unneccessary var check
 
 		act 'Finish':gt $curloc
 	end
@@ -195,24 +219,54 @@ elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 		if anus >= 10 and anus < 20:anus += rand(1, 2)
 		if anus >= 20 and anus < 30:anus += rand(0, 1)
 
-		'<center><img src="images/pic/analplug.jpg"></center>'
+		'<center><img src="images/body/analplug.jpg"></center>'
 
 		if butpluguse > 0:'You bent over and inserted the butt plug.'
 		if butpluguse = 0:butpluguse = 1 & '"If I don''t use it then why did I buy it!" you thought. You decided to take a closer look while thinking, "It is necessary to start developing my ass so I could have great adventures someday, you could even say a huge and thick adventures with crimson heads, uh, now I got carried away." You scratched your head. Then you directed it in your ass, it was a bit painful at first, but as soon as the widest part was plunged into the murky depths of your anus it became easier to push it all the way.'
 
-		act 'Leave':gt $curloc
+		act 'Finish':gt $curloc
 	end
 end
 
-if klisma = 1 and klismaday ! day:
+if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':
 		cla
 		*clr
 		minut += 5
-		klismaday = day
+		klismaday = daystart
 		klismaday1 = 1
 		'<center><img src="images/picV/klisma.jpg"></center>'
 		'You put yourself an enema and clean intestines, now your ass is ready for anal sex.'
+
+		act 'Finish':gt $curloc
+	end
+end
+
+if vibrator = 1 and vibratorIN = 1:
+	act 'Remove the vibrator (0:05)':
+		cla
+		*clr
+		minut += 5
+		vibratorIN = 0
+
+		if vagina < 30:vagina += 1
+
+		'<center><img src="images/etogame/vibrator.jpg"></center>'
+		'You bend over the sink and take the vibrator out of your pussy.'
+
+		act 'Finish':gt $curloc
+	end
+elseif vibrator = 1 and vibratorIN = 0 and vagina ! 0:
+	act 'Insert the vibrator in your vagina (0:05)':
+		cla
+		*clr
+		minut += 5
+		vibratorIN = 1
+
+		if vagina < 30:vagina += 2
+
+		'<center><img src="images/etogame/vibrator.jpg"></center>'
+		'You bend over the sink and inserted the vibrator in your pussy.'
 
 		act 'Finish':gt $curloc
 	end
@@ -236,3 +290,4 @@ if pregtest > 0:
 end
 
 --- vanrPar ---------------------------------
+

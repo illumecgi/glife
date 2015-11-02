@@ -1,5 +1,5 @@
 # enemy
-!!Calculation of the enemy`s attack
+!!Calculation of the enemy''s attack
 if $ARGS[0] = 'start':
 	cla
 	!in this block is selected on the basis of the variable program enemy attacks
@@ -463,3 +463,4 @@ if $ARGS[0] = 'fighter5':
 end
 
 --- enemy ---------------------------------
+

@@ -1,6 +1,6 @@
 # volAndGev
 gs 'stat'
-
+! WD: Missing Code, Logic Var Uninitialised ~ 'andGevknow'
 if andGevknow = 0:
 	if vnesh < 15:
 		'The guy that something vaguely probubnel, of the text you''ve seen only the word bow-legged cow.'
@@ -30,3 +30,4 @@ end
 act 'Leave':gt 'gdksport'
 
 --- volAndGev ---------------------------------
+

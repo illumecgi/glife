@@ -1,8 +1,9 @@
 # TimofeiMetro
 minut += 1
-sosedMetroDay = day
+sosedMetroDay = daystart
 gs 'stat'
-!!'<center><img src="images/qwest/sosed.jpg"></center>'
+! Missing Image
+!!'<center><img src="images/qwest/sosed/sosed.jpg"></center>'
 'Timothy saw you and said hello, "Hello <<$name>>."'
 
 if cumfrot= 0 and cumface = 0 and sosedSlut = 0:'You chatted with Timothy while riding the subway.'
@@ -32,3 +33,4 @@ end
 act 'Get out of the car':gt 'metro', 'start'
 
 --- TimofeiMetro ---------------------------------
+

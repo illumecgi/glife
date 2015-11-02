@@ -13,7 +13,9 @@ if artemhomemark = 0:
 			'The door you opened Artem and invited to enter.'
 
 			act 'Enter':artemhomemark = 1 & gt $curloc
-		elseif hour >= 20 or hour < 7:'Too late, that would go to visit.'
+		elseif hour >= 20 or hour < 7:
+			'Too late, that would go to visit.'
+		end
 	end
 
 	if week >= 6:
@@ -44,7 +46,7 @@ elseif artemhomemark = 1:
 			if artempower = 2:'During a kiss Artem rubs against your thigh his crotch and you feel his hard cock through clothes.'
 			if artempower = 1:'Finally ending the kiss shyly said Artem. "<<$name>>, I like you very nravishsya."'
 
-			dynamic $din_artrm_leghump
+			dynamic $din_artem_leghump
 			dynamic $din_artem_leghump2
 		end
 	elseif artempower = 0:
@@ -72,7 +74,8 @@ act '':
 	cls
 	minut += 5
 	gs 'stat'
-	'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+	! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+	'<center><img src="images/qwest/alter/npc/2.jpg"></center>'
 	''
 
 	act '':
@@ -80,3 +83,4 @@ end
 '!
 
 --- artemhome2 ---------------------------------
+

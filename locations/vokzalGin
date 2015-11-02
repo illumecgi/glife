@@ -5,8 +5,8 @@ clr
 frost = 0
 poezddalsled = 0
 gs 'vokdin'
-gs'vokdinvera'
-gs'vokmantoiev'
+gs 'vokdinvera'
+gs 'vokmantoiev'
 gs 'stat'
 fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
@@ -17,7 +17,7 @@ lcolor = rgb(106, 90, 205)
 '<center><img src="images/qwest/alter/vokzal.jpg"></center>'
 'In the center of the station waiting room and <a href="exec:dynamic $din_vokzalg_kassi">Case</a> with the scoreboard. In one wing are <a href="exec:dynamic $din_vokzalg_kabinet">offices bosses</a>, and in the other <a href="exec:minut += 1 & dynamic $din_vokzalg_toilet">Toilets</a>.'
 
-if katalkinSexOnce >= 1:'<a href="exec:minut += 5 & gt ''katalkin''">police</a>'
+if katalkinSexOnce = 1:'There is a small <a href="exec:minut += 5 & gt ''katalkin''">police</a> station inside the terminal.'
 
 if podbros = 0:
 	podrand = rand(0, 1)
@@ -28,10 +28,10 @@ end
 act 'Leave':minut += 3 & gt 'vokzalG'
 
 if vokzalVork >= 1:
-	if cleZalDay ! day:
+	if cleZalDay ! daystart:
 		act 'Mopping the floor in the waiting room':
 			cls
-			cleZalDay = day
+			cleZalDay = daystart
 			minut += 60
 			sweat += 1
 
@@ -46,10 +46,10 @@ if vokzalVork >= 1:
 		end
 	end
 
-	if cleMTDay ! day:
+	if cleMTDay ! daystart:
 		act 'Mopping the floor in the men''s room':
 			cls
-			cleMTDay = day
+			cleMTDay = daystart
 			minut += 30
 			sweat += 1
 
@@ -66,10 +66,10 @@ if vokzalVork >= 1:
 		end
 	end
 
-	if cleWTDay ! day:
+	if cleWTDay ! daystart:
 		act 'Mopping the floor in the women''s restroom':
 			cls
-			cleWTDay = day
+			cleWTDay = daystart
 			minut += 30
 			sweat += 1
 
@@ -85,10 +85,10 @@ if vokzalVork >= 1:
 		end
 	end
 
-	if cleMTDay = day and cleWTDay = day and cleZalDay = day and cleZarplatDay ! day:
+	if cleMTDay = daystart and cleWTDay = daystart and cleZalDay = daystart and cleZarplatDay ! daystart:
 		act 'Get salary':
 			cls
-			cleZarplatDay = day
+			cleZarplatDay = daystart
 			vokzalVork += 1
 			money += 250
 			minut += 3
@@ -129,3 +129,4 @@ if poezddalsled = 1:
 end
 
 --- vokzalGin ---------------------------------
+

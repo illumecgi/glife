@@ -731,7 +731,7 @@ if $shoplocation = 'tech':
 	*p iif($ARGS[0] = 'start' or $ARGS[0] = '' or $ARGS[0] = 'move', '<br/>', '<center><<$ARGS[0]>></center>')
 
 	*pl '<center><table align="center">' + _
-	FUNC ('$single_stock_item', 1, 'Small TV with a picture tube', 35000, 'TV', $CURLOC) + _
+	FUNC ('$single_stock_item', 1, 'Scondhand Small CRT TV', 5000, 'TV', $CURLOC) + _
 	FUNC ('$single_stock_item', 2, 'Large Plasma TV', 35000, 'TV', $CURLOC) + _
 	FUNC ('$single_stock_item', 1, 'Computer', 25000, 'komp', $CURLOC) + _
 	iif(komp > 0, FUNC ('$single_stock_item', 1, 'Computer game Dead Sunset', 500, 'GameCD2', $CURLOC), '') + _

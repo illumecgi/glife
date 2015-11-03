@@ -478,6 +478,7 @@ if $ARGS[0] = 'kickboxing':
 		cla
 		*clr
 		round = 1
+		minround = 1
 		'You need to choose a partner for sparring'
 
 		act 'Pick a random partner':
@@ -511,6 +512,7 @@ if $ARGS[0] = 'kickboxing':
 
 		act 'Amateur fight':
 			round = 1
+			minround = 1
 			minut += 120
 			manna -= 5
 			fat -= 4

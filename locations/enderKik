@@ -104,9 +104,10 @@ elseif amateur = 1:
 			KikWinAmKO += 1
 			amatReit += 1
 			amateur = 0
-			money += 500
+			money += 500 + kikmoney
 			rikudo += 10
 			'You handed over a prize of 500 rubles.'
+			gs 'razrKik'
 		end
 
 		if $ARGS[0] = 'loss':

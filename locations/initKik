@@ -12,7 +12,7 @@ if initi > initiV and hodtime < 3 and ionce = 0 or hodtimeV >= 3 and ionce = 0:
 
 	if hodtimeV >= 3:hodtimeV = 0
 
-	'<font color="green">You took the initiative</font>'
+	'<font color="green">You take the initiative</font>'
 
 	ionce = 1
 elseif initi < initiV and hodtimeV < 3 and ionce = 0 or hodtime >= 3 and ionce = 0:
@@ -30,7 +30,7 @@ elseif initi = initiV and hodtime < 3 and hodtimeV < 3 and ionce = 0:
 	if inrand = 0:
 		hod = 0
 		hodtime += 1
-		'<font color="green">You took the lead</font>'
+		'<font color="green">You take the initiative</font>'
 	else
 		hod = 1
 		hodtimeV += 1
@@ -45,7 +45,7 @@ elseif initi = initiV and hodtime >= 3 and ionce = 0 or initi = initiV and hodti
 	if inrand = 0:
 		hod = 0
 		hodtime += 1
-		'<font color="green">You took the lead</font>'
+		'<font color="green">You take the initiative</font>'
 	else
 		hod = 1
 		hodtimeV += 1

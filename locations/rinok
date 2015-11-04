@@ -207,7 +207,7 @@ if $ARGS[0] = 'start':
 					'Arthur unloads stuff from his truck and gives them to you. You start hanging the clothes on the stall.'
 					'Before leaving Arthur gives you instructions. "Sell at whatever price you want, but at the end of your shift I will charge you 1000 rubles for each item sold. You should be making me no less than <<arturplan>> rubles."'
 
-					act 'To work.':gt 'rinwork', 'start'
+					act 'To work':gt 'rinwork', 'start'
 				end
 			end
 		end

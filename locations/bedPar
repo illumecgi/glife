@@ -1,10 +1,11 @@
 # bedPar
+
 gs 'stat'
 
 if $clothingworntype = 'nude':
-	'<center><img src="images/pics/bed.jpg"></center>'
-else
 	'<center><img src="images/pics/son.jpg"></center>'
+else
+	'<center><img src="images/pics/bed.jpg"></center>'
 end
 
 'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes.'
@@ -73,6 +74,7 @@ act 'Undress and go to bed':
 		'You wake up, no longer tired.'
 		
 		if kanikuli = 0 and SchoolAtestat = 0 and week < 6 and hour >= 4 and hour < 9:
+			act 'Get up out of bed and get dressed for school (0:15)':
 				cla
 				gs 'clothing', 'wear', 'sforma'
 				InSleep = 0
@@ -104,4 +106,3 @@ act 'Get out of bed':
 end
 
 --- bedPar ---------------------------------
-

@@ -163,14 +163,14 @@ if $ARGS[0] = 'start':
 	$loc = $CURLOC
 	$metkaM = $ARGS[0]
 	$locM = $CURLOC
-	'<center><b><font color="maroon">Trade</font></b></center>'
+	'<center><b><font color="maroon">Marketplace</font></b></center>'
 	'<center><img src="images/etogame/rinok.jpg"></center>'
 	'<a href="exec:dynamic $rinbuy1">Dishwashing detergent - 50 rubles</a> <a href="exec:dynamic $rinbuy2">laundry detergent - 150 rubles</a> <a href="exec:dynamic $rinbuy3">a of 3 plates - 150 rubles</a> <a href="exec:dynamic $rinbuy4">Cosmetics - 500 rubles</a> <a href="exec:dynamic $rinbuy5">razor - 200 rubles</a> <a href="exec:dynamic $rinbuy6">tampons - 100 rubles</a> <a href="exec:dynamic $rinbuy7">Underwear - 200 rubles</a>'
 
 	if bikini < 1:'<a href="exec:dynamic $rinbuy8">Swimsuit - 1,000 rubles</a>'
 	if umbrella < 1:'<a href="exec:dynamic $rinbuy9">Umbrella - 1,000 rubles</a>'
 
-	'On one of the tents hanging listing <a href="exec:gt ''clothing'', ''view_clothing_list'', ''sell''">"Accept the things to implement"</a>'
+	'On one of the tents hangs a sign <a href="exec:gt ''clothing'', ''view_clothing_list'', ''sell''">"Cash paid for secondhand clothes"</a>'
 
 	if analplugIN = 1 and tanga = 0 and ski = 1 or analplugIN = 1 and tanga = 0 and glamur = 1:
 		nurand = rand(0, 100)
@@ -180,7 +180,7 @@ if $ARGS[0] = 'start':
 			SUB += 1
 			horny += SUB
 			nudity += 1
-			'You feel that someone gently touched <a href="exec:gt ''etoexhib'', ''pos15''">your hand buttocks</a>'
+			'You feel someones hand gently touch <a href="exec:gt ''etoexhib'', ''pos15''">your butt</a>.'
 		end
 	end
 
@@ -197,17 +197,17 @@ if $ARGS[0] = 'start':
 	if workrin = 1:
 		if week = 2 or week = 4 or week = 6:
 			if hour < 9:
-				'Arthur item is waiting for you.'
-				act '<b>Accept goods</b>':
+				'Arthur is waiting to set up a stall for you.'
+				act '<b>Set up stall</b>':
 					cla
 					*clr
 					hour = 9
 					minut = 0
 					prodpayum = 1200
-					'Arthur unloaded stuff from his ushatannoy Shokhi to the tray and gave you. You started to hang clothes on the tent.'
-					'Before leaving Arthur gives you instructions. "Sell what you want, but that night I would have given to each item sold by 1000. And to gain by selling no less than <<arturplan>> rubles."'
+					'Arthur unloads stuff from his truck and gives them to you. You start hanging the clothes on the stall.'
+					'Before leaving Arthur gives you instructions. "Sell at whatever price you want, but at the end of your shift I will charge you 1000 rubles for each item sold. You should be making me no less than <<arturplan>> rubles."'
 
-					act 'To work.':gt 'rinwork', 'start'
+					act 'To work':gt 'rinwork', 'start'
 				end
 			end
 		end
@@ -215,7 +215,7 @@ if $ARGS[0] = 'start':
 			cla
 			work = 0
 			workrin = 0
-			'You retired from work and took labor.'
+			'You retired from work and collect papers.'
 
 			act 'Leave':gt 'rinok', 'start'
 		end
@@ -223,23 +223,23 @@ if $ARGS[0] = 'start':
 
 	if (work = 0 and workrin = 0 and cheatWork = 0) or (workrin = 0 and cheatWork = 1):
 		nl
-		'On one of the tents hanging ad "Need females saleswomen. Paychecks big."'
+		'On one of the tents hangs an ad, "Need female market stall staff. Paychecks big."'
 
-		act 'Approach the owner of the tents ad':
+		act 'Approach the owner of the ad':
 			cla
 			*clr
-			'Hi, my name is Arthur. I am the master of the tent, I need a saleswoman. I do not cope. Well? Will you?'
-			'Paying a percentage of wages. Will operate on Tuesdays, Thursdays and Saturdays. With 8 to 14.'
-			'Work on labor.'
+			'Hi, my name is Arthur. I own many stalls here, I need a saleswoman. The last one moved to St. Petersburg. Want the job?'
+			'Pay is a percentage of sales, paid at end of shift. Your shifts would be Tuesdays, Thursdays and Saturdays. From 8 till 14.'
+			'Government insist I have your papers, so it would be your main job.'
 
 			act 'Leave':gt 'rinok', 'start'
 
-			act 'Find a job':
+			act 'Take the job':
 				cla
 				work = 1
 				workrin = 1
 				arturplan = 5000
-				'You got a job to Arthur and gave him a career.'
+				'You give your papers to Arthur and shaking your hand he welcomes you on board.'
 
 				act 'Leave':gt 'rinok', 'start'
 			end
@@ -247,7 +247,7 @@ if $ARGS[0] = 'start':
 	end
 
 	if palto < 1:
-		'On the market sell for winter jackets - 5,000 rubles'
+		'On the market you see winter jackets for sale - 5,000 rubles'
 
 		if money >= 5000:
 			act 'Buy a down jacket (5,000 rubles)':

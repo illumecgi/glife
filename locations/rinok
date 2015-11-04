@@ -198,7 +198,7 @@ if $ARGS[0] = 'start':
 		if week = 2 or week = 4 or week = 6:
 			if hour < 9:
 				'Arthur is waiting to set up a stall for you.'
-				act '<b>Accept goods</b>':
+				act '<b>Set up stall</b>':
 					cla
 					*clr
 					hour = 9

@@ -180,6 +180,7 @@ if $ARGS[0] = 'model':
 				clr
 				*clr
 				if vagina = 0: vagina = 1
+				end
 				slava += 1
 				minut += 180
 				modelpayfin = 6 * modelpay

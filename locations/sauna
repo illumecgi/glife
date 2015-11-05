@@ -4,7 +4,7 @@ sauna += 1
 gs 'stat'
 '<center><b>Sauna</b></center>'
 '<center><img src="images/etogame/sauna.jpg"></center>'
-'Excellent renovated sauna.'
+'Luxurious high quality sauna.'
 
 act 'Leave':minut += 15 & gt 'street'
 
@@ -12,7 +12,7 @@ act 'Leave':minut += 15 & gt 'street'
 if SaunaWhore > 0:act 'Go to work whore':gt 'saunawork'
 
 if week = 5 and workDisk = 2:
-	'At the entrance you are waiting for a strong man waiting for you to drive.'
+	'At the entrance a strong man is waiting for you to arrive.'
 
 	act 'Give disk':
 		cls
@@ -20,7 +20,7 @@ if week = 5 and workDisk = 2:
 		workDisk = 3
 		konvert = 1
 		gs 'stat'
-		'You gave the disc and you were handed a thick envelope.'
+		'You give the thumb drive to him and you are handed a thick envelope.'
 
 		act 'Leave':minut += 15 & gt 'street'
 	end

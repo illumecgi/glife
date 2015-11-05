@@ -6,7 +6,7 @@ bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 '<center><b><font color="maroon">Sauna</font></b></center>'
 '<center><img src="images/etogame/sauna1.jpg"></center>'
-'Stay for an hour - 2,000 rubles'
+'One hour visit - 2,000 rubles'
 
 act 'Leave':gt 'sauna'
 
@@ -22,7 +22,7 @@ if money >= 2000 and saunaday ! daystart:
 		manna = (intel * magik) + magik * 100 + vital * 10 + rikudo
 		gs 'stat'
 		'<center><img src="images/etogame/sau.jpg"></center>'
-		'You are in for an hour in the sauna steamed, washed under a shower and relax.'
+		'You spend an hour relaxing in the heat of the sauna, having a cool shower and dressing. You feel revitalised.'
 
 		act 'Leave':gt 'sauna'
 	end

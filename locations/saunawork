@@ -77,7 +77,7 @@ if saunaWorkKlient = 1:
 	exit
 end
 
-if vnesh = -10 or SLomka > 0:
+if workDolg > 0 and vnesh = -10 or workDolg > 0 and SLomka > 0:
 	cls
 	workDolg += 1500
 	gs 'stat'

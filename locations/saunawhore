@@ -15,9 +15,13 @@ gs 'stat'
 'You fall to your knees in front of the client and in your mouth take his flaccid cock, working your jaw his member quickly rises to become an erect <<dick>> centimeters.'
 'You carefully clasping his dick and sucking with your <<$liptalk>> you feel every movement of his hard cock in your mouth and throat.'
 
-if dick <= 12:'His member is not very large and you constantly poke you nose into his curly pubes sucking his dick to the base and his hairy balls hit you on the chin.'
-if dick > 12 and dick <= 15:'With each movement the member pokes into your throat and you choke a little diligently working the full length.'
-if dick > 15:'This dick is too big for your mouth and you suck it as far as your mouth will allow, taking it down your the neck and licking the head admiringly.'
+if dick <= 12:
+    'His member is not very large and you constantly poke you nose into his curly pubes sucking his dick to the base and his hairy balls hit you on the chin.'
+elseif dick > 12 and dick <= 15:
+    'With each movement the member pokes into your throat and you choke a little diligently working the full length.'
+elseif dick > 15:
+    'This dick is too big for your mouth and you suck it as far as your mouth will allow, taking it down your the neck then removing it to free your airway and licking the head admiringly.'
+end
 !!dynamic $saunadinsexbefore
 if dick > 15:saunarand = rand(0, 100)
 
@@ -38,9 +42,7 @@ if dick > 15 and saunarand > 90:
 
 		act 'Take the money from the client and go':money += 1500 & saunaWorkNow = 1 & gt 'saunawork'
 	end
-end
-
-if dick <= 15 or saunarand <= 90:
+else
 	'The client has had enough of your mouth and wants sex.'
 
 	act 'Further':

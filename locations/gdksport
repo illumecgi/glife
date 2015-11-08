@@ -703,8 +703,6 @@ if volleysostav > 0 and sport = 1:
 			cla
 			*clr
 
-			if poverkomand = 0:poverkomand = 600
-
 			volltime = 0
 			sorevday = daystart
 			minut += 180

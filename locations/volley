@@ -1,80 +1,97 @@
 # volley
 minut += 30
 gs 'stat'
+
 if volltime = 0:
-	!!'<center><img src="images/qwest/alter/gdksport.jpg"></center>'
+	!! reset the scores
+	volpoint = 0
+	volpointv = 0
+	
 	'Teams took to the field and started playing.'
 
-	if volleysostav = 1:
+	!! reserve player or you were caught drinking by the coach and he forbid you from playing
+	if trener_Speak < 9 or seealko = 1:
+		volleysostav = 1
+		poverkomand = 600
 		'<center><img src="images/qwest/alter/volley/game3.jpg"></center>'
 		'You sit on the bench watching your team plays.'
-	end
 
-	if volleysostav = 2:
+	!! starter
+	else
+		volleysostav = 2
+		poverkomand 500 + volleyboll
 		'<center><img src="images/qwest/alter/volley/game4.jpg"></center>'
 		'After warming up you ran out on the court with teammates.'
-		poverkomand -= 100
-		poverkomand += volleyboll
 	end
 
+	!! opponent skill
 	poverkomandV = rand(500, 1500)
 
 	if poverkomand > poverkomandV:
-		volpoint += 1
+		volpoint = 1
 		'Your team plays better than your opponents.'
-	elseif poverkomand = poverkomandV:
-		volpoint += 1
-		volpointv += 1
-		'The scales vary in one, then the other, obviously teams are equal on forces.'
 	elseif poverkomand < poverkomandV:
-		volpointv += 1
-		'Your opponents are playing much better than you.'
+		volpointv = 1
+		'Your opponents are playing better than you.'
+	else
+		volpoint = 1
+		volpointv = 1
+		'The scales vary in one, then the other, obviously teams are equal on forces.'
 	end
 
-	act 'further':volltime=1 & gt $curloc
+	act 'Continue':volltime = 1 & gt $curloc
+
+!! halftime
 elseif volltime = 1:
-	'<center><img src="images/qwest/alter/gdksport.jpg"></center>'
 	'There was a break, and both teams have a rest.'
 	'During the break, the coach gave a speech.'
 
-	if poverkomand > poverkomandV:
+	if volpointv = 0:
 		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
 		'About, what you can''t relax,  that win though still need to be focused and not let the opponent to seize the initiative.'
-	elseif poverkomand = poverkomandV:
-		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener1.jpg"></center>'
-		'About, that draw is not the result, which he expected to continue we need to increase pressure. And to be more self-disciplined and tougher. '
-	elseif poverkomand < poverkomandV:
+	elseif volpoint = 0:
 		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener2.jpg"></center>'
 		'About, that lost the first half is bad, but it''s not a disaster, need to get together and kick them in their Asses. And to try to win the second half.'
+	else
+		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener1.jpg"></center>'
+		'About, that draw is not the result, which he expected to continue we need to increase pressure. And to be more self-disciplined and tougher. '
 	end
 
 	if volleysostav = 1:
 		'You are sitting on the bench.'
 
 		act 'Ask to play':
-			cls
-			gs 'stat'
-			trenereparand = rand(0, 80)+dobav+seealko
-
-			if trenerepa >= trenereparand:
-				volleysostav = 2
-				dom += 1
-				poverkomand -= 100
-				poverkomand += volleyboll
-				'The coach has agreed to release you on the field.'
-
-				act 'further':volltime = 2 & gt $curloc
+			if seealko = 1:
+				cls
+				'The coach refuses to let you play because he caught you drinking.'
+				act 'Continue':volltime = 2 & gt $curloc
 			else
-				'You have been asking the coach to play, but he shook his head and went on to explain the strategy of girls.'
+				cls
+				gs 'stat'
 
-				act 'further':volltime = 2 & gt $curloc
+				if trenerepa >= rand(0, 80):
+					volleysostav = 2
+					dom += 1
+					poverkomand -= 100
+					poverkomand += volleyboll
+					'The coach has agreed to release you on the field.'
+
+					act 'Continue':volltime = 2 & gt $curloc
+				else
+					'You have been asking the coach to play, but he shook his head and went on to explain the strategy to the rest of the team.'
+
+					act 'Continue':volltime = 2 & gt $curloc
+				end
 			end
 		end
 	end
 
-	act 'further':volltime = 2 & gt $curloc
-elseif volltime=2:
-	*clr & cla
+	act 'Continue':volltime = 2 & gt $curloc
+
+!! 2nd half
+elseif volltime = 2:
+	*clr
+	cla
 	'<center><img src="images/qwest/alter/volley/game5.jpg"></center>'
 	'Break is over and the team started to play again.'
 
@@ -84,29 +101,29 @@ elseif volltime=2:
 		volpoint += 1
 		'Your team plays with the team opponents.'
 
-		if volleysostav = 2:
-			if volpointv > 0:trenerepa += 10
-		end
-	elseif poverkomand = poverkomandV:
-		volpoint += 1
-		volpointv += 1
-		'The scales vary in one, then the other, obviously teams are equal on forces.'
-
-		if volleysostav = 2:
-			if volpointv > 0:trenerepa += 5
-		end
+		!! you came in and your team scored when they would not have without you
+		if volleysostav = 2 and volpointv = 1:trenerepa += 10
 	elseif poverkomand < poverkomandV:
 		volpointv += 1
 		'Team beats rivals your team.'
 
-		if volleysostav = 2:
-			if volpoint > 0:trenerepa -= 10
-		end
+		!! you came in and your team gave up a point they would not have without you
+		if volleysostav = 2 and volpoint = 1:trenerepa -= 10
+	else
+		volpoint += 1
+		volpointv += 1
+		'The scales vary in one, then the other, obviously teams are equal on forces.'
+
+		!! you came in and your team tied when they would not lost without you
+		if volleysostav = 2 and volpointv = 1:trenerepa += 5
 	end
 
-	act 'further':volltime = 3 & gt $curloc
+	act 'Continue':volltime = 3 & gt $curloc
+
+!! end of game
 elseif volltime = 3:
-	*clr & cla
+	*clr
+	cla
 	volsesongame += 1
 
 	'Final whistle.'
@@ -115,25 +132,18 @@ elseif volltime = 3:
 		volsesonwin += 1
 		'<center><img src="images/qwest/alter/volley/game6.jpg"></center>'
 		'Your team won.'
-	elseif volpoint = volpointv:
-		volsesondraw += 1
-		'<center><img src="images/qwest/alter/volley/game7.jpg"></center>'
-		'Draw.'
 	elseif volpoint < volpointv:
 		volsesonloss += 1
 		'<center><img src="images/qwest/alter/volley/game8.jpg"></center>'
 		'Your team lost.'
+	else
+		volsesondraw += 1
+		'<center><img src="images/qwest/alter/volley/game7.jpg"></center>'
+		'Draw.'
 	end
 
-	if volleysostav = 2:volleysostav = 1 & poverkomand -= volleyboll & poverkomand += 100
-
-	volpoint = 0
-	volpointv = 0
-	if trener_Speak=>9:volleysostav = 2
-	
 	act 'Leave':gt 'gdksport'
 	act 'Go to coaching':gt 'Voltrener'
 end
 
 --- volley ---------------------------------
-

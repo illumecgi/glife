@@ -301,7 +301,7 @@ if volleysostav > 0:
 		if alko > 0:
       '-You''re drunk, before leaving. I don''t approve, not playing tomorrow'
       trenerepa -= 1
-      seealko=500 &! The flag is not admission to the game on Saturday
+      seealko = 1 &! The flag is not admission to the game on Saturday
     end
 		'- Come on I''ll take you home, but then again where-would run away, - the coach said. Looks like you are here today it is better not to come back.'
 

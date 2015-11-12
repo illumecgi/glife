@@ -118,7 +118,7 @@ $santehnikend1 = {
 		minut += 1
 		gs 'stat'
 		'<center><img src="images/img/house/s3.jpg"></center>'
-		'You ask the plumbing what he has in mind. Instead of answering, he takes you by the shoulders and draws you to him. You rest your soft breasts against his chest and feel your stomach resting on something solid. He easily pushes your shoulders and whispers, "Come on baby, do not be shy."'
+		'You ask the plumber what he has in mind. Instead of answering, he takes you by the shoulders and draws you to him. You rest your soft breasts against his chest and feel your stomach resting on something solid. He easily pushes your shoulders and whispers, "Come on baby, do not be shy."'
 
 		act 'Kneel':
 			cls

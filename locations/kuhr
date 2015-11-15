@@ -1,5 +1,12 @@
 # kuhr
-act 'Go to the corridor':gt 'korr'
+CLOSE ALL
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metka = $ARGS[0]
+$loc = $CURLOC
+act 'In the corridor':
+	gt'korr'
+end
 
 $dirtarm = {
 	if fairy > 0:
@@ -198,10 +205,7 @@ $santehnikend = {
 			act 'Suggest a loan':dynamic $santehnikend2
 			end
 		end
-	end
-
-		!'
-		if shameless > 15:
+		if money+stolmoney<1500 and shameless > 14:
 			act 'Offer other options (to make a blow)':
 				cla
 				*clr
@@ -227,7 +231,8 @@ $santehnikend = {
 				end
 			end
 		end
-		'!
+		end
+	end
 }
 
 $santehnik1 = {
@@ -462,7 +467,6 @@ if eda > 0:
 end
 
 if edaD = 0 and eda = 0:'<b><font color="red">The refrigerator is empty, you have nothing to eat.</font></b>'
-if edaD > 0:'The refrigerator contains healthy meals, good for <b><<edaD>></b> servings.'
 if posudomashina > 0:'The kitchen has a dishwasher.'
 if edahot > 0:'<a href="exec:dynamic $edahotd">A cooked meal is on the table (0:30).</a>'
 

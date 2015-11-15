@@ -1,6 +1,9 @@
 # spalnya
 $metkaM = $ARGS[0]
 $locM = $CURLOC
+! WD: Clothes location (Wardrobe) uses '$loc' & '$metka'
+$metka = $ARGS[0]
+$loc = $CURLOC
 minut += 5
 tanhouse1 = 1
 gs 'stat'

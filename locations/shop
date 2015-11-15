@@ -3,6 +3,8 @@
 
 !! Main entrance
 if $ARGS[0] = 'start':
+	CLOSE ALL
+	if sound = 0:PLAY 'sound/shop.mp3',30
 	$shoplocation = 'main'
 end
 
@@ -26,6 +28,7 @@ if $shoplocation = 'main':
 	end
 
 	'In the hall stands an <a href="exec:$shoplocation = ''ATM'' & gt ''shop'', ''move''">ATM</a>, from which you can withdraw money from your bank account.'
+	'There is a branch of communication giants <a href="exec:GT ''shop'',''megafon''">Bullhorn</a>.'
 	'<br>Most of the space in the supermarket is taken up by the <a href="exec:$shoplocation = ''grocery'' & gt ''shop'', ''move''">grocery department</a>, but the store has many smaller departments as well. <a href="exec:$shoplocation=''cosmetics'' & gt ''shop'', ''move''">Cosmetics</a>, <a href="exec:$shoplocation = ''hardware'' & gt ''shop'', ''move''">hardware</a>, <a href="exec:$shoplocation = ''clothing'' & gt ''shop'', ''move''">clothing</a> and the department of <a href="exec:$shoplocation = ''tech'' & gt ''shop'', ''move''">household appliances</a>. Not far from the entrance is a <a href="exec:$shoplocation = ''icecream'' & gt ''shop'', ''move''">counter selling ice cream</a>.'
 	clr
 	gs 'stat'
@@ -262,6 +265,30 @@ if $shoplocation = 'hardware':
 	lcolor = rgb(106, 90, 205)
 
 	act 'Leave the hardware department':gt 'shop', 'start'
+	
+	 if poSkill >= 40:
+	 'On the counter you can see that the fabric is suitable for teaching sewing. Bolt which is enough for one lesson stands 300 rubles.'
+	 if tkan <= 0:'Now you do not have tissue'
+	 if tkan > 0:'Now you have enough tissue to <<tkan>> lessons'
+	     if money >= 300:
+	         act'Buy cloth':
+	         cls
+	         portion = input ("How much do you want to buy?")
+			 if portion <= 0:portion = 1
+			 if portion*300 > money:'You do not have enough money.'
+				 if portion*300 <= money:
+					tkan += portion
+					money = money - portion*300
+					'<center><img src="images/pic/kassa.jpg"></center>'
+					'You paid the cashier and bought cloth.'
+				 end
+			 	
+			 gs'stat'	
+			 act 'Move away from the counter':gt'shop','hos'	
+	         end
+	     end
+	 
+	 end	
 end
 
 !! Women''s clothing
@@ -739,6 +766,7 @@ if $shoplocation = 'tech':
 	FUNC ('$single_stock_item', 1, 'Washing machine', 50000, 'stiralka', $CURLOC) + _
 	FUNC ('$single_stock_item', 1, 'Camera', 10000, 'zenit', $CURLOC) + _
 	FUNC ('$single_stock_item', 1, 'Mini camera disguised as a cigarette pack', 40000, 'minifoto', $CURLOC) + _
+	iif(vasya_shulgin>=30 and webcamera = 0, FUNC ('$single_stock_item', 1, 'Webcam', 10000, 'webcamera', $CURLOC), '') + _
 	'</table></center>'
 
 	clr
@@ -775,5 +803,39 @@ if $shoplocation = 'icecream':
 	end
 end
 
+if $ARGS[0]='megafon':
+cls
+minut+=3
+gs'stat'
+'<center><b><font color = maroon>Salon connection Megaphone</font></B></center>'
+'<center><img src="images/pic/phone/megafon2.jpg" ></center>'
+
+	act 'Exit Department':gt'shop','start'
+	if money > 0:
+		act 'Put the money on the phone':
+		cla
+		set minut = minut + 5
+		obmennik = input ("How many rubles do you want to deposit?")
+			if obmennik <= 0:
+			'<center><br><b>Do you want to think again?</b></center>'
+				act 'Exit Department':gt'shop','start'
+			else
+				if money < obmennik:
+				'<center><br>You do not have <b><<obmennik>></b> rubles.</center>'
+				act 'Exit Department':gt'shop','start'
+				end
+
+				if money >= obmennik:
+				set balans = balans + obmennik
+				set money = money - obmennik
+				clr
+				gs'stat'
+				'<center><br>You put <b><<obmennik>></b> rubles to the account.</center>'
+				act 'Exit Department':gt'shop','start'
+				end
+			end
+		end
+	end
+end
 --- shop ---------------------------------
 

@@ -33,6 +33,7 @@ if indorf = 0:
 end
 if sisboyparty_day + 1 = daystart:sister_indorf = 0
 if sister_indorf = 1:sisterHere = 0
+''
 
 if StoryLine = 1:
 	if sisboypartyQW >= 2 and sisboyparty ! 0 and sisboyparty_day + 1 < daystart and randsbPartyDay <= daystart and week >= 4:
@@ -147,9 +148,13 @@ if StoryLine = 1:
 				end
 
 				if hour >= 18 and hour < 20:
-					'Sitting at the table your little brother <a href="exec:gt ''brother''">Kolka</a> and teaches lessons.'
+					if kanikuli > 0:
+						'Sitting on the couch your younger brother <a href="exec:GT ''brother''">Kolka</a> watching TV.'
+					else
+						'Sitting at the table your little brother <a href="exec:gt ''brother''">Kolka</a> and teaches lessons.'
+					end
 				end
-				if hour = 20:
+				if hour = 20 or hour = 17:
 					'Sitting on the couch your younger brother <a href="exec:gt ''brother''">Kolka</a> and watching TV.'
 				end
 			end

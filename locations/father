@@ -70,7 +70,7 @@ if pirsB = 1 and pirsBfather=0 and pirsbdaytalk!daystart:
 			'Your stepfather shakes his head: "You kids, always adding new holes to yourselves..."'
 		end
 		if TouchedByFather>0:
-			'Your stepfather grins: "Alright, I''l admit it does look sexy."'
+			'Your stepfather grins: "Alright, I''ll admit it does look sexy."'
 		end
 		act '<B>Continue</B>':gt $locM, $metkaM
 	end
@@ -108,6 +108,21 @@ if tatlip>0 and fatherTatLip=0 and father>=60:
 		'You wrenched his lip and showing a tattoo on the inside of the lip. Stepfather looks surprised look: "<<$textFatherTatLip>>"'
 		act '<B>Further</B>':gt $locM, $metkaM
 	end
+end
+
+if $clothingworntype = 'nude' and pregTalkFather = 0 and pregtime > 90:
+	'Stepfather surprised looking at your belly: "<<$name>>, you flew that-whether? '
+	if hadsexwithfather=1:
+	'Not from me, I hope? '
+	end
+	pregTalkFather = 1
+	
+elseif $clothingworntype ! 'nude' and pregTalkFather = 0 and pregtime > 150:
+	'Stepfather surprised looking at your belly: "<<$name>>, you flew that-whether? '
+	if hadsexwithfather=1:
+	'Not from me, I hope? '
+	end
+	pregTalkFather = 1
 end
 
 !!----------------------------------------end reaction block---------------------------------------------
@@ -269,6 +284,24 @@ if alko > 0 and alkoday ! daystart:
 	'Stepfather sniffed "<<$name>> from you smell alcohol, what is this mess? You''re too young to drink that!"'
 end
 
+if TorgVokzalTimes>0 and YouCanGar=0:
+	act 'To request permission to store items in the garage':
+		cls
+		minut+=5
+		gs'stat'
+		'<center><B><font color=maroon>Stepfather Vladimir Skryabin</font></B></center>'
+		'<center><img src="images/qwest/alter/father.jpg" ></center>'
+		'You asked for permission to store his stepfather in the garage items.'
+		if father+dom>=80 or TouchedByFather=1:
+			YouCanGar=1
+			'Stepfather hesitation still allow you to use his garage to store the goods for sale.'
+		else
+			'Stepfather shook his head "No <<$nickname>>. I have, and so there is little room."'
+		end
+		act '<B>Further</B>':gt $locM, $metkaM
+	end
+end
+
 act 'Ask, as he outfit':
 	cls
 	minut+=rand(10,15)
@@ -367,7 +400,54 @@ end
 
 ! WD: Fix old nude variable
 if $clothingworntype = 'nude':
-	'Stepfather with a smirk looking at you - "Nifiga! Blyadinka growing. Did you ever be ashamed,I-I`m still the man."'
+	if tatvag>0 and Putsawtatvag=0 and tanga=0:
+		if father>=70:
+			'-First tattoo in a place you see. Obviously, not for himself did, - said stepfather, noticing the tattoo on the Mons pubis.'
+			father += 1
+			Putsawtatvag=1
+			act '<B>Move away</B>':gt $loc, $metka
+			exit
+		else
+			'"Fucking tattoo." Your stepfather obviously doesn''t like the tattoo you have on your pubis. '
+			father -= 1
+			Putsawtatvag=1
+			act '<B>Move away</B>':gt $loc, $metka
+			exit
+		end
+	end
+	if pirsF>0 and PutsawpirsF=0:
+		if hadsexwithfather ! 1:
+			if father>=60:
+				'- Funny looks, - the stepfather liked your piercing nipples'
+				father += 3
+				PutsawpirsF=1
+				act '<B>Move away</B>':gt $loc, $metka
+				exit
+			else
+				'-What the hell do you, - stepfather points to your nipple piercing, - better get this stuff.'
+				father -= 1
+				act '<B>Move away</B>':gt $loc, $metka
+				exit
+			end
+		else
+			if hour >= 18 and hour < 21:	
+				'-Looks nice, - stepfather indicates your pierced nipples'
+				father += 3
+				PutsawpirsF=1
+				act '<B>Move away</B>':gt $loc, $metka
+				exit
+			else
+				'-Very sexy, - stepfather barely noticeable taps on the rod in your nipples, calling you an involuntary groan.'
+				father += 3
+				PutsawpirsF=1
+				horny+=10
+				act '<B>Move away</B>':gt $loc, $metka
+				exit
+			end
+		end
+	end
+
+	else 'Stepfather with a smirk looking at you - "Nifiga! Blyadinka growing. Did you ever be ashamed,I-I`m still the man."'
 	if hadsexwithfather ! 1:
 		if father>=40:
 			'Then he turned away added - "A body so Nitsche, I vdulby... but go get dressed mother home"'
@@ -390,6 +470,25 @@ if $clothingworntype = 'nude':
 	end
 end
 
+if hadsexwithfather =1 and pirsG=1 and PutsawpirsG=0 and (hour <= 18 or hour > 21):
+	act 'Show_ "intimate" piercing':
+		cls
+		gs'stat'
+		minut+=1
+		horny+=15
+		PutsawpirsG=1
+		if lobok > 2:
+			'<center><img src="images/picb/pirsGLob.jpg" ></center>'
+			'Coming closer, you demonstrate your pubic hair stepdad. To show the piercing comes out immediately, you have to push not long ago shaved thickets. When you do it, stepfather noticed the Shine between your legs and play some with decoration, thus otveshivaya vulgar compliments.'
+			act '<B>Move away</B>':gt $loc, $metka
+		else
+			'<center><img src="images/picb/pirsG.jpg" ></center>'
+			'Coming closer, you demonstrate your pubic hair stepdad.He notices the Shine between your legs and play some with decoration, thus otveshivaya vulgar compliments.'
+			act '<B>Move away</B>':gt $loc, $metka
+		end
+	end
+end
+
 if hadsexwithfather=1:fatherwantssex=rand(1,2)
 ! WD: Fix old nude variable
 ! if nude = 1:
@@ -406,25 +505,6 @@ if hadsexwithfather=1 and fatherwantssex=1 and mother_go = 1 and hour = 16 and f
 	act 'Kneel down':dynamic $d_fatherblow_act[4]
 end
 
-if TorgVokzalTimes > 0 and YouCanGar = 0:
-	act 'Ask for permission to store goods in the garage':
-		cls
-		minut += 5
-		gs 'stat'
-		'<center><b><font color="maroon">Stepfather Vladimir Skryabin</font></b></center>'
-		'<center><img src="images/qwest/alter/father.jpg"></center>'
-		'You asked for permission to store his stepfather in the garage items.'
-
-		if father + dom >= 80:
-			YouCanGar = 1
-			'Stepfather hesitated still allow you to use it for garage storage of goods for sale.'
-		else
-			'Stepfather shook his head "No <<$nickname>>. I have ."'
-		end
-
-		act 'move_away':gt $loc, $metka
-	end
-end
 
 $fatherRep = {
 	if father<20:'You stepfather terrible scandal.'

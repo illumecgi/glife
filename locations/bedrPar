@@ -13,7 +13,7 @@ lcolor = rgb(106, 90, 205)
 '<center><b><font color="maroon">Your bedroom</font></b></center>'
 ! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
 '<center><img src="images/qwest/alter/bedrPar.jpg"></center>'
-'Small room in which hardly squeezed <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cabinet</a>, your <a href="exec:gt ''bedPar''">bed</a>, <a href="exec:gt ''stolPar''">desk</a> bed and sisters.'
+'Small room in which hardly squeezed <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cabinet</a>, your <a href="exec:gt ''bedPar''">bed</a>, <a href="exec:gt ''stol''">desk</a> bed and sisters.'
 if komp = 1:'On the table is your <a href="exec:gorodokKomp = 1 & GT ''Komp'',''start''">laptop</a>.'
 gorodokKomp = 0
 

@@ -2,7 +2,7 @@
 clr
 if $clothingworntype = 'nude':
 	view 'images/clothes/nude.jpg'
-	pl 'You´re not dressed.'
+	pl 'You''re not dressed.'
 elseif cloth_vid = 1:
 	view 'images/etogame/bimboView.jpg'
 	pl 'You are dressed like a bimbo.'

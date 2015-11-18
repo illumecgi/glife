@@ -2,6 +2,8 @@
 if $ARGS[0] = 'start':
 	cla
 	*clr
+	CLOSE ALL
+	if sound = 0:PLAY 'sound/street.mp3',30
 	minut += 5
 
 	act 'Ring the doorbell':

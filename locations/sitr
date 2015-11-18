@@ -1,10 +1,11 @@
 # sitr
-act 'Go to the corridor':gt 'korr'
-
+CLOSE ALL
 $metkaM = $ARGS[0]
 $locM = $CURLOC
 $metka = $ARGS[0]
 $loc = $CURLOC
+act 'Go to the corridor':gt 'korr'
+
 clr
 minut += 1
 housrA = 1
@@ -30,7 +31,7 @@ elseif remsitr = 1:
 	$zal2 = 'papered walls with light'
 end
 if TV = 0:$TV = 'a great place for a TV, if you had one.'
-if TV = 1:$TV = 'an old LCD <a href="exec:gt ''TV'', ''start''">TV</a>'
+if TV = 1:$TV = 'an old CRT <a href="exec:gt ''TV'', ''start''">TV</a>'
 if TV = 2:$TV = 'a huge plasma <a href="exec:gt ''TV'', ''start''">TV</a>'
 ! WD: Missing Code to buy / Upgrade Sofa, Uninitialised ~ 'divan'
 if divan = 0:$divan = '<a href="exec:gt ''divan'', ''start''">an old sofa</a>'
@@ -52,6 +53,8 @@ if bookYog > 0:'A yoga mat is rolled up in a corner. '
 if mishka > 0:'On a shelf is <<mishka>> teddy bear'
 
 *nl
+!gs'husb' - do not delete!
+gs'subkid'
 
 sports = 0
 $sportStringPrefix = ''
@@ -96,15 +99,6 @@ else
 	$sitrpush = ''
 end
 
-!!!kept, but does not exists in 1.0.5 anymore
-if treadmill > 0 and treadmillday ! daystart:
-	$sitr_tread = $sportStringPrefix + ' <a href="exec:dynamic $sitr_tread_d">treadmill</a>'
-	sports = 1
-	$sportStringPrefix = ', '
-else
-	$sitr_tread = ''
-end
-!!!
 
 if sports = 1:
 	$sportsitr = '<<$sitrpush>><<$sitrpress>><<$sitrskak>><<$sitrobr>><<$sitr_tread>><<$sitryog>>'
@@ -128,12 +122,6 @@ if husband > 0 and husbandrink ! 10 and husbandrinkday ! daystart:
 		end
 	end
 end
-
-!!!CV edition
-!gs 'subkid'
-if numkid = 1: '<a href="exec: gt ''kid'',''start''">Your child</a>'
-if numkid > 1: '<a href="exec: gt ''kid'',''start''">Your children</a>'
-!!!
 
 if student > 0 and kursovik < 100:
 	act 'Write kursovik (1:00)':
@@ -481,7 +469,7 @@ if dildo > 0 and horny >= 50:
 				'<center><img src="images/pics/mastr.gif"></center>'
 				'You put your dildo on the floor and start to ride it. It moves in and out and you feel the pleasure running through your entire body with each thrust. You begin to moan and a few minutes later you climax and a wave of pleasure runs through your entire body.'
 
-				act 'Breath.':gt 'sitr'
+				act 'Breathe':gt 'sitr'
 			end
 		else
 			horny = 0
@@ -489,7 +477,7 @@ if dildo > 0 and horny >= 50:
 			'<center><img src="images/pics/mastr.gif"></center>'
 				'You put your dildo on the floor and start to ride it. It moves in and out and you feel the pleasure running through your entire body with each thrust. You begin to moan and a few minutes later you climax and a wave of pleasure runs through your entire body.'
 
-			act 'Breath.':gt 'sitr'
+			act 'Breathe':gt 'sitr'
 		end
 	end
 end

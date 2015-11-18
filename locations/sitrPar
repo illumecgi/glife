@@ -1,4 +1,5 @@
 # sitrPar
+CLOSE ALL
 act 'Leave the room':gt 'korrPar'
 
 $metkaM = $ARGS[0]
@@ -48,17 +49,28 @@ elseif month = 1 and day = 1:
 		*clr
 		frost = 0
 		minut += 15
-		health += 10
-		manna += 20
-		energy += 20
-		water += 20
-		salo += 1
-		fat += 3
+		if energy >= 50:
+			fat = fat + 5
+			'You can no longer have.'
+		else
+			'You had finished salads left on the table after the holiday.'
+			health += 10
+			manna += 20
+			energy += 20
+			if water < 20:
+				water = water +10
+			end
+			water += 20
+			salo += 1
+			fat += 3
+		end
+
 		gs 'stat'
 		'<center><img src="images/pics/food.jpg"></center>'
 		'You had finished salads remaining on the table after the holiday.'
 
-		act 'Get up from the table':gt $locM, $metkaM
+	act 'Get up from the table':gt $locM, $metkaM
+
 	end
 end
 

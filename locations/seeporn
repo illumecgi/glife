@@ -106,7 +106,6 @@ act 'watch porn':
 				boyseeporn += 1
 				sub += 1
 				gs 'stat'
-				!!brotherrand = rand(3, 10)
 
 				if boyseeporn < 2:
 					! WD: Use better Image ~ '<center><img src="images/qwest/alter/ev2/seepornHJ.jpg"></center>'
@@ -158,6 +157,14 @@ act 'watch porn':
 					end
 				end
 				exit
+
+				cls
+				dom += 1
+				gs'stat'
+				!'<center><img src="images/qwest/alter/ev2/seepornHand.jpg"></center>'
+				'You angrily removes his hands and yelling angrily at the boys.'
+
+				act 'Escape':gt'gorodok'
 			end
 			exit
 		elseif evgenQW = 2 and rand(0, 1) = 0:

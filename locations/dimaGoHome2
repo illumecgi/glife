@@ -1,4 +1,5 @@
 # dimaGoHome2
+CLOSE ALL
 gs 'stat'
 
 if dimaGohomeday = daystart:

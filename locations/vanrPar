@@ -1,4 +1,26 @@
 # vanrPar
+CLOSE ALL
+$brother_voyeurism = {
+	if indorf = 0 and brother >= 40 and vanr_lock = 0 and hour >= 18 and hour <= 20 and brother_ev1 ! day:
+		ivrand = RAND(1,4)
+		if ivrand = 1:
+			cla
+			brother_ev1 = day
+			'Through the noise of water, you pay attention to the barely audible creak of the door to the bathroom and notice a small slit in the doorway of his younger brother Kolka.'
+			if sub < 30:
+				act'Chased him':gt'brother','brother_go_away'
+			end
+			act'Let them look':gt'brother','brother_voyeur_ev1'
+			exit
+		end
+	end
+}
+if vanr_lock = 0:
+	act'<font size = 1>Close the latch on the door</font>':vanr_lock = 1 & gt'vanrPar'
+elseif vanr_lock = 1:
+	act'<font size = 1>Open the latch on the door</font>':vanr_lock = 0 & gt'vanrPar'
+end
+
 act 'Leave the room':gt 'korrPar'
 
 $metkaM = $ARGS[0]
@@ -11,14 +33,22 @@ gs 'stat'
 fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
-'<center><b><font color="maroon">Bath</font></b></center>'
+'<center><b><font color="maroon">Bathroom</font></b></center>'
 ! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
 '<center><img src="images/qwest/alter/vanrPar.jpg"></center>'
 'Bathroom cramped and very unpretentious.'
+'Above the sink hangs a <a href="exec:GT ''mirror'',''start''">mirror</a>.'
+if vanr_hanger = 1: 'Next to the sink neatly folded your <a href="exec:dynamic $vanr_hanger_dress & tanga = tanga_hanger & GT ''vanrPar'' ">clothes</a>'
 
 if stanok > 0:'Your razor will suffice for <b><<stanok>></b> time.'
 !WD: heal chafe
 if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
+
+if dirtbelo > 0 and BuyHous = 0:
+	'In the bathroom you have found, Mom washed your laundry.'
+	clrbelo += dirtbelo
+	dirtbelo = 0
+end
 
 act 'Wash in the shower (0:15)':
 	cls
@@ -35,7 +65,8 @@ act 'Wash in the shower (0:15)':
 	'<center><img src="images/pics/dush.jpg"></center>'
 	'You got into the shower and began to lather your body washcloth. After washed soap and washed hair with shampoo. Rinse off the shampoo you become completely clean.'
 
-	act 'Out of the bath':gt $locM, $metkaM
+	act 'Get out of the bath':mirror_steam = hour & gt $locM, $metkaM
+	dynamic $brother_voyeurism
 end
 
 act 'Wash in the bathroom (1:00)':
@@ -57,6 +88,7 @@ act 'Wash in the bathroom (1:00)':
 	gs 'stat'
 	'<center><img src="images/pics/wash4.jpg"></center>'
 	'Turn on the water, you got into the bathroom and went into the warm water. Ponaslazhdatsya pleasant warmth you lathered his body sponge and hair shampoo. Then all you have washed off with water.'
+	dynamic $brother_voyeurism
 
 	act 'Out of the bath':gt $locM, $metkaM
 	if horny >= 90:
@@ -92,6 +124,7 @@ act 'Wash in the bathroom (1:00)':
 	if horny >= 50:
 		act 'Masturbate':gt 'selfplay'
 	end
+	dynamic $brother_voyeurism
 end
 
 ! WD: add Underwear change
@@ -157,6 +190,21 @@ if cumlip > 0 or cumface > 0:
 		minut += 5
 		'<center><img src="images/etogame/facesp.jpg"></center>'
 		'You clean your face and got rid of any trace of cum.'
+
+		act 'Finish':gt $curloc
+	end
+end
+
+if body_write > 0 or face_write > 0:
+	act 'Clean writing off your body':
+		cla
+		body_write = 0
+		face_write = 0
+		minut = minut + 5
+		gs'stat'
+		
+		!'You need a picture'
+		'You wiped indecent inscriptions.'
 
 		act 'Finish':gt $curloc
 	end

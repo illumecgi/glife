@@ -44,7 +44,7 @@ $din_artem_leghump = {
 			dynamic $din_artem_lern
 		else
 			act 'Further':artemhomemark = 1 & minut += 5 & gt 'artemhome'
-			act 'Go home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+			act 'Go home':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 		end
 	end
 }
@@ -71,7 +71,7 @@ $din_artem_leghump2 = {
 				dynamic $din_artem_lern
 			else
 				act 'Further':artemhomemark = 1 & gt 'artemhome'
-				act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+				act 'Going home':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 			end
 		end
 	end
@@ -112,7 +112,7 @@ $din_artem_lern = {
 					gs 'stat'
 
 					'You denied Artem, he openly offended "Listen, I have so much time and effort spent, and you... you suck at all in a row, and I do not want... More to me you can not approach."'
-					act 'Going home':gt 'gorodok'
+					act 'Going home':gt'pod_ezd','etaj_1'
 				end
 			elseif (artemBJQW > 0 and artemBJQW < 10 and artemsex = 0) or (artemStripSee = 3 and artemsex = 0 and artemTouch > daystart):
 				cla
@@ -217,7 +217,7 @@ $din_artem_lern = {
 							'Silently dressed and go home.'
 
 							artemHorny = 1
-							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+							act 'Going home':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 						end
 					else
 						cls
@@ -275,7 +275,7 @@ $din_artem_lern = {
 					'You: "Oh you - I will before any lohami lights"'
 					'Artem: "Lohami say? Can we fuckers, but not for the money, with all ebemsya proshmandovka. Uebyvay not come over to me - even if you do not goof deals."'
 
-					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Going home':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 				end
 				act 'Agree':
 					artemAndPetja = 1
@@ -334,7 +334,7 @@ $din_artem_lern = {
 							'You: "About the lessons - We need to think - not much lip unroll.. and - if at least someone one word - I will find how to arrange a full fucking."'
 							'You take 1000r. and go.'
 
-							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+							act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
 						end
 					end
 				end
@@ -345,7 +345,7 @@ $din_artem_lern = {
 					artemAndPetjaRand = rand(0,5)
 				end
 				if artemAndPetjaRand ! 0:
-					'Artem unbuttoned pants and pulled out a member of his pants. "On, Svetik, Suck."'
+					'Artem unbuttoned pants and pulled out a member of his pants. "Oh, <<$nickname>>, Suck."'
 
 					dynamic $din_artem_bj
 				else
@@ -385,7 +385,7 @@ $din_artem_lern = {
 							'You take 1000r. and go.'
 
 							artemAndPetja += 1
-							act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+							act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
 						end
 					end
 				end
@@ -419,7 +419,7 @@ $din_artem_lern = {
 					'You take 1000r. and go.'
 
 					artemAndPetja = 12
-					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
 				end
 			elseif artemAndPetja = 12:
 				minut += 5
@@ -451,7 +451,7 @@ $din_artem_lern = {
 					'Are you going to go home.'
 
 					artemAndPetja = 13
-					act 'Going home':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Going home':artemhomemark = 0 & minut += 15 & gt'gorodok'
 				end
 			elseif artemAndPetja = 13:
 				cls
@@ -582,7 +582,7 @@ $artemKiss = {
 				if lernHome > 0:
 					dynamic $din_artem_lern
 				else
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 				end
 
 				act 'Reluctantly masturbate Artem':
@@ -602,7 +602,7 @@ $artemKiss = {
 						dynamic $din_artem_lern
 					end
 
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 				end
 			elseif horny >= 50:
 				act 'Jerk off Artem':
@@ -621,7 +621,7 @@ $artemKiss = {
 						dynamic $din_artem_lern
 					end
 
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 				end
 			end
 		end
@@ -631,7 +631,7 @@ $artemKiss = {
 				if lernHome > 0:
 					dynamic $din_artem_lern
 				else
-					act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 				end
 			elseif horny >= 30:
 				act 'Jerk off Artem':
@@ -648,7 +648,7 @@ $artemKiss = {
 					if lernHome > 0:
 						dynamic $din_artem_lern
 					else
-						act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+						act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 					end
 				end
 				act 'Take in the mouth':
@@ -683,7 +683,7 @@ $artemKiss = {
 								if lernHome > 0:
 									dynamic $din_artem_lern
 								else
-									act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+									act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 								end
 							end
 						elseif artemsex >= 10 and artemanal = 0:
@@ -712,7 +712,7 @@ $artemKiss = {
 									if lernHome > 0:
 										dynamic $din_artem_lern
 									else
-										act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+										act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 									end
 								end
 								act 'Agree':
@@ -733,7 +733,7 @@ $artemKiss = {
 									if lernHome > 0:
 										dynamic $din_artem_lern
 									else
-										act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+										act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 									end
 								end
 							end
@@ -763,7 +763,7 @@ $artemKiss = {
 							if lernHome > 0:
 								dynamic $din_artem_lern
 							else
-								act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+								act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 							end
 						end
 					end
@@ -793,14 +793,14 @@ $artemKiss = {
 						if lernHome > 0:
 							dynamic $din_artem_lern
 						else
-							act 'Escape':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+							act 'Escape':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 						end
 					end
 				end
 			end
 		end
 
-		act 'Going home':artemhomemark = 0 & gt 'gorodok'
+		act 'Going home':artemhomemark = 0 & gt'pod_ezd','etaj_1'
 	end
 }
 
@@ -888,7 +888,7 @@ $artemGopSkver = {
 					'"I will not." Answer You. Gopnik came to Artem and foot hit him in the face. You rushed to Artem and hugged him.'
 					'Gopnik looked at you spat at his feet and left: "Live ....while." Company Gopnik went deep into the park.'
 					'You helped Artem climb, He wiped the blood from his face and helped him get home.'
-					act 'Lay Artem':artemhomemark = 0 & minut += 15 & gt 'gorodok'
+					act 'Lay Artem':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 				end
 				act 'Dance':
 					cls
@@ -918,7 +918,7 @@ $artemGopSkver = {
 							'<center><img src="images/qwest/alter/artom/walk/walk_slap.jpg"></center>'
 							'Artem: "Perhaps we should not see - after, what happened to us."'
 							'You looked at Artem and gave him a slap in the face and then went home.'
-							act 'Escape':artemhomemark = 0 & minut += 15 & artemblok = 1 & gt 'gorodok'
+							act 'Escape':artemhomemark = 0 & minut += 15 & artemblok = 1 & gt'pod_ezd','etaj_1'
 						end
 					end
 					act 'Try to escape':
@@ -963,7 +963,7 @@ $artemGopSkver = {
 							'"And now to secure lesson!" Gopnik stand around and beginning to piss on you. "Well, now you can go home clean! And if you like it - do you know where to find us!"'
 							'Under rzhach Gopnik you are going, and with Artem go home.'
 							'Artem: "Forgive me, <<$nickname>>, - It`s all-for me... I will never betray..." You looked at him sadly and went home.'
-							act 'Escape':artemhomemark = 0 & minut += 15 & artemblag = 1 & gt 'gorodok'
+							act 'Escape':artemhomemark = 0 & minut += 15 & artemblag = 1 & gt'pod_ezd','etaj_1'
 						end
 					end
 				end

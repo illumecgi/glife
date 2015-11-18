@@ -1,4 +1,10 @@
 # vanr
+CLOSE ALL
+
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
 act 'Go to the corridor':gt 'korr'
 
 $stirkad = {
@@ -15,10 +21,6 @@ $stirkad = {
 	act 'Hang the laundry out to dry':gt 'korr'
 }
 
-$metka = $ARGS[0]
-$loc = $CURLOC
-$metkaM = $ARGS[0]
-$locM = $CURLOC
 clr
 minut += 1
 housrA = 1
@@ -78,6 +80,8 @@ if shampoo > 0:
 else
 	'You''ve ran out of shampoo.'
 end
+if vanr_hanger = 1: 'Next to the sink neatly folded your <a href="exec:dynamic $vanr_hanger_dress & GT ''vanr'' ">clothes</a>'
+
 
 if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
 if stiralka > 0:'In the bathroom is a washing machine.'
@@ -111,9 +115,6 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 	end
 end
 
-!!0.2.6 extension: reworked how quick wash and face wash was supposed to work, it is now uniform in all toilet/bathroom locations
-!!Washing off cosmetics also removes cum from face
-!!clrbelo: Amount of clean panties available
 if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
 	act 'Quick wash (0:15)':
 		cla
@@ -153,6 +154,20 @@ if cumlip > 0 or cumface > 0:
 	end
 end
 
+if body_write > 0 or face_write > 0:
+	act 'Wash writing off your body':
+		cla
+		body_write = 0
+		face_write = 0
+		minut = minut + 5
+		gs'stat'
+		
+		!'You need a picture'
+		'You wiped indecent inscriptions.'
+
+		act 'Finish':gt $curloc
+	end
+end
 
 if mop ! 1:
 	act 'Wash off cosmetics (0:15)':

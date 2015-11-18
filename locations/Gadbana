@@ -1,8 +1,10 @@
 # Gadbana
+CLOSE ALL
 $metkaM = $ARGS[0]
 $locM = $CURLOC
 $metka = $ARGS[0]
 $loc = $CURLOC
+frost = 0
 '<center><h4>bath</h4></center>'
 '<center><img src="images/qwest/gadukino/bana.jpg"></center>'
 'Not a big room with a low oven, water tanks of stainless steel, low smoky ceiling, and blackened wooden shelf.'
@@ -120,6 +122,78 @@ if cumfrot > 0:
 	end
 end
 !!
+
+if cumpussy > 0 and clrbelo > 0 or cumbelly > 0 and clrbelo > 0 or cumass > 0 and clrbelo > 0 or cumanus > 0 and clrbelo > 0:
+	act 'Substitution 5 min':
+		cla
+		*clr
+		cumpussy = 0
+		cumbelly = 0
+		cumass = 0
+		cumlip = 0
+		cumface = 0
+		cumanus = 0
+		cumfrot = 0
+		sweat = sweat - 1
+		minut = minut + 5
+		clrbelo = clrbelo - 1
+		dirtbelo = dirtbelo + 1
+
+		'<center><img src="images/pics/wash5.jpg"></center>'
+		'You carefully washed sperm in the bathroom.'
+
+		act 'Logout':gt $curloc
+	end
+end
+
+if cumlip > 0 or cumface > 0:
+	act 'Wash off with facial cum 5 min':
+		cla
+		*clr
+		mop = 1
+		cumlip = 0
+		cumface = 0
+		sweat = sweat - 1
+		minut = minut + 5
+
+		'<center><img src="images/pic/facesp.jpg"></center>'
+		'You carefully washed sperm from the face.'
+
+		act 'Logout':gt $curloc
+	end
+end
+
+if leghair > 0 and stanok > 0:
+	act 'Shaving legs 15 min':
+		cla
+		*clr
+		minut = minut + 15
+		leghair = -5
+		horny = horny + 5
+		stanok = stanok - 1
+
+		'<center><img src="images/pics/shave.gif"></center>'
+		'You lathered his feet and took a razor. You deftly shaved hair on the legs washed and shaving foam.'
+
+		act 'Takeout machine':gt $curloc
+	end
+end
+
+if lobok > 0 and stanok > 0:
+	act 'Shaved 15 min':
+		cla
+		*clr
+		minut = minut + 15
+		lobok = -5
+		horny = horny + 5
+		stanok = stanok - 1
+
+		'<center><img src="images/pics/shave3.gif"></center>'
+		'You lathered pubis and taking a razor deft movements began to shave the pubic area and shave the hair around the pussy. Finally shaving was over and you washed the foam from the pussy.'
+
+		act 'Takeout machine':gt $curloc
+	end
+end
 
 --- Gadbana ---------------------------------
 

@@ -76,6 +76,7 @@ numdress = 1
 jeans[1] = 1
 jeansH[1] = 100
 jeansB[1] = 70
+gs 'clothing', 'wear', 'jeans', 1
 cltarelka = 1
 fairy = 10
 eda = 5

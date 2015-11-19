@@ -29,7 +29,6 @@ $objdescrip = {
 	else
 		pl'<<$hair>>'
 	end
-	pl '<<$hair>>'
 	pl '<<$lip>>'
 	pl '<<$throat>>'
 	pl '<<$skin>>'

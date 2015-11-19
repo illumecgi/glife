@@ -205,6 +205,47 @@ if plact = 1:
 						act 'Leave':gt 'gskver'
 					end
 				end
+			elseif know_gor_slut = 1 and BjBeerQW > 1 and bjgangrand = 1:
+					'One of the guys said,: "I know her, same <<$gnikname>> <<$name[2]>>, that sucks for beer, my buddy showed a video where they fall in her natolkali entire company and all eblo obstruhali.' 
+					'And then it is such a mother sends greetings, finally rzhaka."'
+					'Another guy came, You took the chin. You twitched, but he slapped you across the face: "Softly, bitch, place".'
+					'Then you pulled the lip with your finger and laughed: "I love huesosok with nice face and whorish <<$lipbalmstat3>> <<$liptalk>>, it is a pleasure to fuck them in the mouth".' 
+					'You took your hands on both sides. "Come, Spent beer"'
+
+				act 'Go "work"':
+					cls
+					gs'stat'
+
+					'You went with the guys, and they have taken away from the square to one inconspicuous little house, where one of the guys opened the door to the basement and looked in, then you are taken to a dimly lit basement.' 
+					'You saw the empty bottles and dirty mattress on the ground. One of the guys came to you "Well, Star home video, on her knees mouth pipe" and began to unbutton his pants.'
+
+					act 'Kneel down and open your mouth':
+						cls
+						bj += kol_man
+						guy += kol_man
+						cumlip += kol_man/2
+						cumface += kol_man/2
+						face_write = 1
+						gang += 1
+						blowbangrand = RAND (3,4)
+						if mop > 1: mop = 0
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/placer/blowbang2.jpg"></center>'
+						'You sat down on his haunches and surrounded you guys took out their members, you start to suck them diligently what poocheredi, then simultaneously, sometimes helping hands like a real mnogostanochnitsa.' 
+						'Guys did not last long and went down on your face covering his sperm. One of the guys hit you right in the eye.'
+							
+						act 'Rub your eyes':
+							cla
+							cls
+							'<center><img src="images/qwest/alter/placer/blowbang<<blowbangrand>>.jpg"></center>'
+							'While you`re discouraged sit on your lap and rub tears and semen on her cheeks, they continued to mock and brought a humiliating sign on your forehead.' 
+							'-"It is to such a slut like you, I did not forget their place" - said the boys. Are you ready to burn with shame, but did not dare to contradict them. Plenty pokurazhitsya they finally let you go.'
+			
+							act 'Escape':gt'gskver'
+						end
+					end
+				end
 			elseif know_gor_slut = 1:
 				'One of the guys said "Slysh <<$name>>, we''re up to date, what do you <<$gnikname>>". Another guy came up to you "In_short, nipple, Now let''s go to one place and will show you where your skills. Will balk, get the teeth, all clear?"'
 

@@ -10,6 +10,8 @@ elseif piratfrend >= 10:
 	if piratHorny < 10:
 		'Purebred dog named Pirate wags his tail when your appearance.'
 	elseif piratHorny >= 10 and piratHorny < 20:
+		cls
+		if piratsuka < 3:'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 		if piratsuka < 3:'Purebred dog named Pirate revolves around you wagging his tail and sniffing.'
 		if piratsuka >= 3:'<center><img src="images/qwest/gadukino/sniff.jpg"></center>'
 		if piratsuka >= 3:'Purebred dog named Pirate revolves around you wagging his tail and nuzzle you between the legs.'
@@ -1337,23 +1339,50 @@ elseif piratfrend >= 10:
 		exit
 	end
 end
-
 act 'Leave':minut += 5 & gt $loc
 
-act 'Pat the Pirate':
-	cls
+if piratsuka >= 35 and piratHorny < 20 and sub >= 10:
+	act 'Lick Pirates ass':
+		cls
+		piratHorny += 5
+		minut += 10
+		horny += RAND(10,20)
+		sub += 5
+		gs'stat'
+		
+		'<center><img src="images/qwest/gadukino/piratlickass.jpg"></center>'
+		'You sit on their knees near the excited Pirate and cocked his tail, begin to lick his dirty anus. Dog trying to wag the tail or lick your hand, but you begin to concentrate on his wrinkled dog anus...'
+	act 'Finish':gt 'Gadsarai'
+	end
+end
 
-	if piratfrend < 10:piratfrend += 1
+if piratHorny < 20:
+	act 'Pat Pirate':
+		cls
+		if piratfrend < 10:piratfrend += 1
+		minut += 5
+		piratHorny += 1
+		gs'stat'
 
-	minut += 15
+		'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
+		'You pat Pirate on the back.'
 
-	if piratsuka > 0:piratHorny += 1
+		act 'Escape':gt 'Gadsarai'
+	end
 
-	gs 'stat'
-	'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
-	'You pat on the back Pirate.'
+	act 'Stroke Pirate for 30 min':
+		cls
+		if piratfrend < 10:piratfrend += 6
+		minut += 30
+		piratHorny += 6
+		gs'stat'
 
-	act 'Leave':gt $curloc
+		'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
+		'You long stroked back Pirate.'
+
+		act 'Escape':gt 'Gadsarai'
+	end
+	act 'Escape':minut += 5 & gt $loc
 end
 
 --- pirat ---------------------------------

@@ -40,9 +40,26 @@ elseif podvalrape = 1:
 
 	if ciklkm > 0:jump 'markpodvalrape'
 
-	'Finally it''s all over, guys got dressed and went out of the cellar.'
-
-	act 'Leave':podvalrape = 0 & gt 'gorodok'
+	endrandom = RAND (0,1)
+	if endrandom = 0:
+	'Finally, it`s all over, guys got dressed and went out of the cellar.'
+		act 'Escape':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+	
+	elseif endrandom = 1:
+		act 'Come to life':
+			cla
+			cls
+			minut += 5
+			body_write = 5
+			face_write = 1
+			podvalwriterand = RAND (1,6)
+			gs 'stat'
+			
+			'<center><img src="images/qwest/alter/placer/podvalwrite<<podvalwriterand>>.jpg"></center>'
+			'Besides that you missed in a circle and we wanted to detach, Gopnik painted obscenities all your body and sprawled helplessly laughing retired. You`re lying stunned on the floor, making half-hearted attempts to climb.'
+ 			act 'Escape':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+		end  	
+	end
 end
 
 --- podval_rape ---------------------------------

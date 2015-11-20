@@ -1,4 +1,5 @@
 # gschool
+CLOSE ALL
 $metka = $ARGS[0]
 $loc = $CURLOC
 gs 'stat'
@@ -18,24 +19,24 @@ if zverRageQW = 1:
 	'You came to the school yard after school, vnezpno someone you flunked powerful Pendel in the ass, you dumbfounded turned and saw Christina Zverev contorted with rage face. She yelled at you "you ohuel, whether that bitch, about me any garbage chat? I''ll now break mug!"'
 	$nameV = 'Christina'
 	!!stats
-	strenV = 100
-	speedV = 90
-	agilV = 90
-	reactV = 90
-	vitalV = 120
-	intelV = 50
-	willV = 50
-	!!skills
-	magikV = 100
-	boxingV = 40
-	shootV = 100
-	!!parameters
-	healthV = vitalV * 10 + strenV * 5
-	mannaV = intelV * 10 + magikV * 10
-	willpowerV = willV * 10
+	strenV = 85
+	speedV = 75
+	agilV = 75
+	reactV = 75
+	vitalV = 95
+	intelV = 45
+	willV = 45
+	!Skills
+	magikV = 95
+	boxingV = 35
+	shootV = 95
+	!Parameters
+	healthV = vitalV*10 + strenV*5
+	mannaV = intelV*10 + magikV*10
+	willpowerV = willV*10
 	BonusAtakV = 0
 	BonusDefV = 0
-	!!Programme of Action
+	!Action Programme
 	program = 0
 	ZverevaFight = 1
 
@@ -49,7 +50,7 @@ if zverRageQW = 1:
 	exit
 end
 
-if day = 29 and month = 12 and year = 2010 and StoryLine = 1:
+if day = 29 and month = 12 and age <= 17 and StoryLine = 1 and SchoolAtestat = 0 and SchoolBlock ! 1:
 	if hour = 14:
 		'Near the school are already well-dressed girls and boys in your class. Someone called you "<<$name>>, you did not hand over a thousand for the new year"'
 
@@ -191,7 +192,7 @@ if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli =
 	if $clothingworntype = 'sforma':
 		act 'Go to school':gt 'gschool2'
 	else
-		'You are not dressed in uniforms and you are not allowed in school.'
+		'You can only attend school if you are wearing your school uniform.'
 	end
 end
 
@@ -243,6 +244,15 @@ if hour >= 16 and GorSlut >= 3 and SchoolGossip > 0 and afterschoolday ! daystar
 
 		exit
 	end
+end
+
+if LinaSlut > 0 and hour = 16 and week < 6 and kanikuli = 0:
+	randLina = rand(1,10)
+	if randLina < 3:'You see how Lin Ryzhov and Shulgin gone for school.'
+end
+
+if LariskaHomeIn > 0 and hour = 16 and week < 6 and kanikuli = 0:
+	'In the courtyard of the school walks <a href="exec:minut += 1 & GT ''LariskaGo''">Lariska Gruzdev</a>'
 end
 
 if JuliaMilLernQW >= 1 and hour = 16 and week < 6 and kanikuli = 0:'In the school yard strolls <a href="exec:minut += 1 & gt ''JuliaMilGo''">Julia Milov</a>'

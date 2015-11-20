@@ -18,7 +18,7 @@ $din_beg_gor_sec = {
 	'Subsriptions section running costs 100 rubles for 30 days.'
 
 	if money >= 100 and gsAboBeg = 0:
-		act 'Buy a subscription to the running section 100 rubles':
+		act 'Buy a subscription to the section of the run (100 RUB)':
 			cls
 			money -= 100
 			gsAboBeg += 30
@@ -35,10 +35,10 @@ $din_beg_gor_sec = {
 $din_dance_gor_sec = {
 	cls
 	gs 'stat'
-	'Subscriptions section dancing costs 100 rubles for 10 days.'
+	'Subscribe to the dance section of the stands 300 rubles 30 days.'
 
-	if money >= 100 and gsAboDance = 0:
-		act 'Buy a ticket to the dance 100 rubles':
+	if money >= 300 and gsAboDance <= 0:
+		act 'Buy a ticket to the dance (300 RUB)':
 			cls
 			money -= 100
 			gsAboDance += 10
@@ -58,7 +58,7 @@ $din_voll_gor_sec = {
 	'Aboniment section volleyball costs 300 rubles for 30 days.'
 
 	if money >= 300 and gsAboVolley = 0:
-		act 'Buy a subscription for 300 rubles volleyball':
+		act 'Buy a subscription for volleyball (300 RUB)':
 			cls
 			money -= 300
 			gsAboVolley += 30
@@ -76,6 +76,7 @@ $metkaM = $ARGS[0]
 $locM = $CURLOC
 $metka = $ARGS[0]
 $loc = $CURLOC
+CLOSE ALL
 gs 'stat'
 fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
@@ -166,7 +167,13 @@ if grupNPC[5] >= 80 and fedorKozlovQW = 0 and GorSlut = 0 and UNSTARTER = 1:
 	exit
 end
 
-act 'Leave':gt 'gdk'
+if lariskaQwestStart <= daystart and week = 4 and grupNPC[13] >= 80 and lariskaHelp = 0 and zverSlutQW = 1:
+	act 'Logout':gt'LariskaStart','start'
+elseif lariskaQwestDay = daystart and AlbZverHelp ! 1 and lariskaHelp ! 0:
+	act 'Logout':gt'LariskaStart','end'
+else
+	act 'Logout':gt'gdk'
+end
 
 if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 	act 'Change clothes in the locker room':gt 'clothing', 'view_clothing_list', 'wardrobe'
@@ -207,65 +214,78 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 					'Were you surprised like, and your insecurities Ivan regarded as consent. He went into the shower and closed the door behind him.'
 
 					act 'Escape from the shower':IvanShowerQW = 1 & gt $locM, $metkaM
+					act 'Wash together':
+						IvanShowerYes = 0
 
-					act 'bathe together':
-						cls
-						minut += 5
-						horny += 10
-						gs 'stat'
-						'<center><img src="images/pics/dush.jpg"></center>'
-						'Ivan took off his boxer shorts and went under a jet shower. His muscular body was very close to yours. You tried not to look at him but his eyes involuntarily dropped to his groin where hung thick cock. Ivan winked "Want to soap?"'
-
-						act 'lather Ivan':
-							cls
-							minut += 5
-							horny += 20
-							gs 'stat'
-							'<center><img src="images/qwest/alter/Ev/shower.jpg"></center>'
-							'You took a washcloth and began to lather body of Ivan. His cock began to get up and touched your thigh. Ivan began to hug you and caress your body with your hands.'
-
-							act 'Give blowjob':
-								cls
-								minut += 5
-								horny += 20
-								bj += 1
-
-								if npcSex[3] = 0:npcSex[3] = 1 & guy += 1
-
-								gs 'stat'
-								'<center><img src="images/qwest/alter/Ev/shover.jpg"></center>'
-								'You slowly sank to his knees in front of Ivan and his cock was in front of your face. Ivan spent impatiently you head lips mouth open and you let his cock. Your lips tightly wraps solid rod Ivan and you sucked in the shower under the streams of water. Suddenly Ivan took a member of your mouth and taking you by the hand raised to his feet, he dug his lips to your breast and began to suck. You swept bliss. Ivan turned your back to him and pushed you back.'
-
-								act 'stand cancer':
-									cls
-									IvanShowerQW = 10
-									minut += 5
-									horny += 20
-									$boy = 'Ivan'
-									dick = 17
-									lubonus = 2
-									gs 'stat'
-									'<center><img src="images/qwest/alter/Ev/shover2.jpg"></center>'
-									'You bent over and felt the hand of Ivan stroking your ass and anus.'
-									dynamic $analsex
-									'Ivan pulls a member of your buttocks and you feel like you are on the back and buttocks land warm trickle of sperm.'
-
-									act 'Get out of the shower':gt $locM, $metkaM
-								end
-							end
-						end
+						dynamic $ShowerWithIvan
 					end
 				end
 
 				exit
 			end
-
-			'You entered the women''s shower and began soaping his body washcloth. After washed soap and washed hair with shampoo. Rinse off the shampoo you become completely clean. After showering you comb your hair and dressed.'
-
-			act 'Get out of the shower':gt $locM, $metkaM
 		end
 	end
 end
+
+
+$ShowerWithIvan = {
+	cls
+	minut += 5
+	horny += 10
+	gs'stat'
+
+	'<center><img src="images/pics/dush.jpg"></center>'
+	'Ivan took off his boxer shorts and went under a jet shower. His muscular body was very close to yours. You tried not to look at him but his eyes involuntarily dropped to his groin where hung thick cock. Ivan winked "Want to soap?"'
+
+	act 'lather Ivan':
+		cls
+		minut += 5
+		horny += 20
+		gs 'stat'
+		'<center><img src="images/qwest/alter/Ev/shower.jpg"></center>'
+		'You took a washcloth and began to lather body of Ivan. His cock began to get up and touched your thigh. Ivan began to hug you and caress your body with your hands.'
+
+		act 'Give blowjob':
+			cls
+			minut += 5
+			horny += 20
+			bj += 1
+
+			if npcSex[3] = 0:npcSex[3] = 1 & guy += 1
+
+			gs 'stat'
+			'<center><img src="images/qwest/alter/Ev/shover.jpg"></center>'
+			'You slowly sank to his knees in front of Ivan and his cock was in front of your face. Ivan spent impatiently you head lips mouth open and you let his cock. Your lips tightly wraps solid rod Ivan and you sucked in the shower under the streams of water. Suddenly Ivan took a member of your mouth and taking you by the hand raised to his feet, he dug his lips to your breast and began to suck. You swept bliss. Ivan turned your back to him and pushed you back.'
+			act 'To allow him to continue': 
+				cla & *clr
+				if throat<15: 
+					'<center><img src="images/qwest/alter/ev/shower6.gif"></center>'
+					'Penetrating further and further into his mouth, then in the throat, member has blocked you breath and started to cause a gag reflex, hardly restrain himself, freeing her mouth from his dick and wiping my tears, you screamed at Vanya: "For me there is not a black hole, where are you shoving your Drin", - Vanya taking a guilty look, he began to kiss you, and caress your Breasts and ass, again you rosalea, turning to his back and pushing you on your back bent you to his ass.'
+				else 
+					'<center><img src="images/qwest/alter/ev/shower7.gif"></center>'
+					'Penetrating further and further into his mouth, then in the throat, member is placed there without any problems, without causing you discomfort, and bringing Ivan  "heavenly delight", in any case, his groans and moans were talking about it. Feeling that a little-a little and a classmate will flood your throat with my seed, you pulled it out of his mouth, turned to van ass and leaned, you also wanted to get satisfaction.'
+				end
+
+				act 'stand cancer':
+					cls
+					IvanShowerQW = 10
+					minut += 5
+					horny += 20
+					$boy = 'Ivan'
+					dick = 17
+					lubonus = 2
+					gs 'stat'
+					'<center><img src="images/qwest/alter/Ev/shover2.jpg"></center>'
+					'You bent over and felt the hand of Ivan stroking your ass and anus.'
+					dynamic $analsex
+					'Ivan pulls a member of your buttocks and you feel like you are on the back and buttocks land warm trickle of sperm.'
+
+					act 'Get out of the shower':gt $locM, $metkaM
+				end
+			end
+		end
+	end
+}
 
 if hour < 16 or hour > 20:
 	exit
@@ -697,11 +717,23 @@ if volleysostav > 0 and sport = 1:
 
 			act 'Leave':gt 'gdksport'
 			act 'Go to coaching':gt 'Voltrener'
+			if tanga=0 and rand(1,1)=1 and volleytanga=1: 
+				delact 'Go to coaching'
+				act 'Correct clothing':  
+					*clr & cla			
+					Voltrenersee +=1 & ! setcheck on gg without panties 
+					'<center><img src="images/qwest/alter/volley/game'+rand(1,2)+'.jpg"></center>' & 'It seems the coach noticed your manipulation and your young pussy, his eyes lit up and he said turning away: "<<$surname>> Will you come to me after training. I need to show you UH  ... a few things" '
+					act 'Escape':gs'stat'& gt'gdksport' 
+					act 'To come to the door coaching':gt'Voltrenersex' 
+				end	 
+			end
 		end
 	elseif week = 6 and sorevday ! daystart:
 		act 'Check out the competition with a team':
 			cla
 			*clr
+
+			if poverkomand = 0:poverkomand = 600
 
 			volltime = 0
 			sorevday = daystart
@@ -727,6 +759,9 @@ if volleysostav > 0 and sport = 1:
 		end
 	end
 end
+
+if  sport = 0 and (albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0):'You are not dressed in sports clothes.'
+
 
 --- gdksport ---------------------------------
 

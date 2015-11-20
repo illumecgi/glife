@@ -1,4 +1,5 @@
 # gpoli
+CLOSE ALL
 clr
 minut += 5
 frost = 0
@@ -70,6 +71,23 @@ if hour >= 6 and hour <= 21:
 		end
 	end
 
+	if glassqw=1:
+		act'It seems the optometrist':
+			cla
+			*clr
+			hour+=1
+			minut+=35
+			gs'stat'
+			'You have passed a series of tests.
+			"Well. The vision you have fallen significantly. I have to write you a goggles. While I`ll write you a simple little rimmed glasses, pohzhe and you can choose to his liking, or to make corrections. Truth, the procedure is not cheap.'
+			nerdism+=1
+			glassqw=2
+			glass=1
+			blizoruk+=1
+			act 'Logout':gt $curloc
+		end
+	end
+
 	if health < (vital * 10 + stren * 5) and money >= 1000:
 		act 'Treat health (1,000 rubles)':
 			cla
@@ -108,33 +126,477 @@ if hour >= 6 and hour <= 21:
 		end
 	end
 
-	if StoryLine > 0 and SchoolAtestat = 0 and Gspravka < 3:
-		act 'Go to the gynecologist for help':
+if Gorslut = 6:
+		act 'Check gynecologist':
 			cls
-			minut += 15
-			'<center><img src="images/etogame/gin.jpg"></center>'
-			'You lay on the examination table and pushed his feet. Gynecologist began to examine your vagina.'
+				minut += 5
+				gs'stat'
 
-			if vagina > 0:
-				Gspravka = 30
-				GspravkaT = 2
-				'Help gynecologist wrote that you are not a virgin.'
-			elseif vagina = 0:
+				'<center><img src="images/Y4enik/gpoli/gpoli_1.jpg"></center>'
+				'You had to check the gynecologist'
+				if docKnow = 0:
+					'- Hello, <<$name>>. Check came?'
+					'- Hello, Peter. Yes, checked.'
+					'- They say, you`re a prostitute?'
+					'- Yes, Peter, and there is.'
+					'- A mother knows?'
+					'- Peter, the whole town knows. And me go. Well, for more Sonya.'
+					'- Well, let`s see your means of production and reproduction. Undress'
+				elseif docKnow = 1:
+					'- Hello, <<$name>>. Check came?'
+					'- Hello, Peter. Yes, checked.'
+					'- All also push the legs?'
+					'- Yes, doctor, I toil keeping his feet.'
+					'- Tie is not going to?'
+					'- Peter, for studies to be earned? On the clothing is necessary? The family , too, need help. And I love this thing.'
+					'- Well, let`s see your means of production and reproduction. Undress'
+				end
+				act 'Undress':
+					cls
+					minut += 5
+					gs'stat'
+					'<center><img src="images/Y4enik/gpoli/gpoli_3.jpg"></center>'
+					'You undress.'
+					act 'Sit in a chair':
+						cls
+						minut += 5
+						docKnow = 1
+						gs'stat'
+						'<center><img src="images/Y4enik/gpoli/gpoli_4.jpg"></center>'
+						'Taking off her clothes, you sit in a chair.'
+						'Doctor check you.'
+						$gpoli_sick = ''
+						if preg > 0:
+							$gpoli_sick = 'pregnant'
+						end
+						if venera > 0:
+							if $gpoli_sick ! '':$gpoli_sick = $gpoli_sick + ', you have a sexually transmitted disease'
+							if $gpoli_sick = '':$gpoli_sick = 'you have a sexually transmitted disease'
+						end
+						if $gpoli_sick = '':
+							'- Well, Health in your order. Truth, and you have developed a procedure.'
+							'- I have a favor to ask, doctor.'
+							'- It`s all good, Just do not forget to protect themselves.'
+						else
+							'- Well, you have a problem. You <<$gpoli_sick>>.'
+						end
+						'- <<$name>>, doctors will give thanks?'
+				
+						act 'Suggest money.':
+						cls
+						minut += 5
+						gs'stat'
+
+						'- Well, and if I tell you money, Ladies.'
+						'- <<$name>>, only for you. 1000 r'
+							
+							act 'Pay':
+								cls
+								minut += 5
+								money -= 1000
+								
+								'Thank you, doctor. You can always contact. And bring your friends..'
+								act 'Logout':gt $curloc
+							end
+						end
+						
+						
+						act 'offer yourself.':
+							cls
+							minut += 5
+							horny += 5
+							gs'stat'
+							'<center><img src="images/Y4enik/gpoli/gpoli_6.jpg"></center>'
+							'You kneeling, reluctantly begin to lick a member, leading hand, and a member of its nalizyvaya, you appear interesting sensations. And you catch yourself thinking, that start to get involved. And what-this, even starts you like, slightly accelerating, you think maybe that`s it, and end. But, no, here you awake, from, that the heavy hand of the doctor lay your head. You want to raise your head, learning, he wants Dr.. But, he just silently, I began to stretch your mouth, on his penis.'
+						act 'Blow job':
+							cls
+							minut += 5
+							horny += 5
+							bj += 1
+							if gpoli_doctorhavesex = 0:gpoli_doctorhavesex = 1 & guy += 1
+							gs'stat'
+							'<center><img src="images/Y4enik/gpoli/gpoli_7.jpg"></center>'
+							'You want to step back, but it was no where to go, front member, powerful arm at the back of the doctor. First, your mouth normally takes cock inside, but with each movement forward, Breathing becomes more difficult, and harder. In which-point you thought ,it`s just a fuck in the mouth, for many it was hard, and the rate grew. Member enters deeper and deeper, then a couple of seconds he was in your throat, you feel the urge to gag, but Peter pulled out of your mouth his dick. Finally, you normally catch your breath.'
+							'- Well, I think not bad greased. Said Peter.'
+							'- Come on, More delve.'
+							'Where do you think. And almost immediately received a reply. Peter raised you from the floor, leaning on chair, and I began to play his head, your clitoris.'
+							act 'Further':
+								cls
+								minut += 5
+								horny += 5
+								gs'stat'
+								'<center><img src="images/Y4enik/gpoli/gpoli_8.jpg"></center>'
+								'You feel, moments that the body starts to be supplied at a meeting of members. While Peter was massaging your clitoris head member, you start to feel, the moisture leaked leg. For a moment, her eyes closed, you feel a push, and as the walls of the vagina stretched, Taking a member. You groaned.'
+								act 'Sex':
+									cls
+									minut += 5
+									orgasm += 1
+									sex += 1
+									horny = horny/2
+									vagina += 1
+									gs'stat'
+									'<center><img src="images/Y4enik/gpoli/gpoli_9.jpg"></center>'
+									'The heat began to pour on your body. A doctor started, literally just peck your bosom his command. With each thrust, an increasing pace, but the excitement was growing, too, involuntarily you start to moan, and catch the air. Excitation with groans grew, and a member in all persisted, and have pierced. The pace has become so fast, finish what you started, and lose self-control. Peter was shaking until you have strung. Then he pulled his dick out of you, and you almost fell, but you picked up the powerful arms, and led. On the couch, where once again you feel, as a member of the vagina takes over.'
+									act 'Sex on the couch':
+										cls
+										minut += 5
+										horny += 5
+										gs'stat'
+										'<center><img src="images/Y4enik/gpoli/gpoli_10.jpg"></center>'
+										'All the same growing rate, your body is no longer listen to you, You have started to move at a pace member, but as you used to be covered again and again a wave of excitement, you start to stray, and again to finish.'
+										'- Quickly as you end. - Said Dr.. - I have it-It does not leave. Let me show you, what you need to do, so with the help of no problems.'
+										'You kind of heard word, but convulsion who beat you after orgasm, I could not make it clear, what`s next, confused thoughts, whether you would like finish More, whether the end it all. Then the doctor came back, with what-the Bank, and gloved. About climbed gloved hand in a jar, Then you turned, and struck the ass, and the anus which-the liquid. You only came to their senses, like feel, your anus, not without pain stretched ,and penetrates to a member of Perth Petrovich. You cried out when he was inside.'
+										act 'Anal':
+											cls
+											minut += 5
+											horny += 15
+											anal += 1
+											anus += 1
+											gs'stat'
+											'<center><img src="images/Y4enik/gpoli/gpoli_11.jpg"></center>'
+											'You want to move forward from it, but there was only a wall, Peter began the movement, not as sharp, smoother, but no less stringent. You tried to relax the anus, but you can not go. Here the movement began to accelerate, stretching, and penetrating deeper in the ass. You almost started to cry, when the pace quickened More.'
+											'- That will not do, in the hallway can hear. - He Said Peter and took his penis out of your ass, You feel relieved, and excitement.'
+											'-Let since.'
+											'At these words, he threw his robe, on the floor, removed you from the couch, More ointment struck you in the ass, and have yourself to a member. Legs did not obey, so you have gone for the doctor`s arm, and went to where you put it.'
+											act 'Sex on the floor':
+												cls
+												minut += 5
+												horny += 15
+												gs'stat'
+												'<center><img src="images/Y4enik/gpoli/gpoli_12.jpg"></center>'
+												'Then he drove his penis in your vagina, and he started quickly, and hard fuck. You do not have liked, but after a-that time, you start having fun, and the joy of, that this is not happening in your ass, in anticipation of an orgasm, you relaxed, and began to actively moaning. But at this point,, Peter took the penis from the vagina, and rammed in the ass. You cried, but a foretaste of orgasm shot, some of the pain. The rate of increase was the usual, and pain, too. Hoping in any way-then relieve the pain you started to knead her clitoris, accelerating orgasms.'
+												act 'Anal':
+													cls
+													minut += 5
+													horny = 0
+													orgasm += 1
+													gs'stat'
+													'<center><img src="images/Y4enik/gpoli/gpoli_13.jpg"></center>'
+													'Well aroused, now a member in the ass, He began to help achieve orgasm. You have no thought about what, Peter, rigidly fucks you in the ass, and you are already losing, and then begin to rapidly finish, You start to shake, and you almost disconnected, and relax, Member get deeper, and tougher. A few more movements ... And Peter gets, It takes you by the hair, and he puts his penis into your mouth.'
+													act 'Adopt':
+														cls
+														minut += 5
+														horny += 5
+														cumlip += 1
+														swallow += 1
+														gs'stat'
+														'<center><img src="images/Y4enik/gpoli/gpoli_14.jpg"></center>'
+														'The weakened condition, you have no choice, how to take in the mouth, and then swallow all the sperm here, which I had saved Peter. He did more then a few movements in your mouth. Then he took a member, and took a deep breath. And he began to gather, as if nothing had happened.'
+														act 'Gather':
+															cls
+															minut += 5
+															horny += 5
+															gs'stat'
+															'<center><img src="images/Y4enik/gpoli/gpoli_15.jpg"></center>'
+															'You too, dressed.'
+															'- Well, here, one good turn deserves another. - Smiling doctor said. - Come, at least once a week, with your work needed.'
+															'- Thank you, doctor. You can always contact. Site make you free. And bring your friends.'
+															
+															act 'Logout':gt $curloc
+														end
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	if StoryLine > 0 and SchoolAtestat = 0 and Gspravka < 3 and motherKnowSpravka = 0:
+		act 'Going to the gynecologist for help':
+			if vagina = 0:
+				cls
+				minut = minut + 15
+				gs'stat'
+
+				'<center><img src="images/pic/gin.jpg"></center>'
+				'You lay down on the examination table and pushed his feet. The gynecologist began to examine your vagina.'
 				Gspravka = 30
 				GspravkaT = 1
-				'Help gynecologist wrote that you are a virgin.'
+
+				'Gynecologist wrote Help, that you are a virgin.'
+				act 'Logout':gt $curloc
 			end
+			if vagina > 0:
+				cls
+				minut += 5
+				gs'stat'
 
-			if preg > 0:'Gynecologist told you that you are pregnant.'
+				'<center><img src="images/Y4enik/gpoli/gpoli_1.jpg"></center>'
+				'You`ve come to the doctor for help for mom. But you`re a little worried, because you are not a virgin, so you have to try both-then agree with him.'
+				if gpoliuborka = 2:
+					'- Hi <<$name>>. Check came?'
+					'- Hello, Peter. Yes, checked, Mom sent, worried about me.'
+					'- Well, Then take off your clothes, see how your health.'
+				else
+					'- Hello, I - Peter. Complaints, Or check out?'
+					'- Hello. Verify.'
+					'- Undress, check your health.'
+				end
 
-			gs 'stat'
-
-			act 'Leave':gt $curloc
+				act 'Verify.':
+					cls
+					minut += 5
+					gs'stat'
+					'- Lift your shirt, We hear you.'
+					'<center><img src="images/Y4enik/gpoli/gpoli_2.jpg"></center>'
+					'- Well, everything is OK. He speaks, doctor. You notice, that in the eyes begin to shine, and he is looking with interest to your chest.
+					'- Good, undressed, and sit down in a chair.'
+					act 'Undress':
+						cls
+						minut += 5
+						gs'stat'
+						'<center><img src="images/Y4enik/gpoli/gpoli_3.jpg"></center>'
+						'You reluctantly undress, knowing, it all becomes clear, but it`s better to be checked.'
+						act 'Sit in a chair':
+							cls
+							minut += 5
+							gs'stat'
+							'<center><img src="images/Y4enik/gpoli/gpoli_4.jpg"></center>'
+							'Taking off her clothes, you sit in a chair.'
+							'Doctor check you.'
+							$gpoli_sick = ''
+							if preg > 0:
+								$gpoli_sick = 'pregnant'
+							end
+							if venera > 0:
+								if $gpoli_sick ! '':$gpoli_sick = $gpoli_sick + ', you have a sexually transmitted disease'
+								if $gpoli_sick = '':$gpoli_sick = 'you have a sexually transmitted disease'
+							end
+							if $gpoli_sick = '':
+								'- Well, Health in your order. Truth be surprised, you have «woman». - At these words, you saw, as the corners of her mouth twitched - But, it`s your business. Now wait a write reference.'
+								'- And you could not, do not write that I was not a virgin?'
+								'- Well, how, you are not an adult. Help mom, she can go with you, and another doctor. I`m a doctor, I can not lie.'
+							else
+								'- Well, you have a problem. You <<$gpoli_sick>>.'
+								'- And you could not, do not write that I was not a virgin?'
+								'- Well, how, you are not an adult. Help mom, she can go with you, and another doctor. I`m a doctor, I can not lie.'
+							end
+							dynamic $gpoli_spravka_money
+							dynamic $gpoli_spravka_arrange
+							dynamic $gpoli_spravka_badend
+						end
+					end
+				end
+				act 'Go directly, in the case of.':
+					cls
+					minut += 5
+					gs'stat'
+					'<center><img src="images/Y4enik/gpoli/gpoli_1.jpg"></center>'
+					if gpoliuborka = 2:
+						'- Peter. There is such a thing ... Well, ,in general, help me, need, I`m a virgin. And I ... Well,, you know ...'
+						'- I think, I understand <<$name>>.'
+						'- Well, generally, Could you write, I`m a virgin?'
+						'- Well, how, you are not an adult. Help mom, she can go with you, and another doctor. I`m a doctor, I can not lie.'
+					else
+						'- Peter. There is such a thing ... Well, ,in general, help me, need, I`m a virgin. And I ... Well,, you know ...'
+						'- I think, that it was not.'
+						'- Well ... In general,, I`m not a virgin ... and help needed, other ...'
+						'- I understand now. And what do you suggest?'
+					end
+					dynamic $gpoli_spravka_money
+					dynamic $gpoli_spravka_arrange
+					dynamic $gpoli_spravka_badend
+				end
+			end
 		end
 	end
 else
-	'Clinic is closed.'
+	'The clinic is closed.'
 end
+
+$gpoli_spravka_badend = {
+	act 'Take this certificate.':
+		cls
+		minut += 5
+		gs'stat'
+		Gspravka = 30
+		GspravkaT = 2
+		'Gynecologist wrote Help, that you are not a virgin.'
+		act 'Logout':gt $curloc
+	end
+}
+
+$gpoli_spravka_arrange = {
+	act 'Try to negotiate.':
+		cls
+		minut += 5
+		gs'stat'
+		if gpoliuborka = 2:
+			'- Peter, Well, I have no money. Can, how-something you can resolve this issue? I really need.'
+			'-Well, if you really need. - Then he smiled ,and I came to you. - I think it is possible to offer you an option, between us. - He said, and put his hand on your shoulder.'
+			'- What? - Do you have a strange feeling.'
+			'- Well, as you know my wife went on a business trip, on consultation. Well, and I`m one, and the work of the nervous. You see ... it is necessary as-it relieve tension, relax so to speak. Well, what do you say ...'
+			'Do you understand, to which he alludes. And for a few seconds thinking.'
+		else
+			'- Peter, Well, I have no money. Can, how-something you can resolve this issue? I really need.'
+			'- Well, all their needs. All that-it is necessary to.'
+			'- Well, and if ... - Here you hesitated'
+			'- What if? - He looked with interest.'
+			'- What if no money?'
+			'Here he came to you, put your hands on your shoulders, and I began to move you down.'
+			'- I understand now, Why are you not a virgin.'
+			'You are standing at the level of its shirinki, which start unbuttoning.'
+			act 'Grab help and run out of the office.':
+				cls
+				Gspravka = 30
+				GspravkaT = 1
+				gs'stat'
+				'You grabbed almost ready help and ran out of the office. Later, you gently forged certificate.'
+				act 'Logout':gt $curloc
+			end
+		end
+		act 'What to do. Before mom does not want to palitsya.':
+			cls
+			minut += 5
+			horny += 5
+			gs'stat'
+			'<center><img src="images/Y4enik/gpoli/gpoli_6.jpg"></center>'
+			'You kneeling, reluctantly begin to lick a member, leading hand, and a member of its nalizyvaya, you appear interesting sensations. And you catch yourself thinking, that start to get involved. And what-this, even starts you like, slightly accelerating, you think maybe that`s it, and end. But, no, here you awake, from, that the heavy hand of the doctor lay your head. You want to raise your head, learning, he wants Dr.. But, he just silently, I began to stretch your mouth, on his penis.'
+			act 'Blow job':
+				cls
+				minut += 5
+				horny += 5
+				bj += 1
+				if gpoli_doctorhavesex = 0:gpoli_doctorhavesex = 1 & guy += 1
+				gs'stat'
+				'<center><img src="images/Y4enik/gpoli/gpoli_7.jpg"></center>'
+				'You want to step back, but it was no where to go, front member, powerful arm at the back of the doctor. First, your mouth normally takes cock inside, but with each movement forward, Breathing becomes more difficult, and harder. In which-point you thought ,it`s just a fuck in the mouth, for many it was hard, and the rate grew. Member enters deeper and deeper, then a couple of seconds he was in your throat, you feel the urge to gag, but Peter pulled out of your mouth his dick. Finally, you normally catch your breath.'
+				'- Well, I think not bad greased. Said Peter.'
+				'- Come on, More delve.'
+				'Where do you think. And almost immediately received a reply. Peter raised you from the floor, leaning on chair, and I began to play his head, your clitoris.'
+				act 'Further':
+					cls
+					minut += 5
+					horny += 5
+					gs'stat'
+					'<center><img src="images/Y4enik/gpoli/gpoli_8.jpg"></center>'
+					'You feel, moments that the body starts to be supplied at a meeting of members. While Peter was massaging your clitoris head member, you start to feel, the moisture leaked leg. For a moment, her eyes closed, you feel a push, and as the walls of the vagina stretched, Taking a member. You groaned.'
+					act 'Sex':
+						cls
+						minut += 5
+						orgasm += 1
+						sex += 1
+						horny = horny/2
+						vagina += 1
+						gs'stat'
+						'<center><img src="images/Y4enik/gpoli/gpoli_9.jpg"></center>'
+						'The heat began to pour on your body. A doctor started, literally just peck your bosom his command. With each thrust, an increasing pace, but the excitement was growing, too, involuntarily you start to moan, and catch the air. Excitation with groans grew, and a member in all persisted, and have pierced. The pace has become so fast, finish what you started, and lose self-control. Peter was shaking until you have strung. Then he pulled his dick out of you, and you almost fell, but you picked up the powerful arms, and led. On the couch, where once again you feel, as a member of the vagina takes over.'
+						act 'Sex on the couch':
+							cls
+							minut += 5
+							horny += 5
+							gs'stat'
+							'<center><img src="images/Y4enik/gpoli/gpoli_10.jpg"></center>'
+							'All the same growing rate, your body is no longer listen to you, You have started to move at a pace member, but as you used to be covered again and again a wave of excitement, you start to stray, and again to finish.'
+							'- Quickly as you end. - Said Dr.. - I have it-It does not leave. Let me show you, what you need to do, so with the help of no problems.'
+							'You kind of heard word, but convulsion who beat you after orgasm, I could not make it clear, what`s next, confused thoughts, whether you would like finish More, whether the end it all. Then the doctor came back, with what-the Bank, and gloved. About climbed gloved hand in a jar, Then you turned, and struck the ass, and the anus which-the liquid. You only came to their senses, like feel, your anus, not without pain stretched ,and penetrates to a member of Perth Petrovich. You cried out when he was inside.'
+							act 'Anal':
+								cls
+								minut += 5
+								horny += 15
+								anal += 1
+								anus += 1
+								gs'stat'
+								'<center><img src="images/Y4enik/gpoli/gpoli_11.jpg"></center>'
+								'You want to move forward from it, but there was only a wall, Peter began the movement, not as sharp, smoother, but no less stringent. You tried to relax the anus, but you can not go. Here the movement began to accelerate, stretching, and penetrating deeper in the ass. You almost started to cry, when the pace quickened More.'
+								'- That will not do, in the hallway can hear. - He Said Peter and took his penis out of your ass, You feel relieved, and excitement.'
+								'-Let since.'
+								'At these words, he threw his robe, on the floor, removed you from the couch, More ointment struck you in the ass, and have yourself to a member. Legs did not obey, so you have gone for the doctor`s arm, and went to where you put it.'
+								act 'Sex on the floor':
+									cls
+									minut += 5
+									horny += 15
+									gs'stat'
+									'<center><img src="images/Y4enik/gpoli/gpoli_12.jpg"></center>'
+									'Then he drove his penis in your vagina, and he started quickly, and hard fuck. You do not have liked, but after a-that time, you start having fun, and the joy of, that this is not happening in your ass, in anticipation of an orgasm, you relaxed, and began to actively moaning. But at this point,, Peter took the penis from the vagina, and rammed in the ass. You cried, but a foretaste of orgasm shot, some of the pain. The rate of increase was the usual, and pain, too. Hoping in any way-then relieve the pain you started to knead her clitoris, accelerating orgasms.'
+									act 'Anal':
+										cls
+										minut += 5
+										horny = 0
+										orgasm += 1
+										gs'stat'
+										'<center><img src="images/Y4enik/gpoli/gpoli_13.jpg"></center>'
+										'Well aroused, now a member in the ass, He began to help achieve orgasm. You have no thought about what, Peter, rigidly fucks you in the ass, and you are already losing, and then begin to rapidly finish, You start to shake, and you almost disconnected, and relax, Member get deeper, and tougher. A few more movements ... And Peter gets, It takes you by the hair, and he puts his penis into your mouth.'
+										act 'Adopt':
+											cls
+											minut += 5
+											horny += 5
+											cumlip += 1
+											swallow += 1
+											gs'stat'
+											'<center><img src="images/Y4enik/gpoli/gpoli_14.jpg"></center>'
+											'The weakened condition, you have no choice, how to take in the mouth, and then swallow all the sperm here, which I had saved Peter. He did more then a few movements in your mouth. Then he took a member, and took a deep breath. And he began to gather, as if nothing had happened.'
+											act 'Gather':
+												cls
+												minut += 5
+												horny += 5
+												gs'stat'
+												'<center><img src="images/Y4enik/gpoli/gpoli_15.jpg"></center>'
+												'You too, dressed.'
+												'- Well, here, one good turn deserves another. - Smiling doctor said. - And you do so. That reference. Bye, I still wait for visitors. - He gave you a certificate, in which he wrote, that you are a virgin.'
+												'- Bye. - Just you utter a, and headed for the exit, though his feet and listen to you.'
+												Gspravka = 30
+												GspravkaT = 1
+												act 'Logout':gt $curloc
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+		act 'No. To this I will not go.':
+			'- It is not acceptable.'
+			'- Well, no - so no.'
+			dynamic $gpoli_spravka_badend
+		end
+	end
+}
+
+$gpoli_spravka_money = {
+	act 'Suggest money.':
+		cls
+		minut += 5
+		gs'stat'
+
+		if gpoliuborka = 2:
+			'- Well, and if I tell you money, Ladies.'
+			'- <<$name>>, Well I do not know, I`m not from here-for the money, Well come on acquaintance, I go to a meeting. 2000 r'
+			if money >= 2000:
+				act 'Pay':
+					cls
+					minut += 5
+					money -= 2000
+					gs'stat'
+					Gspravka = 30
+					GspravkaT = 1
+					'Gynecologist wrote Help, that you are a virgin.'
+					act 'Logout':gt $curloc
+				end
+			end
+			dynamic $gpoli_spravka_badend
+			dynamic $gpoli_spravka_arrange
+		else
+			'<center><img src="images/Y4enik/gpoli/gpoli_5.jpg"></center>'
+			'-Well, and if I give you money?'
+			'- Stop Girl, I am a professional doctor, and swore an oath, I`m not from here-for the money.'
+			'- It`s a pity, you can not help.'
+			'- I`d really like to help.'
+			dynamic $gpoli_spravka_badend
+			dynamic $gpoli_spravka_arrange
+		end
+	end
+}
 
 --- gpoli ---------------------------------
 

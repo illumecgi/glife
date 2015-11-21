@@ -97,7 +97,7 @@ $din_otel_man_beforesex = {
 			tiprandeom = rand(0, 2)
 
 			if tiprandeom < 2:
-				'You have admitted that you are a man and a girl would want to keep their virginity. The man smiled and said that sex can be engaged and remaining girl. <<$bname>> took a cock from his pants.'
+				'You have admitted that you like men, but you are still a girl would want to keep your virginity. The man smiled and said that sex can be engaged and remaining girl. <<$bname>> took a cock from his pants.'
 				dynamic $din_otel_man_blow
 
 				if dom > 0:

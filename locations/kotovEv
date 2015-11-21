@@ -88,7 +88,7 @@ elseif $loc = 'gskver':
 
 				if dom > 0:act 'Sorry, I''m in a hurry.':sub += 1 & gt $loc, $metka
 
-				act 'Go to Vit''ka.':
+				act 'Go to Vitka.':
 					cls
 					minut += 15
 					gs 'stat'

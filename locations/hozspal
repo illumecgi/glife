@@ -1,6 +1,6 @@
 # hozspal
 if $ARGS[0] = 'start':
-	$sexloc = $CURLOC
+	$sexloc = 'house'
 	$metkaM = $ARGS[0]
 	$locM = $CURLOC
 	minut += 5
@@ -11,7 +11,7 @@ if $ARGS[0] = 'start':
 	act 'Goto the corridor':gt 'house'
 
 	if week < 6 and hour > 8 and hour < 20 and tanwork = 1:
-		act 'Get out':
+		act 'Clean room':
 			minut += 60
 			gs 'stat'
 			housespalrand = rand(0, 4)
@@ -59,6 +59,11 @@ if $ARGS[0] = 'start':
 						end
 					end
 				end
+			else
+				cla
+				'You clean the room'
+				act 'Leave':gt 'house'
+				
 			end
 		end
 	end

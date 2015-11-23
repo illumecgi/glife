@@ -9,6 +9,7 @@ $namev = 'Client'
 whorerand = rand(1, 22)
 minut += 15
 SaunaWhore += 1
+workDolg2 = 0
 gs 'stat'
 '<center><img src="images/sauna/bj<<whorerand>>.jpg"></center>'
 'You are in to the sauna with a client, you both undress.'
@@ -42,6 +43,7 @@ if dick > 15 and saunarand > 90:
 
 		act 'Take the money from the client and go':money += 1500 & saunaWorkNow = 1 & gt 'saunawork'
 	end
+
 else
 	'The client has had enough of your mouth and wants sex.'
 

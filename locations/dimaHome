@@ -1,4 +1,5 @@
 # dimaHome
+CLOSE ALL
 Mud = totminut + 120
 
 if DimaBeHomeOnce = 0:DimaBeHomeOnce = 1

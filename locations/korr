@@ -1,4 +1,11 @@
 # korr
+CLOSE ALL
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metka = $ARGS[0]
+$loc = $CURLOC
+if sound = 0:PLAY 'sound/korr.mp3',30
+
 act 'The bedroom':gt 'bedr'
 act 'The bathroom':gt 'vanr'
 act 'The kitchen':gt 'kuhr'
@@ -32,16 +39,13 @@ act '<b><font color="maroon">Go outside</font></b>':
 	end
 end
 
-$metkaM = $ARGS[0]
-$locM = $CURLOC
-$metka = $ARGS[0]
-$loc = $CURLOC
+
 clr
 popolaini = 0
 saunaYouRoom = 0
 boycherdaksex = 0
 bonusZ = 0
-music_on = 0
+!music_on = 0
 minut += 1
 housrA = 1
 housrMir = 0
@@ -60,7 +64,7 @@ else
 	'Modern hall with stylish furniture, a wall-mounted <a href="exec:gt ''mirror'', ''start''">mirror</a>, and a <a href="exec:gt ''telefon'', ''start''">phone</a>'
 end
 
-if ring = 1:'<b><font color="red">The phone is ringing</font></b>'
+if ring = 1:'<b><font color="red">The phone is ringing</font></b>' & PLAY 'sound/Old_Phone.mp3',30
 
 if suhbelo > 0:'Drying on the clothesline are <<suhbelo>> laundry items.'
 if umbrella > 0:'An umbrella hangs on a hook.'
@@ -91,13 +95,13 @@ elseif bfA > 1 and boydayA ! daystart and hour >= 5 and hour < 20 and vnesh >= v
 	'<b><font color="red">The phone is ringing</font></b>'
 elseif bfA > 1 and boydayA ! daystart and hour >= 5 and hour < 20 and vnesh < vneshBoyA:
 	bfA = 0
-	'<b><font color="red">Your guy does not call you, apparently he threw you.</font></b>'
+	'<b><font color="red">Your guy does not call you, he probably dumped you.</font></b>'
 end
 
 if bfB > 1 and boydayB ! daystart and hour >= 5 and hour < 20 and vnesh >= vneshBoyB:
 	ring = 1
 	ringB = 1
-	'<b><font color="red">The phone is ringing</font></b>'
+	'<b><font color="red">The phone is ringing</font></b>' & PLAY 'sound/Old_Phone.mp3',30
 elseif bfB > 1 and boydayB ! daystart and hour >= 5 and hour < 20 and vnesh < vneshBoyB:
 	bfB = 0
 	'<b><font color="red">Your boyfriend <<$boyB>> does not call you, he probably dumped you.</font></b>'
@@ -106,7 +110,7 @@ end
 if bfC > 1 and boydayC ! daystart and hour >= 5 and hour < 20 and vnesh >= vneshBoyC:
 	ring = 1
 	ringC = 1
-	'<b><font color="red">The phone is ringing</font></b>'
+	'<b><font color="red">The phone is ringing</font></b>' & PLAY 'sound/Old_Phone.mp3',30
 elseif bfC > 1 and boydayC ! daystart and hour >= 5 and hour < 20 and vnesh < vneshBoyC:
 	bfC = 0
 	'<b><font color="red">Your boyfriend <<$boyC>> does not call you, he probably dumped you.</font></b>'
@@ -128,7 +132,7 @@ if bfA = 1 or bfB = 1 or bfC = 1:
 		else
 			ring = 1
 			ringA = 1
-			'<b><font color="red">The phone is ringing</font></b>'
+			'<b><font color="red">The phone is ringing</font></b>' & PLAY 'sound/Old_Phone.mp3',30
 		end
 	end
 
@@ -142,7 +146,7 @@ if bfA = 1 or bfB = 1 or bfC = 1:
 		else
 			ring = 1
 			ringB = 1
-			'<b><font color="red">The phone is ringing</font></b>'
+			'<b><font color="red">The phone is ringing</font></b>' & PLAY 'sound/Old_Phone.mp3',30
 		end
 	end
 
@@ -156,7 +160,7 @@ if bfA = 1 or bfB = 1 or bfC = 1:
 		else
 			ring = 1
 			ringC = 1
-			'<b><font color="red">The phone is ringing</font></b>'
+			'<b><font color="red">The phone is ringing</font></b>' & PLAY 'sound/Old_Phone.mp3',30
 		end
 	end
 end
@@ -265,9 +269,9 @@ if IvanPodstavaDay ! daystart and IvanPodstavaQW = 1 and hour >= 8 and hour <= 2
 				cls
 				minut += 60
 				gs 'stat'
-				'Brought you out of the house in handcuffs and put in a police UAZ. After, steel doors slam and UAZ car started shaking and growling at each bump. Finally you have arrived somewhere and you taking from UAZ performed in the office to have a friend you investigator. He took off the handcuffs and offered you a seat. You took a hard and uncomfortable chair, and an investigator in the meantime turned on the TV and put a video cassette. On the screen was a picture of a security camera in bystroeshke. There was visible corridor. Soon appeared in the corridor you. You came to the door and opened it entered the office. After a while, the door opened and you are out of the office with a thick envelope. Investigator turned a VCR tape and pulled, after which he put another tape. On the next cabinet drawer was Anatoly Chubais. The front door opened and it included you, holding keys in hand. You went to the safe and opened it with the key. Got envelope. <<$burgerIvanText>>. Investigator turned the TV off and pulled out a plastic bag with table keys. He threw them on the table, and finally spoke. "Tests showed it really the keys to the office and the safe owner bystroezhki. During the search they were found in your apartment. Surveillance cameras on the record clearly shows how you entered the office and stole 650 thousand." He took out the protocol and taking pen in hand began to write. Filled a slate floor, he raised his dark eyes on you and said. "Confession will help you in court. All the same, it is the first time and provided that you return the money, you may be given a suspended sentence, if you admit your guilt."'
+				'Brought you out of the house in handcuffs and put in a police UAZ. After, steel doors slam and UAZ car started shaking and growling at each bump. Finally you have arrived somewhere and you taking from UAZ performed in the office to have a friend you investigator. He took off the handcuffs and offered you a seat. You took a hard and uncomfortable chair, and an investigator in the meantime turned on the TV and put a video cassette. On the screen was a picture of a security camera in bystroeshke. There was visible corridor. Soon appeared in the corridor you. You came to the door and opened it entered the office. After a while, the door opened and you are out of the office with a thick envelope. Investigator turned a VCR tape and pulled, after which he put another tape. On the next cabinet drawer was Anatoly Chubais. The front door opened and it included you, holding keys in hand. You went to the safe and opened it with the key. Got envelope. <<$burgerIvanText>>. Investigator turned the TV off and pulled out 				a plastic bag with table keys. He threw them on the table, and finally spoke. "Tests showed it really the keys to the office and the safe owner bystroezhki. During the search they were found in your apartment. Surveillance cameras on the record clearly shows how you entered the office and stole 650 thousand." He took out the protocol and taking pen in hand began to write. Filled a slate floor, he raised his dark eyes on you and said. "Confession will help you in court. All the same, it is the first time and provided that you return the money, you may be given a suspended sentence, if you admit your guilt."'
 
-				act 'Sign recognition':
+				act 'Sign confession':
 					cls
 					minut += 60
 					gs 'stat'
@@ -618,7 +622,7 @@ $polidin = {
 						cla
 						*clr
 						picrand = rand(21, 27)
-						'<center><img src="images/inBed/sick21.jpg"></center>'
+						'<center><img src="images/inBed/sick<<picrand>>.jpg"></center>'
 						timerand = rand(1, 6)
 						minut += timerand * 30
 						'You are lying in bed, shivering in the chill and wrapped in a blanket. Time passes excruciatingly slow - you can not tell how much time passed before the doorbell rang.'

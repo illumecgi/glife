@@ -11,7 +11,7 @@ act 'In the corridor':gt 'house'
 housezalrand = rand(0, 10)
 
 if week < 6 and hour > 8 and hour < 20:
-	act 'Get out':
+	act 'Clean room':
 		cla
 		minut += 60
 		gs 'stat'
@@ -201,7 +201,8 @@ if week < 6 and hour > 8 and hour < 20:
 
 		act 'Leave':gt 'house'
 	end
-elseif week = 6 and hour > 5 and hour < 10 and housezalrand < 5 and niksvid > 1 and niksexday ! daystart:
+end
+if week = 6 and hour > 5 and hour < 10 and housezalrand < 5 and niksvid > 1 and niksexday ! daystart:
 	cla
 	*clr
 	minut += 30

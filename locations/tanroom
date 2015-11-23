@@ -7,6 +7,26 @@ if $ARGS[0] = 'start':
 
 	act 'Return to the corridor':gt 'house'
 
+	if StoryLine > 0:
+		if IvanPodstavaQW = 2 and softKAR = 0:
+			act 'Ask Tanya assistance with Ivan':
+				cla
+				gs'stat'
+	
+				'You explained the situation to Tanya and asked for her help. Tanya said thoughtfully. "I do not think, that there are the physical evidence of the guilt of Ivan. It is necessary to achieve its recognition. I think it would be to drink a truth serum and interrogate. In any case, you must remove it all on video."'
+	
+				act 'Tricky decision':
+					cls
+					softKAR = 1
+					gs'stat'
+					'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+					'You have chosen to achieve recognition cunning Ivan. Tanya told you. You go to the apartment of Ivan. There we met a small business and obtyapaem.'
+					act 'Logout':gt'tanroom','start'
+				end
+			end
+		end
+	end
+
 	if hour > 16 and hour < 23:
 		if tanya > 50 and strapon > 0:
 			act 'Play with strapon':

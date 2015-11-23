@@ -1,11 +1,12 @@
 # bedPar
-
+$metka = $ARGS[0]
+$loc = $CURLOC
 gs 'stat'
 
 if $clothingworntype = 'nude':
-	'<center><img src="images/pics/son.jpg"></center>'
-else
 	'<center><img src="images/pics/bed.jpg"></center>'
+else
+	'<center><img src="images/pics/son.jpg"></center>'
 end
 
 'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes.'
@@ -23,6 +24,7 @@ act 'Undress and go to bed':
 	end
 
 	cls
+	notathomesleep=0
 	health += 5
 	hapri = 0
 	InSleep = 1

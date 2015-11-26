@@ -522,7 +522,7 @@ if $ARGS [0] ='guest':
 					*clr
 					$ImageNeededPlacholder
 					! WD: IMAGE NEEDED ~ '<center><img src="images/img/house/g4.jpg"></center>'
-'!
+
 
 --- sitr ---------------------------------
 

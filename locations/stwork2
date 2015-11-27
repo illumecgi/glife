@@ -62,7 +62,7 @@ if hour >= 15 or hour <= 2:
 			if stpredmet = 1:hapri = 0
 			if stpredmet = 0:mop = 0 & stripdancesum += 1
 
-			hapri = 0
+			!hapri = 0
 			publichot += rand(stripdance / 20, stripdance / 5)+ rand(poledance / 20, poledance / 5)
 
 			if publichotstart = publichot:publichot -= rand(5, 10) & publichotstart = publichot
@@ -294,6 +294,7 @@ $privatdancedi = {
 		fat -= 5
 		stripdancesum += 1
 
+		stprrand = rand(0,2)
 		if stprrand = 0:gt 'stwork2', 'pr1'
 		if stprrand = 1:gt 'stwork2', 'pr2'
 		if stprrand = 2:gt 'stwork2', 'pr3'

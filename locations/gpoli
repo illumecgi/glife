@@ -346,7 +346,7 @@ if Gorslut = 6:
 					gs'stat'
 					'- Lift your shirt, We hear you.'
 					'<center><img src="images/Y4enik/gpoli/gpoli_2.jpg"></center>'
-					'- Well, everything is OK. He speaks, doctor. You notice, that in the eyes begin to shine, and he is looking with interest to your chest.
+					'- Well, everything is OK. He speaks, doctor. You notice, that in the eyes begin to shine, and he is looking with interest to your chest.'
 					'- Good, undressed, and sit down in a chair.'
 					act 'Undress':
 						cls

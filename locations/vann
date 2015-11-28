@@ -67,14 +67,10 @@ if $ARGS[0] = 'start':
 				end
 
 				dynamic $showerdin
-				sweat -= 1
-				minut += 15
 				'<center><img src="images/pics/wash5.jpg"></center>'
 				'You gave yourself a catlick, thus removing any traces of cum.'
 				sweat -= 1
 				minut += 15
-				clrbelo -= 1
-				dirtbelo += 1
 				'<center><img src="images/pics/wash5.jpg"></center>'
 				'You gave yourself a catlick, thus removing any traces of cum.'
 

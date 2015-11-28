@@ -5,7 +5,7 @@ motherAge = age + 19
 if momslut >= 2 and mother < 40:mother = 40
 gs 'stat'
 gs'motherQW'
-gs'dinmother
+gs'dinmother'
 
 '<center><b><font color="maroon">Mama</font></b></center>'
 '<center><img src="images/qwest/alter/mother.jpg"></center>'

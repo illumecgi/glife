@@ -36,7 +36,7 @@ $din_vokzalg_kassi = {
 						minut += 15
 						gs 'stat'
 						'<center><img src="images/etogame/electri.jpg"></center>'
-						'After 15 minutes the train reaches it's last stop, in the City.'
+						'After 15 minutes the train reaches it''s last stop, in the City.'
 
 						act 'Leave':minut += 5 & nroad = 0 & gt 'Vokzal'
 					end

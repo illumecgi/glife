@@ -11,7 +11,7 @@ gs 'stat'
 if ymanrem[5] = 0:'<center><img src="images/etogame/ynill.jpg"></center>'
 if ymanrem[5] = 1:'<center><img src="images/etogame/yrem.jpg"></center>'
 if ymanrem[5] = 2:'<center><img src="images/etogame/yvan.jpg"></center>'
-if ymanrem[5] = 2:'On the wall hangs a <a href="exec:gt ''mirror'', ''start''">mirror</a>'
+if ymanrem[5] = 2:'On the wall hangs a <a href="exec:gt ''mirror'', ''start''">mirror</a>. You can <a href="exec: gt''vann'',''start''">wash yourself</a>.'
 
 if tampon > 0:
 	'On a shelf are tampons in a pack. You have <b><<tampon>></b> left'
@@ -31,7 +31,7 @@ end
 if clrbelo > 0:
 	'In the locker there are <font color="blue"><b><<clrbelo>></b></font> clean underwear.'
 else
-	'<b><font color="red">You can not wash yourself, because you do not have clean underwear.</font></b>'
+	'<b><font color="red">You do not have any clean underwear.</font></b>'
 end
 
 if husband > 0 and husbanday > 0 and husporday ! daystart and poroshok >= 2:
@@ -177,7 +177,7 @@ elseif vibrator = 1 and vibratorIN = 1:
 	end
 end
 
-if analplug = 1 and analplugin = 0 and klismaday1 = 1:
+if analplug = 1 and analplugin = 0:
 	act 'Insert a butt plug (0:05)':
 		cla
 		*clr

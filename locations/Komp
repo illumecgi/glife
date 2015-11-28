@@ -15,6 +15,8 @@ if $ARGS[0] = 'start':
 
 	!!act 'SunReview of the Dead':gt 'KGZstart'
 
+	if student > 0 and kursovik < 100:'<a href="exec:GT ''Komp'',''kursak''">Get some of your course work done.</a>'
+
 	if internet > 0:
 		internet = internetM / 60
 		'You have <<internet>> hours of Internet access remaining.'
@@ -519,7 +521,10 @@ if $ARGS[0] = 'rabota':
 
 			act 'Fill in the questionnaire':
 				cls
-				camwhore += 1
+				camwhore = 1
+				mfcclients = 0
+				camclients = 0
+				mfccum = 0
 				minut += 20
 				gs 'stat'
 				'<center><img src="images/camwhore/camwhore2.jpg"></center>'
@@ -537,6 +542,21 @@ if $ARGS[0] = 'rabota':
 		if hour < 20 and hour > 7:act 'Search More':gt 'Komp','rabota'
 		act '<B>Finish</B>':gt 'Komp','brows'
 	end
+end
+
+if $ARGS[0] = 'study':
+	cla
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	intel += 1
+	'<center><b>The Institute for Education Measurement</b></center>'
+	'<center><img src="images/pics/komp/study.jpg"></center>'
+	'You spend an hour reading news and educational websites, you feel a little smarter.'
+	
+	act '<B>Finish</B>':gt'Komp','start'
 end
 
 if $ARGS[0] = 'kursak':
@@ -648,7 +668,7 @@ if $ARGS[0] = 'startpagemfc':
 		cls
 		gs 'stat'
 		'<center><img src="images/camwhore/camwhore3.jpg"></center>'
-		'In your chatroom  <<camclients>> visitors.'
+		'In your chatroom there are <<camclients>> visitors.'
 		act 'Turn on webcam':gt 'komp','waitclients'
 		act 'Logout':
 			karta += tokens/2
@@ -659,150 +679,331 @@ end
 
 if $ARGS[0] = 'waitclients':
 	cls
-	minut += 2
-	manna -= 2
-	willpower -= RAND(1,3)
+	minut = minut + RAND(1,4)
+	if mfccum = 0:
+		manna = manna - RAND(0,3)
+	elseif mfccum = 1:
+		mfcdaycum = daystart
+		manna = manna - RAND(1,3)*mfccum
+	elseif mfccum = 2:
+		mfcdaycum = daystart
+		manna = manna - RAND(2,5)*mfccum
+	elseif mfccum = 3:
+		mfcdaycum = daystart
+		manna = manna - RAND(5,8)*mfccum
+	elseif mfccum = 4:
+		mfcdaycum = daystart
+		manna = manna - RAND(5,11)*mfccum
+	elseif mfccum = 5:
+		mfcdaycum = daystart
+		manna = manna - RAND(7,12)*mfccum
+	elseif mfccum > 5:
+		mfcdaycum = daystart
+		manna = manna - RAND(10,20)*mfccum
+	end
+	mfcclients += 1
 
 	if vnesh < 25:
 		if topmfc = 1 and backmfc = 1:
 			if webpopular < 15:
-				camclients += RAND(1,3)
+				if mfcclients > 3:
+					camclients -= RAND(1,3)
+				else
+					camclients += RAND(1,3)
+				end
 			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(3,5)
+				if mfcclients > 3:
+					camclients -= RAND(3,5)
+				else
+					camclients += RAND(3,5)
+				end
 			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(4,8)
+				if mfcclients > 3:
+					camclients -= RAND(4,8)
+				else
+					camclients += RAND(4,8)
+				end
 			elseif webpopular >= 75:
-				camclients += RAND(5,15)
+				if mfcclients > 3:
+					camclients -= RAND(5,15)   
+				else
+					camclients += RAND(5,15)   
+				end
 			end
 			chancetips = RAND(0,100)
 			clientask = RAND(0,100)
-			if chancetips >= 95:
-				tokens += RAND(1,20)
+			if chancetips >= 95 and camclients >= 250:
+				if webpopular >= 50:
+					tokens += RAND(10,30)
+				else
+					tokens += RAND(1,20)
+				end
 			end
 		end
 	else
 		if topmfc = 1 and backmfc = 1:
 			if webpopular < 15:
-				camclients += RAND(3,5)
+				if mfcclients > 3:
+					camclients -= RAND(3,5)
+				else
+					camclients += RAND(3,5)
+				end	
 			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(5,8)
+				if mfcclients > 3:
+					camclients -= RAND(5,8)
+				else
+					camclients += RAND(5,8)
+				end
 			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(5,12)
+				if mfcclients > 3:
+					camclients -= RAND(5,12)
+				else
+					camclients += RAND(5,12)
+				end
 			elseif webpopular >= 75:
-				camclients += RAND(8,15)
+				if mfcclients > 3:
+					camclients -= RAND(8,15)
+				else
+					camclients += RAND(8,15)
+				end  
 			end
-			chancetips = RAND(1,100)
-			clientask = RAND(1,100)
-			if chancetips >= 95:
-				tokens += RAND(1,20)
-			end
-		end
-	end
-	if vnesh < 25:
-		if topmfc = 0 and backmfc = 1:
-			if webpopular < 15:
-				camclients += RAND(1,3)
-			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(1,5)
-			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(5,10)
-			elseif webpopular >= 75:
-				camclients += RAND(6,15)
-			end
-			chancetips = RAND(2,90)
+			chancetips = RAND(5,100)
 			clientask = RAND(5,100)
-			if chancetips >= 85:
-				tokens += RAND(1,20)
+			if chancetips >= 95 and camclients >= 200:
+				if webpopular >= 50:
+					tokens += RAND(10,40)
+				else
+					tokens += RAND(1,20)
+				end
+			end
+		end
+	end
+	if vnesh < 25:
+		if topmfc = 0 and backmfc = 1:
+			if webpopular < 15:
+				if mfcclients > 3:
+					camclients -= RAND(1,3)
+				else
+					camclients += RAND(1,3)
+				end
+			elseif webpopular >= 15 and webpopular < 35:
+				if mfcclients > 3:
+					camclients -= RAND(1,5)
+				else
+					camclients += RAND(1,5)
+				end
+			elseif webpopular >= 35 and webpopular < 75:
+				if mfcclients > 3:
+					camclients -= RAND(5,10)
+				else
+					camclients += RAND(5,10)
+				end
+			elseif webpopular >= 75:
+				if mfcclients > 3:
+					camclients -= RAND(6,15)
+				else
+					camclients += RAND(6,15)
+				end   
+			end
+			chancetips = RAND(5,90)
+			clientask = RAND(5,100)
+			if chancetips >= 85 and camclients >= 230:
+				if webpopular >= 50:
+					tokens += RAND(10,35)
+				else
+					tokens += RAND(1,20)
+				end
 			end
 		end
 	else
 		if topmfc = 0 and backmfc = 1:
 			if webpopular < 15:
-				camclients += RAND(3,6)
+				if mfcclients > 3:
+					camclients -= RAND(3,6)
+				else
+					camclients += RAND(3,6)
+				end
 			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(5,10)
+				if mfcclients > 3:
+					camclients -= RAND(5,10)
+				else
+					camclients += RAND(5,10)
+				end
 			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(7,12)
+				if mfcclients > 3:
+					camclients -= RAND(7,12)
+				else
+					camclients += RAND(7,12)
+				end
 			elseif webpopular >= 75:
-				camclients += RAND(10,15)
+				if mfcclients > 3:
+					camclients -= RAND(10,15) 
+				else
+					camclients += RAND(10,15) 
+				end
 			end
-			chancetips = RAND(2,90)
+			chancetips = RAND(10,90)
 			clientask = RAND(10,100)
-			if chancetips >= 85:
-				tokens += RAND(1,20)
+			if chancetips >= 85 and camclients >= 200:
+				if webpopular >= 50:
+					tokens += RAND(15,35)
+				else
+					tokens += RAND(1,20)
+				end
 			end
 		end
 	end
 	if vnesh < 25:
 		if topmfc = 1 and backmfc = 0:
 			if webpopular < 15:
-				camclients += RAND(1,3)
+				if mfcclients > 3:
+					camclients -= RAND(1,3)
+				else
+					camclients += RAND(1,3)
+				end
 			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(2,5)
+				if mfcclients > 3:
+					camclients -= RAND(2,5)
+				else
+					camclients += RAND(2,5)
+				end
 			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(5,15)
+				if mfcclients > 3:
+					camclients -= RAND(5,15)
+				else
+					camclients += RAND(5,15)
+				end
 			elseif webpopular >= 75:
-				camclients += RAND(5,20)
+				if mfcclients > 3:
+					camclients -= RAND(5,20)
+				else
+					camclients += RAND(5,20)
+				end
 			end
-			chancetips = RAND(4,80)
-			clientask = RAND(7,100)
-			if chancetips >= 75:
-				tokens += RAND(1,20)
+			chancetips = RAND(10,80)
+			clientask = RAND(10,100)
+			if chancetips >= 75 and camclients >= 200:
+				if webpopular >= 50:
+					tokens += RAND(10,40)
+				else
+					tokens += RAND(1,20)
+				end
 			end
 		end
 	else
 		if topmfc = 1 and backmfc = 0:
 			if webpopular < 15:
-				camclients += RAND(4,7)
+				if mfcclients > 3:
+					camclients -= RAND(4,7)
+				else
+					camclients += RAND(4,7)
+				end
 			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(5,12)
+				if mfcclients > 3:
+					camclients -= RAND(5,12)
+				else
+					camclients += RAND(5,12)
+				end
 			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(9,15)
+				if mfcclients > 3:
+					camclients -= RAND(9,15)
+				else
+					camclients += RAND(9,15)
+				end	
 			elseif webpopular >= 75:
-				camclients += RAND(15,20)
+				if mfcclients > 3:
+					camclients -= RAND(15,20)
+				else
+					camclients += RAND(15,20)
+				end
 			end
-			chancetips = RAND(3,80)
+			chancetips = RAND(15,80)
 			clientask = RAND(15,100)
-			if chancetips >= 75:
-				tokens += RAND(1,20)
+			if chancetips >= 75 and camclients >= 170:
+				if webpopular >= 50:
+					tokens += RAND(15,45)
+				else
+					tokens += RAND(1,20)
+				end
 			end
 		end
 	end
 	if vnesh < 25:
 		if topmfc = 0 and backmfc = 0:
 			if webpopular < 15:
-				camclients += RAND(1,4)
+				if mfcclients > 3:
+					camclients -= RAND(1,4)
+				else
+					camclients += RAND(1,4)
+				end
 			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(3,10)
+				if mfcclients > 3:
+					camclients -= RAND(3,10)
+				else
+					camclients += RAND(3,10)
+				end
 			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(10,20)
+				if mfcclients > 3:
+					camclients -= RAND(10,20)
+				else
+					camclients += RAND(10,20)
+				end
 			elseif webpopular >= 75:
-				camclients += RAND(10,30)
+				if mfcclients > 3:
+					camclients -= RAND(10,30)
+				else
+					camclients += RAND(10,30)
+				end	
 			end
-			chancetips = RAND(6,50)
-			clientask = RAND(10,100)
-			if chancetips >= 45:
-				tokens += RAND(1,20)
+			chancetips = RAND(15,50)
+			clientask = RAND(15,100)
+			if chancetips >= 45 and camclients >= 150:
+				if webpopular >= 50:
+					tokens += RAND(20,50)
+				else
+					tokens += RAND(5,25)
+				end
 			end
-		end
+		end 
 	else
 		if topmfc = 0 and backmfc = 0:
 			if webpopular < 15:
-				camclients += RAND(3,8)
+				if mfcclients > 3:
+					camclients -= RAND(3,8)
+				else
+					camclients += RAND(3,8)
+				end
 			elseif webpopular >= 15 and webpopular < 35:
-				camclients += RAND(3,15)
+				if mfcclients > 3:
+					camclients -= RAND(3,15)
+				else
+					camclients += RAND(3,15)
+				end
 			elseif webpopular >= 35 and webpopular < 75:
-				camclients += RAND(10,20)
+				if mfcclients > 3:
+					camclients -= RAND(10,20)
+				else
+					camclients += RAND(10,20)
+				end
 			elseif webpopular >= 75:
-				camclients += RAND(10,30)
+				if mfcclients > 3:
+					camclients -= RAND(10,30)
+				else
+					camclients += RAND(10,30)
+				end	
 			end
-			chancetips = RAND(4,50)
+			chancetips = RAND(20,50)
 			clientask = RAND(20,100)
-			if chancetips >= 45:
-				tokens += RAND(1,20)
+			if chancetips >= 45 and camclients >= 100:
+				if webpopular >= 50:
+					tokens += RAND(30,50)
+				else
+					tokens += RAND(10,30)
+				end
 			end
 	 	end
 	end
+	if camclients <= 0:camclients = 0
 	gs 'stat'
 
 	if topmfc = 1 and backmfc = 1:
@@ -827,7 +1028,7 @@ if $ARGS[0] = 'waitclients':
 		cls
 		gs 'stat'
 		'It seems, one of the visitors is willing to pay you for you to bare your breasts...'
-		act 'Remove a bra':
+		act 'Remove your bra':
 			cls
 			webpopular += 1
 			minut += 2
@@ -860,6 +1061,7 @@ if $ARGS[0] = 'waitclients':
 		'One of the visitors asks you to remove your panties...'
 		act 'Do it':
 			cls
+			mfcclients = 0
 			webpopular += 1
 			minut += 2
 			backmfc = 0
@@ -890,6 +1092,7 @@ if $ARGS[0] = 'waitclients':
 		'One of the visitors asks you to fondle your Breasts...'
 		act 'Do it':
 			cls
+			mfcclients = 0
 			webpopular += 1
 			minut += 2
 			backmfc = 0
@@ -907,13 +1110,7 @@ if $ARGS[0] = 'waitclients':
 
 			'<center><img src="images/camwhore/camwhore10.jpg"></center>'
 			'You lie down comfortably and start to knead and squeeze your tits, sometimes putting your mouth to a nipple, then to the other...'
-			if horny >= 100:
-				orgasm += 1
-				horny = 0
-				manna = mannamax
-				gs 'stat'
-				'The excitement is so great, that you are unable to hold back, and placing your hand between her legs and you cum.'
-			end
+
 			act 'Carry on':gt 'Komp','waitclients'
 		end
 		act 'Ignore':
@@ -927,6 +1124,7 @@ if $ARGS[0] = 'waitclients':
 		'One of the visitors asks you to play with your pussy...'
 		act 'Do it':
 			cls
+			mfcclients = 0
 			webpopular += 1
 			minut += 2
 			horny += RAND(5,10)
@@ -945,6 +1143,7 @@ if $ARGS[0] = 'waitclients':
 			'You lie down comfortably and pressing a hand between your legs, you rub your labia back and forth with your fingers.'
 			if horny >= 100:
 				orgasm += 1
+				mfccum += 1
 				horny = 0
 				manna = mannamax
 				gs 'stat'
@@ -963,6 +1162,7 @@ if $ARGS[0] = 'waitclients':
 		'One of the visitors asks you to show him a close-up of your vagina...'
 		act 'Do it':
 			cls
+			mfcclients = 0
 			webpopular += 1
 			minut += 2
 			if webpopular < 15:
@@ -1010,6 +1210,7 @@ if $ARGS[0] = 'waitclients':
 		'One of the visitors asks you to push the camera up your ass...'
 		act 'To push':
 			cls
+			mfcclients = 0
 			webpopular += 2
 			sub += 2
 			minut += 2
@@ -1112,6 +1313,7 @@ if $ARGS[0] = 'waitclients':
 	if topmfc = 1 and clientask < 80:
 		act 'Remove your bra':
 			cls
+			mfcclients = 0
 			minut += 2
 			topmfc = 0
 			horny += 5
@@ -1156,14 +1358,6 @@ if $ARGS[0] = 'waitclients':
 				'<center><img src="images/camwhore/camwhore9.jpg"></center>'
 			end
 			'You play with your breasts, lost in fantasy, you completely forget about the camera and focus entirely on having fun.'
-			if horny >= 100:
-				webpopular -= 1
-				orgasm += 1
-				horny = 0
-				manna = mannamax
-				gs 'stat'
-				'It seems, you have not calculated your endurance, and therefore, unable to hold back, you run a hand between your legs and cum in front of <<camclients>> users, completely free of charge.'
-			end
 			act 'Further':gt 'Komp','waitclients'
 		end
 	end
@@ -1171,6 +1365,7 @@ if $ARGS[0] = 'waitclients':
 	if backmfc = 1 and clientask < 80:
 		act 'Remove panties':
 			cls
+			mfcclients = 0
 			minut += 2
 			backmfc = 0
 			horny += 5
@@ -1210,12 +1405,76 @@ if $ARGS[0] = 'waitclients':
 			if horny >= 100:
 				webpopular -= 1
 				orgasm += 1
+				mfccum += 1
 				horny = 0
 				manna = mannamax
 				gs 'stat'
 				'It seems, you have not calculated your endurance. Therefore, you cum before <<camclients>> users completely free of charge.'
 			end
 			act 'Further':gt 'Komp','waitclients'
+		end
+	end
+	if backmfc = 0 and clientask < 80:
+		act'Play with your ass':
+			cls
+			if webpopular < 15:
+				camclients += RAND(5,10)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(10,15)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(10,30)
+			elseif webpopular >= 75:
+				camclients += RAND(15,40)
+			end
+			if anus < 10:analplay += 1
+			mfcclients = 0
+			minut += 2
+			horny += RAND(5,10)
+			chancetips = RAND(0,100)
+			if chancetips >= 60:
+				tokens += RAND(10,20)
+			end  
+			gs 'stat'
+
+			'<center><img src="images/camwhore/camwhore85.jpg"></center>'
+			'You shove two fingers in your mouth and generously cover them in saliva, by turns you gently push them into you ass, watching from the corner of your eye, so you can focus on the cam as the clients prefer it.'
+			if horny >= 100:
+				webpopular -= 1
+				orgasm += 1
+				mfccum += 1
+				horny = 0
+				manna = mannamax
+				gs 'stat'
+				'But, it seems, you have under estimated your endurance. Therefore, you cum before <<camclients>> users completely free of charge.'
+			end
+			act'Further':gt'Komp','waitclients'
+		end
+	end
+	if topmfc = 0 and nippain < 3 and clientask < 80:
+		act'Pinch your nipples':
+			cls
+			if webpopular < 15:
+				camclients += RAND(5,10)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(10,15)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(10,30)
+			elseif webpopular >= 75:
+				camclients += RAND(15,40)
+			end
+			mfcclients = 0
+			minut += 2
+			nippain += 1
+			horny -= RAND(20,50)
+			chancetips = RAND(0,100)
+			if chancetips >= 75:
+				tokens += RAND(20,40)
+			end  
+			gs 'stat'
+
+			'<center><img src="images/camwhore/camwhore84.jpg"></center>'
+			'You tightly squeeze your nipples between your finger tips and pull them aside, feeling sharp pain and drastically lowering your excitement.'
+			act'Further':gt'Komp','waitclients'
 		end
 	end
 	gs 'family'

@@ -5,7 +5,12 @@ if anrand = 0:
 	$anek = '- How do you feel about clowns?
 	- Just do not have to provoke me on anti-government statements!'
 elseif anrand = 1:
-	$anek = 'Wearing a driver, dropping out of the "Okie" might accidentally throw it through the thigh.'
+	$anek = 'Somewhere in the Atlantic Ocean, two submarines, Russian and American, come to the surface.
+	The Russian one is old and rusty, the American one is new and sleek matte black.
+	On the Soviet one, the crew lounges about lazily, and a drunken captain yells at them: "Who threw a valenok on the control board? I'm asking you, who threw a valenok on the control board?!"
+	From the American submarine, a clean-shaven, sober, and smartly-dressed captain yells scornfully: "You know, folks, in America..."
+	The Russian captain dismissively interrupts him: "America??! Ain't no fucking America no more!!"
+	[He turns back to his crew] "For the last time, who threw a valenok on the control board?!"'
 elseif anrand = 2:
 	$anek = 'Two old men on a bench in a nursing home:
 	- A grandson asked me yesterday what I did during the sexual revolution.
@@ -42,16 +47,20 @@ elseif anrand = 9:
 elseif anrand = 10:
 	$anek = 'Based on teachers'' wages, our government consists of vengeful Losers.'
 elseif anrand = 11:
-	$anek = 'Last year I asked Santa Claus become compatriot Gerard Depardieu. Who knew that the old man so perverted.'
+	$anek = ' What's meant by an exchange of opinions in the Communist party?
+	It's when I come to a party meeting with my own opinion, and I leave with the party's.'
 elseif anrand = 12:
 	$anek = 'A guy goes to a meeting late, nervous, can not find a place to park. Raises his face to the sky and said:
 	- Lord, help me to find a place to park. I then give up drinking and going every Sunday to go to church!
 	Miraculously appears free place. Guy again turned to the sky:
 	- And, all is not necessary. Found!'
 elseif anrand = 13:
-	$anek = '- Watson, what are you smoking? Let me guess - Tobacco "Queen of Virginia" with leaves cherries jubilee issue of velvet in the box?
-	- Amazingly, Holmes! How did you guess?
-	- By Jove, my dear Watson! Well, not Mrs. Hudson stole that pack from my room!'
+	$anek = 'A Russian and an American are sentenced to Hell.
+	The Devil summons them and says: "Guys, you have 2 options: an American or Russian Hell. In the American one you can do what you want, but you'll have to eat a bucket of shit every morning. The Russian one is the same, but it's 2 buckets."
+	The Yankee quickly makes up his mind and goes to American Hell, while the Russian eventually chooses the Russian one.
+	In a week or so they meet. The Russian asks: "So, what's it like out there?"
+	"Exactly what the devil said, the Hell itself is OK, but eating a bucket of shit is killing me. And you?"
+	"Ah, it feels just like home - either the shit doesn't get delivered or there aren't enough buckets for everyone!'
 elseif anrand = 14:
 	$anek = 'Comes out in the morning traffic cop on the road, his head after yesterday''s split.
 	Looks - Jeep carried. Well, he stopped him in order to collect funds for the sober. Looks, and there sits a homeless person. Documents examined - though homeless machine. Well cop asked him:
@@ -75,7 +84,8 @@ elseif anrand = 16:
 	Little Johnny from the back row:
 	- Marivanna, and that can not be alive to finish school?'
 elseif anrand = 17:
-	$anek = 'The slogan "strangle corruption" has been recognized as extremist calling for the violent overthrow of the existing order.'
+	$anek = ' When Stalin was in office, he once noted that there were mice in his study and complained to President Kalinin about this.
+	The President thought for a moment and suggested, "Why don't you put up a sign reading 'Collective Farm'? Half the mice will die of hunger and the other half will run away."'
 elseif anrand = 18:
 	$anek = 'Husband:
 	- What in-law is coming?
@@ -100,7 +110,13 @@ elseif anrand = 20:
 	- Class, come on!
 	- Well, then, go, bake pies...'
 elseif anrand = 21:
-	$anek = 'That''s because Depardieu surprised when sober...'
+	$anek = 'A Chukcha sits on the shore of the Bering Strait. An American submarine surfaces.
+	The American captain opens the hatch and asks: "Which way is Alaska?"
+	The Chukcha points his finger: "That way!"
+	"Thanks!" says the American, shouts "South-South-East, bearing 159.5 degrees!" down the hatch and the submarine submerges.
+	Ten minutes later, a Soviet submarine emerges. The Russian captain opens the hatch and asks the Chukcha: "Where did the American submarine go?"
+	The Chukcha replies: "South-South-East bearing 159.5 degrees!"
+	"Don't be a smart-ass", says the captain, "just point your finger!'
 elseif anrand = 22:
 	$anek = 'Headquarters of the Ku Klux Klan:
 	- Tell me, how do I join your organization?
@@ -133,9 +149,9 @@ elseif anrand = 25:
 	On the back row Vovochka:
 	- Damn. I smelt them.'
 elseif anrand = 26:
-	$anek = '- And my last one after five minutes, the server broke.
-	- Is he hakep ??!
-	- He mydak!'
+	$anek = 'A young woman in a miniskirt jumps onto a bus. The bus starts abruptly, and she falls onto the lap of a seated priest.
+	Surprised, she looks down and exclaims, "Wow!"
+	"It's not a 'wow!', my daughter", says the priest, "it is the key to the Cathedral of Christ the Saviour!"'
 elseif anrand = 27:
 	$anek = 'A plane is flying. The pilot on the speakerphone:
 	- Ladies and gentlemen, you are greeted by the captain. Listen to the information about our flight. Our flight is at an altitude of 10, 000 feet at a speed of 900 kilometers per hour, the temperature behind... Shit... A-A-A-A! .. What''s that? .. WELL, PIZDETS...
@@ -161,8 +177,8 @@ elseif anrand = 29:
 	Husband:- Go...'
 elseif anrand = 30:
 	$anek = 'Put a baby pacifier next to the stove, and it melted stuck to the table.
-	Scored in Yandex:how to pull out the nipple?...
-	Forgot that looking for...'
+	Searched Yandex: How to pull out the nipple?...
+	Forgot what I was looking for...'
 elseif anrand = 31:
 	$anek = 'Once upon a time an old Indian told his grandson one vital truth.
 	- Inside every man is a struggle, much like the struggle between two wolves.
@@ -173,24 +189,23 @@ elseif anrand = 31:
 	Face of an old Indian touched a faint smile, and he replied:
 	- Always wins the wolf that you feed.'
 elseif anrand = 32:
-	$anek = 'An interview with the Russian businessman.
-	Reporter:
-	- Tell me what you think about the traffic police?
-	Businessman:
-	- Bandits uniquely. Do nothing, a complete mess on the streets, robbing drivers at every opportunity, washed-up motherfuckers.
-	To .:
-	- Yes, the opinion of an impartial, frankly. What do you think about Russian tamozhenikah?
-	B .:
-	- Hmm, I think I got a little excited about the cops. Normal in general guys are polite, do not take too much.'
+	$anek = 'A person on a bus tells a joke: "Do you know why policemen always go in pairs?"
+	"No, why?"
+	"It's specialization: one knows how to read, the other knows how to write."
+	A hand promptly grabs him by the shoulder – a policeman is standing right behind him!
+	"Your papers!" he barks. The hapless person surrenders his official papers.
+	The policeman opens them, reads, and nods to his partner: "Write him a citation for slandering the Soviet Militsiya, Vasya".'
 elseif anrand = 33:
 	$anek = '- I do not know what to do. Cockroaches tortured. Shastayut everywhere - no peace.
 	- Did you buy a piece of chalk for cockroaches.
 	- What helps?
 	- Of course. You see - sitting in a corner, draw...'
 elseif anrand = 34:
-	$anek = '- Hello! Rewrite me his apartment.
-	- What do you allow yourself!?
-	- Oh, sorry, not with principles. Do you believe in God?'
+	$anek = 'Sherlock Holmes and Dr Watson go on a camping trip. They pitch their tent under the stars and go to sleep. Sometime in the middle of the night, Holmes wakes Watson up and says: "Watson, look up at the stars, and tell me what you see."
+	"I see millions and millions of stars."
+	"And what do you deduce from that?"
+	"Well, if there are millions of stars, and if even a few of those have planets, it’s quite likely there are some planets like Earth out there. And if there are a few planets like Earth out there, there might also be life."
+	"Watson, you idiot, it means that somebody stole our tent!"'
 elseif anrand = 35:
 	$anek = 'It feels like an old Russian saying "fools no law" and the concept of "parliamentary immunity" are somehow connected.'
 elseif anrand = 36:
@@ -229,8 +244,10 @@ elseif anrand = 41:
 	- And then Freud?
 	- This is - the book! What are her legs? You still say that I look down it between the pages ..!'
 elseif anrand = 42:
-	$anek = '- Please change the guarantor of the Constitution to guarantee...
-	- Can not help, the entire batch defective.'
+	$anek = 'A man finds an old bottle, picks it up and opens it.
+	The Genie comes out of the bottle and says: "Thanks so much for letting me out! I feel I should do something for you, too.	Would you like to become a Hero of the Soviet Union?".
+	The guy says: "Yes, sure!"
+	Next thing he knows, he finds himself on a battlefield with five grenades, alone against five German panzers.'
 elseif anrand = 43:
 	$anek = 'Jew, before reaching home by taxi, goes silently out of the car and starts
 	fumbling in his pockets, and under his breath mutters:

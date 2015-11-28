@@ -184,6 +184,32 @@ $pirspypout = {
 	act 'Leave':gt $curloc
 }
 
+$pirsclit = {
+	cls
+	minut += 30
+	money -= 25000
+	pirsGL = 1
+	painpub = 2
+	painpubday = daystart
+	gs'stat'
+
+	'Master pierced clitoris and put you to post.'
+
+	act 'Escape':gt $curloc
+}
+
+$pirsclitout = {
+	cls
+	minut += 30
+	money -= 25000
+	pirsGL = 0
+	gs'stat'
+
+	'Master took the rod out of your clitoris.'
+
+	act 'Escape':gt $curloc
+}
+
 gs 'stat'
 fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
@@ -208,6 +234,8 @@ if hour >= 12 and hour < 20 and pirsN = 0 and money >= 10000:'<a href="exec:dyna
 if hour >= 12 and hour < 20 and pirsN = 1 and money >= 10000:'<a href="exec:dynamic $pirspypout">Remove navel piercings 10, 000 rubles.</a>.'
 if hour >= 12 and hour < 20 and pirsG = 0 and money >= 25000:'<a href="exec:dynamic $pirsvla">Make a vagina piercing 25, 000 rubles.</a>.'
 if hour >= 12 and hour < 20 and pirsG = 1 and money >= 25000:'<a href="exec:dynamic $pirsvlaout">Remove the vagina piercing 25, 000 rubles.</a>.'
+if hour >= 12 and hour < 20 and pirsGL = 0 and money >= 25000:'<a href="exec:dynamic $pirsclit">Make a piercing of the clitoris 25000 rubles</a>'
+if hour >= 12 and hour < 20 and pirsGL = 1 and money >= 25000:'<a href="exec:dynamic $pirsclitout">Remove the piercing of the clitoris 25000 rubles</a>'
 
 act 'Leave':gt 'nord'
 

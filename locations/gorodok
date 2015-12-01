@@ -346,7 +346,7 @@ if marudatestinterface = 0:
 	'Aside from residential buildings is <a href="exec:minut += 5 & gt ''garmassiv''">Garage array</a>.'
 
 	'A small <a href="exec:GT ''Glake''" class=plain>lake</a> lurks behind Pavlovsky.'
-	'Urban development enterprise <a href="exec:minut += 15 & gt ''Gshveyfab''">Garment factory named Paris Commune</a>.'
+	'Urban development enterprise <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">Garment factory named Paris Commune</a>.'
 
 	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:'Private house in which he lives <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.'
 	if katjaFirstKiss >= 1:'Private house in which <a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a> lives.'

@@ -3,15 +3,14 @@ clr
 *clr
 minut += 5
 gs 'stat'
-'<right><img src="images/casino/zdcasino.jpg"></right>'
+picrand = rand(1, 3)
+'<right><img src="images/casino/hcasino<<picrand>>.jpg"></right>'
 'You entered the foyer of the building of a giant casino.'
 'You can go:'
 
 act 'Get out of the casino':gt 'casino'
 
-picrand = rand(1, 3)
 
-'<right><img src="images/casino/hcasino<<picrand>>.jpg"></right>'
 'By <a href="exec:gt ''headwaiter''">the head waiter</a>'
 'In the Hall <a href="exec:gt ''igravt''">slot machines</a>'
 'In room games <a href="exec:gt ''roulette''">Roulette</a>'

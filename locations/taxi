@@ -37,8 +37,16 @@ act 'Taxi':
 			dynamic $taxi
 		end
 	end
+	
+	if $loc!'liam':
+		 act 'Go to Old Town':
+			 set $loc='liam'
+			 dynamic $taxi
+		 end
+	end
 
 	act 'Takeout':gt $loc,$metka
 end
+
 --- taxi ---------------------------------
 

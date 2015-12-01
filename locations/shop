@@ -28,7 +28,7 @@ if $shoplocation = 'main':
 	end
 
 	'In the hall stands an <a href="exec:$shoplocation = ''ATM'' & gt ''shop'', ''move''">ATM</a>, from which you can withdraw money from your bank account.'
-	'There is a branch of communication giants <a href="exec:GT ''shop'',''megafon''">Bullhorn</a>.'
+	'There is a branch of communication giants <a href="exec:$shoplocation = ''megafon'' & gt ''shop'', ''move''">Bullhorn</a>.'
 	'<br>Most of the space in the supermarket is taken up by the <a href="exec:$shoplocation = ''grocery'' & gt ''shop'', ''move''">grocery department</a>, but the store has many smaller departments as well. <a href="exec:$shoplocation=''cosmetics'' & gt ''shop'', ''move''">Cosmetics</a>, <a href="exec:$shoplocation = ''hardware'' & gt ''shop'', ''move''">hardware</a>, <a href="exec:$shoplocation = ''clothing'' & gt ''shop'', ''move''">clothing</a> and the department of <a href="exec:$shoplocation = ''tech'' & gt ''shop'', ''move''">household appliances</a>. Not far from the entrance is a <a href="exec:$shoplocation = ''icecream'' & gt ''shop'', ''move''">counter selling ice cream</a>.'
 	clr
 	gs 'stat'
@@ -803,39 +803,42 @@ if $shoplocation = 'icecream':
 	end
 end
 
-if $ARGS[0]='megafon':
-cls
-minut+=3
-gs'stat'
-'<center><b><font color = maroon>Salon connection Megaphone</font></B></center>'
-'<center><img src="images/pic/phone/megafon2.jpg" ></center>'
+if $shoplocation = 'megafon':
+	cls
+	minut+=3
+	gs'stat'
+	'<center><b><font color = maroon>Salon connection Megaphone</font></B></center>'
+	'<center><img src="images/pic/phone/megafon2.jpg" ></center>'
 
 	act 'Exit Department':gt'shop','start'
+
 	if money > 0:
 		act 'Put the money on the phone':
-		cla
-		set minut = minut + 5
-		obmennik = input ("How many rubles do you want to deposit?")
+			cla
+			set minut = minut + 5
+			obmennik = input ("How many rubles do you want to deposit?")
+
 			if obmennik <= 0:
-			'<center><br><b>Do you want to think again?</b></center>'
+				'<center><br><b>Do you want to think again?</b></center>'
 				act 'Exit Department':gt'shop','start'
 			else
 				if money < obmennik:
-				'<center><br>You do not have <b><<obmennik>></b> rubles.</center>'
-				act 'Exit Department':gt'shop','start'
+					'<center><br>You do not have <b><<obmennik>></b> rubles.</center>'
+					act 'Exit Department':gt'shop','start'
 				end
 
 				if money >= obmennik:
-				set balans = balans + obmennik
-				set money = money - obmennik
-				clr
-				gs'stat'
-				'<center><br>You put <b><<obmennik>></b> rubles to the account.</center>'
-				act 'Exit Department':gt'shop','start'
+					set balans = balans + obmennik
+					set money = money - obmennik
+					clr
+					gs'stat'
+					'<center><br>You put <b><<obmennik>></b> rubles to the account.</center>'
+					act 'Exit Department':gt'shop','start'
 				end
 			end
 		end
 	end
 end
+
 --- shop ---------------------------------
 

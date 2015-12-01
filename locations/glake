@@ -71,10 +71,15 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 		manna += 5
 		gs'stat'
 		gs'time'
-		if bikini>0 and bedra<=90:'<center><img src="images/nigma/gor/lake/lake.walk.bikini0,'+rand(0,3)+'.jpg"></center>'
-		elseif bikini>0 and bedra >= 90 and bedra<=110:'<center><img src="images/nigma/gor/lake/lake.walk.bikini.fat0,0.jpg"></center>'
-		elseif bikini>0 and bedra>=110:'<center><img src="images/nigma/gor/lake/lake.walk.bikini.fat0,1.jpg"></center>'
-		elseif $clothingworntype = 'nude':'<center><img src="images/lmps/qesvft7.jpg"></center>'
+		
+		if bikini>0 and bedra<=90:
+			'<center><img src="images/nigma/gor/lake/lake.walk.bikini0,'+rand(0,3)+'.jpg"></center>'
+		elseif bikini>0 and bedra >= 90 and bedra<=110:
+			'<center><img src="images/nigma/gor/lake/lake.walk.bikini.fat0,0.jpg"></center>'
+		elseif bikini>0 and bedra>=110:
+			'<center><img src="images/nigma/gor/lake/lake.walk.bikini.fat0,1.jpg"></center>'
+		elseif $clothingworntype = 'nude':
+			'<center><img src="images/lmps/qesvft7.jpg"></center>'
 		else
 			'<center><img src="images/nigma/gor/lake/lake.walk0,'+rand(0,2)+'.jpg"></center>'
 		end
@@ -82,7 +87,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 		'You walk along the beach.'
 		act 'Finish':gt'glake'
 	end
-	
+
 	if $clothingworntype ! 'nude' and exhibi > 0 or modelfoto > 0 or film > 0 or stripdance > 0 or stripdancesum > 0:
 		act'Strip naked':
 			cla
@@ -93,6 +98,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 			act'Done':gt'glake'
 		end
 	end
+
 	act 'Bathe 1 h':
 		if bikini = 1 or $clothingworntype = 'nude':
 			cla
@@ -133,7 +139,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 				'You just had to lie down together sunbathing, as there nowhere appeared a-the mongrel, and began to sniff you between the legs.'
 				'You become uncomfortable and you have decided to get rid of it.'
 				act 'Drive away':gt'glake'
-			end
+
 			elseif bikini = 1:
 				cla
 				*clr
@@ -147,99 +153,106 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 					tan = tan + 1
 					
 					'You went to the beach to sunbathe.'
+
 				elseif krem > 0:
 					krem = krem - 1
 					tan = tan + 3
 					
 					'You body is smeared with cream for sunburn and went sunbathing.'
 				end
-				 gs'LakeBoyDy'
-				 glbrand=rand(1,100)
-				 if vnesh>=glbrand:
-				 tipelakeboyrand=rand(1,100)
-				     if tipelakeboyrand<=5:
-				         if belgangQW=0:'While you are sunbathing you company sits adult men, whose entire body is covered with tattoos criminal.'
-				         if belgangQW>0:'While you are sunbathing you White sits with his` brother.'
-				         if belgangQW>0:
-				         'To you and the White sits idly scratching his belly asks
-				         - Well cho <<$name>>, ride?'
-				         dynamic $LBD_ride
-				         dynamic $LBD_go
-				         end
-				         if belgangQW=0:
-				         'Bold and bald guy with pounds of gold cross on a thick chain, I sat down next to you and scratched his belly covered with tattoos. "Hello! Do not interfere?"'
-				             act'Lunatic':
-				             cls
-				             minut+=5
-				             gs'stat'
-				             'You frowned and said in a firm voice
-				             - Lunatic.
-				             Bald immediately responded with a challenge.
-				             - E, I do not vkuril, This cho, your place, something?'
-				                 act'Yes, my!':
-								 cls
-								 minut+=5
-								 gs'stat'
-								 'You responded indignantly squirt
-								 - Yes, this is my spot! Then the first I have!
-								 Near you sat on his haunches guy with a gloomy death and impaled on his chest tombs, and he said grimly staring you in the face.
-								 - The place is only prostitutes and conductors. And this is not fucking bus. So what do the findings, boys.
-								 The bald man smiled putting your hand on the chest and squeezing under the teat asked swimsuit.
-								 - And for what cho?'
-								     dynamic $LBD_go
+				gs'LakeBoyDy'
+				glbrand=rand(1,100)
+				if vnesh>=glbrand:tipelakeboyrand=rand(1,100)
+					if tipelakeboyrand<=5:
+						if belgangQW=0:'While you are sunbathing you company sits adult men, whose entire body is covered with tattoos criminal.'
+						if belgangQW>0:'While you are sunbathing you White sits with his` brother.'
+						if belgangQW>0:
+							'To you and the White sits idly scratching his belly asks'
+							'- Well cho <<$name>>, ride?'
+							dynamic $LBD_ride
+							dynamic $LBD_go
+						end
+					end
+				    if belgangQW=0:
+						'Bold and bald guy with pounds of gold cross on a thick chain, I sat down next to you and scratched his belly covered with tattoos. "Hello! Do not interfere?"'
+						act'Lunatic':
+							cls
+							minut+=5
+							gs'stat'
+							'You frowned and said in a firm voice'
+							'- Lunatic.'
+							'Bald immediately responded with a challenge.'
+							'- E, I do not vkuril, This cho, your place, something?'
+							
+							act'Yes, my!':
+								cls
+								minut+=5
+								gs'stat'
+								'You responded indignantly squirt'
+								'- Yes, this is my spot! Then the first I have!'
+								'Near you sat on his haunches guy with a gloomy death and impaled on his chest tombs, and he said grimly staring you in the face.'
+								'- The place is only prostitutes and conductors. And this is not fucking bus. So what do the findings, boys.'
+								'The bald man smiled putting your hand on the chest and squeezing under the teat asked swimsuit.'
+								'- And for what cho?'
+								dynamic $LBD_go
 								     
-								     dynamic $LBD_hand
+								dynamic $LBD_hand
 								     
-								 end
+							end
 								 
-								 dynamic $LBD_go
-				             end
+						end
 				             
-				             act'Do not interfere':
-				             cls
-				             minut+=5
-				             gs'stat'
-				             'You shrugged and tried to escape from these lads eyes closed. But it was not there, you feel, you stomach that is gently stroking and tickling. I opened my eyes you will see, bellied Urca that leads you to a blade of grass torn stomach.'
-				             dynamic $LBD_go
-				             dynamic $LBD_hand
-				                 act'Lie':
-				                 cls
-				                 minut+=5
-				                 gs'stat'
-				                 'You have tried to ignore and just continued to lie on the sand. Meanwhile, are massive threw a blade of grass and began to stroke you with their sweaty palms on his stomach and suddenly grabbed you by the chest.
-				                 - Come to me baby. You will not regret. With me you`ll be.'
-				                 dynamic $LBD_hand
-				                 dynamic $LBD_ride
-				                 end
-				             end
+						act'Do not interfere':
+							cls
+							minut+=5
+							gs'stat'
+							'You shrugged and tried to escape from these lads eyes closed. But it was not there, you feel, you stomach that is gently stroking and tickling. I opened my eyes you will see, bellied Urca that leads you to a blade of grass torn stomach.'
+							dynamic $LBD_go
+							dynamic $LBD_hand
+							
+							act'Lie':
+								cls
+								minut+=5
+								gs'stat'
+								'You have tried to ignore and just continued to lie on the sand. Meanwhile, are massive threw a blade of grass and began to stroke you with their sweaty palms on his stomach and suddenly grabbed you by the chest.'
+								'- Come to me baby. You will not regret. With me you`ll be.'
+								dynamic $LBD_hand
+								dynamic $LBD_ride
+								end
+							end
 				             
-				             dynamic $LBD_go
-				         end
-				     exit
-				     end
-				     if tipelakeboyrand>5 and tipelakeboyrand<=30:
-				     gs'BnameGen'
-				     'While you are sunbathing you sit down three guys.'
-				     act 'Escape':gt'glake'
-				     exit
-				     end
-				     if tipelakeboyrand>30 and tipelakeboyrand<=80:
-				     gs'BnameGen'
-				     gs'LakeBoyZ'
-				     'While you are sunbathing you sits a guy.'
-				     'Man is represented as <<$bname>> and asks what`s your name.'
-				     act 'Escape':gt'glake'
-				     dynamic $gL_boy_z
-				     exit
-				     end
-				     if tipelakeboyrand>80:
-				     'While you are sunbathing you sit down, three young guys in appearance obviously Caucasians.'
-				     act 'Escape':gt'glake'
-				     exit
-				     end
-				 end
+							dynamic $LBD_go
+						end
+						
+						exit
+					end
+					if tipelakeboyrand>5 and tipelakeboyrand<=30:
+						gs'BnameGen'
+						'While you are sunbathing you sit down three guys.'
+						
+						act 'Escape':gt'glake'
+					end
+					
+					if tipelakeboyrand>30 and tipelakeboyrand<=80:
+						gs'BnameGen'
+						gs'LakeBoyZ'
+						'While you are sunbathing you sits a guy.'
+						'Man is represented as <<$bname>> and asks what`s your name.'
+					
+						act 'Escape':gt'glake'
+						dynamic $gL_boy_z
+
+					end
+					
+					if tipelakeboyrand>80:
+						'While you are sunbathing you sit down, three young guys in appearance obviously Caucasians.'
+						act 'Escape':gt'glake'
+					end
+				end
 				 
 				act 'Logout':gt'glake'
+			end
+
 			else
 				cla
 				
@@ -251,7 +264,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 	end	
 	act'On a wild beach':gt'gLakeNude'
 end
-	
+
 !winter
 if month=12 or month=1 or month=2:
 	if konki_cloth=1:

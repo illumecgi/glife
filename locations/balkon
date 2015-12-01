@@ -49,7 +49,7 @@ if $ARGS[0] = 'start':
 	!!!
 
 	act 'Approach the railing':gt 'balkon2', 'niz'
-	act 'Leave the balcony':gt 'sitr'
+	act 'Leave the balcony':dynamic $brodils
 end
 
 --- balkon ---------------------------------

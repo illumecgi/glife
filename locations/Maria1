@@ -30,35 +30,42 @@ if nomer = 0:
 	act 'Stay':
 		cla
 		'- I would like to stay'
-		'- Well, what would you like?'
+		'- Unfortunately, No rooms available.'
+		gt'Maria1'
+!{		'- Good, What would you like to?'
 
-		act 'Cheap room':
-			'- Cheap room'
+		act 'Cheapest room':
 			nomer = 1
 			nom_1 = 1
-			gt 'maria1'
-		end
 
-		act 'Standard Room':
-			'- Standard Room'
+			'- Cheapest room'
+
+			gt'Maria1'
+		end
+		act 'Standard room':
 			nomer = 2
 			nom_1 = 1
-			gt 'maria1'
-		end
 
+			'- Standard room'
+
+			gt'Maria1'
+		end
 		act 'Suite':
-			'- Suite'
 			nomer = 3
 			nom_1 = 1
-			gt 'maria1'
-		end
 
+			'- Suite'
+
+			gt'Maria1'
+		end
 		act 'Presidential Suite':
-			'- Presidential Suite'
 			nomer = 4
 			nom_1 = 1
-			gt 'maria1'
-		end
+
+			'- Presidential Suite'
+
+			gt'Maria1'
+		end}
 	end
 end
 

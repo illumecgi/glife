@@ -25,6 +25,9 @@
       <Location name="cikl"/>
       <Location name="dina"/>
       <Location name="dinBoroda"/>
+      <Location name="NormPR"/>
+      <Location name="blowPR"/>
+      <Location name="AnalPR"/>
       <Location name="dinSex"/>
       <Location name="dinSex2"/>
       <Location name="din2"/>
@@ -41,8 +44,7 @@
       <Location name="time"/>
       <Location name="kid"/>
       <Location name="subkid"/>
-      <Location name="fathersex"/>
-      <Location name="dinfather"/>
+      <Location name="din_pav"/>
     </Folder>
     <Folder name="Alternative">
       <Location name="alterStart"/>
@@ -123,6 +125,7 @@
       <Location name="saunawork"/>
       <Location name="shop"/>
       <Location name="trashplace"/>
+      <Location name="musorkaexh"/>
       <Location name="RynokHoz"/>
       <Location name="BDSM_Club"/>
       <Location name="taxi"/>
@@ -158,6 +161,7 @@
       <Location name="Nudelake"/>
       <Location name="obkitchen"/>
       <Location name="obroom"/>
+      <Location name="Vika"/>
       <Location name="Palatka"/>
       <Location name="parksvid"/>
       <Location name="paysex"/>
@@ -186,6 +190,11 @@
       <Location name="korr"/>
       <Location name="housecall"/>
     </Folder>
+    <Folder name="Block">
+      <Location name="pod_ezd"/>
+      <Location name="pod_whore"/>
+      <Location name="gopsex"/>
+    </Folder>
     <Folder name="Parent's Apartment">
       <Location name="bedrPar"/>
       <Location name="bedrPar2"/>
@@ -200,10 +209,15 @@
       <Location name="bedPar"/>
       <Location name="stolPar"/>
       <Location name="father"/>
+      <Location name="fathersex"/>
+      <Location name="dinfather"/>
       <Location name="mother"/>
+      <Location name="motherQW"/>
+      <Location name="dinmother"/>
       <Location name="sister"/>
       <Location name="sistersleep"/>
-      <Location name="sistersobir"/>
+      <Location name="sisterQW"/>
+      <Location name="dinsister"/>
       <Location name="sisterprogulka"/>
       <Location name="family"/>
       <Location name="Snpc"/>
@@ -220,12 +234,23 @@
       <Location name="Sgrup4"/>
       <Location name="Sgrup5"/>
       <Location name="Sgrup"/>
-      <Location name="SgrupDisco"/>
     </Folder>
     <Folder name="Brother porn">
       <Location name="brother"/>
       <Location name="seeporn"/>
       <Location name="brosh"/>
+    </Folder>
+    <Folder name="Reks">
+      <Location name="reks"/>
+      <Location name="sbReksHome"/>
+      <Location name="dinParty"/>
+      <Location name="party_boy"/>
+      <Location name="party_boys"/>
+      <Location name="party_girls"/>
+      <Location name="sister_party"/>
+      <Location name="roma"/>
+      <Location name="ira"/>
+      <Location name="lena"/>
     </Folder>
     <Folder name="Dima Nosov">
       <Location name="dimaRudeEv"/>
@@ -237,7 +262,7 @@
     </Folder>
     <Folder name="Artem Chebotarev">
       <Location name="artemEv"/>
-      <Location name="artemhome2"/>
+      <Location name="ArtemEv3"/>
       <Location name="artemhome"/>
       <Location name="artemev2"/>
       <Location name="artgar"/>
@@ -292,16 +317,7 @@
       <Location name="gargazel"/>
       <Location name="garfather"/>
       <Location name="Gshveyfab"/>
-      <Location name="Gotel"/>
-      <Location name="Gresep"/>
-      <Location name="Goteladmin"/>
-      <Location name="Gotelroom"/>
-      <Location name="gdk"/>
       <Location name="gaptek"/>
-      <Location name="gdkbibl"/>
-      <Location name="gdksport"/>
-      <Location name="Voltrener"/>
-      <Location name="volley"/>
       <Location name="DanceWhore1"/>
       <Location name="DanceWhore2"/>
       <Location name="DanceWhore3"/>
@@ -310,12 +326,13 @@
       <Location name="DanceWhore6"/>
       <Location name="DanceWhore7"/>
       <Location name="DanceWhore8"/>
-      <Location name="gdkin"/>
       <Location name="soniaDisco"/>
       <Location name="gschool"/>
       <Location name="gschool2"/>
       <Location name="gkafe"/>
       <Location name="motherkafeboss"/>
+      <Location name="gLake"/>
+      <Location name="gLakeNude"/>
       <Location name="gpoli"/>
       <Location name="gevent"/>
       <Location name="gskver"/>
@@ -324,9 +341,6 @@
       <Location name="EvOtelMan"/>
       <Location name="EvgopBuh"/>
       <Location name="EvBoyBuh"/>
-      <Location name="BMloc"/>
-      <Location name="BMloc1"/>
-      <Location name="BMloc2"/>
       <Location name="albinaEv"/>
       <Location name="kotovEv"/>
       <Location name="IgorEv"/>
@@ -338,11 +352,21 @@
       <Location name="boymass"/>
       <Location name="tboyopr"/>
       <Location name="barbershop"/>
-      <Location name="sisterQW"/>
       <Location name="annafrends"/>
       <Location name="annafrends2"/>
       <Location name="annafrendtoilet"/>
-      <Location name="reks"/>
+    </Folder>
+    <Folder name="House of Culture">
+      <Location name="gdk"/>
+      <Location name="gdkkru"/>
+      <Location name="gdkbibl"/>
+      <Location name="gdkin"/>
+      <Location name="gdksport"/>
+      <Location name="BMloc"/>
+      <Location name="BMloc1"/>
+      <Location name="BMloc2"/>
+      <Location name="volley"/>
+      <Location name="Voltrener"/>
       <Location name="VolleyTrenCentr"/>
       <Location name="VolleyTrenerSpeak"/>
       <Location name="Voltrenersex"/>
@@ -361,6 +385,10 @@
       <Location name="vokdinvera"/>
       <Location name="vokmantoiev"/>
       <Location name="vokzaltorg"/>
+      <Location name="vokzalper"/>
+      <Location name="vokzalperG"/>
+      <Location name="vokzaltoilet"/>
+      <Location name="vokzalholle"/>
       <Location name="katalkin"/>
       <Location name="katalkinSex"/>
       <Location name="katalkinAlko"/>
@@ -372,10 +400,12 @@
     <Folder name="Julia Milov 12">
       <Location name="JuliaMilGo"/>
       <Location name="JuliaMilHome"/>
+      <Location name="JuliaMilVhod"/>
     </Folder>
     <Folder name="Natasha Belova 16">
       <Location name="NatBelGo"/>
       <Location name="NatBelHome"/>
+      <Location name="NatBelVhod"/>
     </Folder>
     <Folder name="Albina">
       <Location name="albinaRide"/>
@@ -394,6 +424,11 @@
       <Location name="arturdin"/>
       <Location name="arturQW"/>
     </Folder>
+    <Folder name="Lariska">
+      <Location name="LariskaStart"/>
+      <Location name="LariskaGo"/>
+      <Location name="LariskaHome"/>
+    </Folder>
     <Folder name="Pets">
       <Location name="soba"/>
       <Location name="krol"/>
@@ -410,7 +445,6 @@
       <Location name="Komp"/>
       <Location name="kompMFC"/>
       <Location name="kompMFCtwo"/>
-      <Location name="selfPorno"/>
       <Location name="mirror"/>
       <Location name="stol"/>
       <Location name="telefon"/>
@@ -419,13 +453,6 @@
     </Folder>
     <Folder name="Encounter Generator">
       <Location name="meet"/>
-      <Location name="restoranM"/>
-      <Location name="kafeM"/>
-      <Location name="parkM"/>
-      <Location name="kinoM"/>
-      <Location name="podezdM"/>
-      <Location name="sexm"/>
-      <Location name="anekdot"/>
       <Location name="stihi"/>
       <Location name="love"/>
       <Location name="brosok"/>
@@ -447,7 +474,6 @@
       <Location name="danceclass"/>
       <Location name="dorm"/>
       <Location name="fit"/>
-      <Location name="fitgirl"/>
       <Location name="foto"/>
       <Location name="lab"/>
       <Location name="NewCloShop"/>
@@ -534,6 +560,7 @@
     <Folder name="University">
       <Location name="Alphabet"/>
       <Location name="party"/>
+      <Location name="univer_din"/>
     </Folder>
     <Folder name="Tear away splash">
       <Location name="Mall"/>
@@ -605,19 +632,6 @@
     <Folder name="Prostitution">
       <Location name="Prostitute"/>
     </Folder>
-    <Folder name="Меню - Menu">
-      <Location name="Menu.Info"/>
-      <Location name="Menu.Create"/>
-      <Location name="Menu.Add"/>
-      <Location name="Menu.AddCondition"/>
-      <Location name="Menu.AddModule"/>
-      <Location name="Menu.AddEvent"/>
-      <Location name="Menu.Call"/>
-      <Location name="Menu.Chosen"/>
-      <Location name="Menu.Time"/>
-      <Location name="Menu.Destroy"/>
-      <Location name="Menu.{Treatment}"/>
-    </Folder>
     <Folder name="Casino">
       <Location name="casino"/>
       <Location name="mqroom"/>
@@ -650,10 +664,24 @@
       <Location name="theater"/>
       <Location name="hall"/>
     </Folder>
+    <Folder name="Меню - Menu">
+      <Location name="Menu.Info"/>
+      <Location name="Menu.Create"/>
+      <Location name="Menu.Add"/>
+      <Location name="Menu.AddCondition"/>
+      <Location name="Menu.AddModule"/>
+      <Location name="Menu.AddEvent"/>
+      <Location name="Menu.Call"/>
+      <Location name="Menu.Chosen"/>
+      <Location name="Menu.Time"/>
+      <Location name="Menu.Destroy"/>
+      <Location name="Menu.{Treatment}"/>
+    </Folder>
     <Folder name="Game Menu">
       <Location name="$menu_skills"/>
       <Location name="$menu_descrip"/>
       <Location name="$menu_statistika"/>
+      <Location name="$menu_reputation"/>
       <Location name="$menu_mobila"/>
       <Location name="$menu_magic"/>
       <Location name="$menu_face"/>
@@ -666,32 +694,8 @@
       <Location name="$menu_avariya"/>
       <Location name="$menu_addoldmenu"/>
       <Location name="$menu_autosave"/>
-      <Location name="$menu_automatica"/>
       <Location name="$menu_cheat"/>
       <Location name="$menu_dex_cheat"/>
-      <Location name="$menu_helper"/>
-      <Location name="$menu_options"/>
-      <Location name="menu_options"/>
-      <Location name="menu_helper"/>
-    </Folder>
-    <Folder name="Misc">
-      <Location name="beg"/>
-      <Location name="beg1"/>
-      <Location name="dinam"/>
-      <Location name="husb"/>
-      <Location name="husbSex"/>
-      <Location name="indik"/>
-      <Location name="klofdomhouse1"/>
-      <Location name="Peterroom"/>
-      <Location name="portnoi2"/>
-      <Location name="sexorg"/>
-      <Location name="$stock_item"/>
-      <Location name="$single_stock_item"/>
-      <Location name="$buy_item"/>
-      <Location name="$buy_single_item"/>
-      <Location name="$face_image"/>
-      <Location name="automatics"/>
-      <Location name="dexcheats"/>
     </Folder>
     <Folder name="Etogame">
       <Location name="etoexhib"/>
@@ -710,6 +714,23 @@
       <Location name="gor_exh"/>
       <Location name="buklinik"/>
       <Location name="buklinik_event"/>
+    </Folder>
+    <Folder name="Misc">
+      <Location name="beg"/>
+      <Location name="beg1"/>
+      <Location name="dinam"/>
+      <Location name="husb"/>
+      <Location name="husbSex"/>
+      <Location name="indik"/>
+      <Location name="klofdomhouse1"/>
+      <Location name="Peterroom"/>
+      <Location name="portnoi2"/>
+      <Location name="sexorg"/>
+      <Location name="$stock_item"/>
+      <Location name="$single_stock_item"/>
+      <Location name="$buy_item"/>
+      <Location name="$buy_single_item"/>
+      <Location name="$face_image"/>
     </Folder>
     <Folder name="Female wrestling">
       <Location name="generation"/>
@@ -744,5 +765,68 @@
       <Location name="card"/>
       <Location name="blackjack"/>
     </Folder>
+    <Folder name="Hotel">
+      <Location name="HotelHole"/>
+      <Location name="hotel_resep"/>
+      <Location name="HotelAdmin"/>
+      <Location name="HotelWork"/>
+      <Location name="HotelRoom"/>
+    </Folder>
+    <Folder name="Shulga">
+      <Location name="shulgahome"/>
+      <Location name="shulga_room"/>
+      <Location name="serge_razgovor_tv"/>
+      <Location name="Serge_kuh"/>
+      <Location name="Serge_Shulgin"/>
+    </Folder>
+    <Folder name="Bel gang">
+      <Location name="LakeBoyDy"/>
+      <Location name="belgang"/>
+      <Location name="BelSex"/>
+      <Location name="belpicknick"/>
+    </Folder>
+    <Folder name="Old Town">
+      <Location name="liam"/>
+      <Location name="liamel"/>
+      <Location name="dvorik"/>
+      <Location name="spusk"/>
+      <Location name="larek"/>
+      <Location name="dvor"/>
+      <Location name="ugol"/>
+      <Location name="artstudia"/>
+      <Location name="liames"/>
+      <Location name="parks"/>
+      <Location name="lug"/>
+      <Location name="allea"/>
+      <Location name="prut"/>
+      <Location name="prut2"/>
+      <Location name="luzhayka"/>
+      <Location name="psiklin"/>
+    </Folder>
+    <Folder name="OldTownHome">
+      <Location name="vanr2x"/>
+      <Location name="korr2x"/>
+      <Location name="bedr2x"/>
+      <Location name="sitr2x"/>
+      <Location name="kuhr2x"/>
+      <Location name="koncepod"/>
+      <Location name="koncepod1"/>
+    </Folder>
+    <Location name="zsoft_gopskverGorSlut"/>
+    <Location name="cardgame_durak"/>
+    <Location name="webcam_site"/>
+    <Location name="kruchess"/>
+    <Location name="krupo"/>
+    <Location name="chessplay"/>
+    <Location name="lager"/>
+    <Location name="LakeBoyZ"/>
+    <Location name="LBZhouse"/>
+    <Location name="repinRiver"/>
+    <Location name="venta"/>
+    <Location name="ugel"/>
+    <Location name="ugol1"/>
+    <Location name="dibodi"/>
+    <Location name="stkafe"/>
+    <Location name="dort"/>
   </Structure>
 </QGen-project>

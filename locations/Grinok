@@ -33,14 +33,17 @@ if hour >= 8 and hour <= 18:
 		cls
 		minut += 15
 		gs 'stat'
-
 		'You are strolling through the market looking for good deals.'
-
-		if intel >= 100:rinmaxrand = 2
-		elseif intel >= 75 and intel < 100:rinmaxrand = 4
-		elseif intel >= 50 and intel < 75:rinmaxrand = 6
-		elseif intel >= 25 and intel < 50:rinmaxrand = 8
-		elseif intel < 25:rinmaxrand = 10
+		if intel >= 100:
+			rinmaxrand = 2
+		elseif intel >= 75 and intel < 100:
+			rinmaxrand = 4
+		elseif intel >= 50 and intel < 75:
+			rinmaxrand = 6
+		elseif intel >= 25 and intel < 50:
+			rinmaxrand = 8
+		else
+			rinmaxrand = 10
 		end
 
 		rinevrand = RAND(0,rinmaxrand)
@@ -127,6 +130,7 @@ if hour >= 8 and hour <= 18:
 				'Strolling through the market you accidentally wander into the far corner where they sell porn.'
 
 				act 'Go to the area with the porn':gt 'Gpornmark'
+
 			else
 				'Suddenly you hail "Hey devyushka, want tangerine skyushat?"'
 
@@ -139,6 +143,7 @@ if hour >= 8 and hour <= 18:
 		
 		act 'Move on':gt $curloc
 	end
+
 
 	if pornmarkonce = 1:
 		act 'Go to the area with the porn':gt 'Gpornmark'
@@ -192,6 +197,7 @@ if hour >= 8 and hour <= 18:
 
 		act 'Escape':gt $curloc
 	end
+
 	
 	if gobelen>0 and gobQW=0:
 		act'Sell ​​tapestry':
@@ -203,19 +209,24 @@ if hour >= 8 and hour <= 18:
 			act 'Escape':gt $curloc
 		end
 	end
+
 	if gobelen>0 and gobQW>=1:
 		act'Sell ​​tapestry':
-		cls
-		minut+=15
-		gs'stat'
-		'You go to a man who offered to buy you for tapestries 500 rubles. You have been spotted smiling.'
+			cls
+			minut+=15
+			gs'stat'
+			'You go to a man who offered to buy you for tapestries 500 rubles. You have been spotted smiling.'
+
 			if gobQW=2:
-			'Roman welcomes you interested and businesslike, that you have for sale.'
+				'Roman welcomes you interested and businesslike, that you have for sale.'
 	        end
+
 	        if gobQW=1:
-			gobQW=2
-			'Man greets you and seems Roman, you just answer, that your name is Sveta. After greeting the Roman busily interested, that you have for sale.'
+				gobQW=2
+				'Man greets you and seems Roman, you just answer, that your name is Sveta. After greeting the Roman busily interested, that you have for sale.'
 	        end
+	    end
+
 		act'Show tapestry':
 			cls
 			gobelen-=1
@@ -224,7 +235,7 @@ if hour >= 8 and hour <= 18:
 			'You show tapestry Roman and he gives you five hundred for it. You take the money and give him a tapestry.'
 			act 'Escape':gt $curloc
 		end
-	             
+
 		if gobelen>1:
 			act'Sell ​​all tapestries':
 				cls
@@ -235,7 +246,6 @@ if hour >= 8 and hour <= 18:
 				gs'stat'
 				'You show tapestries novels and it gives you <<moneyGob>> rubles for them. You take the money and give him a tapestry.'
 				act 'Escape':gt $curloc
-				end
 			end
 
 			act 'Leave':gt $curloc

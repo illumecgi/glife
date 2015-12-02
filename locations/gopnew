@@ -772,11 +772,8 @@ if $ARGS[0] = 'sexstart':
 			if tiprand = 2:gt 'gopnew', '12'
 		end
 
-		if GLust = 2:gt 'gopnew', '2'
-		if GLust = 3:gt 'gopnew', '3'
-		if GLust = 4:gt 'gopnew', '4'
-		if GLust = 5:gt 'gopnew', '5'
-		if GLust = 6:gt 'gopnew', '6'
+		if GLust = 2 or GLust = 3:gt 'gopnew', '2'
+		if GLust > 3:gt 'gopnew', '3'
 	elseif opusk = 0 and sipovka = 0:
 		if GLust = 2:
 			'Two Gopnik suggest you go with them to the gateway'
@@ -786,13 +783,13 @@ if $ARGS[0] = 'sexstart':
 			act 'Agrees to fuck with three':sipovka += 1 & gt 'gopnew', '2'
 		elseif GLust = 4:
 			'Four Gopnik suggest you go with them to the gateway'
-			act 'Agrees to fuck with four':sipovka += 1 & gt 'gopnew', '2'
+			act 'Agrees to fuck with four':sipovka += 1 & gt 'gopnew', '3'
 		elseif GLust = 5:
 			'Five Gopnik suggest you go with them to the gateway'
-			act 'Agrees to fuck with five':sipovka += 1 & gt 'gopnew', '2'
+			act 'Agrees to fuck with five':sipovka += 1 & gt 'gopnew', '3'
 		elseif GLust = 6:
 			'Six Gopnik suggest you go with them to the gateway'
-			act 'Agrees to fuck with six':sipovka += 1 & gt 'gopnew', '2'
+			act 'Agrees to fuck with six':sipovka += 1 & gt 'gopnew', '3'
 		end
 
 		if VasanTut = 2:
@@ -1037,6 +1034,76 @@ if $ARGS[0] = '2':
 
 		act 'Leave':gt 'street'
 	end
+end
+
+if $ARGS[0] = '3':
+	minut += 30
+	gs 'stat'
+
+	if VasanTut = 3:
+		$namgop = 'Vasya'
+	else
+		$namgop = ''
+	end
+
+	if BerezaTut = 3:
+		$namgop2 = 'Birch'
+	else
+		$namgop2 = ''
+	end
+
+	if VitekTut = 3:
+		$namgop3 = 'Witek'
+	else
+		$namgop3 = ''
+	end
+
+	if KostilTut = 3:
+		$namgop4 = 'Spike'
+	else
+		$namgop4 = ''
+	end
+
+	if UdmurtTut = 3:
+		$namgop5 = 'Udmurt'
+	else
+		$namgop5 = ''
+	end
+
+	if SeriTut = 3:
+		$namgop6 = 'Gray'
+	else
+		$namgop6 = ''
+	end
+
+	$namgopsum = '<<$namgop>> <<$namgop2>> <<$namgop3>> <<$namgop4>> <<$namgop5>> <<$namgop6>> get their members out and begin to strip off your clothes.'
+
+
+	bj += 1
+	vagina += 1
+	sex += 1
+	anal += 1
+	anus += 5
+	gang += 1
+	throat += 3
+	cumlip += 2
+	cumface += 1
+	gs 'stat'
+	picrand = rand(1, 15)
+	'<center><img src="images/pics/gang<<picrand>>.jpg"></center>'
+	'<<$namgopsum>>. They take turns fucking you in all your holes, swapping positions so they all get a go in each making sure to finish in your mouth or on your face.'
+	horand = rand(1, 100)
+
+	if horand > horny:
+		horny += 10
+		'You were not satisfied'
+	else
+		horny = 0
+		orgasm += 1
+		'You covered orgasm'
+	end
+
+	act 'Leave':gt 'street'
 end
 
 if $ARGS[0] = 'degrading':

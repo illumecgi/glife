@@ -866,7 +866,7 @@ if $ARGS[0] = 'razvod':
 		end
 	elseif deyst = 2:
 		'<<$boy>> invites you to a nearby party which he is going to.'
-		act 'Agree':gt 'cafe2', 'kampashka'
+		act 'Agree':gt 'cafe2', 'kompashka'
 
 		if horny < 75:
 			act 'Leave':gt 'street'

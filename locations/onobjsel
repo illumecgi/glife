@@ -1501,6 +1501,7 @@ end
 
 if $selobj = '<img src="images/pic/icon/menu.png">':
 	clr
+	gs 'stat'
 !'
 	gs'Menu.Create','mainMenu'
 	gs'Menu.Add','mainMenu','Status Bar','','MenuMainLoc','0'

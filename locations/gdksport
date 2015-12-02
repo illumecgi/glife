@@ -223,6 +223,8 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 
 				exit
 			end
+		act 'Get out and get dressed':gt $locM, $metkaM
+		
 		end
 	end
 end

@@ -33,7 +33,7 @@ if $ARGS[0] = 'start':
 	izvrat = izvratA
 
 	if love = 3:
-		'<<$boyA>> has hired a wedding limousine and it's outside waiting for you. This is it, you are getting married today.'
+		'<<$boyA>> has hired a wedding limousine and it''s outside waiting for you. This is it, you are getting married today.'
 
 		act 'Sit in a limousine':
 			cla

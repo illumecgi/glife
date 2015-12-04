@@ -198,11 +198,13 @@ if StoryLine = 1:
 
 		if $loc = 'gdk':
 			if week < 6:
-				if hour >= 16 and hour < 18:'Your sister <a href="exec:gt ''sister'', ''drinking''">Anja</a> sitting in the company of beautiful girls and guys drinking beer.'
-			end
-
-			if week >= 6:
-				if hour >= 11 and hour < 18:'Your sister <a href="exec:gt ''sister'', ''drinking''">Anja</a> sitting in the company of beautiful girls and guys drinking beer.'
+				if hour >= 16 and hour < 18:
+					'Your sister <a href="exec:SiSgdk = 1 & GT ''sister''">Anya</a> He is sitting in the company of boys and girls and drinking beer.'
+				end
+			elseif week >= 6:
+				if hour >= 11 and hour < 18:
+					'Your sister <a href="exec:SiSgdk = 1 & GT ''sister''">Anya</a> He is sitting in the company of boys and girls and drinking beer.'
+				end
 			end
 		end
 

@@ -453,6 +453,13 @@
     </Folder>
     <Folder name="Encounter Generator">
       <Location name="meet"/>
+      <Location name="podezdM"/>
+      <Location name="sexm"/>
+      <Location name="kinoM"/>
+      <Location name="parkM"/>
+      <Location name="kafeM"/>
+      <Location name="restoranM"/>
+      <Location name="anekdot"/>
       <Location name="stihi"/>
       <Location name="love"/>
       <Location name="brosok"/>
@@ -695,7 +702,6 @@
       <Location name="$menu_addoldmenu"/>
       <Location name="$menu_autosave"/>
       <Location name="$menu_cheat"/>
-      <Location name="$menu_dex_cheat"/>
     </Folder>
     <Folder name="Etogame">
       <Location name="etoexhib"/>

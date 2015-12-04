@@ -234,6 +234,7 @@
       <Location name="Sgrup4"/>
       <Location name="Sgrup5"/>
       <Location name="Sgrup"/>
+      <Location name="SgrupDisco"/>
     </Folder>
     <Folder name="Brother porn">
       <Location name="brother"/>
@@ -273,6 +274,7 @@
       <Location name="KatjaHome"/>
       <Location name="KatjaHomeTalk"/>
       <Location name="KatjaHomeDin"/>
+      <Location name="Katja_Tanga"/>
     </Folder>
     <Folder name="Village">
       <Location name="famdorfride"/>
@@ -341,7 +343,6 @@
       <Location name="EvOtelMan"/>
       <Location name="EvgopBuh"/>
       <Location name="EvBoyBuh"/>
-      <Location name="albinaEv"/>
       <Location name="kotovEv"/>
       <Location name="IgorEv"/>
       <Location name="IvanEv"/>
@@ -408,6 +409,7 @@
       <Location name="NatBelVhod"/>
     </Folder>
     <Folder name="Albina">
+      <Location name="albinaEv"/>
       <Location name="albinaRide"/>
       <Location name="albinahome"/>
       <Location name="albdin"/>

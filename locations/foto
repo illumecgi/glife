@@ -114,7 +114,7 @@ if $ARGS[0] = 'model':
 	end
 end
 
-$modelopt{
+$modelopt = {
 	if forand = 1:
 		'So, we need a model to dress in stockings and sexy clothing and show off her body. Payment <<3*modelpay/2>> per hour.'
 

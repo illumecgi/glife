@@ -87,7 +87,8 @@ if StoryLine = 1:
 			if week < 6:
 				if hour = 7:
 					sisterHere = 2
-					'Your sister <a href="exec:gt ''sister'', ''home''">Anja</a> is going to work.'
+					sisterdialog = 2
+					'Your sister <a href="exec:GT ''sister''">Anya</a> He is going to work.'
 				end
 			end
 
@@ -99,7 +100,8 @@ if StoryLine = 1:
 
 				if hour = 10:
 					sisterHere = 2
-					'Your sister <a href="exec:gt ''sisterprogulka''">Anja</a> going for a walk.'
+					sisterdialog = 3
+					'Your sister <a href="exec:GT ''sister''">Anya</a> going for a walk.'
 				end
 			end
 
@@ -198,11 +200,13 @@ if StoryLine = 1:
 
 		if $loc = 'gdk':
 			if week < 6:
-				if hour >= 16 and hour < 18:'Your sister <a href="exec:gt ''sister'', ''drinking''">Anja</a> sitting in the company of beautiful girls and guys drinking beer.'
-			end
-
-			if week >= 6:
-				if hour >= 11 and hour < 18:'Your sister <a href="exec:gt ''sister'', ''drinking''">Anja</a> sitting in the company of beautiful girls and guys drinking beer.'
+				if hour >= 16 and hour < 18:
+					'Your sister <a href="exec:SiSgdk = 1 & GT ''sister''">Anya</a> He is sitting in the company of boys and girls and drinking beer.'
+				end
+			elseif week >= 6:
+				if hour >= 11 and hour < 18:
+					'Your sister <a href="exec:SiSgdk = 1 & GT ''sister''">Anya</a> He is sitting in the company of boys and girls and drinking beer.'
+				end
 			end
 		end
 

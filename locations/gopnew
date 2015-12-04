@@ -40,11 +40,11 @@ $gopsexboy = {
 
 	gsbrand = rand(0,2)
 	if gsbrand = 0:
-		act 'Post':gt 'gopnew', '1'
+		gt 'gopnew', '1'
 	elseif gsbrand = 1:
-		act 'Suck':gt 'gopnew', '11'
+		gt 'gopnew', '11'
 	else
-		act 'Writing in the ass':gt 'gopnew', '12'
+		gt 'gopnew', '12'
 	end
 }
 

@@ -274,7 +274,7 @@
       <Location name="KatjaHome"/>
       <Location name="KatjaHomeTalk"/>
       <Location name="KatjaHomeDin"/>
-      <Location name="Katja_Tango"/>
+      <Location name="Katja_Tanga"/>
     </Folder>
     <Folder name="Village">
       <Location name="famdorfride"/>

@@ -76,8 +76,7 @@ if $ARGS[0] = 'brows':
 	if shantfoto > 0:act 'Search for the heroine you photoed on "Assbook" wesite':gt 'Komp', 'foto'
 	if gor_dorm = 7:act 'Read letter from Eugene':gt 'etoexhib', 'pos91'
 	if camwhore = 1:act 'Go to MyFreeCams.org':gt 'Komp', 'mfc'
-	if student > 0:act 'The Institute for Education wesite':gt 'Komp', 'study'
-	act 'Exit the browser':gt 'Komp', 'start'
+	if SchoolAtestat = 0 or student > 0:act 'Spend time studying':gt 'Komp', 'study'
 
 	if internet = 0:
 		cls

@@ -709,7 +709,8 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 		'<center><img src="images/qwest/alter/progulka.jpg"></center>'
 		'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
 		'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
-		act '<B>Move away</B>':gt $loc, $metka	end
+		act '<B>Move away</B>':gt $loc, $metka
+	end
 
 	if sister >= 80 and sisterknowslut > 0 and narkossister = 0:
 		act 'Talk about sex':

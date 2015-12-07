@@ -30,8 +30,6 @@ if sisboyparty_day + 1 = daystart and sisboyparty = -1 and hour = 22:
 else
 	gs'family'
 
-	act 'Leave the room':gt 'korrPar'
-
 	if rexCarCount >= 9 and sisterHere = 1 and hour < 3 and rexSmsDay ! daystart and smsForRex < 13:
 		act 'Take your sisters phone':gt 'reks','sms'
 	end

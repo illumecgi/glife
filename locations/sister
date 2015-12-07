@@ -150,109 +150,124 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 
 
 !Terms of the campaign to the party
-     $party_pre_conditions ={
-         cla
-         *clr
-         minut += 5
-         gs'stat'
-         if rex <= 80:
-         '<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_sister_1.jpg"></center>'
-         if GorSlut < 2 and mesec <= 0 and manna >= ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100 and alko < 3 and cumfrot = 0 and cumlip = 0 and cumface = 0 and cumanus = 0 and cumass = 0 and cumpussy = 0 and cumbelly = 0: 
-         '-Hello <<$name>>, Today we `re going to a party to Rex, Are you with us?'
-         act 'Go':gt 'sbReksHome','party'
-         act 'I have changed my mind':
-         cla
-         *clr
-         minut += 5
-         sisboyparty = -1
-         gs'stat'
-         '<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_sister_1.jpg"></center>'
-         '-I would love, but I have a lot of cases, I`m sorry.'
-		'-Nothing, at other times it can get, and we went, while.'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-         end
+    $party_pre_conditions ={
+		cla
+        *clr
+        minut += 5
+        gs'stat'
+        if rex <= 80:
+			'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_sister_1.jpg"></center>'
+        if GorSlut < 2 and mesec <= 0 and manna >= ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100 and alko < 3 and cumfrot = 0 and cumlip = 0 and cumface = 0 and cumanus = 0 and cumass = 0 and cumpussy = 0 and cumbelly = 0: 
+			'-Hello <<$name>>, Today we `re going to a party to Rex, Are you with us?'
+
+        act 'Go':gt 'sbReksHome','party'
+
+        act 'I have changed my mind':
+			cla
+			*clr
+			minut += 5
+			sisboyparty = -1
+			gs'stat'
+			'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_sister_1.jpg"></center>'
+			'-I would love, but I have a lot of cases, I`m sorry.'
+			'-Nothing, at other times it can get, and we went, while.'
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+			
+		end
          
-         elseif GorSlut >= 2:
-         '-<<$name>>, in the town go to all sorts of rumors, and then the guys have all heard, so that the party is better not to come, otherwise not be good.'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+		elseif GorSlut >= 2:
+			'-<<$name>>, in the town go to all sorts of rumors, and then the guys have all heard, so that the party is better not to come, otherwise not be good.'
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
          
-         elseif mesec > 0 or manna < ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100:
-         '-Hello <<$name>>, Today we `re going to a party to Rex, Are you with us?'
-		'-Sorry Anya, Odd I`m not in the mood, so today without me.'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+		elseif mesec > 0 or manna < ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100:
+			'-Hello <<$name>>, Today we `re going to a party to Rex, Are you with us?'
+			'-Sorry Anya, Odd I`m not in the mood, so today without me.'
+			
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
          
-         elseif alko >= 3:
-         '-<<$name>>, where you have time to get drunk so.I wanted to invite you to the party, but okay , go home, come to life.'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+		elseif alko >= 3:
+			'-<<$name>>, where you have time to get drunk so.I wanted to invite you to the party, but okay , go home, come to life.'
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
          
-         elseif cumfrot > 0 or cumlip > 0 or cumface > 0 or cumanus > 0 or cumass > 0 or cumpussy > 0 or cumbelly > 0:
-         '-Sister, look at you, in which you form, My God, Go home and wash quickly.'
-		'You felt a little ashamed of his sister for his unkempt appearance.'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-         end
-         end
-         if rex > 80:
-         '<center><img src="images/qwest/alter/sisterQW/ReksHome/Reks.jpg"></center>'
-         if GorSlut < 2 and mesec <= 0 and manna >= ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100 and alko < 3 and cumfrot = 0 and cumlip = 0 and cumface = 0 and cumanus = 0 and cumass = 0 and cumpussy = 0 and cumbelly = 0: 
-         '-Baby, let`s go to my place, Today I once again hosted a cool hang out.'
-         act 'Go':gt 'sbReksHome','party'
-         act 'I have changed my mind':
-         cla
-         *clr
-         minut += 5
-         sisboyparty = -1
-         gs'stat'
-         '<center><img src="images/qwest/alter/sisterQW/ReksHome/Reks.jpg"></center>'
-         '-Sorry Reksik, I now have a lot of cases,I would love to but..'
-		'-Well, go about their business, but next time definitely, okay?'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-         end
-         
-         elseif GorSlut >= 2:
-         '-Shit, <<$name>> everywhere say, you fucking whore.What kind of garbage, <<$name>>, I thought we mutim, and we all seriously, And you fuck with anyone?'
-		'-I do not know what came over me then found, forgive me, if you can.'
-		'-Listen, everything`s OK, but let`s be friends, We forget all that we had. Okay?'
-		'-Okay...'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-         
-         elseif mesec > 0 or manna < ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100:
-         '-Sorry Reksik, Odd I`m not in the mood, so today without me.'
-		'-Pancake, I do not want to leave you alone, but I need to go with the guys, no offense, and do not be sad, Whole.'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-         
-         elseif alko >= 3:
-         '-<<$name>>, where you have time to get drunk so.I wanted to invite you to the party, but okay , go home, come to life.'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-         
-         elseif cumfrot > 0 or cumlip > 0 or cumface > 0 or cumanus > 0 or cumass > 0 or cumpussy > 0 or cumbelly > 0:
-         '-Shit, <<$name>> you are all in the semen.What kind of garbage, <<$name>>, I thought we mutim, and we all seriously, And you fuck with anyone?'
-		'-I do not know what came over me then found, forgive me, if you can.'
-		'-Listen, everything`s OK, but let`s be friends, We forget all that we had. Okay?'
-		'-Okay...'
-         act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-         end
-         end
-     }
+		elseif cumfrot > 0 or cumlip > 0 or cumface > 0 or cumanus > 0 or cumass > 0 or cumpussy > 0 or cumbelly > 0:
+			'-Sister, look at you, in which you form, My God, Go home and wash quickly.'
+			'You felt a little ashamed of his sister for his unkempt appearance.'
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+		end
+	end
+	
+	if rex > 80:
+			'<center><img src="images/qwest/alter/sisterQW/ReksHome/Reks.jpg"></center>'
+			if GorSlut < 2 and mesec <= 0 and manna >= ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100 and alko < 3 and cumfrot = 0 and cumlip = 0 and cumface = 0 and cumanus = 0 and cumass = 0 and cumpussy = 0 and cumbelly = 0: 
+				'-Baby, let`s go to my place, Today I once again hosted a cool hang out.'
+				
+				act 'Go':gt 'sbReksHome','party'
+				
+				act 'I have changed my mind':
+				cla
+				*clr
+				minut += 5
+				sisboyparty = -1
+				gs'stat'
+				'<center><img src="images/qwest/alter/sisterQW/ReksHome/Reks.jpg"></center>'
+				'-Sorry Reksik, I now have a lot of cases,I would love to but..'
+				'-Well, go about their business, but next time definitely, okay?'
+				
+					act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+				end
+
+			elseif GorSlut >= 2:
+				'-Shit, <<$name>> everywhere say, you fucking whore.What kind of garbage, <<$name>>, I thought we mutim, and we all seriously, And you fuck with anyone?'
+				'-I do not know what came over me then found, forgive me, if you can.'
+				'-Listen, everything`s OK, but let`s be friends, We forget all that we had. Okay?'
+				'-Okay...'
+				
+				act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+
+			elseif mesec > 0 or manna < ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100:
+				'-Sorry Reksik, Odd I`m not in the mood, so today without me.'
+				'-Pancake, I do not want to leave you alone, but I need to go with the guys, no offense, and do not be sad, Whole.'
+
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+
+			elseif alko >= 3:
+				'-<<$name>>, where you have time to get drunk so.I wanted to invite you to the party, but okay , go home, come to life.'
+
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+
+			elseif cumfrot > 0 or cumlip > 0 or cumface > 0 or cumanus > 0 or cumass > 0 or cumpussy > 0 or cumbelly > 0:
+				'-Shit, <<$name>> you are all in the semen.What kind of garbage, <<$name>>, I thought we mutim, and we all seriously, And you fuck with anyone?'
+				'-I do not know what came over me then found, forgive me, if you can.'
+				'-Listen, everything`s OK, but let`s be friends, We forget all that we had. Okay?'
+				'-Okay...'
+
+				act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+			end
+		end
+	}
 
 	
     if SiSgdk = 1 and narkossister = 0:
         !Near the club with friends
         if sister < 40:
-        ' - What do you want? Wali let! - Anya told you under the laughter of her friends.'
+			' - What do you want? Wali let! - Anya told you under the laughter of her friends.'
        
-        elseif sisboypartyQW < 2 and sisboyparty = 2 and sisboyparty_day + 1 = daystart:   
-                 cla
-                 'Friendly company with Anya had gathered and called you...'
-                 act 'Go to the party':gt 'sisterQW','sisboyQW_party'
-                 
-                 elseif sisboypartyQW >= 2 and sisboyparty = 2 and sisboyparty_day + 1 = daystart:
-        cla
-        'Merry Company pansy friends have gathered for another booze at Rex'
-                  act 'Go to the party':dynamic $party_pre_conditions
-                 
-            elseif sister >=40:
+		elseif sisboypartyQW < 2 and sisboyparty = 2 and sisboyparty_day + 1 = daystart:   
+			cla
+			'Friendly company with Anya had gathered and called you...'
+			
+			act 'Go to the party':gt 'sisterQW','sisboyQW_party'
+
+		elseif sisboypartyQW >= 2 and sisboyparty = 2 and sisboyparty_day + 1 = daystart:
+			cla
+			'Merry Company pansy friends have gathered for another booze at Rex'
+
+			act 'Go to the party':dynamic $party_pre_conditions
+
+		elseif sister >=40:
 			cla
 			'Anya sits now girls and boys, drinking beer: "Hello, sister. - Anya told you, smile. - Want pivasom?"'
+
 			act 'Drink beer':
 				cls
 				minut += 60
@@ -280,6 +295,7 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 	end
 
 	if sister > 65 and mesec > 0 and preg = 0 and tampon = 0 and narkossister = 0:
+
 		act 'Ask for a tampon':
 			'You tell your sister the, what you are menstruating and ended tampons. She looks at you knowingly, brings some of his and recommends you next time take care of this in advance.'
 			tampon=3
@@ -290,20 +306,22 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 			exit
 		end
 	end
-  if narkossister = 0:
-	act 'Chat':
-		cls
-		minut+=rand(10,15)
-		sister+=1
-		gs'stat'
-		'<center><b><font color = maroon>Anya</font></b></center>'
-		'<center><img src="images/qwest/alter/sister.jpg"></center>'
-		if sister<20:'You and your sister a terrible scandal.'
-		if sister>=20 and sister<40:'You and your sister tensions.'
-		if sister>=40 and sister<60:'You have a normal relationship with her sister.'
-		if sister>=60 and sister<80:'You have a good relationship with her sister.'
-		if sister>=80:'You have a great relationship with my sister.'
-		''
+	if narkossister = 0:
+
+		act 'Chat':
+			cls
+			minut+=rand(10,15)
+			sister+=1
+			gs'stat'
+			'<center><b><font color = maroon>Anya</font></b></center>'
+			'<center><img src="images/qwest/alter/sister.jpg"></center>'
+			if sister<20:'You and your sister a terrible scandal.'
+			if sister>=20 and sister<40:'You and your sister tensions.'
+			if sister>=40 and sister<60:'You have a normal relationship with her sister.'
+			if sister>=60 and sister<80:'You have a good relationship with her sister.'
+			if sister>=80:'You have a great relationship with my sister.'
+			''
+		end
 !sisboyparty
 !-1 - don`t go to the party
 !0 - `t know about Vecherinka
@@ -311,6 +329,7 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 !2 - agreed to go to the party
 		if sisboypartyQW >= 2 and sisboyparty = 1 and sisboyparty_day = daystart:
 			'- Listen, <<$name>>, Rex apartment is available for tomorrow`s party  - you go?'
+			
 			act 'Tell, what will I':
 				cls
 				minut += 5
@@ -318,10 +337,11 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 				gs'stat'
 				'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_2.jpg"></center>'
 				'You agreed to come to the party.
-- Awesome, <<$name[2]>>, it`ll be fun. We will be at the house of culture, don`t forget to come back to  18:00, otherwise we will leave without you.
-With these words, you hugged and kissed my sister.'
+				- Awesome, <<$name>>, it`ll be fun. We will be at the house of culture, don`t forget to come back to  18:00, otherwise we will leave without you.
+				With these words, you hugged and kissed my sister.'
 				act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 			end
+
 			act 'Sorry, I study':
 				cls
 				minut += 5
@@ -329,9 +349,10 @@ With these words, you hugged and kissed my sister.'
 				gs'stat'
 				'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_3.jpg"></center>'
 				'You refused to come to the party.
-- Sorry Anh, I would love to, but I have blockages in school. Control, works, bunch of literature, she know...'
+				- Sorry Anh, I would love to, but I have blockages in school. Control, works, bunch of literature, she know...'
 				act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 			end
+
 			if bronzebeg > 0 or silverbeg > 0 or goldbeg > 0:
 				act 'Once, I have my race':
 					cls
@@ -340,10 +361,11 @@ With these words, you hugged and kissed my sister.'
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_4.jpg"></center>'
 					'You refused to come to the party.
-- I would love, but I have competition on the nose, I have to train. Unlike you, I-still dream to become a great athlete...'
+					- I would love, but I have competition on the nose, I have to train. Unlike you, I-still dream to become a great athlete...'
 					act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 				end
 			end
+
 			if volleyboll >= 100:
 				act 'I have volleyball':
 					cls
@@ -352,13 +374,16 @@ With these words, you hugged and kissed my sister.'
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_5.jpg"></center>'
 					'You refused to come to the party.
-- I mode,the coach is not allowed to walk late, Yes and drink are also prohibited...'
+					- I mode,the coach is not allowed to walk late, Yes and drink are also prohibited...'
 					act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 				end
 			end
+
 			exit
 		end
+
 		act '<B>Further</B>':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
+
 		if sister<20:
 			dynamic $d_sister[1]
 			exit
@@ -422,8 +447,8 @@ With these words, you hugged and kissed my sister.'
 				gs'stat'
 				'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_1.jpg"></center>'
 				'- <<$name>>, have you a close friend of our company, and tomorrow kitty birthday, and he asked me to call you.
-- Oh do not even know Anh, as we-we are not familiar with it, I then basically your only girls talked.
-- Come on, he was very much requested, I even think he likes you. So what did you decide?'
+				- Oh do not even know Anh, as we-we are not familiar with it, I then basically your only girls talked.
+				- Come on, he was very much requested, I even think he likes you. So what did you decide?'
 				act 'Tell, what will I':
 					cls
 					minut += 5
@@ -432,10 +457,11 @@ With these words, you hugged and kissed my sister.'
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_2.jpg"></center>'
 					'You agreed to come to the birthday.
-- Awesome, <<$name[2]>>, there should be fun, and as for the gift, don`t worry, Rex doesn`t like all this. We will be at the house of culture, don`t forget to come back to  18:00, otherwise we will leave without you.
-With these words, you hugged and kissed my sister.'
+					- Awesome, <<$name>>, there should be fun, and as for the gift, don`t worry, Rex doesn`t like all this. We will be at the house of culture, don`t forget to come back to  18:00, otherwise we will leave without you.
+					With these words, you hugged and kissed my sister.'
 					act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 				end
+
 				act 'Sorry, I study':
 					cls
 					minut += 5
@@ -443,9 +469,10 @@ With these words, you hugged and kissed my sister.'
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_3.jpg"></center>'
 					'You refused to come to the birthday.
-- Sorry Anh, I would love to, but I have blockages in school. Control, works, bunch of literature, she know...'
+					- Sorry Anh, I would love to, but I have blockages in school. Control, works, bunch of literature, she know...'
 					act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 				end
+
 				if bronzebeg > 0 or silverbeg > 0 or goldbeg > 0:
 					act 'Once, I have my race':
 						cls
@@ -454,10 +481,11 @@ With these words, you hugged and kissed my sister.'
 						gs'stat'
 						'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_4.jpg"></center>'
 						'You refused to come to the birthday.
-- I would love, but I have competition on the nose, I have to train. Unlike you, I-still dream to become a great athlete...'
+						- I would love, but I have competition on the nose, I have to train. Unlike you, I-still dream to become a great athlete...'
 						act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 					end
 				end
+
 				if volleyboll >= 100:
 					act 'I have volleyball':
 						cls
@@ -466,7 +494,7 @@ With these words, you hugged and kissed my sister.'
 						gs'stat'
 						'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_5.jpg"></center>'
 						'You refused to come to the birthday.
-- I mode,the coach is not allowed to walk late, Yes and drink are also prohibited...'
+						- I mode,the coach is not allowed to walk late, Yes and drink are also prohibited...'
 						act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 					end
 				end
@@ -495,6 +523,7 @@ With these words, you hugged and kissed my sister.'
 
 					act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 				end
+
 				act 'No':
 					cls
 					sister -= 10
@@ -530,13 +559,13 @@ With these words, you hugged and kissed my sister.'
 
 					act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 				end
+
 				act 'No':
 					cls
 					sister -= 10
 					minut += 5
 					sisboyday = daystart
 					gs'stat'
-
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_04.jpg"></center>'
 					'-Sorry Anya, I need to learn in the evening'
 					'-Oh well, Anya turned angrily away, and buried her in his book.'
@@ -557,6 +586,7 @@ With these words, you hugged and kissed my sister.'
 					'You do not say anything and just smiles slyly watching his sister`s eyes.'
 					'- We want <<$siboyday_text>> evening repeat our games, if you do not mind?'
 				end
+
 				act 'Agree':
 					cls
 					sisboytrioQW = 1
@@ -569,6 +599,7 @@ With these words, you hugged and kissed my sister.'
 					'You hug and Kiss with his beloved sister'
 					act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 				end
+
 				act 'Takeout':
 					cls
 					sisboytrioQW = -1
@@ -678,7 +709,8 @@ With these words, you hugged and kissed my sister.'
 		'<center><img src="images/qwest/alter/progulka.jpg"></center>'
 		'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
 		'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
-		act '<B>Move away</B>':gt $loc, $metka	end
+		act '<B>Move away</B>':gt $loc, $metka
+	end
 
 	if sister >= 80 and sisterknowslut > 0 and narkossister = 0:
 		act 'Talk about sex':

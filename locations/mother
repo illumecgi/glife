@@ -48,18 +48,18 @@ if hcol=3:$texthcol='I decided to become a blonde?'
 hcolmotherremember=hcol
 end
 
-if nude=0 and pregTalkFamily = 0 and pregTalkMom = 0 and pregtime > 150:
+if $clothingworntype ! 'nude' and pregTalkFamily = 0 and pregTalkMom = 0 and pregtime > 150:
 	cla
-	'Mother is looking at your clothes clearly acting under the belly-"<<$name[2]>>, I flew all-yet, Mount thou my. Look, do not try to do an abortion!".'
+	'Mother is looking at your clothes clearly acting under the belly-"<<$name>>, I flew all-yet, Mount thou my. Look, do not try to do an abortion!".'
 	pregTalkFamily = 1
 	pregTalkMom = 1
 	act '<B>Move away</B>':gt $loc, $metka
 	exit
 end
 
-if nude=1 and pregTalkFamily = 0 and pregTalkMom = 0 and pregtime > 90:
+if $clothingworntype = 'nude' and pregTalkFamily = 0 and pregTalkMom = 0 and pregtime > 90:
 	cla
-	'Mother is looking at your belly-"<<$name[2]>>, I flew all-yet, Mount thou my. Look, do not try to do an abortion!".'
+	'Mother is looking at your belly-"<<$name>>, I flew all-yet, Mount thou my. Look, do not try to do an abortion!".'
 	pregTalkFamily = 1
 	pregTalkMom = 1
 	act '<B>Move away</B>':gt $loc, $metka
@@ -70,7 +70,7 @@ $mother_clothes[1] = {
 if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
 	if momslut < 2:
 		'The mother looks at you eyes wide:'
-		'- "<<$name[1]>>, Here is the number of, Are not you ashamed to go in such a? Well dressed jogging!"'
+		'- "<<$name>>, Here is the number of, Are not you ashamed to go in such a? Well dressed jogging!"'
 	else
 		'His mother shook her head sadly:'
 		'- "You would have your ass-is closed, and then another , and everyone will know the house, you whore"'
@@ -87,7 +87,7 @@ elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
 	act '<B>Move away</B>':gt $loc, $metka
 elseif motherQW >= 2:
 	'Mother looked sternly at you:'
-	'- "<<$name[1]>>, I certainly understand it all, but could you at least not at home dress, like you used to have their fancy man pacing? You have the floor asses out-towels for video!"'
+	'- "<<$name>>, I certainly understand it all, but could you at least not at home dress, like you used to have their fancy man pacing? You have the floor asses out-towels for video!"'
 	act '<B>Move away</B>':gt'vanrPar'
 end
 }
@@ -96,7 +96,7 @@ $mother_clothes[2] = {
 if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
 	if momslut < 2:
 		'The mother looks at you eyes wide:'
-		'- "<<$name[1]>>, Here is the number of, Are not you ashamed to go naked at home? Well dressed jogging!"'
+		'- "<<$name>>, Here is the number of, Are not you ashamed to go naked at home? Well dressed jogging!"'
 	else
 		'His mother shook her head sadly:'
 		'- "You`d at least dressed home, and then another , and all the family will know, you whore"'
@@ -113,7 +113,7 @@ elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
 	act '<B>Move away</B>':gt $loc, $metka
 elseif motherQW >= 2:
 	'Mother looked sternly at you:'
-	'- "<<$name[1]>>, I certainly understand it all, but could you at least at home to dress? In his fancy man in this form will pace!"'
+	'- "<<$name>>, I certainly understand it all, but could you at least at home to dress? In his fancy man in this form will pace!"'
 	act '<B>Move away</B>':gt'vanrPar'
 end
 }
@@ -133,7 +133,7 @@ if pirsA >= 1 and pirsAmother=0 and motherpirsadaytalk!daystart:
 pirseerand=rand(1,100)
 motherpirsadaytalk=daystart
 	if pirseerand>=75:
-	'Mother looks you in the mouth: "<<$name[1]>>, and what have you got there in the language shines?"'
+	'Mother looks you in the mouth: "<<$name>>, and what have you got there in the language shines?"'
 		act'Nothing':
 		cla
 		'You shake my head: "Nothing." and then turn away ,that the mother had not noticed tongue piercing.'
@@ -146,7 +146,7 @@ motherpirsadaytalk=daystart
 		gs'stat'
 		'<center><img src="images/picb/pirsA.jpg" ></center>'
 		'You open your mouth and draw out the tongue showing the mother tongue piercing.'
-		'Mother shakes her head "<<$name[1]>>, tongue piercing made lewd women, serving men mouth."'
+		'Mother shakes her head "<<$name>>, tongue piercing made lewd women, serving men mouth."'
 		act '<B>Move away</B>':gt $loc, $metka
 		end
 	exit
@@ -177,13 +177,13 @@ end
 if pirsD = 1 and pirsDmother=0:
 !mother notices a nose ring
 pirsDmother=1
-'Mother looks a bit shocked at your nose ring: "Jesus, <<$name[1]>>, and this is why else? I understand, bulls ring is inserted into the nose, that would be for them to carry the ring, but you-why?"'
+'Mother looks a bit shocked at your nose ring: "Jesus, <<$name>>, and this is why else? I understand, bulls ring is inserted into the nose, that would be for them to carry the ring, but you-why?"'
 end
 
 if pirsE = 1 and pirsEmother=0:
 !mother notices eyebrow piercing
 pirsEmother=1
-'Mother shakes her head looking at your eyebrow piercing: "<<$name[1]>>, Well, what do you need that stuff in eyebrow?", - then sadly shakes his head - "Oh youth, youth..."'
+'Mother shakes her head looking at your eyebrow piercing: "<<$name>>, Well, what do you need that stuff in eyebrow?", - then sadly shakes his head - "Oh youth, youth..."'
 end
 
 if mother > 65 and mesec > 0 and preg = 0 and tampon = 0:
@@ -393,7 +393,7 @@ if hour > 5:
 		'<center><img src="images/qwest/alter/mother.jpg"></center>'
 		'You asked for new clothes.'
 		if gorslut = 6:
-			'Mother outraged: "<<$name[2]>>, you have a lot of customers and you`re still asking me clothes? It`s me you should ask. Buy myself."'
+			'Mother outraged: "<<$name>>, you have a lot of customers and you`re still asking me clothes? It`s me you should ask. Buy myself."'
 			act '<B>Move away</B>':gt $loc, $metka
 			exit
 		end
@@ -627,7 +627,6 @@ elseif week = 6 and dostupindorf = 1:
 		act 'Go to the country':hour = 12 & minut = 0 & indorf = 1 & gt 'famdorfride'
 	end
 end
-
 
 --- mother ---------------------------------
 

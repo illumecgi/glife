@@ -625,23 +625,25 @@ With these words, you hugged and kissed my sister.'
 	if ((sisboyday + 1 = daystart and hour > 18) or sisboyday + 1 < daystart) and sisThank = 1:
 		cls
 		if sisboyQW = 9 or sisboyQW = 7 or sisboyQW = 5 or sisboyQW = 3:sisboyQW = sisboyQW - 1
-		sisboyday = 0
-		sisThank = 0
-		gs'stat'
+			sisboyday = 0
+			sisThank = 0
+			gs'stat'
 
-		'<center><b><font color = maroon>Anya</font></b></center>'
-		'<center><img src="images/qwest/alter/sisterQW/sisboyQW_00.jpg"></center>'
-		'Merry Anka suddenly runs up to you and wraps around your neck.'
-		if sisboytrioQW ! 1:
-			'- Sister, i adore you, We spent a lovely evening with Romka.'
-			'- Yes, I`m glad for you, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
-		else
-			'- Sister, i adore you, I really enjoyed our evening with him.'
-			'- Yes me too happy, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
-			sisboytrioQW = 0
+			'<center><b><font color = maroon>Anya</font></b></center>'
+			'<center><img src="images/qwest/alter/sisterQW/sisboyQW_00.jpg"></center>'
+			'Merry Anka suddenly runs up to you and wraps around your neck.'
+		
+			if sisboytrioQW ! 1:
+				'- Sister, i adore you, We spent a lovely evening with Romka.'
+				'- Yes, I`m glad for you, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
+			else
+				'- Sister, i adore you, I really enjoyed our evening with him.'
+				'- Yes me too happy, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
+				sisboytrioQW = 0
+			end
+
+			act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 		end
-
-		act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 	end
 
 	if SisterKnowMastr > 0 and sisterQW = 0:
@@ -651,7 +653,7 @@ With these words, you hugged and kissed my sister.'
 
 		'<center><b><font color = maroon>Anya</font></b></center>'
 		'<center><img src="images/qwest/alter/sister.jpg"></center>'
-		'Anya looks at you and laughs "Well, <<$name[2]>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
+		'Anya looks at you and laughs "Well, <<$name>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
 
 		act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
 	end
@@ -663,7 +665,7 @@ With these words, you hugged and kissed my sister.'
 		'<center><b><font color = maroon>Anya</font></b></center>'
 		'<center><img src="images/qwest/alter/sobir.jpg"></center>'
 		'As the room goes, I am going to work, your sister Anya.'
-		'Anya, without turning to you, speaks: "<<$name[2]>>, I`m so late, do not distract!"'
+		'Anya, without turning to you, speaks: "<<$name>>, I`m so late, do not distract!"'
 		act '<B>Move away</B>':gt $loc, $metka
 	end
 
@@ -675,9 +677,8 @@ With these words, you hugged and kissed my sister.'
 		'<center><b><font color = maroon>Anya</font></b></center>'
 		'<center><img src="images/qwest/alter/progulka.jpg"></center>'
 		'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
-		'Anya, without turning to you, speaks: "<<$name[2]>>, If you decide to take a walk, I am near the club with her friends."'
-		act '<B>Move away</B>':gt $loc, $metka
-	end
+		'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
+		act '<B>Move away</B>':gt $loc, $metka	end
 
 	if sister >= 80 and sisterknowslut > 0 and narkossister = 0:
 		act 'Talk about sex':
@@ -691,7 +692,6 @@ With these words, you hugged and kissed my sister.'
 			act '<B>Move away</B>':gt 'sister'
 		end
 	end
-  end
 else
 	'- All, <<$name>>, time to sleep.'
 end

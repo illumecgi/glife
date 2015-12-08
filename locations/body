@@ -27,15 +27,15 @@ if analplugIN = 0:
 elseif analplugIN = 1 and tanga = 1:
 	$anus = 'Your <a href="exec:view''images/body/analplug.jpg''">anus</a> is currently filled with your butt plug.'
 elseif analplugIN = 1 and tanga = 0:
-	$anus = 'In your <a href="exec:view''images/picb/analplugnotanga.jpg''">anus</a> anal tube inserted.'
+	$anus = 'Your <a href="exec:view''images/picb/analplugnotanga.jpg''">anus</a> is currently filled with your butt plug.'
 	if pirsG = 1 and pirsGL = 1:
-	$anus = 'In your <a href="exec:view''images/picb/analplugpirscligub.jpg''">anus</a> anal tube inserted.'
+	$anus = 'Your <a href="exec:view''images/picb/analplugpirscligub.jpg''">anus</a> is currently filled with your butt plug.'
 	end
 	if pirsG = 0 and pirsGL = 1:
-	$anus = 'In your <a href="exec:view''images/picb/analplugpirsclit.jpg''">anus</a> anal tube inserted.'
+	$anus = 'Your <a href="exec:view''images/picb/analplugpirsclit.jpg''">anus</a> is currently filled with your butt plug.'
 	end
 	if pirsG = 1 and pirsGL = 0:
-	$anus = 'In your <a href="exec:view''images/picb/analplugpirsring.jpg''">anus</a> anal tube inserted.'
+	$anus = 'Your <a href="exec:view''images/picb/analplugpirsring.jpg''">anus</a> is currently filled with your butt plug.'
 	end
 end
 
@@ -51,7 +51,7 @@ if dounspell = 0:
 	krost = rost - 130
 	ves = Kves + krost - (agilbuf / 10)
 	talia = ves - (agilbuf / 10)
-	grudi = talia + 10 + vfat + silicone
+	grudi = talia + 10 + vfat + silicone + nbsize
 	grutal = talia
 	bedra = talia + 15 + (vmeat / 2) + vfat
 	titK = grudi - talia
@@ -80,7 +80,7 @@ else
 	fat = 0
 	bedra = bedraDoun
 	talia = TaliaDoun
-	grudi = talia + 14 + silicone
+	grudi = talia + 14 + silicone + nbsize
 	ves = TaliaDoun
 	titK = grudi - talia
 
@@ -186,9 +186,9 @@ else
 	$lipbalmstat = ''
 end
 
-if pirsA = 1:$pirsA = 'When you talk, your conversation partner can get a glance at your tongue piercing.'
+if pirsA = 1:$pirsA = 'When you are talking to people, they can get a glimpse of your tongue piercing.'
 if pirsA = 0:$pirsA = ''
-if pirsB = 1:$pirsB = 'You lower lip is pierced by a ring.'
+if pirsB = 1:$pirsB = 'You lower lip is pierced with a ring.'
 if pirsB = 0:$pirsB = ''
 if lip = 0:$lip = 'You have thin <<$lipbalmstat>> lips. <<$pirsB>> <<$pirsA>>' & $liptalk = 'thin lips' & $liptalk2 = 'thin lips' & $liptalk3 = 'thin lips' & $lip1 = 'thin'
 if lip = 1:$lip = 'You have normal <<$lipbalmstat>> lips. <<$pirsB>> <<$pirsA>>' & $liptalk = 'soft lips' & $liptalk2 = 'soft lips' & $liptalk3 = 'soft lips' & $lip1 = 'normal'
@@ -201,7 +201,7 @@ if skin > 4:skin = 4
 if skin < 0:skin = 0
 if pirsC = 1:$pirsC = 'Your ears are pierced and you are wearing earrings.'
 if pirsC = 0:$pirsC = ''
-if pirsD = 1:$pirsD = 'Into your nose is a nosering inserted.'
+if pirsD = 1:$pirsD = 'You have a nosering inserted in your nose.'
 if pirsD = 0:$pirsD = ''
 if pirsE = 1:$pirsE = 'Your eyebrow is pierced and a rod is sticking through it.'
 if pirsE = 0:$pirsE = ''
@@ -312,10 +312,10 @@ if StrongNarkota > 0:
 	manna = (intel * magik) + magik * 100 + vital * 10 + rikudo
 end
 
-if vnesh = -10:$vnesh = 'Your looks is even worse than terrible. It''s terribad. No one want to see or talk to you and avoid you at any cost necessary.'
-if vnesh < 5 and vnesh> - 10:$vnesh = 'Your looks is terrible. People try to avoid looking and talking to you.'
-if vnesh >= 5 and vnesh < 15:$vnesh = 'You''re a wallflower. Barely anyone notices you.'
-if vnesh >= 15 and vnesh < 30:$vnesh = 'You have good looks. Men and women like to take a glance at you.'
+if vnesh = -10:$vnesh = 'Your looks are even worse than terrible. It''s terribad. No one wants to see or talk to you and people avoid you at any cost.'
+if vnesh < 5 and vnesh> - 10:$vnesh = 'Your looks are terrible. People try to avoid looking and talking to you.'
+if vnesh >= 5 and vnesh < 15:$vnesh = 'You''re a wallflower. Hardly anyone notices you.'
+if vnesh >= 15 and vnesh < 30:$vnesh = 'You have good looks. Men and women check you out when they think you aren''t looking.'
 if vnesh >= 30 and vnesh < 50:$vnesh = 'You have a simply stunning appearence. Other girls are a bit jealous and guys constantly check you out.'
 if vnesh >= 50:$vnesh = 'Your appearence is divine! No one is able to take his or her eyes off of you.'
 
@@ -327,15 +327,15 @@ musle = strenbuf + vitalbuf
 if musle >= salo:
 	!!muscular type
 	if bedra < 60:
-		$body = 'You are very thin and virtually there is no fat on your body,your muscles appear through the skin.'
+		$body = 'You are very thin with virtually no fat on your body, your muscles appear through the skin.'
 	elseif bedra >= 60 and bedra < 70:
-		$body = 'You are really thin and there is little fat on your body ,your muscles appear through the skin.'
+		$body = 'You are really thin and there is little fat on your body, your muscles appear through the skin.'
 	elseif bedra >= 70 and bedra < 80:
-		$body = 'You are and there is little fat on your body ,your muscles appear through the skin.'
+		$body = 'You are and there is little fat on your body, your muscles appear through the skin.'
 	elseif bedra >= 80 and bedra < 90:
-		$body = 'You are thin and there is little fat on your body ,your muscles appear through the skin.'
+		$body = 'You are thin and there is little fat on your body, your muscles appear through the skin.'
 	elseif bedra >= 90 and bedra < 100:
-		$body = 'You are thin and there is little fat on your body . Large muscles appear through your skin.'
+		$body = 'You are thin and there is little fat on your body. Large muscles appear through your skin.'
 	elseif bedra >= 100 and bedra < 110:
 		$body = 'You have little fat on your body, Large muscles appear through your skin.'
 	elseif bedra >= 110 and bedra < 120:
@@ -348,7 +348,7 @@ else
 	if bedra < 60:
 		$body = 'You are very lean and you have virtually no muscle.'
 	elseif bedra >= 60 and bedra < 70:
-		$body = 'You have a very thin body with a small soft booty and virtually you have no muscle.'
+		$body = 'You have a very thin body with a small soft booty and you have virtually no muscle.'
 	elseif bedra >= 70 and bedra < 80:
 		$body = 'You have a very skinny body.'
 	elseif bedra >= 80 and bedra < 90:

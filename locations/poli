@@ -20,9 +20,13 @@ if $ARGS[0] = 'start':
 	''
 	'Abortion at the woman''s request can be made up to 84th day of pregnancy - 20,000 rubles.'
 	'Be warned, abortions are dangerous to health. There is always a risk of complications and the possibility of sterility.'
+	''
+	'Near the entrance is an advertisement for cosmetic surgeon and directions to his office.'
+
 	if workhosp = 1 and hour >= 8 and hour <= 9 and week < 6:act 'Exit to replace':gt 'poli', 'beginwork'
 
 	act 'Leave Clinic':gt 'street'
+	act 'See cosmetic surgeon':gt 'poli','cosmetic1'
 
 	if money >= 1000:
 		if health < (vital * 10 + stren * 5):
@@ -1007,6 +1011,185 @@ if $ARGS[0] = '2':
 			end
 		end
 	end
+end
+
+$electrolysis = {
+	cls
+	minut += 120
+	leghair = 0
+	lobok = 0
+	lashair = 1
+	money -= 80000
+	gs 'stat'
+	'<center><img src="images/etogame/electrolysis.jpg"></center>'
+	'Surgeon has you strip and lie down on the table. Over next few hours you are poked with needle over and over again.'
+
+	act 'Continue':gt 'poli', 'cosmetic1'
+}
+
+$lipPlus = {
+	cls
+	minut += 60
+	lip += 1
+	money -= 25000
+	gs 'stat'
+	'<center><img src="images/etogame/cosmeticSur.jpg"></center>'
+	'Surgeon has you strip, put on a gown and lie down on the table. He gives you a mask and tells you to breathe in. By the time you wake up procedure is complete.'
+
+	act 'Continue':gt 'poli', 'cosmetic1'
+}
+
+$lipMin = {
+	cls
+	minut += 60
+	lip -= 1
+	money -= 25000
+	gs 'stat'
+	'<center><img src="images/etogame/cosmeticSur.jpg"></center>'
+	'Surgeon has you strip, put on a gown and lie down on the table. He gives you a mask and tells you to breathe in. By the time you wake up procedure is complete.'
+
+	act 'Continue':gt 'poli', 'cosmetic1'
+}
+
+$eyePlus = {
+	cls
+	minut += 60
+	glaraz += 1
+	money -= 30000
+	gs 'stat'
+	'<center><img src="images/etogame/cosmeticSur.jpg"></center>'
+	'Surgeon has you strip, put on a gown and lie down on the table. He gives you a mask and tells you to breathe in. By the time you wake up procedure is complete.'
+
+	act 'Continue':gt 'poli', 'cosmetic1'
+}
+
+$eyeMin = {
+	cls
+	minut += 60
+	glaraz -= 1
+	money -= 30000
+	gs 'stat'
+	'<center><img src="images/etogame/cosmeticSur.jpg"></center>'
+	'Surgeon has you strip, put on a gown and lie down on the table. He gives you a mask and tells you to breathe in. By the time you wake up procedure is complete.'
+
+	act 'Continue':gt 'poli', 'cosmetic1'
+}
+
+$lyposuction = {
+	cls
+	minut += 60
+	fat = 0
+	salo = 0
+	money -= 150000
+	gs 'stat'
+	'<center><img src="images/etogame/cosmeticSur.jpg"></center>'
+	'Surgeon has you strip, put on a gown and lie down on the table. He gives you a mask and tells you to breathe in. By the time you wake up procedure is complete.'
+
+	act 'Continue':gt 'poli', 'cosmetic1'
+}
+
+$bImplantA = {
+	cls
+	minut += 60
+	silicone = brSurTemp
+	money -= 150000
+	gs 'stat'
+	'<center><img src="images/etogame/cosmeticSur.jpg"></center>'
+	'Surgeon has you strip, put on a gown and lie down on the table. He gives you a mask and tells you to breathe in. By the time you wake up procedure is complete.'
+
+	act 'Continue':gt 'poli', 'cosmetic1'
+}
+
+
+
+if $ARGS[0] = 'cosmetic1':
+
+	'<center><img src="images/etogame/cosmetic1.jpg"></center>'
+
+	'You are greeted by a nurse that explains what procedures are available.'
+	''
+	'Electrolysis will remove your body hair and stop it from growing.'
+	'Fillable breast implants allow you to fill them after the surgery. We stock silicone you use to fill them.'
+	'String implants slowly absorb your body fluids and grow larger over time. We can also drain it for you if it becomes too large.'
+	''
+	''
+	''
+	if money >= 80000 and lashair = 0:
+		'<a href="exec:dynamic $electrolysis">Electrolysis treatment</a> - 80000'
+		else
+		'Electrolysis treatment - 80000'
+	end
+	if money >= 25000 and lip <= 4:
+		'<a href="exec:dynamic $lipPlus">Lip enlargement surgery</a> - 25000'
+		else
+		'Lip enlargement surgery - 25000'
+	end
+	if money >= 25000 and lip ! 0:
+		'<a href="exec:dynamic $lipMin">Lip reduction surgery</a> - 25000'
+		else
+		'Lip reduction surgery - 25000'
+	end
+	if money >= 30000 and glaraz <= 3:
+		'<a href="exec:dynamic $eyePlus">Eye enlargement surgery</a> - 30000'
+		else
+		'Eye enlargement surgery - 30000'
+	end
+	if money >= 30000 and glaraz ! 0:
+		'<a href="exec:dynamic $eyeMin">Eye reduction surgery</a> - 30000'
+		else
+		'Eye enlargement surgery - 30000'
+	end
+	if money >= 150000 and fat + salo ! 0:
+		'<a href="exec:dynamic $lyposuction">Lyposuction</a> - 150000'
+		else
+		'Lyposuction - 150000'
+	end
+	''
+	if money >= 150000 and silicone ! 0:
+		'<a href="exec:brSurTemp = 0 & stringimplant = 0 & fillimplant = 0 & dynamic $bImplantA">Remove breast implants</a> - 150000'
+		else
+		'Remove breast implants - 150000'
+	end
+	if money >= 150000 and fillimplant = 0 and stringimplant = 0:
+		'<a href="exec:brSurTemp = 10 & dynamic $bImplantA">Get small breast implants</a> - 150000'
+		else
+		'Get small breast implants - 150000'
+	end
+	if money >= 150000 and fillimplant = 0 and stringimplant = 0:
+		'<a href="exec:brSurTemp = 20 & dynamic $bImplantA">Get medium breast implants</a> - 150000'
+		else
+		'Get medium breast implants - 150000'
+	end
+	if money >= 150000 and fillimplant = 0 and stringimplant = 0:
+		'<a href="exec:brSurTemp = 30 & dynamic $bImplantA">Get large breast implants</a> - 150000'
+		else
+		'Get large breast implants - 150000'
+	end
+	if money >= 150000 and fillimplant = 0 and stringimplant = 0:
+		'<a href="exec:brSurTemp = 40 & dynamic $bImplantA">Get XXL breast implants</a> - 150000'
+		else
+		'Get XXL breast implants - 150000'
+	end
+	if money >= 200000 and silicone = 0 and fillimplant = 0 and stringimplant = 0:
+		'<a href="exec:brSurTemp = 20 & fillimplant = 1 & dynamic $bImplantA">Get fillable implants</a> - 200000'
+		else
+		'Get fillable implants - 200000'
+	end
+	if money >= 250000 and silicone = 0 and fillimplant = 0 and stringimplant = 0:
+		'<a href="exec:brSurTemp = 20 & stringimplant = 1 & dynamic $bImplantA">Get string implants</a> - 250000'
+		else
+		'Get string implants - 250000'
+	end
+	if stringimplant = 1 and silicone >= 30 and money >= 2000:'<a href="exec:silicone -= 10 & money -= 2000">Drain string implant</a> - 2000'
+	''
+	if money >= 500:
+		'<a href="exec:siliconeBag += 1 & money -= 500">Buy silicone bag</a> - 500'
+		else
+		'Buy silicone bag - 500'
+	end
+
+
+	act 'back':gt 'poli','start'
 end
 
 --- poli ---------------------------------

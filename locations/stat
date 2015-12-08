@@ -1177,13 +1177,13 @@ if birthday = day and birthmonth = month:pl '<b>Today is your birthday.</b>'
 pl '<b><<$manna>></b>'
 
 if horny >= 90 and tanga = 1:
-	pl'<font color = #FF1493>You feel, that between his legs all <a href="exec:view''images/picb/briefs2.jpg''">soaked</a> from your juices.</font>'
+	pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2.jpg''">soaked</a> from your juices.</font>'
 	elseif horny >= 90 and tanga = 0:
-		pl'<font color = #FF1493>You feel, that between his legs all <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
+		pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
 	elseif horny >= 50 and horny < 90 and tanga = 1:
-		pl'<font color = #DB7093>Are you a little nervous, feeling as though between his legs something nice <a href="exec:view''images/picb/briefs1.jpg''">itchy</a>.</font>'
+		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1.jpg''">itchy</a>.</font> from arousal.'
 	elseif horny >= 50 and horny < 90 and tanga = 0:
-		pl'<font color = #DB7093>Are you a little nervous, feeling as though between his legs something nice <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a>.</font>'
+		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a>.</font> from arousal.'
 end
 
 if ETOmenu = 1:

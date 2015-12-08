@@ -119,15 +119,15 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 	end
 	
 	if $clothingworntype = 'nude' and pregTalkSister = 0 and pregtime > 90:
-	'Sister surprised looking at your belly: "<<$name>>, that you are pregnant-whether? And even from someone you know?.
-	- Oh, sister, likely to become pope <<$boy>>'
-	pregTalkSister = 1
+		'Sister surprised looking at your belly: "<<$name>>, that you are pregnant-whether? And even from someone you know?.
+		- Oh, sister, likely to become pope <<$boy>>'
+		pregTalkSister = 1
 	end
 	
 	if $clothingworntype ! 'nude' and pregTalkSister = 0 and pregtime > 150:
-	'Sister surprised looking at your clothes clearly acting under the belly: "<<$name>>, that you are pregnant-whether? And even from someone you know?.
-	- Oh, sister, likely to become pope <<$boy>>'
-	pregTalkSister = 1
+		'Sister surprised looking at your clothes clearly acting under the belly: "<<$name>>, that you are pregnant-whether? And even from someone you know?.
+		- Oh, sister, likely to become pope <<$boy>>'
+		pregTalkSister = 1
 	end
 
 	if cumlip > 1 or cumface > 0 or cumfrot > 0 and gorslut < 3:
@@ -321,6 +321,7 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 			if sister>=60 and sister<80:'You have a good relationship with her sister.'
 			if sister>=80:'You have a great relationship with my sister.'
 			''
+			gt 'sister'
 		end
 !sisboyparty
 !-1 - don`t go to the party
@@ -382,8 +383,6 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 			exit
 		end
 
-		act '<B>Further</B>':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
-
 		if sister<20:
 			dynamic $d_sister[1]
 			exit
@@ -401,7 +400,7 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 		gs'stat'
 		'<center><img src="images/qwest/alter/sisterQW/sisboyQW_24.jpg"></center>'
 		'You`re both embarrassed after what happened the night, and do not look into each other`s eyes, all-Anya still speaks with you:'
-		'-<<$name[2]>>, smile tells you, Well, you`re a fool, I thought guys like me, and it is much more pleasant to handle your men.'
+		'-<<$name>>, smile tells you, Well, you`re a fool, I thought guys like me, and it is much more pleasant to handle your men.'
 		'You look at the blushing Anya, - Forgive me, I strongly started up, and does not control themselves, I do not know what came over me...'
 		'-Well, I do not mind, so you sometimes so lost control of himself..., He smiled slyly, You smiled at her...'
 
@@ -681,7 +680,6 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 		cls
 		sisterQW = 1
 		gs'stat'
-
 		'<center><b><font color = maroon>Anya</font></b></center>'
 		'<center><img src="images/qwest/alter/sister.jpg"></center>'
 		'Anya looks at you and laughs "Well, <<$name>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
@@ -724,6 +722,7 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 			act '<B>Move away</B>':gt 'sister'
 		end
 	end
+
 else
 	'- All, <<$name>>, time to sleep.'
 end

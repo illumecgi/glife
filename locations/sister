@@ -670,59 +670,58 @@ if hour >= 7 and hour < 24 and narkossister = 0:
 				'- Sister, i adore you, I really enjoyed our evening with him.'
 				'- Yes me too happy, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
 				sisboytrioQW = 0
-			end
+
 
 			act 'Finish':SiSonWork = 0 & SiSgdk = 0 & gt'sister'
 		end
-	end
 
-	if SisterKnowMastr > 0 and sisterQW = 0:
-		cls
-		sisterQW = 1
-		gs'stat'
-		'<center><b><font color = maroon>Anya</font></b></center>'
-		'<center><img src="images/qwest/alter/sister.jpg"></center>'
-		'Anya looks at you and laughs "Well, <<$name>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
-
-		act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
-	end
-
-	if sisterdialog = 2:
-		cls
-		cla
-		gs'stat'
-		'<center><b><font color = maroon>Anya</font></b></center>'
-		'<center><img src="images/qwest/alter/sobir.jpg"></center>'
-		'As the room goes, I am going to work, your sister Anya.'
-		'Anya, without turning to you, speaks: "<<$name>>, I`m so late, do not distract!"'
-		act '<B>Move away</B>':gt $loc, $metka
-	end
-
-	!going for a walk
-	if sisterdialog = 3:
-		cls
-		cla
-		gs'stat'
-		'<center><b><font color = maroon>Anya</font></b></center>'
-		'<center><img src="images/qwest/alter/progulka.jpg"></center>'
-		'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
-		'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
-		act '<B>Move away</B>':gt $loc, $metka
-	end
-
-	if sister >= 80 and sisterknowslut > 0 and narkossister = 0:
-		act 'Talk about sex':
-			cla
+		if SisterKnowMastr > 0 and sisterQW = 0:
 			cls
+			sisterQW = 1
 			gs'stat'
-			minut+=rand(10,15)
-			horny+=RAND(5,10)
-			sister+=1
-			dynamic $d_sistersexstories[1]
-			act '<B>Move away</B>':gt 'sister'
+			'<center><b><font color = maroon>Anya</font></b></center>'
+			'<center><img src="images/qwest/alter/sister.jpg"></center>'
+			'Anya looks at you and laughs "Well, <<$name>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
+
+			act 'Move away':SiSonWork = 0 & SiSgdk = 0 & gt $loc, $metka
+		end
+
+		if sisterdialog = 2:
+			cls
+			cla
+			gs'stat'
+			'<center><b><font color = maroon>Anya</font></b></center>'
+			'<center><img src="images/qwest/alter/sobir.jpg"></center>'
+			'As the room goes, I am going to work, your sister Anya.'
+			'Anya, without turning to you, speaks: "<<$name>>, I`m so late, do not distract!"'
+			act '<B>Move away</B>':gt $loc, $metka
+		end
+
+		!going for a walk
+		if sisterdialog = 3:
+			cls
+			cla
+			gs'stat'
+			'<center><b><font color = maroon>Anya</font></b></center>'
+			'<center><img src="images/qwest/alter/progulka.jpg"></center>'
+			'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
+			'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
+			act '<B>Move away</B>':gt $loc, $metka
+		end
+
+		if sister >= 80 and sisterknowslut > 0 and narkossister = 0:
+			act 'Talk about sex':
+				cla
+				cls
+				gs'stat'
+				minut+=rand(10,15)
+				horny+=RAND(5,10)
+				sister+=1
+				dynamic $d_sistersexstories[1]
+				act '<B>Move away</B>':gt 'sister'
+			end
 		end
 	end
-
 else
 	'- All, <<$name>>, time to sleep.'
 end

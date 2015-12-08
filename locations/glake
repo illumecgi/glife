@@ -86,6 +86,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 
 		'You walk along the beach.'
 		act 'Finish':gt'glake'
+
 	end
 
 	if $clothingworntype ! 'nude' and exhibi > 0 or modelfoto > 0 or film > 0 or stripdance > 0 or stripdancesum > 0:
@@ -125,22 +126,12 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 			'You can not swim in clothes. You will ruin them.'
 			'And no clothes can not - there are too many prying eyes.'
 			'Do you need a swimsuit.'
-			act 'Get out of the water':gt'glake'
+			act 'Return':gt'glake'
 		end
 	end
-	if sunWeather = 1 and hour>=6 and hour<=20:
+	if sunWeather = 1:
 		act 'Sunbathe 1 h':
-			if $clothingworntype = 'nude':
-				cla
-				*clr
-				willpower -= 5
-				manna -= 5 
-				'<center><img src="images/lmps/dogcaine.jpg"></center>'
-				'You just had to lie down together sunbathing, as there nowhere appeared a-the mongrel, and began to sniff you between the legs.'
-				'You become uncomfortable and you have decided to get rid of it.'
-				act 'Drive away':gt'glake'
-
-			elseif bikini = 1:
+			if bikini = 1:
 				cla
 				*clr
 				minut = minut + 60
@@ -149,6 +140,17 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 				gs'stat'
 				gs'time'
 				'<center><img src="images/pics/zagar.jpg"></center>'
+				if $clothingworntype = 'nude':
+					cla
+					*clr
+					willpower -= 5
+					manna -= 5 
+					'<center><img src="images/lmps/dogcaine.jpg"></center>'
+					'You just had to lie down together sunbathing, as there nowhere appeared a-the mongrel, and began to sniff you between the legs.'
+					'You become uncomfortable and you have decided to get rid of it.'
+					act 'Drive away':gt'glake'
+				end
+
 				if krem = 0:
 					tan = tan + 1
 					
@@ -172,94 +174,92 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 							dynamic $LBD_ride
 							dynamic $LBD_go
 						end
-					end
-				    if belgangQW=0:
-						'Bold and bald guy with pounds of gold cross on a thick chain, I sat down next to you and scratched his belly covered with tattoos. "Hello! Do not interfere?"'
-						act'Lunatic':
-							cls
-							minut+=5
-							gs'stat'
-							'You frowned and said in a firm voice'
-							'- Lunatic.'
-							'Bald immediately responded with a challenge.'
-							'- E, I do not vkuril, This cho, your place, something?'
-							
-							act'Yes, my!':
+						if belgangQW=0:
+							'Bold and bald guy with pounds of gold cross on a thick chain, I sat down next to you and scratched his belly covered with tattoos. "Hello! Do not interfere?"'
+							act'Lunatic':
 								cls
 								minut+=5
 								gs'stat'
-								'You responded indignantly squirt'
-								'- Yes, this is my spot! Then the first I have!'
-								'Near you sat on his haunches guy with a gloomy death and impaled on his chest tombs, and he said grimly staring you in the face.'
-								'- The place is only prostitutes and conductors. And this is not fucking bus. So what do the findings, boys.'
-								'The bald man smiled putting your hand on the chest and squeezing under the teat asked swimsuit.'
-								'- And for what cho?'
+								'You frowned and said in a firm voice'
+								'- Lunatic.'
+								'Bald immediately responded with a challenge.'
+								'- E, I do not vkuril, This cho, your place, something?'
+								
+								act'Yes, my!':
+									cls
+									minut+=5
+									gs'stat'
+									'You responded indignantly squirt'
+									'- Yes, this is my spot! Then the first I have!'
+									'Near you sat on his haunches guy with a gloomy death and impaled on his chest tombs, and he said grimly staring you in the face.'
+									'- The place is only prostitutes and conductors. And this is not fucking bus. So what do the findings, boys.'
+									'The bald man smiled putting your hand on the chest and squeezing under the teat asked swimsuit.'
+									'- And for what cho?'
+									dynamic $LBD_go
+
+									dynamic $LBD_hand
+
+								end
 								dynamic $LBD_go
-								     
-								dynamic $LBD_hand
-								     
 							end
 								 
-						end
-				             
-						act'Do not interfere':
-							cls
-							minut+=5
-							gs'stat'
-							'You shrugged and tried to escape from these lads eyes closed. But it was not there, you feel, you stomach that is gently stroking and tickling. I opened my eyes you will see, bellied Urca that leads you to a blade of grass torn stomach.'
-							dynamic $LBD_go
-							dynamic $LBD_hand
-							
-							act'Lie':
+							act'Do not interfere':
 								cls
 								minut+=5
 								gs'stat'
-								'You have tried to ignore and just continued to lie on the sand. Meanwhile, are massive threw a blade of grass and began to stroke you with their sweaty palms on his stomach and suddenly grabbed you by the chest.'
-								'- Come to me baby. You will not regret. With me you`ll be.'
+								'You shrugged and tried to escape from these lads eyes closed. But it was not there, you feel, you stomach that is gently stroking and tickling. I opened my eyes you will see, bellied Urca that leads you to a blade of grass torn stomach.'
+								dynamic $LBD_go
 								dynamic $LBD_hand
-								dynamic $LBD_ride
+								
+								act'Lie':
+									cls
+									minut+=5
+									gs'stat'
+									'You have tried to ignore and just continued to lie on the sand. Meanwhile, are massive threw a blade of grass and began to stroke you with their sweaty palms on his stomach and suddenly grabbed you by the chest.'
+									'- Come to me baby. You will not regret. With me you`ll be.'
+									dynamic $LBD_hand
+									dynamic $LBD_ride
+									end
 								end
-							end
 				             
 							dynamic $LBD_go
 						end
 						
 						exit
-					end
-					if tipelakeboyrand>5 and tipelakeboyrand<=30:
-						gs'BnameGen'
-						'While you are sunbathing you sit down three guys.'
+						end
+						if tipelakeboyrand>5 and tipelakeboyrand<=30:
+							gs'BnameGen'
+							'While you are sunbathing you sit down three guys.'
+							
+							act 'Escape':gt'glake'
+						end
 						
-						act 'Escape':gt'glake'
-					end
-					
-					if tipelakeboyrand>30 and tipelakeboyrand<=80:
-						gs'BnameGen'
-						gs'LakeBoyZ'
-						'While you are sunbathing you sits a guy.'
-						'Man is represented as <<$bname>> and asks what`s your name.'
-					
-						act 'Escape':gt'glake'
-						dynamic $gL_boy_z
+						if tipelakeboyrand>30 and tipelakeboyrand<=80:
+							gs'BnameGen'
+							gs'LakeBoyZ'
+							'While you are sunbathing you sits a guy.'
+							'Man is represented as <<$bname>> and asks what`s your name.'
+						
+							act 'Escape':gt'glake'
+							dynamic $gL_boy_z
 
+						end
+
+						if tipelakeboyrand>80:
+							'While you are sunbathing you sit down, three young guys in appearance obviously Caucasians.'
+							act 'Escape':gt'glake'
+						end
 					end
-					
-					if tipelakeboyrand>80:
-						'While you are sunbathing you sit down, three young guys in appearance obviously Caucasians.'
-						act 'Escape':gt'glake'
-					end
+
+					act 'Logout':gt'glake'
 				end
-				 
-				act 'Logout':gt'glake'
-			end
 
-			else
+			if bikini = 0:
 				cla
 				
 				'You can not sunbathe in your clothes.'
 				act'Logout':gt'glake'
 			end
-			
 		end
 	end	
 	act'On a wild beach':gt'gLakeNude'
@@ -373,6 +373,5 @@ act'Go in Pavlovsk':
 		act'Ago':gt'glake'
 	end
 end
-
 --- gLake ---------------------------------
 

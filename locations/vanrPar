@@ -127,6 +127,8 @@ act 'Wash in the bathroom (1:00)':
 	dynamic $brother_voyeurism
 end
 
+if pirsTongue + pirsLip + pirsEar + pirsNose + pirsEyebrow + pirsNipple + pirsNavel + pirsLabia + pirsClit ! 0:gs 'stat' & '<a href="exec:dynamic $pirManage">Manage Piercings</a>'
+
 ! WD: add Underwear change
 if tanga = 1:
 	act 'Remove Underwear':

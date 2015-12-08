@@ -18,7 +18,17 @@ $objdescrip = {
 	end
 	!!!
 
-	if birthday > 0 and birthmonth > 0:pl 'Your date of birth is <<birthday>>.0<<birthmonth>>.<<birthyear>>.'
+	if birthday <= 9 and birthmonth <= 9:
+		$birthdayD = '0<<birthday>>.0<<birthmonth>>.<<birthyear>>.'
+	elseif birthday > 9 and birthmonth <= 9:
+		$birthdayD = '<<birthday>>.0<<birthmonth>>.<<birthyear>>.'
+	elseif birthday > 9 and birthmonth > 9:
+		$birthdayD = '<<birthday>>.<<birthmonth>>.<<birthyear>>.'
+	else
+		$birthdayD = '0<<birthday>>.<<birthmonth>>.<<birthyear>>.'
+	end
+
+	pl 'Your date of birth is <<$birthdayD>>'
 
 	pl 'You are <<rost>> cm tall and weigh <<ves>> kgs.'
 	pl '<<$body>>'
@@ -334,44 +344,45 @@ $reputation = {
 		elseif GorSlut = 4:pl 'In the Pavlovo you are known to have fucked several boys.'
 		elseif GorSlut = 5:pl 'In the Pavlovo you are known the slut that would do anything.'
 		elseif GorSlut = 6:pl 'In the Pavlovo you are known as a prostitute who will take money for most extreme sex acts.'
-		else pl'In Pavlovo you have a good reputation of a decent girl'
+		else
+			if storyline = 1:pl'In Pavlovo you have a good reputation of a decent girl'
 		end
 
 	nl
 	end
-	if rinslut > 1 and kavslut > 0:pl'In the residential area of ​​you know as a whore, bed for Caucasians'
-	if afra > 80: pl'The student hostel you are known as bedding for blacks'
-	if opusk > 0: pl'In the sleeping area all clear for you guys know, you lowered huesoska'
+	if rinslut > 1 and kavslut > 0:pl'In the residential area of ​​you know as a whore, who sleeps with Caucasians.'
+	if afra > 80: pl'In the student hostel, you are known for bedding blacks.'
+	if opusk > 0: pl'In the sleeping area it is well known by all the guys that you are a whore.'
 	if StoryLine = 1:		
 		nl
 		if motherKnowSpravka > 0 and motherKnowWhore > 0:
-			pl'Your mother knows, that you do not devstvenitsa and considers you a slut'
+			pl'Your mother knows, that you are sexually active and considers you a slut.'
 		elseif motherKnowWhore > 0:
-			pl'Your mother thinks you are a whore'
+			pl'Your mother thinks you are a whore.'
 		elseif motherKnowSpravka > 0:
-			pl'Your mother knows, that you do not devstvenitsa'
+			pl'Your mother knows that you are sexually active.'
 		else
-			pl'Your mother thinks, that you are a virgin'
+			pl'Your mother thinks that you are a virgin'
 		end
 		if evgenQW = 4 and brotherSex = 1:
-			pl'Your brother thinks you are a total whore and huesoska'
+			pl'Your brother thinks you are a total whore.'
 		elseif brotherSex = 1:
-			pl'Your brother thinks you slut'
+			pl'Your brother thinks you are a slut.'
 		elseif evgenQW = 3:
-			pl'Your brother thinks you slut'
+			pl'Your brother thinks you are a slut.'
 		elseif brotherknowslut = 1:
-			pl'Your brother saw semen on your body and thinks, you give'
+			pl'Your brother saw semen on your body and thinks you fuck around.'
 		elseif brotherknowslut = 2:
-			pl'Your brother saw you in the park aspirated Gopnik'
+			pl'Your brother saw you in the park screwing Gopnik.'
 		else
-			pl'Your brother , I have a good opinion'
+			pl'Your brother has a good opinion of you.'
 		end
 		if sisterknowslut > 1 and sisboypartyQW = 2:
-			pl'Your sister says you otvyaznoy slut'
+			pl'Your sister says you are a slut'
 		elseif sisterknowslut > 0:
-			pl'Your sister knows, you give'
+			pl'Your sister knows, you sleep around.'
 		else
-			pl'Your sister is a good opinion about you'
+			pl'Your sister has a good opinion of you.'
 		end
 	end
 }
@@ -476,17 +487,17 @@ $din_cheat_menu_permanent = {
 	gs'stat'
 	clr
 	if cheatWork = 0:$cheatWork = 'OFF'
-	if cheatWork = 1:$cheatWork = '<b>INCLUDED</b>'
+	if cheatWork = 1:$cheatWork = '<b>ON</b>'
 	if cheatHapri = 0:$cheatHapri = 'OFF'
-	if cheatHapri = 1:$cheatHapri = '<b>INCLUDED</b>'
+	if cheatHapri = 1:$cheatHapri = '<b>ON</b>'
 	if cheatKlisma = 0:$cheatKlisma = 'OFF'
-	if cheatKlisma = 1:$cheatKlisma = '<b>INCLUDED</b>'
+	if cheatKlisma = 1:$cheatKlisma = '<b>ON</b>'
 	if cheatNomakeup = 0:$cheatNomakeup = 'OFF'
-	if cheatNomakeup = 1:$cheatNomakeup = '<b>INCLUDED</b>'
+	if cheatNomakeup = 1:$cheatNomakeup = '<b>ON</b>'
 	if cheatNosweat = 0:$cheatNosweat = 'OFF'
-	if cheatNosweat = 1:$cheatNosweat = '<b>INCLUDED</b>'
+	if cheatNosweat = 1:$cheatNosweat = '<b>ON</b>'
 	if cheatNoEat = 0:$cheatNoEat = 'OFF'
-	if cheatNoEat = 1:$cheatNoEat = '<b>INCLUDED</b>'
+	if cheatNoEat = 1:$cheatNoEat = '<b>ON</b>'
 	pl'<center><a href="exec:dynamic $objcheat_menu"><b>Cheat menu</b></a></center>'
 	pl''
 	pl'<a href="exec:dynamic $din_cheat_work">Disable the requirement of labor</a>: <<$cheatWork>>'
@@ -506,7 +517,7 @@ $din_cheat_menu_permanent = {
 	pl'<a href="exec:horny = 0 & dynamic $din_cheat_menu_permanent">Soothe</a>'
 act 'Body Modification':
 	cla
-	act 'Thalia':
+	act 'Waist':
 		cla
 		dounspell = 1
 		TaliaDoun = input ("Waist in cm?")
@@ -539,8 +550,10 @@ $din_cheat_menu_look = {
 	if vidage >= 0:pl'<a href="exec:dynamic $din_cheat_agel">Change Visible age</a>'
 	pl''
 	pl 'you <<tits>> breast size'
-	if tits => 0 and tits < 6:pl'<a href="exec:silicone += 5 & dynamic $din_cheat_menu_look">Click to enlarge breasts</a>'
-	if tits => 1:pl'<a href="exec:silicone -= 5 & dynamic $din_cheat_menu_look">Reduce chest</a>'
+	if tits => 0 and tits < 6:pl'<a href="exec:silicone += 5 & dynamic $din_cheat_menu_look">Enlarge breasts(silicone)</a>'
+	if silicone => 1:pl'<a href="exec:silicone -= 5 & dynamic $din_cheat_menu_look">Shrink breasts(silicone)</a>'
+	if tits => 0 and tits < 6:pl'<a href="exec:nbsize += 5 & dynamic $din_cheat_menu_look">Enlarge breasts(natural)</a>'
+	if nbsize => 1:pl'<a href="exec:nbsize -= 5 & dynamic $din_cheat_menu_look">Shrink breasts(natural)</a>'
 	pl''
 	pl'<<$lip>>'
 	if lip < 4:pl'<a href="exec:lip += 1 & dynamic $din_cheat_menu_look">Enlarge lips</a>'
@@ -557,6 +570,10 @@ $din_cheat_menu_look = {
 	if resnic > 0:pl'<a href="exec:resnic -= 1 & dynamic $din_cheat_menu_look">Zoom lashes</a>'
 	if glaraz < 3:pl'<a href="exec:glaraz += 1 & dynamic $din_cheat_menu_look">Increase the size of the eye</a>'
 	if glaraz > 0:pl'<a href="exec:glaraz -= 1 & dynamic $din_cheat_menu_look">Reduce the size of the eye</a>'
+	pl''
+	pl'<<$throat>>'
+	if throat <= 31:pl'<a href="exec:throat += 5 & dynamic $din_cheat_menu_look">Increase throat capacity</a>'
+	if throat >= 5:pl'<a href="exec:throat -= 5 & dynamic $din_cheat_menu_look">Decrease throat capacity</a>'
 	pl''
 	pl'<<$vagina>>'
 	if vagina > 0:pl'<a href="exec:vagina = 0 & dynamic $din_cheat_menu_look">Lost virginity</a>'
@@ -629,7 +646,7 @@ $din_cheat_menu_stats = {
 	pl'Intelligence (<<intel>>): <a href="exec:intel += 1 & dynamic $din_cheat_menu_stats">+1</a> <a href="exec:intel += 5 & dynamic $din_cheat_menu_stats">+5</a> <a href="exec:intel += 10 & dynamic $din_cheat_menu_stats">+10</a> <a href="exec:intel += 25 & dynamic $din_cheat_menu_stats">+25</a> <a href="exec:intel -= 1 & dynamic $din_cheat_menu_stats">-1</a> <a href="exec:intel -= 5 & dynamic $din_cheat_menu_stats">-5</a> <a href="exec:intel -= 10 & dynamic $din_cheat_menu_stats">-10</a> <a href="exec:intel -= 25 & dynamic $din_cheat_menu_stats">-25</a>'
 	pl''
 	pl'Dominance (<<dom>>): <a href="exec:dom += 1 & dynamic $din_cheat_menu_stats">+1</a> <a href="exec:dom += 5 & dynamic $din_cheat_menu_stats">+5</a> <a href="exec:dom += 10 & dynamic $din_cheat_menu_stats">+10</a> <a href="exec:dom -= 1 & dynamic $din_cheat_menu_stats">-1</a> <a href="exec:dom -= 5 & dynamic $din_cheat_menu_stats">-5</a> <a href="exec:dom -= 10 & dynamic $din_cheat_menu_stats">-10</a>'
-	pl'Sabmissivnost (<<sub>>): <a href="exec:sub += 1 & dynamic $din_cheat_menu_stats">+1</a> <a href="exec:sub += 5 & dynamic $din_cheat_menu_stats">+5</a> <a href="exec:sub += 10 & dynamic $din_cheat_menu_stats">+10</a> <a href="exec:sub -= 1 & dynamic $din_cheat_menu_stats">-1</a> <a href="exec:sub -= 5 & dynamic $din_cheat_menu_stats">-5</a> <a href="exec:sub -= 10 & dynamic $din_cheat_menu_stats">-10</a>'
+	pl'Submissiveness (<<sub>>): <a href="exec:sub += 1 & dynamic $din_cheat_menu_stats">+1</a> <a href="exec:sub += 5 & dynamic $din_cheat_menu_stats">+5</a> <a href="exec:sub += 10 & dynamic $din_cheat_menu_stats">+10</a> <a href="exec:sub -= 1 & dynamic $din_cheat_menu_stats">-1</a> <a href="exec:sub -= 5 & dynamic $din_cheat_menu_stats">-5</a> <a href="exec:sub -= 10 & dynamic $din_cheat_menu_stats">-10</a>'
 	pl''
 	if beg >= 0:pl'<a href="exec:beg += 25 & dynamic $din_cheat_menu_stats">Running+25: <<beg>></a>'
 	if beg > 0:pl'<a href="exec:beg -= 25 & dynamic $din_cheat_menu_stats">Running-25: <<beg>></a>'
@@ -684,66 +701,66 @@ $din_cheat_menu_reputation = {
 	pl''
 	if nastjaQW >= 0:
     pl '<a href="exec:nastjaQW += 10 & dynamic $din_cheat_menu_reputation">Friendship with Nastya: <<nastjaQW>></a>'
-    pl '<a href="exec:nastjaQW = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with a nice girl: <<nastjaQW>></a>'
+    pl '<a href="exec:nastjaQW = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Nastya: <<nastjaQW>></a>'
 	end
 	if kat >= 0:
-    pl'<a href="exec:kat += 10 & dynamic $din_cheat_menu_reputation">Friendship with Kate: <<kat>></a>'
-    pl '<a href="exec:kat = 0 & dynamic $din_cheat_menu_reputation">Zero friendship with Kate: <<kat>></a>'
+    pl'<a href="exec:kat += 10 & dynamic $din_cheat_menu_reputation">Friendship with Kat: <<kat>></a>'
+    pl '<a href="exec:kat = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Kat: <<kat>></a>'
 	end
 	if vika >= 0:
     pl'<a href="exec:vika += 10 & dynamic $din_cheat_menu_reputation">Friendship with Vika: <<vika>></a>'
-    pl '<a href="exec:vika = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Vika: <<vika>></a>'
+    pl '<a href="exec:vika = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Vika: <<vika>></a>'
 	end
 	if Irina >= 0:
     pl'<a href="exec:Irina += 10 & dynamic $din_cheat_menu_reputation">Friendship with Irina: <<Irina>></a>'
-    pl '<a href="exec:Irina = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Irina: <<Irina>></a>'
+    pl '<a href="exec:Irina = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Irina: <<Irina>></a>'
 	end
 	if Tamara >= 0:
     pl'<a href="exec:Tamara += 10 & dynamic $din_cheat_menu_reputation">Friendship with Tamara: <<Tamara>></a>'
-    pl '<a href="exec:Tamara = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Tamara: <<Tamara>></a>'
+    pl '<a href="exec:Tamara = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Tamara: <<Tamara>></a>'
 	end
 	if alla >= 0:
     pl'<a href="exec:alla += 10 & dynamic $din_cheat_menu_reputation">Friendship with Alla: <<alla>></a>'
-    pl '<a href="exec:alla = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Alla: <<alla>></a>'
+    pl '<a href="exec:alla = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Alla: <<alla>></a>'
 	end
 	if masha >= 0:
     pl'<a href="exec:masha += 10 & dynamic $din_cheat_menu_reputation">Friendship with Masha: <<masha>></a>'
-    pl '<a href="exec:masha = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Masha: <<masha>></a>'
+    pl '<a href="exec:masha = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Masha: <<masha>></a>'
 	end
 	if Givi >= 0:
     pl'<a href="exec:Givi += 10 & dynamic $din_cheat_menu_reputation">Friendship with Givi Karapetovich: <<Givi>></a>'
-    pl '<a href="exec:Givi = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Givi: <<Givi>></a>'
+    pl '<a href="exec:Givi = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Givi: <<Givi>></a>'
 	end
 	if Ashot >= 0:
     pl'<a href="exec:Ashot += 10 & dynamic $din_cheat_menu_reputation">Friendship with Ashot: <<Ashot>></a>'
-    pl '<a href="exec:Ashot = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Ashot: <<Ashot>></a>'
+    pl '<a href="exec:Ashot = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Ashot: <<Ashot>></a>'
 	end
 	if Dmitry >= 0:
     pl'<a href="exec:Dmitry += 10 & dynamic $din_cheat_menu_reputation">Friendship Dima: <<Dmitry>></a>'
-    pl '<a href="exec:Dmitry = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Dima: <<Dmitry>></a>'
+    pl '<a href="exec:Dmitry = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Dima: <<Dmitry>></a>'
 	end
 	if afra >= 0:
     pl'<a href="exec:afra += 10 & dynamic $din_cheat_menu_reputation">Friendship with blacks: <<afra>></a>'
-    pl '<a href="exec:afra = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with blacks: <<afra>></a>'
+    pl '<a href="exec:afra = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with blacks: <<afra>></a>'
 	end
 	if JenyaLC >= 0:
-    pl'<a href="exec:JenyaLC += 10 & dynamic $din_cheat_menu_reputation">Friendship with Zhenya: <<JenyaLC>></a>'
-    pl '<a href="exec:JenyaLC = 0 & dynamic $din_cheat_menu_reputation">To reset a friendship with Eugene: <<JenyaLC>></a>'
+    pl'<a href="exec:JenyaLC += 10 & dynamic $din_cheat_menu_reputation">Friendship with Eugene: <<JenyaLC>></a>'
+    pl '<a href="exec:JenyaLC = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Eugene: <<JenyaLC>></a>'
 	end
 	if trenerepa >= 0:
-    pl'<a href="exec:trenerepa += 10 & dynamic $din_cheat_menu_reputation">The reputation of the coach: <<trenerepa>></a>'
-    pl '<a href="exec:trenerepa = 0 & dynamic $din_cheat_menu_reputation">To reset the reputation of the coach: <<trenerepa>></a>'
+    pl'<a href="exec:trenerepa += 10 & dynamic $din_cheat_menu_reputation">Relationship with coach: <<trenerepa>></a>'
+    pl '<a href="exec:trenerepa = 0 & dynamic $din_cheat_menu_reputation">Reset relationship with coach: <<trenerepa>></a>'
 	end
 	if father >= 0:
-    pl'<a href="exec:father += 10 & dynamic $din_cheat_menu_reputation">Friendship with the father: <<father>></a>'
-    pl '<a href="exec:father = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with his father: <<father>></a>'
+    pl'<a href="exec:father += 10 & dynamic $din_cheat_menu_reputation">Friendship with father: <<father>></a>'
+    pl '<a href="exec:father = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with father: <<father>></a>'
 	end
 	if serge_shulgin >= 0:
-	pl'<a href="exec:serge_shulgin += 10 & dynamic $din_cheat_menu_reputation">Friendship c Sergei Shulgin: <<serge_shulgin>></a>'
+	pl'<a href="exec:serge_shulgin += 10 & dynamic $din_cheat_menu_reputation">Friendship with Sergei Shulgin: <<serge_shulgin>></a>'
     pl '<a href="exec:serge_shulgin = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Sergei Shulgin: <<serge_shulgin>></a>'
 	end
 	if vasya_shulgin >= 0:
-	pl'<a href="exec:vasya_shulgin += 10 & dynamic $din_cheat_menu_reputation">Friendship c Vasya Shulgin: <<vasya_shulgin>></a>'
+	pl'<a href="exec:vasya_shulgin += 10 & dynamic $din_cheat_menu_reputation">Friendship with Vasya Shulgin: <<vasya_shulgin>></a>'
     pl '<a href="exec:vasya_shulgin = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Vasya Shulgin: <<vasya_shulgin>></a>'
 	end
     if bfA > 0:
@@ -762,9 +779,9 @@ $din_cheat_menu_reputation = {
 	pl''
 	if GorSlut > 0:pl'In Pavlovo you are known as <<$gnikname>> (<<GorSlut>>)'
 	if GorSlut = 0:pl'You have a good reputation in Pavlovsk (0)'
-	if GorSlut ! 1:pl'<a href="exec:GorSlut = 1 & dynamic $din_cheat_menu_reputation">Change reputation "Davalka" (1)</a>'
-	if GorSlut ! 2:pl'<a href="exec:GorSlut = 2 & dynamic $din_cheat_menu_reputation">Change reputation "Vaflersha" (2)</a>'
-	if GorSlut ! 3:pl'<a href="exec:GorSlut = 3 & dynamic $din_cheat_menu_reputation">Change reputation "Total huesoska" (3)</a>'
+	if GorSlut ! 1:pl'<a href="exec:GorSlut = 1 & dynamic $din_cheat_menu_reputation">Change reputation "Slut" (1)</a>'
+	if GorSlut ! 2:pl'<a href="exec:GorSlut = 2 & dynamic $din_cheat_menu_reputation">Change reputation "Whore" (2)</a>'
+	if GorSlut ! 3:pl'<a href="exec:GorSlut = 3 & dynamic $din_cheat_menu_reputation">Change reputation "Cumdumpster" (3)</a>'
 	if GorSlut ! 4:pl'<a href="exec:GorSlut = 4 & dynamic $din_cheat_menu_reputation">Change reputation "Total hole" (4)</a>'
 	if GorSlut ! 5:pl'<a href="exec:GorSlut = 5 & dynamic $din_cheat_menu_reputation">Change reputation "Sunken slut" (5)</a>'
 	if GorSlut ! 6:pl'<a href="exec:GorSlut = 6 & dynamic $din_cheat_menu_reputation">Change reputation "Prostitute" (6)</a>'
@@ -777,16 +794,16 @@ $din_cheat_menu_documents = {
 	clr
 	pl'<center><a href="exec:dynamic $objcheat_menu"><b>Cheat menu</b></a></center>'
 	pl''
-	if SchoolAtestat = 0:pl'<a href="exec:SchoolAtestat = 1 & dynamic $din_cheat_menu_documents">Get Atestat</a>'
-	if SchoolAtestat = 1:pl'Already have Atestat'
+	if SchoolAtestat = 0:pl'<a href="exec:SchoolAtestat = 1 & dynamic $din_cheat_menu_documents">Get School Certificate</a>'
+	if SchoolAtestat = 1:pl'Already have a School Certificate'
 	if diplom = 0:pl'<a href="exec:diplom = 1 & dynamic $din_cheat_menu_documents">Get Diploma</a>'
-	if diplom = 1:pl'You already have a diploma'
+	if diplom = 1:pl'You already have a Diploma'
 	if secrdiplom = 0:pl'<a href="exec:secrdiplom = 1 & dynamic $din_cheat_menu_documents">Get Secretarial Diploma</a>'
-	if secrdiplom = 1:pl'You already have a diploma Secretary'
-	if masash < 10:pl'<a href="exec:masash = 10 & dynamic $din_cheat_menu_documents">Get Certificate Masseur</a>'
-	if masash >= 10:pl'You already have a certificate masseur'
-	if prava = 0:pl'<a href="exec:prava = 1 & dynamic $din_cheat_menu_documents">Get Rights</a>'
-	if prava = 1:pl'You already have rights'
+	if secrdiplom = 1:pl'You already have a Secretarial Diploma'
+	if masash < 10:pl'<a href="exec:masash = 10 & dynamic $din_cheat_menu_documents">Get Masseuse Certificate</a>'
+	if masash >= 10:pl'You already have a Masseuse Certificate'
+	if prava = 0:pl'<a href="exec:prava = 1 & dynamic $din_cheat_menu_documents">Get Driving Licence</a>'
+	if prava = 1:pl'You already have Driving Licence'
 }
 
 $din_cheat_menu_time = {
@@ -934,7 +951,7 @@ $objcheat_menu = {
 	pl''
 	pl'<a href="exec:dynamic $din_cheat_menu_permanent"><b>Recurrent</b></a>'
 	pl'<a href="exec:dynamic $din_cheat_menu_look"><b>Appearance</b></a>'
-	pl'<a href="exec:dynamic $din_cheat_menu_stats"><b>Characteristics of</b></a>'
+	pl'<a href="exec:dynamic $din_cheat_menu_stats"><b>Attributes and skills</b></a>'
 	pl'<a href="exec:dynamic $din_cheat_menu_reputation"><b>Relationships and Reputation</b></a>'
 	pl'<a href="exec:dynamic $din_cheat_menu_documents"><b>Documents</b></a>'
 	pl'<a href="exec:dynamic $din_cheat_menu_time"><b>Manipulating time</b></a>'
@@ -943,6 +960,12 @@ $objcheat_menu = {
 	pl'<a href="exec:health = vital*10 + stren*5+1000 & willpower = intel*5 + will*5+1000 & manna = (intel*magik) + magik*100 + vital*10 + rikudo & vgape = 0 & agape = 0 & nippain = 0 & dynamic $objcheat_menu">Full restoration of health, manna, Reason.</a>'
 	pl'<a href="exec:dynamic $din_cheat_money">Change money</a>'
 	pl'<a href="exec:money = 0 & dynamic $din_cheat">Zero money</a>'
+	NL
+   	pl'<a href="exec:gt''gorodok''">Teleport to Pavlovsky</a>'
+   	pl'<a href="exec:gt''street''">Teleport to City</a>'
+   	pl'<a href="exec:gt''gadukino''">Teleport to Gadukino</a>'
+   	pl'<a href="exec:gt''dachi''">Teleport to Suburban Cooperative</a>'
+	pl'<b>Warning!</b> Teleporting while in event is likely to break your game!'
 }
 
 $objmagic = {
@@ -1303,12 +1326,12 @@ $objbloknot = {
 	if film > 0:pl'You are working under the name of pornographic actress <<$pfname>>, Filmography:'
 	pl'<<$pfilmhistory>>'
 	nl
-	if bumtolik = 4:pl'The service is to help the homeless in the northern region.'
+	if bumtolik = 4:pl'You have been asked to help the homeless at the Mercy Clinic in the northern region.'
 	nl
-	if bumtolik = 5:pl'Are you a volunteer in the service of the homeless. Working hours with 9 to 17, Weekend Saturday and Sunday.'
+	if bumtolik = 5:pl'You volunteer at the Mercy Clinic working with the homeless. Working hours with 9 to 17, Saturday and Sunday.'
 	nl
-	if husband > 0:pl'Are you married <<husbanday>> days. Your husband <<$husName>> <<$husBody>> <<$husFat>> <<$husHair>>. Member <<husDick>> Relationship <<husband>>'
-	if kid > 0:pl'Do you have child <<$kidname>>, age <<kid>> days.'
+	if husband > 0:pl'You have been married for <<husbanday>> days. Your husband <<$husName>> <<$husBody>> <<$husFat>> <<$husHair>>. Member <<husDick>> Relationship <<husband>>'
+	if kid > 0:pl'You have a child: <<$kidname>>, aged <<kid>> days.'
 	nl
 	if $bfsex > 0:pl'<<$bfsex>>'
 	nl

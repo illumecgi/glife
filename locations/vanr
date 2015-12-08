@@ -80,6 +80,9 @@ if shampoo > 0:
 else
 	'You''ve ran out of shampoo.'
 end
+
+if pirsTongue + pirsLip + pirsEar + pirsNose + pirsEyebrow + pirsNipple + pirsNavel + pirsLabia + pirsClit ! 0:gs 'stat' & '<a href="exec:dynamic $pirManage">Manage Piercings</a>'
+
 if vanr_hanger = 1: 'Next to the sink neatly folded your <a href="exec:dynamic $vanr_hanger_dress & GT ''vanr'' ">clothes</a>'
 
 

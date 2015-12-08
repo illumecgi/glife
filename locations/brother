@@ -102,7 +102,7 @@ if $loc = 'gschool':
 			act 'Go watch porn':minut += 5 & gt 'seeporn'
 		elseif evgenQW < 4:
 			'Your brother grins "Hi <<$nickname>>. Fancy a game of football?"'
-			if odetyoga = 1:
+			if sport = 1:
 
 				act 'Play football':
 					cls

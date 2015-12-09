@@ -4,7 +4,6 @@ $pirsyaz = {
 	minut += 30
 	money -= 5000
 	pirsA = 1
-	pirsTongue = 1
 	pirs_pain_ton = 7
 	gs 'stat'
 	'<center><img src="images/etogame/pirsing.jpg"></center>'
@@ -18,7 +17,6 @@ $pirsgub = {
 	minut += 30
 	money -= 6000
 	pirsB = 1
-	pirsLip = 1
 	gs 'stat'
 	'<center><img src="images/etogame/pirsing2.jpg"></center>'
 	'Master pierced your lip and inserted a ring.'
@@ -31,7 +29,6 @@ $pirsysh = {
 	minut += 30
 	money -= 3000
 	pirsC = 1
-	pirsEar = 1
 	gs 'stat'
 	'Master pierced your ears inserted earrings.'
 
@@ -43,7 +40,6 @@ $pirsnos = {
 	minut += 30
 	money -= 5000
 	pirsD = 1
-	pirsNose = 1
 	gs 'stat'
 	'Master pierced your nose and inserted a ring.'
 
@@ -56,7 +52,6 @@ $pirsbro = {
 	minut += 30
 	money -= 5000
 	pirsE = 1
-	pirsEyebrow = 1
 	gs 'stat'
 	'Master pierced your eyebrow inserted a barbell.'
 
@@ -68,7 +63,6 @@ $pirssos = {
 	minut += 30
 	money -= 10000
 	pirsF = 1
-	pirsNipple = 1
 	nippain = 2
 	nippainday = daystart
 	gs 'stat'
@@ -82,7 +76,6 @@ $pirsvla = {
 	minut += 30
 	money -= 25000
 	pirsG = 1
-	pirsLabia = 1
 	painpub = 2
 	painpubday = daystart
 	gs 'stat'
@@ -96,7 +89,6 @@ $pirspyp = {
 	minut += 30
 	money -= 10000
 	pirsN = 1
-	pirsNavel = 1
 	gs 'stat'
 	'Master pierced your navel and inserted a barbell.'
 
@@ -108,7 +100,6 @@ $pirsclit = {
 	minut += 30
 	money -= 25000
 	pirsGL = 1
-	pirsClit = 1
 	painpub = 2
 	painpubday = daystart
 	gs'stat'
@@ -311,15 +302,15 @@ lcolor = rgb(106, 90, 205)
 if money >= 8000:'<a href="exec:dynamic $tatyadd">Tattoo - 8000 rubles</a>'
 if money >= 6000 and browper = 0:'<a href="exec: dynamic $permtatbro">Permanent eyebrows tattoo - 6000 rubles</a>'
 if browper = 1:'You already have an eyebrow tattoo.'
-if pirsTongue = 0 and money >= 5000:'<a href="exec:dynamic $pirsyaz">Tongue piercing - 5000 rub.</a>.'
-if pirsLip = 0 and money >= 6000:'<a href="exec:dynamic $pirsgub">Lip piercing - 6000 rub.</a>.'
-if pirsEar = 0 and money >= 3000:'<a href="exec:dynamic $pirsysh">Ear piercings - 3000 rub.</a>.'
-if pirsNose = 0 and money >= 5000:'<a href="exec:dynamic $pirsnos">Nose piercing - 5000 rub.</a>.'
-if pirsEyebrow = 0 and money >= 5000:'<a href="exec:dynamic $pirsbro">Eyebrow piercing - 5000 rub.</a>.'
-if pirsNipple = 0 and money >= 10000:'<a href="exec:dynamic $pirssos">Nipple piercings - 10000 rubles.</a>.'
-if pirsNavel = 0 and money >= 10000:'<a href="exec:dynamic $pirspyp">Navel piercing - 10000 rubles.</a>.'
-if pirsLabia = 0 and money >= 25000:'<a href="exec:dynamic $pirsvla">Labia piercings - 25000 rubles.</a>.'
-if pirsClit = 0 and money >= 25000:'<a href="exec:dynamic $pirsclit">Clitoris piercing - 25000 rubles</a>'
+if pirsA = 0 and money >= 5000:'<a href="exec:dynamic $pirsyaz">Tongue piercing - 5000 rub.</a>.'
+if pirsB = 0 and money >= 6000:'<a href="exec:dynamic $pirsgub">Lip piercing - 6000 rub.</a>.'
+if pirsC = 0 and money >= 3000:'<a href="exec:dynamic $pirsysh">Ear piercings - 3000 rub.</a>.'
+if pirsD = 0 and money >= 5000:'<a href="exec:dynamic $pirsnos">Nose piercing - 5000 rub.</a>.'
+if pirsE = 0 and money >= 5000:'<a href="exec:dynamic $pirsbro">Eyebrow piercing - 5000 rub.</a>.'
+if pirsF = 0 and money >= 10000:'<a href="exec:dynamic $pirssos">Nipple piercings - 10000 rubles.</a>.'
+if pirsN = 0 and money >= 10000:'<a href="exec:dynamic $pirspyp">Navel piercing - 10000 rubles.</a>.'
+if pirsG = 0 and money >= 25000:'<a href="exec:dynamic $pirsvla">Labia piercings - 25000 rubles.</a>.'
+if pirsGL = 0 and money >= 25000:'<a href="exec:dynamic $pirsclit">Clitoris piercing - 25000 rubles</a>'
 
 	if hour < 12 or hour > 20:
 		cls

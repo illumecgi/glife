@@ -187,9 +187,9 @@ else
 end
 
 if pirsA = 1:$pirsA = 'When you are talking to people, they can get a glimpse of your tongue piercing.'
-if pirsA = 0:$pirsA = ''
+if pirsA ! 1:$pirsA = ''
 if pirsB = 1:$pirsB = 'You lower lip is pierced with a ring.'
-if pirsB = 0:$pirsB = ''
+if pirsB ! 1:$pirsB = ''
 if lip = 0:$lip = 'You have thin <<$lipbalmstat>> lips. <<$pirsB>> <<$pirsA>>' & $liptalk = 'thin lips' & $liptalk2 = 'thin lips' & $liptalk3 = 'thin lips' & $lip1 = 'thin'
 if lip = 1:$lip = 'You have normal <<$lipbalmstat>> lips. <<$pirsB>> <<$pirsA>>' & $liptalk = 'soft lips' & $liptalk2 = 'soft lips' & $liptalk3 = 'soft lips' & $lip1 = 'normal'
 if lip = 2:$lip = 'You have plump <<$lipbalmstat>> lips. <<$pirsB>> <<$pirsA>>' & $liptalk = 'plump lips' & $liptalk2 = 'plump lips' & $liptalk3 = 'plump lips' & $lip1 = 'plump'
@@ -200,11 +200,11 @@ if tan > 0:$tan = 'Tanned'
 if skin > 4:skin = 4
 if skin < 0:skin = 0
 if pirsC = 1:$pirsC = 'Your ears are pierced and you are wearing earrings.'
-if pirsC = 0:$pirsC = ''
+if pirsC ! 1:$pirsC = ''
 if pirsD = 1:$pirsD = 'You have a nosering inserted in your nose.'
-if pirsD = 0:$pirsD = ''
+if pirsD ! 1:$pirsD = ''
 if pirsE = 1:$pirsE = 'Your eyebrow is pierced and a rod is sticking through it.'
-if pirsE = 0:$pirsE = ''
+if pirsE ! 1:$pirsE = ''
 if skin = 0:$skin = 'Your <<$tan>> skin is rough and covered with pimples and blackheads. <<$pirsC>> <<$pirsD>> <<$pirsE>>' & $skin1 = 'very bad'
 if skin = 1:$skin = 'Your <<$tan>> skin rough and has a few pimples. <<$pirsC>> <<$pirsD>> <<$pirsE>>' & $skin1 = 'bad'
 if skin = 2:$skin = 'Your <<$tan>> skin is clear of acne but still slightly rough. <<$pirsC>> <<$pirsD>> <<$pirsE>>' & $skin1 = 'normal'
@@ -243,8 +243,8 @@ if leghair > 0 and leghair <= 2:legkoef = 0 & $leghair = 'You can not see with y
 if leghair > 2 and leghair <= 5:legkoef = 0 & $leghair = 'You clearly have visible thin hairs on the legs.'
 if leghair > 5:legkoef = 0 & $leghair = 'You have long hair standing out on your legs.'
 
-if pirsG = 1 and pirsGL = 0:$pirspiz = 'There are several piercings hanging from the lips of your vagina.'
-if pirsG = 0 and pirsGL = 1:$pirspiz = 'The rod is inserted into the clitoris.' 
+if pirsG = 1 and pirsGL ! 1:$pirspiz = 'There are several piercings hanging from the lips of your vagina.'
+if pirsG ! 1 and pirsGL = 1:$pirspiz = 'The rod is inserted into the clitoris.' 
 if pirsG = 1 and pirsGL = 1:$pirspiz = 'You pierced clitoris and labia rings inserted'
 
 ! WD: Move missing Image ~ "pussy.jpg" from "images\picb" to "images\Body"

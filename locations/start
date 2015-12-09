@@ -48,7 +48,8 @@ $version = '0.3.0 (1.2.2 compliance update) full update to latest version. Many 
 *nl
 "0.3.0"
 '- Now incorporating most aspects of 1.2.2 vesion'
-'- Fixed loads, inc. kickboxing, volleyball and image paths'
+'- Large number of fixes, inc. kickboxing, volleyball and image paths'
+'- Added Rodziels new start, piercing mod and cosmetic surgery'
 '- Loads of translations, many locations, full event paths and much, much more!'
 *nl
 "0.2.5e"

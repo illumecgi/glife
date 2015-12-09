@@ -206,8 +206,8 @@ if shantpopala > 0:
 	'You wake up somewhere out of town, you''re tied up and naked. You look down on yourself and notice traces of cum on your body, it also seems like that cum is flowing from your ass and your pussy.'
 	'You notice that the blokes, who captured you sit next to you and seem to have a break, some of them are smoking.'
 	'"Oh, she is finally awake, then the next fuck-cycle will be far more fun.", one of the men said, as he noticed you moving. Some of them are starting to get a evil grin on their face.'
-	'They got up and came back at you, barely a minute later you wished your were still knocked out, as these jackasses had their ways with. You tried to resist, but the tape hindered you from moving. Not long after, everything faded to black and you lost you consciousness again.'
-	'You feel groggy as you wake up, but it feels like someone is grapping you by the hair and shouts at you. "Let this be a lesson for you, bitch.", he shouts, then kicks you into the stomach and leaves. As you collapse on the ground holding your stomach in pain, you take a glimpse at the street and see the assholes driving away in their black jeep. The mainroad is about 200m away, you crawl most of the way there, but soon you can walk again and eventually you find your way back to one of the mainstreets.'
+	'They got up and came back at you, barely a minute later you wished your were still knocked out, as these jackasses ave their ways with you. You tried to resist, but the tape hinders you from moving. Not long after, everything faded to black and you lost you consciousness again.'
+	'You feel groggy as you wake up, but it feels like someone is grapping you by the hair and shouts at you. "Let this be a lesson for you, bitch.", he shouts, then kicks you into the stomach and leaves. As you collapse on the ground holding your stomach in pain, you take a glimpse at the street and see the assholes driving away in their black jeep. The mainroad is about 200m away, you crawl most of the way there, but soon you can walk again and eventually you find your way back to one of the main streets.'
 
 	act 'Leave':gt $curloc
 
@@ -260,8 +260,8 @@ if marudatestinterface = 0:
 	if pornstudio >= 1 and hour > 5:'At the <a href="exec:gt ''pornstudio'', ''start''">Porn Studio</a>, where a variety of naughty movies are created'
 	if week < 6 and hour >= 7:'At the <a href="exec:gt ''univer'', ''start''">University</a> where you can earn your diploma.'
 	if hour >= 6 and hour <= 23:'The <a href="exec:gt ''dorm'', ''start''">Hostel</a> offers a small, but cheap, living space, for university students.'
-	if week < 6 and hour >= 9 and hour <= 18:'You can see the most important <a href="exec:gt ''bank'', ''start''">Bank</a> in the city from here.'
-	if week < 6 and hour >= 8 and hour <= 17:'In the largest skyscraper is a huge <a href="exec:gt ''office'', ''start''">Project Organization</a> located.'
+	if week < 6 and hour >= 9 and hour <= 18:'You can see the largest <a href="exec:gt ''bank'', ''start''">Bank</a> in the city from here.'
+	if week < 6 and hour >= 8 and hour <= 17:'In the tallest skyscraper is a huge <a href="exec:gt ''office'', ''start''">Project Organization</a> located.'
 	if hour >= 8 and hour <= 22:'At the <a href="exec:gt ''agentned'',''start''">Real Estate Agency</a> you can buy or rent an apartment.'
 
 end

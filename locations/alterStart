@@ -1,11 +1,8 @@
 # alterStart
 StoryLine = 1
-MagikDostup = 1
 prezikProver = 3
 brothersawpirsF = 0
 umbrella = 1
-birthday = 5
-birthmonth = 3
 $name = 'Svetlana'
 $surname = 'Lebedev'
 !!!0.2.6 addition
@@ -50,7 +47,6 @@ vidageday = 300
 housrA = 0
 sarafan[1] = 1
 sarafanH[1] = 30
-nude = 0
 odevnesh = 0
 lobok = 3
 leghair -= 5
@@ -331,7 +327,11 @@ $din_alter_start_ev15 = {
 		addobj '<img src="images/pic/icon/Proch.png">'
 		addobj '<img src="images/pic/icon/menu.png">'
 		addobj '<img src="images/pic/icon/Phone.png">'
-		gt'bedrPar'
+		if altQS = 1:
+			gt'altPRE','scene1'
+		else
+			gt'bedrPar'
+		end
 	end
 
 	act 'Start a game (June)':
@@ -352,7 +352,11 @@ $din_alter_start_ev15 = {
 		month = 6
 		day = 1
 		week = 5
-		gt'bedrPar'
+		if altQS = 1:
+			gt'altPRE','scene1'
+		else
+			gt'bedrPar'
+		end
 	end
 }
 
@@ -375,7 +379,11 @@ $din_alter_start_ev = {
 		addobj '<img src="images/pic/icon/Proch.png">'
 		addobj '<img src="images/pic/icon/menu.png">'
 		addobj '<img src="images/pic/icon/Phone.png">'
-		gt'bedrPar'
+		if altQS = 1:
+			gt'altPRE','scene1'
+		else
+			gt'bedrPar'
+		end
 	end
 	
 	act 'Start a game in June':
@@ -390,10 +398,14 @@ $din_alter_start_ev = {
 		addobj '<img src="images/pic/icon/Proch.png">'
 		addobj '<img src="images/pic/icon/menu.png">'
 		addobj '<img src="images/pic/icon/Phone.png">'
-	 month = 6
-     day = 1
-     week = 5
-     gt'bedrPar'
+		month = 6
+		day = 1
+		week = 5
+		if altQS = 1:
+			gt'altPRE','scene1'
+		else
+			gt'bedrPar'
+		end
 	end	
 }
 

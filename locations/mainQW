@@ -85,10 +85,10 @@ act 'Investigate':
 				'"Do you think the Order of Dawn didn''t already think of this? Aah, I see you do not quite understand what the Order of Dawn is. They are not some whipping boys. They''re all magicians of the highest level. Neither I nor Juugo are good enough to even hold a candle to any of them. Any one of them destroy Juugo without breaking a sweat. They fight with strong magic and unique technology. Do not mess with these guys, they are pros in their field. Their main business is destruction of other magicians and capturing demons."'
 				'"Woah! Demons?'
 				'"Demons, you know, creatures from other plains of existence. It''s possible that Rikudo was a demon, but demons unlike him are beings with terrible force, but blunt and aggressive. Something like beasts woven from pure magic."'
-				if StoryLine = 0:
-					'"Got it. Hey, you can turn me back into a man?"'
-					'"Can. But won''t. You have no idea how much energy it took out of me, I squeezed myself to dry and Juugo. I barely had enough energy. Now I do not have enough physically strength for the energy consumption, I went to the limit of my sanity and I lost some of it forever. And there''s more to consider, now that your body begins to absorb magic and it becomes even harder. It might be possible if your magical energies reach at least level 10 and you pass me all your energy forever. I can make you again the same, but you''ll never be a magician, this path will be forever closed to you."'
-				end
+    if StoryLine = 0:
+				'"Got it. Hey, you can turn me back into a man?"'
+				'"Can. But won''t. You have no idea how much energy it took out of me, I squeezed myself to dry and Juugo. I barely had enough energy. Now I do not have enough physically strength for the energy consumption, I went to the limit of my sanity and I lost some of it forever. And there''s more to consider, now that your body begins to absorb magic and it becomes even harder. It might be possible if your magical energies reach at least level 10 and you pass me all your energy forever. I can make you again the same, but you''ll never be a magician, this path will be forever closed to you."'
+    end
 				'Karin continues, "You are not to look too far into the future. Develop your body, learn to fight, copy magical force coaches mind. Gradually everything will rise to the levels which they should be."'
 
 				act 'Leave':gt 'down'

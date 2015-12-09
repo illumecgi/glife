@@ -1602,7 +1602,10 @@ if $ARGS[0] = 'pos41':
 		end
 	end
 	
-	if pirsTongue + pirsLip + pirsEar + pirsNose + pirsEyebrow + pirsNipple + pirsNavel + pirsLabia + pirsClit ! 0:gs 'stat' & '<a href="exec:dynamic $pirManage">Manage Piercings</a>'
+	if pirsTongue + pirsLip + pirsEar + pirsNose + pirsEyebrow + pirsNipple + pirsNavel + pirsLabia + pirsClit ! 0:gs 'din_bad' & '<a href="exec:dynamic $pirManage">Manage Piercings</a>'
+
+	if fillimplant = 1 and siliconeBag >= 1:'<a href="exec:cls & siliconeBag -= 1 & silicone += 10 & gt $curloc">Inject silicone into breast implants.</a>'
+	if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $curloc">Drain silicone from breast implants.</a>'
 
 	if intel > 50 and gor_dorm = 1:act 'Inspect pipes':gt 'etoexhib', 'pos42'
 

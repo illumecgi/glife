@@ -166,7 +166,7 @@ daybelisex=daystart
 belrand=rand(1,100)
     if belrand<=40:
      'It drives you to the old Mitsubishi Pajero and from the open driver`s window looks fat bald mug White.
-     - In short <<$name[2]>>, sit down, drive around.'
+     - In short <<$name>>, sit down, drive around.'
         act'Take the jeep':
          cls
          minut+=5
@@ -175,7 +175,7 @@ belrand=rand(1,100)
          tiperand=rand(1,100)
             if tiperand<=30:
              'White said, unbuttoning his pants
-             - <<$name[2]>> ,I have a little time, so let`s hurry'
+             - <<$name>> ,I have a little time, so let`s hurry'
              	 act'Suck':
 				 cls
 				 bj+=1
@@ -218,7 +218,7 @@ if 	belgangQW=9000 and belgangday<daystart:
          - It`s all the money, And count the better of me.'
          
          'White counted the money
-         - Okay, the entire amount on the spot. Well, do not fall ill <<$name[2]>>.
+         - Okay, the entire amount on the spot. Well, do not fall ill <<$name>>.
          After that, the whole gang sat back in the Jeep and the growling of burnt silencer left.'
          belgangQW=9999
          money-=belgangPay
@@ -233,7 +233,7 @@ if 	belgangQW=9000 and belgangday<daystart:
          'You almost weeping shook their heads.
          - I do not have that kind of money.
          The bald man frowned.
-         - Ah ah ah, <<$name[2]>>, how bad it, Well nothing, I love you in a warm place one Pristrom, there you exhaust me alive.'
+         - Ah ah ah, <<$name>>, how bad it, Well nothing, I love you in a warm place one Pristrom, there you exhaust me alive.'
          
          'You immediately grabbed and force landed in the jeep. The whole gang of village sites and Mitsubishi growling Burned silencer drove on the highway in the direction of the city.'
          minut+=60
@@ -266,7 +266,7 @@ if AlbFather >= 1:
 end
 
 if AlbFaterBlackTime > 0 and AlbFaterBlackTime <= totminut and hour >= 16 and AlbFather = 1:gt 'AlbFatherQW'
-if hour >= 16 and hour <= 22 and AlbFather = 2 and AlbZaDay + 30 < daystart and year > 2010:
+if hour >= 16 and hour <= 22 and AlbFather = 2 and AlbZaDay + 30 < daystart and year > 2015:
 	gt 'AlbStarsEnd'
 end
 
@@ -345,7 +345,7 @@ if marudatestinterface = 0:
 	'Small city <a href="exec:gt ''gskver'', ''park''">park</a>, in which people are going.'
 	'Aside from residential buildings is <a href="exec:minut += 5 & gt ''garmassiv''">Garage array</a>.'
 
-	'A small <a href="exec:GT ''Glake''" class=plain>lake</a> lurks behind Pavlovsky.'
+	'A small <a href="exec:GT ''Glake''">lake</a> lurks behind Pavlovsky.'
 	'Urban development enterprise <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">Garment factory named Paris Commune</a>.'
 
 	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:'Private house in which he lives <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.'
@@ -384,6 +384,18 @@ if StoryLine = 1 and hour >= 8 and hour < 23 and cumface > 0 and rand(0, 3) = 0 
 		'Once again you are confronted face to face with Uncle Misha, your neighbor, he chuckled looking at you "Well."'
 	end
 	act 'Further':gt $curloc
+	exit
+end
+
+if magik >= 1 and mainQW = 0 and altQS = 1:
+	cla
+	*clr
+	mainQW = 1
+	'<center><img src="images/qwest/main.jpg"></center>'
+	'At the entrance you see Karin and Juugo. Karin adjusts glasses and looks around, Juugo seems to have his head in the clouds and a strange look on his face as his tattoos are not visible.'
+	'Karin closely looks around you, "I felt a burst of energy. Were you attacked by a magician?"'
+	act 'No':gt 'mainQW'
+
 	exit
 end
 

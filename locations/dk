@@ -8,12 +8,12 @@ if $ARGS[0] = 'start':
 	fcolor = rgb(0, 0, 0)
 	bcolor = rgb(255, 255, 255)
 	lcolor = rgb(106, 90, 205)
-	'<center><b>House of Culture named after Lenin</b></center>'
+	'<center><b>The Vladimir Lenin community centre</b></center>'
 	'<center><img src="images/etogame/dk4.jpg"></center>'
 	'Hours:9 to 17, the weekend Saturday, Sunday.'
 
 	if hour >= 9 and hour <= 17 and week < 6:
-		act 'Go to the House of Culture':gt 'dk', 'holl'
+		act 'Enter':gt 'dk', 'holl'
 	end
 
 	if avtoskul >= 1 and avtoskul < 11 and skulday ! daystart and week >= 6 and money >= 1000 and age >= 18:
@@ -43,7 +43,7 @@ if $ARGS[0] = 'holl':
 	fcolor = rgb(0, 0, 0)
 	bcolor = rgb(255, 255, 255)
 	lcolor = rgb(106, 90, 205)
-	'<center><b>House of Culture</b></center>'
+	'<center><b>The Vladimir Lenin community centre</b></center>'
 	'<center><img src="images/etogame/dk1.jpg"></center>'
 	'Available services, driving school, payment 30, 000 rubles. 10 classes, at any time convenient for you during the working day at home culture.'
 	'Education office programs, degree-granting Secretary. 15, 000 rubles, training period of 30 days.'

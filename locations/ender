@@ -159,7 +159,7 @@ if $ARGS[0] = 'win':
 		jugoFight = 0
 		if winJugo = 0:winJugo = 1
 
-		'Juugo fell to the floor and can no longer sparingovat.'
+		'Juugo fell to the floor and can no longer fight.'
 
 		act 'Further':gt'lab','start'
 		exit
@@ -169,7 +169,7 @@ if $ARGS[0] = 'win':
 		rikudo = rikudo + 10
 		if winKarin = 0:winKarin = 1
 
-		'Karin fell to the floor and can no longer sparingovat.'
+		'Karin fell to the floor and can no longer fight.'
 
 		act 'Further':gt'lab','start'
 		exit

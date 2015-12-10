@@ -48,6 +48,7 @@
     </Folder>
     <Folder name="Alternative">
       <Location name="alterStart"/>
+      <Location name="altPRE"/>
     </Folder>
     <Folder name="Quests">
       <Location name="event"/>

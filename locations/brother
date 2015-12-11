@@ -35,8 +35,8 @@ if cumface > 0:
 end
 
 ! WD: Fix old nude variable
-	if brotherknowslut < 1: brotherknowslut = 1
 if cumass > 0 and $clothingworntype = 'nude' and tanga = 0:
+	if brotherknowslut < 1: brotherknowslut = 1
 	'"Go wash yourself, you''ve got something on your butt."'
 	if brotherSex = 0:
 		brother -= 1

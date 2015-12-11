@@ -40,7 +40,7 @@ if $ARGS[0] = 'start':
 
 				if damage <= 0:damage = 1
 
-				koefatak = (speed + reakt + jab) * 2
+				koefatak = (speed + react + jab) * 2
 				koefpop = koefatak * 20 / 100
 				popad = rand(koefatak - koefpop, koefatak + koefpop)
 				'<font color="green">You go for the quick jab and step forward.</font>'
@@ -55,7 +55,7 @@ if $ARGS[0] = 'start':
 
 				if damage <= 0:damage = 1
 
-				koefatak = (speed + reakt + punch)
+				koefatak = (speed + react + punch)
 				koefpop = koefatak * 20 / 100
 				popad = rand(koefatak - koefpop, koefatak + koefpop)
 				'<font color="green">You attempt a powerful punch.</font>'
@@ -70,7 +70,7 @@ if $ARGS[0] = 'start':
 
 				if damage <= 0:damage = 1
 
-				koefatak = (speed + reakt + kik) / 2
+				koefatak = (speed + react + kik) / 2
 				koefpop = koefatak * 20 / 100
 				popad = rand(koefatak - koefpop, koefatak + koefpop)
 				'<font color="green">You try a powerful kick.</font>'
@@ -87,7 +87,7 @@ if $ARGS[0] = 'start':
 
 				if damage <= 0:damage = 1
 
-				koefatak = (speedV + reaktV + JabV) * 2
+				koefatak = (speedV + reactV + JabV) * 2
 				koefpop = koefatak * 20 / 100
 				popad = rand(koefatak - koefpop, koefatak + koefpop)
 				'<font color="red"><<$nameV>> deals with quick jab, stepping forward.</font>'
@@ -99,7 +99,7 @@ if $ARGS[0] = 'start':
 
 				if damage <= 0:damage = 1
 
-				koefatak = (speedV + reaktV + punchV)
+				koefatak = (speedV + reactV + punchV)
 				koefpop = koefatak * 20 / 100
 				popad = rand(koefatak - koefpop, koefatak + koefpop)
 				'<font color="red"><<$nameV>> applies a power punch.</font>'
@@ -111,7 +111,7 @@ if $ARGS[0] = 'start':
 
 				if damage <= 0:damage = 1
 
-				koefatak = (speedV + reaktV + kikV) / 2
+				koefatak = (speedV + reactV + kikV) / 2
 				koefpop = koefatak * 20 / 100
 				popad = rand(koefatak - koefpop, koefatak + koefpop)
 				'<font color="red"><<$nameV>> goes for a kick.</font>'

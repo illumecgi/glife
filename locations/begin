@@ -6,24 +6,36 @@
 *nl
 '<b>Alternate Start:</b>'
 'You are a 15 or 16 year old small-town girl with another year of school remaining. Name and starting stats are customizable, no magic and no major ''plot'' other than <i>life</i>. Not to say that your classmates and family don''t have their own stories, though!'
+*nl
+'<b>Cursed schoolgirl Start:</b>'
+'You are a 15 or 16 year old small-town girl with another year of school remaining. Name and starting stats are customizable. Includes magic and the (incomplete) plot from original start, plus all the family and classmate events from the alternate start.'
 
 act '<center><b>Original start</b></center>':
 	cla
-	music_on = 0
-	showstat 1
-	showobjs 1
-	addobj 'Player'
-	gt 'roomPRE'
+	act '<center>Show intro (recommended)</center>':
+		cla
+		music_on = 0
+		showstat 1
+		showobjs 1
+		addobj 'Player'
+		gt 'roomPRE'
+	end
+	act '<center>Skip intro (seen it before)</center>':
+		music_on = 0
+		gs 'begin1'
+		gt 'street'
+	end
 end
 
-act '<center>Original start (skip intro)</center>':
-	music_on = 0
-	gs 'begin1'
-	gt 'street'
-end
-
-act '<center><b>Start the alternative game</b></center>':
+act '<center><b>Alternate Start</b></center>':
 	cla
+	MagikDostup = 1
+	gt 'alterStart'
+end
+
+act '<center><b>Cursed schoolgirl Start</b></center>':
+	cla
+	altQS = 1
 	gt 'alterStart'
 end
 
@@ -198,7 +210,6 @@ dynamic $din_glaza_select
 	'<center><a href="exec:dynamic $din_glaza_select">Description eye</a></center>'
 	act'<center><b>Ready</b></center>':gt'begin'
 end
-
 
 --- begin ---------------------------------
 

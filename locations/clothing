@@ -43,6 +43,12 @@ if $ARGS[0] = 'view_clothing_list':
 		addobj '<img src="images/pic/icon/Proch.png">'
 		addobj '<img src="images/pic/icon/menu.png">'
 		addobj '<img src="images/pic/icon/Phone.png">'
+			
+		if storyline = 1:
+			MagikDostup = 1
+		else
+			MagikDostup = 0
+		end
 		
 		gt 'clothing', 'view_clothing_list'
 	end

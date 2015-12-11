@@ -1,4 +1,133 @@
 # dinsister
+$sischecks = {
+if sister < 20:'Do you and your sister scandal.'
+if sister >= 20 and sister < 40:'Do you and your sister tensions.'
+if sister >= 40 and sister < 60:'Do you and your sister a normal relationship.'
+if sister >= 60 and sister < 80:'Do you and your sister a good relationship.'
+if sister >= 80:'You have a great relationship with his sister.'
+if StrongNarkota = 0 and narkossister = 1:narkossister = 0
+
+    
+if StrongNarkota > 20 and narkossister = 0 and narkossista = 0:
+    temp = RAND(1,100)
+    if temp >= 90:
+        gs'dinsister'
+        dynamic $narkosisterspalila
+        exit
+    end
+end
+
+if narkossister = 1:
+    if StrongNarkota > 20:
+        cls
+        cla
+	    gs'stat'
+	    willpower -= 10
+	    manna -= 10
+	    '<center><img src="images/lmps/newfear.jpg"></center>'
+	    'I can not approach her junked up like this.'
+	    
+	    act '<B>Move away</B>':gt $loc, $metka
+	end
+	
+    if StrongNarkota < 20:
+        cls
+        cla
+	    gs'stat'
+	    willpower -= 10
+	    manna -= 10
+	    narkossister = 0
+	    '<center><img src="images/lmps/newfear.jpg"></center>'
+	    'You tell yourself, "Come on <<$name>>, deep breath, focus, you can do this."'
+		'You feel your head is clear enough to talk to your sister once more.'
+	    act '<B>Move away</B>':gt $loc, $metka
+	end
+end
+act '<B>Move away</B>':gt $loc, $metka
+
+	if $clothingworntype = 'nude':
+		if sisterLesb = 0:
+			'Sister looks at you eyes wide "<<$name>>, Here is the number of, Are not you ashamed to go naked? I do not smoglab.'
+		else
+			'Sister looks at you eyes wide "<<$name>>, you''re so liberated... I do not smoglab.'
+		end
+	end
+
+	if pirsA >= 1 and pirsAsister = 0 and sisterpirsadaytalk ! daystart:
+		sisterpirsadaytalk = daystart
+		if rand(1,100) >= 75:
+			'Sister looks you in the mouth: "<<$name>>, and what have you got there in the language?"'
+			act 'Nothing':
+				cla
+				'You shake your head. "Nothing." And then turn away, so that your sister did not see your pierced tongue.'
+				act 'Move away':gt $loc, $metka
+			end
+
+			act 'Show pierced tongue':
+				cls
+				pirsAsister = 1
+				gs 'stat'
+				'<center><img src="images/body/pirsA.jpg"></center>'
+				'You open your mouth and draw out the tongue, sister showing tongue piercing.'
+				'Your sister smiled: "Well, you give, <<$nickname>>! I decided to embellish their appearance?"'
+				act 'Move away':gt $loc, $metka
+			end
+			exit
+		end
+	end
+
+	if pirsB = 1 and pirsBsister = 0 and sisterpirsbdaytalk ! daystart:
+		sisterpirsadbytalk = daystart
+		'Sister looks at your lips, which appeared piercing: "Listen, and good vyshlyadit, I like!"'
+		act 'Thank you':
+			cls
+			pirsBsister = 1
+			gs 'stat'
+			'<center><img src="images/body/pirsB.jpg"></center>'
+			'You thank her sister for her compliment your little new thing.'
+			act 'Move away':gt $loc, $metka
+		end
+		exit
+	end
+
+	if pirsC = 1 and pirsCsister = 0:
+		pirsCsister = 1
+		'Sister looks at your ears and earrings notices: "Well, finally-then! I thought you and has no earrings to go."'
+	end
+
+	if pirsD = 1 and pirsDsister = 0:
+		pirsDsister = 1
+		'Sister looks a bit shocked at your nose ring: "Phew, <<$nickname>>, it''s that in the muck?"'
+	end
+
+	if pirsE = 1 and pirsEsister=0:
+		pirsEsister = 1
+		'Sister says your eyebrow piercing: "Look, gently, so no one accidentally snatched!"'
+	end
+	
+	if $clothingworntype = 'nude' and pregTalkSister = 0 and pregtime > 90:
+		'Sister surprised looking at your belly: "<<$name>>, that you are pregnant-whether? And even from someone you know?.
+		- Oh, sister, likely to become pope <<$boy>>'
+		pregTalkSister = 1
+	end
+	
+	if $clothingworntype ! 'nude' and pregTalkSister = 0 and pregtime > 150:
+		'Sister surprised looking at your clothes clearly acting under the belly: "<<$name>>, that you are pregnant-whether? And even from someone you know?.
+		- Oh, sister, likely to become pope <<$boy>>'
+		pregTalkSister = 1
+	end
+
+	if cumlip > 1 or cumface > 0 or cumfrot > 0 and gorslut < 3:
+		sisterknowslut = 1
+		'Sister eyeing you: "<<$name>>, and that it?". - Suddenly, her eyes rounded, - "<<$nickname>>, yes the same sperm! That`s little sister, well well! It`s good, I noticed, And if Mom?!."'
+	elseif cumlip > 1 or cumface > 0 or cumfrot > 0 and gorslut >= 3 and sisterknowslut = 0:
+	    sisterknowslut = 1
+	    'Sister eyeing you: "<<$name>>, speak the truth, you <<$gnikname>>"'
+	elseif cumlip > 1 or cumface > 0 or cumfrot > 0 and gorslut >= 3 and sisterknowslut > 0:
+	    'Sister eyeing you: "<<$name>>, you again obkonchalsya, convergence wash it-whether"'
+	end
+}
+
 $narkosisterspalila = {
 	cls
 	cla

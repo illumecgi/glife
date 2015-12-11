@@ -38,7 +38,7 @@ if $shoplocation = 'main':
 	!! The store in the town and in the altstart only
 	if $loc = 'gorodok' and StoryLine = 1:
 		if week < 6 and hour >= 8 and hour < 16:
-			'Your sister <a href="exec:SiSonWork = 1 & GT ''sister''">Anya</a> He is sitting at the cash register.'
+			'Your sister <a href="exec:$shoplocation = ''Anya'' & gt ''shop'', ''move''">Anya</a> He is sitting at the cash register.'
 		end
 	end
 
@@ -838,6 +838,15 @@ if $shoplocation = 'megafon':
 			end
 		end
 	end
+end
+
+if $shoplocation = 'Anya':
+	cla
+	'<center><img src="images/qwest/alter/sister/sister.jpg"></center>'
+	gs'dinsister'
+	dynamic $sischecks
+	'"<<$name>>, do not disturb me at work, can''t you see I have customers?'
+	act '<B>Move away</B>':gt'shop','start'
 end
 
 --- shop ---------------------------------

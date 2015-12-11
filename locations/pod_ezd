@@ -1138,34 +1138,37 @@ if $ARGS[0] = 'etaj_2':
 		act '<font color = maroon>Your apartment</font>':gt'korrPar'
 	end
 
-	act 'Apartment Uncle Misha':	
+	act 'Uncle Mishas apartment':
+		cla
 		if hour >= 0 and hour < 5:
-			'Too late hour, that would go to visit'
+			'Too late, he will be asleep.'
 		elseif hour >= 5 and hour < 10:
-			'Too early time, that would go to visit'
+			'Too early in the morning to be visiting'
 		elseif week < 6 and hour >= 10 and hour < 19:
 			'You rang the bell, but nobody opens.'
 	    
 		elseif mishahouse_count = 1 and dyadyamishaevent >= 1 and week < 6 and hour >= 19 and hour <= 23 or mishahouse_count = 1 and dyadyamishaevent >= 1 and week >= 6 and hour >= 10 and hour <= 23:
 			cls
 			gs'stat'
-			'You opened the door and invited Misha to enter the apartment.'
+			'The door opens and Misha invites you into the apartment.'
 			act 'Escape': gt'pod_ezd','etaj_2'
 			act 'Login':
 				mishahouse_day = daystart
 				mishahouse_count -=1
 				gt'misha','1'	
-			end
+			end	
 
 		elseif mishahouse_count <= 0 and dyadyamishaevent >= 1 and week < 6 and hour >= 19 and hour <= 23 or mishahouse_count <= 0 and dyadyamishaevent >= 1 and week >= 6 and hour >= 10 and hour <= 23:
-			'You rang the bell, Misha opened to you and said,: - <<$gop_name_gg>>, I`m busy right now, Come tomorrow.'	
+			'You ring the bell, Misha opens the door to you and says, "<<$gop_name_gg>>, I`m busy right now, Come tomorrow."'	
 		else
-			'Nobody opens'
+			'No answer.'
 		end
+
+		act 'Leave': gt'pod_ezd','etaj_2'
 	end	
 			
-	act 'Going down to the first floor': gt'pod_ezd','etaj_1'
-	act 'Climb to the third floor': gt'pod_ezd','etaj_3'
+	act 'Go down to the first floor': gt'pod_ezd','etaj_1'
+	act 'Climb up to the third floor': gt'pod_ezd','etaj_3'
 	act 'Take the elevator': gt'pod_ezd','lift'
 end
 !floor 3

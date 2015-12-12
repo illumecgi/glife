@@ -2,13 +2,13 @@
 !!model Megan Vale Valentina Azarov
 sisterAge = age + 2
 gs 'stat'
-'<center><b><font color="maroon">Anja</font></b></center>'
-'<center><img src="images/qwest/alter/sister/sister.jpg"></center>'
+'<center><b><font color="maroon">Anya</font></b></center>'
+'<center><img src="images/qwest/alter/sister.jpg"></center>'
 'Your sister Anja bit older than you. She is <<sisterAge>> years old. She graduated from high school, but didn''t go to university and now works at the supermarket.'
+gs 'dinsister'
+dynamic $sischecks
 
 if $ARGS[0] = 'gdk':
-	gs 'dinsister'
-	dynamic $sischecks
 	!Near the club with friends
 	if sister < 40:
 		'"What do you want? Fuck off!" Anya and her friends laugh and point at you, until you leave them alone.'
@@ -189,53 +189,53 @@ if hour >= 7 and hour < 24:
 !1 - knows about the parties
 !2 - agreed to go to the party
 		if sisboypartyQW >= 2 and sisboyparty = 1 and sisboyparty_day = daystart:
-			'- Listen, <<$name>>, Rex apartment is available for tomorrow`s party  - you go?'
+			'"Listen, <<$name>>, Rexs apartment is available tomorrow and he''s having a party, do you want to go?"'
 			
-			act 'Tell, what will I':
+			act 'Yes':
 				cls
 				minut += 5
 				sisboyparty = 2
 				gs'stat'
 				'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_2.jpg"></center>'
-				'You agreed to come to the party.
-				- Awesome, <<$name>>, it`ll be fun. We will be at the house of culture, don`t forget to come back to  18:00, otherwise we will leave without you.
-				With these words, you hugged and kissed my sister.'
+				'You agree to go to the party.'
+				'"Awesome <<$name>>, it`ll be fun. We will meet at the house of culture, don`t forget to be there before 18:00, otherwise we will leave without you."'
+				'With these words, your sister hugs you and kisses you on the cheek.'
 				act 'Finish':SiSgdk = 0 & gt'sister'
 			end
 
-			act 'Sorry, I study':
+			act 'No (study)':
 				cls
 				minut += 5
 				sisboyparty = -1
 				gs'stat'
 				'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_3.jpg"></center>'
-				'You refused to come to the party.
-				- Sorry Anh, I would love to, but I have blockages in school. Control, works, bunch of literature, she know...'
+				'You turn down the invitation.'
+				'"Sorry Anya, I would love to, but I can''t get behind at school. I have homework and books to read, you know what it''s like."'
 				act 'Finish':SiSgdk = 0 & gt'sister'
 			end
 
 			if bronzebeg > 0 or silverbeg > 0 or goldbeg > 0:
-				act 'Once, I have my race':
+				act 'No (training)':
 					cls
 					minut += 5
 					sisboyparty = -1
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_4.jpg"></center>'
-					'You refused to come to the party.
-					- I would love, but I have competition on the nose, I have to train. Unlike you, I-still dream to become a great athlete...'
+					'You refuse to go to the party.'
+					'"I would love to, but I have competition to prepare for, I have to train. One day I could be a great athlete, not like you lazy bones."'
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
 			end
 
 			if volleyboll >= 100:
-				act 'I have volleyball':
+				act 'No (volleyball)':
 					cls
 					minut += 5
 					sisboyparty = -1
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_5.jpg"></center>'
-					'You refused to come to the party.
-					- I mode,the coach is not allowed to walk late, Yes and drink are also prohibited...'
+					'You refuse to go to the party.'
+					'"I can''t, the coach does not allow my to stay out late, and drinking is also prohibited."'
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
 			end
@@ -260,17 +260,17 @@ if hour >= 7 and hour < 24:
 		minut += 5
 		gs'stat'
 		'<center><img src="images/qwest/alter/sisterQW/sisboyQW_24.jpg"></center>'
-		'You`re both embarrassed after what happened the night, and do not look into each other`s eyes, all-Anya still speaks with you:'
-		'-<<$name>>, smile tells you, Well, you`re a fool, I thought guys like me, and it is much more pleasant to handle your men.'
-		'You look at the blushing Anya, - Forgive me, I strongly started up, and does not control themselves, I do not know what came over me...'
-		'-Well, I do not mind, so you sometimes so lost control of himself..., He smiled slyly, You smiled at her...'
+		'You`re both embarrassed after what happened that night, and can not look into each other`s eyes, finally Anya speaks with you.'
+		'"<<$name>>," with a smile she tells you, "Well, you`re a fool, I thought you liked guys, and I always found it much more pleasant to handle men."'
+		'You look at Anya blushing, "Forgive me, I was so worked up, I just could not control myself, I do not know what came over me."'
+		'"Well, I do not mind, so you sometimes lose control of yourself." She smiles slyly, You smile at her...'
 
 		sisterLesb = 3
 		act 'Finish':SiSgdk = 0 & gt'sister'
 		exit
 	end
 
-	if sisboyQW = 0 and sister >= 40 and narkossister = 0:
+	if sisboyQW = 0 and sister >= 40:
 		act 'Ask about her boyfriend':
 			cls
 			minut += 5
@@ -279,14 +279,14 @@ if hour >= 7 and hour < 24:
 			gs'stat'
 			'<center><b><font color = maroon>Anya</font></b></center>'
 			'<center><img src="images/qwest/alter/sister/sister.jpg"></center>'
-			'You asked Annie about her boyfriend. She smiled.'
-			'-Well, I have a boyfriend. Although nothing serious. He told me more than a friend.'
-			'-Awesome, Now when I found out about it, you simply must introduce me to him.'
-			'-Good sister, we hang out in the evening at the house of culture, Come, there and introduce you to him.'
+			'You asked Anya about her boyfriend. She smiles.'
+			'"Well, I have a boyfriend. Although nothing serious. He is more of a friend who I have sex with."'
+			'"Awesome, Now when I know out about it, you simply must introduce me to him."'
+			'"Good sister, we hang out in the evenings at the house of culture. Meet me there and I''ll introduce you to him."'
 
 			act 'Finish':SiSgdk = 0 & gt'sister'
 		end
-	elseif sisboyQW >= 2 and sister >= 40 and sisboytrioQW > -1 and sisboytrioDayOtkaz <= daystart and sisboypartyQW < 2 and narkossister = 0:
+	elseif sisboyQW >= 2 and sister >= 40 and sisboytrioQW > -1 and sisboytrioDayOtkaz <= daystart and sisboypartyQW < 2:
 		act 'Talk about Roma':
 			cls
 			minut += 5
@@ -305,55 +305,55 @@ if hour >= 7 and hour < 24:
 				sisboyparty_day = daystart
 				gs'stat'
 				'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_1.jpg"></center>'
-				'- <<$name>>, have you a close friend of our company, and tomorrow kitty birthday, and he asked me to call you.
-				- Oh do not even know Anh, as we-we are not familiar with it, I then basically your only girls talked.
-				- Come on, he was very much requested, I even think he likes you. So what did you decide?'
-				act 'Tell, what will I':
+				'"<<$name>>, one of my friends birthday is tomorrow and he''s having a party, he asked me to invite you."'
+				'"Oh, Anya I don''t know, they are your friends and I haven''t got to know the boys, I basically just talked to the girls."'
+				'"Come on, he really wants you to go, I think he might like you. So will you come?"'
+				act 'Yes':
 					cls
 					minut += 5
 					sisboypartyQW = 1
 					sisboyparty = 2
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_2.jpg"></center>'
-					'You agreed to come to the birthday.
-					- Awesome, <<$name>>, there should be fun, and as for the gift, don`t worry, Rex doesn`t like all this. We will be at the house of culture, don`t forget to come back to  18:00, otherwise we will leave without you.
-					With these words, you hugged and kissed my sister.'
+					'You agree to go to the birthday party.'
+					'"Awesome <<$name>>, it`ll be fun. We will meet at the house of culture, don`t forget to be there before 18:00, otherwise we will leave without you."'
+					'With these words, your sister hugs you and kisses you on the cheek.'
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
 
-				act 'Sorry, I study':
+				act 'No (study)':
 					cls
 					minut += 5
 					sisboyparty = -1
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_3.jpg"></center>'
-					'You refused to come to the birthday.
-					- Sorry Anh, I would love to, but I have blockages in school. Control, works, bunch of literature, she know...'
+					'You refuse to go to the birthday party.'
+					'"Sorry Anya, I would love to, but I can''t get behind at school. I have homework and books to read, you know what it''s like."'
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
 
 				if bronzebeg > 0 or silverbeg > 0 or goldbeg > 0:
-					act 'Once, I have my race':
+					act 'No (training)':
 						cls
 						minut += 5
 						sisboyparty = -1
 						gs'stat'
 						'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_4.jpg"></center>'
-						'You refused to come to the birthday.
-						- I would love, but I have competition on the nose, I have to train. Unlike you, I-still dream to become a great athlete...'
+						'You refuse to go to the birthday party.'
+						'"I would love to, but I have competition to prepare for, I have to train. One day I could be a great athlete, not like you lazy bones."'
 						act 'Finish':SiSgdk = 0 & gt'sister'
 					end
 				end
 
 				if volleyboll >= 100:
-					act 'I have volleyball':
+					act 'No (volleyball)':
 						cls
 						minut += 5
 						sisboyparty = -1
 						gs'stat'
 						'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_5.jpg"></center>'
-						'You refused to come to the birthday.
-						- I mode,the coach is not allowed to walk late, Yes and drink are also prohibited...'
+						'You refuse to go to the birthday party.'
+						'"I can''t, the coach does not allow my to stay out late, and drinking is also prohibited."'
 						act 'Finish':SiSgdk = 0 & gt'sister'
 					end
 				end
@@ -363,9 +363,9 @@ if hour >= 7 and hour < 24:
 			if sisboyrand >= 8 and sisboyQW = 2 and sisboyday ! daystart:
 				'<center><b><font color = maroon>Anya</font></b></center>'
 				'<center><img src="images/qwest/alter/sisterQW/sisboyQW_01.jpg"></center>'
-				'Anya long and hesitantly looking at you, and still decided to ask'
-				'-<<$name>> could you tomorrow after 18.00 go for a walk for an hour, we are here with a little Romka want... sit, Well, you know what I mean.'
-				'Sister little blush looks at you with pleading eyes.'
+				'Anya takes a long and hesitant look at you, and eventually decides to ask you.'
+				'"<<$name>> could you spend an hour tomorrow after 18.00 going for a walk, Roma wants to visit me here and... well, you know what I mean.'
+				'Your sister is blushing a little and looks at you with pleading eyes.'
 
 				act 'Of course':
 					cls
@@ -377,8 +377,8 @@ if hour >= 7 and hour < 24:
 					gs'stat'
 
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_03.jpg"></center>'
-					'-Certainly sister, I understand, I am going for a walk late at night, Only loud do not make noise, You do not want to destroy the psyche of our brother, hee-hee.'
-					'-You`re my best", your sister with a cry of joy hugs you.'
+					'"Certainly sister, I understand, I will go for a walk late at night. Only do not be too loud, if Kolka hears you it will blow his tiny little mind."'
+					'You and Anya laugh and she joyfully hugs you saying, "You`re my best."'
 
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
@@ -391,17 +391,17 @@ if hour >= 7 and hour < 24:
 					gs'stat'
 
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_04.jpg"></center>'
-					'-Sorry Anya, I need to learn in the evening'
-					'-Oh well, Anya turned angrily away, and buried her in his book.'
+					'"Sorry Anya, I need to study in the evening."'
+					'"Fine." Anya turns away angrily, and buries her head in her book.'
 
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
 			elseif sisboyrand >= 8 and (sisboyQW = 4 or sisboyQW = 6 or sisboyQW = 8) and sisboyday ! daystart and sisboyparty = 0:
 				'<center><b><font color = maroon>Anya</font></b></center>'
 				'<center><img src="images/qwest/alter/sisterQW/sisboyQW_09.jpg"></center>'
-				'-The last time you have with Romka so much was saved, thank you very much.'
-				'-You`re welcome, I am always very happy to help the beloved sister and see you happy.'
-				'-We are here again tomorrow I want to sit, you do not mind a walk for an hour?'
+				'"The last time Roma was here was so good, thank you very much."'
+				'"You`re welcome, I am always very happy to help my beloved sister and to see you happy."'
+				'"He would like to come here again tomorrow, do you mind taking another walk for about an hour?"'
 
 				act 'Of course':
 					cls
@@ -413,8 +413,8 @@ if hour >= 7 and hour < 24:
 					gs'stat'
 
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_03.jpg"></center>'
-					'-Certainly sister, I understand, I am going for a walk late at night, Only loud do not make noise, You do not want to destroy the psyche of our brother, hee-hee.'
-					'-You`re my best", your sister with a cry of joy hugs you.'
+					'"Certainly sister, I understand, I will go for a walk late at night. Only do not be too loud, if Kolka hears you it will blow his tiny little mind."'
+					'You and Anya laugh and she joyfully hugs you saying, "You`re my best."'
 
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
@@ -426,8 +426,8 @@ if hour >= 7 and hour < 24:
 					sisboyday = daystart
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_04.jpg"></center>'
-					'-Sorry Anya, I need to learn in the evening'
-					'-Oh well, Anya turned angrily away, and buried her in his book.'
+					'"Sorry Anya, I need to study in the evening."'
+					'"Fine." Anya turns away angrily, and buries her head in her book.'
 
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
@@ -453,7 +453,7 @@ if hour >= 7 and hour < 24:
 					sister += 10
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_36.jpg"></center>'
-					'You agree to the indecent proposal Ani.'
+					'You agree to Anyas indecent proposal.'
 					'- Well, you and libertines, Of course I agree, it will be very interesting...'
 					'You hug and Kiss with his beloved sister'
 					act 'Finish':SiSgdk = 0 & gt'sister'
@@ -469,7 +469,7 @@ if hour >= 7 and hour < 24:
 					sisThank = 0
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_37.jpg"></center>'
-					'You waive Indecent Proposal sister.'
+					'You decline your sisters indecent proposal.'
 					'- Perverts, roll far away, sick bastards.'
 					'You quarrel with her sister, she turns away from you and does not want to talk any more.'
 					act 'Finish':SiSgdk = 0 & gt'sister'
@@ -514,72 +514,73 @@ if hour >= 7 and hour < 24:
 	if ((sisboyday + 1 = daystart and hour > 18) or sisboyday + 1 < daystart) and sisThank = 1:
 		cls
 		if sisboyQW = 9 or sisboyQW = 7 or sisboyQW = 5 or sisboyQW = 3:sisboyQW = sisboyQW - 1
-			sisboyday = 0
-			sisThank = 0
-			gs'stat'
+		sisboyday = 0
+		sisThank = 0
+		gs'stat'
 
-			'<center><b><font color = maroon>Anya</font></b></center>'
-			'<center><img src="images/qwest/alter/sisterQW/sisboyQW_00.jpg"></center>'
-			'Merry Anka suddenly runs up to you and wraps around your neck.'
+		'<center><b><font color = maroon>Anya</font></b></center>'
+		'<center><img src="images/qwest/alter/sisterQW/sisboyQW_00.jpg"></center>'
+		'Merrily Anya runs up to you and wraps her arms around your neck.'
 		
-			if sisboytrioQW ! 1:
-				'- Sister, i adore you, We spent a lovely evening with Romka.'
-				'- Yes, I`m glad for you, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
-			else
-				'- Sister, i adore you, I really enjoyed our evening with him.'
-				'- Yes me too happy, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
-				sisboytrioQW = 0
+		if sisboytrioQW ! 1:
+			'"Sister, I adore you, We spent a lovely evening with Romka."'
+			'- Yes, I`m glad for you, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
+		else
+			'- Sister, i adore you, I really enjoyed our evening with him.'
+			'- Yes me too happy, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
+			sisboytrioQW = 0
 
-			act 'Finish':SiSgdk = 0 & gt'sister'
-		end
-
-		if SisterKnowMastr > 0 and sisterQW = 0:
-			cls
-			sisterQW = 1
-			gs'stat'
-			'<center><b><font color = maroon>Anya</font></b></center>'
-			'<center><img src="images/qwest/alter/sister.jpg"></center>'
-			'Anya looks at you and laughs "Well, <<$name>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
-
-			act 'Move away':SiSgdk = 0 & gt $loc, $metka
-		end
-
-		if sisterdialog = 2:
-			cls
-			cla
-			gs'stat'
-			'<center><b><font color = maroon>Anya</font></b></center>'
-			'<center><img src="images/qwest/alter/sobir.jpg"></center>'
-			'As the room goes, I am going to work, your sister Anya.'
-			'Anya, without turning to you, speaks: "<<$name>>, I`m so late, do not distract!"'
-			act '<B>Move away</B>':gt $loc, $metka
-		end
-
-		!going for a walk
-		if sisterdialog = 3:
-			cls
-			cla
-			gs'stat'
-			'<center><b><font color = maroon>Anya</font></b></center>'
-			'<center><img src="images/qwest/alter/progulka.jpg"></center>'
-			'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
-			'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
-			act '<B>Move away</B>':gt $loc, $metka
-		end
-
-		if sister >= 80 and sisterknowslut > 0 and narkossister = 0:
-			act 'Talk about sex':
-				cla
-				cls
-				gs'stat'
-				minut+=rand(10,15)
-				horny+=RAND(5,10)
-				sister+=1
-				dynamic $d_sistersexstories[1]
-				act '<B>Move away</B>':gt 'sister'
-			end
+		act 'Finish':SiSgdk = 0 & gt'sister'
 		end
 	end
+
+	if SisterKnowMastr > 0 and sisterQW = 0:
+		cls
+		sisterQW = 1
+		gs'stat'
+		'<center><b><font color = maroon>Anya</font></b></center>'
+		'<center><img src="images/qwest/alter/sister.jpg"></center>'
+		'Anya looks at you and laughs "Well, <<$name>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
+
+		act 'Move away':SiSgdk = 0 & gt $loc, $metka
+	end
+
+	if sisterdialog = 2:
+		cls
+		cla
+		gs'stat'
+		'<center><b><font color = maroon>Anya</font></b></center>'
+		'<center><img src="images/qwest/alter/sobir.jpg"></center>'
+		'As the room goes, I am going to work, your sister Anya.'
+		'Anya, without turning to you, speaks: "<<$name>>, I`m so late, do not distract!"'
+		act '<B>Move away</B>':gt $loc, $metka
+	end
+
+	!going for a walk
+	if sisterdialog = 3:
+		cls
+		cla
+		gs'stat'
+		'<center><b><font color = maroon>Anya</font></b></center>'
+		'<center><img src="images/qwest/alter/progulka.jpg"></center>'
+		'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
+		'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
+		act '<B>Move away</B>':gt $loc, $metka
+	end
+
+	if sister >= 80 and sisterknowslut > 0:
+		act 'Talk about sex':
+			cla
+			cls
+			gs'stat'
+			minut+=rand(10,15)
+			horny+=RAND(5,10)
+			sister+=1
+			dynamic $d_sistersexstories[1]
+			act '<B>Move away</B>':gt 'sister'
+		end
+	end
+
 else
 	'OK <<$name>>, time to sleep.'
 end

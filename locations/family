@@ -78,6 +78,7 @@ if StoryLine = 1:
 	if sister_indorf = 0:
 		if $loc = 'bedrPar':
 			sisterHere = 0
+			sisterdialog = 1
 
 			if hour < 7:
 				sisterHere = 1
@@ -88,7 +89,7 @@ if StoryLine = 1:
 				if hour = 7:
 					sisterHere = 2
 					sisterdialog = 2
-					'Your sister <a href="exec:GT ''sister''">Anya</a> He is going to work.'
+					'Your sister <a href="exec:GT ''sister''">Anya</a> is going to work.'
 				end
 			end
 

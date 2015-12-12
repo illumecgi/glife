@@ -794,7 +794,7 @@ if $ARGS[0] = 'pos20':
 	if teachlevel > 0 and teachlevel < 10:workPTU = 2
 
 	act 'Enter the Lyceum':gt 'etoexhib', 'pos19'
-	act 'Go to the train station':gt 'gorodok'
+	act 'Leave':gt 'gorodok'
 end
 
 if $ARGS[0] = 'pos21':

@@ -1,12 +1,12 @@
 # enderKik
 !!CV extension: Rewrite of the winning announcement
-if $ARGS[0] = 'win':
-	!!KikWin = KikWin + 1
-	pointKik = 0
-	pointKikV = 0
-	round = 0
-	minround = 0
-end
+
+!!KikWin = KikWin + 1
+pointKik = 0
+pointKikV = 0
+round = 0
+minround = 0
+
 
 if health < 10:health = 10
 

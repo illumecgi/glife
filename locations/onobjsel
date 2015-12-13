@@ -337,17 +337,22 @@ $objstatistika = {
 $reputation = {
 	clr
 	pl'<center><img src="images/pic/icon/reputation.png"><br></center>'
-	if GorSlut > 0:
-		if GorSlut = 1:pl 'In the Pavlovo you are known as a flirt.'
-		elseif GorSlut = 2:pl 'In the Pavlovo you are known to have sucked a few cocks.'
-		elseif GorSlut = 3:pl 'In the Pavlovo you are known as a great cocksucker.'
-		elseif GorSlut = 4:pl 'In the Pavlovo you are known to have fucked several boys.'
-		elseif GorSlut = 5:pl 'In the Pavlovo you are known the slut that would do anything.'
-		elseif GorSlut = 6:pl 'In the Pavlovo you are known as a prostitute who will take money for most extreme sex acts.'
+	if StoryLine = 1:
+		if GorSlut = 1:
+			pl 'In the Pavlovo you are known as a flirt.'
+		elseif GorSlut = 2:
+			pl 'In the Pavlovo you are known to have sucked a few cocks.'
+		elseif GorSlut = 3:
+			pl 'In the Pavlovo you are known as a great cocksucker.'
+		elseif GorSlut = 4:
+			pl 'In the Pavlovo you are known to have fucked several boys.'
+		elseif GorSlut = 5:
+			pl 'In the Pavlovo you are known as the slut that would do anything.'
+		elseif GorSlut = 6:
+			pl 'In the Pavlovo you are known as a prostitute who will take money for the most extreme sex acts.'
 		else
-			if storyline = 1:pl'In Pavlovo you have a good reputation of a decent girl'
+			pl'In Pavlovo you of considered a decent girl with a good reputation '
 		end
-
 	nl
 	end
 	if rinslut > 1 and kavslut > 0:pl'In the residential area of ​​you know as a whore, who sleeps with Caucasians.'

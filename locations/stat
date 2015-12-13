@@ -1191,9 +1191,9 @@ if horny >= 90 and tanga = 1:
 	elseif horny >= 90 and tanga = 0:
 		pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
 	elseif horny >= 50 and horny < 90 and tanga = 1:
-		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1.jpg''">itchy</a>.</font> from arousal.'
+		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1.jpg''">itchy</a> from arousal.</font>'
 	elseif horny >= 50 and horny < 90 and tanga = 0:
-		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a>.</font> from arousal.'
+		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a> from arousal.</font>'
 end
 
 if ETOmenu = 1:

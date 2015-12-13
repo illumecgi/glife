@@ -137,48 +137,46 @@ $d_albina_home_vine = {
 }
 
 $d_albina_vag_strapon = {
-		act 'Get on all fours':
-			cls
-			albsexday = daystart
-			minut += 15
-			$boy = 'Albina'
+	act 'Get on all fours':
+		cls
+		albsexday = daystart
+		minut += 15
+		$boy = 'Albina'
 
-			if vagina < 10:dick = 10
-			if vagina >= 10:dick = vagina + 5
-			if npcSex[23] = 0:npcSex[23] = 1 & girl += 1
-			lesbian += 1
-			straponVagPass += 1
-			gs 'stat'
-			'<center><img src="images/qwest/alter/albina/strapon.jpg"></center>'
-			'Albina takes a <<dick>> inch strap-on harness and attaches it to herself.'
-			'Having strapped herself in, you feel her hands gently stroking the inside of your thighs, slowly working their way to your pussy.'
-			gs 'dinsex2', 'd_strapon_vag'
+		if vagina < 10:dick = 10
+		if vagina >= 10:dick = vagina + 5
+		if npcSex[23] = 0:npcSex[23] = 1 & girl += 1
+		lesbian += 1
+		straponVagPass += 1
+		gs 'stat'
+		'<center><img src="images/qwest/alter/albina/strapon.jpg"></center>'
+		'Albina takes a <<dick>> inch strap-on harness and attaches it to herself.'
+		'Having strapped herself in, you feel her hands gently stroking the inside of your thighs, slowly working their way to your pussy.'
+		gs 'dinsex2', 'd_strapon_vag'
 		act 'Rest':gt $curloc
 	end
 }
 
 $d_albina_anal_strapon = {
-		act 'Get on all fours':
-			cls
-			albsexday = daystart
-			minut += 15
-			$boy = 'Albina'
-			if anus < 10:dick = 10
-			if anus >= 10:dick = anus+2
-			if npcSex[23] = 0:npcSex[23] = 1 & girl += 1
-			lesbian += 1
-			straponAnalPass += 1
-			gs 'stat'
-			'<center><img src="images/qwest/alter/albina/analstrapon.jpg"></center>'
-			'Albina takes a <<dick>> inch strap-on harness and attaches it to herself.'
-			'Having strapped herself in, you feel her hands gently stroking your butt, slowly working their way to your anus.'
-			gs 'dinsex2', 'd_strapon_anal'
+	act 'Get on all fours':
+		cls
+		albsexday = daystart
+		minut += 15
+		$boy = 'Albina'
+		if anus < 10:dick = 10
+		if anus >= 10:dick = anus+2
+		if npcSex[23] = 0:npcSex[23] = 1 & girl += 1
+		lesbian += 1
+		straponAnalPass += 1
+		gs 'stat'
+		'<center><img src="images/qwest/alter/albina/analstrapon.jpg"></center>'
+		'Albina takes a <<dick>> inch strap-on harness and attaches it to herself.'
+		'Having strapped herself in, you feel her hands gently stroking your butt, slowly working their way to your anus.'
+		gs 'dinsex2', 'd_strapon_anal'
 
-			act 'Rest':gt $curloc
-		end
+		act 'Rest':gt $curloc
 	end
 }
-
 
 $d_albina_akt_vag = {
 	act 'Put Albina on all fours and fuck her pussy':
@@ -224,7 +222,6 @@ $d_albina_akt_anal = {
 		act 'Rest':gt $curloc
 	end
 }
-
 
 --- albdin ---------------------------------
 

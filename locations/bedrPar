@@ -104,31 +104,31 @@ elseif tanga = 1:
 end
 
 
-if obruch > 0 and obruchday ! day:
+if obruch > 0 and obruchday ! daystart:
 	$sitrobr = '<a href="exec: dynamic $sitrobrd ">twist wrap</a>'
 else
 	$sitrobr = ''
 end
 
-if bookYog > 0 and bookYogday ! day:
+if bookYog > 0 and bookYogday ! daystart:
 	$sitryog = '<a href="exec: dynamic $sitryogd ">Meditation</a>'
 else
 	$sitryog = ''
 end
 
-if skak > 0 and skakday ! day:
+if skak > 0 and skakday ! daystart:
 	$sitrskak = '<a href="exec: dynamic $sitrskakd ">jumping rope</a>'
 else
 	$sitrskak = ''
 end
 
-if pressday ! day:
+if pressday ! daystart:
 	$sitrpress = '<a href="exec: dynamic $sitrpressd ">abdominal exercises</a>'
 else
 	$sitrpress = ''
 end
 
-if pushday ! day:
+if pushday ! daystart:
 	$sitrpush = '<a href="exec: dynamic $sitrpushd ">such as push-ups</a>'
 else
 	$sitrpush = ''

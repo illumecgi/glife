@@ -1381,9 +1381,9 @@ if agape = 3:pl '<b><font color="red">You have very sore anus and it emits blood
 if agape = 2:pl '<b><font color="red">You have a sore anus.</font></b>'
 if agape = 1:pl '<b><font color="red">You have a slightly sore and itchy anus.</font></b>'
 
-if spanked >= 3:pl'<b><font color = red>Ваша бедная <a href="exec:view''images/picb/SpankedAss2.jpg''">задница</a> нещадно болит, на ней видны ярко красные рубцы от ударов, местами переходящие в синяки.</font></b>'
-if spanked = 2:pl'<b><font color = red>Ваши <a href="exec:view''images/picb/SpankedAss1.jpg''">ягодицы</a> горят огнем, на них отчетиливо видны полосы.</font></b>'
-if spanked = 1:pl'<b><font color = red>Ваши <a href="exec:view''images/picb/SpankedAss.jpg''">ягодицы</a> немного покраснели от шлепков и грубых прикосновений и побаливают.</font></b>'
+if spanked >= 3:pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss2.jpg''">poor ass</a> hurts mercilessly, it is covered in bright red scars from the blows, some of them forming bruises.</font></b>'
+if spanked = 2:pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss1.jpg''">ass</a> burns with fire, you can clearly see bands of red across both cheeks.</font></b>'
+if spanked = 1:pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss.jpg''">ass</a> is a little red from spanking and it stings a little.</font></b>'
 
 if Gerpes >= 3:pl '<b><font color="red">On your lips sores. All signs of genital herpes.</font></b>'
 if Gerpes < 10 and Gerpes >= 5:pl '<b><font color="red">Your pussy is flushed and highly itchy. This is genital herpes.</font></b>'

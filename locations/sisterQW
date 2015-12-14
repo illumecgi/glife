@@ -177,18 +177,18 @@ if $ARGS[0] = 'sisboyQW_bedroom':
 							'Here warned Roma, that will soon be over, and Anja screamed:'
 							'-Not only inside Zaya,forgive not only inside, Roma and hastily pulled dick and instantly finished tummy sister.'
 
-							act 'Fondle yourself':gt 'sisterQW', 'sisboyQW_caress'
+							act 'Fondle yourself':dynamic $sisboyQW_caress
 						end
 
-						act 'Fondle yourself':gt 'sisterQW', 'sisboyQW_caress'
+						act 'Fondle yourself':dynamic $sisboyQW_caress
 						act 'Leave':gt 'korrPar'
 					end
 
-					act 'Fondle yourself':gt 'sisterQW', 'sisboyQW_caress'
+					act 'Fondle yourself':dynamic $sisboyQW_caress
 					act 'Leave':gt 'korrPar'
 				end
 
-				act 'Fondle yourself':gt 'sisterQW', 'sisboyQW_caress'
+				act 'Fondle yourself':dynamic $sisboyQW_caress
 				act 'Leave':gt 'korrPar'
 			elseif horny >= 60 and sister >= 80 and sisboyQW = 9:
 				cls
@@ -318,6 +318,7 @@ if $ARGS[0] = 'sisboytrioQW_bedroom' and $ARGS[1] = 'start':
 	end
 
 	sisboytrio += 1
+	if sisboytrio > 5:sisboytrio = 5
 	if sisboytrio = 1:
 		cls
 		minut += 5

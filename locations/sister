@@ -435,15 +435,15 @@ if hour >= 7 and hour < 24:
 				'<center><b><font color = maroon>Anya</font></b></center>'
 				'<center><img src="images/qwest/alter/sisterQW/sisboyQW_09.jpg"></center>'
 				if sisboyday = daystart:$siboyday_text = 'tomorrow'
-				if sisboyday + 1 = daystart:$siboyday_text = 'today'
+				if sisboyday + 1 = daystart:$siboyday_text = 'this'
 				if sisboytrio = 0:
 					'"Sister, Roma and I have thought about it alot and... I do not know how to say this..."'
 					'"Well, don''t just leave me hanging, what is it that you want to say to me?"'
-					'"Generally, mmm... We want, you to err... join us <<$siboyday_text>> in the evening."'
+					'"Generally, mmm... We want, you to err... join us <<$siboyday_text>> evening."'
 				else
-					'"Hello <<$name>>! Well, did you like it last time? We have a very good time with Roma."'
+					'"Hello <<$name>>! Well, did you like it last time? We had a very good time with Roma."'
 					'You do not say anything and just smile slyly watching your sister''s eyes.'
-					'"We want to repeat our games <<$siboyday_text>> in the evening, if you would like to.'
+					'"We want to repeat our games <<$siboyday_text>> evening, if you would like to.'
 				end
 
 				act 'Agree':
@@ -482,15 +482,15 @@ if hour >= 7 and hour < 24:
 
 				'<center><b><font color = maroon>Anya</font></b></center>'
 				'<center><img src="images/qwest/alter/sisterQW/sisboyQW_05.jpg"></center>'
-				if talkrand = 0:'You ask my sister about Romka, it is a long and happy, he says some good, responsive and courageous.'
-				if talkrand = 1:'Anka says, before she met a Romka-the mymra, and after leaving it for a long time he nazvanivala, from-Anya for this much scold and jealous.'
-				if talkrand = 2:'One day she and Romka were in a movie, and noticed on the last rows girl sucking guy, and that Romka asked her how-something to do the same.'
-				if talkrand = 3:'Anya complains, Roma that drinks too much beer, does not bestow gifts, and she pays little time.'
-				if talkrand = 4:'Anya says, Romka that offered her a threesome with another girl, to which she strongly offended and week not communicated with him.'
-				if talkrand = 5:'Anka embarrassed you complain, Roma that sometimes comes to her work and drags her into the back room.'
-				if talkrand = 6:'Anya in detail with enthusiasm tells you about the great virtue Romka, and if it is not, they would have long since parted.'
-				if talkrand = 7:'Anka share with you a secret, that her favorite position "horsewoman", Romke and likes to have her cancer.'
-				if talkrand = 8:'You speak with her sister at a very frank things, and she says shyly, she does not like to swallow sperm, but Romka is strong winds, and she was ready for him to swallow.'
+				if talkrand = 0:'You ask your sister about Roma, she is happy talking about him and says how he is good, responsive and courageous.'
+				if talkrand = 1:'Anka says, before she met Roma-the mymra, and after leaving it for a long time he nazvanivala, from-Anya for this much scold and jealous.'
+				if talkrand = 2:'One day she and Roma were in a movie, and noticed on the back row a girl sucking a guy, and that Roma asked her if she would do the same.'
+				if talkrand = 3:'Anya complains that Roma drinks too much beer, does not buy her gifts, and doesn''t pays her enough attention.'
+				if talkrand = 4:'Anya says, Roma offered her a threesome with another girl, which she was most offended by and didn''t speak to him for a week afterwards.'
+				if talkrand = 5:'Anya blushes as she tells you that Roma sometimes comes to her work and drags her into the back room.'
+				if talkrand = 6:'Anya in detail and with enthusiasm tells you about Romas magnificent virility, and how if not for this, they would have long since parted.'
+				if talkrand = 7:'Anya shares with you a secret, that her favorite position "cowgirl", Roma prefers to do her doggy-style.'
+				if talkrand = 8:'You speak with your sister very frankly about sexual things, and she says shyly, she does not like to swallow sperm, but with Roma it''s different, and she is willing to swallow for him.'
 				if talkrand = 9:
 					if reksLike = 0:
 						reksLike = 1
@@ -498,15 +498,17 @@ if hour >= 7 and hour < 24:
 						rexSisTalk = 0
 						rexPark = 0
 						rexCar = 0
-						'Anka long talks about their company, about Romkinyh friends, and asked you if you wanted with someone of them meet.'
-						'"Well... Actually, Rex is nothing so."'
-						'"Hmm.. He`s a nice guy, but sometimes behaves a bit strange. Me she recently told, what Rex just drags on women`s legs. There was a case when Rex was driving without a license in my father`s car and gazed at walking on the sidewalk a girl, walking in stockings and short skirt. Imagine, he was so carried away, he had not noticed ahead standing at the traffic lights, a van firms  «Rex». And it venturella, that paternal dozen can not be repaired. Named him Rex" - Anya smiled. - "Ever notice on his legs his greedy, devouring glance."'
+						'Anya talks for a long time about hers and Romas friends, and askes you if you want to get to know any of them.'
+						'"Well, Rex sounds quite nice... I guess."'
+						'Anya simles, "Hmm.. He is a nice guy, but sometimes behaves a bit strange, Rex is obsesed with womens'' legs.'
+						'There was a case when Rex was driving without a license in his fathers'' car and gazing at a girl walking on the sidewalk, in stockings and short skirt. Imagine, he was so carried away, he had not noticed ahead sitting at the traffic lights, a van.'
+						'He drove straight into it and wrote off the car. That''s why we call him Rex, because he stares at legs with his mouth open, teeth on show, wanting to devour them." As she says this, Anya is holding her hands like claws and impersonating a T-Rex growling at your legs.'
 					else
-						'You ask my sister about Romka, it is a long and happy, he says some good, responsive and courageous.'
+						'You ask your sister about Roma, she is happy talking about him and says how he is good, responsive and courageous.'
 					end
 				end
-				if talkrand = 10:'Anya says, what you liked Roma, and asks if he likes you.'
-					act 'Finish':SiSgdk = 0 & gt'sister'
+				if talkrand = 10:'Anya says, that you Roma likes you, and asks if you like him.'
+				act 'Finish':SiSgdk = 0 & gt'sister'
 			end
 		end
 	end
@@ -523,11 +525,13 @@ if hour >= 7 and hour < 24:
 		'Merrily Anya runs up to you and wraps her arms around your neck.'
 		
 		if sisboytrioQW ! 1:
-			'"Sister, I adore you, We spent a lovely evening with Romka."'
-			'- Yes, I`m glad for you, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
+			'"Sister, I adore you, I spent a lovely evening with Roma."'
+			'"Yes, I`m glad for you, enougth already, you''ll strangle me."
+			Anya is happy to let you go, and kisses you on the cheek'
 		else
-			'- Sister, i adore you, I really enjoyed our evening with him.'
-			'- Yes me too happy, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
+			'"<<$nickname>>, I adore you, I really enjoyed our evening with Roma."'
+			'"Yes me too, but not so tight, you''re strangling me,"
+			Anya is bouncing with joy and loosens her grip just enough to kiss you on the cheek'
 			sisboytrioQW = 0
 		end
 		act 'Finish':SiSgdk = 0 & gt'sister'
@@ -540,7 +544,7 @@ if hour >= 7 and hour < 24:
 		gs'stat'
 		'<center><b><font color = maroon>Anya</font></b></center>'
 		'<center><img src="images/qwest/alter/sister.jpg"></center>'
-		'Anya looks at you and laughs "Well, <<$name>>, and you give! I went into the room, and she`d play! Man himself Establishments, something..."'
+		'Anya looks at you and laughs "Well, <<$name>>, I know what you were upto! I went into the room, and you were playing with yourself!"'
 
 		act 'Move away':SiSgdk = 0 & gt $loc, $metka
 	end
@@ -551,8 +555,8 @@ if hour >= 7 and hour < 24:
 		gs'stat'
 		'<center><b><font color = maroon>Anya</font></b></center>'
 		'<center><img src="images/qwest/alter/sobir.jpg"></center>'
-		'As the room goes, I am going to work, your sister Anya.'
-		'Anya, without turning to you, speaks: "<<$name>>, I`m so late, do not distract!"'
+		'Your sister is busy getting ready for work.'
+		'Anya, without even turning around, says, "<<$name>>, no time to talk, I`m already late!"'
 		act '<B>Move away</B>':gt $loc, $metka
 	end
 
@@ -563,8 +567,8 @@ if hour >= 7 and hour < 24:
 		gs'stat'
 		'<center><b><font color = maroon>Anya</font></b></center>'
 		'<center><img src="images/qwest/alter/progulka.jpg"></center>'
-		'As the room goes, going on a walk, your sister Anya. She admires itself in a mirror and turned the ass, trying to make himself better.'
-		'Anya, without turning to you, speaks: "<<$name>>, If you decide to take a walk, I am near the club with her friends."'
+		'Your sister is getting herself ready to go out. She admires herself in a mirror and wiggles her ass, trying different poses.'
+		'Anya, without even turning to look at you, says: "<<$name>>, If you decide to take a walk, I will be near the club with my friends."'
 		act '<B>Move away</B>':gt $loc, $metka
 	end
 
@@ -582,7 +586,7 @@ if hour >= 7 and hour < 24:
 	end
 
 else
-	'OK <<$name>>, time to sleep.'
+	'OK <<$name>>, time for bed.'
 end
 --- sister ---------------------------------
 

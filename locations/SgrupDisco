@@ -1,4 +1,6 @@
 # SgrupDisco
+gs 'stat'
+$textgrup = ''
 $textgrup2 = ''
 i = 0
 :markgruploop

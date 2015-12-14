@@ -68,7 +68,7 @@ minut += 5
 gs 'stat'
 '<center><img src="images/etogame/dk_night.jpg"></center>'
 
-if GorSlut < 3:
+if GorSlut <= 3:
 	'You went out with a guy from the club he led the club for you. There has flopped his two pals. On the ground, there was a bottle of vodka and plastic cups. The guy said "I <<$bname>> is <<$bname2>> and <<$bname3>>." You introduced "I <<$name>>." <<$bname2>> took a bottle and a plastic cup. He drunk, uncertain movements poured vodka into a glass, then handed the cup to you.'
 
 	act 'Drink':

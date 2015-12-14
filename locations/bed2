@@ -23,6 +23,7 @@ cloth_vid = 0
 if analplugIN = 1:analplugIN = 0 & 'Before going to bed you remove a butt plug.'
 if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed you remove a vibrator.'
 if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Your makeup has smeared all over your face and your pillow looks like it was used to suffocate a clown. Also, this isn''t good for your skin.'
+if fat > 5 and stringimplant = 1:silicone += 1 & fat -= 5
 
 if storyline = 0:
 	temp = rand(1, 10)

@@ -437,13 +437,13 @@ if hour >= 7 and hour < 24:
 				if sisboyday = daystart:$siboyday_text = 'tomorrow'
 				if sisboyday + 1 = daystart:$siboyday_text = 'today'
 				if sisboytrio = 0:
-					'- Sister, we are here with much thought and Romka... I do not know how to say..'
-					'- Well, do not pull, what you have there is an interesting for me there.'
-					'- Generally, mmm... We want, to you <<$siboyday_text>> evening we were joined by.'
+					'"Sister, Roma and I have thought about it alot and... I do not know how to say this..."'
+					'"Well, don''t just leave me hanging, what is it that you want to say to me?"'
+					'"Generally, mmm... We want, you to err... join us <<$siboyday_text>> in the evening."'
 				else
-					'- Hello <<$name>>! Well, you liked it last time? We have a very Roma.'
-					'You do not say anything and just smiles slyly watching his sister`s eyes.'
-					'- We want <<$siboyday_text>> evening repeat our games, if you do not mind?'
+					'"Hello <<$name>>! Well, did you like it last time? We have a very good time with Roma."'
+					'You do not say anything and just smile slyly watching your sister''s eyes.'
+					'"We want to repeat our games <<$siboyday_text>> in the evening, if you would like to.'
 				end
 
 				act 'Agree':
@@ -454,12 +454,12 @@ if hour >= 7 and hour < 24:
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_36.jpg"></center>'
 					'You agree to Anyas indecent proposal.'
-					'- Well, you and libertines, Of course I agree, it will be very interesting...'
-					'You hug and Kiss with his beloved sister'
+					'"Well, aren''t you all liberated? Of course I agree, it will be very interesting.'
+					'You hug and Kiss with your beloved sister'
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
 
-				act 'Takeout':
+				act 'Decline':
 					cls
 					sisboytrioQW = -1
 					sisboytrioDayOtkaz = daystart + 3
@@ -470,8 +470,8 @@ if hour >= 7 and hour < 24:
 					gs'stat'
 					'<center><img src="images/qwest/alter/sisterQW/sisboyQW_37.jpg"></center>'
 					'You decline your sisters indecent proposal.'
-					'- Perverts, roll far away, sick bastards.'
-					'You quarrel with her sister, she turns away from you and does not want to talk any more.'
+					'"You fucking perverts, no way, you disgusting bitch.'
+					'You quarrel with her sister, when you have both shouted yourselves out and tears roll down your cheeks, she turns away from you and does not want to talk any more.'
 					act 'Finish':SiSgdk = 0 & gt'sister'
 				end
 			else
@@ -529,9 +529,9 @@ if hour >= 7 and hour < 24:
 			'- Sister, i adore you, I really enjoyed our evening with him.'
 			'- Yes me too happy, Unhook from me already, strangle, - Anya and happy to let you go, a kiss on the cheek'
 			sisboytrioQW = 0
-
-		act 'Finish':SiSgdk = 0 & gt'sister'
 		end
+		act 'Finish':SiSgdk = 0 & gt'sister'
+
 	end
 
 	if SisterKnowMastr > 0 and sisterQW = 0:

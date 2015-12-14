@@ -103,38 +103,49 @@ elseif tanga = 1:
 	end
 end
 
+sports = 0
 
 if obruch > 0 and obruchday ! daystart:
 	$sitrobr = '<a href="exec: dynamic $sitrobrd ">twist wrap</a>'
+	sports = 1
 else
 	$sitrobr = ''
 end
 
 if bookYog > 0 and bookYogday ! daystart:
 	$sitryog = '<a href="exec: dynamic $sitryogd ">Meditation</a>'
+	sports = 1
 else
 	$sitryog = ''
 end
 
 if skak > 0 and skakday ! daystart:
 	$sitrskak = '<a href="exec: dynamic $sitrskakd ">jumping rope</a>'
+	sports = 1
 else
 	$sitrskak = ''
 end
 
 if pressday ! daystart:
 	$sitrpress = '<a href="exec: dynamic $sitrpressd ">abdominal exercises</a>'
+	sports = 1
 else
 	$sitrpress = ''
 end
 
 if pushday ! daystart:
-	$sitrpush = '<a href="exec: dynamic $sitrpushd ">such as push-ups</a>'
+	$sitrpush = '<a href="exec: dynamic $sitrpushd ">push-ups</a>'
+	sports = 1
 else
 	$sitrpush = ''
 end
+
 $sportsitr = '<<$sitrpush>> <<$sitrpress>> <<$sitrskak>> <<$sitryog>> <<$sitrobr>>'
-'The room is not so much space, but enough for a variety of sport activities such as <<$sportsitr>>'
+
+if sports = 1:
+	'There isn''t much space in the room, but enough for a variety of sport activities such as:'
+	'<center><<$sportsitr>></center>'
+end
 
 if gobelen>0:'Ready Tapestry <<gobelen>> Pieces'
 if poSkill>=50 and tkan>0:'Your cloth will suffice for <<tkan>> lessons'

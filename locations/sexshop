@@ -534,6 +534,7 @@ if $ARGS[0] = 'pip':
 						gloryhole += 1
 						swallow += 1
 						cumlip += 1
+						mistressqwest += 1
 						dynamic $venerasiak
 						ghprand = rand(1, 38)
 						'<center><img src="images/picV/gloryhole<<ghprand>>.jpg"></center>'

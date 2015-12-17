@@ -201,7 +201,7 @@ if StoryLine = 1:
 
 		if $loc = 'gschool':
 			if (week < 6 and hour >= 15 and hour <= 17) or ((week >= 6 or kanikuli > 0) and hour >= 7 and hour <= 17):
-				if hour >= 15 and hour <= 17:'On the field near the school your <a href="exec:gt ''brother''">brother</a> plays football.'
+				'On the field near the school your <a href="exec:gt ''brother''">brother</a> plays football.'
 			end
 		end
 	end

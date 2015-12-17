@@ -1246,7 +1246,7 @@ $din_bigperemena = {
 
 		soniarand = rand(0,30)
 
-		if sonyarand >= 10:
+		if soniarand >= 10:
 			if soniaPS=3:soniasexrand=1
 			if soniaPS=4:soniasexrand=rand(1,2)
 			if soniaPS=5:soniasexrand=rand(1,3)

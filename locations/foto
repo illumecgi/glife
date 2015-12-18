@@ -259,11 +259,16 @@ $modelopt = {
 
 			act 'See alternative offer':
 				forand = rand(1, 6)
-
+				cla
+				clr
+				*clr
+				'<center><b><font color="maroon">Photographer</font></b></center>'
+				'<center><img src="images/etogame/fotograph.jpg"></center>'
+				'Ok, we have another job we could use you for.'
 				dynamic $modelopt
 			end
 
-			act 'Agree (3:00)':
+			act 'Agree to new offer (lose virginity) (3:00)':
 				cla
 				clr
 				*clr
@@ -284,6 +289,8 @@ $modelopt = {
 
 				act 'Change back into your clothes':gt 'foto', 'start'
 			end
+			exit
+
 		end
 
 		act 'Agree (3:00)':

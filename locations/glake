@@ -91,6 +91,7 @@ if $clothingworntype = 'nude':
 						'<center><img src="images/prost/sexcar.jpg"></center>'
 						'He throws you on the back seat, his cock is already straining to get out as he quickly pulls down his pants.'
 						'It''s not the most pleasurable sex, but atleast he uses a condom. Hopefully your clothes will turn up.'
+						act 'leave': gt 'glake'
 					end
 					if money >= 3000:
 						act 'Pay (3000)':
@@ -98,7 +99,7 @@ if $clothingworntype = 'nude':
 							yoga[1] = 1
 							gs 'clothing', 'wear', 'yoga', 1
 							'You don''t really have any other choice and pay him for the clothes. Hopefully your clothes will turn up.'
-							gt 'glake'
+							act 'leave': gt 'glake'
 						end
 					end
 				end

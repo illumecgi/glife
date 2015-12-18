@@ -131,6 +131,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 	end
 	if sunWeather = 1:
 		act 'Sunbathe 1 h':
+
 			if $clothingworntype = 'nude':
 				cla
 				*clr
@@ -140,7 +141,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 				'You just had to lie down together sunbathing, as there nowhere appeared a-the mongrel, and began to sniff you between the legs.'
 				'You become uncomfortable and you have decided to get rid of it.'
 				act 'Drive away':gt'glake'
-			end
+
 			elseif bikini = 1:
 				cla
 				*clr
@@ -154,28 +155,26 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 
 				if krem = 0:
 					tan = tan + 1
-					
 					'You went to the beach to sunbathe.'
-
 				elseif krem > 0:
 					krem = krem - 1
 					tan = tan + 3
-					
 					'You body is smeared with cream for sunburn and went sunbathing.'
 				end
+
 				gs'LakeBoyDy'
 				glbrand=rand(1,100)
 				if vnesh>=glbrand:tipelakeboyrand=rand(1,100)
 				if tipelakeboyrand<=5:
-					if belgangQW=0:'While you are sunbathing you company sits adult men, whose entire body is covered with tattoos criminal.'
-					if belgangQW>0:'While you are sunbathing you White sits with his` brother.'
 					if belgangQW>0:
+						'While you are sunbathing you White sits with his` brother.'
 						'To you and the White sits idly scratching his belly asks'
 						'- Well cho <<$name>>, ride?'
 						dynamic $LBD_ride
 						dynamic $LBD_go
 					end
 					if belgangQW=0:
+						'While you are sunbathing you company sits adult men, whose entire body is covered with tattoos criminal.'
 						'Bold and bald guy with pounds of gold cross on a thick chain, I sat down next to you and scratched his belly covered with tattoos. "Hello! Do not interfere?"'
 						act'Lunatic':
 							cls
@@ -211,7 +210,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 							'You shrugged and tried to escape from these lads eyes closed. But it was not there, you feel, you stomach that is gently stroking and tickling. I opened my eyes you will see, bellied Urca that leads you to a blade of grass torn stomach.'
 							dynamic $LBD_go
 							dynamic $LBD_hand
-	
+
 							act'Lie':
 								cls
 								minut+=5
@@ -220,52 +219,50 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 								'- Come to me baby. You will not regret. With me you`ll be.'
 								dynamic $LBD_hand
 								dynamic $LBD_ride
-								end
 							end
+						end
 
-						dynamic $LBD_go
+					dynamic $LBD_go
 					end
-	
 					exit
-					end
-					if tipelakeboyrand>5 and tipelakeboyrand<=30:
-						gs'BnameGen'
-						'While you are sunbathing you sit down three guys.'
+	
+				end
+				if tipelakeboyrand>5 and tipelakeboyrand<=30:
+					gs'BnameGen'
+					'While you are sunbathing you sit down three guys.'
 						
-						act 'Escape':gt'glake'
-					end
+					act 'Escape':gt'glake'
+					exit
+				end
 	
-					if tipelakeboyrand>30 and tipelakeboyrand<=80:
-						gs'BnameGen'
-						gs'LakeBoyZ'
-						'While you are sunbathing you sits a guy.'
-						'Man is represented as <<$bname>> and asks what`s your name.'
+				if tipelakeboyrand>30 and tipelakeboyrand<=80:
+					gs'BnameGen'
+					gs'LakeBoyZ'
+					'While you are sunbathing you sits a guy.'
+					'Man is represented as <<$bname>> and asks what`s your name.'
 	
-						act 'Escape':gt'glake'
-						dynamic $gL_boy_z
+					act 'Escape':gt'glake'
+					dynamic $gL_boy_z
+					exit
 
-					end
-
-					if tipelakeboyrand>80:
-						'While you are sunbathing you sit down, three young guys in appearance obviously Caucasians.'
-						act 'Escape':gt'glake'
-					end
 				end
 
-				act 'Logout':gt'glake'
-			end
-
+				if tipelakeboyrand>80:
+					'While you are sunbathing you sit down, three young guys in appearance obviously Caucasians.'
+					act 'Escape':gt'glake'
+					exit
+				end
 			else
 				cla
-				
+	
 				'You can not sunbathe in your clothes.'
 				act'Logout':gt'glake'
 			end
 		end
-	end	
+	end
+end	
 
-	act'On a wild beach':gt'gLakeNude'
-end
+act'On a wild beach':gt'gLakeNude'
 
 !winter
 if month=12 or month=1 or month=2:
@@ -308,6 +305,7 @@ $katok_base={
 	act'Ride':dynamic $katok_start
 	act'Escape':gt'glake'
 }
+
 $katok_start={
 	cla
 	*clr

@@ -9,47 +9,40 @@ if tanga = 0: tangamemb = 1
 if month>=3 and month<=5:
 	if hour>=6 and hour<=17:
 		'<center><img src="images/nigma/gor/lake/lake.spring.jpg"></center>'
-		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
-		''
 	else
 		'<center><img src="images/nigma/gor/lake/lake.spring.night.jpg"></center>'
-		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
-		''
 	end
+	'<center>Small lake, located not far from Pavlovsky. Or maybe Paul''s was built next to the lake, who knows.</center>'
+	''
 end
 if month>=6 and month<=8:
 	if hour>=6 and hour<=19:
 		'<center><img src="images/nigma/gor/lake/lake.summer.jpg"></center>'
-		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
-		''
 	else
 		'<center><img src="images/nigma/gor/lake/lake.summer.night.jpg"></center>'
-		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
-		''
 	end
+	'<center>Small lake, located not far from Pavlovsky. Or maybe Paul''s was built next to the lake, who knows.</center>'
+	''
 end
 if month>=9 and month<=11:
 	if hour>=6 and hour<=18:
 		'<center><img src="images/nigma/gor/lake/lake.autumn.jpg"></center>'
-		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
 	else
 		'<center><img src="images/nigma/gor/lake/lake.autumn.night.jpg"></center>'
-		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
-		''
 	end
+	'<center>Small lake, located not far from Pavlovsky. Or maybe Paul''s was built next to the lake, who knows.</center>'
+	''
 end
 if month=1 or month=2 or month=12:
 	if hour>=7 and hour<=16:
 		'<center><img src="images/nigma/gor/lake/lake.winter.jpg"></center>'
 		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
-		'With the arrival of winter, Water in the lake is frozen, and the lake turned into a skating rink. Now, anyone can go skating, if they have, of course.'
-		''
 	else
 		'<center><img src="images/nigma/gor/lake/lake.winter.night.jpg"></center>'
 		'Small lake, Located not far from Pavlovsky. Or is Paul`s was built next to the lake, who knows.'
-		'With the arrival of winter, Water in the lake is frozen, and the lake turned into a skating rink. Now, anyone can go skating, if they have, of course.'
-		''
 	end
+	'<center>With the arrival of winter, the water in the lake is frozen, and the lake is being used as a skating rink. You could join them if you have skates, of course.</center>'
+	''	
 end
 
 if $clothingworntype = 'nude': 
@@ -58,7 +51,59 @@ if $clothingworntype = 'nude':
 		cla
 		minut+=5
 		gs 'clothing', 'wear_last_worn'
-		'You have put your clothes back on.'
+		if $clothingworntype = 'nude':
+			if storyline = 1:
+			minut += 30
+			manna -= 5
+			willpower -= 5
+			'You search everywhere, but are unable to find your clothes. In a panic you make you decide to run all the way home. Hopefully your clothes will turn up.'
+			gt 'korrPar'
+			else
+			money = 0
+			'You search everywhere, but are unable to find your clothes. Eventually seeing your panic a man comes upto you and asks what the problem is.'
+			if bag = 1:
+				'At least you find your bag'
+			else
+				money = 0
+			end
+			'"I can''t find my clothes." You blurt out almost in tears'
+			'"It''s OK, I happen to have some sportswear in my car," He says leading you to his car.'
+			'"of course I can''t just give it away."'
+			if money >= 3000:
+				act 'Pay (3000)':
+					money -= 3000
+					yoga[1] = 1
+					gs 'clothing', 'wear', 'yoga', 1
+					'You don''t really have any other choice and pay him for the clothes. Hopefully your clothes will turn up.'
+					gt 'glake'
+				end
+			end
+			act 'Suggest alternative':
+				'You ask him if there is an alternative.'
+				'He looks your naked body up and down, "I can think of one."'
+				act 'Agree':
+					cla
+					cls
+					sex += 1
+					horny += 20
+					yoga[1] = 1
+					gs 'clothing', 'wear', 'yoga', 1
+					'<center><img src="images/prost/sexcar.jpg"></center>'
+					'He throws you on the back seat, his cock is already straining to get out as he quickly pulls down his pants.'
+					'It''s not the most pleasurable sex, but atleast he uses a condom. Hopefully your clothes will turn up.'
+				end
+				if money >= 3000:
+					act 'Pay (3000)':
+						money -= 3000
+						yoga[1] = 1
+						gs 'clothing', 'wear', 'yoga', 1
+						'You don''t really have any other choice and pay him for the clothes. Hopefully your clothes will turn up.'
+						gt 'glake'
+					end
+				end
+			end
+		end
+		'You put your clothes back on.'
 		act'Done':gt'glake'
 	end
 end
@@ -94,7 +139,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 			cla
 			minut += 5
 			gs 'clothing', 'strip'
-			'You do not hesitate to have removed rozdelis goals. Now you nothing prevents, You can easily go to swim and sunbathe.'
+			'You do not hesitate to remove all your clothes. Now you are free and easy go to swiming or to sunbathe.'
     
 			act'Done':gt'glake'
 		end
@@ -117,15 +162,14 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 			if stren < 30:stren = stren + 1
 
 			'<center><img src="images/pics/swim.jpg"></center>'
-			'You iskupnulis lake, Water refreshes and invigorates.'
-			if $clothingworntype = 'nude':willpower -= 5 & manna -= 5 & 'You hear the women around you whispering, saying that there look how shameless <<$surname>>, completely lost the conscience, and the men stared rozglyaduyut your naked body.'
+			'You swim and play in the lake, the water refreshes and invigorates.'
+			if $clothingworntype = 'nude':willpower -= 5 & manna -= 5 & 'You hear the women around you whispering, saying that there is that shameless <<$surname>>, completely lost any decency, and the men are just staring at your naked body.'
 
 			act 'Get out of the water':gt'glake'
 		else
 			cla
 			'You can not swim in clothes. You will ruin them.'
-			'And no clothes can not - there are too many prying eyes.'
-			'Do you need a swimsuit.'
+			'You will need a swimsuit, unless you are very daring and prepared to strip naked.'
 			act 'Return':gt'glake'
 		end
 	end
@@ -138,9 +182,9 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 				willpower -= 5
 				manna -= 5 
 				'<center><img src="images/lmps/dogcaine.jpg"></center>'
-				'You just had to lie down together sunbathing, as there nowhere appeared a-the mongrel, and began to sniff you between the legs.'
-				'You become uncomfortable and you have decided to get rid of it.'
-				act 'Drive away':gt'glake'
+				'You go to lay down and start sunbathing, as from nowhere appears a mongrel, and begins to sniff at you between the legs.'
+				'It keeps pestering you, making it impossible to sunbathe here.'
+				act 'Drive dog away':gt'glake'
 
 			elseif bikini = 1:
 				cla
@@ -152,14 +196,13 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 				gs'time'
 				'<center><img src="images/pics/zagar.jpg"></center>'
 
-
 				if krem = 0:
 					tan = tan + 1
-					'You went to the beach to sunbathe.'
+					'You go to the beach to sunbathe.'
 				elseif krem > 0:
 					krem = krem - 1
 					tan = tan + 3
-					'You body is smeared with cream for sunburn and went sunbathing.'
+					'You smear your body with suncream and start sunbathing.'
 				end
 
 				gs'LakeBoyDy'
@@ -167,34 +210,34 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 				if vnesh>=glbrand:tipelakeboyrand=rand(1,100)
 				if tipelakeboyrand<=5:
 					if belgangQW>0:
-						'While you are sunbathing you White sits with his` brother.'
-						'To you and the White sits idly scratching his belly asks'
-						'- Well cho <<$name>>, ride?'
+						'While you are sunbathing you see White sitting with his brother.'
+						'White walks over and sits by you idly scratching his belly.'
+						'He asks, "Well <<$name>>, want to ride?'
 						dynamic $LBD_ride
 						dynamic $LBD_go
 					end
 					if belgangQW=0:
-						'While you are sunbathing you company sits adult men, whose entire body is covered with tattoos criminal.'
-						'Bold and bald guy with pounds of gold cross on a thick chain, I sat down next to you and scratched his belly covered with tattoos. "Hello! Do not interfere?"'
+						'While you are sunbathing you see a man, whose entire body is covered with tattoos of a criminal gang, moving towards you.'
+						'He is a bold and bald guy with a heavy gold cross on a thick chain, he sits down next to you and scratches his tatoo covered belly. "Hello! I''m not interfere, am I?"'
 						act'Lunatic':
 							cls
 							minut+=5
 							gs'stat'
 							'You frowned and said in a firm voice'
-							'- Lunatic.'
-							'Bald immediately responded with a challenge.'
-							'- E, I do not vkuril, This cho, your place, something?'
+							'"Lunatic."'
+							'Baldly, he immediately responds with a challenge.'
+							'"Oh, I did not realise. This is your place, you owe it?'
 								
-							act'Yes, my!':
+							act'Yes, mine!':
 								cls
 								minut+=5
 								gs'stat'
-								'You responded indignantly squirt'
-								'- Yes, this is my spot! Then the first I have!'
-								'Near you sat on his haunches guy with a gloomy death and impaled on his chest tombs, and he said grimly staring you in the face.'
-								'- The place is only prostitutes and conductors. And this is not fucking bus. So what do the findings, boys.'
-								'The bald man smiled putting your hand on the chest and squeezing under the teat asked swimsuit.'
-								'- And for what cho?'
+								'You respond indignantly.'
+								'"Yes, this is my spot! I was here first!'
+								'Near you sitting on his haunches is another guy with a gloomy face and tatooed on his chest skulls and tombs. Staring you in the face, he says grimly.'
+								'"This place is only used by prostitutes and conductors, and I don''t see a fucking bus. What do you think, boys?'
+								'The bald man smiles and puts his hand on your chest, squeezing you tit through your swimsuit.'
+								'"So... how much?"'
 								dynamic $LBD_go
 
 								dynamic $LBD_hand
@@ -207,7 +250,7 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 							cls
 							minut+=5
 							gs'stat'
-							'You shrugged and tried to escape from these lads eyes closed. But it was not there, you feel, you stomach that is gently stroking and tickling. I opened my eyes you will see, bellied Urca that leads you to a blade of grass torn stomach.'
+							'You shrug and try to ignore these lads with your eyes closed. But as you lie there, you feel something gently stroking and tickling your stomach. I opened my eyes you will see, bellied Urca that leads you to a blade of grass torn stomach.'
 							dynamic $LBD_go
 							dynamic $LBD_hand
 
@@ -222,9 +265,9 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 							end
 						end
 
-					dynamic $LBD_go
+						dynamic $LBD_go
 					end
-					exit
+				exit
 	
 				end
 				if tipelakeboyrand>5 and tipelakeboyrand<=30:
@@ -274,7 +317,7 @@ if month=12 or month=1 or month=2:
 			konki_cloth=0
 			'<center><img src="images/nigma/gor/lake/katok/konki0,1.jpg"></center>'
 			'You rented skates and put on his shoes. Strangely, but found it difficult to remove the skates, what to wear.'
-			act'Ago':gt'glake'
+			act'Done':gt'glake'
 		end
 	end
 	if hour>=8 and hour<=17:
@@ -285,8 +328,8 @@ if month=12 or month=1 or month=2:
 				minut+=5
 				konki_cloth=1
 				'<center><img src="images/nigma/gor/lake/katok/konki0,0.jpg"></center>'
-				'You took off your shoes, and put on skates. Now, You can go skating.'
-				act'Ago':gt'glake'
+				'You take off your shoes, and put on skates. Now you can go skating.'
+				act'Done':gt'glake'
 			end
 		end
 		if konki_cloth=1:
@@ -349,13 +392,13 @@ $katok_start={
 	end
 	
 	if hour<=17:
-		act'Ago':dynamic $katok_base
+		act'Go again':dynamic $katok_start
 		act'Escape':gt'glake'
 	else
 		cla
 		*clr
 		'<center><img src="images/nigma/gor/lake/katok/katok0,'+rand(0,3)+'.jpg"></center>'
-		'Time is too late. The skating rink is closed, People go home. And you, too, it is time to.'
+		'It''s too late. The skating rink has closed, People are going home and it''s too dark to skate now.'
 		act'Escape':gt'glake'
 	end
 }
@@ -363,8 +406,8 @@ $katok_start={
 act'Go in Pavlovsk':
 	if konki_cloth=1:
 		cla
-		'You need to remove your skates. How are you going to walk the streets?'
-		act'Ago':gt'glake'
+		'You need to remove your skates. How are you going to walk on the streets in those?'
+		act'Back':gt'glake'
 	elseif $clothingworntype ! 'nude':
 		gt'gorodok'
 	else

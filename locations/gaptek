@@ -4,7 +4,6 @@ clr
 *clr
 CLOSE ALL
 if sound = 0:PLAY 'sound/shop.mp3',30
-minut += 5
 gs 'stat'
 gs 'time'
 

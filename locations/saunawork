@@ -144,14 +144,14 @@ act 'Take a shower (0:15)':
 	mop = 1
 	dynamic $showerdin
 
-if frost > 0:frost = 0
+	if frost > 0:frost = 0
 
 	'<center><img src="images/pics/dush.jpg"></center>'
 	'You go into the bathroom and turn on the shower. Lather your body and wash it off in the shower.'
 
-if leghair > 0 or lobok > 0:
-	act 'Get razor':dynamic $saunabrit
-end
+	if leghair > 0 or lobok > 0:
+		act 'Get razor':dynamic $saunabrit
+	end
 
 	if horny >= 90:
 		act 'Point shower at pussy':

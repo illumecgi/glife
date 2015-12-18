@@ -56,7 +56,7 @@ if $clothingworntype = 'nude':
 			minut += 30
 			manna -= 5
 			willpower -= 5
-			'You search everywhere, but are unable to find your clothes. In a panic you make you decide to run all the way home. Hopefully your clothes will turn up.'
+			'You search everywhere, but are unable to find your clothes. In a panic you decide to run all the way home. Hopefully your clothes will turn up.'
 			gt 'korrPar'
 			else
 			money = 0

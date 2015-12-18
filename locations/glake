@@ -53,45 +53,22 @@ if $clothingworntype = 'nude':
 		gs 'clothing', 'wear_last_worn'
 		if $clothingworntype = 'nude':
 			if storyline = 1:
-			minut += 30
-			manna -= 5
-			willpower -= 5
-			'You search everywhere, but are unable to find your clothes. In a panic you decide to run all the way home. Hopefully your clothes will turn up.'
-			gt 'korrPar'
-			else
-			money = 0
-			'You search everywhere, but are unable to find your clothes. Eventually seeing your panic a man comes upto you and asks what the problem is.'
-			if bag = 1:
-				'At least you find your bag'
+				minut += 30
+				manna -= 5
+				willpower -= 5
+				'You search everywhere, but are unable to find your clothes. In a panic you decide to run all the way home. Hopefully your clothes will turn up.'
+				gt 'korrPar'
 			else
 				money = 0
-			end
-			'"I can''t find my clothes." You blurt out almost in tears'
-			'"It''s OK, I happen to have some sportswear in my car," He says leading you to his car.'
-			'"of course I can''t just give it away."'
-			if money >= 3000:
-				act 'Pay (3000)':
-					money -= 3000
-					yoga[1] = 1
-					gs 'clothing', 'wear', 'yoga', 1
-					'You don''t really have any other choice and pay him for the clothes. Hopefully your clothes will turn up.'
-					gt 'glake'
+				'You search everywhere, but are unable to find your clothes. Eventually seeing your panic a man comes upto you and asks what the problem is.'
+				if bag = 1:
+				'At least you find your bag'
+				else
+					money = 0
 				end
-			end
-			act 'Suggest alternative':
-				'You ask him if there is an alternative.'
-				'He looks your naked body up and down, "I can think of one."'
-				act 'Agree':
-					cla
-					cls
-					sex += 1
-					horny += 20
-					yoga[1] = 1
-					gs 'clothing', 'wear', 'yoga', 1
-					'<center><img src="images/prost/sexcar.jpg"></center>'
-					'He throws you on the back seat, his cock is already straining to get out as he quickly pulls down his pants.'
-					'It''s not the most pleasurable sex, but atleast he uses a condom. Hopefully your clothes will turn up.'
-				end
+				'"I can''t find my clothes." You blurt out almost in tears'
+				'"It''s OK, I happen to have some sportswear in my car," He says leading you to his car.'
+				'"of course I can''t just give it away."'
 				if money >= 3000:
 					act 'Pay (3000)':
 						money -= 3000
@@ -99,6 +76,30 @@ if $clothingworntype = 'nude':
 						gs 'clothing', 'wear', 'yoga', 1
 						'You don''t really have any other choice and pay him for the clothes. Hopefully your clothes will turn up.'
 						gt 'glake'
+					end
+				end
+				act 'Suggest alternative':
+					'You ask him if there is an alternative.'
+					'He looks your naked body up and down, "I can think of one."'
+					act 'Agree':
+						cla
+						cls
+						sex += 1
+						horny += 20
+						yoga[1] = 1
+						gs 'clothing', 'wear', 'yoga', 1
+						'<center><img src="images/prost/sexcar.jpg"></center>'
+						'He throws you on the back seat, his cock is already straining to get out as he quickly pulls down his pants.'
+						'It''s not the most pleasurable sex, but atleast he uses a condom. Hopefully your clothes will turn up.'
+					end
+					if money >= 3000:
+						act 'Pay (3000)':
+							money -= 3000
+							yoga[1] = 1
+							gs 'clothing', 'wear', 'yoga', 1
+							'You don''t really have any other choice and pay him for the clothes. Hopefully your clothes will turn up.'
+							gt 'glake'
+						end
 					end
 				end
 			end

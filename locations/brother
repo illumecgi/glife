@@ -36,8 +36,8 @@ if cumface > 0:
 end
 
 ! WD: Fix old nude variable
-	if brotherknowslut < 1: brotherknowslut = 1
 if cumass > 0 and $clothingworntype = 'nude' and tanga = 0:
+	if brotherknowslut < 1: brotherknowslut = 1
 	'"Go wash yourself, you''ve got something on your butt."'
 	if brotherSex = 0:
 		brother -= 1
@@ -350,7 +350,7 @@ if brotherQW = 3:
 	'<center><b><font color = maroon>Kolka</font></b></center>'
 	'<center><img src="images/qwest/alter/ev2/brother/homework1.jpg"></center>'
 	'After finishing engaged, Kolka c red with excitement person asks:'
-	'- "<<$name[2]>>, I have to quickly control on anatomy will, I still can not learn it can. Do not help me?'
+	'- "<<$nickname>>, I have to quickly control on anatomy will, I still can not learn it can. Do not help me?'
 	'- "In terms of?..." - you ask again at a loss.'
 	'- "Well there..." - I hesitated a little brother - "See how all the girls out there arranged, explain...'
 	if sub < 30: 
@@ -505,7 +505,7 @@ if $loc = 'sitrPar' and brotherAge < 18 and kanikuli = 0 and brother >= 40 and b
 	'<center><img src="images/qwest/alter/brother.jpg"></center>'
 	'Your brother Kolka younger than you and he <<brotherAge>> years. Kolka was born, unlike you and your sister have by stepfather. He is a student at the same school as you, and enjoys soccer.'
 	''
-	'- <<$name[2]>>, help me with homework, and then I have a little problem here does not work?'
+	'- <<$name>>, help me with homework, and then I have a little problem here does not work?'
 	act'Certainly help':dynamic $brother_homework
 	act'Later, now I can not':
 		cla

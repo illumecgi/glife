@@ -4,7 +4,6 @@ $LBD_ride={
 		cls
 		if belgangQW<100:belgangQW=100
 		minut+=15
-		bikini_cloth=0
 		minut+=5
 		odevnesh+=5
 		gs'stat'
@@ -44,29 +43,30 @@ $LBD_go={
 				act 'Escape':gt'glake'
 			end
 		end
-	end
+
  
-	act'I`m not nervous.':
-		cls
-		minut+=5
-		gs'stat'
-		'You said quietly as possible
-		- And I did not get nervous.
-		Are massive chuckled and grabbed you for your hairy chest, sweaty paws.
-		- Come to me baby. You will not regret. With me you`ll be.'
-		
-		dynamic $LBD_hand
-	     
-		if dom>0:
-			act'Sorry, but I have to go.':
-				cls
-				minut+=5
-				dom-=1
-				if belgangQW<2:belgangQW=2
-				gs'stat'
-				'The bald man smiled
-				- Okay girl. Still be crossed, the earth is round.'
-				act 'Escape':gt'glake'
+		act'I`m not nervous.':
+			cls
+			minut+=5
+			gs'stat'
+			'You said quietly as possible
+			- And I did not get nervous.
+			Are massive chuckled and grabbed you for your hairy chest, sweaty paws.
+			- Come to me baby. You will not regret. With me you`ll be.'
+			
+			dynamic $LBD_hand
+			 
+			if dom>0:
+				act'Sorry, but I have to go.':
+					cls
+					minut+=5
+					dom-=1
+					if belgangQW<2:belgangQW=2
+					gs'stat'
+					'The bald man smiled
+					- Okay girl. Still be crossed, the earth is round.'
+					act 'Escape':gt'glake'
+				end
 			end
 		end
 	end

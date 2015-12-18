@@ -7,22 +7,23 @@ $din_trener_discoSex={
 	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener4.jpg"></center>'
 	'"<<$surname>>, said catch in a secluded place fuck",- you began to say that there is not a quiet place. Coach, promising smile, said to follow him.'
 	act 'To come after him':
-		*clr & cla
-		Joke = 0
-		if horny > 80:
-		'<center><img src="images/qwest/alter/volley/voitrensexdisco1.gif"></center>'
-		'Having brought you to the toilet, the coach was delayed about an open door, missing you forward. You think, what a secluded place out of the toilet so myself, but not to break, because to feel the member wanted to colic in the abdomen, and went to the toilet.'
+		if rand (0,2) = 0:
+			*clr & cla
+			Joke = 0
+			if horny > 80:
+			'<center><img src="images/qwest/alter/volley/voitrensexdisco1.gif"></center>'
+			'Having brought you to the toilet, the coach was delayed about an open door, missing you forward. You think, what a secluded place out of the toilet so myself, but not to break, because to feel the member wanted to colic in the abdomen, and went to the toilet.'
 			act 'Pulling up the hem':
 				*clr & cla
 				trenerepa += 5
 				hory += 10
 				if tanga = 1:
-     					'<center><img src="images/qwest/alter/volley/voitrensexdisco2.gif"></center>'
-        				'You sat on the toilet and spread her legs, Horny glancing at Mikhail Nikolaevich. It, after admiring, raised you, set to the sink and pulled with you panties.'
-       				else
-       					'<center><img src="images/qwest/alter/volley/voitrensexdisco3.jpg"></center>'
-        				'You put legs and pulled up the hem, showing their coach naked dick,  Horny glancing at Mikhail Nikolaevich. It, after admiring,  put pressure on your back causing, SAG.'
-       				end
+					'<center><img src="images/qwest/alter/volley/voitrensexdisco2.gif"></center>'
+					'You sat on the toilet and spread her legs, Horny glancing at Mikhail Nikolaevich. It, after admiring, raised you, set to the sink and pulled with you panties.'
+				else
+					'<center><img src="images/qwest/alter/volley/voitrensexdisco3.jpg"></center>'
+					'You put legs and pulled up the hem, showing their coach naked dick,  Horny glancing at Mikhail Nikolaevich. It, after admiring,  put pressure on your back causing, SAG.'
+				end
 				act 'To expose the ass':
 					*clr & cla
 					hory += 10
@@ -33,8 +34,7 @@ $din_trener_discoSex={
 					act 'To sign':
 						*clr & cla
 						'<center><img src="images/qwest/alter/volley/voitrensexdisco5.gif"></center>'
-						$analsexorgazm3='You podmahivat, ottopyrivaya your ass towards the cock trainer, member already so deeply, that eggs partner hit you in the pussy,  member, penetrating the full length, evoking a feeling of sweet languor in the chest, the abdomen.  You moan... And yelling... And screamed... But these were not cries of pain, you shook orgasm...'
-						$analsexorgazm2=$analsexorgazm3
+						$analsexorgazm2='You podmahivat, ottopyrivaya your ass towards the cock trainer, member already so deeply, that eggs partner hit you in the pussy,  member, penetrating the full length, evoking a feeling of sweet languor in the chest, the abdomen.  You moan... And yelling... And screamed... But these were not cries of pain, you shook orgasm...'
 						dynamic $analsex
 						act 'Further':
 							*clr & cla
@@ -56,7 +56,7 @@ $din_trener_discoSex={
 				end
 			end
 		else
-      '<center><img src="images/qwest/alter/volley/voitrensexdisco7.jpg"></center>'
+		  '<center><img src="images/qwest/alter/volley/voitrensexdisco7.jpg"></center>'
 			'Having brought you to the toilet, the coach was delayed about an open door, missing you forward. "Not the most secluded place Michael N.",- you said and turned around, gone. Coach only carried out your ass lustful gaze. But then, having caught up with you, said: "go home spend, if you''re so unapproachable". '
 			act 'To go with the coach':
 				Discoclose=1
@@ -69,7 +69,6 @@ $din_trener_discoSex={
 			end
 		end
 	end
-
 }
 
 $din_trener_speak = {

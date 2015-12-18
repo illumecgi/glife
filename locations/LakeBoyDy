@@ -1,6 +1,6 @@
 # LakeBoyDy
 $LBD_ride={
-	act'To go with are massive':
+	act'Go with the massive man':
 		cls
 		if belgangQW<100:belgangQW=100
 		minut+=15
@@ -32,20 +32,20 @@ $LBD_go={
 		'You tried to get up from the beach, but your wrist immediately grabbed the bald mordovorot.
 		- E, Relax. You cho some nervous?'
 		if dom>0:
-			act'Sorry, but I have to go.':
+			act'Apologize and leave':
 				cls
 				minut+=5
 				dom-=1
 				if belgangQW<1:belgangQW=1
 				gs'stat'
-				'The bald man smiled
-				- Okay girl. Still be crossed, the earth is round.'
+				'The bald man smiles.'
+				'"Okay girl. It''s a small world, I''ll see you around."'
 				act 'Escape':gt'glake'
 			end
 		end
 
  
-		act'I`m not nervous.':
+		act'Hold your nerve':
 			cls
 			minut+=5
 			gs'stat'
@@ -57,14 +57,14 @@ $LBD_go={
 			dynamic $LBD_hand
 			 
 			if dom>0:
-				act'Sorry, but I have to go.':
+				act'Apologize and leave':
 					cls
 					minut+=5
 					dom-=1
 					if belgangQW<2:belgangQW=2
 					gs'stat'
-					'The bald man smiled
-					- Okay girl. Still be crossed, the earth is round.'
+					'The bald man smiles.'
+					'"Okay girl. It''s a small world, I''ll see you around."'
 					act 'Escape':gt'glake'
 				end
 			end
@@ -73,7 +73,7 @@ $LBD_go={
 }
 
 $LBD_hand={
-	act'Take your hands off!':
+	act'Reject':
 		cls
 		minut+=5
 		gs'stat'
@@ -82,7 +82,7 @@ $LBD_hand={
 		Gloomy growled grabbing you by the hand and squeezing hurt.
 		- You impertinent cho?'
 
-		act'Ouch! Release! That hurts!':
+		act'Complain':
 			cls
 			minut+=5
 			gs'stat'
@@ -102,7 +102,7 @@ $LBD_hand={
 				Hoarsely growled at you
 				- You cho JUMPS, Ramsey completely beguiled? For we hold fraerov? You specifically nakosyachila and should we.'
 
-				act'I will pay! Just let!':
+				act'Agree to pay':
 					cls
 					minut+=5
 					if money<10000:
@@ -118,7 +118,7 @@ $LBD_hand={
 					- It cho, do you think this money pennies? You flew at least <<belgangPay/1000>> pieces.
 					Husky growl in your ear.
 					- White said that slashal? What would be prepared for to-morrow <<belgangPay/1000>> pieces for your school.'
-					act'Good, Tomorrow I will pay.':
+					act'Pay him tomorrow':
 						cls
 						minut+=5
 						belgangQW=9000
@@ -131,7 +131,7 @@ $LBD_hand={
 						act 'Up':gt'glake'
 					end
 				 
-					act'I do not have that kind of money.':
+					act'You can''t afford that':
 						cls
 						minut+=5
 						gs'stat'
@@ -144,7 +144,7 @@ $LBD_hand={
 						Husky grabbed you by the hair and bent to the member.
 						- You Th lomaeshsya, bitch? Suck forgiveness.'
 						!beachblow
-						act'Suck.':
+						act'Suck':
 							cls
 							minut+=15
 							bj+=1

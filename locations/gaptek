@@ -131,7 +131,7 @@ if StoryLine = 1:
 
 			if portion * 100 <= money:
 				prezik += portion * 5
-				minut += 5 + (portion / 5)
+				minut += 5
 				money -= portion * 100
 				gaprezikday = daystart
 				'<center><img src="images/etogame/kassa.jpg"></center>'
@@ -156,7 +156,7 @@ if StoryLine = 1:
 
 			if portion * 200 <= money:
 				pregtest += portion * 2
-				minut += 5 + (portion / 5)
+				minut += 5
 				money -= portion * 200
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought pregnancy tests and paid the money to the cashier.'
@@ -180,7 +180,7 @@ if StoryLine = 1:
 
 			if portion * 300 <= money:
 				lubri += portion * 5
-				minut += 5 + (portion / 5)
+				minut += 5
 				money -= portion * 300
 				galubriday = daystart
 				'<center><img src="images/etogame/kassa.jpg"></center>'
@@ -204,7 +204,7 @@ if StoryLine = 1:
 
 				if portion * 500 <= money:
 					tabletki += portion * 28
-					minut += 5 + (portion / 5)
+					minut += 5
 					money -= portion * 500
 					gatabletkiday = daystart
 					'<center><img src="images/etogame/kassa.jpg"></center>'

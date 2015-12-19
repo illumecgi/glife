@@ -520,26 +520,30 @@ $din_cheat_menu_permanent = {
 	pl''
 	pl'<a href="exec:horny = 100 & dynamic $din_cheat_menu_permanent">Excite</a>'
 	pl'<a href="exec:horny = 0 & dynamic $din_cheat_menu_permanent">Soothe</a>'
-act 'Body Modification':
+
 	cla
-	act 'Waist':
+	cls
+	'<center><font size = 24>You must use the Body Modification, even if you cancel it, or you will break your save</font></center>'
+	act 'Body Modification':
 		cla
-		dounspell = 1
-		TaliaDoun = input ("Waist in cm?")
-		if TaliaDoun <= 0:TaliaDoun = 20
-		act 'Hips':
+		act 'Waist':
 			cla
-			bedraDoun = input ("Hips in cm?")
-			if bedraDoun <= 0:bedraDoun = 40
-			act 'Ready':gt $curloc	
+			dounspell = 1
+			TaliaDoun = input ("Waist in cm?")
+			if TaliaDoun <= 0:TaliaDoun = 20
+			act 'Hips':
+				cla
+				bedraDoun = input ("Hips in cm?")
+				if bedraDoun <= 0:bedraDoun = 40
+				act 'Ready':gt $curloc
+			end
+		end
+		act 'Cancel all':
+			cla
+			dounspell = 0
+			act 'Ready':gt $curloc
 		end
 	end
-	act 'Cancel all':
-		cla
-		dounspell = 0
-		act 'Ready':gt $curloc
-	end
-end
 }
 
 $din_cheat_menu_look = {

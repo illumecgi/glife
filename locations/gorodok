@@ -356,7 +356,7 @@ if marudatestinterface = 0:
 
 
 	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:'Private house, home to <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.'
-	if katjaFirstKiss >= 1:'Private house, home to <a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a> lives.'
+	if katjaFirstKiss >= 1:'Private house, home to <a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a>.'
 	if BeInNatBelHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'On the 4th floor of your block is the apartment of <a href="exec:minut += 15 & gt ''NatBelHome''">Natasha Belova</a>.'
 	if BeInJulMilHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'On the 3rd floor of your block is the apartment of <a href="exec:minut += 15 & gt ''JuliaMilHome''">Julia Milova</a>.'
 	if beinalbinahome > 0:'Luxurious mansion belonging to the family of your friend <a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>.'

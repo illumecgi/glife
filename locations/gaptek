@@ -240,7 +240,6 @@ if StoryLine = 1:
 
 			if portion * 500 <= money:
 				money -= portion * 500
-				minut += 5 + (portion / 5)
 				lekarstvo += portion * 10
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought drugs and paid the money to the cashier.'
@@ -260,7 +259,6 @@ if StoryLine = 1:
 
 			if portion * 500 <= money:
 				vitamin += portion * 20
-				minut += 5 + (portion / 5)
 				money -= portion * 500
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought vitamins and paid the money to the cashier.'
@@ -282,7 +280,6 @@ if StoryLine = 1:
 
 			if money >= portion * 600:
 				money -= portion * 600
-				minut += 5 + (portion / 5)
 				mosolmaz += portion * 10
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought some oinment packages and paid the money to the cashier.'
@@ -304,7 +301,6 @@ if StoryLine = 1:
 
 			if portion * 1000 <= money:
 				lipbalm += portion * 25
-				minut += 5 + (portion / 5)
 				money -= portion * 1000
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought some lip balm and paid the money to the cashier.'
@@ -326,7 +322,6 @@ if StoryLine = 1:
 
 			if portion * 1500 <= money:
 				fatdel += portion
-				minut += 5 + (portion / 5)
 				money -= portion * 1500
 				'<center><img src="images/etogame/kassa.jpg"></center>'
 				'You bought some fat burning capsules and paid the money to the cashier.'
@@ -341,7 +336,6 @@ if StoryLine = 1:
 			act 'Buy cure pills for yeast infection (1,500 rubles)':
 				cla
 				*clr
-				minut += 10
 				money -= 1500
 				Kandidoz = 0
 				'<center><img src="images/etogame/kassa.jpg"></center>'

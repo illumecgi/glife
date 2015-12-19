@@ -65,7 +65,7 @@ elseif artemhomemark = 1:
 					artemblok = 1
 					artemhakday = daystart
 					artemvbrosvid = 1
-					gt 'pod_ezd'
+					gt 'pod_ezd', 'etaj_1'
 				end
 
 				act 'Go with Artem':
@@ -124,7 +124,7 @@ elseif artemhomemark = 1:
 			artemvbrosvid = 1
 			artemblok = 1
 			artemhakday = daystart
-			gt 'pod_ezd'
+			gt 'pod_ezd', 'etaj_1'
 		end
 	elseif (arthakQW = 2 or (arthakQW = 1 and artemblag = 1)) and artemhakday ! daystart:
 		arthakQW = 7

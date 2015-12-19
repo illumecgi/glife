@@ -522,6 +522,8 @@ $din_cheat_menu_permanent = {
 	pl'<a href="exec:horny = 0 & dynamic $din_cheat_menu_permanent">Soothe</a>'
 
 	cla
+	cls
+	'<center><font size = 24>You must use the Body Modification, even if you cancel it, or you will break your save</font></center>'
 	act 'Body Modification':
 		cla
 		act 'Waist':

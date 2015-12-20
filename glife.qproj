@@ -668,7 +668,6 @@
       <Location name="result"/>
       <Location name="roulette"/>
       <Location name="rate"/>
-      <Location name="rack"/>
       <Location name="theater"/>
       <Location name="hall"/>
     </Folder>

@@ -9,7 +9,7 @@ gs 'time'
 
 
 
-act 'Escape':gt 'liam','start'
+act 'Return to Town center':gt 'liam','start'
 
 if hour >= 13 and hour <= 15 and bodimodel = 1 and arts = 0 and tusa = 1: temp = RAND(1,100)
     if temp >= 90:

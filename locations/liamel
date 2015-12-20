@@ -2,9 +2,9 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 gs'dinam'
-'<center><B>Street</B></center>'
+'<center><B>Quiet Street</B></center>'
 '<center><img src="images/lmps/liamel.jpg" ></center>'
-'Pretty quiet street of the old town'
+'Pretty, quiet street of the old town'
 CLOSE ALL
 clr
 
@@ -23,9 +23,9 @@ set borMir=0
 set borLoker=0
 set minut+=10
 '<a href="exec:GT ''larek'',''start''">shop</a>'
-'Close to the narrow <a href="exec:GT ''dvor'',''start''">street</a> looping between houses.'
-'<a href="exec:GT ''liam'',''start''">Climb to the top</a> .'
-'Street in the guiding <a href="exec:GT ''liames'',''start''">Centre</a> Old Town.'
+'Close by is a narrow <a href="exec:GT ''dvor'',''start''">street</a> looping between houses.'
+'A street runs straight to the <a href="exec:GT ''liam'',''start''">Town center</a>.'
+'A street leading to the <a href="exec:GT ''liames'',''start''">High Street</a>.'
 if housr = 2:
     act '<b>Go home</b>':gt'korr2x'
 end

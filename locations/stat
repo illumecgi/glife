@@ -8,28 +8,28 @@ rand1=rand(0,100)
 if poSkill>1000:poSkill=1000
 if nippain = 2:
 	if nippainday + 5 < daystart:
-		$nippain = 'You have greatly hurt nipples.'
+		$nippain = 'You are constantly reminded of the sharp pain from your nipples.'
 		nippain = 1
 		nippainday = daystart
 	elseif nippainday + 5 >= daystart:
-		$nippain = 'You have greatly hurt nipples.'
+		$nippain = 'You are constantly reminded of the sharp pain from your nipples.'
 	end
 elseif nippain = 1:
 	if nippainday + 5 < daystart:
 		$nippain = ''
 		nippain = 0
 	elseif nippainday + 5 >= daystart:
-		$nippain = 'You have a little sore nipples.'
+		$nippain = 'Your nipples are a little sore.'
 	end
 end
 
 if painpub = 2:
 	if painpubday + 5 < daystart:
-		$painpub = 'You have very sore vagina.'
+		$painpub = 'Your vulva is painfully sore.'
 		painpub = 1
 		painpubday = daystart
 	elseif painpubday + 5 >= daystart:
-		$painpub = 'You have very sore vagina.'
+		$painpub = 'Your vulva is painfully sore.'
 	end
 elseif painpub = 1:
 	if painpubday + 5 < daystart:
@@ -37,7 +37,7 @@ elseif painpub = 1:
 		painpub = 0
 		painpubday = daystart
 	elseif painpubday + 5 >= daystart:
-		$painpub = 'You have a little sore vagina.'
+		$painpub = 'Your vulva is a little sore.'
 	end
 end
 
@@ -147,47 +147,32 @@ if GorSlut >= 2:KatjaKnowBJ = 1
 if GorSlut >= 1 or preg > 0:KatjaKnowSex = 1
 if GorSlut > 6: GorSlut = 6
 
-if film > 0 and kompromatLife < 10:
+if film > 0:
  !pornoaktrissa
-	if kompromatLife < 10:kompromatLife = 10
-	$kompromatFoto = 'This photo is a screenshot from one of the porn movies you were part of.'
-end
+	$kompromatFoto = 'The photo is a screenshot from one of your porn movies.'
 
-if fotoyousuck = 1 and kompromatLife < 9:
+elseif fotoyousuck = 1:
 	!!sucked in a couple of guys and was sfotografirovanna
-	if kompromatLife < 9:kompromatLife = 9
-	$kompromatFoto = 'These pictures show you sucking two cocks at the same time.'
-end
+	$kompromatFoto = 'The picture shows you sucking two cocks at the same time.'
 
-if fotoCFNMsex > 0 and kompromatLife < 8:
-	kompromatLife = 8
-	$kompromatFoto = 'In this photo you see yourself getting fucked from behind by a random guy. This must have been taken in the stripclup.'
-end
+elseif fotoCFNMsex > 0:
+	$kompromatFoto = 'In the photo you see yourself getting fucked from behind by a random guy. This must have been taken in the stripclub.'
 
-if fotoCFNMblowjobCum > 0 and kompromatLife < 7:
+elseif fotoCFNMblowjobCum > 0:
 	!!cum on face in the strip club
-	kompromatLife = 7
-	$kompromatFoto = 'In this photo you are sitting infront of a guy, kissing his cock. There seems to be cum in your face. This photo must have been taken in the stripclub.'
-end
+	$kompromatFoto = 'In the photo you are sitting infront of a guy, kissing his cock. There seems to be cum on your face. This photo must have been taken in the stripclub.'
 
-if fotoCFNMblowjob > 0 and kompromatLife < 6:
+elseif fotoCFNMblowjob > 0:
 	!!sucked in front of everyone
-	kompromatLife = 6
-	$kompromatFoto = 'In this photo you are giving a guy a blowjob. You can spot a group of women in the background and it seems like this photo was taken in the stripclub.'
-end
+	$kompromatFoto = 'In the photo you are giving a guy a blowjob. You can spot a group of women in the background and it seems like this photo was taken in the stripclub.'
 
-if stripdancesum > 0 and kompromatLife < 2:
+elseif stripdancesum > 0:
 	!!stripper
-	if kompromatLife < 2:kompromatLife = 2
+	$kompromatFoto = 'In the photo you are dancing on a pole. Obviously someone photographed you, while you were on stage at the stripclub.'
 
-	$kompromatFoto = 'In this photo you are dancing on a pole, obviously someone photographed you, while you were on stage at the stripclub.'
-end
-
-if modelfoto > 0 and kompromatLife < 1:
+elseif modelfoto > 0:
 	!!photo model
-	if kompromatLife < 1:kompromatLife = 1
-
-	$kompromatFoto = 'These are photos of you being naked, when you were taking pictures at the model agence.'
+	$kompromatFoto = 'The photo shows you naked, it is very well taken and must be from a shoot at the modeling agency.'
 end
 
 shameless = guy + bj + anal + hj + ((slutty + gang) * 2)

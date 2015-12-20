@@ -490,6 +490,10 @@ $din_cheat_money = {
 
 $din_cheat_menu_permanent = {
 	gs'stat'
+	cla
+	cls
+	'<center><font size = 24>You must use the Body Modification, even if you cancel it, or you will break your save</font></center>'
+
 	clr
 	if cheatWork = 0:$cheatWork = 'OFF'
 	if cheatWork = 1:$cheatWork = '<b>ON</b>'
@@ -521,9 +525,6 @@ $din_cheat_menu_permanent = {
 	pl'<a href="exec:horny = 100 & dynamic $din_cheat_menu_permanent">Excite</a>'
 	pl'<a href="exec:horny = 0 & dynamic $din_cheat_menu_permanent">Soothe</a>'
 
-	cla
-	cls
-	'<center><font size = 24>You must use the Body Modification, even if you cancel it, or you will break your save</font></center>'
 	act 'Body Modification':
 		cla
 		act 'Waist':

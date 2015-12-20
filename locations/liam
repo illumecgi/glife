@@ -5,13 +5,12 @@ CLOSE ALL
 if sound = 0:PLAY 'sound/street.mp3',30
 gs'dinam'
 set minut = minut + 5
-'<center><B>Old city</B></center>'
+'<center><B>Old town center</B></center>'
 '<center><img src="images/pic/liam.jpeg" ></center>'
-'The old part of the city, when planted-Long ago settlers. A couple of centuries ago, there was an ordinary village, located near the town.'
-'Later, the rich just bought back portions of the poor and erected on the site of the wooden shacks large houses.'
-'They say, that there is not a single house was built in a new location.'
-'More later on the rapid growth of the city led to the, it became a suburb of the city'
-'Then something-which has even old huts, but they have long since lost its original appearance, improved, modernezirovanny.'
+'The old part of the city, usually call old town. A couple of centuries ago, this was an ordinary village, located near a town that is now the city.'
+'Later, the rich bought land of the poor here and knocked down the wooden shacks and farm houses to build large houses.'
+'As the city continued to grow rapidly, it became a desirable suburb.'
+'Since then even the old huts, have long since lost there original appearance, improved, extended and modernized.'
 CLOSE ALL
 clr
 
@@ -27,12 +26,11 @@ set obMir=0
 set obLoker=0
 set houseob=0
 set borMir=0
-set borLoker=0
 set minut+=10
 '<a href="exec:GT ''dvorik'',''start''">Patio</a> .'
 !'On narrow <a href="exec:GT ''dvor'',''start''">street</a> .'
-'Close to <a href="exec:GT ''liamel'',''start''">street</a> .'
-'Going on <a href="exec:GT ''spusk'',''start''">street</a> .'
+'Closeby is a quiet <a href="exec:GT ''liamel'',''start''">street</a> .'
+'You can <a href="exec:GT ''spusk'',''start''">Climb to the top</a> .'
 if car > 0 and cardrive = 24:
     set cardrive = 24
     'I parked at the curb <a href="exec:GS ''carF'',''start''">your <<$car>></a>.'

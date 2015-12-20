@@ -57,6 +57,7 @@ if $ARGS[0] = 'start':
 	end
 
 	gs 'taxi'
+	act 'Elite settlement':gt 'psiklin', 'start'
 end
 
 if $ARGS[0] = 'in':

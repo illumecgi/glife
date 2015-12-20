@@ -1,13 +1,13 @@
 # parks
 gs'stat'
 gs'time'
-'<center><B>Park, Old Town</B></center>'
+'<center><B>Old Town Park</B></center>'
 '<center><img src="images/pic/parkus.jpg" ></center>'
-'Lack amusement compensates wonderful, we can say skzochnye,landscape resheniyai umirotvorennnaya atmosphere.'
-'Old park a favorite vacation spot of the townspeople family.'
+'The lack of amusements is compensated for by the wonderful, landscaped gardens and tranquil atmosphere.'
+'The old park is a favorite vacation spot for families.'
 
 'Close to the narrow <a href="exec:GT ''allea'',''start''">footpath</a> .'
-'Wander through <a href="exec:GT ''lug'',''start''">park</a> .'
+'Wander through the <a href="exec:GT ''lug'',''start''">park</a> .'
 
 act 'Elite settlement':gt'psiklin','start'
 

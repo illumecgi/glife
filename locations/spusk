@@ -7,14 +7,15 @@ if $ARGS[0]='start':
 	*clr
 	gs'stat'
 	gs'time'
+	'<center><B>Hill top street</B></center>'
 	'<center><img src="images/pic/liam1.jpg" ></center>'
-	'Here transportation does not go, and the air is clean, the atmosphere of antiquity fills the air is not the usual flavors'
+	'The transportation does not go up here, and the air is clean, the atmosphere of antiquity fills the air is not the usual flavors'
 
-	act 'Go to the bottom':minut += 10 & gt'liames'
-	act 'Back to Subway':minut += 10 & gt'liam'
+	act 'Go to the High street':minut += 10 & gt'liames'
+	act 'Back to Town center':minut += 10 & gt'liam'
     
 	'Close to the narrow <a href="exec:GT ''dvor'',''start''">street</a> looping between houses.'
-	'Saw <a href="exec:GT ''ugol'',''start''">passage</a> between the houses into the courtyards.'
+	'You see a <a href="exec:GT ''ugol'',''start''">passage</a> between the houses lead to a courtyard.'
 end
 
 if $ARGS[0]='dvr':

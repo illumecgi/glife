@@ -11,7 +11,7 @@ picrand = rand(1, 3)
 act 'Get out of the casino':gt 'casino'
 
 
-'By <a href="exec:gt ''headwaiter''">the head waiter</a>'
+!'By <a href="exec:gt ''headwaiter''">the head waiter</a>'
 'In the Hall <a href="exec:gt ''igravt''">slot machines</a>'
 'In room games <a href="exec:gt ''roulette''">Roulette</a>'
 'In room games <a href="exec:gt ''cards''">Cards</a>'

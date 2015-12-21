@@ -505,6 +505,7 @@
     <Folder name="North Side">
       <Location name="Nord"/>
       <Location name="Terminal"/>
+      <Location name="trFatherMisha"/>
       <Location name="ivanRoom"/>
       <Location name="dk"/>
       <Location name="kakuzu"/>

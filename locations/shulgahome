@@ -1,1525 +1,1050 @@
 # shulgahome
-!============================================================================================================!
-!FULL NAME: Vasily Shulgin S. (klikuha Shulga)-------------------------------------------------------------!
-!------------------------------------------------------------------------------------------------------------!
-!vasya_shulgin - Counter relations: -------------------------------------------------------------------------!
-!<= 50 - familiar from childhood ----------------------------------------------------------------------------------!
-!> 30 - talks about the webcam work ----------------------------------------------------------------------!
-!> 50 - friends, He offers to arrange a webcam show in his home --------------------------------------------!
-!>= 100 - Close friends, It offers to arrange a webcam show together at his house -------------------------------!
-!============================================================================================================!
+!============================!
+!----FAMILY HUT Shulgin----!
+!============================!
+!-----Settings-----!
+!===================!
+CLOSE ALL
 $metkaM = $ARGS[0]
 $locM = $CURLOC
 $metka = $ARGS[0]
 $loc = $CURLOC
-gs'gopsex'
-gs'cardgame_durak'
-!Discussions daily:
-!Vasya
-if bazar_day ! daystart: bazar_count = 10
-!Dan
-if bazar_day_den ! daystart: bazar_count_den = 5
-!Vitek
-if bazar_day_vitek ! daystart: bazar_count_vitek = 5
-!card games:
-if playcardgame_day ! daystart: playcardgame_count = 2
-!You saw a prostitute clothes:
-if sh_hooker_day ! daystart: sh_hooker_count = 1
-!----------------------------------------------------
-	
-sveta_rnd_name = RAND(0,3)
-	if sveta_rnd_name = 0:$sveta_rnd_name = '<<$name>>'
-	if sveta_rnd_name = 1:$sveta_rnd_name = '<<$name>>'
-	if sveta_rnd_name = 2:$sveta_rnd_name = '<<$nickname>>'
-	if sveta_rnd_name = 3:$sveta_rnd_name = '<<$name>>'		
-!relationship
-$vasya_shulgin_rep = {
-	if vasya_shulgin<50:'You and <<$shulga_name_rnd>> familiar from childhood'
-	if vasya_shulgin>=50 and vasya_shulgin<100:'You and <<$shulga_name_rnd>> good friends'
-	if vasya_shulgin>=100:'You and <<$shulga_name_rnd>> Close friends'
-	''
-}
+!podgruzhaem dynamics which "gopsex"
+gs'gopsex' 
+!appeal to Sergei Shulgin
+if serge_shulgin<30:$serg_obr = 'uncle'
+if serge_shulgin>=30:$serg_obr = ''
+!count-in`s Event can start with the NPC Sonia day
+if sexev_sonya_day ! daystart: sexev_sonya_count = 1
+!count-in `s Event NPC can start with Mom a day
+if sexev_momgg_day ! daystart: sexev_momgg_count = 2
+!count-Eventov in SG with Sonia:
+if ev_sonya_day ! daystart: ev_sonya_count = 2
+!count-at times, you can chat with Sonia day
+if sonya_bazar_day ! daystart: sonya_bazar_count = 5
+!opening event: boys stick to the years in the room or in the kitchen:
+if gangsexroom_day ! daystart: gangsexroom_count = 1
 !============================================================================================================!
-!GREAT (ROOM Shulga)---------------------------------------------------------------------A LARGE ROOM!
+!Log into the house (CHECKPOINT)----------------------------------------------------------------------CONTROL!
 !============================================================================================================!
-cls
-minut += 1
 gs'stat'
-'<center><b><font color = maroon>A large room</font></b></center>'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom.jpg"></center>'
-'In front is a large sofa <a href="exec: dynamic $shultv">TV</a>, and right in the corner of a table on which lies <a href="exec:GT ''Komp'',''start''">notebook</a>.'
-if hour >= 3 and hour < 7: 'On the big couch sleeping <a href="exec: dynamic $shulga_bazar_sleep"><<$shulga_name_rnd>></a>.'
-shulga_room_rnd = RAND(0,2)
-	if shulga_room_rnd = 0:$shulga_room_rnd = 'In room conversing drink beer boys, sitting on the big couch:'
-	if shulga_room_rnd = 1:$shulga_room_rnd = 'The room drinking beer and playing cards boys:'
-	if shulga_room_rnd = 2:$shulga_room_rnd = 'The rooms drinking beer watching telly boys:'
-
-if week < 6 and hour >= 0 and hour < 3: '<<$shulga_room_rnd>> <a href="exec: dynamic $shulga_bazar_night"><<$shulga_name_rnd>></a>, <a href="exec: dynamic $den_bazar">Dan</a> and <a href="exec: dynamic $vitek_bazar">Vitek</a>, sit down and <a href="exec: dynamic $shulga_beer">drink beer with the boys</a>'
-if week >= 6 and hour >= 10 and hour < 17 or week >= 6 and hour >= 0 and hour < 3: 'On the big couch sitting <a href="exec: dynamic $shulga_bazar_day"><<$shulga_name_rnd>></a>.'
+if shulgahomemark = 0:
+	'You have reached the apartment Shulga.'
+	act 'Escape':minut += 1 & gt'pod_ezd','etaj_3'
+	!Weekdays:
+		if week < 6 and hour >= 10 and hour < 16: 'No one opened the door. Apparently no one is home.'
+		if serge_shulgin >=70 and week < 6 and hour >= 10 and hour < 16: 'But, you have the key that gave you Sergey.' & act 'Unlocked':shulgahomemark = 1 & gt $curloc	
+		if week < 6 and hour >= 16 and hour <= 23: '<center><img src="images/zsoft/pod_ezd/shulgahome/serge2.jpg"></center>The door was opened <<$serg_obr>> Sergey and said that his son was not at home.'
+		if serge_shulgin >=30 and week < 6 and hour >= 16 and hour <= 23: 'You can enter, whether home.' & act 'Login':shulgahomemark = 1 & gt $curloc
+	!Night (weekdays and weekends):		
+		if hour >= 0 and hour < 2: 'The door was opened <<$shulga_name_rnd>> and invited to enter.' & act 'Login':shulgahomemark = 1 & gt $curloc	
+		if hour >= 2 and hour < 5: 'Too late, the time for, that would go to visit.'
+		if serge_shulgin >=70 and hour >= 2 and hour < 5: 'But, you have the key that gave you Sergey' & act 'Unlocked':shulgahomemark = 1 & gt $curloc
+		if hour >= 5 and hour < 10: 'Too early time, that would go to visit.'
+		if serge_shulgin >=70 and hour >= 5 and hour < 10: 'But, you have the key that gave you Sergey' & act 'Unlocked':shulgahomemark = 1 & gt $curloc
+	!Weekend:
+		if week >= 6 and hour >= 10 and hour < 16: 'The door was opened <<$shulga_name_rnd>> and invited to enter.' & act 'Login':shulgahomemark = 1 & gt $curloc
+		if week >= 6 and hour >= 16 and hour <= 23: '<center><img src="images/zsoft/pod_ezd/shulgahome/serge2.jpg"></center>The door was opened <<$serg_obr>> Sergey and said that his son was not at home.'
+		if serge_shulgin >=30 and week >= 6 and hour >= 16 and hour <= 23: 'You can enter, whether home.' & act 'Login':shulgahomemark = 1 & gt $curloc
+!end	
+!============================================================================================================!
+!CORRIDOR----------------------------------FAMILY HUT Shulgin---------------------------------------HALLWAY!
+!============================================================================================================!
+elseif shulgahomemark = 1:
+	'<center><b><font color = maroon>Hallway</font></b></center>'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/korr.jpg"></center>'
 	
-act 'Exit the room': gt'shulgahome'
-if week < 6 and hour >= 0 and hour < 3:
-	act 'Drink beer with the guys':
-		dynamic $shulga_beer
-	end	
-	act 'Playing cards': dynamic $card_game_durak
-end
-act 'Small sofa':
+!game events with her mother and father years Shulga
+!Event with mother years:
+$shulga_home_momgg1 = {
 	cls
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/sdivan.jpg"></center>'
-		'<center>Small sofa, You can take a nap</center>'
-	act 'Move away': gt'shulga_room'
-	act 'Lie down on the sofa to take a nap':
-	if son < 30:
-		son += 2
-		health += 5
-		minut += 60
-		gs'stat'
-			if son < 30:'You asleep about an hour.'
-	elseif son >= 30: 
-		minut += 5
-		gs'stat'
-		'You are trying to sleep, but you will not go out.'	
-		end
-	end
-end	
-act 'Watch TV': dynamic $shultv
-
-!do homework:
-if shulga_lern_count > 0 and SchoolAtestat = 0 and week >= 6 and hour >= 10 and hour < 17 or shulga_lern_count > 0 and SchoolAtestat = 0 and week >= 6 and hour >= 0 and hour < 3:		
-	act 'Do homework': dynamic $shulga_lern
-end	
-
-!SG wants sex:
-if week >= 6 and hour >= 10 and hour < 17 and vasya_shulgin>=70 or week >= 6 and hour >= 0 and hour < 3 and vasya_shulgin>=70 or week < 6 and hour >= 0 and hour < 3 and GorSlut >=3 and alko >= 1:
-	act 'Fuck': dynamic $gopsex_select
-end
-
-!event room if turnips (GorSlut >=3), Random 5%
-!Svetku catch
-roomsex_gang = RAND(0,100)
-if roomsex_gang <= 2 and GorSlut >=3 and gangsexroom_count > 0 and week < 6 and hour >= 0 and hour <= 2: 
-	dynamic $gang_sex_room_ev1
-end	
-
-!Sonya fuck boys
-if roomsex_gang >= 97 and soniaPS >=3 and sexev_sonya_count > 0 and week < 6 and hour >= 0 and hour <= 2:
-	dynamic $gang_sex_sonya
-end
-
-!Sonya and Shulga
-roomsex_sonya = RAND(0,100)
-if roomsex_sonya <= 5 and soniaPS >=1 and sexev_sonya_count > 0 and hour >= 10 and hour <= 16: 
-	dynamic $shulv_sex_sonya
-end	
-if roomsex_sonya <= 5 and soniaPS >=1 and sexev_sonya_count > 0 and hour >= 0 and hour <= 2: 
-	dynamic $shulv_sex_sonya
-end	
-
-!If you came in dressed prostitutes
-if odethooker = 1 and sh_hooker_count > 0 and week < 6 and hour >= 0 and hour <= 2:
- dynamic $sh_hooker
-end 
-if odethooker = 1 and sh_hooker_count > 0 and week >= 6 and hour >= 0 and hour <= 2:
- dynamic $sh_hooker
-end 
-if odethooker = 1 and sh_hooker_count > 0 and hour >= 10 and hour <= 16:
- dynamic $sh_hooker
-end 
-
-!clothing prostitute:
-$sh_hooker = {
-cls
-sh_hooker_day = daystart
-sh_hooker_count -= 1
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/gopsex/body/h_'+rand(1,10)+'.jpg"></center>'
-if week < 6 and hour >= 0 and hour < 3:
-'- "Hello <<$gop_name_gg>>, Why are you dressed like a whore?, Just work with us in such a hurry, I forgot to remove the uniform?", sarcastically asks you <<$gop_name_npc>>'
-'The boys choir neighing.'
-'- "No of course, what are you here is invent, for you dressed so, comes over and you...", sadly and say you are building are not happy face'
-'- "<<$gop_name_gg>>, even have a joke and can not be, right offense, Sorry, Let us now everything is correct...", He says smiling <<$gop_name_npc>>'
-	act 'Fuck': 
-		shgopsex_gr_day = daystart
-		shgopsex_gr_count -= 1
-		dynamic $shgopsex_group
-	end
-elseif hour >= 10 and hour <= 16 or week >=6 and hour >= 0 and hour < 3:
-'- "Hello <<$gop_name_gg>>, Why are you dressed like a whore?, Just work with me in a hurry?, Jam out there much change already forgotten?", mockingly asks Vaska'
-'- "Fu what you say poshlyatinu, no of course, for you dressed, and you`ve got reproachest", You are making a sad face.'
-'- "Come on, you do not take offense, joked not successful, schA all correct...", Bob justified, taking out a member of his pants.'
-	act 'Fuck': 
-		$gopsex_name_npc = 'Vasya'
-		$gopsex_n_npc = 1
-		shgopsex_vasya_day = daystart
-		shgopsex_vasya_count -= 1
-		dynamic $shgopsex
-	end	
-end		
-act 'Go pretending that resentment': 
-	sub += 1
-	gt'shulgahome'
-end
-}
-
-!------------------!
-! Event with Sonya !
-!==================! 
-!Event Shulga and Sonya in the big room
-$shulv_sexev1_sonya = {
-cls
-minut += 5
-sexev_sonya_day = daystart
-sexev_sonya_count -= 1
-sh_sonya_sexev +=1
-horny += 10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/ev1_'+rand(1,3)+'.jpg"></center>'
-'You went into the room to Shulga and saw a wonderful picture of Sonya took cheek dick Bob...'
-dynamic $masturb_gg
-	act 'Another spy':
-	cls
+	sexev_momgg_day = daystart
+	sexev_momgg_count -= 1
 	minut += 5
-	horny += 10
+	horny += 5
 	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/ev1_'+rand(3,6)+'.jpg"></center>'
-	'Here Basil tried to shove a member as far as possible. Sonia began to move his head back-forward, closed their lips ringlet on a limb. 
-Shulga`s face was visible, he felt the caress of her quick tongue, elastic humidity rotika. All this was accompanied by an excited grunt Sony and wet squish.'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev1_1.jpg"></center>'
+	'Hands Sergei wandered erratically on my mother`s body - then fondle her breasts, the eagerly grabbed her perfect ass.
+	And then his fingers reached her most cherished places.
+	He sat down to her pussy and began greedily kissing millimeter by millimeter, the glaring fact biting her.
+	Natasha bit her lower lip and rolled her eyes...'
 	dynamic $masturb_gg
-		act 'Escape': gt'shulgahome'
-end		
-}
-$shulv_sexev1_sonya = {
-cls
-minut += 5
-sexev_sonya_day = daystart
-sexev_sonya_count -= 1
-sh_sonya_sexev +=1
-horny += 10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/ev2_11.jpg"></center>'
-'You went into the room to see how Vasya and Sonya skillfully sucking dick at Shulga...'
-dynamic $masturb_gg
-	act 'Watch':
-	cls
-	minut += 5
-	horny += 10
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/ev2_2'+rand(1,2)+'.jpg"></center>'
-	'Vasya turned Sonia, I put cancer, and her hand and grabs a member is simply inserted into the vagina.
-Once a member came up to half, Sonya start to straighten the knees, not a member yet jumped into the air. Then she again took him into her, and continue to move the pelvis, nasazhivayas the penis, increasing the pace and magnitude. 
-Every movement was accompanied by her delightful Sonia loud moan and groan excited Basil.'
-	dynamic $masturb_gg
-		act 'Further':
+	act 'Further': 
 		cls
 		minut += 5
 		horny += 10
 		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/ev2_3'+rand(1,2)+'.jpg"></center>'
-		'Gradually, Sonia began moaning louder, turned into a kind of joyful hysterics. She literally breathless, frantically moving. Vasin member long ago got into it the entire length.
-Here it groans passed into a barely audible desperate cry. She began that-muttering and shaking in ecstasy, by inertia continues to drive a member of his.'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev1_2.jpg"></center>'
+		'Sergei, He grabbed her by the arms and lifted from the bed, Natasha sat down on my knees and began to drive huge cock in her mouth.
+		He tightened his grip on her head and pulled as close as possible to him, Sergei furiously leading pelvis literally trying to break Natasha`s mouth, with red lipstick that gently rubbed his chin now!.'
 		dynamic $masturb_gg
-			act 'Further':
-			cls
-			minut += 5
-			horny += 10
-			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/ev2_4'+rand(1,2)+'.jpg"></center>'
-			'Vasily pulling member of the wet hot captivity. Leaning forward, He sent to a member of her cute disheveled face. Even without restraint, He poured out a snub to the attractive face, wherein spattering and neck, Sonya and hangers.'
-			dynamic $masturb_gg
-				act 'Escape': gt'shulgahome'
-		end
-	end
-end		
-}	
-
-$shulv_sex_sonya = {
-shulv_sexev_sonya = RAND(0,100)
-if shulv_sexev_sonya <= 40: 
-	dynamic $shulv_sexev1_sonya
-end	
-if shulv_sexev_sonya > 40: 
-	dynamic $shulv_sexev2_sonya
-end	
-}
-!Event Boys in a large room spire Sonya
-!Event with Sonia #1
-$gang_sexev1_sonya = {
-cls
-minut += 5
-sexev_sonya_day = daystart
-sexev_sonya_count -= 1
-sh_sonya_sexev +=1
-horny += 10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev1_1.jpg"></center>'
-'You went into the room and saw a kid like Sonya laid on the couch. Dan fucked her pussy, Vitek and in the mouth...'
-dynamic $masturb_gg
-	act 'Watch':
-	cls
-	minut += 5
-	horny += 10
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev1_2.jpg"></center>'
-	'Dan tired, replaced Vitka, he planted himself on Sonya and she began to ride him. Immediately he approached Bob and prisunul her mouth.'
-	dynamic $masturb_gg
-		act 'Further':
-		cls
-		minut += 5
-		horny += 10
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev1_3.jpg"></center>'
-		'<<$shulga_name_rnd>> Vitek and swapped and continued to fuck Sonia.'
-		dynamic $masturb_gg
-			act 'Further':
-			cls
-			minut += 5
-			horny += 10
-			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev1_4.jpg"></center>'
-			'Guys played enough with Sonya, obkonchalsya all her face and sent in a bath.'
-			dynamic $masturb_gg
-				act 'Escape': gt'shulgahome'
-		end
-	end
-end		
-}
-!Event with Sonia #2
-$gang_sexev2_sonya = {
-cls
-minut += 5
-sexev_sonya_day = daystart
-sexev_sonya_count -= 1
-sh_sonya_sexev +=1
-horny += 15
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev2_'+rand(1,2)+'.jpg"></center>'
-'You went into the room and saw a kid like Sonya happy to suck their dicks.'
-act 'Do not disturb': gt'shulgahome'
-}
-!Event with Sonia #3
-$gang_sexev3_sonya = {
-cls
-minut += 5
-sexev_sonya_day = daystart
-sexev_sonya_count -= 1
-sh_sonya_sexev +=1
-horny += 15
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev3_'+rand(1,2)+'.jpg"></center>'
-'You went into the room and saw a kid how to make Sonya guys sucking their dicks.'
-act 'Do not disturb': gt'shulgahome'
-}
-!the choice of the opening event 3
-$gang_sex_sonya = {
-gang_sexev_sonya = RAND(0,100)
-if gang_sexev_sonya < 40: 
-	dynamic $gang_sexev1_sonya
-end	
-if gang_sexev_sonya >= 40 and gang_sexev_sonya < 70: 
-	dynamic $gang_sexev2_sonya
-end	
-if gang_sexev_sonya >= 70: 
-	dynamic $gang_sexev3_sonya
-end	
-}
-
-!----------------------------------------------!
-!Drink beer with the guys, opening event, etc..d. c 00 to 03!
-!==============================================! 
-!For years molested boys
-$gang_sex_room_ev1 = {
-cls
-minut += 2
-if npcSex[10] = 0:npcSex[10] = 1 & guy += 1
-if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
-if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
-gangsexroom_day = daystart
-gangsexroom_count -= 1
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_1.jpg"></center>'
-'When you went into the room, There waiting for you three drunken boys. Seeing you, they rejoiced and began to pester you. '
-	act 'Further':
-	cls
-	minut += 3
-	horny += 10
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_2.jpg"></center>'
-	'The boys began to touch you, touch your boobs.'
-	'You understand, it is pointless to deny it still fucked, it is better to have fun.'
-		act 'Further':
-		cls
-		minut += 5
-		horny += 5
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_3.jpg"></center>'
-		'The guys offer you a glass of beer, until you drank, their hands continued to explore your body.'
-		'You giggled drunkenly, deny, but Deng pulled out his dick and suck hinted at.'	
-			act 'Further':
-			cls
-			minut += 5
-			horny += 5
-			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_4.jpg"></center>'
-			'The boys undressed, their dicks standing up, you playfully smiling, grabbed two dick. Den suggest you sit down and take in the mouth.'	
-				act 'Further':
-				cls
-				minut += 10
-				gang +=1
-				horny += 5
-				gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_5.jpg"></center>'
-				'You do not need a lot of cajoling, you do not mind a good suck.'	
-				'Dan instantly unleashed his penis out of his pants, I jumped to you, heum jabbing you in the face. You obediently opened his mouth. Dan wrapped his hand around your head, slowly I began to fuck in the mouth.'
-					act 'Further':
-					cls
-					minut += 10
-					bj +=3
-					throat += 1
-					horny += 5
-					gs'stat'
-					'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_6.jpg"></center>'
-					'And they have had another five minutes in the mouth. Only now you have swallowed their members take turns. you <<$gop_sextext2>>, thrusting members directly into the throat.'
-					'You really love it, when you <<$gop_sextext3>> so in your mouth and you just flowed... The guys all the time what you are sentenced slut and how cool they suck.'
-					'From this you even more excited.'	
-						act 'Further':
-						cls
-						minut += 10
-						horny += 10
-						mastr += 1
-						gs'stat'
-						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_7.jpg"></center>'
-						'When they played enough to your mouth, you put on the bed.' 
-						if analplugin = 1:
-							'Vitek enthusiastically have your ass which had anal plug.'
-							'Deng said happily: -"<<$gop_name_gg>> I`m surprised your preparedness, because she knew well, that you in the ass <<$gop_sextext1>> will, developed..."'
-							'-"Learned a bitter lesson, not to you as you come, so then everything hurts", fun you answer.'
-							'The boys laughed loudly and continued to explore your body.'
-						end
-						'Now they began to play with your pussy. Vitek thrust in her fingers.'	
-							act 'Further':
-							cls
-							minut += 10
-							horny += 10
-							sex += 1
-							gs'stat'
-							'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_8.jpg"></center>'
-							'On the couch on top of Dan, furiously spiers, stroking your buttocks. Your deaf moans told, that you all like it. 
-Just I heard a distinct sound of beating you Denisovs eggs and then he became even stronger in you grind your dick.
-Vitek took you by the head and stuck in the mouth, saying at the same time pretty loud: - yes, bitch, yes! snarling viciously while. 
-After a couple of seconds <<$shulga_name_rnd>> standing near you and took his penis in his hand began to masturbate you.'
-								act 'Further':
-								cls
-								minut += 10
-								horny += 10					
-								gs'stat'
-								'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_9.jpg"></center>'
-								'Now you put on Vaska`s dick and gave in each hand member.
-You dutifully performed their whim, greedily breathed and stared at them with his bleary-eyed drunk.'							
-									act 'Further':
-									cls
-									minut += 10
-									horny += 5
-									gs'stat'
-									'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_10.jpg"></center>'
-									'Suddenly the boys offered immediately <<$gop_sextext1>> you in all holes.'
-									if analplugin = 1:
-										'Allegedly, not good, that free holes are plug cocks, it ought to be replaced by a member.'
-									elseif analplugin = 0:		
-										'Allegedly, not good, that the free hole is idle and it is necessary to use it, too.'
-									end
-									'You do not have anything against, saying: -"Could be so, but with the beginning pour me another drink for anesthesia, and now again awake rudely to fuck my point, not caring about the pain sensation".'
-									'The arguments were convincing, and sent over a bottle of Vaska.'
-										act 'Further':
-										cls
-										minut += 10
-										alko += 2
-										gs'stat'
-										'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_11.jpg"></center>'
-										'You have opened and handed the bottle. Boys in anticipation of the continuation, They looked at how you drank greedily from the bottle.'
-										'-"Nihuya <<$gop_name_gg>> you give, I decided to drain the bottle?"'
-										'-"Ugu", bellowed you without stopping to drink'
-											act 'Further':
-											cls
-											minut += 10
-											horny += 5
-											fat-=1
-											anal += 1
-											gs'stat'
-											'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_12.jpg"></center>'
-											if analplugin = 1:
-												analplugin = 0
-												'Dan pulled out of your ass anal plug.'
-											end
-											if lubri > 0:
-												lubri -= 1
-												agape = 1
-												agapetime = totminut
-												horny += 20
-												'You asked to grease lubricated anal ass, that was in your handbag.'
-											elseif lubri = 0:
-												agape = 2
-												agapetime = totminut
-												horny += 10
-											end
-											'After Vitek lay down on the sofa and put you on it, Dan joined up your ass and abruptly entered.
-Bob went from the front, vzdrochnuv bit his dick, you run it in his mouth and began to slowly nasasyvayut.'
-												act 'Further':
-												cls
-												minut += 10
-												gs'stat'
-												'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_13.jpg"></center>'
-												'Your drunken lyba and whorish expression eyes never left you all the time until you waffle dick and the other two were filled your holes.'
-												if horny >=70:
-													orgasm += 1
-													manna += 35
-													fat-=1
-													horny = 0
-												'Having an orgasm, guys give you respite for a couple of minutes, but then begin to clatter furiously all your slots.'
-												end
-												'It lasted a long time, then the guys decided to change.'
-													act 'Further':
-													cls
-													minut += 10
-													horny += 10
-													gs'stat'
-													'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_14.jpg"></center>'
-													'You moan, openmouthed, closing your eyes and your whole body shook from the powerful rear shocks. Upturned head was just at the right level so Dan just sat down immediately silenced his eldoy. 
-On-no other word, as the moans immediately subsided and only the first couple of seconds, it was incomprehensible bellowing and surprise open your eyes. Realizing what was happening, you shut them again and began humbly to take a hui. 
-Dan took the initiative, or rather your head in his hands and began to waffle mouth. He then poked at her cheeks, fanning them with his dickhead, then he sank half and slowly pulled, then I ask you to stick his tongue and slapped him on the face and, simply sharply fucked in the mouth. 
-All this he accompanied vulgar epithets to your address.'
-														act 'Further':
-														cls
-														horny +=10
-														minut +=10
-														cumfrot +=1
-														cumlip +=1
-														cumface +=1
-														swallow += 1
-														facial += 1
-														energy -= 2
-														son -= 2
-														gs'stat'
-														'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_15.jpg"></center>'
-														'More minutes 20, You twisted and twirled as they wanted, You really have nothing to think. 
-The first to finish decided Vitek, saying, that it can not anymore, it`s time to. You put on your back, then began profusely to finish, flooding tired, but pretty face today whore. 
-Sperm guys had a lot of, so you had to take all narrowed eyes on her body. Then you finish with his arms raised his tummy, boobs, face and licking fingers on shaky legs went into the bathroom.'
-															act 'Escape': dynamic $shvanna	
-													end		
-												end			
-											end				
-										end					
-									end						
-								end							
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-end						
-}
-!consent to sex if you get drunk years
-$drunken_sex_yes = {
-cls
-minut += 5 
-horny +=10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/yes'+rand(1,6)+'.jpg"></center>'
-'All kind you showed kid, that do not mind having some fun with them.'
-'Guys ask you to show her ass and boobs'
-	act 'Show ass': dynamic $drunken_body_popa
-	act 'Show pussy': dynamic $drunken_body_piz
-	act 'Show tits': dynamic $drunken_body_sisi
-	act 'Masturbate': dynamic $drunken_body_mast
-}
-!show ass
-$drunken_body_popa = {
-cls
-minut += 5 
-horny +=10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/popa'+rand(1,11)+'.jpg"></center>'
-'<<$poza_txt>>'
-'<<$poza_gop_txt2>>'
-'<<$poza_gop_txt>>'
-	act 'Further': dynamic $drunken_sex
-}
-!show pussy
-$drunken_body_piz = {
-cls
-minut += 5 
-horny +=10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/piz'+rand(1,10)+'.jpg"></center>'
-'Osorno kid showing her pussy.'
-	act 'Further': dynamic $drunken_sex
-}
-!show boobs
-$drunken_body_sisi = {
-cls
-minut += 5 
-horny +=10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/sisi'+rand(1,11)+'.jpg"></center>'
-'Osorno show your tits kid.'
-	act 'Further': dynamic $drunken_sex
-}
-!masturbate
-$drunken_body_mast = {
-cls
-minut += 5 
-horny +=15
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/mast'+rand(1,10)+'.jpg"></center>'
-'Do you masturbate in front of the children.'
-dynamic $masturb_gg
-	act 'Further': dynamic $drunken_sex
-}
-!drunk sex
-$drunken_sex = {
-cls
-minut += 5 
-horny +=10
-bj +=3
-sub += 1
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/sex/bj'+rand(1,13)+'.jpg"></center>'
-'The boys gathered around you, and began randomly hollow mouth. Your hand randomly jerked off two of the three free dick. Your head went quickly from the member to the member, each considered it his duty to push you to your machine deep throat. 
-So <<$gop_sextext2>> you minutes 10. For the cheeks, throat, with his tongue hanging out - we wanted. Your sucking mouth passed from member to member, forcing the guys moan of pleasure.'
-	act 'Further':
-	cls
-	minut += 20 
-	horny +=10
-	sex += 1
-	gs'stat'	
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/sex/sex'+rand(1,22)+'.jpg"></center>'
-	dynamic $gg_devst_deflor
-	'Changing one-friend, boys <<$gop_sextext2>> You then pussy, in the mouth, then separately, then together.'
-	'<<$gop_text_npcr>> twirled like you want, changing attitudes and dicks in your holes fucked more minutes 20, You really have nothing to think.'
-	dynamic $gg_sex_orgasm
-		act 'Further':
-		cls
-		minut += 5 
-		horny +=5
-		facial += 1
-		cumbelly += 1
-		cumlip += 1
-		cumface += 1
-		son -=2
-		if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
-		if npcSex[10] = 0:npcSex[10] = 1 & guy += 1
-		if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
-		gs'stat'	
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/sex/cum'+rand(1,9)+'.jpg"></center>'
-		'Guys you obkonchalsya.'
-			if GorSlut <3:
-				GorSlut = 3
-				'Dan told you: -"Now you total davalka, Congratulations!, Remember this day, Now we will be to fuck you where we want and how we please!"'
-			end
-			act 'Further': dynamic $drunken_sleep
-	end		
-end
-}
-!abstaining from sex if you get drunk turnip years: GorSlut < 3 (If turnips >= 3, the failure will not be accessible)
-$drunken_sex_no = {
-cls
-minut += 5 
-dom +=1
-health -= 10
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/sleep'+rand(1,17)+'.jpg"></center>'
-'You said, that if you will pester you`ll kick and scream the house down!'
-'<<$shulga_name_rnd>> said -"Well fuck it, Night yard, the whole house will put on the ears."'
-'Guys you have lost any interest and continued to thump.'
-	act 'Fall asleep': dynamic $drunken_sleep
-}
-$drunken_sleep = {
-	cls
-	minut += 180 
-	if son < 30: son += 5
-	health -= 10
-	manna -= 25
-	willpower -=10
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/pohmel'+rand(1,4)+'.jpg"></center>'
-	'You passed out on the floor, slept an hour 3, waking up in the night, headache and you vaguely remember, that happened yesterday.'
-	'You disheveled barely rose from the floor, focusing eyes examined the room, the boys have not been, Only Vaska was sleeping on his bed.'
-		act 'Up': gt'shulga_room'
-}	
-
-$shulga_beer = {
-	if alko < 6: 
-			cls
-			minut += 5 
-			alko += RAND(1,2)
-			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/beer'+rand(1,8)+'.jpg"></center>'
-			'<<$gop_text_beer2>>'
-			act 'Another drink': dynamic $shulga_beer
-			act 'Move away': gt'shulga_room'
-	end
-	if alko >= 6:
-			cls
-			minut += 5 
-			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/Pjanaja'+rand(1,8)+'.jpg"></center>'
-			'You could hardly stand on his feet'
-			'The boys noticed it began to harass you'
-			'<<$gop_beer_drova>>'
-		if 	GorSlut < 3:
-			act 'Resist': dynamic $drunken_sex_no
-			act 'Do not resist': dynamic $drunken_sex_yes
-		end
-		if GorSlut >= 3:
-			act 'Do not resist': dynamic $drunken_sex_yes
-		end
-	end	
-}
-!------------------------------------!
-!TV porn channel, opening event, etc..d.!
-!====================================! 
-!watch porn TV
-$view_pornotv = {
-act 'Watch porn channel':
-cls
-minut += 30
-manna += 4
-willpower = willpower + RAND(5,10)
-horny += 15
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvporn'+rand(1,5)+'.gif" width="748" height="540"></center> You switched to porn channel.'
-'You are currently viewing porn about 30 minutes.'
-act 'Close preview': gt'shulga_room'
-end
-}
-!Group Event with porn 0 to 2 night weekdays, when gopota hang out...
-$view_pornotv_evgr = {
-act 'Watch porn channel':
-cls
-minut += 10
-manna += 4
-horny += 15
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvporn'+rand(1,5)+'.gif" width="748" height="540"></center> You switched to porn channel.'
-'Guys excited looking at porn and started to pester you.'	
-	if GorSlut < 3: 
-		act 'Escape': gt'shulga_room'
-	end
-	act 'Suck':
-		cls
-		minut += 10
-		horny += 10
-		bj += 3
-		if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
-		if npcSex[10] = 0:npcSex[10] = 1 & guy += 1
-		if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex_group/bj'+rand(1,13)+'.jpg"></center>'
-		'The boys took out their members and giggling wheeled pipiskami you in the face.'
-		'You dutifully sat on his haunches and Vitek took his penis out of his pants sports. You wrapped around his own <<$liptalk3>> hard cock and began to suck. Dan and Bob Ryzhov Shulgin came to you and got its members. You took turns to handle cocks his mouth caressing those, it is not in your mouth with your hands.'
-			if GorSlut >= 3 and horny < 30 or GorSlut < 3:
-			act 'Further':
-				cls
-				minut += 10
-				horny += 5
-				gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex_group/cum'+rand(1,7)+'.jpg"></center>'
-				'Guys you obkonchalsya'
-					act 'Finish': gt'shulga_room'
-				end
-			end
-			if GorSlut >= 3 and horny >= 30:
-			'<br>You perevozbudilsya and kids started to ask what would have fucked'
-				act 'Fuck':
-					cls
-					horny += 10
-					minut += 20
-					sex +=1
-					gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex_group/sex'+rand(1,23)+'.jpg"></center>'
-				'Guys unceremoniously took turns to fuck you. Whom-you suck, whom-the wanker, who-then fuck you. This idyll lasted minutes 20.'
-					if horny >=70:
-						orgasm += 1
-						horny = 0
-						'The abundance of surging emotions you`re broke and finished in front of kids.'
-						'In the throes of orgasm, You did not realize what was going on. Who-the enthusiasm of the boys said,: -"Hahaha, See how our slut shakes"'
-						act 'Watch':
-							cls
-							gs'stat'
-							'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/kaif'+rand(1,7)+'.jpg"></center>'
-							'The boys looked at you and obscenely commented, They said what the fuck are you and how they were lucky <<$gop_sextext1>> trouble-free this whore.'
-							act 'Further':
-								cls
-								minut += 10
-								horny += 5
-								son -= 1
-								cumface +=1
-								swallow += 1
-								facial += 1
-								gs'stat'
-								'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex_group/cum'+rand(1,7)+'.jpg"></center>'
-								'Guys you obkonchalsya'
-								act 'Finish': gt'shulga_room'
-							end
-						end	
-					elseif horny < 70:
-						act 'Further':
-						cls
-						minut += 10
-						horny += 5
-						son -= 1
-						cumface +=1
-						swallow += 1
-						cumfrot += 1
-						gs'stat'
-						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex_group/cum'+rand(1,7)+'.jpg"></center>'
-						'Guys you obkonchalsya'
-						act 'Finish': gt'shulga_room'
-					end
-				end	
-			end	
-		end
-	end
-end
-
-}
-!Event viewing porn channel with Vaska
-$view_pornotv_vasya = {
-act 'Watch porn channel':
-cls
-minut += 10
-manna += 4
-horny += 15
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvporn'+rand(1,5)+'.gif" width="748" height="540"></center> You switched to porn channel.'
-if vasya_shulgin <20:'<<$shulga_name_rnd>> excited looking at porn. Have you noticed a bulge in his groin area.'
-
-if vasya_shulgin >=20 and vasya_shulgin <50:'<<$shulga_name_rnd>> excited looking at porn, He pulled out his dick and began to masturbate with you, I asked a couple of minutes you masturbate him.'
-if vasya_shulgin >=50 and vasya_shulgin <70:'<<$shulga_name_rnd>> excited looking at porn, He pulled out his dick and began his nadrachivat, You asked him to suck.'
-if vasya_shulgin >=70:'<<$shulga_name_rnd>> very excited looking at porn and unceremoniously walked up to you and nasodil your head on his penis. You do not even have time to understand anything.'	 
-
-	if vasya_shulgin <70:
-		act 'Escape': gt'shulga_room'
-	end
-	if vasya_shulgin >=70 and GorSlut < 3: 
-		act 'Suck':
-		cls
-		minut += 10
-		bj += 1
-		horny += 10
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/bj'+rand(1,11)+'.jpg"></center>'
-		'<<$shulga_name_rnd>> blissfully I watched as you own <<$liptalk3>> sucked his hard cock.'
-
-		act 'Further':
-			cls
-			minut += 10
-			cumface += 1
-			cumfrot += 1
-			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/cum'+rand(1,10)+'.jpg"></center>'
-			'<<$shulga_name_rnd>> I could not long endure such bliss and pour all, he has accumulated on your face.'
-			'Member tucked in his pants and changed the channel, I stared into zombies box, not showing interest in you.'
-			act 'Escape':gt'shulga_room'	
-			end 
-		end
-	end
-	if vasya_shulgin >=20 and vasya_shulgin <50:
-		act 'Masturbate':
-		cls
-		minut += 20
-		horny += 5
-		cumfrot += 1
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/hj'+rand(1,7)+'.jpg"></center>'
-		'<<$shulga_name_rnd>> I put your hand on his penis and began to move up-down showing, that you need to do. When he removed his hands, you continued to move.'
-		'He relaxed and in a couple of minutes of bliss finished your capable hands. <<$shulga_name_rnd>> Member tucked in his pants and began to watch TV, ignoring you.'
-			act 'Escape': gt'shulga_room'
-		end	
-	end	
-	if GorSlut >= 3 and vasya_shulgin >=70:
-		act 'Suck':
-			cls
-			minut += 5
-			bj +=1
-			horny += 10
-			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/bj'+rand(1,11)+'.jpg"></center>'
-			'<<$shulga_name_rnd>> blissfully watched as your <<$liptalk3>> They wrapped around his hard cock and began to actively suck.'
-
-			act 'Further':
-				cls
-				minut += 10
-				horny += 15
-				sex +=1
-				gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/sex'+rand(1,10)+'.jpg"></center>'
-				dynamic $gg_devst_deflor
-				'<<$shulga_name_rnd>> You laid on the couch and began rhythmically <<$gop_sextext1>>.'
-				dynamic $gg_sex_orgasm
-				act 'Further':
-					cls
-					minut += 5
-					cumface += 1
-					gs'stat'	
-					'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/cum'+rand(1,10)+'.jpg"></center>'
-					'Cum on you, <<$shulga_name_rnd>> Member tucked in his pants and changed the channel, I stared into zombies box, is not showing interest in you.'
-				act 'Escape':gt'shulga_room'	
-				end
-			end	
-		end
-	end	
-end
-}
-!----------------------------------!
-!TV in the great room Vasya!
-!==================================! 
-$shultv = {
-rndtvs=rand(1,100)
-cls
-if rndtvs>10: minut += 30
-if rndtvs>10: manna += 10
-if rndtvs>10: willpower = willpower + RAND(1,5)
-if rndtvs<=10: minut += 5
-gs'stat'
-shulga_tv_rnd = RAND(0,3)
-			if shulga_tv_rnd = 0:$shulga_tv_rnd = 'The TV goes'
-			if shulga_tv_rnd = 1:$shulga_tv_rnd = 'On the TV show'
-			if shulga_tv_rnd = 2:$shulga_tv_rnd = 'Reveal'
-			if shulga_tv_rnd = 3:$shulga_tv_rnd = 'Goes'
-shulga_tv_rand = RAND(0,11)
-			if shulga_tv_rand = 0:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvdance.gif" width="748" height="540"></center><<$shulga_tv_rnd>> Teenage music video, where the girls shake their charms.'
-			if shulga_tv_rand = 1:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvgeo1.gif" width="748" height="540"></center><<$shulga_tv_rnd>> a documentary about animals.'
-			if shulga_tv_rand = 2:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvgeo2.gif" width="748" height="540"></center><<$shulga_tv_rnd>> a documentary about the world.'
-			if shulga_tv_rand = 3:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvgeo3.gif" width="748" height="540"></center><<$shulga_tv_rnd>> a documentary about nature.'
-			if shulga_tv_rand = 4:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvgeo4.gif" width="748" height="540"></center><<$shulga_tv_rnd>> a documentary film about the ocean.'
-			if shulga_tv_rand = 5:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvkino1.gif" width="748" height="540"></center><<$shulga_tv_rnd>> the much-loved Soviet comedy.'
-			if shulga_tv_rand = 6:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvkino2.gif" width="748" height="540"></center><<$shulga_tv_rnd>> Import blockbuster.'
-			if shulga_tv_rand = 7:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvkino3.gif" width="748" height="540"></center><<$shulga_tv_rnd>> Old Western.'
-			if shulga_tv_rand = 8:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvmult1.gif" width="748" height="540"></center><<$shulga_tv_rnd>> relatively new import cartoon.'
-			if shulga_tv_rand = 9:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvmult2.gif" width="748" height="540"></center><<$shulga_tv_rnd>> old cartoon.'
-			if shulga_tv_rand = 10:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvsport1.gif" width="748" height="540"></center><<$shulga_tv_rnd>> fight without rules.'
-			if shulga_tv_rand = 11:$shulga_tv_rand = '<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvsport2.gif" width="748" height="540"></center><<$shulga_tv_rnd>> football.'
-if rndtvs>10:'<<$shulga_tv_rand>> <br> You promastrivaete about TV 30 minutes.' 
-if rndtvs<=10:'<center><img src="images/zsoft/pod_ezd/shulgahome/tv/tvrekl'+rand(1,4)+'.gif" width="748" height="540"></center> There is advertising.'
-act 'Close preview': gt'shulga_room'
-	act 'Change the channel': dynamic $shultv
-	act 'Close preview': gt'shulga_room'
-	
-porno_tv_rand=RAND(0,100)
-	if porno_tv_rand<50 or porno_tv_rand>=50 and week < 6 and hour >= 3 and hour <= 23 or porno_tv_rand>=50 and week >= 6 and hour > 2 and hour < 10 or porno_tv_rand>=50 and week >= 6 and hour > 16 and hour <= 23: dynamic $view_pornotv
-	if porno_tv_rand>=50:
-		if week >= 6 and hour >= 10 and hour <= 16: dynamic $view_pornotv_vasya
-		if week >= 6 and hour >= 0 and hour <= 2:dynamic $view_pornotv_vasya
-		if week < 6 and hour >= 0 and hour <= 2: dynamic $view_pornotv_evgr
-	end
-}
-	
-!--------------------------------------!
-!Bazaar with Vasyanya night on weekdays 0 to 2!
-!======================================! 
-$shulga_bazar_night = {
-rnd_rebyata = RAND(0,7)
-	if rnd_rebyata = 0:$rnd_rebyata = 'Vitka'
-	if rnd_rebyata = 1:$rnd_rebyata = 'Vitek'
-	if rnd_rebyata = 2:$rnd_rebyata = 'Vitya'
-	if rnd_rebyata = 3:$rnd_rebyata = 'Ryzhov'
-	if rnd_rebyata = 4:$rnd_rebyata = 'Kotov'
-	if rnd_rebyata = 5:$rnd_rebyata = 'Dan'
-	if rnd_rebyata = 6:$rnd_rebyata = 'Denchik'
-	if rnd_rebyata = 7:$rnd_rebyata = 'Denis'
-cls
-minut += 1
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
-'<<$shulga_name_rnd>> - often hangs with his pals Dan and Vityok, diligently yoke of a steep pepper.'
-
-dynamic $vasya_shulgin_rep
-act 'Move away': gt 'shulga_room'			
-	act 'Talk':
-		cls
-		minut += 10
-		bazar_day = daystart
-		bazar_count -= 1
-		if bazar_count > 0: vasya_shulgin +=1
-		gs'stat'
-!Bazaar when years with turnips gorslut<3:		
-vasyan_textb = RAND(0,8)
-			if vasyan_textb = 0:$vasyan_textb = 'You are not a long time conversing on different topics'		
-			if vasyan_textb = 1:$vasyan_textb = 'You listen to both <<$shulga_name_rnd>> tells an interesting story'
-			if vasyan_textb = 2 and SchoolAtestat = 0:$vasyan_textb = 'You talk about the school'
-			if vasyan_textb = 2 and SchoolAtestat = 1:$vasyan_textb = 'You nastolgiya remember a time when at school'			
-			if vasyan_textb = 3:$vasyan_textb = '<<$shulga_name_rnd>> He tells how spent the day'
-			if vasyan_textb = 4:$vasyan_textb = '<<$shulga_name_rnd>> He tells a funny joke'
-			if vasyan_textb = 5:$vasyan_textb = 'He tells anecdote: 
-Talking on Skatpe: - Lucy, show boobs!
- - No, you what, we are friends.
- - Be a friend, show boobs!'
-			if vasyan_textb = 6:$vasyan_textb = 'He tells anecdote: 
-- Vovochka, when you come back from a disco?
-- Sooner. You`ll still sleep...'
-			if vasyan_textb = 7:$vasyan_textb = 'He tells anecdote: 
-Little Johnny is worth on the street smoking a cigarette, unknown woman makes a remark to him:
-- Youngster, and your parents know, What are you smoking?
-- Aunty, and your husband knows, pestering you to strangers on the streets?'
-			if vasyan_textb = 8 and vasya_shulgin < 30:$vasyan_textb = 'You talk minutes 10 on various topics.'
-			if vasyan_textb = 8 and vasya_shulgin >=30 and webcamera = 1:$vasyan_textb = 'You talk on different topics.'
-			if vasyan_textb = 8 and vasya_shulgin >=30 and vasya_shulgin <50 and webcamera = 0:$vasyan_textb = '<<$shulga_name_rnd>> speaks: "Then there was a new topic, you can normally raise some money on the Internet. Pro webcam chats heard?"
--"No, but more interesting to tell", you say.
-Bob continues: -"Well you need a webcam and a computer. Regishsya on webcam site, and you can broadcast yourself to the camera via the Internet, and all kinds of suckers pay per view coin.
-And speak more openly show, so you can earn more dough.
--"Well, I do not know, not right to sell their bodies", you say.
-Bob parries: -"But why are you invent yourself, who then sell it? Total-then a couple of hours before the camera povertet ass and you can normally cut money, It`s not on the road by a pussy to stand trade."'
-			if vasyan_textb = 8 and vasya_shulgin >=50 and vasya_shulgin < 70:$vasyan_textb = '<<$shulga_name_rnd>> Asks: -"Remember I told you about the webcam chat, well, where you can earn loot fingering ass?"
--"Aha, I remember", you answer.
-<<$shulga_name_rnd>> continuing the conversation: - "I`m here not long ago bought a Webcam, that would be on Skype with boys bazaar, If you want you can take advantage of my noutom, I do not mind..."
--"Thank you, I think...", you say.'			
-			if vasyan_textb = 8 and vasya_shulgin >=100:$vasyan_textb = '<<$shulga_name_rnd>> Asks: -"Cho like, enjoyed webcam?, spit asshole already online chat?"
--"Yes, It was the case", undeterred answer you.
-<<$shulga_name_rnd>> continuing the conversation: - "If you that on weekends you can call me, the show will do together, zadroty pay more money if they see you as the spire online"
--"The idea is not bad, I think...", you say.'
-
-!Bazaar when years with turnips gorslut>=3:				
-vasyan_textb_gorslut = RAND(0,12)
-			if vasyan_textb_gorslut = 0 and soniaPS = 1:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> He tells how he tore chums Sonya: "Right in the square this slut spread out on a bench, twirled like as long as we wanted with all the guys are not tired, and she has demanded such blyadina".<br> <<$rnd_rebyata>> confirmed: "Aha, I have after a couple of sticks is not standing, but it is still not appeased, mouth trying to raise my dick, requiring continued"'		
-			if vasyan_textb_gorslut = 0 and soniaPS <=0:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> mestatelno says: -"Sonya on diskach happens nabuhivaetsya, it ought to be something to catch and how to fuck, drunken woman pussy not the mistress, it is so?".<br> The boys choir neighing.'		
-			if vasyan_textb_gorslut = 1:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> asks: "<<$sveta_rnd_name>> well me yesterday in the park you in a circle allowed?, I know you for a long time, Like it matter, it is so?"<br> - "Yes, liked", You agree.<br> <<$rnd_rebyata>> He hinted: "it would be necessary to repeat". <br>You did not say anything, simply fucking smile.'
-			if vasyan_textb_gorslut = 2 and soniaPS = 1:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> asks: "<<$sveta_rnd_name>> but as you Sonia?, I would have looked at you together, how can we ever show with all the guys arrange?"<br><<$rnd_rebyata>> adds: "Yes, our two nymphomaniac might show a" <br> - "Everything can be", smiling answer you.'
-			if vasyan_textb_gorslut = 2 and soniaPS <=0:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> asks: "<<$sveta_rnd_name>> but as you Sonia?, I would have looked at you together, how can we ever show with all the guys arrange?"<br><<$rnd_rebyata>> adds: "Yes, Sonya would unleash, diskach it necessary to drink and fuck" <br> - "Everything can be", smiling answer you.'			
-			if vasyan_textb_gorslut = 3 and SchoolAtestat = 0:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> says dreamily: "Oh, now would fuck our Englishwoman, in the classroom does not rest her clothes, as a bud-the special mini skirt dresses that kids would tease"<br> - "I agree, twirls her ass like a bud-something special, I would have looked like her dryuchat, and maybe she would porukovodit process", you answer.'
-			if vasyan_textb_gorslut = 3 and SchoolAtestat = 1:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> says dreamily: "Oh, now would fuck Julia, It does not rest her body, as a bud-the special light dress clothes, what would tease"<br> - "I agree, twirls her ass like a bud-something special, I would have looked like her dryuchat, and maybe she would porukovodit process", you answer.'
-			if vasyan_textb_gorslut = 4:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> says: "<<$sveta_rnd_name>> Your nurse that still slut, I`m here not long ago heard, that in the cafe where she works, It pyalit her boss almost every day. Though she aged, but still nothing like caring for a, and the experience of the car must, I would vdul." The boys agreed with the words of approval Shulga.<br> "Dream on", maliciously laughing you say.'
-			if vasyan_textb_gorslut = 5 and SchoolAtestat = 0 and soniaPS = 1:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> speaks: "Recently, the school is seen, already ahuel...Sonka the toilet in a circle which-then jerks allowed. She is already in my fuck where and with whom to fuck, the main thing that a lot of cocks and tight."<br> - "Aha, We made her nymphomaniac, now without a dick and the day will not last", You agree. <br> <<$rnd_rebyata>> speaks: "Yes, we have it, and so almost every day Feeding the". Guys neighing.'
-			if vasyan_textb_gorslut = 5 and SchoolAtestat = 1 and soniaPS = 1:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> speaks: "The market is seen by chance, already ahuel. Sonya looks for belongings come to market, and it there in a circle allowed...Arthur and his company. She is already in my fuck where and with whom to fuck, the main thing that a lot of cocks and tight, and even make a discount." <br> - "It makes her a total hole, and now she does not have a pass, and indeed it has no dick and the day will not last", You agree. <br> <<$rnd_rebyata>> speaks: "Yes, we have it, and so almost every day Feeding the, but we agree with the discount on the clothes do not knock". Guys neighing.'
-			if vasyan_textb_gorslut = 5 and soniaPS <= 0:$vasyan_textb_gorslut = 'You are not a long time conversing on various topics vulgar'
-			if vasyan_textb_gorslut = 6:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> hints: "What <<$sveta_rnd_name>> when we fuck?". The boys looked at each other and looked at you, waiting for an answer.<br> - "As I thought up so soon", you replied calmly.<br> <<$rnd_rebyata>>: - "Maybe you need a drink, to relax the body, will decide to?". Guys neighing. <br> Throwing a disgruntled look at <<$rnd_rebyata>> said: "that`s not the point, Although a good idea to drink".'
-			if vasyan_textb_gorslut = 7:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> asks excitedly: "<<$sveta_rnd_name>>, and you in the ass with pleasure, or give it to you torment?"<br> - "Since the beginning did not like, then got used and sometimes even catch a buzz from it", smiling answer you.<br> <<$rnd_rebyata>> speaks: "Of course already like, when the hollow is not closed". Guys neighing.'
-			if vasyan_textb_gorslut = 8:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> asks: "<<$sveta_rnd_name>> What position do you like most about sex?"<br> - "comfortable", laughing answer you.<br> The boys choir neighing.'			
-			if vasyan_textb_gorslut = 9:$vasyan_textb_gorslut = 'He describes a vulgar anecdote: 
-Kid virgins escorted home. We go into the entrance, stop on the landing. 
-It: - Remove the light bulb. 
-He unscrews. In complete darkness, she says:
- - Want, I will take in your mouth?
- - You what? She`s hot!'
-			if vasyan_textb_gorslut = 10:$vasyan_textb_gorslut = 'He tells anecdote: 
-BoA looking at an elephant:
- - Ha-ha, member on the face.
- Elephant, looking at boa:
- - Ha-ha muzzle on a limb.'
-			if vasyan_textb_gorslut = 11:$vasyan_textb_gorslut = 'He tells anecdote: Botanist Andrew on the sixth school New Year`s dressed in a suit is not a-there squirrels, and a suit of the king of beasts, but still I got pizdyuley from bunny Ilya.'
-			if vasyan_textb_gorslut = 12 and vasya_shulgin < 30:$vasyan_textb_gorslut = 'You talk minutes 10 on various topics.'
-			if vasyan_textb_gorslut = 12 and vasya_shulgin >=30 and webcamera = 1:$vasyan_textb_gorslut = 'You talk on different topics.'
-			if vasyan_textb_gorslut = 12 and vasya_shulgin >=30 and vasya_shulgin <50 and webcamera = 0:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> speaks: "Then there was a new topic, you can normally raise some money on the Internet. Pro webcam chats heard?"
--"No, but more interesting to tell", you say.
-Bob continues: -"Well you need a webcam and a computer. Regishsya on webcam site, and you can broadcast yourself to the camera via the Internet, and all kinds of suckers pay per view coin.
-And speak more openly show, so you can earn more dough.
--"Well, I do not know, not right to sell their bodies", you say.
-Bob parries: -"But why are you invent yourself, who then sell it? Total-then a couple of hours before the camera povertet ass and you can normally cut money, It`s not on the road by a pussy to stand trade."'
-			if vasyan_textb = 12 and vasya_shulgin >=50 and vasya_shulgin < 70:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> Asks: -"Remember I told you about the webcam chat, well, where you can earn loot fingering ass?"
--"Aha, I remember", you answer.
-<<$shulga_name_rnd>> continuing the conversation: - "I`m here not long ago bought a Webcam, that would be on Skype with boys bazaar, If you want you can take advantage of my noutom, I do not mind..."
--"Thank you, I think...", you say.'			
-			if vasyan_textb = 12 and vasya_shulgin >=100:$vasyan_textb_gorslut = '<<$shulga_name_rnd>> Asks: -"Cho like, enjoyed webcam?, spit asshole already online chat?"
--"Yes, It was the case", undeterred answer you.
-<<$shulga_name_rnd>> continuing the conversation: - "If you that on weekends you can call me, the show will do together, zadroty pay more money if they see you as the spire online"
--"The idea is not bad, I think...", you say.'				
-dynamic $vasya_shulgin_rep
-		if bazar_count <= 0:'<<$shulga_name_rnd>> said: - "<<$sveta_rnd_name>>, you`re tired your talk, leave me alone."'
-		if GorSlut < 3 and bazar_count > 0: '<<$vasyan_textb>>'	
-		if GorSlut >=3 and bazar_count > 0: '<<$vasyan_textb_gorslut>>'
-		act 'Further': dynamic $shulga_bazar_night
-	end
-	act 'Drink beer': dynamic $shulga_beer
-	if vasya_shulgin>=70 and alko >= 1 or vasya_shulgin>=70 and horny > 50 or GorSlut >=3 and alko >= 1:
-		act 'Fuck':
-		if shgopsex_vasya_count = 0:
-			cla
-			'Bob says: -"<<$gop_name_gg>> Jam has me, let us call it a day, do not bother."'
-			act 'Further': dynamic $shulga_bazar_night
-		elseif shgopsex_vasya_count > 0:	
-			$gopsex_name_npc = 'Vasya'
-			$gopsex_n_npc = 1 
-			shgopsex_vasya_day = daystart
-			shgopsex_vasya_count -= 1
-			dynamic $shgopsex
-		end
-	end
-end	
-}
-!--------------------------------------------!
-!Bazaar with Dan (Ryzhov) night on weekdays 0 to 2!
-!============================================! 
-$den_bazar = {
-rnd_rebyata2 = RAND(0,7)
-	if rnd_rebyata2 = 0:$rnd_rebyata2 = 'Vitka'
-	if rnd_rebyata2 = 1:$rnd_rebyata2 = 'Vitek'
-	if rnd_rebyata2 = 2:$rnd_rebyata2 = 'Vitya'
-	if rnd_rebyata2 = 3:$rnd_rebyata2 = 'Kotov'
-	if rnd_rebyata2 = 4:$rnd_rebyata2 = 'Vaska'
-	if rnd_rebyata2 = 5:$rnd_rebyata2 = 'Shulga'
-	if rnd_rebyata2 = 6:$rnd_rebyata2 = 'Vasya'
-	if rnd_rebyata2 = 7:$rnd_rebyata2 = 'Vasek'
-	cls
-	minut += 1
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
-	'Deng is long and skinny guy who communicates with others with contempt and always ready to sort through the concept of. Also according to him, Dan knows the precise area for kids, that if something, vpryagutsya him.'
-	act 'Move away': gt 'shulga_room'			
-	act 'Talk':
-		cls
-		minut += 5
-		bazar_day_den = daystart
-		bazar_count_den -= 1
-		gs'stat'
-!Bazaar when years with turnips gorslut<3:	
-den_textb = RAND(0,6)
-			if den_textb = 0:$den_textb = 'You are not a long time conversing on different topics'		
-			if den_textb = 1 and SchoolAtestat = 0:$den_textb = 'You talk about the school'
-			if den_textb = 1 and SchoolAtestat = 1:$den_textb = 'You talk about life after graduation'
-			if den_textb = 2:$den_textb = 'You are listening to Dan tells an interesting story'
-			if den_textb = 3:$den_textb = 'You are chatting about any nonsense'
-			if den_textb = 4:$den_textb = 'Dan tells a funny joke'
-			if den_textb = 5:$den_textb = 'Dan complain: Here is an example of the vicious circle. Mother says: "Listen father". Father says: "Do not listen to women".'
-			if den_textb = 6:$den_textb = 'He tells anecdote: 
-Marivanna chastises Vovochku:
-- Vovochka, half the girls in our school complain, you`re constantly pesters him with indecent proposals!
-- Slander, Marivanna! - responsible Vovochka. - This is not a good, and an evil half. Good answer my proposal is consistent.'
-
-!Bazaar when years with turnips gorslut>=3:	
-den_textb_gorslut = RAND(0,7)
-			if den_textb_gorslut = 0:$den_textb_gorslut = 'Denis sprashiaet you: "<<$sveta_rnd_name>> Do you have money?, if a little, Can you find a part time, body you do so, mouth working, and the other holes are designed. You can normally so loot zashibat."
--"Stops fantasizing, I tell you what that whore!?", wrong answer you.
-<<$rnd_rebyata2>> protecting others say: -"You`re not kipish, he just thought aloud..."'		
-			if den_textb_gorslut = 1 and soniaPS = 1:$den_textb_gorslut = 'Dan sprashiaet: -"<<$sveta_rnd_name>> when you tell us what some adjusting his girlfriend?"
--"I, that one does not cope?", cramp wronged mine you ask.
-Dan responds: -"Do not, I do not pritenzy, just once with two other women to try hunting."
-<<$rnd_rebyata2>> wail: -"Yes, you can call Sonya, fuck it all with whom and where. Her Svetka together to spread out it would be super."
-All agreed, that is a good idea.'
-			if den_textb_gorslut = 1 and soniaPS <=0:$den_textb_gorslut = 'Dan sprashiaet: -"<<$sveta_rnd_name>> when you tell us what some adjusting his girlfriend?"
--"I, that one does not cope?", cramp wronged mine you ask.
-Dan responds: -"Do not, I do not pritenzy, just once with two other women to try hunting."
-<<$rnd_rebyata2>> wail: -"Great idea!, it remains to find a suitable kondidaturu."'
-			if den_textb_gorslut = 2 and soniaPS = 1:$den_textb_gorslut = 'Denchik says: -"Sonya yesterday diskach all who popodya dance called, then drove to the toilet, not long ago this was a good girl, and now she and most trouble-free campaign kicks in this situation."'
-			if den_textb_gorslut = 2 and soniaPS <=0:$den_textb_gorslut = 'Denchik says: -"Sonya such a good girl, I have long thought came to her diskach good drink and let the circle."'
-			if den_textb_gorslut = 3:$den_textb_gorslut = 'Dan says: -"I think for guys here is found, then our pharmacist Lyudka a Negro lives. They say Black Dicks huge, I bet with your hand <<$name>>."
-Guys neighing, you smiled.
--"Lyudka woman even at the age, but many more will Moloduha odds."'
-			if den_textb_gorslut = 4:$den_textb_gorslut = 'He tells anecdote: 
-Wife says husband:
- - I used to-in the Institute met with one guy... We went as a-in a movie, and in the middle of the film, he asked me,: "Do you want to suck? " I, naturally, I am beginning to resent, and he pulled out his chupa-Chups and handed me. 
-Husband, reflectively:
- - This guy, hike, was a brilliant plan of retreat.'
-			if den_textb_gorslut = 5:$den_textb_gorslut = 'Dan asks: -"<<$sveta_rnd_name>> how sestruha your fares?, the man she has?, She also works as a saleswoman in a store, I suppose there is a release from the loader, I do not torture her there?, it can help what is necessary?, it is seen that girl, And I`m a guy hod where: Eggs, tobacco, fume and bristles!, worse movers?"
--"It seems to have, but I`m in her personal life I try not to go", you answer.'
-			if den_textb_gorslut = 6:$den_textb_gorslut = 'He tells anecdote: 
-A man "removed" Woman in a restaurant, chic table, Champagne, caviar and so on. d. 
-Then he said: - Come to me! They`re coming (night, winter), He turns to the park, stops, pulls out a gun - Undress to the goal, Get out and lepi snowman She was in tears, undressed, climbed, blinded. 
-- Get in the car. Dress. We arrived at "hut", awesome table, then the same cetoc, Then he takes her where she asks. 
-It: - What for?! Why?! I would not give a snowman... 
-It: - Understand... Champagne... caviar. . cetoc - All this you will soon forget, and here "snowman" - hardly...'
-			if den_textb_gorslut = 7:$den_textb_gorslut = 'He tells anecdote:
-Teacher comes to class, He wore around his neck on a gold chain new kulonchik as airplanes. Little Johnny is not the entire lesson staring at him. At the end of the lesson the teacher asks,:
-"What, Vovochka, so you like airplane?"
-- "No, aerodromik"'			
-	
-if bazar_count_den <= 0:'Dan said: - "<<$sveta_rnd_name>>, tired of his talk, leave me alone."'
-if GorSlut < 3 and bazar_count_den > 0: '<<$den_textb>>'	
-if GorSlut >=3 and bazar_count_den > 0: '<<$den_textb_gorslut>>'
-		act 'Further': dynamic $den_bazar
-	end
-	act 'Drink beer': dynamic $shulga_beer
-	if GorSlut >=3 and alko >= 1:
-		act 'Have sex with Dan': 
-		if shgopsex_den_count = 0:
-			cla
-			'Dan says: -"Here you <<$gop_gg_name>> Jam me today, fuck off."'
-			act 'Escape': gt'shulga_room'
-		elseif shgopsex_den_count > 0:
-			$gopsex_name_npc = 'Dan'
-			$gopsex_n_npc = 0
-			shgopsex_den_day = daystart
-			shgopsex_den_count -= 1		
-			dynamic $shgopsex
-		end
-	end
-end	
-}
-!---------------------------------------------!
-!Bazaar with Vitek(Kotov) night on weekdays 0 to 2!
-!=============================================! 
-$vitek_bazar = {
-rnd_rebyata3 = RAND(0,7)
-	if rnd_rebyata3 = 0:$rnd_rebyata3 = 'Dan'
-	if rnd_rebyata3 = 1:$rnd_rebyata3 = 'Denchik'
-	if rnd_rebyata3 = 2:$rnd_rebyata3 = 'Denis'
-	if rnd_rebyata3 = 3:$rnd_rebyata3 = 'Ryzhov'
-	if rnd_rebyata3 = 4:$rnd_rebyata3 = 'Vaska'
-	if rnd_rebyata3 = 5:$rnd_rebyata3 = 'Shulga'
-	if rnd_rebyata3 = 6:$rnd_rebyata3 = 'Vasya'
-	if rnd_rebyata3 = 7:$rnd_rebyata3 = 'Vasek'	
-rnd_vitek_name = RAND(0,3)
-	if rnd_vitek_name = 0:$rnd_vitek_name = 'Vitek'
-	if rnd_vitek_name = 1:$rnd_vitek_name = 'Vitka'
-	if rnd_vitek_name = 2:$rnd_vitek_name = 'Victor'
-	if rnd_vitek_name = 3:$rnd_vitek_name = 'Vitya'		
-	cls
-	minut += 1
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
-	'Vitek aggressive and strong guy who considers himself a clear patsanchik. But Vitek blunt. We have a sister twins Victor Lena.'
-	act 'Move away': gt 'shulga_room'			
-	act 'Talk':
-		cls
-		minut += 5
-		bazar_day_vitek = daystart
-		bazar_count_vitek -= 1
-		gs'stat'
-		
-!Bazaar when years with turnips gorslut<3:	
-vitek_textb = RAND(0,7)
-			if vitek_textb = 0:$vitek_textb = 'You are not a long time conversing on different topics'		
-			if vitek_textb = 1 and SchoolAtestat = 0:$vitek_textb = 'You talk about the school'
-			if vitek_textb = 1 and SchoolAtestat = 1:$vitek_textb = 'You talk about different things'
-			if vitek_textb = 2:$vitek_textb = 'You listen as the Vitek tells an interesting story'
-			if vitek_textb = 3:$vitek_textb = 'You are chatting about any nonsense'
-			if vitek_textb = 4:$vitek_textb = 'Kotov tells a funny joke'
-			if vitek_textb = 5:$vitek_textb = '- True, that the minute of laughter prolongs life 5 minutes? 
-- Well,, it depends on who laughs ... Maybe cut ...'
-			if vitek_textb = 6:$vitek_textb = 'He tells anecdote:
-- Hello, Lusia! As the weekend?
-- Depart!
-- Itself failed, sheep!'
-			if vitek_textb = 7:$vitek_textb = 'Interesting fact: if a person has a fridge full of beer, then there will always be friends with vodka.'
-
-!Bazaar when years with turnips gorslut>=3:				
-vitek_textb_gorslut = RAND(0,7)
-			if vitek_textb_gorslut = 0:$vitek_textb_gorslut = '<<$rnd_vitek_name>> It tells how they spend their time: - "We are creating a garbage boys, or recall the garbage, you have done before."'		
-			if vitek_textb_gorslut = 1:$vitek_textb_gorslut = '<<$rnd_vitek_name>> speaks: -"The proximity to the person determined by the, how much you can mock him, without receiving pizdyuley."'
-			if vitek_textb_gorslut = 2:$vitek_textb_gorslut = '<<$rnd_vitek_name>> says: -"<<$sveta_rnd_name>> Did you know, that empirically established, As for 95% Girls, I do not have sex for over a month, can not be the first time correctly pronounce the name of the city of Naberezhnye Chelny."'
-			if vitek_textb_gorslut = 3 and SchoolAtestat = 0 and soniaPS = 1:$vitek_textb_gorslut = '<<$rnd_vitek_name>> says: -"Sonya pulled yesterday in the school toilet, but then she climbed on top of me, and I suddenly realized, rape me how-not Ask." 
-Everyone in the room neighing.'
-			if vitek_textb_gorslut = 3 and SchoolAtestat = 1 and soniaPS = 1:$vitek_textb_gorslut = '<<$rnd_vitek_name>> says: -"Sonya pulled yesterday in the park, but then she climbed on top of me, and I suddenly realized, rape me how-not Ask."
-			Everyone in the room neighing.'
-			if vitek_textb_gorslut = 3 and soniaPS <= 0:$vitek_textb_gorslut = 'You listen as the Vitek says trite story'
-			if vitek_textb_gorslut = 4:$vitek_textb_gorslut = 'Friends drink beer and talk about women and cekce, you get into a conversation and ask Vic:
-- what do you think, whom cekc nice man or woman?
-<<$rnd_vitek_name>> thought, but then climbed <<$rnd_rebyata3>> and replied,: 
-- No brainer, woman! Here you have itching ears, so what part of the body more pleasant, finger, which you scratched his ear, or his ear!'
-			if vitek_textb_gorslut = 5:$vitek_textb_gorslut = '<<$rnd_vitek_name>> asks: -"<<$sveta_rnd_name>> and you know how important the quality of the penis?
-- it`s his upbringing. He shall stand at the sight of naked ladies, to the lady that was on board."
-The room filled with laughter.'
-			if vitek_textb_gorslut = 6:$vitek_textb_gorslut = '<<$rnd_vitek_name>> speaks: -"Drunk girl her pussy not the mistress".
-you parry: -"Yeah. Like a drunken man to his dick great commander".
-Friends neighing.'
-			if vitek_textb_gorslut = 7:$vitek_textb_gorslut = 'He tells anecdote:
-A man walks into a pharmacy and loudly declares: 
-- I have a pack of condoms, please! 
-A young clerk blushed and whispered: 
-- This should be in the ear... 
-Muzhik: 
-- And why in my ear?! I need to dick!!!'
-			
-if bazar_count_vitek <= 0:'Vitek said: - "<<$sveta_rnd_name>>, tired of his talk, leave me alone."'
-if GorSlut < 3 and bazar_count_vitek > 0: '<<$vitek_textb>>'	
-if GorSlut >=3 and bazar_count_vitek > 0: '<<$vitek_textb_gorslut>>'
-		act 'Further': dynamic $vitek_bazar
-	end
-	act 'Drink beer': dynamic $shulga_beer
-	if GorSlut >=3 and alko >= 1:
-		act 'Fuck':
-		if shgopsex_vitya_count = 0:	
-			cla
-			'Vitek says: -"Sorry <<$gop_name_gg>>, more today will not be able."'
-			act 'Escape': gt'shulga_room'	
-		elseif shgopsex_vitya_count > 0:
-			$gopsex_name_npc = 'Vitya'
-			$gopsex_n_npc = 2
-			shgopsex_vitya_day = daystart
-			shgopsex_vitya_count -= 1
-			dynamic $shgopsex
-		end
-	end
-end	
-}
-!-----------------------------------------------------------------!
-!Bazaar with Vasyanya and other game events at the weekend with 10 to 17 and 23 to 3!
-!=================================================================!
-!----------------------!
-!-----Make lessons-----!
-!======================!
-!choice of set pictures
-shulga_lern_imgset = RAND(1,7)
-	if shulga_lern_imgset = 1:$shulga_lern_imgset = '1'
-	if shulga_lern_imgset = 2:$shulga_lern_imgset = '2'
-	if shulga_lern_imgset = 3:$shulga_lern_imgset = '3'
-	if shulga_lern_imgset = 4:$shulga_lern_imgset = '4'
-	if shulga_lern_imgset = 5:$shulga_lern_imgset = '5'
-	if shulga_lern_imgset = 6:$shulga_lern_imgset = '6'	
-	if shulga_lern_imgset = 7:$shulga_lern_imgset = '7'			
-lern_imgset = $shulga_lern_imgset
-!limit 1 sex after class
-if shulga_lern_day ! daystart: shulga_lern_count = 1
-
-!consent to sex
-$shulga_lern_sex_yes = {
-	cls
-	shulga_lern_day = daystart
-	shulga_lern_count -= 1
-	minut += 5
-	if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
-	sex += 1
-	bj +=1
-	anal += 1
-	horny += 10
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/ev<<lern_imgset>>_2.jpg"></center>'
-	''
-	
-	act 'Further':
-		cls
-		minut += 5
-		horny += 10
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/ev<<lern_imgset>>_3.jpg"></center>'
-		dynamic $gg_devst_deflor
-		''
-		if shulga_lern_imgset = 2 or shulga_lern_imgset = 3 or shulga_lern_imgset = 4 or shulga_lern_imgset = 6 or shulga_lern_imgset = 7:
-			if analplugin = 1:
-				analplugin = 0
-				'-"<<$gop_name_gg>>, and what have you got for a toy", Bob says cheerfully pulling out of your ass anal plug.'
-				'-"This little thing to you now is not useful, it will only hinder us!", It continues Vasily.'
-			end				
-			if lubri > 0:
-				lubri -= 1
-				agape = 1
-				agapetime = totminut
-				horny += 20
-				'-"I see you in the ass I want, let smazhem hole, I have in my bag cream", you say.'
-				'Basil gets anal lubricant, He pushes on his hand and starts to spread your ass.'
-			elseif lubri = 0:
-				agape = 2
-				agapetime = totminut
-				horny += 10
-			end	
-		end
-
-		act 'Further':
+		act 'Further': 
 			cls
 			minut += 5
 			horny += 15
 			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/ev<<lern_imgset>>_4.jpg"></center>'
-			''	
-			dynamic $gg_sex_orgasm
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev1_3_'+rand(1,2)+'.jpg"></center>'
+			'Sergey big hands grabbed her ass and spread his buns to the sides, juicy spit into her cunt and easily drove a member, holding her hands stretched to the sides, from what Natasha bent like a cat.
+			- Like, fuck? Yes!? Yes?!
+			- AAAA... mmm... oh, yes... fuck... fuck... - Could only whined Natasha.
+			And he has continued its rhythmic poёbyvat. Natasha continued to moan and hips podmahivala.
+			- Like? Natasha appetizing you bitch, not to fuck you pereebat... yeah...
+			- daaaaa, more... Ebi... worse... yes... here... about daaaaa...'
+			dynamic $masturb_gg
+			act 'Further': 
+				cls
+				minut += 5
+				horny += 15
+				gs'stat'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev1_4_'+rand(1,3)+'.jpg"></center>'
+				'Sergei decided to change position, He lay on the sofa, and Natasha sat down on top of him and began to actively jump, all accelerating pace and without stopping to talk as she well.'
+				dynamic $masturb_gg
+				act 'Further': 
+					cls
+					minut += 5
+					horny += 15
+					gs'stat'
+					'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev1_5.jpg"></center>'
+					'He roared like a lion, and two hands holding her crown. Then step back, I nadrachivat already started and is about to put his finishing them in her mouth Natasha. 
+					She pressed her lips together, and a jet of dense and fibrous beginning to fill her mouth, chin, dripping on the floor.'
+					act 'Escape': gt'shulgahome'
+				end
+			end
+		end
+	end		
+}
+
+$shulga_home_momgg2 = {
+	cls
+	sexev_momgg_day = daystart
+	sexev_momgg_count -= 1
+	minut += 5
+	horny += 5
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev2_1_'+rand(1,4)+'.jpg"></center>'
+	''
+	dynamic $masturb_gg
+	act 'Further': 
+		cls
+		minut += 5
+		horny += 10
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev2_2_'+rand(1,2)+'.jpg"></center>'
+		''
+		dynamic $masturb_gg
+		act 'Further': 
+			cls
+			minut += 5
+			horny += 15
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev2_3_'+rand(1,2)+'.jpg"></center>'
+			''
+			dynamic $masturb_gg
+			act 'Further': 
+				cls
+				minut += 5
+				horny += 15
+				gs'stat'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev2_4.jpg"></center>'
+				''
+				act 'Escape': gt'shulgahome'
+			end
+		end
+	end	
+}
+
+$shulga_home_momggbang = {
+	cls
+	sexev_momgg_day = daystart
+	sexev_momgg_count -= 1
+	minut += 5
+	horny += 10
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev3_1_'+rand(1,3)+'.jpg"></center>'
+	'And then you saw how your mother greedily sucking dicks and Sergei Uncle Misha.'
+	dynamic $masturb_gg
+	act 'Further': 
+		cls
+		minut += 5
+		horny += 15
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev3_2_'+rand(1,2)+'.jpg"></center>'
+		'Sergey looking, both on the movements of his friend first inflated cheeks of your mother, and then her throat, Sergei gently introduced his dick in pussy Natasha and began measuring the motion pelvis. 
+		Natasha was in seventh heaven - with her eyes closed she tried to skip a member of Uncle Misha as deeply as possible into the throat. 
+		Sergey drives the his trunk into it to its full length, and she already felt spanking eggs on his ass. 
+		Gradually, the movement of men came in unison, and at the same time they began to push their guns into it from both sides, and it was so delicious, Natasha tried to spread on their members as deep as possible.'
+		dynamic $masturb_gg
+		act 'Further': 
+			cls
+			minut += 5
+			horny += 15
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev3_3.jpg"></center>'
+			'Your mother was sucking dick Sergei, Uncle Misha fucked her in the ass. Within minutes 5 Model Behavior...Your mother looked like a real whore.'
+			dynamic $masturb_gg
+			act 'Further': 
+				cls
+				minut += 5
+				horny += 15
+				gs'stat'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/momgg/ev3_4_'+rand(1,2)+'.jpg"></center>'
+				'The first finished Sergey, his dense sperm flowed profusely from the mouth of your mother. It, not stopping stick your ass to meet Uncle Misha. Just a minute, Uncle Misha frequent movement and its member threw a jet, Natasha felt it within himself.'
+				act 'Escape': gt'shulgahome'
+			end
+		end
+	end	
+}
+shulga_home_rnd = RAND(0,100)
+shd = 0
+	if week < 6:
+		if hour >= 15 and hour < 23:
+			if shulga_home_rnd <= 3 and momslut >= 1 and sexev_momgg_count > 0:shd = 1
+			if shulga_home_rnd > 3 and shulga_home_rnd <= 6 and momslut >= 1 and sexev_momgg_count > 0:shd = 2
+			if shulga_home_rnd > 97 and momslut >= 1 and sexev_momgg_count > 0:shd = 3
+		end
+	end
+	if week >= 6:
+		if hour >= 10 and hour < 23:
+			if shulga_home_rnd <= 3 and momslut >= 1 and sexev_momgg_count > 0:shd = 1
+			if shulga_home_rnd > 3 and shulga_home_rnd <= 6 and momslut >= 1 and sexev_momgg_count > 0:shd = 2
+			if shulga_home_rnd > 97 and momslut >= 1 and sexev_momgg_count > 0:shd = 3
+		end
+	end
+
+	if shd = 1:
+		'Have you heard any-strange sounds from the small room: <a href="exec: dynamic $shulga_home_momgg1">see</a>'
+	elseif shd = 2:
+		'Have you heard any-the sounds of a small room: <a href="exec: dynamic $shulga_home_momgg2">see</a>'	
+	else
+		'Have you heard any-the loud sucking sound from the small room: <a href="exec: dynamic $shulga_home_momggbang">see</a>'	
+	end
+
+	act 'Go to the large room': gt'shulga_room'
+	act 'Go to the room malenkuya': dynamic $shsroom
+	act 'Going to the bathroom': dynamic $shvanna
+	act 'Go to the kitchen': dynamic $shkuh
+	act 'Escape':shulgahomemark = 0 & minut += 1 & gt'pod_ezd','etaj_3'
+end
+
+!============================================================================================================!
+!SMALL ROOM (Master bedroom Shulga)------------------------------------ ----------SMALL ROOM!
+!============================================================================================================!
+!Small room Sonia Event:
+$smroom_sex_sonya = {
+	cls
+	minut += 5
+	sexev_sonya_day = daystart
+	sexev_sonya_count -= 1
+	sh_sonya_sexev +=1
+	horny += 5
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/sonya/ev1_1_'+rand(1,2)+'.jpg"></center>'
+	'You with bated breath slowly came to the door, from-for which I have heard muffled groans and sniffles. Slowly, trying not to make a sound, opened the door and clung to a narrow schёlke, cautiously looking inside.'
+	'And there Sergei rhythmically pyalil cancer Sonya. Her face was read, and the lust of the indescribable pleasure.'
+	'Nothing new, you do not see, while hoping to see someone-else, instead Sonya.'
+	dynamic $masturb_gg
+	act 'Further': 
+		cls
+		minut += 5
+		horny += 15
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/sonya/ev1_2_'+rand(1,3)+'.jpg"></center>'
+		'Rolling his eyes in pleasure and barely suppressing a cry, She dug her nails into plaid, on which lay. 
+		But then Sergei began to drive faster and deeper his dick in her, not withstanding such an attack, Sonia louder and louder moaning with pleasure.'
+		dynamic $masturb_gg	
+		act 'Further': 
+			cls
+			minut += 5
+			horny += 15
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/sonya/ev1_3_'+rand(1,2)+'.jpg"></center>'
+			'Sonya moaned no hesitating. Sergei could not stand it and made her remark:
+			- Hush... You do not want, to the house we heard?
+			Sonia choked moaned and shook her head.
+			- Well, that`s good. And as a reward such a good girl...
+			Ringing cotton, and attractive ass horny Sonya left a bright red spot. 
+			She could not endure, and strong vaginal muscles squeezing ramming its members, It shook in orgasmic convulsions.
+			Panting, Both silhouette exhausted collapsed on the floor.'	
+			dynamic $masturb_gg
+			act 'Escape': gt'shulgahome'
+		end
+	end
+}
+!small room
+$shsroom = {
+	cls
+	minut = minut + 1
+	gs'stat'
+	'<center><b><font color = maroon>Bedroom father Shulga</font></b></center>'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom.jpg"></center>'
+	'Everything is as usual a large bed, beside tables, opposite the TV, Side cabinet.'
+
+	if hour < 7 or hour >= 23: 'On the bed sleeping <<$serg_obr>> <a href="exec:GT ''Serge_Shulgin'',''serge_razbud''">Sergei</a>.'
+
+	if week < 6:
+		if hour >= 16 and hour < 18 or hour >= 21 and hour < 23: 'On the bed lies <<$serg_obr>> <a href="exec:GT ''serge_razgovor_tv''">Sergei</a> watching TV.'
+	else
+		if hour >= 7 and hour < 18 or hour >= 21 and hour < 23: 'On the bed lies <<$serg_obr>> <a href="exec:GT ''serge_razgovor_tv''">Sergei</a> watching TV.'
+	end
+
+	act 'Exit the room': gt'shulgahome'
+	if week < 6 and hour >= 7 and hour < 16: dynamic $smroom_sleep
+
+	smroom_ev_sonya = RAND(0,100)
+	if smroom_ev_sonya <= 5 and soniaPS => 1 and sexev_sonya_count > 0 and hour >= 15 and hour <= 23: dynamic $smroom_sex_sonya
+
+}
+	!sleep when the bed is empty
+$smroom_sleep = {
+	act 'Lie down on the bed to take a nap':
+		cls
+		son += 2
+		health += 5
+		minut += 60
+		gs'stat'
+		'You snoozed for an hour'
+		act 'Up': dynamic $shsroom
+	end
+}
+
+!============================================================================================================!
+!BATH--------------------------------------------BATH-------------------------------------------------BATH!
+!============================================================================================================!
+!YY, and Sonia together pleasuring Sergei:
+$gg_sonya_serg_sex = {
+	cls
+	minut += 5
+	sexev_sonya_day = daystart
+	sexev_sonya_count -= 1
+	sh_sonya_sexev +=1
+	horny += 15
+	if npcSex[25] = 0:npcSex[25] = 1 & girl += 1
+	if serge_countsex < 1: guy += 1
+	lesbian += 1
+	bj +=1
+	throat += 1
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/gr/ev1_1_'+rand(1,5)+'.jpg"></center>'
+	'Have you looked at his penis if zagipnotizirovanye, Sonia then opened her mouth and dropped it to the member. 
+	It captures only the head, I start to drive on her tongue and a little sucking, from what Sergei already filched spirit.
+	When she began to move her head up and down and really suck, You put his hand between her legs and began to actively stroking her clitoris.
+	For a minute, Sonia pulled away from the penis and offered it to you. You started to lick from the base member, and then up until it took it into his mouth and began to fall on the head member for many, how much could, until the gag reflex did not take his. 
+	Sergei looked at you and show thumb. You really did everything very well.'
+	act 'Further': 
+		cls
+		minut += 5
+		sex += 1
+		horny += 15
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/gr/ev1_2_'+rand(1,2)+'.jpg"></center>'
+		'Sergei moved up to a member of your lips sex, and he moved his little up and down near the entrance. From these slides pussy even more wet and Sergey led by a dick on it was very nice. 
+		Sonia looked after us, gently massaging her breasts and pussy. Then Sergei gently and slowly moved forward.
+		Sponges your pussy opened and accepted it, surrounding member strong heat. Sergei felt like your pussy stretched, to meet the needs of members and measured, slowly she moved to member-here. 
+		Your mouth opened wide and he broke a long moan. Sonya without losing the time held up her pussy to your mouth and grabbed your head with your arms making it clear, that it is not bad to serve. 
+		When you began to crawl tongue over her pussy. Her breathing quickened and she bit her lip.
+		- What feelings? - You asked Sonia.
+		You through the fun and her pussy, bellowed, something strange. Sonya smiled mischievously, and further he moved up and pressed her hand harder your face to the pussy. 
+		With blissful face, Sonia lowered yourself to your mouth, two fingers opened her pussy for, that would be easier to see Sregeyu, as your tongue hides in it.'	
+		act 'Further': 
+			cls
+			minut += 5
+			horny += 15
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/gr/ev1_3_'+rand(1,4)+'.jpg"></center>'
+			'Sonya asked you to swap, saying:
+			- I also want to feel a member of the, Sergei vyebet let me properly, and you <<$name>> I thoroughly otlizhu.
+			Sergei put her back on the bed and swung entered her wet pussy, over which a few minutes ago, you did a good job.
+			By focusing on the fucking Sonya forgot about his promise, and you yourself had to sit by a pussy on her face. She moaned loudly in your pussy. 
+			You rocked on her face, Sergei is a flourish, the entire length of his cock fucked her, trying to insert as far as possible.
+			- Do not hold back Sergei, - You said, - Do not be afraid of this whores pussy, fire away it properly, it is only a hole for it and created.
+			Sonia assent, suck your pussy lips with his lips and began to actively crawl language. You already shakin `pleasure. You suffocated, when the language is deeply Sony`s in your labia.'	
+			if horny >=70:
+				orgasm += 1
+				horny = 0
+				mastr +=1
+				manna += 35
+				willpower +=20
+				minut += 5
+				'Sonya was able to please everyone and her sweet tongue has brought you to orgasm. From surging emotions you with a loud groan and finished.'
+			end	
+			act 'Further': 
+				cls
+				minut += 5
+				horny += 10
+				swallow += 1
+				facial += 1
+				hapri = 0
+				gs'stat'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/gr/ev1_4_'+rand(1,2)+'.jpg"></center>'
+				'Sergey finished Sonya in her mouth, on her lips dripping cum and she licked it and partially swallowed.
+				You stood in front of Sergei on his lap and licked all the sperm that could not swallow Sonya. 
+				You always had few sperm. Sonya giggled from such a perverse kind.
+				- Oh, you little slut, - She joked, smiling broadly.
+				Between the legs of Sergei, you have raised my eyes and looked at him.
+				- I`m your slut, - You whispered and smiled, Before returning to the cleaning member.
+				Once you have finished, up, We sat next to Sonya and your lips met. Sponges Sony broke into her mouth letting your language. 
+				And you are completely inserted language to, where a couple of minutes ago there was a lot of sperm.
+				You broke the kiss, but strongly pressed to her, and your sweet tongue slid down her cheek licking the remains of the seed.'	
+				act 'Escape': gt'shulgahome'
+			end
+		end
+	end	
+}
+!Bathroom, Sonia choice opening event:
+$vanna_sexev_sonya = {
+	vanna_sexev_sonya = RAND(0,100)
+	if vanna_sexev_sonya < 50: 
+		dynamic $vanna_sexev1_sonya
+	else
+		dynamic $vanna_sexev2_sonya
+	end	
+}
+!Bath Sonia Event 1:
+$vanna_sexev1_sonya = {
+	cls
+	minut += 5
+	sexev_sonya_day = daystart
+	sexev_sonya_count -= 1
+	sh_sonya_sexev +=1
+	horny += 15
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/bj'+rand(1,2)+'.jpg"></center>'
+	'You went to the bathroom and saw how Sonya sucks dick Sergei'
+	act 'Do not disturb': gt'shulgahome'
+}
+!Bathtub, Sonia Event 2:
+$vanna_sexev2_sonya = {
+	cls
+	minut += 5
+	sexev_sonya_day = daystart
+	sexev_sonya_count -= 1
+	sh_sonya_sexev +=1
+	horny += 5
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev2_1'+rand(1,2)+'.jpg"></center>'
+	'You opened the door to the bathroom and noticed Sonia. She did not see you, because it was occupied by the recalculation of money.'
+	'You decide to close the door and watch'
+	act 'Further': 
+		cls
+		minut += 5
+		horny += 15
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev2_2'+rand(1,2)+'.jpg"></center>'
+		'Sonya starts to undress, powder her nose and lipstick before a mirror.'
+		'You understand, Now that it will exit from the bath, you quickly move to the kitchen and start to listen.'
+		'Sonia came out and went into a small room.'
+		act 'Further': 
+			cls
+			minut += 5
+			horny += 15
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev2_3'+rand(1,2)+'.jpg"></center>'
+			'You ran to the room and opened the door just started watching.'
+			'Then, what you saw there was expected: Sonya was on her knees and took the dick in your mouth Sergey Borisovich'
+			'Sergei heard her say: -"Yes, here, good baby, Try deep, here, yes, very good, continue..."'
+			'-"Sergey Borisovich, I`m tired of sucking, fuck me doggy style on the bed, as the last whore on the planet!", a fucking smile says Sonia'
+			'After Sonya went hand, You have nothing to surprise she could not.'	
+			dynamic $masturb_gg
+			act 'Further': 
+				cls
+				minut += 5
+				horny += 15
+				gs'stat'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev2_4'+rand(1,2)+'.jpg"></center>'
+				'Sergei turned Sonya cancer and began rhythmically to fuck. Sony`s face was read fun, she liked sex more than anything else, and after a few minutes she began to cum like a machine gun, it was shaking, face blurred in various grimaces.'	
+				dynamic $masturb_gg
+					act 'Further': 
+					cls
+					minut += 5
+					horny += 15
+					gs'stat'
+					'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev2_5'+rand(1,2)+'.jpg"></center>'
+					'After playing with her holes, Sergey was at the peak of orgasm and decided to finish Sonya in her mouth.'	
+					dynamic $masturb_gg
+					'When it was over, what would you have not noticed, You quickly shut the door and went about his business.'
+					act 'Escape': gt'shulgahome'
+				end
+			end
+		end
+	end	
+}
+!Gossip with Sonia, If burned her sex a couple of times in this hut.
+$vanna_bazar_sonya = {
+	cls
+	ev_sonya_day = daystart
+	ev_sonya_count -= 1
+	sonya_bazar_day = daystart
+	sonya_bazar_count -= 1
+	sh_sonya_bazar +=1
+	minut += 5
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/b.jpg"></center>'
+	'Sonia Ivanko ordinary girl, but Sonia once inadvertently drunk on diskach club and fucked her in the mouth in a circle with Vitek Kotov buddies. After that, many girls avoided Sonia, and boys consider her a whore and stick on every corner with offers to have sex.'
+
+	sonya_textb_vanna = RAND(1,7)
+	if sonya_textb_vanna = 1:$sonya_textb_vanna = 'You are not a long time conversing on different topics.'
+	if sonya_textb_vanna = 2 and SchoolAtestat = 0:$sonya_textb_vanna	= 'You rasprashivat about school performance, Sonya says: -"If you find an approach to teacher, the evaluation will be positive without any effort and homework!"'
+	if sonya_textb_vanna = 2 and SchoolAtestat = 1:$sonya_textb_vanna	= 'You ask about the work, Sonya shrugs and says,: -"Nowadays, the work is bad, you know! Virtue-steeper, there help, here to help, so that money for the life of me missing"'
+	if sonya_textb_vanna = 3:$sonya_textb_vanna = 'You often ask whether it comes to Sergei, Sonia honest answers: -"Well, a couple of times a week I go, sometimes more often, sometimes less as the money needed, so suck, You do not like a fool, you know my methods. This Guys always without money, But adult uncle never hurt, plus fun getting."'
+	if sonya_textb_vanna = 4:$sonya_textb_vanna = 'Sonya tells of his adventures.'
+	if sonya_textb_vanna = 5:$sonya_textb_vanna = 'Sonia tells an interesting story.'
+	if sonya_textb_vanna = 6:$sonya_textb_vanna = 'You chat about, who both spent the day.'
+	if sonya_textb_vanna = 7:$sonya_textb_vanna = 'You Sonya different share news and gossip.'
+
+	'<br><<$sonya_textb_vanna>><br>'
+
+	if sonya_bazar_count = 0:
+		'Sorry <<$gop_name_gg>>, I have time to go, next time chat.'
+	else
+		act 'More chat': dynamic $vanna_bazar_sonya
+	end
+
+	if sh_sonya_bazar > 5 and mesec <=0:
+		act 'Offer to take a bath': dynamic $vanna_sonya_lesb
+	end
+	if sh_sonya_bazar >= 25 and serge_shulgin >= 50 and sonya_bazar_count >= 1 and vagina >=1:
+		act 'Suggest Sonia fuck with Sergey': dynamic $gg_sonya_serg_sex
+	end
+
+	act 'Escape': gt'shulgahome'
+}
+
+$vanna_ev_sonya = {
+	if soniaPS => 1 and week < 6 and hour >= 16 and hour <= 23 or vanna_evs_sonya <= 80 and soniaPS => 1 and week >= 6 and hour >= 10 and hour <= 23:
+		vanna_evs_sonya = RAND(0,100)
+		if vanna_evs_sonya <= 80 
+			dynamic $vanna_ev1_sonya
+		else
+			dynamic $vanna_ev2_sonya
+		end
+	end
+}
+!gg and Sonia take a bath
+$vanna_sonya_lesb = {
+	cls
+	minut += 5
+	lesbian += 1
+	girl += 1
+	hapri = 0
+	mop = 1
+	sweat = -3
+	if frost > 0:frost = 0
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev1_1.jpg"></center>'
+	'You are offering: -"Sonia come with a bath"'
+	'-"And let`s", fun meets Sonya'
+
+	act 'Further': 
+		cls
+		minut += 5
+		horny += 15
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev1_2'+rand(1,2)+'.jpg"></center>'
+		'Basking in the bath, not talking to you for a long time.'
+
+		act 'Further': 
+			cls
+			minut += 5
+			horny += 15
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev1_3'+rand(1,2)+'.jpg"></center>'
+			'Suddenly Sonya brings his lips to kiss you and your.'
+
+			act 'Further': 
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/ev1_4'+rand(1,3)+'.jpg"></center>'
+				'Going below, Sonya dobiraetsya clitoris and starts to fondle.'	
+				if horny >=70:
+					orgasm += 1
+					horny = 0
+					manna += 35
+					willpower +=20
+					'From skillful tongue Sony you a couple of minutes with a loud groan finished.'
+				end	
+				'-"Well <<$gop_name_gg>> You liked my tongue?", playfully asks Sonia'
+				'-"Yes, it was very nice, let you do the same."'
+				'-"As a next time, Now I have been waiting at home, gotta run".'
+				'Sonya smacking your lips starting to come.'
+
+				act 'Escape': gt'shulgahome'
+			end
+		end
+	end
+}
+!Sonia suggests marafet
+$vanna_ev1_sonya = {
+	cls
+	minut += 2
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/m.jpg"></center>'
+	'You went to the bathroom and saw Sonya, which suggests marafet.'
+
+	act 'Chat': dynamic $vanna_bazar_sonya
+	if sh_sonya_bazar > 5:
+		act 'Offer to take a bath': dynamic $vanna_sonya_lesb
+	end
+	if sh_sonya_bazar >= 25 and serge_shulgin >= 50:
+		act 'Suggest Sonia fuck with Sergey': dynamic $gg_sonya_serg_sex
+	end
+
+	act 'Escape': gt'shulgahome'
+}
+!Sonya is sitting on the toilet
+$vanna_ev2_sonya = {
+	cls
+	minut += 2
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/m.jpg"></center>'
+	'You went to the bathroom and saw Sonya, which sits on the toilet.'
+	'You do not give her troubled, apologizing go.'
+	act 'Escape': gt'shulgahome'
+}
+
+!BATH-------------------------------------------------
+$shvanna = {
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+	cls
+	minut += 1
+	gs'stat'
+	'<center><b><font color = maroon>Bathtub</font></b></center>'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna.jpg"></center>'
+	'Bathroom close and very unpretentious. Above the sink hanging <a href="exec:GT ''mirror'',''start''">mirror</a>.'
+
+	act 'Get out of the bath': gt'shulgahome'
+
+	act 'Wash the shower 15 min':
+		cls
+		dynamic $showerdin
+		minut += 15
+		horny = horny + 1
+		hapri = 0
+		mop = 1
+		sweat = -3
+		if frost > 0:frost = 0
+		gs'stat'
+
+		'<center><img src="images/pics/dush.jpg"></center>'
+		'You got into the shower and began to lather his body sponge. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
+
+		act 'Finish': dynamic $shvanna
+	end
+	if horny >= 50:
+		act 'Masturbate':
+			gt'selfplay'
+		end
+	end
+
+
+	if tampon > 0 and mesec > 0 and isprok = 0:
+		act 'Use a tampon (0:05)':
+			cla
+			*clr
+			tampon -= 1
+			isprok = 1
+			minut += 5
+			manna -= 5
+			'<center><img src="images/pics/wash3.jpg"></center>'
+			'You use a tampon.'
+
+			act 'Finish':dynamic $shvanna
+		end
+	end
+
+	if mop ! 1:
+		act 'Wash off cosmetics (0:15)':
+			cla
+			mop = 1
+			cumface = 0
+			minut += 15
+			'You washed off your makeup.'
+
+			act 'Finish':dynamic $shvanna
+		end
+	end
+
+	if cumfrot > 0:
+		act 'Scour semen from clothing':
+			cls
+			cumfrot = 0
+			minut = minut + 15
+			gs'stat'
+
+			'<center><img src="images/pic/frotsp.jpg"></center>'
+			'You rinse the semen stains from your clothes.'
+
+			act 'Finish': dynamic $shvanna
+		end
+	end
+
+	if body_write > 0 or face_write > 0:
+		act 'Wash writing off your body':
+			cla
+			body_write = 0
+			face_write = 0
+			minut = minut + 5
+			gs'stat'
+			
+			!'You need a picture'
+			'You wiped indecent inscriptions.'
+
+			act 'Finish':dynamic $shvanna
+		end
+	end
+
+	if klisma = 1 and klismaday ! daystart:
+		act 'Give yourself an enema (0:05)':
+			cla
+			*clr
+			minut += 5
+			klismaday = daystart
+			klismaday1= 1
+			'<center><img src="images/picV/klisma.jpg"></center>'
+			'You give yourself an enema and clean your intestines. Your ass is now ready for anal sex.'
+
+			act 'Finish':dynamic $shvanna
+		end
+	end
+
+	if analplug = 1 and analplugin = 1:
+		act 'Remove the butt plug (0:05)':
+			cla
+			*clr
+			minut += 5
+			analplugIN = 0
+
+			if anus < 30:anus += 1
+
+			'<center><img src="images/body/analplug.jpg"></center>'
+
+			'You bent over and took out the butt plug.' & !!0.2.6: Removed unneccessary var check
+
+			act 'Finish':dynamic $shvanna
+		end
+	elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
+		act 'Insert a butt plug (0:05)':
+			cla
+			*clr
+			plugday = daystart
+			minut += 5
+			analplugIN = 1
+
+			if anus < 10:anus = anus + 5
+			if anus >= 10 and anus < 20:anus += rand(1, 2)
+			if anus >= 20 and anus < 30:anus += rand(0, 1)
+
+			'<center><img src="images/body/analplug.jpg"></center>'
+
+			if butpluguse > 0:'You bent over and inserted the butt plug.'
+			if butpluguse = 0:butpluguse = 1 & '"If I don''t use it then why did I buy it!" you thought. You decided to take a closer look while thinking, "It is necessary to start developing my ass so I could have great adventures someday, you could even say a huge and thick adventures with crimson heads, uh, now I got carried away." You scratched your head. Then you directed it in your ass, it was a bit painful at first, but as soon as the widest part was plunged into the murky depths of your anus it became easier to push it all the way.'
+
+			act 'Leave':dynamic $shvanna
+		end
+	end
+
+	if pregtest > 0:
+		act 'Do a pregnancy test':
+			cla
+			pregtest -= 1
+
+			gs 'stat'
+
+			if preg = 1:
+				'The test showed the two strips. you are pregnant.'
+			else
+				'The test showed one band.'
+			end
+
+			act 'Further':dynamic $shvanna
+		end
+	end
+
+	if vibrator = 1 and vibratorIN = 1:
+		act 'Remove the vibrator (0:05)':
+			cla
+			*clr
+			minut += 5
+			vibratorIN = 0
+
+			if vagina < 30:vagina += 1
+
+			'<center><img src="images/etogame/vibrator.jpg"></center>'
+			'You bend over the sink and take the vibrator out of your pussy.'
+
+			act 'Finish':dynamic $shvanna
+		end
+	elseif vibrator = 1 and vibratorIN = 0:
+		act 'Insert the vibrator in your vagina (0:05)':
+			cla
+			*clr
+			minut += 5
+			vibratorIN = 1
+
+			if vagina < 30:vagina += 2
+
+			'<center><img src="images/etogame/vibrator.jpg"></center>'
+			'You bend over the sink and inserted the vibrator in your pussy.'
+
+			act 'Finish':dynamic $shvanna
+		end
+	end
+
+!Sonia opening event in the bathroom
+	ev_sonya = RAND(0,100)
+	if ev_sonya >= 90 and soniaPS => 2 and sh_sonya_sexev > 2 and sonya_bazar_count > 0 and ev_sonya_count > 0: dynamic $vanna_ev_sonya
+	if ev_sonya <= 5 and soniaPS => 2 and serge_shulgin>=20 and sexev_sonya_count > 0 and week < 6 and hour >= 16 and hour <= 23 or ev_sonya <= 5 and soniaPS => 2 and serge_shulgin>=20 and sexev_sonya_count > 0 and week >= 6 and hour >= 10 and hour <= 23: dynamic $vanna_sexev_sonya
+}
+!============================================================================================================!
+!KITCHEN--------------------------------------------------------------------------------------------------KITCHEN!
+!============================================================================================================!
+!Event in the kitchen with gopotoy:
+$gang_sex_ev1 = {
+	cls
+	minut += 2
+	gangsexroom_day = daystart
+	gangsexroom_count -= 1
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang1.jpg"></center>'
+	'When you come to the kitchen, There waiting for you three drunken boys. Seeing you, they were glad, and were about to be expanded on your desk, but you have to kind of resist.'
+
+	act 'Further':
+		cls
+		minut += 3
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang2.jpg"></center>'
+		'Vitek hold your hair, <<$shulga_name_rnd>> I am trying to cope with your hands.
+		-"Fuck, <<$gop_name_gg>> do not build ourselves out of hymen, Spreading Legs", said Dan.
+		He wanted to study the condition of your gap and you put his hand into her panties and began to explore your pussy.
+		Defenseless situation you a little excited, so she opened pussy, and from it flowed juice, and the ass ring also opened slightly in anticipation of a member.'
+
+		act 'Further':
+			cls
+			minut += 5
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang3.jpg"></center>'
+			'You squatted, but you still tried to resist.
+			- "<<$gop_name_gg>> Stop faces here we build, Attend to normal, not the first time the...", Dan said and ordered the boys be from different sides, and you suck all the good.'	
 
 			act 'Further':
 				cls
 				minut += 5
-				horny += 15
-				hapri = 0
-				swallow += 1
-				cumface +=1
 				gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/ev<<lern_imgset>>_5.jpg"></center>'
-				''
-				dynamic $gg_sex_orgasm		
-				act 'Escape': gt 'shulga_room'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang4.jpg"></center>'
+				'Yes, you do not suck against their mighty sausages, obsosyvat started with at the beginning of Vic, Once in your mouth cock began to grow rapidly and you`re barely able to swallow it. 
+				Suck it a little, Dan pulled you by the hair of his friend and you`re sucking the second term. Dan was more unfettered, therefore I wanted to push his friend to you on the eggs, and he began to peck. 
+				But you it was already no stranger to you safely, expertly took his dick the entire length in the mouth. Later in the game you joined Bob and everyone turns sucking dick.'	
+
+				act 'Further':
+					cls
+					minut += 10
+					gs'stat'
+					'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang5.jpg"></center>'
+					'Gradually, the guys started to undress and now your body is put on the table and you feel his forage cap, in you that-something breaks. Bob immersing dick in pussy began to fuck measured, the other guys you masturbate and do not forget to suck.
+					Vitek says: - "<<$shulga_name_rnd>>, Fall place for me, I want it in the ass!"'	
+
+					act 'Further':
+						cls
+						minut += 10
+						gs'stat'
+						'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang6.jpg"></center>'
+						'You throw on the floor and Vitek enters your ass.
+						- "There, she, narrowish!", says Victor
+						- "Yes, Che you drive, submerge normal member, here you see, and I said narrow", Dan chuckled komentiruet simultaneously thrusting his dick in your mouth.'	
+
+						act 'Further':
+							cls
+							minut += 10
+							gs'stat'
+							'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang7.jpg"></center>'
+							'<<$shulga_name_rnd>> speaks: - "You until it spiers, and I`ll masturbate, I do not want to wait until someone-it frees a place for me. Deng her well Waffles, We have three holes, and she, too, three. So let`s expand on the couch ok, all of it will be convenient".
+							Guys did not argue, as the arguments of Basil were undeniable and you dragged him into the room on the sofa.
+							You last twenty minutes continuously in three holes fucked. You were so good and you can easily take on the eggs whose-the member, not being afraid of what`s behind you fuck in two holes and your head from bumps all the time flies forward-ago.
+							The pussy and ass members climbed easily and not forced. You just went mad and enjoyed their members. 
+							The holes between the legs were so rastrahany, that easily takes members, especially ass. She had not closed, even if you try to squeeze the muscles ringlet.'	
+							if horny >=70:
+								orgasm += 1
+								horny = 0
+								'Having an orgasm, guys give you respite for a couple of minutes, but then begin to clatter furiously all your slots.'
+							end
+
+							act 'Further':
+								cls
+								minut += 10
+								gs'stat'
+								'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/gang8.jpg"></center>'
+								'Dan is already tired of it all, he proposes to end and builds all around you. Before your face three dick, that you drochat. Some of you are helping your mouth, and who-Fingering the hands, on the machine waiting for their portion of the seed. 
+								The first pours into your mouth his sperm Dan, You eagerly swallow it and then to have fires Vitek. Sperm are so many, that you hardly have time to swallow it. 
+								Following the ready <<$shulga_name_rnd>>, you do not always have time to catch all the cum, so it gets you in the face and even on tits.
+								- "Videsh how fucking fuck, and you show off!", says Dan.
+								You said nothing, cute smile.'
+								act 'Escape': dynamic $shkuh
+	
+							end
+						end
+					end
+				end
 			end
 		end
-	end	
+	end
 }
-!abstaining from sex
-$shulga_lern_sex_no = {
+!---------------!
+!-----Kitchen-----!
+!---------------!
+$shkuh = {
 	cls
-	minut += 2
-	shulga_lern_day = daystart
-	shulga_lern_count -= 1
+	minut += 1
 	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/no.jpg"></center>'
-	'-"Enough to touch me, I do not want right now, another time somewhere in the future somehow another time sometime later", you say, oblamyvaya Basil.'
-	act 'Escape': gt 'shulga_room'
-}
-!We do lessons with Vasyanya
-$shulga_lern = {
-	cls
-	if lernHome ! 0:
-		minut += 60
-		lern += RAND(1,6)
-		intel += RAND(1,2)
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/ev<<lern_imgset>>.jpg"></center>'
-		'You are within an hour engaged with Vasya and lessons learned.'	
-		act 'Another': 
-			lernHome = 0
-			dynamic $shulga_lern
-		end
-		act 'Breather': 
-			lernHome = 0
-			dynamic $shulga_bazar_day
-		end	
-	elseif lernHome = 0:
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/ev<<lern_imgset>>_1.jpg"></center>'
-		'Vasily stick to you and starts ubaltyvat sex'
+	'<center><b><font color = maroon>Kitchen</font></b></center>'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh.jpg"></center>'
+	rand_serg_buh=rand(1,100)
+	if rand_serg_buh < 10 and hour >= 18 and hour < 21:'In the kitchen, sitting at the table <<$serg_obr>> <a href="exec:gt ''Serge_kuh'',''kuh_buh''">Sergei</a> and drinking vodka.'
+	if rand_serg_buh >= 10 and hour >= 18 and hour < 21:'The kitchen prepares food <<$serg_obr>> <a href="exec:gt ''Serge_kuh''">Sergei</a>.'
 
-		if GorSlut >=3:
-			if vagina >=1: 
-				act 'Agree': dynamic $shulga_lern_sex_yes
-			end	
-			if dom >=5 or vagina = 0: 
-				act 'Refuse': dynamic $shulga_lern_sex_no	
-			end
-		elseif GorSlut <3:
-			act 'Refuse': dynamic $shulga_lern_sex_no
-			if vagina >=1:
-				act 'Agree': dynamic $shulga_lern_sex_yes
-			end
-		end	
-	end	
-}
-!--------------------------------------------------------------------
-!conversations with Vasyanya
-$shulga_bazar_day = {
-cls
-minut += 1
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
-'<<$shulga_name_rnd>> - often hangs with his pals Dan and Vityok, diligently yoke of a steep pepper.'
+	act 'Get out of the kitchen': gt'shulgahome'
+	act 'Look in the fridge': dynamic $holodil
 
-dynamic $vasya_shulgin_rep
-act 'Move away': gt 'shulga_room'			
-	act 'Talk':
+	act 'Drink a glass of water':
 		cls
-		minut += 10
-		bazar_day = daystart
-		bazar_count -= 1
-		if bazar_count > 0: vasya_shulgin +=1
-		gs'stat'
-					
-vasyan_textb_day = RAND(0,8)
-			if vasyan_textb_day = 0:$vasyan_textb_day = 'You are not a long time conversing on different topics'		
-			if vasyan_textb_day = 1:$vasyan_textb_day = 'You listen to both <<$shulga_name_rnd>> tells an interesting story'
-			if vasyan_textb_day = 2 and SchoolAtestat = 0:$vasyan_textb_day = 'You talk about the school'
-			if vasyan_textb_day = 2 and SchoolAtestat = 1:$vasyan_textb_day = 'You talk about life'
-			if vasyan_textb_day = 3:$vasyan_textb_day = '<<$shulga_name_rnd>> He tells how spent the day'
-			if vasyan_textb_day = 4:$vasyan_textb_day = '<<$shulga_name_rnd>> He tells a funny joke'
-			if vasyan_textb_day = 5:$vasyan_textb_day = 'He tells anecdote: 
-The entire Soviet Union laughed Vovochka. A Little Johnny raised, He became president! And you one laughs over the entire country!'
-			if vasyan_textb_day = 6:$vasyan_textb_day = 'He tells anecdote: 
-- Little Johnny, Why do you write so shallow?
-- To mistakes were not as noticeable, Pigweed Ivanna.'
-			if vasyan_textb_day = 7:$vasyan_textb_day = 'He tells anecdote: 
-What a drunken woman`s mind, is a sober man never will!!!'
-			if vasyan_textb_day = 8 and vasya_shulgin < 30:$vasyan_textb = 'You talk minutes 10 on various topics.'
-			if vasyan_textb_day = 8 and vasya_shulgin >=30 and webcamera = 1:$vasyan_textb_day = 'You talk on different topics.'
-			if vasyan_textb_day = 8 and vasya_shulgin >=30 and vasya_shulgin <50 and webcamera = 0:$vasyan_textb_day = '<<$shulga_name_rnd>> speaks: "Then there was a new topic, you can normally raise some money on the Internet. Pro webcam chats heard?"
--"No, but more interesting to tell", you say.
-Bob continues: -"Well you need a webcam and a computer. Regishsya on webcam site, and you can broadcast yourself to the camera via the Internet, and all kinds of suckers pay per view coin.
-And speak more openly show, so you can earn more dough.
--"Well, I do not know, not right to sell their bodies", you say.
-Bob parries: -"But why are you invent yourself, who then sell it? Total-then a couple of hours before the camera povertet ass and you can normally cut money, It`s not on the road by a pussy to stand trade."'
-			if vasyan_textb_day = 8 and vasya_shulgin >=50 and vasya_shulgin < 70:$vasyan_textb_day = '<<$shulga_name_rnd>> Asks: -"Remember I told you about the webcam chat, well, where you can earn loot fingering ass?"
--"Aha, I remember", you answer.
-<<$shulga_name_rnd>> continuing the conversation: - "I`m here not long ago bought a Webcam, that would be on Skype with boys bazaar, If you want you can take advantage of my noutom, I do not mind..."
--"Thank you, I think...", you say.'			
-			if vasyan_textb_day = 8 and vasya_shulgin >=100:$vasyan_textb_day = '<<$shulga_name_rnd>> Asks: -"Cho like, enjoyed webcam?, spit asshole already online chat?"
--"You what business?", you ask.
-<<$shulga_name_rnd>> continuing the conversation: - "If you that on weekends you can call me, the show will do together, zadroty pay more money if they see you as the spire online"
--"The idea is not bad, I think...", you say.'
-dynamic $vasya_shulgin_rep
-		if bazar_count <= 0:'<<$shulga_name_rnd>> said: - "<<$sveta_rnd_name>>, you`re tired your talk, leave me alone."'
-		if bazar_count > 0: '<<$vasyan_textb_day>>'	
-		act 'Further': dynamic $shulga_bazar_day
-	end
-	if shulga_lern_count > 0 and SchoolAtestat = 0:		
-		act 'Do homework': dynamic $shulga_lern
-	end	
-	if vasya_shulgin>=70 and alko >= 1 and vagina >=1 or vasya_shulgin>=70 and horny >= 30 and vagina >=1:
-		act 'Suggest fuck': 
-		if shgopsex_vasya_count = 0:
-			cla
-			'Bob says: -"<<$gop_name_gg>> Jam has me, let us call it a day, do not bother."'
-			act 'Escape': gt'shulga_room'
-		elseif shgopsex_vasya_count > 0:
-			$gopsex_name_npc = 'Vasya'
-			$gopsex_n_npc = 1
-			shgopsex_vasya_day = daystart
-			shgopsex_vasya_count -= 1
-			dynamic $shgopsex
+
+		if water >= 20:
+			'Water you no longer climbs.'
+		elseif water < 20:
+			water += 5
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/voda.jpg"></center>'
+			'You will be happy to drink a glass of water.'
 		end
-	end	
-end	
-}
-!---------------------------------------!
-!if allowed to sleep next, Then sleep:!
-!---------------------------------------!
-$sleep_vasya_bed = {
-	cla
-	vasya_shulgin += 1
-	son +=5
-	minut += 180
-	gs'stat'
-	'You lay down and slept for a few hours.'
-	act 'Up': gt 'shulga_room'
-}
-!--------------------!
-!refuse to sleep next!
-!--------------------!
-$sleep_vasya_otkaz = {
-	cla
-	minut += 2
-	vasya_shulgin -=1
-	gs'stat'
-	'What do you want <<$sveta_rnd_name>>?, not you see I`m sleeping?!'
-	'You are asking: -"<<$shulga_name_rnd>> if I could lie down next to you, get some sleep?"'
-	'<<$shulga_name_rnd>> responsible: -"<<$sveta_rnd_name>> Go get some sleep on a small couch or even home pussy."'
-	act 'Escape': gt 'shulga_room'
-}
-!---------------------!
-!allow to sleep next!
-!---------------------!
-$sleep_vasya_soglasie = {
-	cla
-	minut += 2
-	gs'stat'
-	'<<$shulga_name_rnd>>, rubbed his eyes, asks: -"<<$sveta_rnd_name>> that it is necessary?"'
-	'You are asking: -"Vaska can I sleep next to you?, on a small couch is not comfortable."'
-	'<<$shulga_name_rnd>> you could not refuse, and moved, giving half of the bed.'
-	act 'Take a nap': dynamic $sleep_vasya_bed
-		
-		if vasya_shulgin>=70:
-			act 'Suggest fuck': 
-			if shgopsex_vasya_count = 0:
-				cla
-				'Bob says: -"<<$gop_name_gg>> Jam has me, let us call it a day, do not bother."'
-				act 'Escape': gt'shulga_room'
-			elseif shgopsex_vasya_count > 0:
-				$gopsex_name_npc = 'Vasya'
-				$gopsex_n_npc = 1
-				shgopsex_vasya_day = daystart
-				shgopsex_vasya_count -= 1
-				dynamic $shgopsex
-			end
-		end		
-		
+
+		gs'stat'
+		act 'Further': dynamic $shkuh
 	end
+!Launch Event with gopotoy kitchen	
+	kuhsex_gang = RAND(0,100)
+	if kuhsex_gang <= 5 and GorSlut >=3 and gangsexroom_count > 0 and week < 6 and hour >= 0 and hour < 3: 
+		dynamic $gang_sex_ev1
+	end	
+	
 }
-!---------------------!
-!-----Vaska sleeps-----!
-!---------------------!
-$shulga_bazar_sleep = {
-cls
-gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya_sleep.jpg"></center>'
-	'<<$shulga_name_rnd>> fast asleep'
-act 'Escape': gt 'shulga_room'	
-act 'Wake up': 
-	if vasya_shulgin < 50: dynamic $sleep_vasya_otkaz
-	if vasya_shulgin >= 50: dynamic $sleep_vasya_soglasie
-end
+!===========!
+!FRIDGE!
+!-----------!
+
+!filling the refrigerator:
+!count-bottles of beer in a day
+if beer_day ! daystart: beer_count = 2
+!count-of glasses in a bottle of vodka
+if vodka_day ! daystart: vodka_count = 3
+!count-in soup plates in kostryule
+if sup_day ! daystart: sup_count = 2
+
+!open fridge:
+$holodil = {
+	cls	
+	minut += 1
+	gs'stat'
+	if beer_count = 2:
+		$r_beer = ' 2 beer bottles,'
+	elseif beer_count = 1:
+		$r_beer = ' 1 a bottle of beer,'
+	else
+		$r_beer = ''
+	end
+
+	if vodka_count = 3:
+		$r_vodka = ' full bottle of vodka,'
+	elseif vodka_count = 2:
+		$r_vodka = ' half-empty bottle of vodka,'
+	elseif vodka_count = 1:
+		$r_vodka = ' a nearly empty bottle of vodka,'
+	else
+		$r_vodka = ''
+	end
+
+	if sup_count >= 1:
+		$r_sup = ' a large pot of soup'
+	else
+		$r_sup = ''
+	end
+
+	if beer_count = 0 and vodka_count = 0 and sup_count = 0:$r_pusto = '<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/holodpusto.jpg"></center><br><font color = red>empty shelves.</font>'
+	if beer_count > 0 and vodka_count > 0 and sup_count > 0:$r_pusto = '<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/holod'+rand(1,3)+'.jpg"></center>'
+		'You open the fridge and see:<<$r_vodka>><<$r_beer>><<$r_sup>><<$r_pusto>>'	
+	!drink beer		
+	if beer_count > 0: 
+		act 'Drink beer':
+			cls
+			minut += 5
+			alko += 1
+			beer_day = daystart
+			beer_count -= 1
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/beer'+rand(1,3)+'.jpg"></center>'
+			'You drank a bottle of beer'
+
+			act 'Further': dynamic $holodil
+		end	
+	end
+	!drink vodka
+	if vodka_count > 0: 
+		act 'Drink vodka':
+			cls
+			minut += 1
+			alko +=2
+			vodka_day = daystart
+			vodka_count -= 1
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/vodka'+rand(1,2)+'.jpg"></center>'
+			'You drank a glass of vodka'
+			act 'Remove the bottle': dynamic $holodil
+
+			act 'More zhahnut': 
+				if vodka_count = 0: '<font color = red>No more vodka</font><center><img src="images/zsoft/pod_ezd/shulgahome/kuh/vodka0.jpg"></center>'
+				if vodka_count > 0:
+					minut += 1
+					alko +=2
+					vodka_day = daystart
+					vodka_count -= 1
+					gs'stat'
+					'You poured himself another glass and drained it in one gulp'
+				end
+			end
+		end
+	end
+	!Chava soup
+	if sup_count > 0:
+		act 'Eat a bowl of soup': 
+			cls
+			minut += 5
+			sup_day = daystart
+			sup_count -= 1
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/sup.jpg"></center>'
+			if energy >= 30:
+				fat = fat + 1
+				'You can no longer have.'
+			elseif energy >= 20 and energy < 30:
+				fat = fat + 3
+				energy = energy +5
+				health = health +5
+				manna = manna + 5
+
+				'You pushed him through the power of a bowl of soup.'
+			elseif energy < 20:
+				energy = energy +10
+				health = health + 10
+				manna = manna + 10
+				!fat = fat + 1
+
+				'You will be happy to eat a bowl of soup.'
+			end
+
+			act 'Further': dynamic $holodil
+		end	
+	end
+	
+	act 'Close the refrigerator': dynamic $shkuh
 }
 --- shulgahome ---------------------------------
 

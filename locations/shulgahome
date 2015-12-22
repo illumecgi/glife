@@ -215,7 +215,7 @@ shd = 0
 		'Have you heard any-strange sounds from the small room: <a href="exec: dynamic $shulga_home_momgg1">see</a>'
 	elseif shd = 2:
 		'Have you heard any-the sounds of a small room: <a href="exec: dynamic $shulga_home_momgg2">see</a>'	
-	else
+	elseif shd = 3:
 		'Have you heard any-the loud sucking sound from the small room: <a href="exec: dynamic $shulga_home_momggbang">see</a>'	
 	end
 

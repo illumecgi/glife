@@ -141,9 +141,6 @@
       <Location name="bordel"/>
       <Location name="bordelv"/>
       <Location name="bouling"/>
-      <Location name="house"/>
-      <Location name="housezal"/>
-      <Location name="hozspal"/>
       <Location name="kafesvid"/>
       <Location name="kamera"/>
       <Location name="kathouse0"/>
@@ -152,7 +149,6 @@
       <Location name="kazinosvid"/>
       <Location name="kino"/>
       <Location name="kinosvid"/>
-      <Location name="kitchen"/>
       <Location name="Kwlake1"/>
       <Location name="Kwlake2"/>
       <Location name="lezbsex"/>
@@ -171,16 +167,23 @@
       <Location name="sex"/>
       <Location name="sexdvanadva"/>
       <Location name="sexdvoe"/>
-      <Location name="spalnya"/>
       <Location name="svidboy"/>
-      <Location name="tanhouse"/>
-      <Location name="tanroom"/>
       <Location name="vecher"/>
       <Location name="vipclub"/>
       <Location name="Vnlake1"/>
       <Location name="Vnlake2"/>
       <Location name="WorkHosp"/>
       <Location name="worksalon"/>
+    </Folder>
+    <Folder name="Tanya">
+      <Location name="tanhouse"/>
+      <Location name="tanroom"/>
+      <Location name="hozspal"/>
+      <Location name="housezal"/>
+      <Location name="house"/>
+      <Location name="kitchen"/>
+      <Location name="spalnya"/>
+      <Location name="tanvanr"/>
     </Folder>
     <Folder name="Apartment">
       <Location name="bedr"/>

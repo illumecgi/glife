@@ -1,4 +1,11 @@
 # kitchen
+CLOSE ALL
+
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
 minut += 5
 gs 'stat'
 '<center><b>Kitchen</b></center>'
@@ -35,7 +42,6 @@ act 'Eat Meal (0:30)':
 	else
 		water += 20
 		'You gladly drink a mug of tea.'
-
 	end
 
 	act 'Get up from the table':gt 'kitchen'
@@ -44,9 +50,8 @@ end
 if tanwork = 1:
 	act 'Cook food (1:00)':
 		minut += 60
-		nikrand = rand(0, 5)
 
-		if week < 6 and hour >= 6 and hour <= 9 and nikrand = 0 and vnesh > 20 and niksexday ! daystart:
+		if week < 6 and hour >= 6 and hour <= 9 and rand(0, 5) = 0 and vnesh > 20 and niksexday ! daystart:
 			cla
 			niksexday = daystart
 			'Tanyas stepfather Nicholas is sitting at the table eating his breakfast.'
@@ -168,9 +173,8 @@ if tanwork = 1:
 				cla
 				*clr
 				SUB += 1
-				nikslutrand = rand(0, 1)
 
-				if nikslutrand = 0:
+				if rand(0, 1) = 0:
 					bj += 1
 					cumlip += 1
 					money += 500
@@ -374,9 +378,7 @@ if vitamin > 0:
 	end
 end
 
-housekitrand = rand(0, 10)
-
-if hour > 17 and hour < 20 and housekitrand > 8 and nikslut = 1 and niksexday ! daystart:
+if hour > 17 and hour < 20 and rand(0,10) > 8 and nikslut = 1 and niksexday ! daystart:
 	cla
 	*clr
 	SUB += 1

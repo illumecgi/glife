@@ -62,8 +62,10 @@ $d_albina_home_game = {
 					'Although you tried your best, Albina proved a worthy opponent. Laughing like the villain of a theater play, she slaps you on the ass with the palm of her hand, saying "Show me your ass, <<$name>>! You are my bitch now!"'
 
 					if rand(0, 1) = 0:
-					if tipdesrand = 0:dynamic $d_albina_vag_strapon
-					if tipdesrand = 1:dynamic $d_albina_anal_strapon
+						dynamic $d_albina_vag_strapon
+					else
+						dynamic $d_albina_anal_strapon
+					end
 				else
 
 					'Looking slightly disappointed, Albina hands you a strap-on. "On, Bey do not regret Chapaya."'

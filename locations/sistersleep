@@ -186,7 +186,7 @@ if $loc = 'bedrPar':
 					exit
 				end
 
-			elseif sisterLesbScene = 4:
+			elseif sisterLesbScene >= 4:
 				sisterLesb = 4
 				sisboytrioQW = 0
 

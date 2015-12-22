@@ -21,7 +21,7 @@ gs 'stat'
 '<center><img src="images/qwest/alter/sister/sleep0<<randompic>>.jpg"></center>'
 'On her bed, Anjas ass is drawing your attention.'
 
-if $loc ! 'bedrPar':
+if $loc = 'bedrPar':
 	if sisboyQW >= 8 and sisterLesb = 0 and horny >= 60:
 		act 'Touch':
 			cls

@@ -1,9 +1,14 @@
 # housezal
+CLOSE ALL
+
+$metka = $ARGS[0]
+$loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
+
 minut += 5
 gs 'stat'
-'<center><b>Hall</b></center>'
+'<center><b>Living Room</b></center>'
 '<center><img src="images/img/centr/housezal.jpg"></center>'
 
 act 'In the corridor':gt 'house'

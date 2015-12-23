@@ -202,19 +202,8 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 	end
 end
 
-if mop ! 1:
-	act 'Rinse cosmetics':
-		cla
-		mop = 1
-		minut = minut + 15
-		gs'stat'
-
-		'<center><img src="images/pic/facesp.jpg"></center>'
-		'You have washed off cosmetics.'
-
-		act 'Finish':gt $locM, $metkaM
-	end
-end
+dynamic $wearpan
+dynamic $basin
 
 if cumfrot > 0:
 	act 'Scour semen from clothing':

@@ -92,20 +92,6 @@ if vanr_hanger = 1: 'Next to the sink neatly folded your <a href="exec:dynamic $
 if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
 if stiralka > 0:'In the bathroom is a washing machine.'
 
-if tanga = 0 and clrbelo > 0:
-	act 'Wear Underwear':
-		cla
-		tanga = 1
-		gt 'vanr'
-	end
-else
-	act 'Remove Underwear':
-		cla
-		tanga = 0
-		gt 'vanr'
-		end
-end
-
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Use a tampon (0:05)':
 		cla
@@ -140,53 +126,12 @@ if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
 		'<center><img src="images/pics/wash5.jpg"></center>'
 		'You gave yourself a catlick, thus removing any traces of cum.'
 
-		act 'Finish':gt 'vanr'
+		act 'Finish':gt $CURLOC
 	end
 end
 
-if cumlip > 0 or cumface > 0:
-	act 'Clean your face from sperm (0:05)':
-		cla
-		*clr
-		mop = 1
-		cumlip = 0
-		cumface = 0
-		sweat -= 1
-		minut += 5
-		'<center><img src="images/etogame/facesp.jpg"></center>'
-		'You clean your face and got rid of any trace of cum.'
-
-		act 'Finish':gt 'vanr'
-	end
-end
-
-if body_write > 0 or face_write > 0:
-	act 'Wash writing off your body':
-		cla
-		body_write = 0
-		face_write = 0
-		minut = minut + 5
-		gs'stat'
-		
-		!'You need a picture'
-		'You wiped indecent inscriptions.'
-
-		act 'Finish':gt $curloc
-	end
-end
-
-if mop ! 1:
-	act 'Wash off cosmetics (0:15)':
-		cla
-		mop = 1
-		cumface = 0
-		minut += 15
-		'You washed off your makeup.'
-
-		act 'Finish':gt 'vanr'
-	end
-end
-!!
+dynamic $wearpan
+dynamic $basin
 
 if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':

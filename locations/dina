@@ -151,15 +151,6 @@ $gladbelo = {
 	act 'Leave':gt $curloc
 }
 
-$showerdin = {
-	cumpussy = 0
-	cumbelly = 0
-	cumass = 0
-	cumanus = 0
-	cumlip = 0
-	cumface = 0
-}
-
 !!WD: Kioks event replaced with new code from Przemar!Przemar:** KIOSK ** ver 02
 !!Przemar:IMAGE NEEDED 'Man punched you and say " Go away bitch your mouth full of sperm " at this rate you needed to wait 4 hours and paid 200 rubles'
 !!WD:"SUB >= 15" for act - Will need balancing / playtesting

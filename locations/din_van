@@ -1,0 +1,84 @@
+# din_van
+
+$showerdin = {
+	cumpussy = 0
+	cumbelly = 0
+	cumass = 0
+	cumanus = 0
+	cumlip = 0
+	cumface = 0
+}
+
+$pirManage = {
+	cls
+	cla
+    *nl
+    if pirsA > 0:
+        if pirsA = 1:
+            '<a href="exec:pirsA = 2 & dynamic $pirManage">Remove tongue barbell</a>.'
+		else
+            '<a href="exec:pirsA = 1 & dynamic $pirManage">Insert tongue barbell</a>.'
+        end
+    end
+    if pirsB > 0:
+        if pirsB = 1:
+            '<a href="exec:pirsB = 2 & dynamic $pirManage">Remove lip ring</a>.'
+		else
+            '<a href="exec:pirsB = 1 & dynamic $pirManage">Insert lip ring</a>.'
+        end
+    end
+    if pirsC > 0:
+        if pirsC = 1:
+            '<a href="exec:pirsC = 2 & dynamic $pirManage">Remove ear piercings</a>.'
+		else
+            '<a href="exec:pirsC = 1 & dynamic $pirManage">Insert ear piercings</a>.'
+        end
+    end
+    if pirsD > 0:
+        if pirsD = 1:
+            '<a href="exec:pirsD = 2 & dynamic $pirManage">Remove nose ring</a>.'
+		else
+            '<a href="exec:pirsD = 1 & dynamic $pirManage">Insert nose ring</a>.'
+        end
+    end
+    if pirsE > 0:
+        if pirsE = 1:
+            '<a href="exec:pirsE = 2 & dynamic $pirManage">Remove eyebrow stud</a>.'
+		else
+            '<a href="exec:pirsE = 1 & dynamic $pirManage">Insert eyebrow stud</a>.'
+        end
+    end
+    if pirsF > 0:
+        if pirsF = 1:
+            '<a href="exec:pirsF = 2 & dynamic $pirManage">Remove nipple piercings</a>.'
+		else
+            '<a href="exec:pirsF = 1 & dynamic $pirManage">Insert nipple piercings</a>.'
+        end
+    end
+    if pirsN > 0:
+        if pirsN = 1:
+            '<a href="exec:pirsN = 2 & dynamic $pirManage">Remove navel piercing</a>.'
+		else
+            '<a href="exec:pirsN = 1 & dynamic $pirManage">Insert navel piercing</a>.'
+        end
+    end
+    if pirsG > 0:
+        if pirsG = 1:
+            '<a href="exec:pirsG = 2 & dynamic $pirManage">Remove labia piercings</a>.'
+		else
+            '<a href="exec:pirsG = 1 & dynamic $pirManage">Insert labia piercings</a>.'
+        end
+    end
+    if pirsGL > 0:
+        if pirsGL = 1:
+            '<a href="exec:pirsGL = 2 & dynamic $pirManage">Remove clit piercing</a>.'
+		else
+            '<a href="exec:pirsGL = 1 & dynamic $pirManage">Insert clit piercing</a>.'
+        end
+    end
+    
+    act'<b>Back</b>':gt $curloc
+}
+
+--- din_van ---------------------------------
+

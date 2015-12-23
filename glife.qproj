@@ -39,6 +39,7 @@
       <Location name="starenie"/>
       <Location name="stat"/>
       <Location name="din_bad"/>
+      <Location name="din_van"/>
       <Location name="statBat"/>
       <Location name="statPRE"/>
       <Location name="time"/>

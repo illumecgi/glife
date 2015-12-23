@@ -132,15 +132,6 @@ if pirsA + pirsB + pirsC + pirsD + pirsE + pirsF + pirsN + pirsG + pirsGL > 0:'<
 if fillimplant = 1 and siliconeBag >= 1:'<a href="exec:cls & siliconeBag -= 1 & silicone += 10 & gt $curloc">Inject silicone into breast implants.</a>'
 if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $curloc">Drain silicone from breast implants.</a>'
 
-! WD: add Underwear change
-if tanga = 1:
-	act 'Remove Underwear':
-		cla
-		tanga = 0
-		gt $curloc
-	end
-end
-
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Use a tampon (0:05)':
 		cla
@@ -157,19 +148,8 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 	end
 end
 
-if mop ! 1:
-	act 'Wash off cosmetics (0:15)':
-		cla
-		mop = 1
-		cumface = 0
-		minut += 15
-		gs 'stat'
-		'<center><img src="images/etogame/facesp.jpg"></center>'
-		'You washed off your makeup.'
-
-		act 'Finish':gt $curloc
-	end
-end
+dynamic $wearpan
+dynamic $basin
 
 if cumfrot > 0:
 	act 'Wipe the cum off your clothes (0:10)':
@@ -179,37 +159,6 @@ if cumfrot > 0:
 		gs 'stat'
 		'<center><img src="images/etogame/frotsp.jpg"></center>'
 		'You remove traces of cum from your clothes.'
-
-		act 'Finish':gt $curloc
-	end
-end
-
-if cumlip > 0 or cumface > 0:
-	act 'Clean your face from sperm (0:05)':
-		cla
-		*clr
-		mop = 1
-		cumlip = 0
-		cumface = 0
-		sweat -= 1
-		minut += 5
-		'<center><img src="images/etogame/facesp.jpg"></center>'
-		'You clean your face and got rid of any trace of cum.'
-
-		act 'Finish':gt $curloc
-	end
-end
-
-if body_write > 0 or face_write > 0:
-	act 'Clean writing off your body':
-		cla
-		body_write = 0
-		face_write = 0
-		minut = minut + 5
-		gs'stat'
-		
-		!'You need a picture'
-		'You wiped indecent inscriptions.'
 
 		act 'Finish':gt $curloc
 	end

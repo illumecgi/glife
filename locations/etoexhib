@@ -1518,39 +1518,6 @@ if $ARGS[0] = 'pos41':
 		end
 	end
 
-	if cumlip > 0 or cumface > 0:
-		act 'Clean your face from sperm (0:05)':
-			cla
-			*clr
-			mop = 1
-			cumlip = 0
-			cumface = 0
-			sweat -= 1
-			minut += 5
-			'<center><img src="images/etogame/facesp.jpg"></center>'
-			'You clean your face and got rid of any trace of cum.'
-
-			act 'Finish':gt 'etoexhib', 'pos41'
-		end
-	end
-	!!
-
-	!!0.2.6	extension: Washing off cosmetics also removes cum from face
-	if mop ! 1:
-		act 'Wash off cosmetics (0:15)':
-			cla
-			mop = 1
-			cumface = 0
-			minut += 15
-			gs 'stat'
-			'<center><img src="images/etogame/facesp.jpg"></center>'
-			'You washed off your makeup.'
-
-			act 'Finish':gt 'etoexhib', 'pos41'
-		end
-	end
-	!!
-
 	if shampoo > 0:
 		act 'Take a shower (0:15)':
 			cla
@@ -1577,6 +1544,9 @@ if $ARGS[0] = 'pos41':
 		end
 	end
 
+	dynamic $wearpan
+	dynamic $basin
+
 	if leghair > 0 and stanok > 0 or lobok > 0 and stanok > 0:
 		act 'Shave their legs and crotch (0:30)':
 			cla
@@ -1602,7 +1572,7 @@ if $ARGS[0] = 'pos41':
 		end
 	end
 	
-	if pirsTongue + pirsLip + pirsEar + pirsNose + pirsEyebrow + pirsNipple + pirsNavel + pirsLabia + pirsClit ! 0:gs 'din_bad' & '<a href="exec:dynamic $pirManage">Manage Piercings</a>'
+	if pirsA + pirsB + pirsC + pirsD + pirsE + pirsF + pirsN + pirsG + pirsGL > 0:'<a href="exec:dynamic $pirManage">Manage Piercings</a>'
 
 	if fillimplant = 1 and siliconeBag >= 1:'<a href="exec:cls & siliconeBag -= 1 & silicone += 10 & gt $curloc">Inject silicone into breast implants.</a>'
 	if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $curloc">Drain silicone from breast implants.</a>'

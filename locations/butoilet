@@ -9,15 +9,7 @@ lcolor = rgb(106, 90, 205)
 '<center><img src="images/etogame/PublicToilet.jpg"></center>'
 ''
 
-if tanga = 1:
-	act 'Remove Underwear':
-		cla
-		tanga = 0
-		gt $curloc
-	end
-end
-
-act 'Off the toilet':gt 'burger', 'start'
+act 'Leave the toilet':gt 'burger', 'start'
 
 act 'Look in the mirror':
 	cla
@@ -58,22 +50,6 @@ if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
 	end
 end
 
-if cumlip > 0 or cumface > 0:
-	act 'Clean your face from sperm (0:05)':
-		cla
-		*clr
-		mop = 1
-		cumlip = 0
-		cumface = 0
-		sweat -= 1
-		minut += 5
-		'<center><img src="images/etogame/facesp.jpg"></center>'
-		'You clean your face and got rid of any trace of cum.'
-
-		act 'Finish':gt $curloc
-	end
-end
-
 if cumfrot > 0:
 	act 'Wipe the cum off your clothes (0:10)':
 		cla
@@ -102,6 +78,8 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 		act 'Finish':gt $curloc
 	end
 end
+
+dynamic $basin
 
 --- butoilet ---------------------------------
 

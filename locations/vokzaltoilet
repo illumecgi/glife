@@ -10,14 +10,6 @@ LColor = RGB(106,90,205)
 '<center><img src="images/pic/PublicToilet.jpg"></center>'
 ''
 
-if tanga = 1:
-	act 'Remove underwear':
-		cla
-		tanga = 0
-		gt $curloc
-	end
-end
-
 act 'Exit out of the closet':gt'vokzalholle'
 
 
@@ -50,46 +42,18 @@ if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
 	act 'Quick wash (0:15)':
 		cla
 		*clr
-
 		if clrbelo > 0 and tanga = 1:
-
 			clrbelo -= 1
-
 			dirtbelo += 1
-
 		elseif clrbelo <= 0 and tanga = 1:
-
 			tanga = 0
-
 			dirtbelo += 1
-
 		end
-
-
-
 		dynamic $showerdin
 		sweat -= 1
 		minut += 15
-
 		'<center><img src="images/pics/wash5.jpg"></center>'
 		'You gave yourself a catlick, thus removing any traces of cum.'
-
-		act 'Logout':gt $curloc
-	end
-end
-
-if cumlip > 0 or cumface > 0:
-	act 'Clean your face from sperm (0:05)':
-		cla
-		*clr
-		mop = 1
-		cumlip = 0
-		cumface = 0
-		sweat -= 1
-		minut += 5
-
-		'<center><img src="images/pic/facesp.jpg"></center>'
-		'You clean your face and got rid of any trace of cum.'
 
 		act 'Logout':gt $curloc
 	end
@@ -123,5 +87,8 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 		act 'Finish':gt $curloc
 	end
 end
+
+dynamic $basin
+
 --- vokzaltoilet ---------------------------------
 

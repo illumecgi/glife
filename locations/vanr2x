@@ -97,20 +97,6 @@ if vanr_hanger = 1: 'Next to the sink neatly folded your <a href="exec:dynamic $
 if mosolmaz > 0:'On a shelf is a tube of ointment protivomozolnoy, which will suffice for <<mosolmaz>> applications.'
 if stiralka > 0:'In the bathroom is a washing machine.'
 
-if tanga = 0 and clrbelo > 0:
-	act 'Wear underwear':
-		cla
-		tanga = 1
-		gt'vanr2x'
-	end
-else
-	act 'Remove underwear':
-		cla
-		tanga = 0
-		gt'vanr2x'
-	end
-end
-
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Change swab':
 
@@ -126,61 +112,32 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 	end
 end
 
-if cumpussy > 0 and clrbelo > 0 or cumbelly > 0 and clrbelo > 0 or cumass > 0 and clrbelo > 0 or cumanus > 0 and clrbelo > 0:
-	act 'Substitution 5 min':
+if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+	act 'Quick wash (0:15)':
 		cla
 		*clr
-		cumpussy = 0
-		cumbelly = 0
-		cumass = 0
-		cumlip = 0
-		cumface = 0
-		cumanus = 0
-		cumfrot = 0
-		sweat = sweat - 1
-		minut = minut + 5
-		clrbelo = clrbelo - 1
-		dirtbelo = dirtbelo + 1
 
+		if clrbelo > 0:
+			clrbelo -= 1
+			dirtbelo += 1
+		elseif tanga = 1:
+			tanga = 0
+			dirtbelo += 1
+		end
+
+		dynamic $showerdin
+		sweat -= 1
+		minut += 15
 		'<center><img src="images/pics/wash5.jpg"></center>'
-		'You carefully washed sperm in the bathroom.'
+		'You gave yourself a catlick, thus removing any traces of cum.'
 
-		act 'Logout':gt'vanr2x'
+		act 'Finish':gt $CURLOC
 	end
 end
 
-if cumlip > 0 or cumface > 0:
-	act 'Wash off with facial cum 5 min':
-		cla
-		*clr
-		mop = 1
-		cumlip = 0
-		cumface = 0
-		sweat = sweat - 1
-		minut = minut + 5
+dynamic $wearpan
+dynamic $basin
 
-		'<center><img src="images/pic/facesp.jpg"></center>'
-		'You carefully washed sperm from the face.'
-
-		act 'Logout':gt'vanr2x'
-	end
-end
-
-if mop ! 1:
-	act 'Rinse cosmetics':
-
-		cla
-		mop = 1
-		minut = minut + 15
-
-
-
-		'You have washed off cosmetics.'
-
-
-		act 'Logout':gt'vanr2x'
-	end
-end
 if klisma = 1 and klismaday ! day:
 	act 'Make yourself an enema 5 min':
 		cla
@@ -188,12 +145,8 @@ if klisma = 1 and klismaday ! day:
 		minut = minut + 5
 		klismaday = day
 		klismaday1 = 1
-
-
-
 		'<center><img src="images/picV/klisma.jpg"></center>'
 		'You set yourself an enema and clean the intestines, now your ass ready for anal sex.'
-
 
 		act 'Logout':gt $curloc
 	end
@@ -204,14 +157,8 @@ if vibrator = 1 and vibratorIN = 1:
 		cla
 		*clr
 		minut = minut + 5
-
-
-
-
 		vibratorIN = 0
 		if vagina < 30:vagina = vagina + 1
-
-
 		'<center><img src="images/pic/vibrator.jpg"></center>'
 		'You bent down and took out a vibrator from the vagina.'
 
@@ -241,17 +188,13 @@ if analplug = 1 and analplugin = 1:
 		minut = minut + 5
 		analplugIN = 0
 		if anus < 30:anus = anus + 1
-
 		'<center><img src="images/pic/analplug.jpg"></center>'
-
 		if butpluguse > 0:'You bent down and removed from the habitual movement itself anal plug.'
-
 
 		act 'Logout':gt $curloc
 	end
 elseif analplug = 1 and analplugin = 0 and klismaday1 = 1 and plugday ! daystart:
 	act 'Paste anal plug 5 min':
-
 		cla
 		*clr
 		plugday = daystart
@@ -266,7 +209,6 @@ elseif analplug = 1 and analplugin = 0 and klismaday1 = 1 and plugday ! daystart
 		if butpluguse > 0:'You tilt and habitual movement inserted itself anal plug.'
 		if butpluguse = 0:butpluguse = 1 & 'You tried to relax as much as possible, and the priest began to insert themselves cork, biting her lip from feeling, that your ass is about to burst you gently pushed into the thickest part of your ass and finally tube into place.'
 
-
 		act 'Logout':gt $curloc
 	end
 end
@@ -280,19 +222,15 @@ if husband > 0 and husbanday > 0 and husporday ! day and poroshok >= 2:
 		minut = minut + 60
 		husporday = day
 		manna -= 25
-
-
-
 		'<center><img src="images/pic/stir.jpg"></center>'
 		'You are an hour washes her husband`s smelly socks and prossannye and properdannye truselya.'
-
 
 		act 'Move away from the bathroom':gt'vanr2x'
 	end
 end
 
 if husband > 0 and husbanday > 0 and huspolday ! day:
-	act 'Get out of the apartment 1 h':
+	act 'Clean the apartment 1 h':
 		cla
 		*clr
 		husband += 5

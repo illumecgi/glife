@@ -1651,7 +1651,7 @@ if $ARGS[0] = 'pos49':
 
 	if shampoo = 0:'The_Curse, how to wash if you do not shampoo?'
 
-	if pirsTongue + pirsLip + pirsEar + pirsNose + pirsEyebrow + pirsNipple + pirsNavel + pirsLabia + pirsClit ! 0:gs 'stat' & '<a href="exec:dynamic $pirManage">Manage Piercings</a>'
+	if pirsA + pirsB + pirsC + pirsD + pirsE + pirsF + pirsN + pirsG + pirsGL > 0:'<a href="exec:dynamic $pirManage">Manage Piercings</a>'
 
 	if dirtbelo > 0 and poroshok > 0:
 		act 'Wash clothes':

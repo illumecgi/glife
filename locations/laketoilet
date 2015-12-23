@@ -1,5 +1,11 @@
 # laketoilet
 if $ARGS[0] = 'main':
+	CLOSE ALL
+
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
 	cla
 	*clr
 	LCtoiletiventrand = rand(1, 100)
@@ -12,20 +18,12 @@ if $ARGS[0] = 'main':
 			gt 'LCporn', 'toiletsex'
 		end
 
-		act 'Off the toilet':gt 'lakecafe', 'main'
+		act 'Leave the toilet':gt 'lakecafe', 'main'
 	else
 		clr
 		gs 'stat'
 		'<center><img src="images/LakeCafe/Toilet.jpg"></center>'
 		'Dirty and smelly toilet that seems to have never been cleaned'
-
-		if tanga = 1:
-			act 'Remove Underwear':
-				cla
-				tanga = 0
-				gt 'laketoilet', 'main'
-			end
-		end
 
 		act 'Look in the mirror':
 			cla
@@ -66,21 +64,6 @@ if $ARGS[0] = 'main':
 			end
 		end
 
-		if cumlip > 0 or cumface > 0:
-			act 'Clean your face from sperm (0:05)':
-				cla
-				*clr
-				cumlip = 0
-				cumface = 0
-				sweat -= 1
-				minut += 5
-				'<center><img src="images/etogame/facesp.jpg"></center>'
-				'You clean your face and got rid of any trace of cum.'
-
-				act 'Finish':gt 'laketoilet', 'main'
-			end
-		end
-
 		if cumfrot > 0:
 			act 'Wipe the cum off your clothes (0:10)':
 				cla
@@ -109,6 +92,8 @@ if $ARGS[0] = 'main':
 				act 'Finish':dynamic $kafetualet
 			end
 		end
+
+		dynamic $basin
 
 		act 'Off the toilet':gt 'lakecafe', 'main'
 	end

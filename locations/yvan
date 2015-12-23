@@ -1,8 +1,10 @@
 # yvan
-$metkaM = $ARGS[0]
-$locM = $CURLOC
+CLOSE ALL
+
 $metka = $ARGS[0]
 $loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
 clr
 gs 'stat'
 '<center><b><font color="maroon">House</font></b></center>'
@@ -52,20 +54,6 @@ end
 
 act 'Leave the room':minut += 1 & gt 'ymans'
 
-if tanga = 0:
-	act 'Wear Underwear':
-		cla
-		tanga = 1
-		gt $curloc
-	end
-elseif tanga = 1:
-	act 'Remove Underwear':
-		cla
-		tanga = 0
-		gt $curloc
-	end
-end
-
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Use a tampon (0:05)':
 		cla
@@ -107,33 +95,8 @@ if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0 and clrbelo > 0:
 	end
 end
 
-if cumlip > 0 or cumface > 0:
-	act 'Clean your face from sperm (0:05)':
-		cla
-		*clr
-		cumlip = 0
-		cumface = 0
-		sweat -= 1
-		minut += 5
-		'<center><img src="images/etogame/facesp.jpg"></center>'
-		'You cleaned your face and got rid of any traces of cum.'
-
-		act 'Finish':gt $curloc
-	end
-end
-
-if mop ! 1:
-	act 'Wash off cosmetics (0:15)':
-		cla
-		mop = 1
-		cumface = 0
-		minut += 15
-		'You washed off your makeup.'
-
-		act 'Finish':gt $curloc
-	end
-end
-!!
+dynamic $wearpan
+dynamic $basin
 
 if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':

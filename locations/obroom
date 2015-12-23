@@ -1,6 +1,9 @@
 # obroom
 if $ARGS[0] = 'start':
 	$sexloc = $CURLOC
+	CLOSE ALL
+	$metka = $ARGS[0]
+	$loc = $CURLOC
 	$metkaM = $ARGS[0]
 	$locM = $CURLOC
 	cla

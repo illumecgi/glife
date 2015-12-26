@@ -641,7 +641,7 @@ $brotherSexEnd = {
 			'Kolka catches his breath, then says, "Nice one <<$nickname>>, you''re well trained. Now don''t tell anyone!", and falls asleep.'
 			act 'Escape':gt $loc
 		else
-			'Kolka says, "Nice one <<$name>>, you`re well-tried, Now don''t tell anyone!", and leaves.'
+			'Kolka says, "Nice one <<$name>>, you`re well trained, Now don''t tell anyone!", and leaves.'
 		end
 	else
 		if $loc = 'sitrPar' and father_go = 1 and hour >= 18 and hour < 21:
@@ -659,7 +659,7 @@ $brotherSexEnd = {
 			'Kolka catches his breath, then says, "Thank you, <<$name>>, You saved me , now I can finally sleep.", and sleeps.'
 			act 'Escape':gt $loc
 		else
-			'Kolka says, "Thanks for everything, Sis. Well, I`m off.", leaves.'
+			'Kolka says, "Thanks for everything, Sis. Well, I`m off.", and leaves.'
 		end
 	end
 }
@@ -706,9 +706,9 @@ if $ARGS[0] = 'brother_go_away':
 	brother -= 10
 	dom += 1
 	'<center><img src="images/qwest/alter/ev2/brother/b (13).jpg"></center>'
-	'You hide behind your pussy dvyami hands and shouted to his brother:'
-	'- Kohl, what the fuck!? Quickly I get out of here, small fry!'
-	'Caught in the hot, Kolka slams the door and runs away. You end up quietly and begin to wash wipe.'
+	'You hide your pussy with your hands and shout to your brother:'
+	'"Kohl! What the fuck? Get the fuck out of here, small fry!'
+	'Caught red-handed, Kolka slams the door and runs away. You finish showering quietly and dry yourself.'
 	act 'Exit the bathroom':mirror_steam = hour & gt $locM, $metkaM
 end
 
@@ -743,10 +743,10 @@ if $ARGS[0] = 'brother_voyeur_ev1':
 	brother += 5
 	if brotherQW < 1: brotherQW = 1
 	'<center><img src="images/qwest/alter/ev2/brother/b (<<picrand>>).jpg"></center>'
-	'You continue to wash as if nothing had happened, glancing at his audience. Carefully mylite your body, paying particular attention to breasts and pussy, of which feel the growing excitement in the abdomen.'
+	'You continue to wash as if nothing had happened, glancing at your audience. Carefully washing your body, paying particular attention to your breasts and pussy, feeling the excitement grow in your abdomen.'
 	act 'Wipes':gt 'brother','brother_voyeur_end'
 	if horny >= 40:
-		act 'Play with Tits':gt 'brother','brother_voyeur_ev2'
+		act 'Play with your tits':gt 'brother','brother_voyeur_ev2'
 	end
 end
 
@@ -759,10 +759,10 @@ if $ARGS[0] = 'brother_voyeur_ev2':
 	picrand = RAND(1,7)
 	brother += 5
 	'<center><img src="images/qwest/alter/ev2/brother/c (<<picrand>>).jpg"></center>'
-	'You turn to face the door, Kolka giving a better view, and erotic crumples his sisechki <<tits>> size. Compressible fingers papilla, pouring from the shower the other hand your chest, while gazing at his brother. You cover your eyes for a moment and immersed in a fantasy, from what your neproizvalno breaks with light moan.'
-	act 'Wipes':gt 'brother','brother_voyeur_end'
+	'You turn to face the door, giving Kolka a better view, and erotically squeeze you size <<tits>> tits. Your fingers pinch your nipples, and you take the shower hose in your hand and pour water over your chest, while gazing at your brother. You close your eyes for a moment and immersed in fantasy, your heart flutters and you elicit a light moan.'
+	act 'Wash':gt 'brother','brother_voyeur_end'
 	if horny >= 90:
-		act 'To direct the water to the pussy':gt 'brother','brother_voyeur_ev3'
+		act 'Direct the water at your pussy':gt 'brother','brother_voyeur_ev3'
 	end
 end
 
@@ -837,7 +837,7 @@ $brother_anus_check = {
 		end
 	else
 		if brother_anus_mem < anpic:
-			'- "<<$name[2]>>, I think you have a point , or become wider?"'
+			'- "<<$nickname>>, I think you have a point , or become wider?"'
 			'- "What?"'
 			'- "I`m serious, less than it was before!"'
 			'- "Do not invent, Nothing there has changed , and it is not necessary to stare at him!"'
@@ -963,7 +963,7 @@ if $ARGS[0] = 'brother_voyeur_ev6':
 	'<center><img src="images/qwest/alter/ev2/brother/f (3).jpg"></center>'
 	'You sit down on the heels of booty and turning, To see at Kolka and notice, that he has a strong riser, which is very noticeable through light clothes, and his face red with excitement.'
 	if brotherQW = 4:
-		'- "<<$name[1]>>, but you can at-close show?"'
+		'- "<<$name>>, but you can at-close show?"'
 		'- "What show?"'
 		'- "Well, you knew..."'
 		'- "You do a little something? And so far gone..." - indignant answer you.'
@@ -973,7 +973,7 @@ if $ARGS[0] = 'brother_voyeur_ev6':
 		end
 		act'Show':gt 'brother','brother_voyeur_ev7'
 	elseif brotherQW > 4:
-		'- "<<$name[2]>>, and show by-closer?"'
+		'- "<<$nickname>>, and show by-closer?"'
 		'- "Again?"'
 		'- "Again" - he smiles - "Come on, Th you break?"'
 		if sub < 30: 
@@ -999,7 +999,7 @@ if $ARGS[0] = 'brother_voyeur_ev7':
 		'- "Everything? Satisfied?"'
 		'- "Wait-wait, give consideration!"'
 		'- "Everything, enough." - you remove your hands and get up.'
-		'- "Well, <<$name[1]>>!"'
+		'- "Well, <<$name>>!"'
 		'- "I said everything!" - strictly slice you and dress.'
 		act 'Move away':gt $CURLOC
 	elseif brotherQW > 4:

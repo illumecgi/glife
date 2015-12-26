@@ -484,7 +484,8 @@ if minut >= 60:
 		manna -= 10
 	end
 
-	if tanga = 0 and ski =0 or glamur = 0 and tanga = 0:mosolpred += 1
+	if tanga = 0 and ski =0 and glamur = 0 and $clothingworntype ! 'nude':mosolpred += 1
+	
 
 	if mosolpred >= 10:
 		mosol += 1
@@ -497,7 +498,10 @@ if minut >= 60:
 
 	if energy >= 25:energy -= 5 & fat += 1
 
-	if tanga = 1 and mosol > 0:mosol -= 1
+	if mosol > 0:
+		if tanga = 1 or $clothingworntype = 'nude':mosol -= 1
+	end
+	
 	if lipbalmstat > 0:lipbalmstat -= 1
 	if sickstage = 1:sick += 1 & sicktimer += 1
 	if sickstage = 1 and sicktimer >= 80:sicktimer = 0 & sickstage = 2

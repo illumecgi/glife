@@ -79,20 +79,20 @@ end
 
 ! earrings
 if pirsC = 1 and pirsCfather=0:
-pirsCfather=1
-'Your stepfather looks at your ears, noting your earrings: "I see you got your ears pierced? Your earrings are very cute."'
+	pirsCfather=1
+	'Your stepfather looks at your ears, noting your earrings: "I see you got your ears pierced? Your earrings are very cute."'
 end
 
 ! nose ring
 if pirsD = 1 and pirsDfather=0:
-pirsDfather=1
-'Your stepfather looks a bit shocked at your nose ring: "Jesus, <<$nickname>>, what is- why?! I understand putting a ring in a bull''s nose to lead them by, but a person - you? No reason for that!"'
+	pirsDfather=1
+	'Your stepfather looks a bit shocked at your nose ring: "Jesus, <<$nickname>>, what is- why?! I understand putting a ring in a bull''s nose to lead them by, but a person - you? No reason for that!"'
 end
 
 ! eyebrow piercing
 if pirsE = 1 and pirsEfather=0:
-pirsEfather=1
-'Your stepfather looks surprised when he sees your eyebrow piercing: "<<$nickname>>, why would you need that stuff on your eyebrow?" He shakes his head in exasperation. "Youth these days..."'
+	pirsEfather=1
+	'Your stepfather looks surprised when he sees your eyebrow piercing: "<<$nickname>>, why would you need that stuff on your eyebrow?" He shakes his head in exasperation. "Youth these days..."'
 end
 
 ! lip tattoo
@@ -113,14 +113,14 @@ end
 if $clothingworntype = 'nude' and pregTalkFather = 0 and pregtime > 90:
 	'Stepfather surprised looking at your belly: "<<$name>>, you flew that-whether? '
 	if hadsexwithfather=1:
-	'Not from me, I hope? '
+		'Not from me, I hope? '
 	end
 	pregTalkFather = 1
 	
 elseif $clothingworntype ! 'nude' and pregTalkFather = 0 and pregtime > 150:
 	'Stepfather surprised looking at your belly: "<<$name>>, you flew that-whether? '
 	if hadsexwithfather=1:
-	'Not from me, I hope? '
+		'Not from me, I hope? '
 	end
 	pregTalkFather = 1
 end
@@ -276,6 +276,7 @@ if motherKnowSpravka = 1 and hadsexwithfather=0:
 	'Stepfather angrily walked up to you, "Oh damn, do not have time to get off the pot, and already someone has twisted pussy! Hem you bring in who will bring?"'
 
 	act 'Move away':gt $loc, $metka
+	exit
 end
 
 if alko > 0 and alkoday ! daystart:
@@ -298,7 +299,8 @@ if TorgVokzalTimes>0 and YouCanGar=0:
 		else
 			'Stepfather shook his head "No <<$nickname>>. I have, and so there is little room."'
 		end
-		act '<B>Further</B>':gt $locM, $metkaM
+	act '<B>Further</B>':gt $locM, $metkaM
+	
 	end
 end
 
@@ -447,7 +449,7 @@ if $clothingworntype = 'nude':
 		end
 	end
 
-	else 'Stepfather with a smirk looking at you - "Nifiga! Blyadinka growing. Did you ever be ashamed,I-I`m still the man."'
+	'Stepfather with a smirk looking at you - "Nifiga! Blyadinka growing. Did you ever be ashamed,I-I`m still the man."'
 	if hadsexwithfather ! 1:
 		if father>=40:
 			'Then he turned away added - "A body so Nitsche, I vdulby... but go get dressed mother home"'
@@ -462,7 +464,7 @@ if $clothingworntype = 'nude':
 		end
 	else
 		if mother_go = 0:$mother_go_text = 'but go get dressed mother home'
-		'Continuing to look at you, he added, - "Beauty.. <<$mother_go_text>>"'
+			'Continuing to look at you, he added, - "Beauty.. <<$mother_go_text>>"'
 		if mother_go = 0:
 			act '<B>Move away</B>':gt 'bedrPar'
 			exit

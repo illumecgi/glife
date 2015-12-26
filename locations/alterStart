@@ -300,7 +300,7 @@ $npcSurName[26] = 'Tsarev'
 $npcText[26] = 'Your school math teacher. A rigorous and demanding. His daughter Lera studying with you in the classroom. His wife Larissa, works as a cleaner in the factory and train station.'
 grupNPC[26] = 0
 npcPol[26] = 1
-$npcGo[26] = '<a href="exec:numnpc = 26 & GT ''Snpc''"><<$npcName[25]>> <<$npcSurName[25]>></a>'
+$npcGo[26] = '<a href="exec:numnpc = 26 & GT ''Snpc''"><<$npcName[26]>> <<$npcSurName[26]>></a>'
 
 $din_alter_start_ev15 = {
 	cls

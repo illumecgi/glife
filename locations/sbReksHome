@@ -97,17 +97,17 @@ if $ARGS[0] = 'party_gost':
 	minut += 5
 	gs'stat'
 	if alko < 3:
-	'<center><b><font color = maroon>Living room</font></b></center>'
+		'<center><b><font color = maroon>Living room</font></b></center>'
 		'<center><img src="images/qwest/alter/sisterQW/ReksHome/reksParty_3.jpg"></center>'
 		'Large living room, here no one is here, all sit in a room and drink.Only one  <a href="exec:GT ''party_boy'',''party_boy''">guy</a> tinkering with music'
 	elseif alko >= 3:
 		'<center><img src="images/qwest/alter/sisterQW/ReksHome/reksParty_4_' + rand(1,8) + '.jpg"></center>'
 		'Party in full swing.In the corner <a href="exec:GT ''party_boy'',''party_boy''">guy</a> spinning wheels.So I want <a href="exec:dynamic $party_dance">spark off</a>.'
 		'<a href="exec:GT ''roma''">Roma</a> can not break away from <a href="exec:GT ''sister_party'',''sister_party''">Ani</a>, they have fun dancing.'
-     if Rex_Love =0:'<a href="exec:GT ''reks'',''party''">Rex</a> Have fun with <a href="exec:GT ''party_girls'',''party_girls''">girls</a> and with you.'
-     if Rex_Love =1:'You hang out in the surroundings <a href="exec:GT ''party_girls'',''party_girls''">girls</a> and <a href="exec:GT ''reks'',''party''">Rex</a>, he devours you with loving eyes.'
+		if Rex_Love =0:'<a href="exec:GT ''reks'',''party''">Rex</a> Have fun with <a href="exec:GT ''party_girls'',''party_girls''">girls</a> and with you.'
+		if Rex_Love =1:'You hang out in the surroundings <a href="exec:GT ''party_girls'',''party_girls''">girls</a> and <a href="exec:GT ''reks'',''party''">Rex</a>, he devours you with loving eyes.'
 		'<a href="exec:GT ''lena'',''lena''">Lena</a> and <a href="exec:GT ''ira'',''ira''">Ira</a> having fun in the company of drunks <a href="exec:GT ''party_boys'',''party_boys''">Male</a>.'
-		end
+	end
 	act 'To the room':gt'sbReksHome','party_home'
 	act 'In the kitchen':gt'sbReksHome','party_kuh'
 	act 'The toilet':gt'sbReksHome','party_toilet'
@@ -123,10 +123,9 @@ if $ARGS[0] = 'party_kuh':
 	'<center><b><font color = maroon>Kitchen</font></b></center>'
 	'<center><img src="images/qwest/alter/sisterQW/ReksHome/Kuh.jpg"></center>'
 	'Dirty spacious kitchen with lots of booze on the table. Can any drink  <a href="exec:GT ''sbReksHome'',''party_drink''">drink</a>'
-if party_dj =1 and dj_beer < 1:'You can request and <a href="exec:dynamic $party_dj">take</a> two bottles for DJ'
-if alko >= 3: 'Thumps the table <a href="exec:GT ''party_boys'',''party_boys''">guys</a> and offer <a href="exec:GT ''party_boys'',''drink''">drink</a> with them.'
+	if party_dj =1 and dj_beer < 1:'You can request and <a href="exec:dynamic $party_dj">take</a> two bottles for DJ'
+	if alko >= 3: 'Thumps the table <a href="exec:GT ''party_boys'',''party_boys''">guys</a> and offer <a href="exec:GT ''party_boys'',''drink''">drink</a> with them.'
 	act 'In the living room':gt'sbReksHome','party_gost'
-	end
 end
 
 !Toilet Rex

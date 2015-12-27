@@ -152,7 +152,29 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 		'<center><b><font color="maroon">mom</font></b></center>'
 		'<center><img src="images/qwest/alter/mother.jpg"></center>'
 
-		if schoolPredupr = 2:
+		if belgangQW=10000:
+			belgangQW=10001
+			schoolprogul = 0
+			'"Oh, my darling <<$name>>, where have you been. We have been so worried."'
+			'You go into the kitchen with your mom and spend sometime explaining what happened to you, many of the details are too difficult to talk about and you cry and hug.'
+			'Your mom tells you she will sort out everything with the school and makes you a bowl of chicken soup.'
+			if energy >= 30:
+				'You are too full to eat it.'
+			elseif energy >= 20 and energy < 30:
+			if water < 20:water += 20
+				fat += 3
+				energy += 10
+				'You have some of it, but can''t finish it.'
+			elseif energy < 20:
+			if water < 20:water += 20
+				energy += 20
+				'You gladly eat it all.'
+			end
+
+			act 'Leave':gt 'kuhrPar'
+
+			exit
+		elseif schoolPredupr = 2:
 			schoolPredupr = 3
 			SchoolBlock = 1
 			ParHomeBlock = 1

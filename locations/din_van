@@ -9,13 +9,60 @@ $showerdin = {
 	cumface = 0
 }
 
+$tampon = {
+
+if tampon > 0 and mesec > 0 and isprok = 0:
+	act 'Use a tampon (0:05)':
+		cla
+		*clr
+		tampon -= 1
+		isprok = 1
+		minut += 5
+		manna -= 5
+
+		'<center><img src="images/pics/wash3.jpg"></center>'
+		'You use a tampon.'
+
+		act 'Finish':gt $curloc
+	end
+end
+
+}
+
+$quickwash = {
+
+if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+	act 'Quick wash (0:15)':
+		cla
+		*clr
+
+		if clrbelo > 0:
+			clrbelo -= 1
+			dirtbelo += 1
+		elseif tanga = 1:
+			tanga = 0
+			dirtbelo += 1
+		end
+
+		dynamic $showerdin
+		sweat -= 1
+		minut += 15
+		'<center><img src="images/pics/wash5.jpg"></center>'
+		'You gave yourself a catlick, thus removing any traces of cum.'
+
+		act 'Finish':gt $locM, $metkaM
+	end
+end
+
+}
+
 $wearpan = {
 
 if tanga = 0 and clrbelo > 0:
 	act 'Wear Underwear':
 		cla
 		tanga = 1
-		gt $CURLOC
+		gt $locM, $metkaM
 	end
 end
 }
@@ -26,7 +73,7 @@ if tanga = 1:
 	act 'Remove Underwear':
 		cla
 		tanga = 0
-		gt $CURLOC
+		gt $locM, $metkaM
 	end
 end
 
@@ -42,7 +89,7 @@ if cumlip > 0 or cumface > 0:
 		'<center><img src="images/etogame/facesp.jpg"></center>'
 		'You clean your face and got rid of any trace of cum.'
 
-		act 'Finish':gt $CURLOC
+		act 'Finish':gt $locM, $metkaM
 	end
 end
 
@@ -57,7 +104,7 @@ if body_write > 0 or face_write > 0:
 		!'You need a picture'
 		'You wiped indecent inscriptions.'
 
-		act 'Finish':gt $curloc
+		act 'Finish':gt $locM, $metkaM
 	end
 end
 
@@ -69,7 +116,7 @@ if mop ! 1:
 		minut += 15
 		'You washed off your makeup.'
 
-		act 'Finish':gt $curloc
+		act 'Finish':gt $locM, $metkaM
 	end
 end
 }
@@ -142,7 +189,7 @@ $pirManage = {
         end
     end
     
-    act'<b>Back</b>':gt $curloc
+    act'<b>Back</b>':gt $locM, $metkaM
 }
 
 --- din_van ---------------------------------

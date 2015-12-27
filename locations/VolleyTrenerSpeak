@@ -284,7 +284,7 @@ if volleysostav = 0:
 	end
 	if volleyboll > 80:
 		'The coach looked at you with condemnation:'
-		'- <<$surname> you here again, why the f... er in General is not a place for candidates to the team.'
+		'- <<$surname>> you here again, why the f... er in General is not a place for candidates to the team.'
 		'- Michael N., and you never told, doing it on Fridays.'
 		'- <<$surname>>, you''re just a fool, when the team departure?'
 		'- On Saturday, - hurt you say.'

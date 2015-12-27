@@ -76,22 +76,8 @@ if canpar = 0:
 	end
 end
 
-if tampon > 0 and mesec > 0 and isprok = 0:
-	act 'Use a tampon (0:05)':
-		cla
-		*clr
-		tampon -= 1
-		isprok = 1
-		minut += 5
-		manna -= 5
-		gs 'stat'
-		'<center><img src="images/pics/wash3.jpg"></center>'
-		'You use a tampon.'
-
-		act 'Finish':gt $curloc
-	end
-end
-
+dynamic $tampon
+dynamic $quickwash
 dynamic $wearpan
 dynamic $basin
 
@@ -105,29 +91,6 @@ if cumfrot > 0:
 		'You remove traces of cum from your clothes.'
 
 		act 'Finish':gt $curloc
-	end
-end
-
-if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
-	act 'Quick wash (0:15)':
-		cla
-		*clr
-
-		if clrbelo > 0:
-			clrbelo -= 1
-			dirtbelo += 1
-		elseif tanga = 1:
-			tanga = 0
-			dirtbelo += 1
-		end
-
-		dynamic $showerdin
-		sweat -= 1
-		minut += 15
-		'<center><img src="images/pics/wash5.jpg"></center>'
-		'You gave yourself a catlick, thus removing any traces of cum.'
-
-		act 'Finish':gt $CURLOC
 	end
 end
 

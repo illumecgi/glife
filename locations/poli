@@ -141,87 +141,87 @@ if $ARGS[0] = 'start':
 				end
 
 			end
-		end
 
-		if TriperNapr > 0 and money >= 1500 and TriperUkolDay ! daystart:
-			act 'Get gonorrhea shot (1,500 rubles). You need <<TriperNapr>> more injections to complete the course.':
-				cls
-				money -= 1500
-				minut += 60
-				TriperUkolDay = daystart
-				TriperNapr -= 1
-				gs 'stat'
-				'You see the nurse and she gives you a painful injection in your ass.'
+			if TriperNapr > 0 and money >= 1500 and TriperUkolDay ! daystart:
+				act 'Get gonorrhea shot (1,500 rubles). You need <<TriperNapr>> more injections to complete the course.':
+					cls
+					money -= 1500
+					minut += 60
+					TriperUkolDay = daystart
+					TriperNapr -= 1
+					gs 'stat'
+					'You see the nurse and she gives you a painful injection in your ass.'
 
-				if TriperNapr = 0:Triper = 0 & Venera -= 1 & TriperOnce = 0 & 'You have completed the course.'
+					if TriperNapr = 0:Triper = 0 & Venera -= 1 & TriperOnce = 0 & 'You have completed the course.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if money >= 5000 and SifNapr > 0 and SifUkolDay ! daystart:
-			act 'Get syphilis shot (5,000 rubles). You need <<SifNapr>> more injections to complete the course.':
-				cls
-				money -= 5000
-				minut += 60
-				SifUkolDay = daystart
-				SifNapr -= 1
-				gs 'stat'
-				'You see the nurse and she gives you a painful injection in your ass.'
+			if money >= 5000 and SifNapr > 0 and SifUkolDay ! daystart:
+				act 'Get syphilis shot (5,000 rubles). You need <<SifNapr>> more injections to complete the course.':
+					cls
+					money -= 5000
+					minut += 60
+					SifUkolDay = daystart
+					SifNapr -= 1
+					gs 'stat'
+					'You see the nurse and she gives you a painful injection in your ass.'
 
-				if SifNapr = 0:Sifilis = 0 & 'You have completed the course.'
+					if SifNapr = 0:Sifilis = 0 & 'You have completed the course.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if GerpesOnce = 1 and money >= 150000 and week = 1 and day <= 10:
-			act 'Go to private clinic and completely cure your herpes (150,000 rubles)':
-				cla
-				money -= 150000
-				day += 3
-				week += 3
-				GerpesOnce = 0
-				Gerpes = 0
-				Venera -= 1
-				gs 'stat'
-				'There''s an ambulance waiting outside. It drives you to a cutting edge medical facility, where you spend 3 days being treated and pampered.'
-				'After a long recovery, you have been completely cured of your herpes.'
+			if GerpesOnce = 1 and money >= 150000 and week = 1 and day <= 10:
+				act 'Go to private clinic and completely cure your herpes (150,000 rubles)':
+					cla
+					money -= 150000
+					day += 3
+					week += 3
+					GerpesOnce = 0
+					Gerpes = 0
+					Venera -= 1
+					gs 'stat'
+					'There''s an ambulance waiting outside. It drives you to a cutting edge medical facility, where you spend 3 days being treated and pampered.'
+					'After a long recovery, you have been completely cured of your herpes.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if SifacOnce = 1 and money >= 350000 and week = 1 and day <= 10:
-			act 'Go to private clinic and completely cure your syphilis. (350,000 rubles)':
-				cla
-				money -= 350000
-				day += 3
-				week += 3
-				SifacOnce = 0
-				Sifilis = 0
-				Venera -= 1
-				gs 'stat'
-				'There''s an ambulance waiting outside. It drives you to a cutting edge medical facility, where you spend 3 days being treated and pampered.'
-				'After a long recovery, you have been completely cured of your syphilis.'
+			if SifacOnce = 1 and money >= 350000 and week = 1 and day <= 10:
+				act 'Go to private clinic and completely cure your syphilis. (350,000 rubles)':
+					cla
+					money -= 350000
+					day += 3
+					week += 3
+					SifacOnce = 0
+					Sifilis = 0
+					Venera -= 1
+					gs 'stat'
+					'There''s an ambulance waiting outside. It drives you to a cutting edge medical facility, where you spend 3 days being treated and pampered.'
+					'After a long recovery, you have been completely cured of your syphilis.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
-		end
 
-		if KandidozOnce = 1 and money >= 50000 and week = 1 and day <= 10:
-			act 'Go to private clinic and completely cure your thrush. (50,000 rubles)':
-				cla
-				money -= 50000
-				day += 3
-				week += 3
-				KandidozOnce = 0
-				Kandidoz = 0
-				gs 'stat'
-				'There''s an ambulance waiting outside. It drives you to a cutting edge medical facility, where you spend 3 days being treated and pampered.'
-				'After a long recovery, you have been completely cured of your thrush.'
+			if KandidozOnce = 1 and money >= 50000 and week = 1 and day <= 10:
+				act 'Go to private clinic and completely cure your thrush. (50,000 rubles)':
+					cla
+					money -= 50000
+					day += 3
+					week += 3
+					KandidozOnce = 0
+					Kandidoz = 0
+					gs 'stat'
+					'There''s an ambulance waiting outside. It drives you to a cutting edge medical facility, where you spend 3 days being treated and pampered.'
+					'After a long recovery, you have been completely cured of your thrush.'
 
-				act 'Leave':gt 'poli', 'start'
+					act 'Leave':gt 'poli', 'start'
+				end
 			end
 		end
 	end

@@ -50,6 +50,7 @@ if motherQW >= 2:
 	act 'Garden':
 		cla
 		cls
+		gaptekfirst = 1
 		gs 'stat'
 		'<center><b><font color="maroon">Pharmacy</font></b></center>'
 		'<center><img src="images/pic/aptek.jpg"></center>'

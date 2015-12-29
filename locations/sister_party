@@ -40,7 +40,7 @@ $sister_party_hand ={
 			you suck, Play suck and teasing lips and clitoris with each other, and approaches together to orgasm...'
 			''
 			act 'Come':dynamic $sister_party_cum
-		elseif i = 2:
+		else
 			i = rand(1,2)
 			if i = 1:'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_sister_7_1.gif"></center>'
 			if i = 2:'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_sister_7_2.jpg"></center>'
@@ -155,33 +155,46 @@ $sister_party_talk ={
 	'<center><b><font color = maroon>Anya</font></b></center>'
 	'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_sister_1.jpg"></center>'
 	if sister_party_talk < 3:
-		if sister_party_talkQW = 1:'-Very strange to see you back together with Roma.
-		-Count, we buried the hatchets, We sat on the cool head and talked reconciled.'
-		if sister_party_talkQW = 2:'-But you`re so much cursing, I would never forgive him this?
-		-I know, know, I got excited a little bit, but now we are all excellent.'
-		if sister_party_talkQW = 3:'-And so just continue to meet with him, after all, what happened?
-		-Well, little sister, Th you climb, but made â€‹â€‹mistakes, and he and I, but thank God everything behind.'
-		if sister_party_talkQW = 4:'-I can not believe it, my sister was so infirm, it does not like you.
-		-Well <<$name>>, best bird in the hand, especially now we have not quite simple relations...'
-		if sister_party_talkQW = 5:'-I mean you do not have a simple relationship, as well-ka here more in detail, otherwise I will not leave.
-		-Yes I know, do not lag behind, in the sense, now we have an open relationship.'
-		if sister_party_talkQW = 6:'-Open relationship? Type fuck with just anyone , and continue to meet with Roma?
-		-Eh <<$name>>, Can you pick up words, but something like this is what you said.'
-		if sister_party_talkQW = 7:'-I understand you are a fool, but as a novel on such nonsense I could not agree.
-		-Why just stupid? I know he loves me, and he knows that I love him, but while we are young fun.'
-		if sister_party_talkQW = 8:'-Even scary, Just think about your relationship, fuck with anyone...
-		-<<$name>>, I did not complete, fool. Why with anyone? Here`s a look here as nice guys. That such Rex...'
-		if sister_party_talkQW = 9 and Rex_Love = 1:'-You want me to kill you, you know that we are meeting with Rex.
-		-I know that you met, I joked, although there is no, You slept with my boyfriend, why I can not with your?'
-		if sister_party_talkQW = 9 and Rex_Love = 0:'-Here you are right, I myself would not mind Rex pokuvyrkatsya.
-		-Oh what a naughty girl, we`re all in the mother, Well then can lure him together?'
-		if sister_party_talkQW = 10 and Rex_Love = 1:'Hey, are you hinting at, I`m not sure, Rex also agree that, both agreed Roma.
-		-The main thing that you are not opposed <<$name>>, and the men are all the same, Rex think your stand before our fascination?'
-		if sister_party_talkQW = 10 and Rex_Love = 0:'-seduce Rex? Haha I have fucked with him, and you have no idea what he is in bed...
-		-Wow what you`re nimble, That`s why you always run around in his room, well then it will be easier to do it '     
-     
-	elseif sister_party_talk >= 3:
-		i = rand(1,2)
+		if sister_party_talkQW = 1:
+			'-Very strange to see you back together with Roma.'
+			'-Count, we buried the hatchets, We sat on the cool head and talked reconciled.'
+		elseif sister_party_talkQW = 2:
+			'-But you`re so much cursing, I would never forgive him this?'
+			'-I know, know, I got excited a little bit, but now we are all excellent.'
+		elseif sister_party_talkQW = 3:
+			'-And so just continue to meet with him, after all, what happened?'
+			'-Well, little sister, Th you climb, but made â€‹â€‹mistakes, and he and I, but thank God everything behind.'
+		elseif sister_party_talkQW = 4:
+			'-I can not believe it, my sister was so infirm, it does not like you.'
+			'-Well <<$name>>, best bird in the hand, especially now we have not quite simple relations...'
+		elseif sister_party_talkQW = 5:
+			'-I mean you do not have a simple relationship, as well-ka here more in detail, otherwise I will not leave.'
+			'-Yes I know, do not lag behind, in the sense, now we have an open relationship.'
+		elseif sister_party_talkQW = 6:
+			'-Open relationship? Type fuck with just anyone , and continue to meet with Roma?'
+			'-Eh <<$name>>, Can you pick up words, but something like this is what you said.'
+		elseif sister_party_talkQW = 7:
+			'-I understand you are a fool, but as a novel on such nonsense I could not agree.'
+			'-Why just stupid? I know he loves me, and he knows that I love him, but while we are young fun.'
+		elseif sister_party_talkQW = 8:
+			'-Even scary, Just think about your relationship, fuck with anyone...'
+			'-<<$name>>, I did not complete, fool. Why with anyone? Here`s a look here as nice guys. That such Rex...'
+		elseif sister_party_talkQW = 9 and Rex_Love = 1:
+			'-You want me to kill you, you know that we are meeting with Rex.'
+			'-I know that you met, I joked, although there is no, You slept with my boyfriend, why I can not with your?'
+		elseif sister_party_talkQW = 9 and Rex_Love = 0:
+			'-Here you are right, I myself would not mind Rex pokuvyrkatsya.'
+			'-Oh what a naughty girl, we`re all in the mother, Well then can lure him together?'
+		elseif sister_party_talkQW = 10 and Rex_Love = 1:
+			'Hey, are you hinting at, I`m not sure, Rex also agree that, both agreed Roma.'
+			'-The main thing that you are not opposed <<$name>>, and the men are all the same, Rex think your stand before our fascination?'
+		elseif sister_party_talkQW = 10 and Rex_Love = 0:
+			'-seduce Rex? Haha I have fucked with him, and you have no idea what he is in bed...'
+			'-Wow what you`re nimble, That`s why you always run around in his room, well then it will be easier to do it '     
+		end
+		
+	else
+		i = rand(1,9)
 		if i = 1:'-<<$name>>, you still do not have a Man? Remember: Run the men - a holy cause.'
 		if i = 2:'Sometimes I just breaks, What is more important: wallet size or penis. What do you think, <<$name>>?'
 		if i = 3:'If you have a reputation in the town whore, Current guys just will not let you longer to parties.'

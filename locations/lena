@@ -3,6 +3,7 @@ if $ARGS[0] = 'lena':
 	cls
 	minut += 5
 	gs'stat'
+	gs'ira'
 	'<center><b><font color = maroon>Lena</font></b></center>'
 	if $metkaM = 'party_gost':
 		'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_iralena_1_' + rand(1,5) + '.jpg"></center>'

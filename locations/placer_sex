@@ -1186,8 +1186,6 @@ $din_sleep = {
 	gs'stat'
 
 	if son > 23 and dosip = 0:
-		nude = 0
-		tanga = 1
 		hour = 8
 		minut = 0
 		gs'stat'

@@ -8,9 +8,9 @@ dick = rand (15,18)
 if frost > 0: frost =0
 
 $din_room_rape_end = {
-*clr & cla
-'<center><img src="images/qwest/alter/parc_ev/placer_sex124.jpg"></center>'
-'You woke up in the car completely naked and smeared in sperm. After trying it even as it collected, in the absence of what you have been collecting wipe her mouth. But you did not work. His head throbbed only one thought: "where I was being taken?". You cried and then the car stopped and the door opened the trunk. There was a <<$bname>>, who said,: "shut up bitch", - You dragged out of the car and constantly looking somewhere dragged. "Careful I do not izmazh, you can not see it all in Koncha", - said <<$bname>>, his accomplice.'
+	*clr & cla
+	'<center><img src="images/qwest/alter/parc_ev/placer_sex124.jpg"></center>'
+	'You woke up in the car completely naked and smeared in sperm. After trying it even as it collected, in the absence of what you have been collecting wipe her mouth. But you did not work. His head throbbed only one thought: "where I was being taken?". You cried and then the car stopped and the door opened the trunk. There was a <<$bname>>, who said,: "shut up bitch", - You dragged out of the car and constantly looking somewhere dragged. "Careful I do not izmazh, you can not see it all in Koncha", - said <<$bname>>, his accomplice.'
 	Act 'Further':
 		*clr & cla
 		if month=12 or month=1 or month=2:			
@@ -26,7 +26,6 @@ $din_room_rape_end = {
 		Act 'Get dressed': 
 			*clr & cla
 			cumfrot += 1
-			nude = 0 & tanga = 1
 			gs'stat'
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex128.jpg"></center>'
 			'Ignoring that semen stain the clothes you hurriedly pulled her over. I am praying to anyone you do not recognize.'
@@ -36,170 +35,171 @@ $din_room_rape_end = {
 }
 
 $din_room_rape = {
-if rand (1,20)=5:
-	*clr & cla
-	'<center><img src="images/qwest/alter/parc_ev/placer_sex102.gif"></center>'
-	'You were about to leave when suddenly, <<$bname>> I grabbed you by the hair, and evil whisper: "where do you think bitch ass shook and then washed off", - You often heart beat, and from fear knees buckled. Only that he was so sweet and now this anger. A <<$bname>> raising his voice cried: "Boys rock the boat here bitch, it is necessary to teach". As if only this and waited for the room burst even as the boys. Not paying attention to your cries, They threw you on the bed and began to tear off your clothes. '
-	Act 'Shout':
+	if rand (1,20)=5:
 		*clr & cla
-		nude = 1 & tanga = 0
-		gs'stat'
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex103.jpg"></center>'
-		'You tore off her clothes rapists unbuttoned his pants and pulled out, It has full standing, members. One of the guys tried to shove his penis into your mouth with words: "Just try to bite to kill a bitch", but you impacted his lips and tried to turn away, until someone from the waiting their turn is not tired. One grabbed your head, and the other held his nose. So you have nothing to breathe was. And you reflexively opened his mouth, who immediately turned plugged member.'
-		Act 'Further':
+		'<center><img src="images/qwest/alter/parc_ev/placer_sex102.gif"></center>'
+		'You were about to leave when suddenly, <<$bname>> I grabbed you by the hair, and evil whisper: "where do you think bitch ass shook and then washed off", - You often heart beat, and from fear knees buckled. Only that he was so sweet and now this anger. A <<$bname>> raising his voice cried: "Boys rock the boat here bitch, it is necessary to teach". As if only this and waited for the room burst even as the boys. Not paying attention to your cries, They threw you on the bed and began to tear off your clothes. '
+		Act 'Shout':
 			*clr & cla
-			'<center><img src="images/qwest/alter/parc_ev/placer_sex104.gif"></center>'
-			'Pulling you on the floor and having fastened the handcuffs to the headboard, rapists are located around you, the recently hollowed your mouth crawled from the bottom and lifting you to put a member of the pussy. Removing his hands , he shouted with pleasure when you do not keep your weight collapsed on him, thrust his cock a. Have you noticed the pain and humiliation, as the scream you do not give another member in your mouth. Rapists and tweaked grabs your tits, beaten on the feet, in the face. By deploying your head a hundred to one member of it to another, fucking your mouth. "cool bitch", "suck whore", "Today, you`ll understand what a real fuck", - It swept all sides. '
+			gs'stat'
+			'<center><img src="images/qwest/alter/parc_ev/placer_sex103.jpg"></center>'
+			'You tore off her clothes rapists unbuttoned his pants and pulled out, It has full standing, members. One of the guys tried to shove his penis into your mouth with words: "Just try to bite to kill a bitch", but you impacted his lips and tried to turn away, until someone from the waiting their turn is not tired. One grabbed your head, and the other held his nose. So you have nothing to breathe was. And you reflexively opened his mouth, who immediately turned plugged member.'
 			Act 'Further':
 				*clr & cla
-				'<center><img src="images/qwest/alter/parc_ev/placer_sex105.jpg"></center>'
-				'Dragging you back to bed, I broke into your pussy dick, next rapist. You cried out in pain and humiliation. But you immediately gagged hand, you are bitten. "That bitch bit me", - wail bitten hand rubs. And I slapped you across the face so that your head almost came off.'
+				'<center><img src="images/qwest/alter/parc_ev/placer_sex104.gif"></center>'
+				'Pulling you on the floor and having fastened the handcuffs to the headboard, rapists are located around you, the recently hollowed your mouth crawled from the bottom and lifting you to put a member of the pussy. Removing his hands , he shouted with pleasure when you do not keep your weight collapsed on him, thrust his cock a. Have you noticed the pain and humiliation, as the scream you do not give another member in your mouth. Rapists and tweaked grabs your tits, beaten on the feet, in the face. By deploying your head a hundred to one member of it to another, fucking your mouth. "cool bitch", "suck whore", "Today, you`ll understand what a real fuck", - It swept all sides. '
 				Act 'Further':
 					*clr & cla
-					'<center><img src="images/qwest/alter/parc_ev/placer_sex106.jpg"></center>'
-					if analplugin = 1: analplugin = 0 & '"See that this shlushi ass", - With these words, <<$bname>> analnyyu pulled the cork out of your ass.'
-					'"So you hare", - With these words, <<$bname>>, I pushed trahaeschego your pussy Man. And you have to attach between the legs of said: "It is time to try her ass",- but it is not rational to use a resource, Not all holes are occupied. And you began to shove dick in the ass. You reflexively clenched sphincter. What once we got a resounding slap in the face. "Relax bread bitch", - Realizing that resistance is useless and you are relaxed in her ass began to penetrate Member. Make you cry once. A feeling that you in the ass drove a red-hot rod.'
+					'<center><img src="images/qwest/alter/parc_ev/placer_sex105.jpg"></center>'
+					'Dragging you back to bed, I broke into your pussy dick, next rapist. You cried out in pain and humiliation. But you immediately gagged hand, you are bitten. "That bitch bit me", - wail bitten hand rubs. And I slapped you across the face so that your head almost came off.'
 					Act 'Further':
 						*clr & cla
-						'<center><img src="images/qwest/alter/parc_ev/placer_sex107.jpg"></center>'
-						'Your mouth took another Member. And the guy zapihnuvshy it there, He began furiously fuck in the mouth. Vdalblivanie little dick you right in the throat. "Yeah, Whore take a direct throat", - moaning man. And you barely breathing felt his dick slide in your throat.'
-						if SUB < 10: 
-							Act 'Bite':
+						'<center><img src="images/qwest/alter/parc_ev/placer_sex106.jpg"></center>'
+						if analplugin = 1: analplugin = 0 & '"See that this shlushi ass", - With these words, <<$bname>> analnyyu pulled the cork out of your ass.'
+						'"So you hare", - With these words, <<$bname>>, I pushed trahaeschego your pussy Man. And you have to attach between the legs of said: "It is time to try her ass",- but it is not rational to use a resource, Not all holes are occupied. And you began to shove dick in the ass. You reflexively clenched sphincter. What once we got a resounding slap in the face. "Relax bread bitch", - Realizing that resistance is useless and you are relaxed in her ass began to penetrate Member. Make you cry once. A feeling that you in the ass drove a red-hot rod.'
+						Act 'Further':
 							*clr & cla
-							'<center><img src="images/qwest/alter/parc_ev/placer_sex108.jpg"></center>'
-							'To suffer such humiliation was higher than our forces, and you angrily bit their dick in your mouth. He yelled as if you were bitten off him his dignity, and not a little bit their:"AAAAA, This litter bite". You just grabbed a lot of hands. And you showered blows, in the face, the pope, in general, anywhere, You shook with pain. One of the monsters took a rope and tied you. "Once again you show your teeth trash, kill!!!", - you are afraid in spite of the evil guys whispered that will docile. "Well, it seems she realized the boys, but you still need to be punished", - said <<$bname>>.'
-								Act 'Further':
-									cumanus += 1
-									cumpussy += 1
-									gs'stat'
-									*clr & cla
-									'<center><img src="images/qwest/alter/parc_ev/placer_sex109.jpg"></center>'
-									'And you began to take just two members. Even forgetting about the resistance, you lie and wait for when these things will end. "You thought it all?", - With these words, <<$bname>>  legs apart sat on your face, you turned away but tried to hurt someone squeezed your breasts. And you cursing,  I had to lick ass hanging right above you. "Yes, a good bitch, lick me, like unruly bitches, so nice to make them obedient", - Tears poured your face, but you are afraid of pain caressing his hairy ass crazed rapist permissiveness. It looks like a picture of your submission, I liked not just hang over your face guy. The double salvo of sperm in the ass and pussy and has an orgasm moan males, was proof of that.'
+							'<center><img src="images/qwest/alter/parc_ev/placer_sex107.jpg"></center>'
+							'Your mouth took another Member. And the guy zapihnuvshy it there, He began furiously fuck in the mouth. Vdalblivanie little dick you right in the throat. "Yeah, Whore take a direct throat", - moaning man. And you barely breathing felt his dick slide in your throat.'
+							if SUB < 10: 
+								Act 'Bite':
+								*clr & cla
+								'<center><img src="images/qwest/alter/parc_ev/placer_sex108.jpg"></center>'
+								'To suffer such humiliation was higher than our forces, and you angrily bit their dick in your mouth. He yelled as if you were bitten off him his dignity, and not a little bit their:"AAAAA, This litter bite". You just grabbed a lot of hands. And you showered blows, in the face, the pope, in general, anywhere, You shook with pain. One of the monsters took a rope and tied you. "Once again you show your teeth trash, kill!!!", - you are afraid in spite of the evil guys whispered that will docile. "Well, it seems she realized the boys, but you still need to be punished", - said <<$bname>>.'
 									Act 'Further':
-										cumface += 1
+										cumanus += 1
+										cumpussy += 1
 										gs'stat'
 										*clr & cla
-										'<center><img src="images/qwest/alter/parc_ev/placer_sex110.jpg"></center>'
-										'Your tongue of the pope seems also had its effect and <<$bname>>, uterine growling began to pour your face, hair sperm. His orgasm was so strong that even the shots you flew and fell on the floor. "Oh, a disorder, stained floor, but because we have a great sosalka", - With these words, you pulled off the floor and burying in the shed sperm made â€‹â€‹you lick it. "A good whore, should not man`s not a drop of nectar to skip past him ", - izgalyayas said <<$bname>>, and the rest together neighing.'
+										'<center><img src="images/qwest/alter/parc_ev/placer_sex109.jpg"></center>'
+										'And you began to take just two members. Even forgetting about the resistance, you lie and wait for when these things will end. "You thought it all?", - With these words, <<$bname>>  legs apart sat on your face, you turned away but tried to hurt someone squeezed your breasts. And you cursing,  I had to lick ass hanging right above you. "Yes, a good bitch, lick me, like unruly bitches, so nice to make them obedient", - Tears poured your face, but you are afraid of pain caressing his hairy ass crazed rapist permissiveness. It looks like a picture of your submission, I liked not just hang over your face guy. The double salvo of sperm in the ass and pussy and has an orgasm moan males, was proof of that.'
 										Act 'Further':
-											minut += 60
-											manna = 0
-											horny = 0
-											willpower = willpower/2
-											vagina += 2
-											bj += 4
-											swallow+= 1
-											throat+= 2
-											facial+=3
-											sex+=3
-											anal+=2
-											guy+=5
-											anus+=2
-											cumbelly += 1
-											cumass += 1
-											cumlip += 1
-											rape += 1
-											vgape = 3
-											agape = 3
+											cumface += 1
 											gs'stat'
 											*clr & cla
-											'<center><img src="images/qwest/alter/parc_ev/placer_sex111.jpg"></center>'
-											'It appears after you lick the floor, rapists have extinguished the ardor. They plugged your mouth a rag. Threw you on the bed , and those who did not finish in turn came up and masturbate ends on your face. But you have nothing to feel, hidden from all that is happening somewhere inside, cut off from all this horror.'
-											Act'Recover': dynamic $din_room_rape_end
+											'<center><img src="images/qwest/alter/parc_ev/placer_sex110.jpg"></center>'
+											'Your tongue of the pope seems also had its effect and <<$bname>>, uterine growling began to pour your face, hair sperm. His orgasm was so strong that even the shots you flew and fell on the floor. "Oh, a disorder, stained floor, but because we have a great sosalka", - With these words, you pulled off the floor and burying in the shed sperm made â€‹â€‹you lick it. "A good whore, should not man`s not a drop of nectar to skip past him ", - izgalyayas said <<$bname>>, and the rest together neighing.'
+											Act 'Further':
+												minut += 60
+												manna = 0
+												horny = 0
+												willpower = willpower/2
+												vagina += 2
+												bj += 4
+												swallow+= 1
+												throat+= 2
+												facial+=3
+												sex+=3
+												anal+=2
+												guy+=5
+												anus+=2
+												cumbelly += 1
+												cumass += 1
+												cumlip += 1
+												rape += 1
+												vgape = 3
+												agape = 3
+												gs'stat'
+												*clr & cla
+												'<center><img src="images/qwest/alter/parc_ev/placer_sex111.jpg"></center>'
+												'It appears after you lick the floor, rapists have extinguished the ardor. They plugged your mouth a rag. Threw you on the bed , and those who did not finish in turn came up and masturbate ends on your face. But you have nothing to feel, hidden from all that is happening somewhere inside, cut off from all this horror.'
+												Act'Recover': dynamic $din_room_rape_end
+											end
 										end
 									end
 								end
-							end
-						else
-							Act 'Being obedient':
-								horny += 20
-								gs'stat'
-								*clr & cla
-								'<center><img src="images/qwest/alter/parc_ev/placer_sex112.jpg"></center>'
-								'You seem to finally come to terms with the fact that you have a bunch of guys otymeyut, and whispered, "Guys, I will be obedient, Only do not beat", - neighing horses, guys said course will be obedient, and you pulled off the bed began to associate, your posting, that you will do everything they want little attention, painful tightening of the rope.  But it looks like you even liked, because you felt with horror that you start to get excited, and your pussy began to fill with moisture.  One of the rapists have grabbed crotch, and forcefully shoved his fingers into your pussy, roughly where Sherudilo. You cried out in pain Toli Toli with pleasure, and the guy said, grinning obscenely: "Oh well it looks like this slut, she was all wet, guys will not continue to disappoint a lady, Say what you want us to do to you ", - again pleased laughter from all sides, and derogatory epithets. But this is only provoke you: "Yes, I damn, I want your members, fuck me, fuck me all", - you broke.'
-								Act 'Further':
+							else
+								Act 'Being obedient':
 									horny += 20
 									gs'stat'
 									*clr & cla
-									'<center><img src="images/qwest/alter/parc_ev/placer_sex114.jpg"></center>'	
-									'Immediately you put your mouth on a huge dick, He was so big that you could hardly encircle it with their lips, Grab your head man began to stick it on your dubets, so you have dark eyes from lack of air. After a little while adapting, you are horrified to hear what he was saying, fucking your cock your head: "Let him well bitch slaver, I want your ass". You are sick in his hands, but he only pressed harder your head to his groin.'
+									'<center><img src="images/qwest/alter/parc_ev/placer_sex112.jpg"></center>'
+									'You seem to finally come to terms with the fact that you have a bunch of guys otymeyut, and whispered, "Guys, I will be obedient, Only do not beat", - neighing horses, guys said course will be obedient, and you pulled off the bed began to associate, your posting, that you will do everything they want little attention, painful tightening of the rope.  But it looks like you even liked, because you felt with horror that you start to get excited, and your pussy began to fill with moisture.  One of the rapists have grabbed crotch, and forcefully shoved his fingers into your pussy, roughly where Sherudilo. You cried out in pain Toli Toli with pleasure, and the guy said, grinning obscenely: "Oh well it looks like this slut, she was all wet, guys will not continue to disappoint a lady, Say what you want us to do to you ", - again pleased laughter from all sides, and derogatory epithets. But this is only provoke you: "Yes, I damn, I want your members, fuck me, fuck me all", - you broke.'
 									Act 'Further':
 										horny += 20
 										gs'stat'
 										*clr & cla
-										'<center><img src="images/qwest/alter/parc_ev/placer_sex115.jpg"></center>'
-										'"Let me help", - said the owner of a huge member. You have everything inside tightened, head in panic rushed about the only thought, He would kill me his by a dick. you whined, I begged not to do so, but your opinion, no one was interested. You picked up several hands, and some have begun to release hanging, already lying with highly battened by a dick guy. You felt he stared you in the ass, and gradually began to penetrate your ass. The pain was incredible. Member difficulty pushing your ass penetrated deeper and deeper.'	
+										'<center><img src="images/qwest/alter/parc_ev/placer_sex114.jpg"></center>'	
+										'Immediately you put your mouth on a huge dick, He was so big that you could hardly encircle it with their lips, Grab your head man began to stick it on your dubets, so you have dark eyes from lack of air. After a little while adapting, you are horrified to hear what he was saying, fucking your cock your head: "Let him well bitch slaver, I want your ass". You are sick in his hands, but he only pressed harder your head to his groin.'
 										Act 'Further':
 											horny += 20
 											gs'stat'
 											*clr & cla
-											'<center><img src="images/qwest/alter/parc_ev/placer_sex116.jpg"></center>'
-											'With surprise you to understand that the pain passes gradually giving way to what is... What you could not give an explanation. And you like it, these dirty males tearing your holes, call you, humiliating you. And this is a huge club, Please fill in your ass!!! "So it seems , our blonde is ready to start the main entertainment", -  You sounded from behind.'
+											'<center><img src="images/qwest/alter/parc_ev/placer_sex115.jpg"></center>'
+											'"Let me help", - said the owner of a huge member. You have everything inside tightened, head in panic rushed about the only thought, He would kill me his by a dick. you whined, I begged not to do so, but your opinion, no one was interested. You picked up several hands, and some have begun to release hanging, already lying with highly battened by a dick guy. You felt he stared you in the ass, and gradually began to penetrate your ass. The pain was incredible. Member difficulty pushing your ass penetrated deeper and deeper.'	
 											Act 'Further':
-												horny = 0
+												horny += 20
 												gs'stat'
 												*clr & cla
-												'<center><img src="images/qwest/alter/parc_ev/placer_sex117.jpg"></center>'
-												'Immediately you are hovering over the two Man, and one began to push through a member of your wet pussy, and the second took up her mouth. You feel a big hole, In that penetrate from different angles member...and you liked it...You already unconcealed enthusiasm to woo a member of the language you have to mouth, and your pussy squelching loudly with desire and arousal. "Am I really damn, I fucked and humiliated, but I it just gets", - the thought flashed like lightning make your shrink holes. You covered the orgasm, not even orgasm.'
+												'<center><img src="images/qwest/alter/parc_ev/placer_sex116.jpg"></center>'
+												'With surprise you to understand that the pain passes gradually giving way to what is... What you could not give an explanation. And you like it, these dirty males tearing your holes, call you, humiliating you. And this is a huge club, Please fill in your ass!!! "So it seems , our blonde is ready to start the main entertainment", -  You sounded from behind.'
 												Act 'Further':
-													minut += 60
 													horny = 0
-													willpower -= 50
-													manna -= 50
-													vagina += 2
-													bj += 5
-													swallow+= 1
-													throat+= 2
-													facial+=3
-													sex+=2
-													anal+=2
-													guy+=5
-													anus+=2
-													cumpussy += 1
-													cumbelly += 1
-													cumass += 1
-													cumanus += 1
-													cumface += 1
-													cumlip += 1
-													rape += 1
-													orgasm += 2
-													vaginalOrgasm += 1
-													DPorgasm += 1
-													vgape = 3
-											            agape = 3
 													gs'stat'
 													*clr & cla
-													'<center><img src="images/qwest/alter/parc_ev/placer_sex118.jpg"></center>'
-													'You came to life from the fact that your ass, pussy and mouth, began to fill with sperm. Again, these spikes seed, We sent you flying. Two orgasms in just a minute. Emerging from the sweet languor, You make words: "See this bitch twice finished, as well as the first plowshares, build of a touchy". Your holes began to fill them exempt from members, and you are ready to continue, though you have everything and hurt, but the output is still not there, the room is left untreated you members...'
-													if Big_C = 0:
-														Act 'Further':
-															*clr & cla
-															'<center><img src="images/qwest/alter/parc_ev/placer_sex119.jpg"></center>'
-															'But then with surprise, You may have heard how "Big Penis", as you called him to himself, why it all kicked out of the room, just ryavknuv: "Fuck all gone, I do not spoil Woman, here in the mud a diamond found, and you tell me its port, <<$bname>> fellow that called, I owe you one", - and the boys angrily zyrkaya, but still obeying, fling out of a room. When all went "Big Penis", I leaned toward you and gently not so rude as before said,: "The sun like you?", - you surprise eyes widened. A "Big Penis", continued, untangling ropes on you: "You do not know what you treasure, If you want to know who you really, behold", - and he gave you what that <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex120.jpg''"> picture</a>, and added,: "decide to come, Now go to the shower. And they go , I conclude from this."'
-															Act 'To go to the shower':
+													'<center><img src="images/qwest/alter/parc_ev/placer_sex117.jpg"></center>'
+													'Immediately you are hovering over the two Man, and one began to push through a member of your wet pussy, and the second took up her mouth. You feel a big hole, In that penetrate from different angles member...and you liked it...You already unconcealed enthusiasm to woo a member of the language you have to mouth, and your pussy squelching loudly with desire and arousal. "Am I really damn, I fucked and humiliated, but I it just gets", - the thought flashed like lightning make your shrink holes. You covered the orgasm, not even orgasm.'
+													Act 'Further':
+														minut += 60
+														horny = 0
+														willpower -= 50
+														manna -= 50
+														vagina += 2
+														bj += 5
+														swallow+= 1
+														throat+= 2
+														facial+=3
+														sex+=2
+														anal+=2
+														guy+=5
+														anus+=2
+														cumpussy += 1
+														cumbelly += 1
+														cumass += 1
+														cumanus += 1
+														cumface += 1
+														cumlip += 1
+														rape += 1
+														orgasm += 2
+														vaginalOrgasm += 1
+														DPorgasm += 1
+														vgape = 3
+														agape = 3
+														gs'stat'
+														*clr & cla
+														'<center><img src="images/qwest/alter/parc_ev/placer_sex118.jpg"></center>'
+														'You came to life from the fact that your ass, pussy and mouth, began to fill with sperm. Again, these spikes seed, We sent you flying. Two orgasms in just a minute. Emerging from the sweet languor, You make words: "See this bitch twice finished, as well as the first plowshares, build of a touchy". Your holes began to fill them exempt from members, and you are ready to continue, though you have everything and hurt, but the output is still not there, the room is left untreated you members...'
+														if Big_C = 0:
+															Act 'Further':
 																*clr & cla
-																VIEW
-																$din_dush_text='Taking a shower, and very carefully having washed all their holes. You This collection of steel. "Big Penis" He is standing next to you silent guard, "Look on the back side, and want to continue disassemble", - he said finally,'
-																dynamic $din_dush 
-																Act 'Get out of the apartment':
+																'<center><img src="images/qwest/alter/parc_ev/placer_sex119.jpg"></center>'
+																'But then with surprise, You may have heard how "Big Penis", as you called him to himself, why it all kicked out of the room, just ryavknuv: "Fuck all gone, I do not spoil Woman, here in the mud a diamond found, and you tell me its port, <<$bname>> fellow that called, I owe you one", - and the boys angrily zyrkaya, but still obeying, fling out of a room. When all went "Big Penis", I leaned toward you and gently not so rude as before said,: "The sun like you?", - you surprise eyes widened. A "Big Penis", continued, untangling ropes on you: "You do not know what you treasure, If you want to know who you really, behold", - and he gave you what that <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex120.jpg''"> picture</a>, and added,: "decide to come, Now go to the shower. And they go , I conclude from this."'
+																Act 'To go to the shower':
 																	*clr & cla
-																	manna = 0
-																	willpower = willpower/2
-																	nude = 0 & tanga = 1 & minut += 10 & gs'stat'
-																	Big_C = 1
-																	'<center><img src="images/qwest/alter/parc_ev/placer_sex121.jpg"></center>'
-																	'Coming out of the apartment, you stopped and leaned against the wall thinking, despite the experienced orgasms, the mood you had not, because it seemed to hurt all, Look again at <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex122.jpg''">picture</a>, You turned it and looked at the opposite <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex123.jpg''">side</a>. What is incomprehensible inscription, and only at the end of the initials resemble English letters BC. "straight "Large Member", - you think and think again whether you need this extension.'
-																	Act 'Put the picture in her purse and go home': VIEW & Foto = 1 & gt'gorodok'
-																	Act 'Discard the photo and go home': VIEW & gt'gorodok'
+																	VIEW
+																	$din_dush_text='Taking a shower, and very carefully having washed all their holes. You This collection of steel. "Big Penis" He is standing next to you silent guard, "Look on the back side, and want to continue disassemble", - he said finally,'
+																	dynamic $din_dush 
+																	Act 'Get out of the apartment':
+																		*clr & cla
+																		manna = 0
+																		willpower = willpower/2
+																		minut += 10
+																		gs'stat'
+																		Big_C = 1
+																		'<center><img src="images/qwest/alter/parc_ev/placer_sex121.jpg"></center>'
+																		'Coming out of the apartment, you stopped and leaned against the wall thinking, despite the experienced orgasms, the mood you had not, because it seemed to hurt all, Look again at <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex122.jpg''">picture</a>, You turned it and looked at the opposite <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex123.jpg''">side</a>. What is incomprehensible inscription, and only at the end of the initials resemble English letters BC. "straight "Large Member", - you think and think again whether you need this extension.'
+																		Act 'Put the picture in her purse and go home': VIEW & Foto = 1 & gt'gorodok'
+																		Act 'Discard the photo and go home': VIEW & gt'gorodok'
+																	end
 																end
 															end
-														end
-													else
-														Act 'Further':
-															*clr & cla
-															'<center><img src="images/qwest/alter/parc_ev/placer_sex111.jpg"></center>'
-															'It appears after you complete submission, rapists have extinguished the ardor. They plugged your mouth a rag. Threw you on the bed , and those who did not finish in turn came up and masturbate ends on your face. But you were far from the real world, rocking on the waves of orgasms.'
-															Act'Recover': manna = 0 & willpower = willpower/2 & dynamic $din_room_rape_end
+														else
+															Act 'Further':
+																*clr & cla
+																'<center><img src="images/qwest/alter/parc_ev/placer_sex111.jpg"></center>'
+																'It appears after you complete submission, rapists have extinguished the ardor. They plugged your mouth a rag. Threw you on the bed , and those who did not finish in turn came up and masturbate ends on your face. But you were far from the real world, rocking on the waves of orgasms.'
+																Act'Recover': manna = 0 & willpower = willpower/2 & dynamic $din_room_rape_end
+															end
 														end
 													end
 												end
@@ -213,22 +213,21 @@ if rand (1,20)=5:
 				end
 			end
 		end
+	else 	
+		minut += 10 & gs'stat' & gt'gorodok'
 	end
-else 	
-	nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
-end
 }
 
 $din_play_twister = {
-minut += 30
-horny += 10 
-willpower += 25
-manna += 25
-gs'stat'
-*clr & cla
-'<center><img src="images/qwest/alter/parc_ev/placer_sex94.jpg"></center>'
-'"And let Twister, it fun", - defiantly told you. <<$bname>> How strange look on his friend, and he is not saying no words came out. You shrugged, and <<$bname>> immediately tried to dispel your confusion. That it interesting to play together. And expand the game on the floor, I spun the dreidel.  you are a-While having fun , laughing and weaving in different poses - play.'
-if tanga = 0: 'During the game you are constantly corrected skirt, trying to hide that you do not have panties, but it looks like you do not really managed, so how <<$bname>> and then froze <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex95.jpg''">staring</a> you skirt.'
+	minut += 30
+	horny += 10 
+	willpower += 25
+	manna += 25
+	gs'stat'
+	*clr & cla
+	'<center><img src="images/qwest/alter/parc_ev/placer_sex94.jpg"></center>'
+	'"And let Twister, it fun", - defiantly told you. <<$bname>> How strange look on his friend, and he is not saying no words came out. You shrugged, and <<$bname>> immediately tried to dispel your confusion. That it interesting to play together. And expand the game on the floor, I spun the dreidel.  you are a-While having fun , laughing and weaving in different poses - play.'
+	if tanga = 0: 'During the game you are constantly corrected skirt, trying to hide that you do not have panties, but it looks like you do not really managed, so how <<$bname>> and then froze <a href="exec: VIEW ''images/qwest/alter/parc_ev/placer_sex95.jpg''">staring</a> you skirt.'
 	Act 'Further':
 		VIEW
 		horny += 20
@@ -249,14 +248,12 @@ if tanga = 0: 'During the game you are constantly corrected skirt, trying to hid
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex97.jpg"></center>'	
 			'Seeing that you do not mind, <<$bname>> What-the conjoint movement, literally in an instant, He took off his clothes. And he came to say to you: "Open your mouth, Babe", - You willingly opened their lips and put up the tab. The man immediately took advantage and sent his friend into your mouth. He began to slowly move her hips, He kept his eyes on you. You also saw him in the eye, enjoying solid flesh, moving in your mouth.'
 			Act 'Further':
-				nude = 1
 				horny += 20
 				gs'stat'
 				*clr & cla
 				'<center><img src="images/qwest/alter/parc_ev/placer_sex98.jpg"></center>'	
 				'It is enough to moisten your cock saliva. You are estranged from members, pulled off his T-shirt, and gently pushed the boy and told him to lie down, with which-the feline murchaniem, They climbed on him and planted his upright member. You`re back whole body, He threw his head back. hesitated, began to move, your hot hole throbbed, a heart was beating like crazy. <<$bname>>  Buffet hands stroking your body is hip, ass, sisechki. At the touch of his hand on your body shiver ran, and when it became a member of the boy rhythmically peck your hole, you become deeply breathe, and then moan. You jump on a limb, then taking it out of her vagina, sharply driving it to its full length.'
 				Act 'Further':
-					tanga = 0
 					horny += 20
 					gs'stat'					
 					*clr & cla
@@ -281,7 +278,7 @@ if tanga = 0: 'During the game you are constantly corrected skirt, trying to hid
 							*clr & cla
 							'<center><img src="images/qwest/alter/parc_ev/placer_sex101.jpg"></center>'
 							'<<$bname>> even more speed, although it seems that it is impossible, and the sound of your pussy sloshing member agony filled the room. Unable to withstand the pressure that you became violent end. Through the haze of orgasm you hardly realize, how you turned your legs pulled up. And they began to water, as the hose, your ass and pussy, flows sperm.'
-							Act 'Coming and going home': nude = 0 & minut += 10 & gs'stat' & gt'gorodok'
+							Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 						end
 					end
 				end
@@ -291,12 +288,11 @@ if tanga = 0: 'During the game you are constantly corrected skirt, trying to hid
 }
 
 $din_play_card_sex = {
-*clr & cla
-nude = 1
-horny += 10 
-gs'stat'
-'<center><img src="images/qwest/alter/parc_ev/placer_sex78.jpg"></center>'
-'Overseeding to you, and get rid of the bra, <<$bname>>  I am kissing you, and his hands fumbled the nipple on one breast. At this time, <<$bname2>>, lips, stared into the second nipple, caressing his tongue, compressing the chest. At once it became wet panties, body crawled.'
+	*clr & cla
+	horny += 10 
+	gs'stat'
+	'<center><img src="images/qwest/alter/parc_ev/placer_sex78.jpg"></center>'
+	'Overseeding to you, and get rid of the bra, <<$bname>>  I am kissing you, and his hands fumbled the nipple on one breast. At this time, <<$bname2>>, lips, stared into the second nipple, caressing his tongue, compressing the chest. At once it became wet panties, body crawled.'
 	Act 'Further':
 		horny += 20 
 		gs'stat'
@@ -304,8 +300,7 @@ gs'stat'
 		'<center><img src="images/qwest/alter/parc_ev/placer_sex79.jpg"></center>'
 		'Initially, you will see this as a necessity, but the skillful hands and lips whetted you guys in earnest. Digging on the lips of one of the guys passionate kiss, You cowards groped through the second member of the Man, and though it was not very comfortable you become its stroke. dreaming, that he was in your pussy. there <<$bname>>   picked up the edge of her panties, He lifted them, He slipped his hand under them grinning, said: «It seems, <<$name[1]>> so you do not give us , and against our gain, anyway, Your pussy is not exactly against».'
 		Act 'Further':
-			horny += 20 
-			tanga = 0
+			horny += 20
 			gs'stat'
 			*clr & cla
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex80.jpg"></center>'
@@ -343,7 +338,7 @@ gs'stat'
 						Act 'To go to the shower':
 							$din_dush_text='Taking a shower, and thoroughly washed all their holes. You This collection of steel. Coming out of the shower and the guys kissing goodbye.'
 							dynamic $din_dush 
-							Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+							Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 						end
 					end
 				end
@@ -353,80 +348,79 @@ gs'stat'
 }
 
 $din_play_card_stript = {
-*clr & cla
-'<center><img src="images/qwest/alter/parc_ev/placer_sex67.jpg"></center>'
-'You sigh and reseeding on what-the nightstand just lowered neckline: "Well, striptease - it`s music, and I will without music?", - Guys just do not scrambled faced foreheads include music. You smiled at him graciously...'
- Act 'Further':
 	*clr & cla
 	'<center><img src="images/qwest/alter/parc_ev/placer_sex67.jpg"></center>'
-	'After sitting a little-slightly, feeling the rhythm of the music, you become sway to the rhythm of music, and slowly pull up the dress even lower, fully exposing her breasts. Boys inseparable from you views, tensely watching you.'
+	'You sigh and reseeding on what-the nightstand just lowered neckline: "Well, striptease - it`s music, and I will without music?", - Guys just do not scrambled faced foreheads include music. You smiled at him graciously...'
 	Act 'Further':
-		nude = 1
-		horny += 10 
-		gs'stat'
 		*clr & cla
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex68.jpg"></center>'
-		'Shaking her hips to the music, You got rid of her dress. Throwing on the guys looks, drunken promises, you notice that they are already working closely in the pants.'
+		'<center><img src="images/qwest/alter/parc_ev/placer_sex67.jpg"></center>'
+		'After sitting a little-slightly, feeling the rhythm of the music, you become sway to the rhythm of music, and slowly pull up the dress even lower, fully exposing her breasts. Boys inseparable from you views, tensely watching you.'
 		Act 'Further':
+			horny += 10 
+			gs'stat'
 			*clr & cla
-			'<center><img src="images/qwest/alter/parc_ev/placer_sex69.jpg"></center>'
-			stripdance +=1
-			if stripdance > 50:
-				'Have you completely given rhythm dance, your skills strip dance, They allow you to dance the guys eyes bulging from ohrenevayu fallen on them happiness. <<$bname>> I tried to grab you for your ass, but deftly dodging. You shook his finger. "Just look do not touch".'
-			else 
-				'You are a little awkward trying to turn his hips and shaking boobs. Not that the guys did not like. But it seems they are more interested in your tits than your attempts striptease.'
-			end
+			'<center><img src="images/qwest/alter/parc_ev/placer_sex68.jpg"></center>'
+			'Shaking her hips to the music, You got rid of her dress. Throwing on the guys looks, drunken promises, you notice that they are already working closely in the pants.'
 			Act 'Further':
-				tanga = 0
-				horny += 10
-				gs'stat'
 				*clr & cla
-				'<center><img src="images/qwest/alter/parc_ev/placer_sex70.jpg"></center>'
-				'Finally, holding the panties you become their shoot, ass perched on the same nightstand, you`re trying to see into the eyes of the guys, but to no avail their views have crossed between the legs.'
+				'<center><img src="images/qwest/alter/parc_ev/placer_sex69.jpg"></center>'
+				stripdance +=1
+				if stripdance > 50:
+					'Have you completely given rhythm dance, your skills strip dance, They allow you to dance the guys eyes bulging from ohrenevayu fallen on them happiness. <<$bname>> I tried to grab you for your ass, but deftly dodging. You shook his finger. "Just look do not touch".'
+				else 
+					'You are a little awkward trying to turn his hips and shaking boobs. Not that the guys did not like. But it seems they are more interested in your tits than your attempts striptease.'
+				end
 				Act 'Further':
+					horny += 10
+					gs'stat'
 					*clr & cla
-					'<center><img src="images/qwest/alter/parc_ev/placer_sex71.jpg"></center>'
-					'"Spread your legs baby", - strained voice said, <<$bname>>. You smile pushed the foot to the guys were able to enjoy the sight of your pussy. "How it gets", - I flashed you thought.'
+					'<center><img src="images/qwest/alter/parc_ev/placer_sex70.jpg"></center>'
+					'Finally, holding the panties you become their shoot, ass perched on the same nightstand, you`re trying to see into the eyes of the guys, but to no avail their views have crossed between the legs.'
 					Act 'Further':
-						if horny < 100:
-							*clr & cla
-							'<center><img src="images/qwest/alter/parc_ev/placer_sex72.jpg"></center>'
-							'Seeing that the guys in the eyes of the, you are unlikely to be able to control if you do not take steps, you grabbed the dress and quickly pulled it over. Do not even wearing panties. Boys painful sigh: "And ?", - but you reminded them, that it was only about striptease. In general, you should go home. Looking at the guys and saw the disappointment in their eyes , you lifted the edge of the skirts showing ass. And tresnuv both hands, immediately protracted touch it, You laughed and quickly rushed out of the apartment.'
-							Act 'Escape': nude = 0  & minut += 10 & gs'stat' & gt'gorodok'
-						elseif vagina > 10 and horny >= 100:
-							*clr & cla
-							'<center><img src="images/qwest/alter/parc_ev/placer_sex73.jpg"></center>'
-							'Unable to hold back any longer,  you let your hand between the legs, and touched his current pussy. The discharge current struck you from the clitoris and nipples on right in the head. It makes you sweet moan. You confessed to finger her pussy, in front of the two men taken aback. That just gave zest to the situation.'
-							Act 'Further':
+						*clr & cla
+						'<center><img src="images/qwest/alter/parc_ev/placer_sex71.jpg"></center>'
+						'"Spread your legs baby", - strained voice said, <<$bname>>. You smile pushed the foot to the guys were able to enjoy the sight of your pussy. "How it gets", - I flashed you thought.'
+						Act 'Further':
+							if horny < 100 or vagina = 0:
 								*clr & cla
-								'<center><img src="images/qwest/alter/parc_ev/placer_sex74.jpg"></center>'
-								'Here, <<$bname>> I jumped to you, and thrust you into a pussy an object. Whether a small vibrator, whether in general something strange. Have you already thought to rebel. But <<$bname>> said: "We do not touch you, and you will be so convenient".'
+								'<center><img src="images/qwest/alter/parc_ev/placer_sex72.jpg"></center>'
+								'Seeing that the guys in the eyes of the, you are unlikely to be able to control if you do not take steps, you grabbed the dress and quickly pulled it over. Do not even wearing panties. Boys painful sigh: "And ?", - but you reminded them, that it was only about striptease. In general, you should go home. Looking at the guys and saw the disappointment in their eyes , you lifted the edge of the skirts showing ass. And tresnuv both hands, immediately protracted touch it, You laughed and quickly rushed out of the apartment.'
+								Act 'Escape': minut += 10 & gs'stat' & gt'gorodok'
+							else
+								*clr & cla
+								'<center><img src="images/qwest/alter/parc_ev/placer_sex73.jpg"></center>'
+								'Unable to hold back any longer,  you let your hand between the legs, and touched his current pussy. The discharge current struck you from the clitoris and nipples on right in the head. It makes you sweet moan. You confessed to finger her pussy, in front of the two men taken aback. That just gave zest to the situation.'
 								Act 'Further':
-									minut += 30
-									horny = 0
-									willpower += 15
-									manna += 15
-									orgasm += 1
-									gs'stat' 
 									*clr & cla
-									'<center><img src="images/qwest/alter/parc_ev/placer_sex75.jpg"></center>'
-									'Looking at the guys who have got their limbs became their nadrachivat, you turned to him and grabbed her pussy dildos for steel hollow force them his pipisechku, moaning in time with the movement of hands. And before that you were at the limit, a dildo, directed by you at the correct speed, with the necessary effort looks greedy guys ...,  drochaschih on you ... it could not last long. arching arc, You cried out surging at you pleasure.'
+									'<center><img src="images/qwest/alter/parc_ev/placer_sex74.jpg"></center>'
+									'Here, <<$bname>> I jumped to you, and thrust you into a pussy an object. Whether a small vibrator, whether in general something strange. Have you already thought to rebel. But <<$bname>> said: "We do not touch you, and you will be so convenient".'
 									Act 'Further':
-										horny += 20
-										bj += 2
-										swallow+= 1
-										cumlip += 1
-										throat+= 1
-										facial+=2
-										guy+=2
+										minut += 30
+										horny = 0
+										willpower += 15
+										manna += 15
+										orgasm += 1
 										gs'stat' 
 										*clr & cla
-										'<center><img src="images/qwest/alter/parc_ev/placer_sex76.gif"></center>'
-										'Without giving you really come to life, You guys just dragged on the floor, You flopped awkwardly to his knees, and then you have over a person had two swollen and ready to finish a member. Thinking: «Build of a touchy now is not the right time», - you are both members grabbed his arms and take them one by one and nadrachivat take by mouth. With almost immediately had an effect. At first <<$bname>> expanding your face to its members, He poured out his semen on your face, then <<$bname2>> He repeated his actions, adding a portion of sperm. You, unceasingly, lick cock, licking them with the remnants of sperm. Not yet released them to shine. «The Good Girl», - said <<$bname>>. You smiled and walked into the bath under the shower.'
-										Act 'To go to the shower':
-											$din_dush_text='Taking a shower, and thoroughly washed all their holes. You This collection of steel. Coming out of the shower and the guys kissing goodbye.'
-											dynamic $din_dush 
-											Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+										'<center><img src="images/qwest/alter/parc_ev/placer_sex75.jpg"></center>'
+										'Looking at the guys who have got their limbs became their nadrachivat, you turned to him and grabbed her pussy dildos for steel hollow force them his pipisechku, moaning in time with the movement of hands. And before that you were at the limit, a dildo, directed by you at the correct speed, with the necessary effort looks greedy guys ...,  drochaschih on you ... it could not last long. arching arc, You cried out surging at you pleasure.'
+										Act 'Further':
+											horny += 20
+											bj += 2
+											swallow+= 1
+											cumlip += 1
+											throat+= 1
+											facial+=2
+											guy+=2
+											gs'stat' 
+											*clr & cla
+											'<center><img src="images/qwest/alter/parc_ev/placer_sex76.gif"></center>'
+											'Without giving you really come to life, You guys just dragged on the floor, You flopped awkwardly to his knees, and then you have over a person had two swollen and ready to finish a member. Thinking: «Build of a touchy now is not the right time», - you are both members grabbed his arms and take them one by one and nadrachivat take by mouth. With almost immediately had an effect. At first <<$bname>> expanding your face to its members, He poured out his semen on your face, then <<$bname2>> He repeated his actions, adding a portion of sperm. You, unceasingly, lick cock, licking them with the remnants of sperm. Not yet released them to shine. «The Good Girl», - said <<$bname>>. You smiled and walked into the bath under the shower.'
+											Act 'To go to the shower':
+												$din_dush_text='Taking a shower, and thoroughly washed all their holes. You This collection of steel. Coming out of the shower and the guys kissing goodbye.'
+												dynamic $din_dush 
+												Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
+											end
 										end
 									end
 								end
@@ -437,19 +431,18 @@ $din_play_card_stript = {
 			end
 		end
 	end
-end
 }
 
 $din_play_card_win = {
-*clr & cla
-'<center><img src="images/qwest/alter/parc_ev/placer_sex63.jpg"></center>'
-'You are required to guys undressed and ran down the street. On the perturbation of boys about your cruelty. You said: "card debt, affair of honor", - and the boys reluctantly began to undress.'
+	*clr & cla
+	'<center><img src="images/qwest/alter/parc_ev/placer_sex63.jpg"></center>'
+	'You are required to guys undressed and ran down the street. On the perturbation of boys about your cruelty. You said: "card debt, affair of honor", - and the boys reluctantly began to undress.'
 	Act 'Go with them on the street':
 		*clr & cla
 		if month >4 and month < 11: 
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex64.jpg"></center>'
+			'<center><img src="images/qwest/alter/parc_ev/placer_sex64.jpg"></center>'
 		else 
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex65.jpg"></center>'
+			'<center><img src="images/qwest/alter/parc_ev/placer_sex65.jpg"></center>'
 		end
 		'You went out with the guys on the street and began to watch the guys go naked on the street, true <<$bname>>, somewhere lost infection. And here <<$bname2>>, honestly practiced his losing streak. Have a good laugh with the reactions of passers-by did you decide chuckles until you guys did not come out of anger.'
 		Act 'Escape': minut += 10 & gs'stat' & gt'gorodok'
@@ -507,8 +500,7 @@ $din_play_game = {
 
 
 $din_stay_in_bed = {
-	i=rand(1,2)
-	if i=1:
+	if rand(0,1) = 1:
 		horny += 10
 		gs'stat'
 		*clr & cla
@@ -522,8 +514,6 @@ $din_stay_in_bed = {
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex48.jpg"></center>'
 			'Taking a member of cowards, You leaned over and kissed him, just touched his lips to the bridle. The second kiss was longer. Without taking his lips, You opened his mouth and licked his cock. After playing, in this way, you, lastly, We took it into his mouth. Pleasure, you experienced with, it is impossible to convey in words. I miss it a little deeper into his mouth, you began to caress the language of the bridle. Gradually you have moved from gentle caresses language to the movements of his head up and down, helping to similar movements of the right hand, tightly embracing the shaft member.'
 			Act 'Take the top ':
-				nude = 1
-				tanga = 0	
 				horny += 30
 				gs'stat'
 				*clr & cla
@@ -553,7 +543,7 @@ $din_stay_in_bed = {
 								Act 'To go to the shower':
 									$din_dush_text='Taking a shower, and thoroughly washed all their holes. You This collection of steel.'
 									dynamic $din_dush 
-									Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+									Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 								end
 							end
 						end
@@ -561,14 +551,13 @@ $din_stay_in_bed = {
 				end
 			end
 		end
-	elseif i=2: 
+	else
 		horny += 10
 		gs'stat'
 		*clr & cla
 		'<center><img src="images/qwest/alter/parc_ev/placer_sex54.jpg"></center>'
 		'You have decided to hell, You can even soak up a little in bed. In addition, a number of two guys are clearly not averse to diversify your morning. Noticing that you woke up the guys taking your hands put them on their ready to fight members: "We have come to tell you good morning", - they said in unison. You laughed and said,: "You? or they?", - pointing out ready to fight members. "Together", - chorused the same guys.'
 		Act 'Take in the mouth':
-			nude = 1
 			horny += 20
 			bj += 1
 			gs'stat'
@@ -576,7 +565,6 @@ $din_stay_in_bed = {
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex55.jpg"></center>'
 			'You leaned against a member of a Man, lips tightly wrapped around his head riser, and you stuck to it, if intending to drink all the juice. Hand Man, I lay on your neck, very gently pushing your head back, down. But you are not in a hurry, tongue licking the tender skin of his pommel, a little teasing bridle. Cock grew even more. At this point,, you let it into your mouth as far as possible and deeper. Delight , he even cried, a moment frozen in excitement. You suck it riser and began polishing it with their lips, licking tongue and slightly podrachivaya hand'
 			Act 'Further':
-				tanga = 0	
 				horny += 20
 				gs'stat'
 				*clr & cla
@@ -618,7 +606,7 @@ $din_stay_in_bed = {
 								Act 'To go to the shower':
 									$din_dush_text='Taking a shower, and thoroughly washed all their holes. You This collection of steel. Coming out of the shower and the guys kissing goodbye.'
 									dynamic $din_dush 
-									Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+									Act 'Coming and going home':minut += 10 & gs'stat' & gt'gorodok'
 								end
 							end
 						end
@@ -630,73 +618,74 @@ $din_stay_in_bed = {
 }
 
 $din_sleep_sex = {
- *clr & cla
- '<center><img src="images/qwest/alter/parc_ev/placer_sex93.jpg"></center>'
- 'that you-then he pulled out of sleep. Slightly, slightly open eyes, You saw through her lashes male silhouette in the room. It seems, who-of the guys decided to diversify your dream. Deciding to see, what`s next, you pretend to be asleep.'
- Act 'Further':
- *clr & cla
- '<center><img src="images/qwest/alter/parc_ev/placer_sex84.jpg"></center>'
- 'This suffering «insomnia» I came up to you and pulled the blanket pulled up T-shirt, exposing boobs. You are thinking, what to do next, or continue pretending to be asleep, or «wake up» and drive the hell out of Smarty?'
-	Act '"Wake up"':
+	*clr & cla
+	'<center><img src="images/qwest/alter/parc_ev/placer_sex93.jpg"></center>'
+	'that you-then he pulled out of sleep. Slightly, slightly open eyes, You saw through her lashes male silhouette in the room. It seems, who-of the guys decided to diversify your dream. Deciding to see, what`s next, you pretend to be asleep.'
+	Act 'Further':
 		*clr & cla
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex85.jpg"></center>'
-		'You have opened my eyes and saw that this impudent insomniacs <<$bname2>>.' 
-		'- And what are you doing here ? - <<$bname2>> He rebounded from you as if stung.'
-		'- Oh, and you do not sleep? - Confused man.'
-		'- Not sleeping, and what you`re here about sleeping with me to do? - Continued for questioning.'
-		'- Yes ... I just ... - <<$bname2>> even more confused, and out of the room. What you do not even have time to say anything. «Fool, maybe I was not against», - We think you. Looking at the clock, you realize that it`s morning. and can...'
-		Act 'Make a breakfast': dynamic $din_breakfast
-	end
-	Act '"sleep on"':
-		*clr & cla
-		horny += 20
-		gs'stat'
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex86.jpg"></center>'
-		'Convinced, that you will not wake up, He continued from man and pulled off your panties. You think, that you now will fuck,  at the thought of you shits terrible fever - you were, like that today will not sleep insert your dick in your sweaty pussy,  squeeze tits and shoving a dick in your mouth ... You barely restrained, so as not to fall out of the line sleeping.'
-		Act 'Further':
+		'<center><img src="images/qwest/alter/parc_ev/placer_sex84.jpg"></center>'
+		'This suffering «insomnia» I came up to you and pulled the blanket pulled up T-shirt, exposing boobs. You are thinking, what to do next, or continue pretending to be asleep, or «wake up» and drive the hell out of Smarty?'
+		Act '"Wake up"':
+			*clr & cla
+			'<center><img src="images/qwest/alter/parc_ev/placer_sex85.jpg"></center>'
+			'You have opened my eyes and saw that this impudent insomniacs <<$bname2>>.' 
+			'- And what are you doing here ? - <<$bname2>> He rebounded from you as if stung.'
+			'- Oh, and you do not sleep? - Confused man.'
+			'- Not sleeping, and what you`re here about sleeping with me to do? - Continued for questioning.'
+			'- Yes ... I just ... - <<$bname2>> even more confused, and out of the room. What you do not even have time to say anything. «Fool, maybe I was not against», - We think you. Looking at the clock, you realize that it`s morning. and can...'
+			Act 'Make a breakfast': dynamic $din_breakfast
+		end
+		Act '"sleep on"':
 			*clr & cla
 			horny += 20
 			gs'stat'
-			'<center><img src="images/qwest/alter/parc_ev/placer_sex92.jpg"></center>'
-			'You felt the fingers, who are pushing your lips on your pussy, We heard the soft whisper:  «Yes dryly, immediately will not insert»... And the guy stopped for a moment, seen thinking, what to do.'
+			'<center><img src="images/qwest/alter/parc_ev/placer_sex86.jpg"></center>'
+			'Convinced, that you will not wake up, He continued from man and pulled off your panties. You think, that you now will fuck,  at the thought of you shits terrible fever - you were, like that today will not sleep insert your dick in your sweaty pussy,  squeeze tits and shoving a dick in your mouth ... You barely restrained, so as not to fall out of the line sleeping.'
 			Act 'Further':
+				*clr & cla
 				horny += 20
 				gs'stat'
-				*clr & cla
-				'<center><img src="images/qwest/alter/parc_ev/placer_sex87.jpg"></center>'
-				'Determined, he approached the head of the bed, and neatly turned you, lips rested his cock and tried to slip a little push deeper. Determined to help the guy, You opened her mouth, letting his rampant flesh depth. He carefully began to fuck in her mouth, moaning softly. '
+				'<center><img src="images/qwest/alter/parc_ev/placer_sex92.jpg"></center>'
+				'You felt the fingers, who are pushing your lips on your pussy, We heard the soft whisper:  «Yes dryly, immediately will not insert»... And the guy stopped for a moment, seen thinking, what to do.'
 				Act 'Further':
 					horny += 20
 					gs'stat'
 					*clr & cla
-					'<center><img src="images/qwest/alter/parc_ev/placer_sex88.jpg"></center>'
-					'«So, It seems, is enough lubrication», - again whisper to himself the man said, as you think: «If you only knew, as lubricant between my legs», - For his unusual situation you are in earnest whetted, and pussy was burning heat, and flowed like a waterfall. Moving your legs between, Night visitor put a member of your pussy, and also carefully, It seems, still thinking, Why do you sleep, I began to introduce it inside. But your current pussy so easy it launched a, the guy almost fell, collapsed. «Yes, everything is wet, interestingly, she dreams, so that it flows», - he whispered with pleasure, She began to move her hips,  squelching its stake in our lake juices. Hardly contain rushing out moans, You continue to play a limp doll.'
+					'<center><img src="images/qwest/alter/parc_ev/placer_sex87.jpg"></center>'
+					'Determined, he approached the head of the bed, and neatly turned you, lips rested his cock and tried to slip a little push deeper. Determined to help the guy, You opened her mouth, letting his rampant flesh depth. He carefully began to fuck in her mouth, moaning softly. '
 					Act 'Further':
+						horny += 20
+						gs'stat'
 						*clr & cla
-						'<center><img src="images/qwest/alter/parc_ev/placer_sex89.jpg"></center>'
-						'Here man suddenly pulled out a member of you, and walked away, you are afraid, that this was the end. But he was used as the more careful you have to turn. Expanding your tummy, fan of sleeping girls, fell in behind, and has a much bolder broke into your bingo. This sudden movement, It caused such a pleasant wave, that you did not try to hold back, groan escaped your lips.  The guy stopped abruptly, seen frightened, you woke up, even his dick a little lost in size. «Damn, I do not finish», - I flashed you thought, and you began to squeeze his penis, straining the muscles of the vagina. So groan was unable to hold back frightened man. Pretty soon his cock regained the lost ground. And the guy, I grabbed you for the ass, You continued to fuck. And so you were on the brink, and his hands curled ass tore avalanche. Buried in a pillow, you become finish, trying not to dissuade the Night Visitors, that you are still sleeping.'
+						'<center><img src="images/qwest/alter/parc_ev/placer_sex88.jpg"></center>'
+						'«So, It seems, is enough lubrication», - again whisper to himself the man said, as you think: «If you only knew, as lubricant between my legs», - For his unusual situation you are in earnest whetted, and pussy was burning heat, and flowed like a waterfall. Moving your legs between, Night visitor put a member of your pussy, and also carefully, It seems, still thinking, Why do you sleep, I began to introduce it inside. But your current pussy so easy it launched a, the guy almost fell, collapsed. «Yes, everything is wet, interestingly, she dreams, so that it flows», - he whispered with pleasure, She began to move her hips,  squelching its stake in our lake juices. Hardly contain rushing out moans, You continue to play a limp doll.'
 						Act 'Further':
-							minut += 20
-							horny = 0
-							willpower += 15
-							manna += 15
-							vagina += 1
-							orgasm += 1
-							vaginalOrgasm += 1
-							bj += 1
-							swallow+= 1
-							cumlip += 1
-							throat+= 1
-							facial+=1
-							gs'stat'
 							*clr & cla
-							'<center><img src="images/qwest/alter/parc_ev/placer_sex90.jpg"></center>'
-							'«Damn finished! In a dream! Hot girl!», - a guy like that has managed to whisper to scream. And trying not to make noise, he hurried , he again moved to the head of the bed. Turning your head, so that the face you again been rampant dick. You opened her mouth,  and then it turned out to be a member, covered with your nipples , and this is even more delicious. «Yes slut earn», - he whispered: «swallow all, what I nakonchal», - And with that man began to fill your mouth.'
+							'<center><img src="images/qwest/alter/parc_ev/placer_sex89.jpg"></center>'
+							'Here man suddenly pulled out a member of you, and walked away, you are afraid, that this was the end. But he was used as the more careful you have to turn. Expanding your tummy, fan of sleeping girls, fell in behind, and has a much bolder broke into your bingo. This sudden movement, It caused such a pleasant wave, that you did not try to hold back, groan escaped your lips.  The guy stopped abruptly, seen frightened, you woke up, even his dick a little lost in size. «Damn, I do not finish», - I flashed you thought, and you began to squeeze his penis, straining the muscles of the vagina. So groan was unable to hold back frightened man. Pretty soon his cock regained the lost ground. And the guy, I grabbed you for the ass, You continued to fuck. And so you were on the brink, and his hands curled ass tore avalanche. Buried in a pillow, you become finish, trying not to dissuade the Night Visitors, that you are still sleeping.'
 							Act 'Further':
+								minut += 20
+								horny = 0
+								willpower += 15
+								manna += 15
+								vagina += 1
+								orgasm += 1
+								vaginalOrgasm += 1
+								bj += 1
+								swallow+= 1
+								cumlip += 1
+								throat+= 1
+								facial+=1
+								gs'stat'
 								*clr & cla
-								'<center><img src="images/qwest/alter/parc_ev/placer_sex91.jpg"></center>'
-								'You swallow and swallow, It seems, sleeping, submissive, Puppet, This guy loves more than the sleepless and active. On-else you could not explain the flow, that both the hose poured your mouth. It had to be very excited, to issue a. How did he even have time to bring to orgasm, instead obkonchalsya first minute. While these thoughts flashed in your mind, guy all-still pulled out a member, but it has not ceased to finish, so that more of the sperm gets into your face. Finally finished, so that you even breathed a sigh of relief. He grabbed my things and ran out of the room. You, wiped his muzzle, by adhering to her sperm thought, that did not bother to see, who among men it was. Look at the clock and saw that it was morning, You thinking what to do next.'
-								Act 'Make a breakfast': dynamic $din_breakfast
+								'<center><img src="images/qwest/alter/parc_ev/placer_sex90.jpg"></center>'
+								'«Damn finished! In a dream! Hot girl!», - a guy like that has managed to whisper to scream. And trying not to make noise, he hurried , he again moved to the head of the bed. Turning your head, so that the face you again been rampant dick. You opened her mouth,  and then it turned out to be a member, covered with your nipples , and this is even more delicious. «Yes slut earn», - he whispered: «swallow all, what I nakonchal», - And with that man began to fill your mouth.'
+								Act 'Further':
+									*clr & cla
+									'<center><img src="images/qwest/alter/parc_ev/placer_sex91.jpg"></center>'
+									'You swallow and swallow, It seems, sleeping, submissive, Puppet, This guy loves more than the sleepless and active. On-else you could not explain the flow, that both the hose poured your mouth. It had to be very excited, to issue a. How did he even have time to bring to orgasm, instead obkonchalsya first minute. While these thoughts flashed in your mind, guy all-still pulled out a member, but it has not ceased to finish, so that more of the sperm gets into your face. Finally finished, so that you even breathed a sigh of relief. He grabbed my things and ran out of the room. You, wiped his muzzle, by adhering to her sperm thought, that did not bother to see, who among men it was. Look at the clock and saw that it was morning, You thinking what to do next.'
+									Act 'Make a breakfast': dynamic $din_breakfast
+								end
 							end
 						end
 					end
@@ -704,13 +693,11 @@ $din_sleep_sex = {
 			end
 		end
 	end
-end					
 }
 
 
 $din_breakfast_sex = {
 *clr & cla
-nude = 1
 gs'stat'
 '<center><img src="images/qwest/alter/parc_ev/placer_sex40.gif"></center>'
 'You embarrassed but still took off her bra: "Well, that `s better?", - <<$bname>>, He shook his head affirmatively: «But for my taste on you anyway still a lot of clothes».'
@@ -720,7 +707,6 @@ gs'stat'
 		'You went to the fridge, and lowered her panties, sticking out his ass. <<$bname>> , gasped. «Better yet, on-my, We need to completely get rid of them».'
 		Act 'To approach the guy':
 			*clr & cla
-			tanga = 0
 			gs'stat'
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex41.jpg"></center>'
 			'You turned around and slowly, showing off, We came to the guy, in the course of removing her panties: «And you? Just look `ll? Or that the same-a snimesh » , - <<$bname>>, quickly pulled off his pants. You just slow down to his knees, giving a guy consider themselves. And bowing his head, We had a tongue on the head, Speaking licked a drop of grease,  and pulled him even not very good standing member, in your mouth. And adopt carefully suck,  your ability to act to take effect, cock stood at the top of, obviously ready to fight. '
@@ -761,7 +747,7 @@ gs'stat'
 								'When finished pour <<$bname>>,  gently kissed you, and he said,:' 
 								'- Thank you, <<$name[2]>> you`re lovely, Tomorrow we prepare for you? - you laughed.'
 								'- Oh no, your breakfast you protrahal, I have to go, give the towel, and that on a shower no, but I `m not sure that I was not fucked again. -  heavy sigh <<$bname>>,  you handed the towel, you wiped off the sperm Man. And they ran to gather.'
-								Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+								Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 							end
 						end
 					end
@@ -789,13 +775,13 @@ $din_breakfast = {
 			gs'stat'
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex39.jpg"></center>'
 			'Everyone gathered at the table, and started to crack up your cooking breakfast,  After breakfast, you said that you guys all the time to, and take you a look of regret, We asked to go further.'
-			Act 'Coming and going home': nude = 0 & minut += 10 & gs'stat' & gt'gorodok'
+			Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 		end
 	end
 }
 
 $din_stay_the_night = {
-*clr & cla
+	*clr & cla
 	if hour <= 22:
 		hour = 23
 		minut = 0
@@ -812,11 +798,11 @@ $din_stay_the_night = {
 }
 
 $din_drink_vodca2 = {
-*clr & cla
-cumlip = 0
-gs'stat'
-'<center><img src="images/qwest/alter/parc_ev/placer_sex25.gif"></center>'
-'You just know how to face, we heard «Svetik, come here, you see him, there is no more strength to endure», - you turned <<$bname>> I urge you to his friend who is sitting naked on the couch, and jerked off his penis. Smiling, You came to the guy, I turned to him and put my ass pussy, wet from your secretions and semen of the first partner. You groaned simultaneously. '
+	*clr & cla
+	cumlip = 0
+	gs'stat'
+	'<center><img src="images/qwest/alter/parc_ev/placer_sex25.gif"></center>'
+	'You just know how to face, we heard «Svetik, come here, you see him, there is no more strength to endure», - you turned <<$bname>> I urge you to his friend who is sitting naked on the couch, and jerked off his penis. Smiling, You came to the guy, I turned to him and put my ass pussy, wet from your secretions and semen of the first partner. You groaned simultaneously. '
 	Act 'freeze':
 		*clr & cla
 		'<center><img src="images/qwest/alter/parc_ev/placer_sex25.jpg"></center>'
@@ -844,7 +830,7 @@ gs'stat'
 							*clr & cla
 							'<center><img src="images/qwest/alter/parc_ev/placer_sex28.jpg"></center>'
 							'Boys meet you in the hallway and, see you, We began to laugh, <<$bname>> said: «Still cool towel to buy». Have you already thought offended, but <<$bname>> continued: «You <<$name[2]>> no offense, you really are a towel, besides the, below that there is much better». You smiled and forgave them rzhach: «Okay, guys I`m home», - Guys were upset by the prospect, and tried to persuade you to stay still: «sit, talk, we can all stay», - offered <<$bname>>.'
-							Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 30 & gs'stat' & gt'gorodok'
+							Act 'Coming and going home': minut += 30 & gs'stat' & gt'gorodok'
 							Act 'Staying with the guys': dynamic $din_stay_the_night
 						end	
 					end	
@@ -887,7 +873,7 @@ gs'stat'
 												'"You can and stay, Tomorrow off", - We think you.'
 												Act 'Staying with the guys': dynamic $din_stay_the_night
 											end
-											Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+											Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 										end
 									end
 								end
@@ -895,10 +881,9 @@ gs'stat'
 						end
 					end
 				end
-			end		
-		end		
-	end		
-end	
+			end	
+		end
+	end
 }
 
 $din_dush  = {
@@ -941,11 +926,10 @@ $din_drink_vodca = {
 			gs'stat'
 			*clr & cla
 			'<center><img src="images/qwest/alter/parc_ev/placer_sex4.jpg"></center>'
-			'"<<$name[2]>> you`re so beautiful, and those are pretty sisechki, and maybe you `ll show them to us", - With these words, <<$bname>> I reached down and pulled up your shirt.'
+			'"<<$name>> you`re so beautiful, and those are pretty sisechki, and maybe you `ll show them to us", - With these words, <<$bname>> I reached down and pulled up your shirt.'
 			if alko > 5 or horny => 80:
 				Act 'Piano smile':
 					*clr & cla
-					nude = 1
 					gs'stat'
 					'<center><img src="images/qwest/alter/parc_ev/placer_sex5.jpg"></center>'
 					'You just smiled at such audacity, thoughts in your head and lust pyany. Abdomen ache. A man without seeing the resistance on your part, seems impudent decided further and grabbed your tits, and began to compress. "And can you still something you show us?", - I asked <<$bname>>,  It seems that you decided you still fucked, and you did not mind, pulled off her skirt. '
@@ -983,7 +967,6 @@ $din_drink_vodca = {
 									end
 								end
 								Act 'Remove panties':
-								tanga = 0
 								gs'stat'
 								*clr & cla
 								'<center><img src="images/qwest/alter/parc_ev/placer_sex12.gif"></center>'
@@ -1046,7 +1029,7 @@ $din_drink_vodca = {
 																		act 'Go into the shower':
 																			$din_dush_text='"I`m gonna take a shower, and home", - guys just nodded exhausted. On shaky legs you crawled to the soul, washed their holes. Something like gathered, and went home. '
 																			dynamic $din_dush 
-																			Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+																			Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 																		end	
 																	end
 																end
@@ -1077,7 +1060,7 @@ $din_drink_vodca = {
 																		act 'Go into the shower':
 																			$din_dush_text='"I`m gonna take a shower, and home", - guys just nodded exhausted. On shaky legs you crawled to the soul, showered. Something like gathered, and went home. '
 																			dynamic $din_dush 
-																			Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+																			Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 																		end
 																	end
 																end
@@ -1114,7 +1097,7 @@ $din_drink_vodca = {
 																act 'Go into the shower':	
 																	$din_dush_text='"I`m gonna take a shower, and home", - guys just nodded exhausted. On shaky legs you crawled to the soul, washed their holes. Something like gathered, and went home. '
 																	dynamic $din_dush 
-																	Act 'Coming and going home': nude = 0 & tanga = 1 & minut += 10 & gs'stat' & gt'gorodok'
+																	Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 																end
 															end
 														end
@@ -1176,7 +1159,7 @@ $din_drink_vodca = {
 }
 
 $din_sleep = {
-if disable_autosave = 0:
+	if disable_autosave = 0:
 		if StoryLine = 0:
 			SAVEGAME 'autosave.sav'
 		else
@@ -1184,24 +1167,23 @@ if disable_autosave = 0:
 		end
 	end
 	cls
+	clr
 	notathomesleep=0
 	health = health + 5
 	hapri = 0
 	InSleep = 1
-	
-	:loopson
-	minut = minut + 1
-	stime = stime + 1
-	if stime = 60:stime = 0 & son = son + 3
-	clr
-	cls
-	gs'stat'
 
 	'<center><img src="images/qwest/alter/parc_ev/placer_sex35.jpg"></center>'
 	if analplugIN = 1:analplugIN = 0 & 'Before going to bed, you took out a butt plug.'
 	if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed, you took out a vibrator.'
 	if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
 	'You sleep and you do not dream.'
+	
+	:loopson
+	minut = minut + 1
+	stime = stime + 1
+	if stime = 60:stime = 0 & son = son + 3
+	gs'stat'
 
 	if son > 23 and dosip = 0:
 		nude = 0
@@ -1214,19 +1196,17 @@ if disable_autosave = 0:
 	end
 
 	jump 'loopson'
-	
-end
 }
 
 if kol_man < 4 and anus > 14 and vagina > 14 and mesec <= 0 :
-		*clr & cla
-		minut += 30
-		gs'stat'
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex1.jpg"></center>'
-		'After seeing the apartment, you saw that the guys started to set the table in the kitchen, You confessed to help guys. We quickly set the table, guys offered a drink.'	
-		Act 'Drink with guys': dynamic $din_drink_vodca
-		Act 'Refused to drink':dynamic $din_play_game
-		
+	*clr & cla
+	minut += 30
+	gs'stat'
+	'<center><img src="images/qwest/alter/parc_ev/placer_sex1.jpg"></center>'
+	'After seeing the apartment, you saw that the guys started to set the table in the kitchen, You confessed to help guys. We quickly set the table, guys offered a drink.'	
+	Act 'Drink with guys': dynamic $din_drink_vodca
+	Act 'Refused to drink':dynamic $din_play_game
+
 else
 	cls
 	alko += 20

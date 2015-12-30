@@ -43,7 +43,7 @@ if $ARGS[0] = 'view_clothing_list':
 		addobj '<img src="images/pic/icon/Proch.png">'
 		addobj '<img src="images/pic/icon/menu.png">'
 		addobj '<img src="images/pic/icon/Phone.png">'
-			
+		
 		gt 'clothing', 'view_clothing_list'
 	end
 
@@ -208,9 +208,33 @@ if $ARGS[0] = 'view_clothing_item':
 				dynamic 'RESULT = <<$ARGS[2]>>B[<<ARGS[3]>>]'
 				if RESULT < bedra - 8:
 					'This item is too small for you to wear.'
+					if poSkill >= 100:
+						cla
+						'You can resize this thanks to your sewing skill.'
+						minut += 15
+						act 'Resize':
+							dynamic '<<$ARGS[2]>>B[<<ARGS[3]>>] = bedra'
+							gt 'clothing', 'view_clothing_list', $ARGS[1]
+						end
+						act 'Leave in closet':
+							gt 'clothing', 'view_clothing_list', $ARGS[1]
+						end
+					end
 					exit
 				elseif RESULT > bedra + 8:
 					'This item is too large for you to wear.'
+					if poSkill >= 100:
+						cla
+						'You can resize this thanks to your sewing skill.'
+						minut += 15
+						act 'Resize':
+							dynamic '<<$ARGS[2]>>B[<<ARGS[3]>>] = bedra'
+							gt 'clothing', 'view_clothing_list', $ARGS[1]
+						end
+						act 'Leave in closet':
+							gt 'clothing', 'view_clothing_list', $ARGS[1]
+						end
+					end
 					exit
 				end
 			end

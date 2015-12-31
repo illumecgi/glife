@@ -596,7 +596,7 @@ if $ARGS[0] = 'pos31':
 	'Nastya: - Well, are ideas, Call, hee-hee!'
 	'Do_You: - So_Long-as_long_as.'
 
-	act 'Hang up':gt 'korr'
+	act 'Hang up':gt $locM, $metkaM
 end
 
 --- nastja ---------------------------------

@@ -138,7 +138,7 @@ $Phone_pictures = {
 }
 
 $Phone_camera_selfie = {
-	if $loc = 'vanrPar' and towel = 1 or $loc = 'vanr' and towel = 1 or $loc = 'yvan' and towel = 1:
+	if $loc = 'vanrPar' and mirror_steam = hour or $loc = 'vanr' and mirror_steam = hour or $loc = 'yvan' and mirror_steam = hour:
 		minut += RAND (5,7)
 		phone_rand = RAND (0,38)
 		vanr_selfie[phone_rand] = 1

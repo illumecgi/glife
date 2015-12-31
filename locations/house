@@ -115,5 +115,7 @@ elseif $ARGS[0] = 'razb':
 	end
 end
 
+if rand (0,2) ! 0:dynamic $mobile_check
+
 --- house ---------------------------------
 

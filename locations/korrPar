@@ -157,7 +157,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			schoolprogul = 0
 			GspravkaT = 2
 			motherKnowSpravka = 1
-			'"Oh, my darling <<$name>>, where have you been. We have been so worried."'
+			'"Oh, my darling <<$name>>, where have you been? We have been so worried."'
 			'You go into the kitchen with your mom and spend sometime explaining what happened to you, many of the details are too difficult to talk about and you cry and hug.'
 			'Your mom tells you she will sort out everything with the school and makes you a bowl of chicken soup.'
 			if energy >= 30:
@@ -260,6 +260,8 @@ elseif pod_whore_countQW > 15:
 end	
 !'<<$pod_client>>'
 !==========================================!
+
+if rand (0,2) ! 0:dynamic $mobile_check
 
 --- korrPar ---------------------------------
 

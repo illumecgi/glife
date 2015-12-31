@@ -1,5 +1,150 @@
 # din_bad
 
+$mobile_check = {
+
+	if vladimirday ! daystart and hour >= 15 and hour <= 17:
+		if vladimirQW = 20:
+			'<b><font color="red">Your phone is ringing</font></b>'
+			$caller = 'Vladimir'
+			$callerid = 'qwest/vladimir/001'
+			dynamic $phone_ring
+			pl'<center><a href="exec:gt ''qwloc2''"><img src="images/pic/phone/call_accept.png"></a>         <a href="exec:vladimirday = daystart & gt $locM, $metkaM"><img src="images/pic/phone/decline.png"></a></center>'
+		elseif vladimirQW = 25 and week = 6:
+			'<b><font color="red">Your phone is ringing</font></b>'
+			$caller = 'Vladimir'
+			$callerid = 'qwest/vladimir/001'
+			dynamic $phone_ring
+			pl'<center><a href="exec:gt ''qwloc3''"><img src="images/pic/phone/call_accept.png"></a>         <a href="exec:vladimirday = daystart & gt $locM, $metkaM"><img src="images/pic/phone/decline.png"></a></center>'
+		elseif vladimirQW = 35 and week = 6:
+			'<b><font color="red">Your phone is ringing</font></b>'
+			$caller = 'Vladimir'
+			$callerid = 'images/qwest/vladimir/001'
+			dynamic $phone_ring
+			pl'<center><a href="exec:gt ''qwloc4''"><img src="images/pic/phone/call_accept.png"></a>         <a href="exec:vladimirday = daystart & gt $locM, $metkaM"><img src="images/pic/phone/decline.png"></a></center>'
+		end
+	end
+
+	if QWdogreiqTimer = 0 and QWdogReiq = 2 and week = 7 and qwdogiventday ! daystart and hour >= 12:
+		'<b><font color="red">Your phone is ringing</font></b>'
+		$caller = 'Margaret'
+		$callerid = ''
+		dynamic $phone_ring
+		pl''
+		pl''
+		pl''
+		pl''
+		pl''
+		pl''
+		pl''
+		pl''
+		pl''
+		pl''
+		pl'<center><a href="exec:gt ''qwlocdog''"><img src="images/pic/phone/call_accept.png"></a>              <a href="exec:qwdogiventday = daystart & gt $locM, $metkaM"><img src="images/pic/phone/decline.png"></a></center>'
+	end
+
+	if bfA > 0 and boydayA ! daystart and hour > 5 and hour < 20 and ringA = 0:
+		if bfB = 1:bfB = 0
+		if bfC = 1:bfC = 0
+
+		if vnesh < vneshBoyA:
+			bfA -= 1
+			if bfA = 0:
+				'<b><font color="red">Your guy does not call you, he probably dumped you.</font></b>'
+			else
+				'Your boyfriend <<$boyA>> has not called you.'
+			end
+		else
+			ring = 1
+			ringA = 1
+			'<b><font color="red">Your phone is ringing</font></b>'
+			PLAY 'sound/Old_Phone.mp3',30
+			$caller = '<<$boyA>>'
+			$callerid = 'images/pic/boy_face/'+boypicA
+			dynamic $phone_ring
+			pl'<center><a href="exec:gt ''telefon'', ''boyA''"><img src="images/pic/phone/call_accept.png"></a>              <a href="exec:boydayA = daystart & gt $locM, $metkaM"><img src="images/pic/phone/decline.png"></a></center>'
+		end
+	elseif bfB > 0 and boydayB ! daystart and hour > 5 and hour < 20 and ringB = 0:
+		if bfA = 1:bfA = 0
+		if bfC = 1:bfC = 0
+
+		if vnesh < vneshBoyB:
+			bfB -= 1
+			if bfB = 0:
+				'<b><font color="red">Your guy does not call you, he probably dumped you.</font></b>'
+			else
+				'Your boyfriend <<$boyB>> has not called you.'
+			end
+		else
+			ring = 1
+			ringB = 1
+			'<b><font color="red">Your phone is ringing</font></b>'
+			PLAY 'sound/Old_Phone.mp3',30
+			$caller = '<<$boyB>>'
+			$callerid = 'images/pic/boy_face/'+boypicB
+			dynamic $phone_ring
+			pl'<center><a href="exec:gt ''telefon'', ''boyB''"><img src="images/pic/phone/call_accept.png"></a>              <a href="exec:boydayB = daystart & gt $locM, $metkaM"><img src="images/pic/phone/decline.png"></a></center>'
+		end
+	elseif bfC > 0 and boydayC ! daystart and hour > 5 and hour < 20 and ringC = 0:
+		if bfA = 1:bfA = 0
+		if bfB = 1:bfB = 0
+
+		if vnesh < vneshBoyC:
+			'Your boyfriend <<$boyC>> has not called you.'
+			bfC -= 1
+			if bfC = 0:
+				'<b><font color="red">Your guy does not call you, he probably dumped you.</font></b>'
+			else
+				'Your boyfriend <<$boyC>> has not called you.'
+			end
+		else
+			ring = 1
+			ringC = 1
+			'<b><font color="red">Your phone is ringing</font></b>'
+			PLAY 'sound/Old_Phone.mp3',30
+			$caller = '<<$boyC>>'
+			$callerid = 'images/pic/boy_face/'+boypicC
+			dynamic $phone_ring
+			pl'<center><a href="exec:gt ''telefon'', ''boyC''"><img src="images/pic/phone/call_accept.png"></a>              <a href="exec:boydayC = daystart & gt $locM, $metkaM"><img src="images/pic/phone/decline.png"></a></center>'
+		end
+	end
+}
+
+$phone_ring ={
+	clr
+	if hour < 10:
+		if minut > 9:pl'<center><b>0<<hour>> : <<minut>></b></center>'
+		if minut < 10:pl'<center><b>0<<hour>> : 0<<minut>></b></center>'
+	elseif hour > 9:
+		if minut > 9:pl'<center><b><<hour>> : <<minut>></b></center>'
+		if minut < 10:pl'<center><b><<hour>> : 0<<minut>></b></center>'
+	end
+	pl'<center><img src="images/pic/icon/icon_statusbar.png"><br></center>'
+	pl'<center><font size=6><<$caller>> calling</font></center>'
+	pl'<center><img src="<<$callerid>>.jpg"><br></center>'
+	pl''
+	pl''
+	pl''
+	pl''
+
+!	pl'<center><a href="exec:gt ''telefon'', ''start''"><img src="images/pic/phone/call_accept.png"></a>                               <a href="exec:gs ''stat''"><img src="images/pic/phone/decline.png"></a></center>'
+
+}
+
+$phone_call_receive = {
+	clr
+	if hour < 10:
+		if minut > 9:pl'<center><b>0<<hour>> : <<minut>></b></center>'
+		if minut < 10:pl'<center><b>0<<hour>> : 0<<minut>></b></center>'
+	elseif hour > 9:
+		if minut > 9:pl'<center><b><<hour>> : <<minut>></b></center>'
+		if minut < 10:pl'<center><b><<hour>> : 0<<minut>></b></center>'
+	end
+	pl'<center><img src="images/pic/icon/icon_statusbar.png"><br></center>'
+	pl'<center><font size=6>Talking to <<$caller>></font></center>'
+	pl'<center><img src="<<$callerid>>.jpg"><br></center>'
+	
+
+}
 $Phone_call = {
 	clr
 	if hour < 10:
@@ -31,19 +176,24 @@ $Phone_call = {
 		exit
 	elseif balans >= 4:
 		balans -= 4
-		clr
-		if hour < 10:
-			if minut > 9:pl'<center><b>0<<hour>> : <<minut>></b></center>'
-			if minut < 10:pl'<center><b>0<<hour>> : 0<<minut>></b></center>'
-		elseif hour > 9:
-			if minut > 9:pl'<center><b><<hour>> : <<minut>></b></center>'
-			if minut < 10:pl'<center><b><<hour>> : 0<<minut>></b></center>'
-		end
-		pl'<center><img src="images/pic/icon/icon_statusbar.png"><br></center>'
-		pl'<center><font size=6>The subscriber does not answer Mom</font></center>'
-		pl'<center><img src="images/pic/phone/icon_npc1.png"><br></center>'
-		pl'<center><a href="exec:dynamic $Phone_contactlist"><img src="images/pic/phone/decline.png"></a></center>'
+		$callerid = 'icon_npc1'
+		dynamic $phone_call_reject
 	end
+}
+
+$phone_call_reject = {
+	clr
+	if hour < 10:
+		if minut > 9:pl'<center><b>0<<hour>> : <<minut>></b></center>'
+		if minut < 10:pl'<center><b>0<<hour>> : 0<<minut>></b></center>'
+	elseif hour > 9:
+		if minut > 9:pl'<center><b><<hour>> : <<minut>></b></center>'
+		if minut < 10:pl'<center><b><<hour>> : 0<<minut>></b></center>'
+	end
+	pl'<center><img src="images/pic/icon/icon_statusbar.png"><br></center>'
+	pl'<center><font size=6>Calling....</font></center>'
+	pl'<center><img src="images/pic/phone/<<$callerid>>.png"><br></center>'
+	pl'<center><a href="exec:dynamic $Phone_contactlist"><img src="images/pic/phone/decline.png"></a></center>'
 }
 
 $Phone_megafon = {
@@ -75,8 +225,47 @@ $Phone_contactlist = {
 	pl'<center><font size=6>Contacts</font></center>'
 	pl'<center><img src="images/pic/icon/icon_call.png"><br></center>'
 	pl'<center><img src="images/pic/phone/icon_npc1.png">..................................................<a href="exec:dynamic $Phone_call"><b>Call</b></a></center>'
+	if hour >= 8 and hour <= 19:
+		if telalla > 0:
+			pl'<center><img src="images/pic/phone/icon_ira1.png">..................................................<a href="exec:$telsob = ''Alla'' & dynamic $objmobilaraz"><b>Call</b></a></center>'
+		end
+
+		if telmasha > 0:
+			pl'<center><img src="images/pic/phone/icon_masha.png">..................................................<a href="exec:$telsob = ''Masha'' & dynamic $objmobilaraz"><b>Call</b></a></center>'
+		end
+
+		if telkat > 0:
+			pl'<center><img src="images/pic/phone/icon_kat.png">..................................................<a href="exec:$telsob = ''Kate'' & dynamic $objmobilaraz"><b>Call</b></a></center>'
+		end
+
+		if bfA > 0 and svidanieA = 0:
+			pl'<center><img src="images/pic/phone/icon_NA.png">..................................................<a href="exec:dynamic $objmobilarazboy"><b>Call</b></a></center>'
+		end
+
+	else
+		if telalla > 0:
+			pl'<center><img src="images/pic/phone/icon_ira1.png">..................................................<a href="exec:$callerid = ''icon_ira1'' & dynamic $phone_call_reject"><b>Call</b></a></center>'
+		end
+
+		if telmasha > 0:
+			pl'<center><img src="images/pic/phone/icon_masha.png">..................................................<a href="exec:$callerid = ''icon_masha'' & dynamic $phone_call_reject"><b>Call</b></a></center>'
+		end
+
+		if telkat > 0:
+			pl'<center><img src="images/pic/phone/icon_kat.png">..................................................<a href="exec:$callerid = ''icon_kat'' & dynamic $phone_call_reject"><b>Call</b></a></center>'
+		end
+
+		if bfA > 0 and svidanieA = 0:
+			pl'<center><img src="images/pic/phone/icon_NA.png">..................................................<a href="exec:$callerid = ''icon_NA'' & dynamic $phone_call_reject"><b>Call</b></a></center>'
+		end
+	end
+	if nastjaqw > 0:
+		pl'<center><img src="images/pic/phone/icon_nastja.png">..................................................<a href="exec:gt ''telefon'', ''start''"><b>Call</b></a></center>'
+	end
+	
 	pl'<center><a href="exec:dynamic $Phone_menu"><img src="images/pic/icon/back.png"></a></center>'
 }
+
 $Phone_pictures = {
 	clr
 	if hour < 10:

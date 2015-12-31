@@ -59,7 +59,7 @@ $shower = {
 				'<center><img src="images/pics/wash2.jpg"></center>'
 				'You place the showerhead onto your pussy and a powerful jet of warm water begins to caress you. Soon you feel a warm wave covers your entire body and you begin to shudder as the orgasm overtakes you.'
 
-				act 'Get out and get dressed':mirror_steam = hour & gt $locM, $metkaM
+				act 'Get dressed and get out':mirror_steam = hour & gt $locM, $metkaM
 			end
 		elseif horny >= 40 and horny < 90:
 			act 'Send shower pussy':
@@ -72,7 +72,7 @@ $shower = {
 				'<center><img src="images/pics/wash2.jpg"></center>'
 				'You place the showerhead onto your pussy and a powerful jet of warm water begins to caress you. At first it feels very nice, but after a while it starts to be a little bit painful. You decide to stop masturbating.'
 
-				act 'Get out and get dressed':mirror_steam = hour & gt $locM, $metkaM
+				act 'Get dressed and get out':mirror_steam = hour & gt $locM, $metkaM
 			end
 		end	
 		
@@ -118,7 +118,7 @@ $bath = {
 		dynamic $brother_voyeurism
 
 		if leghair > 0 and stanok > 0 or lobok > 0 and stanok > 0:
-			act 'Get razor':gt 'vann', 'brit'
+			act 'Get razor':dynamic $brit
 		end
 
 		if obdysh = 1:vannmastrand = rand(0, 5)
@@ -140,7 +140,7 @@ $bath = {
 				'<center><img src="images/pics/wash7.jpg"></center>'
 				'You sent a water faucet on pussy and tight jet of warm water began to caress you. Soon you will feel like a warm wave covers your entire body and you began to shudder in orgasm.'
 
-				act 'Get out and get dressed':gt $locM, $metkaM
+				act 'Get dressed and get out':mirror_steam = hour & gt $locM, $metkaM
 			end
 		elseif horny >= 40 and horny < 90:
 			act 'Direct water on pussy':
@@ -155,7 +155,7 @@ $bath = {
 				'<center><img src="images/pics/wash7.jpg"></center>'
 				'You sent a water faucet on pussy and tight jet of warm water began to caress you. At first it was not even bad, but then sleep and arousal, even as it was not nice. So you stopped masturbating.'
 
-				act 'Get out and get dressed':gt $locM, $metkaM
+				act 'Get dressed and get out':mirror_steam = hour & gt $locM, $metkaM
 			end
 		end
 

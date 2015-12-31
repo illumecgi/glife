@@ -917,13 +917,13 @@ if $ARGS[0] = 'walklake2':
 								'<center><img src="images/img/Lake/walk2/walk7.jpg"></center>'
 								'Sated the men lower you down, and begin to masturbate on your face, you open your mouth and wait patiently. They both finish, pouring a gulf of sperm in your mouth and on your face and chest.'
 								
-								if horny >= 100
-								minut += 10
-								horny = 0
-								manna += 10
-								willpower += 10
-								orgasm += 1
-								'This pushes you over the edge and you kneel there covered in sperm, basking in blissed out orgasm.'
+								if horny >= 100:
+									minut += 10
+									horny = 0
+									manna += 10
+									willpower += 10
+									orgasm += 1
+									'This pushes you over the edge and you kneel there covered in sperm, basking in blissed out orgasm.'
 								end
 
 								act 'Leave':gt 'lake', 'start'

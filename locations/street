@@ -617,6 +617,7 @@ end
 
 dynamic $din_street_cum
 
+if rand (0,2) ! 0:dynamic $mobile_check
 
 --- street ---------------------------------
 

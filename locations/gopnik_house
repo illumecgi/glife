@@ -12,7 +12,7 @@ if gophouse = 0:
 
 	'A couple of guys pick up and drag you into another room, where they lay you on the sofa.'
 
-	act 'further':
+	act 'Further':
 		rape += 1
 		gang += 1
 		gophouse = 1

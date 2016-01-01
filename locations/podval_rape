@@ -4,7 +4,7 @@ gs 'stat'
 if podvalrape = 0:
 	'You ''re lying on a dirty mattress on the floor a dark basement smelling sewage, surrounded by empty bottles. Around you stand <<$kol_man_text>> and discuss among themselves "Well potsiki, pull the lot, who first pulls this slut?"'
 
-	act 'further':
+	act 'Further':
 		rape += 1
 		gang += 1
 		podvalrape = 1

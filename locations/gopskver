@@ -31,7 +31,7 @@ $d_dan_blowjob = {
 		dynamic $sexstart2
 		dynamic $sexcum
 		if horand > horny:horny = horny + 10 & 'You were not satisfied'
-		if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+		if horand <= horny:horny = 0 & orgasm += 1 & 'Despite the situation, all you feel is euphoria as a powerful orgasm overrides all your senses'
 			act 'Go home':gt'korrPar'
 	end
 }
@@ -84,7 +84,7 @@ $d_gop_triple_blow = {
 				dynamic $dinrandbj
 				'Vitek took his dick out of your mouth and in your face slapped warm stream of cum covering your face sharply smelling mucus layer.'
 
-				act 'further':
+				act 'Further':
 					cls
 					minut += 5
 					gs 'stat'
@@ -131,7 +131,7 @@ if kotovLoveQW > 0:
 
 		act 'Leave':gt 'gskver'
 
-		act 'drink beer':
+		act 'Drink beer':
 			cls
 			minut += 15
 			alko += 1
@@ -142,20 +142,20 @@ if kotovLoveQW > 0:
 			'<center><img src="images/pic/ParkBeer.jpg"></center>'
 			'You poured a beer and you began to drink with the guys.'
 
-			act 'further':gt $curloc
+			act 'Further':gt $curloc
 		end
 
 		if alko > 2:
 			'Witek offers go to his house, well, or continue to thump.'
 
-			act 'Go to Vit''ka.':
+			act 'Go with Vit''ka':
 				cls
 				minut += 15
 				gs 'stat'
 				'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
 				'You went through the square towards where he lives Vitek. Soon you with Vityok approached the dilapidated house , where lay crumpled heaps of clothes on the floor littered with empty bottles.'
 
-				act 'further.':gt 'kotovSex'
+				act 'Further':gt 'kotovSex'
 			end
 		end
 	elseif hour >= 20:
@@ -207,7 +207,7 @@ else
 
 				if dom >= 10:act 'go home':dom -= 10 & gt 'korrPar'
 
-				act 'kiss':
+				act 'Kiss':
 					cls
 					horny += 10
 					gs 'stat'
@@ -251,7 +251,7 @@ else
 
 				act 'Leave':gt 'gskver'
 
-				act 'drink beer':
+				act 'Drink beer':
 					cls
 					minut += 15
 					alko += 1
@@ -262,7 +262,7 @@ else
 					'<center><img src="images/pic/ParkBeer.jpg"></center>'
 					'You poured a beer and you began to drink with the guys.'
 
-					act 'further':gt $curloc
+					act 'Further':gt $curloc
 				end
 			elseif alko >= 4:
 				'You already rather tipsy and started having fun chatting with the guys.'
@@ -270,7 +270,7 @@ else
 				act 'Leave':gt 'gskver'
 
 				if GorSlut = 0:
-					act 'drink beer':
+					act 'Drink beer':
 						cls
 						minut += 15
 						alko += 1
@@ -282,7 +282,7 @@ else
 						'<center><img src="images/pic/ParkBeer.jpg"></center>'
 						'You poured a beer and you began to drink with the guys.'
 
-						act 'further':gt $curloc
+						act 'Further':gt $curloc
 					end
 				elseif GorSlut = 1:
 					'To you sat closer Shulga and started a conversation. "<<$name>>, they_say, that you give. it is true?"'

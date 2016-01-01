@@ -18,7 +18,7 @@ if Frend_num = 14:
 	KatjaOhrenet = 3
 end
 
-act 'further':
+act 'Further':
 	cls
 	gs 'stat'
 	'<center><img src="images/qwest/alter/placer/gopgang2.jpg"></center>'

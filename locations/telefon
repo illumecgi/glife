@@ -1,6 +1,11 @@
 # telefon
 $objmobilaraz = {
+	cls
 	cla
+	gs'din_bad'
+	$caller = '<<$telsob>>'
+	dynamic $phone_balance
+	dynamic $phone_call_receive
 	telotvet = rand(0, 10)
 	'"Yes, I''m listening," says a voice from the speaker.'
 
@@ -74,7 +79,13 @@ $objmobilaraz = {
 }
 
 $objmobilarazboy = {
+	cls
 	cla
+	gs'din_bad'
+	$caller = '<<$BoyA>>'
+	$callerid = 'images/pic/boy_face/'+boypicA+'.jpg'
+	dynamic $phone_balance
+	dynamic $phone_call_receive
 	telotvet = rand(0, 10)
 	'"Yes, I''m listening," says a voice from the speaker.'
 
@@ -390,5 +401,9 @@ if $ARGS[0] = 'boyC':
 	end
 end
 
+if $ARGS[0] = 'fin':
+	cla
+	gt $locM, $metkaM
+end
 --- telefon ---------------------------------
 

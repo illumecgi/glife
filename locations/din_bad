@@ -300,7 +300,7 @@ $Phone_pictures = {
 	if vanr_selfie[17] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (17).jpg''"><b>Self after showering number18</b></a>'
 	if vanr_selfie[18] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (18).jpg''"><b>Self after showering number19</b></a>'
 	if vanr_selfie[19] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (19).jpg''"><b>Self after showering number20</b></a>'
-	if vanr_selfie[20] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (20).jpg''"><b>Self after showering number21</b></a>'
+	!if vanr_selfie[20] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (20).jpg''"><b>Self after showering number21</b></a>'
 	if vanr_selfie[21] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (21).jpg''"><b>Self after showering number22</b></a>'
 	if vanr_selfie[22] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (22).jpg''"><b>Self after showering number23</b></a>'
 	if vanr_selfie[23] = 1:pl'<a href="exec:view''images/pic/phone/selfie/ero_selfie/vanr/s (23).jpg''"><b>Self after showering number24</b></a>'

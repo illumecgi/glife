@@ -234,7 +234,7 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 		'<center><img src="images/pics/wash3.jpg"></center>'
 		'You use a tampon.'
 
-		act 'Finish':gt $curloc
+		act 'Finish':gt $locM, $metkaM
 	end
 end
 

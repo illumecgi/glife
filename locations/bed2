@@ -12,7 +12,7 @@ if disable_autosave = 0:
 		savegame 'autosave_alt.sav'
 	end
 end
-gs 'starnie'
+
 gs 'clothing', 'strip'
 health += 5
 hapri = 0

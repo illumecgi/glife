@@ -324,18 +324,35 @@ if $shoplocation = 'clothing':
 
 	act 'Leave the women''s clothing department':gt 'shop', 'start'
 
+	if konki!1:
+		'A pair of ice-skates are available for 500 rubles.'
+		if money >= 500:
+			act 'Buy skates for 500 rubles':
+				cla
+				*clr
+				money = money - 500
+				konki = 1
+
+				'<center><img src="images/nigma/gor/lake/katok/konki_shop.jpg"></center>'
+				'You buy a pair of skates.'
+
+				act 'Move away from the counter':gt'shop'
+			end
+		end
+	end
+
 	!! This is not being done as a stock item because it needs to set the palto string value
 	if palto < 2:
 		'A winter coat is available for 10,000 rubles'
 		if money >= 10000:
-			act 'Purchase a winter coat for 10,000 rubles':
+			act 'Purchase a winter coat for 10,000 rubles.':
 				cla
 				money -= 10000
 				palto = 2
 				$palto = 'winter coat'
 				'You bought a coat.'
 
-				act 'Move away from the counter':gt 'shop'
+				act 'Move away from the counter':gt'shop'
 			end
 		end
 	end
@@ -349,7 +366,7 @@ if $shoplocation = 'clothing':
 				'Office clothes.'
 				'Costs 2,500 rubles.'
 
-				act 'Leave':gt 'shop'
+				act 'Leave':gt'shop'
 
 				act 'Buy':
 					cla
@@ -357,7 +374,7 @@ if $shoplocation = 'clothing':
 					profi[1] = 1
 					profiH[1] = 60
 					profiB[1] = bedra
-					gt 'shop', '<font color="green">You bought <b>Office clothes number 1</b>.</font>'
+					gt'shop', '<font color="green">You bought <b>Office clothes number 1</b>.</font>'
 				end
 			end
 		end
@@ -370,7 +387,7 @@ if $shoplocation = 'clothing':
 				'Office clothes.'
 				'Costs 2,500 rubles.'
 
-				act 'Leave':gt 'shop'
+				act 'Leave':gt'shop'
 
 				act 'Buy':
 					cla
@@ -378,7 +395,7 @@ if $shoplocation = 'clothing':
 					profi[2] = 1
 					profiH[2] = 60
 					profiB[2] = bedra
-					gt 'shop', '<font color="green">You bought <b>Office clothes number 2</b>.</font>'
+					gt'shop', '<font color="green">You bought <b>Office clothes number 2</b>.</font>'
 				end
 			end
 		end

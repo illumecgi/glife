@@ -194,8 +194,8 @@ $shulga_home_momggbang = {
 		end
 	end	
 }
-shulga_home_rnd = RAND(0,100)
-shd = 0
+	shulga_home_rnd = RAND(0,100)
+	shd = 0
 	if week < 6:
 		if hour >= 15 and hour < 23:
 			if shulga_home_rnd <= 3 and momslut >= 1 and sexev_momgg_count > 0:shd = 1
@@ -221,7 +221,7 @@ shd = 0
 
 	act 'Go to the large room': gt'shulga_room'
 	act 'Go to the room malenkuya': dynamic $shsroom
-	act 'Going to the bathroom': dynamic $shvanna
+	act 'Going to the bathroom': gt 'shulgahome', 'bath'
 	act 'Go to the kitchen': dynamic $shkuh
 	act 'Escape':shulgahomemark = 0 & minut += 1 & gt'pod_ezd','etaj_3'
 end
@@ -603,7 +603,15 @@ $vanna_ev2_sonya = {
 }
 
 !BATH-------------------------------------------------
-$shvanna = {
+if $ARGS[0] = 'bath':
+	CLOSE ALL
+
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+	cla
+	*clr
 	FColor = RGB(0,0,0)
 	BColor = RGB(255,255,255)
 	LColor = RGB(106,90,205)
@@ -614,57 +622,14 @@ $shvanna = {
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna.jpg"></center>'
 	'Bathroom close and very unpretentious. Above the sink hanging <a href="exec:GT ''mirror'',''start''">mirror</a>.'
 
-	act 'Get out of the bath': gt'shulgahome'
+	act 'Leave bathroom': gt'shulgahome'
 
-	act 'Wash the shower 15 min':
-		cls
-		dynamic $showerdin
-		minut += 15
-		horny = horny + 1
-		hapri = 0
-		mop = 1
-		sweat = -3
-		if frost > 0:frost = 0
-		gs'stat'
+dynamic $shower
+dynamic $tampon
+dynamic $quickwash
+dynamic $wearpan
+dynamic $basin
 
-		'<center><img src="images/pics/dush.jpg"></center>'
-		'You got into the shower and began to lather his body sponge. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
-
-		act 'Finish': dynamic $shvanna
-	end
-	if horny >= 50:
-		act 'Masturbate':
-			gt'selfplay'
-		end
-	end
-
-
-	if tampon > 0 and mesec > 0 and isprok = 0:
-		act 'Use a tampon (0:05)':
-			cla
-			*clr
-			tampon -= 1
-			isprok = 1
-			minut += 5
-			manna -= 5
-			'<center><img src="images/pics/wash3.jpg"></center>'
-			'You use a tampon.'
-
-			act 'Finish':dynamic $shvanna
-		end
-	end
-
-	if mop ! 1:
-		act 'Wash off cosmetics (0:15)':
-			cla
-			mop = 1
-			cumface = 0
-			minut += 15
-			'You washed off your makeup.'
-
-			act 'Finish':dynamic $shvanna
-		end
-	end
 
 	if cumfrot > 0:
 		act 'Scour semen from clothing':
@@ -676,24 +641,10 @@ $shvanna = {
 			'<center><img src="images/pic/frotsp.jpg"></center>'
 			'You rinse the semen stains from your clothes.'
 
-			act 'Finish': dynamic $shvanna
+			act 'Finish': gt 'shulgahome', 'bath'
 		end
 	end
 
-	if body_write > 0 or face_write > 0:
-		act 'Wash writing off your body':
-			cla
-			body_write = 0
-			face_write = 0
-			minut = minut + 5
-			gs'stat'
-			
-			!'You need a picture'
-			'You wiped indecent inscriptions.'
-
-			act 'Finish':dynamic $shvanna
-		end
-	end
 
 	if klisma = 1 and klismaday ! daystart:
 		act 'Give yourself an enema (0:05)':
@@ -705,7 +656,7 @@ $shvanna = {
 			'<center><img src="images/picV/klisma.jpg"></center>'
 			'You give yourself an enema and clean your intestines. Your ass is now ready for anal sex.'
 
-			act 'Finish':dynamic $shvanna
+			act 'Finish':gt 'shulgahome', 'bath'
 		end
 	end
 
@@ -720,9 +671,9 @@ $shvanna = {
 
 			'<center><img src="images/body/analplug.jpg"></center>'
 
-			'You bent over and took out the butt plug.' & !!0.2.6: Removed unneccessary var check
+			'You bent over and took out the butt plug.'
 
-			act 'Finish':dynamic $shvanna
+			act 'Finish':gt 'shulgahome', 'bath'
 		end
 	elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 		act 'Insert a butt plug (0:05)':
@@ -741,7 +692,7 @@ $shvanna = {
 			if butpluguse > 0:'You bent over and inserted the butt plug.'
 			if butpluguse = 0:butpluguse = 1 & '"If I don''t use it then why did I buy it!" you thought. You decided to take a closer look while thinking, "It is necessary to start developing my ass so I could have great adventures someday, you could even say a huge and thick adventures with crimson heads, uh, now I got carried away." You scratched your head. Then you directed it in your ass, it was a bit painful at first, but as soon as the widest part was plunged into the murky depths of your anus it became easier to push it all the way.'
 
-			act 'Leave':dynamic $shvanna
+			act 'Leave':gt 'shulgahome', 'bath'
 		end
 	end
 
@@ -758,7 +709,7 @@ $shvanna = {
 				'The test showed one band.'
 			end
 
-			act 'Further':dynamic $shvanna
+			act 'Further':gt 'shulgahome', 'bath'
 		end
 	end
 
@@ -774,7 +725,7 @@ $shvanna = {
 			'<center><img src="images/etogame/vibrator.jpg"></center>'
 			'You bend over the sink and take the vibrator out of your pussy.'
 
-			act 'Finish':dynamic $shvanna
+			act 'Finish':gt 'shulgahome', 'bath'
 		end
 	elseif vibrator = 1 and vibratorIN = 0:
 		act 'Insert the vibrator in your vagina (0:05)':
@@ -788,15 +739,19 @@ $shvanna = {
 			'<center><img src="images/etogame/vibrator.jpg"></center>'
 			'You bend over the sink and inserted the vibrator in your pussy.'
 
-			act 'Finish':dynamic $shvanna
+			act 'Finish':gt 'shulgahome', 'bath'
 		end
 	end
 
 !Sonia opening event in the bathroom
-	ev_sonya = RAND(0,100)
-	if ev_sonya >= 90 and soniaPS => 2 and sh_sonya_sexev > 2 and sonya_bazar_count > 0 and ev_sonya_count > 0: dynamic $vanna_ev_sonya
-	if ev_sonya <= 5 and soniaPS => 2 and serge_shulgin>=20 and sexev_sonya_count > 0 and week < 6 and hour >= 16 and hour <= 23 or ev_sonya <= 5 and soniaPS => 2 and serge_shulgin>=20 and sexev_sonya_count > 0 and week >= 6 and hour >= 10 and hour <= 23: dynamic $vanna_sexev_sonya
-}
+	if soniaPS >= 2:
+		if RAND(0,100) >= 90 and sh_sonya_sexev > 2 and sonya_bazar_count > 0 and ev_sonya_count > 0:
+			dynamic $vanna_ev_sonya
+		elseif RAND(0,90) <= 5 and serge_shulgin>=20 and sexev_sonya_count > 0 and week < 6 and hour >= 16 and hour <= 23 or ev_sonya <= 5 and serge_shulgin>=20 and sexev_sonya_count > 0 and week >= 6 and hour >= 10 and hour <= 23:
+			dynamic $vanna_sexev_sonya
+		end
+	end
+end
 !============================================================================================================!
 !KITCHEN--------------------------------------------------------------------------------------------------KITCHEN!
 !============================================================================================================!

@@ -489,14 +489,16 @@ $d_class_leason[1] = {
 }
 $d_class_leason = {
 	cla
-	if week = 2 and hour < 12 or week = 4 and hour < 12:
-		$teacher = 'Anatoly E.'
-		$teacher[1] = 'Anatoly E.'
-		$teacher[2] = 'Anatoly E.'
-	else
-		$teacher =  'teacher'
-		$teacher[1] = 'teacher'
-		$teacher[2] = 'teacher'
+	if hour <= 12:
+		if week = 2 or week = 4:
+			$teacher = 'Anatoly E.'
+			$teacher[1] = 'Anatoly E.'
+			$teacher[2] = 'Anatoly E.'
+		else
+			$teacher =  'teacher'
+			$teacher[1] = 'teacher'
+			$teacher[2] = 'teacher'
+		end
 	end
 	ivrand = RAND(1,2)
 	act'Listen attentively <<$teacher[1]>>':

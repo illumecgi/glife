@@ -999,7 +999,7 @@ $din_bigperemena = {
 		dynamic $d_rand_klass
 		exit
 	end
-	if hour > 12: 
+	if hour > 13: 
 		gt'gschool'
 		exit
 	end

@@ -505,7 +505,7 @@ gs'stat'
 				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/ass'+rand(1,11)+'.jpg"></center>'	
 				'The boys watched a few minutes and discuss how they have developed good your hole'
 				'Then you were allowed to go to the bathroom, freshen up.'
-				act 'Escape': dynamic $shvanna	
+				act 'Escape': gt 'shulgahome', 'bath'	
 		end
 	end		
 end

@@ -10,7 +10,7 @@ sweat += 1
 if tan > 0:tan -= 1
 if tabletki > 0:tabletki -= 1
 
-lashair ! 1:
+if lashair ! 1:
 	leghair += 1
 	lobok += 1
 end

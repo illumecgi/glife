@@ -128,9 +128,9 @@ if card_game_durak_clothes = 5:$cgd_clothes_set1 = '1'
 			act 'Further': dynamic $card_game_nosex
 		end	
 		if GorSlut >=3 and cg_clother_cum < 5:
-		rnd_cgd_win_select = RAND(0,100)
+			rnd_cgd_win_select = RAND(0,100)
 			if rnd_cgd_win_select <= 90:
-			rnd_win_sel = RAND(0,100) 
+				rnd_win_sel = RAND(0,100) 
 				if rnd_win_sel <= 40: 
 					act 'Further': dynamic $card_game_gsex
 				end
@@ -143,9 +143,9 @@ if card_game_durak_clothes = 5:$cgd_clothes_set1 = '1'
 			end
 		end
 		if GorSlut >=3 and cg_clother_cum >= 5:
-		rnd_cgd_win_select = RAND(0,100)
+			rnd_cgd_win_select = RAND(0,100)
 			if rnd_cgd_win_select <= 70:
-			rnd_win_sel = RAND(0,100) 
+				rnd_win_sel = RAND(0,100) 
 				if rnd_win_sel <= 40: 
 					act 'Further': dynamic $card_game_gsex
 				end
@@ -247,35 +247,35 @@ if card_game_durak_clothes = 5:$cgd_clothes_set1 = '1'
 			act 'Deal': dynamic $card_game_durak_play
 		end
 	end		
-'</td></tr></table>'	
+	'</td></tr></table>'	
 }
 !--------------------------!
 !when years lost cards!
 !==========================!
 !fulfillment of desire NPC (turnip GorSlut < 3, then a small show)
 $card_game_nosex_dance = {
-cls
-minut +=5
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/gif/dance'+rand(1,10)+'.gif"></center>'
-'You will include music and you try to move to the beat.'
-'<<$gop_text_npcr>> with interest watching you.'
-act 'Escape': gt 'shulga_room'
+	cls
+	minut +=5
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/gif/dance'+rand(1,10)+'.gif"></center>'
+	'You will include music and you try to move to the beat.'
+	'<<$gop_text_npcr>> with interest watching you.'
+	act 'Escape': gt 'shulga_room'
 }
 !making wishes NPC (turnip GorSlut < 3)
 $card_game_nosex = {
-cls
-minut +=5
-gs'stat'
-card_game_texta = RAND(0,6)
-			if card_game_texta = 0:$card_game_texta = 'I want you to suck me!'		
-			if card_game_texta = 1:$card_game_texta = 'Can I masturbate?'
-			if card_game_texta = 2:$card_game_texta = 'Kiss my dick'
-			if card_game_texta = 3:$card_game_texta = 'Take the cheek'
-			if card_game_texta = 4:$card_game_texta = 'I want to fuck you'
-			if card_game_texta = 5:$card_game_texta = 'I want to touch your pussy'
-			if card_game_texta = 6:$card_game_texta = 'Give your tits pomatsat'
-			if card_game_texta = 7:$card_game_texta = 'Let me touch boobs'
+	cls
+	minut +=5
+	gs'stat'
+	card_game_texta = RAND(0,6)
+		if card_game_texta = 0:$card_game_texta = 'I want you to suck me!'		
+		if card_game_texta = 1:$card_game_texta = 'Can I masturbate?'
+		if card_game_texta = 2:$card_game_texta = 'Kiss my dick'
+		if card_game_texta = 3:$card_game_texta = 'Take the cheek'
+		if card_game_texta = 4:$card_game_texta = 'I want to fuck you'
+		if card_game_texta = 5:$card_game_texta = 'I want to touch your pussy'
+		if card_game_texta = 6:$card_game_texta = 'Give your tits pomatsat'
+		if card_game_texta = 7:$card_game_texta = 'Let me touch boobs'
 	if cgd_win_vasya = 1:
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
 		'<<$shulga_name_rnd>> speaks: -"<<$card_game_texta>>"'
@@ -307,104 +307,104 @@ card_game_texta = RAND(0,6)
 }
 !when years lost cards (turnip GorSlut >= 3), sex
 $card_game_gsex = {
-cls
-minut +=2
-horny += 10
-if npcSex[10] = 0:npcSex[10] = 1 & guy += 1
-if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
-if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_1.jpg"></center>'
-'-"Once lost, Then let`s get undressed, look, what can be done", He says with a grin <<$rnd_cgd_win_npc>>'
-act 'Further': 
 	cls
-	minut +=3
+	minut +=2
 	horny += 10
+	if npcSex[10] = 0:npcSex[10] = 1 & guy += 1
+	if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
+	if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
 	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_2.jpg"></center>'
-	'<<$rnd_cgd_win_npc>> speaks: -"I`ve thought about it and decided to, I would share your body with all the guys and we`ll fuck you good!"'
-	'-"As well?, you win, and to fuck all?, how-It does not add up", with which-then you say a weak perturbation, still understanding, that vyebut.'
-	'-"And this is my dear, I won, my desire, and you need not to talk, and perform!", stroking your chest says <<$rnd_cgd_win_npc>>.'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_1.jpg"></center>'
+	'-"Once lost, Then let`s get undressed, look, what can be done", He says with a grin <<$rnd_cgd_win_npc>>'
 	act 'Further': 
 		cls
-		minut +=10
+		minut +=3
 		horny += 10
-		bj +=1
 		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_3.jpg"></center>'
-'You lay on your back. <<$shulga_name_rnd>> and Dan went to close on the sides of your body and started to give your mouth, Vitek and is located between the legs. 
-He immediately fell to burrow your lips and began to lick the clitoris. He then introduced his finger.
-You suck a thick head of Vaska, Dan and his hand jerked off. Then you moved your hands both members and began to fondle them simultaneously. 
-Then he took two terms in the mouth so deep, as far as possible. 
-And guys stroking your hair and breasts. It was something! You were so excited, We could not tolerate, and you really wanted to finish.'
-if horny >=70:
-	orgasm += 1
-	horny = 0
-	manna += 35
-	mastr +=1
-	'To finish it take you a minute and a half. It was such a huge wave of orgasm, you moaned in a voice chat, in spite of the penis into the mouth.'
-	'You fought in convulsions, just not afraid to tear Vitka`s head, you squeezed his legs, he continued to lick you, until you have calmed down a little.'
-end	
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_2.jpg"></center>'
+		'<<$rnd_cgd_win_npc>> speaks: -"I`ve thought about it and decided to, I would share your body with all the guys and we`ll fuck you good!"'
+		'-"As well?, you win, and to fuck all?, how-It does not add up", with which-then you say a weak perturbation, still understanding, that vyebut.'
+		'-"And this is my dear, I won, my desire, and you need not to talk, and perform!", stroking your chest says <<$rnd_cgd_win_npc>>.'
 		act 'Further': 
 			cls
 			minut +=10
 			horny += 10
-			sex += 1
+			bj +=1
 			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_4.jpg"></center>'
-			'Then you turned on his stomach and put on her knees.
-And so, Dan became <<$gop_sextext1>> I have cancer, but this time you suck Shulga and Vitka. 
-Do you like it when you <<$gop_sextext3>> behind. Therefore, you are very excited and moaning, I do not hesitate one, showing it.'
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_3.jpg"></center>'
+			'You lay on your back. <<$shulga_name_rnd>> and Dan went to close on the sides of your body and started to give your mouth, Vitek and is located between the legs. 
+			He immediately fell to burrow your lips and began to lick the clitoris. He then introduced his finger.
+			You suck a thick head of Vaska, Dan and his hand jerked off. Then you moved your hands both members and began to fondle them simultaneously. 
+			Then he took two terms in the mouth so deep, as far as possible. 
+			And guys stroking your hair and breasts. It was something! You were so excited, We could not tolerate, and you really wanted to finish.'
+			if horny >=70:
+				orgasm += 1
+				horny = 0
+				manna += 35
+				mastr +=1
+				'To finish it take you a minute and a half. It was such a huge wave of orgasm, you moaned in a voice chat, in spite of the penis into the mouth.'
+				'You fought in convulsions, just not afraid to tear Vitka`s head, you squeezed his legs, he continued to lick you, until you have calmed down a little.'
+			end	
 			act 'Further': 
 				cls
 				minut +=10
 				horny += 10
+				sex += 1
 				gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_5.jpg"></center>'
-				'First you tried simultaneously podmahivat booty and gently suck. 
-But then Dan is no longer restrained and vigorously began to press your body to yourself. Your priest shuddered and flapped, when it hits the groin
-You are fully surrendered to him and so only had time to lick a member of the Victor, then Shulga.'
+				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_4.jpg"></center>'
+				'Then you turned on his stomach and put on her knees.
+				And so, Dan became <<$gop_sextext1>> I have cancer, but this time you suck Shulga and Vitka. 
+				Do you like it when you <<$gop_sextext3>> behind. Therefore, you are very excited and moaning, I do not hesitate one, showing it.'
 				act 'Further': 
 					cls
 					minut +=10
-					horny += 20
-					throat += 1
+					horny += 10
 					gs'stat'
-					'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_6.jpg"></center>'
-					'Dan hands clenched cheeks and you force your head planted on his dick because, you rested his nose in his hairy scrotum. From surprise you coughing. Convulsively swallowing, zahripev, twitched in all directions, trying to break free.
-He pulled out a member of your mouth. You gasped, but you do not inhale given, right there in the vacant throat he puts his penis Vitek. You, choking, hiccupped, sobbing, like a child. Vitka felt sorry for you, and he loosened pressure. 
-You rate this, gratefully looked him in the eye, become, smacking carefully handle <<$liptalk>> head and tongue.
-Without stopping to jump on a limb Shulga, only increasing the pace, We tried to sit down faster and deeper.'
-if horny >=70:
-	orgasm += 1
-	horny = 0
-	manna += 35
-	'You groaned aloud. Your face broke into a pained-the sweet grimace. Shaking his head from side to side, You looked around half-closed, unseeing eyes. 
-you <<$gop_sextext2>> more than an hour, and you are the first time in the evening was ending.'
-end
+					'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_5.jpg"></center>'
+					'First you tried simultaneously podmahivat booty and gently suck. 
+					But then Dan is no longer restrained and vigorously began to press your body to yourself. Your priest shuddered and flapped, when it hits the groin
+					You are fully surrendered to him and so only had time to lick a member of the Victor, then Shulga.'
 					act 'Further': 
 						cls
-						minut +=5
-						cumlip += 1
-						cumface +=1
-						facial += 1
-						son -=2
+						minut +=10
+						horny += 20
+						throat += 1
 						gs'stat'
-						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_7.jpg"></center>'
-						'You put on the floor and surrounded with different sides, boys began to pour cum on your face.
-You were so long, without giving any signs of life. Then stir, rose heavily and, He came to the couch, flopped on him, stretching her legs. 
-What do you look-the detachment. uncombed <<$hair2>>. Looking Away. Face, wreathed smeared makeup mixed with sperm.'
+						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_6.jpg"></center>'
+						'Dan hands clenched cheeks and you force your head planted on his dick because, you rested his nose in his hairy scrotum. From surprise you coughing. Convulsively swallowing, zahripev, twitched in all directions, trying to break free.
+						He pulled out a member of your mouth. You gasped, but you do not inhale given, right there in the vacant throat he puts his penis Vitek. You, choking, hiccupped, sobbing, like a child. Vitka felt sorry for you, and he loosened pressure. 
+						You rate this, gratefully looked him in the eye, become, smacking carefully handle <<$liptalk>> head and tongue.
+						Without stopping to jump on a limb Shulga, only increasing the pace, We tried to sit down faster and deeper.'
+						if horny >=70:
+							orgasm += 1
+							horny = 0
+							manna += 35
+							'You groaned aloud. Your face broke into a pained-the sweet grimace. Shaking his head from side to side, You looked around half-closed, unseeing eyes. 
+							you <<$gop_sextext2>> more than an hour, and you are the first time in the evening was ending.'
+						end
+						act 'Further': 
+							cls
+							minut +=5
+							cumlip += 1
+							cumface +=1
+							facial += 1
+							son -=2
+							gs'stat'
+							'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/gsex/ev1_7.jpg"></center>'
+							'You put on the floor and surrounded with different sides, boys began to pour cum on your face.
+							You were so long, without giving any signs of life. Then stir, rose heavily and, He came to the couch, flopped on him, stretching her legs. 
+							What do you look-the detachment. uncombed <<$hair2>>. Looking Away. Face, wreathed smeared makeup mixed with sperm.'
 							act 'Escape': gt 'shulga_room'
+						end
 					end
 				end
 			end
 		end
-	end		
-end
+	end
 }
 !when years lost cards (turnip GorSlut >= 3), rough sex
 $card_game_rough_sex = {
-rnd_img_rough_bj = rand(1,10)
+	rnd_img_rough_bj = rand(1,10)
 	if rnd_img_rough_bj = 1:$rnd_img_rough_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/bj1.gif" width="702" height="527">'
 	if rnd_img_rough_bj = 2:$rnd_img_rough_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/bj2.gif" width="702" height="420">'
 	if rnd_img_rough_bj = 3:$rnd_img_rough_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/bj3.gif" width="500" height="593">'
@@ -415,7 +415,7 @@ rnd_img_rough_bj = rand(1,10)
 	if rnd_img_rough_bj = 8:$rnd_img_rough_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/bj8.gif" width="574" height="566">'
 	if rnd_img_rough_bj = 9:$rnd_img_rough_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/bj9.gif" width="750" height="414">'	
 	if rnd_img_rough_bj = 10:$rnd_img_rough_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/bj10.gif" width="500" height="500">'	
-rnd_img_rough_sex1 = rand(1,10)
+	rnd_img_rough_sex1 = rand(1,10)
 	if rnd_img_rough_sex1 = 1:$rnd_img_rough_sex1 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex1_1.gif" width="614" height="576">'
 	if rnd_img_rough_sex1 = 2:$rnd_img_rough_sex1 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex1_2.gif" width="750" height="459">'
 	if rnd_img_rough_sex1 = 3:$rnd_img_rough_sex1 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex1_3.gif" width="800" height="428">'
@@ -426,7 +426,7 @@ rnd_img_rough_sex1 = rand(1,10)
 	if rnd_img_rough_sex1 = 8:$rnd_img_rough_sex1 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex1_8.gif" width="750" height="387">'
 	if rnd_img_rough_sex1 = 9:$rnd_img_rough_sex1 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex1_9.gif" width="660" height="576">'	
 	if rnd_img_rough_sex1 = 10:$rnd_img_rough_sex1 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex1_10.gif" width="640" height="517">'		
-rnd_img_rough_sex2 = rand(1,10)
+	rnd_img_rough_sex2 = rand(1,10)
 	if rnd_img_rough_sex2 = 1:$rnd_img_rough_sex2 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex2_1.gif" width="600" height="476">'
 	if rnd_img_rough_sex2 = 2:$rnd_img_rough_sex2 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex2_2.gif" width="720" height="405">'
 	if rnd_img_rough_sex2 = 3:$rnd_img_rough_sex2 = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sexrough/sex2_3.gif" width="800" height="424">'
@@ -506,21 +506,21 @@ gs'stat'
 				'The boys watched a few minutes and discuss how they have developed good your hole'
 				'Then you were allowed to go to the bathroom, freshen up.'
 				act 'Escape': gt 'shulgahome', 'bath'	
+			end
 		end
-	end		
-end
+	end
 }
 $card_game_casual_sex = {
-cls
-minut +=5
-sub += 1
-gs'stat'
-'-"All <<$gop_name_gg>> lost, now you will be answerable for all the garbage that you invented us", speaks <<$rnd_cgd_win_npc>>'''
-'-"Come guessing, anyway but to fuck me you have more desires can not be", snidely say you.'
-'-"But you`re wrong!, my desire is: Now you go out on the street, We`ll find you something of an unknown man, and given it to him right there!"'
-'-"Whore, and if you do not ahuel hour?, I suggested that you do not fuck anyone or..."'
-'-"You`re still the same damn, garbage all we invented, Now rap, and indeed what you`re here for me vyebyvaeshsya go Accomplish!"'
-'You had no choice, have to go to fulfill.'
+	cls
+	minut +=5
+	sub += 1
+	gs'stat'
+	'-"All <<$gop_name_gg>> lost, now you will be answerable for all the garbage that you invented us", speaks <<$rnd_cgd_win_npc>>'''
+	'-"Come guessing, anyway but to fuck me you have more desires can not be", snidely say you.'
+	'-"But you`re wrong!, my desire is: Now you go out on the street, We`ll find you something of an unknown man, and given it to him right there!"'
+	'-"Whore, and if you do not ahuel hour?, I suggested that you do not fuck anyone or..."'
+	'-"You`re still the same damn, garbage all we invented, Now rap, and indeed what you`re here for me vyebyvaeshsya go Accomplish!"'
+	'You had no choice, have to go to fulfill.'
 	act 'Further':
 		cls
 		minut +=10
@@ -564,23 +564,23 @@ gs'stat'
 !===================!
 !When the years won, make a wish (turnip GorSlut < 3) (clothing stall)
 $card_game_ggwin_clother = {
-cls
-minut +=3
-gs'stat'
+	cls
+	minut +=3
+	gs'stat'
 	if cgd_loss_vasya = 1:
-	$loss_npc_name = 'Vasya'
-	$loss_npc_name2 = 'Vasily'
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
+		$loss_npc_name = 'Vasya'
+		$loss_npc_name2 = 'Vasily'
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
 	end
 	if cgd_loss_den = 1:
-	$loss_npc_name = 'Dan'
-	$loss_npc_name2 = 'Dan'	
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
+		$loss_npc_name = 'Dan'
+		$loss_npc_name2 = 'Dan'	
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
 	end
 	if cgd_loss_vitek = 1:
-	$loss_npc_name = 'Vitya'
-	$loss_npc_name2 = 'Vitka'
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
+		$loss_npc_name = 'Vitya'
+		$loss_npc_name2 = 'Vitka'
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
 	end
 	'<<$loss_npc_img>>'
 	'You grin on his lips say: -"<<$loss_npc_name>> You blew today, Now you will carry out my desire!"'
@@ -593,18 +593,18 @@ gs'stat'
 		minut +=15
 		gs'stat'
 		rnd_cg_img_jelanie = RAND(1,12)
-			if rnd_cg_img_jelanie = 1:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j1.gif" width="710" height="600">'
-			if rnd_cg_img_jelanie = 2:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j2.gif" width="646" height="560">'
-			if rnd_cg_img_jelanie = 3:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j3.gif" width="660" height="412">'
-			if rnd_cg_img_jelanie = 4:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j4.gif" width="660" height="412">'
-			if rnd_cg_img_jelanie = 5:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j5.gif" width="667" height="521">'
-			if rnd_cg_img_jelanie = 6:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j6.gif" width="692" height="508">'
-			if rnd_cg_img_jelanie = 7:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j7.gif" width="628" height="580">'
-			if rnd_cg_img_jelanie = 8:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j8.gif" width="507" height="567">'
-			if rnd_cg_img_jelanie = 9:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j9.gif" width="622" height="510">'
-			if rnd_cg_img_jelanie = 10:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j10.gif" width="532" height="590">'
-			if rnd_cg_img_jelanie = 11:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j11.gif" width="506" height="594">'
-			if rnd_cg_img_jelanie = 12:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j12.gif" width="426" height="598">'
+		if rnd_cg_img_jelanie = 1:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j1.gif" width="710" height="600">'
+		if rnd_cg_img_jelanie = 2:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j2.gif" width="646" height="560">'
+		if rnd_cg_img_jelanie = 3:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j3.gif" width="660" height="412">'
+		if rnd_cg_img_jelanie = 4:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j4.gif" width="660" height="412">'
+		if rnd_cg_img_jelanie = 5:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j5.gif" width="667" height="521">'
+		if rnd_cg_img_jelanie = 6:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j6.gif" width="692" height="508">'
+		if rnd_cg_img_jelanie = 7:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j7.gif" width="628" height="580">'
+		if rnd_cg_img_jelanie = 8:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j8.gif" width="507" height="567">'
+		if rnd_cg_img_jelanie = 9:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j9.gif" width="622" height="510">'
+		if rnd_cg_img_jelanie = 10:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j10.gif" width="532" height="590">'
+		if rnd_cg_img_jelanie = 11:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j11.gif" width="506" height="594">'
+		if rnd_cg_img_jelanie = 12:$rnd_cg_img_jelanie = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/j12.gif" width="426" height="598">'
 			
 		'<center>The loser had to fulfill your desire.</center>'
 		'<<$loss_npc_name2>> We show the guys that have done on your mobile phone:'
@@ -616,23 +616,23 @@ gs'stat'
 }
 !When the years won, make a wish (turnip GorSlut < 3) (shake genitals)
 $card_game_ggwin_penis = {
-cls
-minut +=5
-gs'stat'
+	cls
+	minut +=5
+	gs'stat'
 	if cgd_loss_vasya = 1:
-	$loss_npc_name = 'Vasya'
-	$loss_npc_name2 = 'Vasily'
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
+		$loss_npc_name = 'Vasya'
+		$loss_npc_name2 = 'Vasily'
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
 	end
 	if cgd_loss_den = 1:
-	$loss_npc_name = 'Dan'
-	$loss_npc_name2 = 'Dan'	
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
+		$loss_npc_name = 'Dan'
+		$loss_npc_name2 = 'Dan'	
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
 	end
 	if cgd_loss_vitek = 1:
-	$loss_npc_name = 'Vitya'
-	$loss_npc_name2 = 'Vitka'
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
+		$loss_npc_name = 'Vitya'
+		$loss_npc_name2 = 'Vitka'
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
 	end
 	'<<$loss_npc_img>>'
 	'You grin on his lips say: -"<<$loss_npc_name>> You blew, Now you will carry out my desire!"'
@@ -642,9 +642,9 @@ gs'stat'
 	'The boys did not give you a personal reply, desire kid liked and popular explained <<$loss_npc_name2>>, card debt that must be fulfilled.'
 	act 'Further':
 		rnd_cg_spenis = RAND(1,3)
-			if rnd_cg_spenis = 1:$rnd_cg_spenis = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/p1.gif" width="638" height="598">'
-			if rnd_cg_spenis = 2:$rnd_cg_spenis = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/p2.gif" width="706" height="592">'
-			if rnd_cg_spenis = 3:$rnd_cg_spenis = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/p3.gif" width="556" height="526">'
+		if rnd_cg_spenis = 1:$rnd_cg_spenis = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/p1.gif" width="638" height="598">'
+		if rnd_cg_spenis = 2:$rnd_cg_spenis = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/p2.gif" width="706" height="592">'
+		if rnd_cg_spenis = 3:$rnd_cg_spenis = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/p3.gif" width="556" height="526">'
 		cls
 		minut +=15
 		gs'stat'
@@ -658,24 +658,24 @@ gs'stat'
 }
 !When the years won, make a wish (turnip GorSlut > 3) (cum on the victim)
 $card_game_ggwin_clothercum = {
-cls
-minut +=5
-cg_clother_cum +=1 
-gs'stat'
+	cls
+	minut +=5
+	cg_clother_cum +=1 
+	gs'stat'
 	if cgd_loss_vasya = 1:
-	$loss_npc_name = 'Vasya'
-	$loss_npc_name2 = 'Vasily'
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
+		$loss_npc_name = 'Vasya'
+		$loss_npc_name2 = 'Vasily'
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
 	end
 	if cgd_loss_den = 1:
-	$loss_npc_name = 'Dan'
-	$loss_npc_name2 = 'Dan'	
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
+		$loss_npc_name = 'Dan'
+		$loss_npc_name2 = 'Dan'	
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
 	end
 	if cgd_loss_vitek = 1:
-	$loss_npc_name = 'Vitya'
-	$loss_npc_name2 = 'Vitka'
-	$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
+		$loss_npc_name = 'Vitya'
+		$loss_npc_name2 = 'Vitka'
+		$loss_npc_img = '<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
 	end
 	'<<$loss_npc_img>>'
 	'You barely-simmer, say: -"<<$loss_npc_name>> you lose nothing, ahah, my desire is not easy!"'
@@ -691,8 +691,8 @@ gs'stat'
 		bj +=1
 		gs'stat'
 		rnd_cg_img_street_bj = RAND(1,2)
-			if rnd_cg_img_street_bj = 1:$rnd_cg_img_street_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/bj1.gif" width="674" height="556">'
-			if rnd_cg_img_street_bj = 2:$rnd_cg_img_street_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/bj2.gif" width="636" height="504">'
+		if rnd_cg_img_street_bj = 1:$rnd_cg_img_street_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/bj1.gif" width="674" height="556">'
+		if rnd_cg_img_street_bj = 2:$rnd_cg_img_street_bj = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/bj2.gif" width="636" height="504">'
 		'You`re all together for about five minutes looking for the victim. Then a couple of minutes looking for a quiet place, both found quickly and skillfully began to suck dick <<$loss_npc_name2>>'
 		'Guys acne and went commenting filmed on camera:'
 		'<center><<$rnd_cg_img_street_bj>></center>'
@@ -702,8 +702,8 @@ gs'stat'
 			minut +=5
 			gs'stat'
 			rnd_cg_img_street_cum = RAND(1,2)
-				if rnd_cg_img_street_cum = 1:$rnd_cg_img_street_cum = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/cum1.gif" width="552" height="594">'
-				if rnd_cg_img_street_cum = 2:$rnd_cg_img_street_cum = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/cum2.gif" width="700" height="600">'	
+			if rnd_cg_img_street_cum = 1:$rnd_cg_img_street_cum = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/cum1.gif" width="552" height="594">'
+			if rnd_cg_img_street_cum = 2:$rnd_cg_img_street_cum = '<img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/street_event/cum2.gif" width="700" height="600">'	
 			'<center><<$rnd_cg_img_street_cum>></center>'
 			'The boys did not stop to shoot everything to mobile.'
 			'But because of your comments and vulgar jokes, quality turned lousy, as all could not help but laugh and operator MOBILE shaking hands.'
@@ -715,26 +715,26 @@ gs'stat'
 }
 !When the years won, make a wish (turnip GorSlut >= 3), lick
 $card_game_gg_lick = {
-cls
-minut +=1
-gs'stat'
+	cls
+	minut +=1
+	gs'stat'
 	if cgd_loss_vasya = 1:
 		$lick_name_npc = 'Vasya'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
-	'You voiced their desire: -"I want you to lick my pussy"'
-	'Vaska did not want to fulfill that desire, But the guys liked it and Vasily kicks sent him to perform.'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
+		'You voiced their desire: -"I want you to lick my pussy"'
+		'Vaska did not want to fulfill that desire, But the guys liked it and Vasily kicks sent him to perform.'
 	end
 	if cgd_loss_den = 1:
 		$lick_name_npc = 'Dan'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
-	'You voiced their desire: -"You must otlizat my pussy"'
-	'Dan did not want to fulfill this wish, but again lost, it is necessary to perform.'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
+		'You voiced their desire: -"You must otlizat my pussy"'
+		'Dan did not want to fulfill this wish, but again lost, it is necessary to perform.'
 	end
 	if cgd_loss_vitek = 1:
 		$lick_name_npc = 'Vitek'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
-	'You voiced their desire: -"Lick my pussy"'
-	'Vitek gladly began to fulfill that desire.'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
+		'You voiced their desire: -"Lick my pussy"'
+		'Vitek gladly began to fulfill that desire.'
 	end
 	act 'Further':
 		cls
@@ -743,38 +743,38 @@ gs'stat'
 		gs'stat'
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/lick'+rand(1,6)+'.jpg"></center>'
 		'Minutes 10 I worked <<$lick_name_npc>>, I am trying to bring you to orgasm.'
-			if horny >=70:
-				orgasm += 1
-				horny = 0
-				'The abundance of surging emotions you with a loud groan finished.'
-			elseif horny <70:
-				'<<$lick_name_npc>> like doing things right, you excited, But the end you can not.'
-			end		
+		if horny >=70:
+			orgasm += 1
+			horny = 0
+			'The abundance of surging emotions you with a loud groan finished.'
+		elseif horny <70:
+			'<<$lick_name_npc>> like doing things right, you excited, But the end you can not.'
+		end		
 		act 'Escape': gt 'shulga_room'
 	end		
 }
 !When the years won, make a wish (turnip GorSlut >= 3), sex
 $card_game_gg_sex = {
-cls
-minut +=1
-gs'stat'
+	cls
+	minut +=1
+	gs'stat'
 	if cgd_loss_vasya = 1:
 		$lick_name_npc = 'Vasya'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
-	'You voiced their desire: -"I want, What would you have me thoroughly fucked!"'
-	'Vaska`s eyes lit up, he liked your desire, grab you by the arm dragged him to the couch.'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
+		'You voiced their desire: -"I want, What would you have me thoroughly fucked!"'
+		'Vaska`s eyes lit up, he liked your desire, grab you by the arm dragged him to the couch.'
 	end
 	if cgd_loss_den = 1:
 		$lick_name_npc = 'Dan'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
-	'You voiced their desire: -"Well fuck me"'
-	'-"That I can", Dan responds with joy and begins to undress you'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/den.jpg"></center>'
+		'You voiced their desire: -"Well fuck me"'
+		'-"That I can", Dan responds with joy and begins to undress you'
 	end
 	if cgd_loss_vitek = 1:
 		$lick_name_npc = 'Vitek'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
-	'You voiced their desire: -"Fuck me properly"'
-	'Witek grabbed you by the arm and dragged her to the bed.'
+		'<center><img src="images/zsoft/pod_ezd/shulgahome/vitek.jpg"></center>'
+		'You voiced their desire: -"Fuck me properly"'
+		'Witek grabbed you by the arm and dragged her to the bed.'
 	end
 	act 'Further':
 		cls
@@ -786,16 +786,16 @@ gs'stat'
 		'Without any sentimentality <<$lick_name_npc>> You straightened and took a measured <<$gop_sextext1>>.'
 		dynamic $gg_sex_orgasm	
 		act 'Further':
-		cls
-		minut +=5
-		cumbelly += 1
-		cumfrot += 1
-		gs'stat'		
-		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/cum'+rand(1,6)+'.jpg"></center>'
-		'For a long time he could not tolerate, and ended on you'	
+			cls
+			minut +=5
+			cumbelly += 1
+			cumfrot += 1
+			gs'stat'		
+			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/sex/cum'+rand(1,6)+'.jpg"></center>'
+			'For a long time he could not tolerate, and ended on you'	
 			act 'Escape': gt 'shulga_room'
 		end
-	end		
+	end
 }
 
 --- cardgame_durak ---------------------------------

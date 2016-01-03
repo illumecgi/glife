@@ -214,13 +214,13 @@ $objstatistika = {
 	end
 
 	if chess_rank > 0:
-		if chess_rank = 1:pl'You have 4First level chess'
-		if chess_rank = 2:pl'You have 3First level chess'
-		if chess_rank = 3:pl'You have 2First level chess'
-		if chess_rank = 4:pl'You have 1First level chess'
-		if chess_rank = 5:pl'You are a candidate master in chess'
-		if chess_rank = 6:pl'You are a master of sports in chess'
-		if chess_rank = 7:pl'You Grandmaster Chess'
+		if chess_rank = 1:pl'You have mastered the basics of chess'
+		if chess_rank = 2:pl'You are starting to get good at chess'
+		if chess_rank = 3:pl'You are a good chess player'
+		if chess_rank = 4:pl'You are an excellent chess player'
+		if chess_rank = 5:pl'You are a candidate for chess master'
+		if chess_rank = 6:pl'You are a chess master'
+		if chess_rank = 7:pl'You are a chess Grandmaster'
 	end
 	if chess_world_rank > 0:
 		if chess_world_rank = 1:pl'The title of FIDE Master Chess'
@@ -313,7 +313,7 @@ $objstatistika = {
 		pl 'In the porn industry you were known as <<$pfname>>. You have retired from the porn business.'
 	elseif film > 0:
 		pl 'In the porn industry you are known as <<$pfname>>. You starred in <<film>> pornos.'
-		pl '<<$pfilmhistory>>'
+		pl 'View <a href="exec:dynamic $pfilmhis">film history</a>'
 		nl
 	end
 
@@ -332,6 +332,14 @@ $objstatistika = {
 	if girl > 0:pl 'You have had sex with <<girl>> girls.'
 	if lesbian > 0:pl 'You have had lesbian sex <<lesbian>> times.'
 	if sexfuta > 0:pl 'You''ve had sex with tgirls <<sexfuta>> times.'
+}
+
+$pfilmhis = {
+	clr
+	pl '<center><b>Porn film history</b></center>'
+	pl '<a href="exec:dynamic $objstatistika">Return</a>'
+	pl '<<$pfilmhistory>>'
+	pl '<a href="exec:dynamic $objstatistika">Return</a>'
 }
 
 $reputation = {

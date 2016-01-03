@@ -1035,14 +1035,14 @@ if $ARGS[0] = 'postvideo':
 	film += 1
 	gs 'stat'
 
-	if pfilm = 1:pfcash = 2000 & $filmtext = '?where you jerked a guy and he came on your tits.'
-	if pfilm = 2:pfcash = 3000 & $filmtext = '?where you blew a guy and got facialized.'
-	if pfilm = 3:pfcash = 5000 & $filmtext = '?where you blew and fucked guy, then got a facial.'
-	if pfilm = 4:pfcash = 6000 & $filmtext = '?where you blew and fucked guy (pussy and ass), then got facialized.'
-	if pfilm = 5:pfcash = 7000 & $filmtext = '?where you two guys fucked you in all you holes.'
-	if pfilm = 6:pfcash = 9000 & $filmtext = '?where you two guys fucked you in all your holes with double penetration.'
+	if pfilm = 1:pfcash = 2000 & $filmtext = 'Where you jerked a guy and he came on your tits.'
+	if pfilm = 2:pfcash = 3000 & $filmtext = 'Where you blew a guy and got facialized.'
+	if pfilm = 3:pfcash = 5000 & $filmtext = 'Where you blew and fucked guy, then got a facial.'
+	if pfilm = 4:pfcash = 6000 & $filmtext = 'Where you blew and fucked guy (pussy and ass), then got facialized.'
+	if pfilm = 5:pfcash = 7000 & $filmtext = 'Where two guys fucked you in all your holes.'
+	if pfilm = 6:pfcash = 9000 & $filmtext = 'Where two guys fucked you in all your holes inc. double penetration.'
 
-	$pfilmhistory += film + ')?shot on '+year+'.'+$month+'.'+day+':'+$filmtext+'<br>'
+	$pfilmhistory += film + ')shot on '+day+' '+$month+' '+year+': '+$filmtext+'<br>'
 
 	if pfilmNOPAY = 0:
 		money += pfcash

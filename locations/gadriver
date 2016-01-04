@@ -98,7 +98,7 @@ elseif temp = 3 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and su
 			
 			dynamic $analsexrude
 			
-			act 'Finish':minut += 10 & gt'gadukino'
+			act 'Leave':minut += 10 & gt'gadukino'
 		end
 	else
 		act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
@@ -342,9 +342,8 @@ if $ARGS[0] = 'Gadbitch':
 						tan += 3
 						'You body is smeared with cream for sunburn and went sunbathing.'
 					end
-					act 'Further':minut += 5 & gt 'Gadriver', 'Gadbitch'
-				end
 					act 'Finish':
+
 						if mirainriver = 0 and mitkasextimes >= 13 and temp = 0 and hour >= 8 and hour < 20:
 							cls
 							minut += 30
@@ -363,7 +362,7 @@ if $ARGS[0] = 'Gadbitch':
 							gang += 1
 							swallow += RAND(0,1)
 							gs 'stat'
-							
+								
 							'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex15.jpg"></center>'
 							'After a while, you hear men`s voices, which is rapidly approaching, and in a couple of minutes before you emerge village boys. Seeing you, They perk up considerably and in a few minutes, despite all your sluggish protests, You begin to have all the holes...'
 							
@@ -388,13 +387,14 @@ if $ARGS[0] = 'Gadbitch':
 							horny = RAND(50,100)
 							dom += 5
 							gs 'stat'
-							
+								
 							'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex16.jpg"></center>'
 							'After a while, you hear men`s voices, which is rapidly approaching, and in a couple of minutes before you emerge village boys. Seeing Miroslav, they immediately begin to smile obscenely, and in a couple of minutes, You did not hesitate, laid it on the sand and start to fuck in all the cracks...'
 							
 							act 'Finish':minut += 5 & gt'Gadriver', 'Gadbitch'
 						else
-							minut += 5 & gt'Gadriver', 'Gadbitch'
+							minut += 5
+							gt'Gadriver', 'Gadbitch'
 						end
 					end
 				end
@@ -457,14 +457,15 @@ if $ARGS[0] = 'Gadbitch':
 							
 							act 'Finish':minut += 5 & gt'Gadriver', 'Gadbitch'
 						else
-							minut += 5 & gt'Gadriver', 'Gadbitch'
+							minut += 5
+							gt'Gadriver', 'Gadbitch'
 						end
 					end
 				end
 			end
 		end
 
-		act 'escape':minut += 5 & gt 'Gadriver'
+		act 'Leave':minut += 5 & gt 'Gadriver'
 	end
 end
 

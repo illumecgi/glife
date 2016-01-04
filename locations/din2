@@ -163,7 +163,7 @@ $snkayf = {
         end
         
         if snkz = 6:
-            nude = 1		
+            $clothingworntype = 'nude'
             gt'Glake' & hour += 2
         end
     
@@ -176,7 +176,7 @@ $narkozakladka = {
         '<center><img src="images/pic/narkopriton.jpg"></center>'
         'You decide to ask, and whether their point of Ozersk. To which the man replied, that is not the point, but it can organize your tab and you will be left in place Bookmark money.'
         'Price rise, taking into account the complexities twice and will link two pieces equals.'
-        'And then he looked menacingly at you and said,, you if you cheat death.'
+        'And then he looked menacingly at you and said, you if you cheat death.'
         act 'Agree':
             cls
             snarkozak = 1

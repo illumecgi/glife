@@ -26,6 +26,10 @@ $shower = {
 			dirtbelo += 1
 		end
 
+		if shampoo < 0:
+			shampoo = 0
+		end
+
 		dynamic $showerdin
 
 		if frost > 0:frost = 0
@@ -95,6 +99,10 @@ $bath = {
 		if tanga = 1:
 			clrbelo -= 1
 			dirtbelo += 1
+		end
+
+		if shampoo < 0:
+			shampoo = 0
 		end
 
 		dynamic $showerdin

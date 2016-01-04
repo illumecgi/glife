@@ -451,7 +451,7 @@ act 'Further':
 	*nl
 	'Like many other kids, you tried out all sort of things at school. But the one thing that really defined you is...'
 
-	act 'You are completely obsessed with books.':
+	act 'I was completely obsessed with books':
 		cls
 		clr
 		stren = 1
@@ -483,7 +483,7 @@ act 'Further':
 		act 'Start aged 15':dynamic $din_alter_start_ev15
 	end
 		
-	act 'I was a real botanka':
+	act 'I was queen of the nerds':
 		cls
 		clr
 		stren = 1
@@ -497,10 +497,10 @@ act 'Further':
 		jeansB[1] = bedra
 		tan = 30
 		mother = 100
-		father=100
+		father = 100
 		money += 3000
 		blizoruk = 300
-		dom=50
+		dom = 50
 		glass = 1
 		Suspeh = 110
 		!!!!!!!!!!!!!! Maruda Hair Mod
@@ -521,7 +521,7 @@ act 'Further':
 		act 'Start aged 15':dynamic $din_alter_start_ev15
 	end
 
-	act 'You are a good student':
+	act 'I was a good student':
 		cls
 		clr
 		fat = 150
@@ -549,7 +549,7 @@ act 'Further':
 		act 'Start aged 15':dynamic $din_alter_start_ev15
 	end
 
-	act 'You are actively engaged in volleyball':
+	act 'I was actively engaged in volleyball':
 		cls
 		clr
 		stren = 25
@@ -581,7 +581,7 @@ act 'Further':
 		act 'Start aged 15':dynamic $din_alter_start_ev15
 	end
 
-	act 'You spent time with you friends outdoors':
+	act 'I mostly played outside, with my friends':
 		cls
 		clr
 		stren = 10

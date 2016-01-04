@@ -17,14 +17,12 @@ gs 'time'
 '<center><h4>village Gadyukino</h4></center>'
 
 if month >= 5 and month <= 9:
-	'<center><img src="images/pic/gadukino.jpg"></center>'
 	if hour >= 6 and hour < 22:
 		'<center><img src="images/qwest/gadukino/street.jpg"></center>'
 	else
 		'<center><img src="images/qwest/gadukino/street_night.jpg"></center>'
 	end
 else
-	'<center><img src="images/pic/gadukino_winter.jpg"></center>'
 	if hour >= 8 and hour < 18:
 		'<center><img src="images/qwest/gadukino/street_winter.jpg"></center>'
 	else

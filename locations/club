@@ -19,7 +19,7 @@ if $ARGS[0] = 'start':
 		gt 'down'
 	end
 
-	if ski = 1 and money >= 500  and mop > 1 and sweat < 1 or glamur = 1 and money >= 500 and mop > 1 and sweat < 1:
+	if (ski = 1 and money >= 500  and mop > 1 and sweat < 1) or (glamur = 1 and money >= 500 and mop > 1 and sweat < 1):
 		'You can feel his eyes all over your body, but eventually he nods and lets you inside.'
 
 		act 'Enter the club (500 rubles)':
@@ -638,14 +638,19 @@ if $ARGS[0] = 'sex':
 		guy += 1
 		horny += SUB
 		vagina += 1
+		cumfrot = 1
+		minut += 5
 		'<center><img src="images/picV/clubSex.jpg"></center>'
 		'You turn around and kneel on the toilet seat. "Fuck me", you say and present your ass and pussy to him.'
 		'You don''t have to tell him twice, he grabs your hips, positions his cock infront of your pussy and with a strong push he enters your vagina. You moan with pleasure and you are surprised by the sheer force he used to enter you.'
 		'He grunts heavy as he fucks you like the bitch in heat that you are. He continues with force and speed, if he''s slowing down, you can''t notice it, but it doesn''t take long and both of you are reaching the state of orgasm.'
 		'You look at him, "Don''t you dare to cum inside.". In between his grunts he nods and a few seconds later he cums outside of you, you are relived that he at least acts a bit like a gentleman.'
-		gs 'orgazm', 'start'
-
-		act 'Stand up':gt 'club', 'toi'
+		if horny > 90:
+			orgasm += 1
+			'As you heartbeat slows and you are begining to catch your breath, you realise your arousel has peaked, a warmth fills you and your eyes loose focus.'
+		end
+		'You recover to find yourself alone in the cubicle and quickly re-dress.'
+		act 'Leave cubicle':gt 'club', 'toi'
 	end
 end
 

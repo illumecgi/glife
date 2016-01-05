@@ -167,12 +167,19 @@ if grupNPC[5] >= 80 and fedorKozlovQW = 0 and GorSlut = 0 and UNSTARTER = 1:
 	exit
 end
 
-if lariskaQwestStart <= daystart and week = 4 and grupNPC[13] >= 80 and lariskaHelp = 0 and zverSlutQW = 1:
-	act 'Logout':gt'LariskaStart','start'
-elseif lariskaQwestDay = daystart and AlbZverHelp ! 1 and lariskaHelp ! 0:
-	act 'Logout':gt'LariskaStart','end'
-else
-	act 'Logout':gt'gdk'
+act 'Logout':
+	if $clothingworntype ! 'nude':
+		if lariskaQwestStart <= daystart and week = 4 and grupNPC[13] >= 80 and lariskaHelp = 0 and zverSlutQW = 1:
+			gt'LariskaStart','start'
+		elseif lariskaQwestDay = daystart and AlbZverHelp ! 1 and lariskaHelp ! 0:
+			gt'LariskaStart','end'
+		else
+			gt'gdk'
+		end
+	else
+		msg'<b><font color = red>You need to get dressed.</font></b>'
+		gt $curloc
+	end
 end
 
 if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:

@@ -33,7 +33,7 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if abonement > 0 and fitday ! daystart:
+	if abonement > 0 and fitday ! daystart or razdtumbler = 1:
 		act 'Goto dressing room':
 			cla
 			frost = 0
@@ -126,18 +126,22 @@ if $ARGS[0] = 'dressing room':
 
 	if razdtumbler = 1 and sport > 0:
 		act 'Go to the gym':
-		cla
-		gt 'fit', 'gym'
+			cla
+			gt 'fit', 'gym'
+		end
+
+		act 'Go to the dance studio':
+			cla
+			gt 'danceclass'
+		end
 	end
 
-	act 'Go to the dance studio':
-		cla
-		gt 'danceclass'
-		end
-	elseif razdtumbler = 0 or sport = 0:
-		act 'Exit the locker room':
-			cla
+	act 'Exit the locker room':
+		if $clothingworntype ! 'nude':
 			gt 'fit', 'start'
+		else
+			msg'<b><font color = red>You need to get dressed.</font></b>'
+			act 'Return': gt 'fit', 'dressing room'
 		end
 	end
 end

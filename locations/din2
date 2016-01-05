@@ -140,99 +140,94 @@ $d_slut_horny = {
 }
 
 $snkayf = {
-    snkz = RAND(1,6)
-	    if tanga = 1:tanga = 0
-        if snkz = 1:
-            gt'gdk' & hour += 2
-        end
-        
-        if snkz = 2:
-            gt'gskver' & hour += 2
-        end
-        
-        if snkz = 3:
-            gt'bedrPar' & hour += 2
-        end
+	snkz = RAND(1,6)
+	if tanga = 1:tanga = 0
+	if snkz = 1:
+		gt'gdk' & hour += 2
+	end
 
-        if snkz = 4:
-            gt'gopskver' & hour += 2
-        end
-        
-        if snkz = 5:
-            dynamic $din_vokzalg_toilet & hour += 2
-        end
-        
-        if snkz = 6:
-            $clothingworntype = 'nude'
-            gt'Glake' & hour += 2
-        end
-    
+	if snkz = 2:
+		gt'gskver' & hour += 2
+	end
 
+	if snkz = 3:
+		gt'bedrPar' & hour += 2
+	end
+
+	if snkz = 4:
+		gt'gopskver' & hour += 2
+	end
+
+	if snkz = 5:
+		dynamic $din_vokzalg_toilet & hour += 2
+	end
+
+	if snkz = 6:
+		$clothingworntype = 'nude'
+		gt'Glake' & hour += 2
+	end
 }
 
 $narkozakladka = {
-        cls
-        '<center><b>Shooting galleries</b></center>'
-        '<center><img src="images/pic/narkopriton.jpg"></center>'
-        'You decide to ask, and whether their point of Ozersk. To which the man replied, that is not the point, but it can organize your tab and you will be left in place Bookmark money.'
-        'Price rise, taking into account the complexities twice and will link two pieces equals.'
-        'And then he looked menacingly at you and said, you if you cheat death.'
-        act 'Agree':
-            cls
-            snarkozak = 1
-            '<center><b>Shooting galleries</b></center>'
-            '<center><img src="images/pic/narkopriton.jpg"></center>'
-            'You scared nodded, they agree.'
-            'Guy added, that bookmarks will be on the train/train station from the platform. '
-            act 'Escape':gt'narkopriton'
-        end
+	cls
+	'<center><b>Shooting galleries</b></center>'
+	'<center><img src="images/pic/narkopriton.jpg"></center>'
+	'You decide to ask, and whether their point of Ozersk. To which the man replied, that is not the point, but it can organize your tab and you will be left in place Bookmark money.'
+	'Price rise, taking into account the complexities twice and will link two pieces equals.'
+	'And then he looked menacingly at you and said, you if you cheat death.'
+	act 'Agree':
+		cls
+		snarkozak = 1
+		'<center><b>Shooting galleries</b></center>'
+		'<center><img src="images/pic/narkopriton.jpg"></center>'
+		'You scared nodded, they agree.'
+		'Guy added, that bookmarks will be on the train/train station from the platform. '
+		act 'Escape':gt'narkopriton'
+	end
 }
 
 $snarkozaka = {
-    cls
-    minut += 20 
+	cls
+	minut += 20 
 	money -= 2000
-    StrongNarkota += 25
-    SNarkTimes += 1
+	StrongNarkota += 25
+	SNarkTimes += 1
 	narkozakday=day
 	gs'stat'
-    gs'time'
-    '<center><B>Peron Pavlovsky</B></center>'
-    '<center><img src="images/pic/vokzalperG.jpg"></center>'
-	'Vynashli zkladku and without thinking twice shirnulis.'
-	
-	
-    act 'Escape':dynamic $snkayf
+	gs'time'
+	'<center><B>Peron Pavlovsky</B></center>'
+	'<center><img src="images/pic/vokzalperG.jpg"></center>'
+	'You buy the drugs and without thinking twice you shoot up.'
 
+	act 'Escape':dynamic $snkayf
 }
 
 $snkayf1 = {
-    snkz = RAND(1,6)
-	    if tanga = 1:tanga = 0
-        if snkz = 1:
-            gt'park','start' & hour += 2
-        end
-        
-        if snkz = 2:
-            gt'down' & hour += 2
-        end
-        
-        if snkz = 3:
-            gt'nord' & hour += 2
-        end
+	snkz = RAND(1,6)
+	if tanga = 1:tanga = 0
+	if snkz = 1:
+		gt'park','start' & hour += 2
+	end
 
-        if snkz = 4:
-            gt'street' & hour += 2
-        end
-        
-        if snkz = 5:
-            gt'dachi' & hour += 2
-        end
-        
-        if snkz = 6:
-            gt'lake','start' & hour += 2
-        end
+	if snkz = 2:
+		gt'down' & hour += 2
+	end
 
+	if snkz = 3:
+		gt'nord' & hour += 2
+	end
+
+	if snkz = 4:
+		gt'street' & hour += 2
+	end
+
+	if snkz = 5:
+		gt'dachi' & hour += 2
+	end
+
+	if snkz = 6:
+		gt'lake','start' & hour += 2
+	end
 }
 
 --- din2 ---------------------------------

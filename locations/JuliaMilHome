@@ -35,6 +35,8 @@ elseif lernHome = 0:
 			fat += 3
 			energy += 10
 			water += 20
+			cumlip = 0
+			fbreath = 0
 			eatJulMilDay = daystart
 			gs 'stat'
 			'<center><img src="images/qwest/alter/npc/12.jpg"></center>'

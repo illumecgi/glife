@@ -608,6 +608,8 @@ if $ARGS[0] = 'kuh':
 
 			if water < 20:
 				water += 20
+				cumlip = 0
+				fbreath = 0
 				'You gladly drank a mug of tea.'
 			end
 		end

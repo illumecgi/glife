@@ -9,6 +9,21 @@ $showerdin = {
 	cumface = 0
 }
 
+$bteeth = {
+	if fbreath ! 1:
+		act 'Brush your teeth (0.05)':
+			cla
+			*clr
+			minut += 5
+			cumlip = 0
+			fbreath = 1
+			'<center><img src="images/pics/brushteeth.jpg"></center>'
+			'You brush your teeth and now they are clean and minty fresh'
+			act 'Finish':gt $locM, $metkaM
+		end
+	end
+}
+
 $shower = {
 
 	act 'Wash in the shower (0:15)':

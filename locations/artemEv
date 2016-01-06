@@ -529,6 +529,7 @@ $din_artem_lern = {
 						cls
 						minut += 5
 						water += 10
+						fbreath = 0
 						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/ap_anatomy6_3.jpg"></center>'
 						'You swallow the sperm and drink all the urine does not even wince. Guys put you out the door, saying that the next time prizodili right into the garage, and you quietly go home knowing that this is just the beginning.'

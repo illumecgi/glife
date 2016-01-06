@@ -50,6 +50,8 @@ if $ARGS[0] = 'start':
 				'You don''t need any more tea.'
 			elseif water < 20:
 				water += 20
+				cumlip = 0
+				fbreath = 0
 				'You gladly drink a mug of tea.'
 
 			end
@@ -769,7 +771,7 @@ if $ARGS[0] = 'workPred':
 					act 'Go home':gt 'street'
 				elseif kaferand > 25 and opusk > 0 and pirsA ! 0 and hour >= 12 and hour <= 19:
 					cls
-					'Mob boss beckons you to his table. You approached him with trembling knees.''He looks at you like a boa constrictor on a rabbit and says, "Whore, open your mouth." You open your mouth obediently and quickly stick out your pierced tongue.'
+					'Mob boss beckons you to his table. You approached him with trembling knees.''He looks at you like a boa constrictor on a rabbit and says, "Whore, open your mouth." You open your mouth obediently and quickly stick out your tongue.'
 					if pirsA = 2:
 						pirsA = 1
 						'The leader asks you where your tongue piercing is. You produce it from your pocket and shakily manage to fit it and screw it tight.'

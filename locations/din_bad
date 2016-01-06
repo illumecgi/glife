@@ -439,6 +439,16 @@ $d_kosmetitka = {
 	if kosmetitka >= 3:pl '<a href="exec:mop = 4 & kosmetitka -= 3 & gs ''stat''"><b>Heavy make-up</b></a>'
 }
 
+$d_mouthwash = {
+	clr
+	fbreath = 1
+	cumlip = 0
+	mouthwash -= 1
+	pl 'Your breath smells minty fresh'
+	pl ''
+	pl '<a href="exec:gs ''stat''"><b>Done</b></a>'
+}	
+
 $d_bag = {
 	clr
 	!pl'<a href="exec:gs''stat''"><b>Close bag</b></a>'
@@ -446,6 +456,8 @@ $d_bag = {
 	if salfetka > 0:pl 'You have <<salfetka>> wet wipes. <a href="exec:dynamic $d_salf"><b>Take tissue</b></a>'
 	if kosmetitka > 0 and mop = 1:pl 'You have portable makeup bag. Cometic applications left <<kosmetitka>>. <a href="exec:dynamic $d_kosmetitka"><b>Put on makeup</b></a>'
 	if kosmetitka > 0 and mop ! 1:pl 'You have portable makeup bag. Cometic applications left <<kosmetitka>>.'
+	if mouthwash > 0 and fbreath = 0:pl 'You have mouthwash in your bag. Uses remaining: <<mouthwash>>. <a href="exec:dynamic $d_mouthwash"><b>Use mouthwash</b></a>'
+	if mouthwash > 0 and fbreath = 1:pl 'You have mouthwash in your bag. Uses remaining: <<mouthwash>>.'
 	if greben > 0 and hapri = 0:pl 'You have a hairbrush. <a href="exec:hapri = 1 & gs ''stat''"><b>Brush your hair</b></a>'
 	if greben > 0 and hapri = 1:pl 'You have a hairbrush.'
 	if prezik > 0:pl 'You have <<prezik>> condoms.'

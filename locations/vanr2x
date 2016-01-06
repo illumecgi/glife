@@ -97,6 +97,7 @@ if vanr_hanger = 1: 'Next to the sink neatly folded your <a href="exec:dynamic $
 if mosolmaz > 0:'On a shelf is a tube of ointment protivomozolnoy, which will suffice for <<mosolmaz>> applications.'
 if stiralka > 0:'In the bathroom is a washing machine.'
 
+dynamic $bteeth
 dynamic $tampon
 dynamic $quickwash
 dynamic $wearpan

@@ -163,12 +163,18 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			if energy >= 30:
 				'You are too full to eat it.'
 			elseif energy >= 20 and energy < 30:
-			if water < 20:water += 20
+			if water < 20:
+				water += 20
+				cumlip = 0
+				fbreath = 0
 				fat += 3
 				energy += 10
 				'You have some of it, but can''t finish it.'
 			elseif energy < 20:
-			if water < 20:water += 20
+			if water < 20:
+				water += 20
+				cumlip = 0
+				fbreath = 0
 				energy += 20
 				'You gladly eat it all.'
 			end

@@ -1178,12 +1178,12 @@ pl '<b><<$manna>></b>'
 
 if horny >= 90 and tanga = 1:
 	pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2.jpg''">soaked</a> from your juices.</font>'
-	elseif horny >= 90 and tanga = 0:
-		pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
-	elseif horny >= 50 and horny < 90 and tanga = 1:
-		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1.jpg''">itchy</a> from arousal.</font>'
-	elseif horny >= 50 and horny < 90 and tanga = 0:
-		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a> from arousal.</font>'
+elseif horny >= 90 and tanga = 0:
+	pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
+elseif horny >= 50 and horny < 90 and tanga = 1:
+	pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1.jpg''">itchy</a> from arousal.</font>'
+elseif horny >= 50 and horny < 90 and tanga = 0:
+	pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a> from arousal.</font>'
 end
 
 if ETOmenu = 1:
@@ -1281,6 +1281,8 @@ if hour >= 11 and hour < 12 and week > 1 and week < 5 and workKafe = 1:pl '<b><f
 if hour >= 8 and hour < 9 and week < 5 and workSec >= 1:pl '<b><font color="red">It''s time to work your shift as a secretary</font></b>'
 if PersSecWork = 1 and week < 6 and hour < 10 and hour >= 5:pl '<b><font color="red">It''s time to work your shift as a secretary</font></b>'
 if workFabrika = 1 and week => 1 and week <= 5 and hour = 8 and age >= 18 or workFabrika = 1 and week => 1 and week <= 5 and hour = 16 and age < 18:pl'<b><font color = red>TheAM To go to work in the factory as a seamstress Pavlovsky</font></b>'
+
+if cumlip = 1:fbreath = 0
 
 $cumeater = {
 	cumlip += 1

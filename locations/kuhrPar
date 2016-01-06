@@ -44,6 +44,8 @@ act 'Eat (0:30)':
 		'You don''t need any more tea.'
 	else
 		water += 20
+		cumlip = 0
+		fbreath = 0
 		'You gladly drank a mug of tea.'
 	end
 
@@ -79,6 +81,8 @@ act 'Have a snack (0:15)':
 		'You don''t need any more tea.'
 	else
 		water += 20
+		cumlip = 0
+		fbreath = 0
 		'You gladly drank a mug of tea.'
 	end
 
@@ -94,6 +98,8 @@ act 'Drink':
 		'You don''t need any more tea.'
 	else
 		water += 20
+		cumlip = 0
+		fbreath = 0
 		'You gladly drank a mug of tea.'
 	end
 
@@ -114,6 +120,8 @@ if pranik > 0:
 		manna += 100
 		energy += 20
 		water += 20
+		cumlip = 0
+		fbreath = 0
 		fat += 50
 		frost = 0
 		gs 'stat'
@@ -148,6 +156,8 @@ if edaD > 0:
 			'You don''t need any more tea.'
 		else
 			water += 20
+			cumlip = 0
+			fbreath = 0
 			'You gladly drank a cup of tea.'
 		end
 

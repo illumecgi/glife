@@ -1,6 +1,6 @@
 # gschool2
 $d_rand_gopnic={
-'You looked at with contempt <<$npcSurName[i]>>a: «Th, ohuel?»,- but, It seems, your reputation does not allow to throw such numbers.'
+	'You looked at with contempt <<$npcSurName[i]>>a: «Th, ohuel?»,- but, It seems, your reputation does not allow to throw such numbers.'
 	act 'Further': 
 		*clr & cla
 		manna = manna-20
@@ -28,6 +28,7 @@ $d_rand_gopnic={
 		end
 	end
 }
+
 $d_rand_scoolboy={
 !--------------------------------if you start a new game you can remove
 npcdick[1] = 16
@@ -296,8 +297,6 @@ $d_class_phone = {
 			end
 		end
 	end
-	act'':
-	end
 }
 
 $teacher_help = {
@@ -397,75 +396,78 @@ $teacher_class_legs = {
 }
 
 $d_class_gosip = {
-cla
-ivrand = RAND(1,2)
-	if soniaPS = 1 and ivrand = 1: 
-		$school_class_txtrand[1] = '
-- "Ohuet! Straight all suck? badge, So I lohanulsya, that the house was!"
-- "I do not think, you would want it after Kotova and cronies..."
-- "This is what?"
-- "Yes, it takoÑ‘ mess of Cum on her face was, that nasty look..."'
-	elseif soniaPS = 2 and ivrand = 1:
-		$school_class_txtrand[1] = '- "have you heard already? Conka now regularly serves our gopotu in the toilet?"
-- "No and Shmarev..."'
-	elseif soniaPS = 3 and ivrand = 1:
-		$school_class_txtrand[1] = '- "And Sonya-now all and sundry drag... Eh..."
-- "Why so sad? You do not give?"
-- "It is now like-something nasty after all have... And in the ninth grade , all this was impregnable, on a date not even agree!"'
-	elseif ivrand = 2:
-		textrand = RAND(1,2)
-		if textrand = 1:
+	cla
+	$school_class_txtrand[1] = 'You are trying to overhear, but too vague mumbling, for what-or disassemble.'
+	if RAND(1,2) = 1:
+		if RAND(1,2) = 1:
 			!place for random chit-chat
-			textrand = RAND(1,3)
-			if textrand = 1: $school_class_txtrand[1] = '- "How to Jam this school! Faster to graduation!"
-- "Do not say, these lessons are already here sitting..."'
-			if textrand = 2: $school_class_txtrand[1] = '- "Dude, Yesterday I pulled so DotA!  One dragged!"
-- "pussy!"
-- "answer!  I`ll throw off screen!"'
-			if textrand = 3: $school_class_txtrand[1] = '- "nurse Jam, does not play in the tanks!"
-- "mine too!"
-- "forever from-for it lose!"'
-		elseif textrand = 2:
+			if RAND(1,3) = 1:
+				$school_class_txtrand[1] = '- "How to Jam this school! Faster to graduation!"
+				- "Do not say, these lessons are already here sitting..."'
+			elseif RAND(1,2) = 1:
+				$school_class_txtrand[1] = '- "Dude, Yesterday I pulled so DotA!  One dragged!"
+				- "pussy!"
+				- "answer!  I`ll throw off screen!"'
+			else
+				$school_class_txtrand[1] = '- "nurse Jam, does not play in the tanks!"
+				- "mine too!"
+				- "forever from-for it lose!"'
+			end
+		else
 			!a place to talk about the adventures of SG
 			if GorSlut = 1:$school_class_txtrand[1] = '- "They say, <<$surname>> It gives!"
-- "How do you know?"
-- "I have a friend of her spiers!"
-- "Oh, I do not bullshit me!"'
-			if GorSlut = 2:$school_class_txtrand[1] = '- "They say, <<$surname>> sucks!"
-- "How do you know?"
-- "At my friend sucking!"
-- "Oh, I do not bullshit me!"
-- "answer!"'
-			if GorSlut = 3:$school_class_txtrand[1] = '- "They say, <<$surname>> circle allowed!"
-- "As allowed?"
-- "Well, so! Suck it any crowd-the boys!"
-- "ohuet!"
-- "aha..."'
-			if GorSlut = 4:$school_class_txtrand[1] = '- "They say, <<$surname>> circle allowed!"
-- "As allowed?"
-- "Well, so! Fucked her crowd, twirled as they wanted!"
-- "ohuet!"
-- "Aha, Shmarev..."'
-			if GorSlut = 5:$school_class_txtrand[1] = '- "<<$surname>> - Washed- whore..."
-- "TA-dah..."
-- "Dude, It may be mistimed in the after school?"
-- "Do not drive fast..."
-- "that let! Vernyakovy Varick general answer!"
-- "And you hunt the vario after so many cocks?"'
-			if GorSlut = 6:$school_class_txtrand[1] = '- "<<$surname>> - Washed prostitute..."
-- "TA-dah..."
-- "Dude, It may be mistimed in the after school?"
-- "Do you have money?"
-- "Well, I`ve been a bit put off from the, Mom gave. We have enough!"
-- "And hunt you to fuck her after so many cocks?"'
+			- "How do you know?"
+			- "I have a friend of her spiers!"
+			- "Oh, I do not bullshit me!"'
+			elseif GorSlut = 2:$school_class_txtrand[1] = '- "They say, <<$surname>> sucks!"
+			- "How do you know?"
+			- "At my friend sucking!"
+			- "Oh, I do not bullshit me!"
+			- "answer!"'
+			elseif GorSlut = 3:$school_class_txtrand[1] = '- "They say, <<$surname>> circle allowed!"
+			- "As allowed?"
+			- "Well, so! Suck it any crowd-the boys!"
+			- "ohuet!"
+			- "aha..."'
+			elseif GorSlut = 4:$school_class_txtrand[1] = '- "They say, <<$surname>> circle allowed!"
+			- "As allowed?"
+			- "Well, so! Fucked her crowd, twirled as they wanted!"
+			- "ohuet!"
+			- "Aha, Shmarev..."'
+			elseif GorSlut = 5:$school_class_txtrand[1] = '- "<<$surname>> - Washed- whore..."
+			- "TA-dah..."
+			- "Dude, It may be mistimed in the after school?"
+			- "Do not drive fast..."
+			- "that let! Vernyakovy Varick general answer!"
+			- "And you hunt the vario after so many cocks?"'
+			elseif GorSlut = 6:$school_class_txtrand[1] = '- "<<$surname>> - Washed prostitute..."
+			- "TA-dah..."
+			- "Dude, It may be mistimed in the after school?"
+			- "Do you have money?"
+			- "Well, I`ve been a bit put off from the, Mom gave. We have enough!"
+			- "And hunt you to fuck her after so many cocks?"'
 			end
 		end
 	else
-		$school_class_txtrand[1] = 'You are trying to overhear, but too vague mumbling, for what-or disassemble.'
+		if soniaPS = 1: 
+			$school_class_txtrand[1] = '
+			- "Ohuet! Straight all suck? badge, So I lohanulsya, that the house was!"
+			- "I do not think, you would want it after Kotova and cronies..."
+			- "This is what?"
+			- "Yes, it takoÑ‘ mess of Cum on her face was, that nasty look..."'
+		elseif soniaPS = 2:
+			$school_class_txtrand[1] = '- "have you heard already? Conka now regularly serves our gopotu in the toilet?"
+			- "No and Shmarev..."'
+		elseif soniaPS = 3:
+			$school_class_txtrand[1] = '- "And Sonya-now all and sundry drag... Eh..."
+			- "Why so sad? You do not give?"
+			- "It is now like-something nasty after all have... And in the ninth grade , all this was impregnable, on a date not even agree!"'
+		end
 	end
 	'<<$school_class_txtrand[1]>>'
 	act'Wait for the end of the lesson':dynamic $din_bigperemena
 }
+
 $d_class_leason[1] = {
 	cla
 	if sub < 30:
@@ -487,32 +489,35 @@ $d_class_leason[1] = {
 	end
 	act'Wait for the end of the lesson':dynamic $din_bigperemena
 }
+
 $d_class_leason = {
 	cla
-	if hour <= 12:
-		if week = 2 or week = 4:
-			$teacher = 'Anatoly E.'
-			$teacher[1] = 'Anatoly E.'
-			$teacher[2] = 'Anatoly E.'
-		else
-			$teacher =  'teacher'
-			$teacher[1] = 'teacher'
-			$teacher[2] = 'teacher'
-		end
+	if hour <= 12 and (week = 2 or week = 4):
+		$teacher = 'Anatoly E.'
+		$teacher[1] = 'Anatoly E.'
+		$teacher[2] = 'Anatoly E.'
+	else
+		$teacher =  'teacher'
+		$teacher[1] = 'teacher'
+		$teacher[2] = 'teacher'
 	end
-	ivrand = RAND(1,2)
+
 	act'Listen attentively <<$teacher[1]>>':
 		cla
 		Suspeh += 1
 		if $teacher = 'Anatoly E.': grupNPC[26] += 1
-		textrand = RAND(1,2)
-		if textrand = 1: $school_class_txtrand = 'You listened to the full attention <<$teacher[1]>>. Lesson show you a very interesting and informative.'
-		if textrand = 2: $school_class_txtrand = 'You listened to the full attention <<$teacher[1]>>. Today you have learned.'
+
+		if RAND(1,2) = 1:
+			$school_class_txtrand = 'You listened to the full attention <<$teacher[1]>>. Lesson show you a very interesting and informative.'
+		else
+			$school_class_txtrand = 'You listened to the full attention <<$teacher[1]>>. Today you have learned.'
+		end
+
 		act'Ask a question about the lesson':
 			cla
 			if $teacher = 'Anatoly E.': grupNPC[26] += 1
-			ivrand = RAND(1,4)
-			if ivrand = 1:
+
+			if RAND(1,4) = 1:
 				'You sit at a desk and listen to their teacher. Unfortunately, constant chatter of your classmates, rear seat does not give you the opportunity to focus on the lesson,. All attempts to appease teachers guys were in vain.'
 				dynamic $d_class_leason[1]
 			else
@@ -521,9 +526,10 @@ $d_class_leason = {
 			end
 			act'Wait for the end of the lesson':dynamic $din_bigperemena
 		end
+
 		if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
 			if grupNPC[26] >= 40 and grupNPC[26] < 60:
-				ivrand = RAND (1,1)
+				ivrand = 1
 			elseif grupNPC[26] >= 60 and grupNPC[26] < 80:
 				ivrand = RAND (1,3)
 			elseif grupNPC[26] >= 80:
@@ -531,10 +537,13 @@ $d_class_leason = {
 			end
 			if ivrand = 1:
 				grupNPC[26] += 1
-				textrand = RAND(1,3)
-				if textrand = 1: $school_class_txtrand = 'Today, the lesson was to check homework. Anatoly E. continuously called you to his table the, then to the board.  Though as you thought, he just liked to watch, as you walk in front of him in his beautiful school uniforms.'
-				if textrand = 2: $school_class_txtrand = 'Today, the school turned out to be rich day. The teacher spent this occupation a discussion with the class. And each of your response, he did not forget to lament compliments your appearance.'
-				if textrand = 3: $school_class_txtrand = 'Today, the lesson will be as lively, your success in the classroom are not in vain, and Anatoly E. constantly conducts a lesson dealing with you and ask you a question. '
+				if RAND(1,3) = 1:
+					$school_class_txtrand = 'Today, the lesson was to check homework. Anatoly E. continuously called you to his table the, then to the board.  Though as you thought, he just liked to watch, as you walk in front of him in his beautiful school uniforms.'
+				elseif RAND(1,2) = 1:
+					$school_class_txtrand = 'Today, the school turned out to be rich day. The teacher spent this occupation a discussion with the class. And each of your response, he did not forget to lament compliments your appearance.'
+				else
+					$school_class_txtrand = 'Today, the lesson will be as lively, your success in the classroom are not in vain, and Anatoly E. constantly conducts a lesson dealing with you and ask you a question. '
+				end
 			elseif ivrand = 2:
 				grupNPC[26] += 1
 				$school_class_txtrand = 'You listened to the full attention <<$teacher[1]>>. Lesson show you a very interesting and informative.  but, constant and close his eyes in your direction a little bit distracted from school. It, surely, I am looking at your feet, who stuck out from under the desk.'
@@ -544,9 +553,11 @@ $d_class_leason = {
 				dynamic $teacher_help
 			elseif ivrand = 4:
 				grupNPC[26] += 1
-				textrand = RAND(1,2)
-				if textrand = 1: $school_class_txtrand = 'You sit at a desk and write a summary. The teacher comes to you from behind, He puts his hand on the shoulder and tells you your mistakes.'
-				if textrand = 2: $school_class_txtrand = 'Solving examples, You may have noticed, that the teacher sends the phone directly to your side. He pretends, just leafing through page after page, but in an instant outbreak occurs. Seeing, that you noticed him, He blushed, hurriedly removes the phone in your pocket.'
+				if RAND(1,2) = 1:
+					$school_class_txtrand = 'You sit at a desk and write a summary. The teacher comes to you from behind, He puts his hand on the shoulder and tells you your mistakes.'
+				else
+					$school_class_txtrand = 'Solving examples, You may have noticed, that the teacher sends the phone directly to your side. He pretends, just leafing through page after page, but in an instant outbreak occurs. Seeing, that you noticed him, He blushed, hurriedly removes the phone in your pocket.'
+				end
 			end
 			'<<$school_class_txtrand>>'
 			act'Wait for the end of the lesson':dynamic $din_bigperemena
@@ -557,8 +568,7 @@ $d_class_leason = {
 	act'Stare at the sides':
 		cla
 		Suspeh -= 1
-		ivrand = RAND(1,2)
-		if ivrand = 1:
+		if RAND(1,2) = 1:
 			'The lesson you are bored, head all the time, all sorts of thoughts climb, and you did not notice, as <<$teacher>> Once again you made â€‹â€‹a remark.'
 			if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
 				if sub < 30:
@@ -593,10 +603,13 @@ $d_class_leason = {
 	act'Sitting at the phone':
 		cla
 		Suspeh -= 1
-		textrand = RAND(1,3)
-		if textrand = 1: $school_class_txtrand = 'So that in any way-then escape from this boring lesson, You got your phone and decided to pass the time until the end of the lesson wandering in the network. '
-		if textrand = 2: $school_class_txtrand = '<<$teacher>> I noticed, that you are not listening to a lecture , and you made â€‹â€‹a remark to remove the phone, you decide not to aggravate the situation and took the phone.'
-		if textrand = 3: $school_class_txtrand = 'how to order-then escape from this boring lesson, You got your phone and decide to spend your time wandering through the pages of the Internet. You and sat with the phone before the end of the lesson.'
+		if RAND(1,3) = 1:
+			$school_class_txtrand = 'So that in any way-then escape from this boring lesson, You got your phone and decided to pass the time until the end of the lesson wandering in the network. '
+		elseif RAND(1,2) = 1:
+			$school_class_txtrand = '<<$teacher>> I noticed, that you are not listening to a lecture , and you made â€‹â€‹a remark to remove the phone, you decide not to aggravate the situation and took the phone.'
+		else
+			$school_class_txtrand = 'how to order-then escape from this boring lesson, You got your phone and decide to spend your time wandering through the pages of the Internet. You and sat with the phone before the end of the lesson.'
+		end
 		if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
 			dynamic $d_class_phone
 		else
@@ -607,8 +620,7 @@ $d_class_leason = {
 }
 
 $d_rand_klass = {
-	scoolrand = RAND(0,5)
-	if scoolrand = 0:
+	if RAND(0,5) = 0:
 		*clr & cla
 		school_event_hour = day
 		scooltiperand = RAND(1,7)
@@ -667,9 +679,21 @@ $d_rand_klass = {
 			'<center><img src="images/qwest/alter/uroc/scoolrand_8.jpg"></center>'
 			'Lessons have been boring and uninteresting.'
 		end
-		act'On change':dynamic $din_bigperemena
+		if hour <= 12:
+			act'On change':dynamic $din_bigperemena
+		else
+			act'On change':	
+				if n_tanga = 3:  *clr & '<center><img src="images/qwest/alter/katja/tanga5_6.jpg"></center>' & 'Sitting in the classroom you hear: «Oh, <<$name[2]>>, I dropped the pen, could you get it», - you, grunting, climb under the desk , and then pay attention to the part in the divorced legs Katie. Panties on a lesson she never wore.'
+				dynamic $d_class_leason
+			end
+		end
 	else
-		dynamic $din_bigperemena
+		if hour <= 12:
+			dynamic $din_bigperemena
+		else
+			if n_tanga = 3:  *clr & '<center><img src="images/qwest/alter/katja/tanga5_6.jpg"></center>' & 'Sitting in the classroom you hear: «Oh, <<$name[2]>>, I dropped the pen, could you get it», - you, grunting, climb under the desk , and then pay attention to the part in the divorced legs Katie. Panties on a lesson she never wore.'
+			dynamic $d_class_leason
+		end
 	end
 }
 
@@ -781,8 +805,6 @@ $din_sekondparturok = {
 			'<center><img src="images/qwest/alter/urok<<urand>>.jpg"></center>'
 			'You were sitting in the classroom and listened to the monotonous boom on teachers, at least that is trying to understand and not to fall asleep.'
 			dynamic $d_rand_klass
-			if n_tanga=3:  *clr & '<center><img src="images/qwest/alter/katja/tanga5_6.jpg"></center>' & 'Sitting in the classroom you hear: «Oh, <<$name[2]>>, I dropped the pen, could you get it», - you, grunting, climb under the desk , and then pay attention to the part in the divorced legs Katie. Panties on a lesson she never wore.'
-			dynamic $d_class_leason
 
 			!'Finally the bell rang and students began to go home.'
 
@@ -801,12 +823,12 @@ $din_sekondparturok = {
 				beg += rand(2, 5)
 				'After the roll fizruk announced that today the class will take a run. You ran with the whole class the entire gym class.'
 				if temper >= 18 and sunWeather = 1:
-				'<center><img src="images/qwest/alter/fizra/fizra2.jpg"></center>'
-				'You run through a forest track where you let run fizruk, on the occasion of good weather.'
+					'<center><img src="images/qwest/alter/fizra/fizra2.jpg"></center>'
+					'You run through a forest track where you let run fizruk, on the occasion of good weather.'
 					if horny =>90 and npcSex[3] = 1:
-					'you`ve heard, that you who-the catches,  He turned and saw Vanya. It, swept past like a locomotive: «Here moose, I have not even looked'
+						'you`ve heard, that you who-the catches,  He turned and saw Vanya. It, swept past like a locomotive: «Here moose, I have not even looked'
 						act 'Show tits':
-						 cla & *clr
+							cla & *clr
 							'<center><img src="images/qwest/alter/fizra/fizra3.jpg"></center>'
 							'«Nothing looks right now», - looking, that no one is around you, okliknuv Ivan, T-shirt pulled up, putting their Cisco. Running back looking quite difficult, and proved that the guy sprawled on the track.  You, fun laughing, rode Vered: «Will know, as I do not watch».'
 							act 'Further':gt'gschool'

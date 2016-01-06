@@ -275,6 +275,8 @@ $ashotdin = {
 				'You don''t need any more tea.'
 			elseif water < 20:
 				water += 20
+				cumlip = 0
+				fbreath = 0
 				'You gladly drink a mug of tea.'
 			end
 

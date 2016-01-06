@@ -76,6 +76,7 @@ if canpar = 0:
 	end
 end
 
+dynamic $bteeth
 dynamic $tampon
 dynamic $quickwash
 dynamic $wearpan

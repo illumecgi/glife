@@ -19,7 +19,7 @@ if $ARGS[0] = 'start':
 		gt 'down'
 	end
 
-	if (ski = 1 and money >= 500  and mop > 1 and sweat < 1) or (glamur = 1 and money >= 500 and mop > 1 and sweat < 1):
+	if money >= 500 and mop > 1 and sweat < 1 and (ski = 1 or glamur = 1):
 		'You can feel his eyes all over your body, but eventually he nods and lets you inside.'
 
 		act 'Enter the club (500 rubles)':

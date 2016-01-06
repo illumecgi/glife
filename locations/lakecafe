@@ -81,6 +81,7 @@ if $ARGS[0] = 'main':
 					'You don''t need any more tea.'
 				elseif water < 20:
 					water += 20
+					cumlip = 0
 					'You gladly drank a mug of tea.'
 				end
 

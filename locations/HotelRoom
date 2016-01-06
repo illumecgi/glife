@@ -13,7 +13,7 @@ $loc = $CURLOC
 	'<center><b><font color = maroon>Your room number is</font></b></center>'
 	'<center>You paid <<hotelroom1day>>d. accommodation.</center>'
 	'<center><img src="images/nigma/gor/hotel/hotel.room.normal.jpg"></center>'
-	'Bright and beautiful bathroom, with modern furnishings unpretentious, is dominated by <a href="exec:GT ''hotelroom'',''bed''">Double</a>. At the entrance stands a modern <a href="exec:GT ''loker'',''start''">cupboard</a> Clothing. Against the wall and table <a href="exec:GT ''mirror'',''start''">mirror</a>. A little further, you notice the door to <a href="exec:GT ''hotelroom'',''shower1''">San-node</a>'
+	'Bright and beautiful bathroom, with modern furnishings unpretentious, is dominated by <a href="exec:GT ''hotelroom'',''bed''">Double</a>. At the entrance stands a modern <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cupboard</a> Clothing. Against the wall and table <a href="exec:GT ''mirror'',''start''">mirror</a>. A little further, you notice the door to <a href="exec:GT ''hotelroom'',''shower1''">San-node</a>'
 	'Opposite the bed is a simple <a href="exec:GT ''hotelroom'',''tv''">TV</a>.'
 	act'The Hall':
 		if $clothingworntype ! 'nude':

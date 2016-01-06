@@ -35,6 +35,7 @@ if $ARGS[0] = 'start':
 	if obdysh = 1 or palMir = 1 or bordysh = 1:
 		if dirtbelo > 0 and poroshok > 0:'<a href="exec:dynamic $stirkao">You have clothes you can wash</a>'
 
+		dynamic $bteeth
 		dynamic $tampon
 		dynamic $quickwash
 		dynamic $wearpan

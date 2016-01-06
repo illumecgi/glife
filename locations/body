@@ -7,6 +7,7 @@ if throat > 10 and throat <= 15:thpic = 3 & $throat = 'You have an experienced m
 if throat > 15 and throat <= 25:thpic = 4 & $throat = 'You have a capacious mouth and trained <a href="exec:view''images/body/th4.jpg''">throat</a>.' & $throattipe = 'stretched'
 if throat > 25 and throat <= 35:thpic = 5 & $throat = 'Your deep tunnel of a <a href="exec:view''images/body/th5.jpg''">throat</a> may adopt any member.' & $throattipe = 'tinned'
 if throat > 35:thpic = 6 & $throat = 'Your completely absent gag reflex and ravenous <a href="exec:view''images/body/th6.jpg''">throat</a> is like a bottomless pit.' & $throattipe = 'bottomless'
+if fbreath = 1:$throat = $throat+' Which smells fresh and minty.'
 
 if vagina = 0:puspic = 0 & $vagina = 'Your virgin <a href="exec:view''images/body/vag0.jpg''">pussy</a> still has a membrane.' & $vaginatipe = 'virgin'
 if vagina > 0 and vagina <= 5:puspic = 1 & $vagina = 'Your <a href="exec:view''images/body/vag1.jpg''">pussy</a> has a tiny hole.' & $vaginatipe = 'narrow'
@@ -296,7 +297,9 @@ if vidage >= 45:vidagebonus = 50
 if age < 18:leghair = -5
 
 !!CV edition: tits and lobkoef (pubic hair) removed from calc, replaced with flat bonus of 9 (6 tits, 3 hair)
-vnesh = (9 + curlykoef + lip + tanKoef + skin + mop + resnic + glaraz + bodykoef + legkoef + odevnesh + hapri + bonusZ + lipbalmKoef) - sweatKoef + vidagebonus - (zub * 2) + tatKeof - glassvnesh
+!curlykoef = perm / lip = lip size / tanKoef = suntan / skin = skin condition / mop = makeup / resnic = eyelashes / glaraz = eye brows / bodykoef = hips:waist ratio / legkoef = shaved legs / odevnesh = clothes
+!hapri Hair brushed / bonusZ = coat (if cold) / lipbalmKoef = lip balm / fbreath = freash breath / sweatKoef = sweat / vidagebonus = youth / zub = missing teeth / tatKeof = tatoos / glassvnesh = glasses
+vnesh = (9 + curlykoef + lip + tanKoef + skin + mop + resnic + glaraz + bodykoef + legkoef + odevnesh + hapri + bonusZ + lipbalmKoef + fbreath) - sweatKoef + vidagebonus - (zub * 2) + tatKeof - glassvnesh
 !!!
 
 if vnesh < 0:vnesh = 0

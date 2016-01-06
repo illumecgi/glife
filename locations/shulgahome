@@ -623,6 +623,7 @@ if $ARGS[0] = 'bath':
 	act 'Leave bathroom': gt'shulgahome'
 
 dynamic $shower
+dynamic $bteeth
 dynamic $tampon
 dynamic $quickwash
 dynamic $wearpan
@@ -866,6 +867,8 @@ $shkuh = {
 			'Water you no longer climbs.'
 		elseif water < 20:
 			water += 5
+			cumlip = 0
+			fbreath = 0
 			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/voda.jpg"></center>'
 			'You will be happy to drink a glass of water.'
 		end

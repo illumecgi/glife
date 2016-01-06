@@ -17,6 +17,8 @@ end
 
 if suhbelo > 0:suhbelo2 = suhbelo & suhbelo = 0
 
+if fbreath = 1:fbreath = 0
+
 manna -= 10
 
 !'

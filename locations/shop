@@ -221,6 +221,7 @@ if $shoplocation= 'cosmetics':
 	*pl FUNC ('$stock_item', 12, 'Hair pins', 100, 'hpingrip', $CURLOC) + _
 	iif(bag > 0, FUNC ('$stock_item', 10, 'Wipes', 100, 'salfetka', $CURLOC), '') + _
 	iif(bag > 0, FUNC ('$stock_item', 10, 'Portable makeup', 1000, 'kosmetitka', $CURLOC), '') + _
+	iif(bag > 0, FUNC ('$stock_item', 20, 'Mouthwash', 400, 'mouthwash', $CURLOC), '') + _
 	iif(bag > 0, FUNC ('$single_stock_item', 1, 'Comb', 150, 'greben', $CURLOC), '') + _
 	FUNC ('$single_stock_item', 1, 'Handbag', 5000, 'bag', $CURLOC) + _
 	'</table></center>'

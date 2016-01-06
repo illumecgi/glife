@@ -547,6 +547,8 @@ if pranik > 0:
 		manna = manna + 100
 		energy += 20
 		water += 20
+		cumlip = 0
+		fbreath = 0
 		fat += 50
 		frost = 0
 		gs'stat'

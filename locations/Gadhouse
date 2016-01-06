@@ -79,6 +79,8 @@ act 'Eat':
 		'You don''t need any more tea.'
 	elseif water < 20:
 		water += 20
+		cumlip = 0
+		fbreath = 0
 		'You gladly drank a cup of tea.'
 	end
 

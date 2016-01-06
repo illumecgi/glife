@@ -138,15 +138,28 @@ if week = 6 and schoolSorev = 1 and hour = 10:
 
 			begresult = beg + speed + vital + rand(1, 20) - salo - rand(1, 20)
 
-			if begresult <= 0:'You barely managed to reach the finish line, what place is really there, of course you are the last.'
-			if begresult > 0 and begresult < 10:'You are not bad ran for dilettante course, as ranked last 8th place.'
-			if begresult >= 10 and begresult < 20:'You fought hard, but managed to take only 7 penultimate place.'
-			if begresult >= 20 and begresult < 30:'You fought hard, but only managed to take 6th place.'
-			if begresult >= 30 and begresult < 40:'You fought hard, but only managed to take 5th place.'
-			if begresult >= 40 and begresult < 50:'You fought hard, but only managed to take 4th place.'
-			if begresult >= 50 and begresult < 60:'You fought hard and managed to take 3rd place. Fizruk congratulates you on your success.'
-			if begresult >= 60 and begresult < 70:'You fought hard and managed to take 2nd place. Fizruk congratulates you in hurry.'
-			if begresult >= 70:swinbeg += 1 & dom += 1 & 'You fought hard and managed to take 1st place. Fizruk congratulate you on winning the competition.'
+			if begresult <= 0:
+				'You barely managed to reach the finish line, what place is really there, of course you are the last.'
+			elseif begresult > 0 and begresult < 10:
+				'You are not bad ran for dilettante course, as ranked last 8th place.'
+			elseif begresult >= 10 and begresult < 20:
+				'You fought hard, but managed to take only 7 penultimate place.'
+			elseif begresult >= 20 and begresult < 30:
+				'You fought hard, but only managed to take 6th place.'
+			elseif begresult >= 30 and begresult < 40:
+				'You fought hard, but only managed to take 5th place.'
+			elseif begresult >= 40 and begresult < 50:
+				'You fought hard, but only managed to take 4th place.'
+			elseif begresult >= 50 and begresult < 60:
+				'You fought hard and managed to take 3rd place. Fizruk congratulates you on your success.'
+			elseif begresult >= 60 and begresult < 70:
+				'You fought hard and managed to take 2nd place. Fizruk congratulates you in hurry.'
+			elseif begresult >= 70:
+				swinbeg += 1
+				dom += 1
+				'You fought hard and managed to take 1st place. Fizruk congratulate you on winning the competition.'
+			end
+
 			beg += 1
 			fat -= 10
 

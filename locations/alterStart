@@ -312,7 +312,7 @@ $din_alter_start_ev15 = {
 	'When you finished 9th class, you did well enough continue with your secondary education and chose to continue. The summer holiday ends soon and you''re getting ready to start 10th grade.'
 	!!'You weaned these two classes and you only have a few months before graduation.'
 
-	act 'Start the game (late August)':
+	act 'Start at the end of August':
 		age=15
 		vidage=14
 		birthyear = year-age
@@ -334,7 +334,7 @@ $din_alter_start_ev15 = {
 		end
 	end
 
-	act 'Start a game (June)':
+	act 'Start at the begining of June':
 		age=15
 		vidage=14
 		birthyear = year-age
@@ -367,7 +367,7 @@ $din_alter_start_ev = {
 	'Soon the holidays end and you go to school, with whom you will spend the last year of study.'
 	!'You weaned these two classes and you only have a few months before graduation.'
 
-	act 'Start at end of August':
+	act 'Start at the end of August':
 		SHOWSTAT 1
 		SHOWOBJS 1
 		bikini=1

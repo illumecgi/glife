@@ -9,6 +9,8 @@ if miraingop = 0 and alko < 8:
 		cls
 		minut += 30
 		alko += 4
+		cumlip = 0
+		fbreath = 0
 		gs 'stat'
 
 		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
@@ -1260,6 +1262,8 @@ if miraingop = 1 and miragopQW > 0:
 			act 'To give a glass of Miroslav':
 				cls
 				miralko += 2
+				cumlip = 0
+				fbreath = 0
 				minut += 15
 				temp = 1
 				gs 'stat'
@@ -1273,6 +1277,8 @@ if miraingop = 1 and miragopQW > 0:
 				cls
 				minut += 15
 				alko += 4
+				cumlip = 0
+				fbreath = 0
 				temp = 2
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/drinking.jpg"></center>'
@@ -1284,6 +1290,8 @@ if miraingop = 1 and miragopQW > 0:
 			act 'To give a glass of Miroslav':
 				cls
 				miralko += RAND(3,4)
+				cumlip = 0
+				fbreath = 0
 				minut += 15
 				temp = 1
 				mirapiss = RAND(0,10)
@@ -1467,6 +1475,8 @@ if miraingop = 1 and miragopQW > 0:
 				cls
 				minut += 15
 				alko += 4
+				cumlip = 0
+				fbreath = 0
 				temp = 2
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/drinking.jpg"></center>'

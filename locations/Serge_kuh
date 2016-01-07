@@ -117,7 +117,11 @@ $serge_kuh_buh = {
 		act 'Agree':
 			cls
 			minut += 2
-			if beer_count > 0: alko += 1			
+			if beer_count > 0: 
+				alko += 1
+				cumlip = 0
+				fbreath = 0
+			end
 			beer_day = daystart
 			if beer_count > 0: beer_count -= 1			
 			gs'stat'

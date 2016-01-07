@@ -463,6 +463,8 @@ $gang_sex_room_ev1 = {
 											cls
 											minut += 10
 											alko += 2
+											cumlip = 0
+											fbreath = 0
 											gs'stat'
 											'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_11.jpg"></center>'
 											'You have opened and handed the bottle. Boys in anticipation of the continuation, They looked at how you drank greedily from the bottle.'
@@ -697,6 +699,8 @@ $shulga_beer = {
 		cls
 		minut += 5 
 		alko += RAND(1,2)
+		cumlip = 0
+		fbreath = 0
 		gs'stat'
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/beer'+rand(1,8)+'.jpg"></center>'
 		'<<$gop_text_beer2>>'

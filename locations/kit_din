@@ -99,29 +99,29 @@ $santehnikend = {
 	'Half an hour later he says he is finished, and it will be 1,500 rubles'
 
 	if money>=1500:
-	act 'Pay':
-		money -= 1500
-		gt'kuhr'
+		act 'Pay':
+			money -= 1500
+			gt'kuhr'
 		end
 	end
 	if money < 1500:
 		'You do not have enough money'
 		if money+stolmoney >= 1500:
-		'But you remember, that with the stash in your table it will be enough.'
+			'But you remember, that with the stash in your table it will be enough.'
 			act 'Pay':
-			if money < 1500:money = money+stolmoney & stolmoney = 0
-			money -= 1500
-			gt'kuhr'
+				if money < 1500:money = money+stolmoney & stolmoney = 0
+				money -= 1500
+				gt'kuhr'
 			end
 		end
 		if money+stolmoney < 1500:
-		act 'I did not have enough money':
-			cls
-			gs'stat'
-			'<center><img src="images/img/house/s3.jpg"></center>'
-			'You are embarrassed and tell the plumber, that you do not have enough money. He is visibly angry. "You call a fucking plumber and don''t have any money? What am I supposed to do now?"'
-			act 'Shrug':dynamic $santehnikend1
-			act 'Suggest a loan':dynamic $santehnikend2
+			act 'I did not have enough money':
+				cls
+				gs'stat'
+				'<center><img src="images/img/house/s3.jpg"></center>'
+				'You are embarrassed and tell the plumber, that you do not have enough money. He is visibly angry. "You call a fucking plumber and don''t have any money? What am I supposed to do now?"'
+				act 'Shrug':dynamic $santehnikend1
+				act 'Suggest a loan':dynamic $santehnikend2
 			end
 		end
 		if money+stolmoney<1500 and shameless > 14:
@@ -149,7 +149,6 @@ $santehnikend = {
 					end
 				end
 			end
-		end
 		end
 	end
 }

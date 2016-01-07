@@ -367,7 +367,7 @@ $din_alter_start_ev = {
 	'Soon the holidays end and you go to school, with whom you will spend the last year of study.'
 	!'You weaned these two classes and you only have a few months before graduation.'
 
-	act 'Start igruv end of August':
+	act 'Start at end of August':
 		SHOWSTAT 1
 		SHOWOBJS 1
 		bikini=1
@@ -386,7 +386,7 @@ $din_alter_start_ev = {
 		end
 	end
 	
-	act 'Start a game in June':
+	act 'Start at the begining of June':
 		SHOWSTAT 1
 		SHOWOBJS 1
         bikini=1

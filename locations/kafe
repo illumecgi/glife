@@ -12,6 +12,7 @@ if $ARGS[0] = 'start':
 	lcolor = rgb(106, 90, 205)
 	clr
 	gs 'stat'
+	gs 'kit_din'
 	'<center><b><font color="maroon">Cafe</font></b></center>'
 	'<center><img src="images/etogame/kafe.jpg"></center>'
 	'You see <a href="exec:gt ''kafe'', ''vlad''">the owner of the cafe</a> dealing with paperwork.'

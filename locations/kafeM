@@ -71,6 +71,8 @@ if $ARGS[0] = 'b':
 	end
 
 	alko += 2
+	cumlip = 0
+	fbreath = 0
 	gs 'stat'
 	'The cafe and the music started <<$boyA>> proposed to dance.'
 

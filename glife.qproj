@@ -287,6 +287,7 @@
       <Location name="Gaddvor"/>
       <Location name="Gadsarai"/>
       <Location name="Gadbana"/>
+      <Location name="gadukino"/>
       <Location name="gadriver"/>
       <Location name="Meadow"/>
       <Location name="MiroslavaHome"/>
@@ -459,6 +460,7 @@
       <Location name="mirror"/>
       <Location name="stol"/>
       <Location name="telefon"/>
+      <Location name="kit_din"/>
       <Location name="TV"/>
       <Location name="vann"/>
     </Folder>
@@ -542,7 +544,6 @@
       <Location name="locmansion"/>
       <Location name="motel"/>
       <Location name="road"/>
-      <Location name="gadukino"/>
       <Location name="youplace"/>
       <Location name="furi"/>
       <Location name="furisex"/>

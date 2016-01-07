@@ -478,6 +478,17 @@ $din_cheat_NoEat = {
 	end
 }
 
+$din_cheat_NoSleep = {
+	if cheatNoSleep = 0:
+		cheatNoSleep = 1
+		dynamic $din_cheat_menu_permanent
+		exit
+	elseif cheatNoSleep = 1:
+		cheatNoSleep = 0
+		dynamic $din_cheat_menu_permanent
+	end
+}
+
 $din_cheat_age = {
 	age = input("How many years you are now?")
 	if age <= 15:age = 15
@@ -519,6 +530,8 @@ $din_cheat_menu_permanent = {
 	if cheatNosweat = 1:$cheatNosweat = '<b>ON</b>'
 	if cheatNoEat = 0:$cheatNoEat = 'OFF'
 	if cheatNoEat = 1:$cheatNoEat = '<b>ON</b>'
+	if cheatNoSleep = 0:$cheatNoSleep = 'OFF'
+	if cheatNoSleep = 1:$cheatNoSleep = '<b>ON</b>'
 	pl'<center><a href="exec:dynamic $objcheat_menu"><b>Cheat menu</b></a></center>'
 	pl''
 	pl'<a href="exec:dynamic $din_cheat_work">Disable the requirement of labor</a>: <<$cheatWork>>'
@@ -527,6 +540,7 @@ $din_cheat_menu_permanent = {
 	pl'<a href="exec:dynamic $din_cheat_nomakeup">Cosmetics never smeared</a>: <<$cheatNomakeup>>'
 	pl'<a href="exec:dynamic $din_cheat_Nosweat">Never sweat</a>: <<$cheatNosweat>>'
 	pl'<a href="exec:dynamic $din_cheat_NoEat">Never eat or drink</a>: <<$cheatNoEat>>'
+	pl'<a href="exec:dynamic $din_cheat_NoSleep">Never sleep</a>: <<$cheatNoSleep>>'
     pl''
 	pl'<a href="exec:alko = 0 & dynamic $din_cheat_menu_permanent">Sober</a>'
 	pl'<a href="exec:alko = 2 & dynamic $din_cheat_menu_permanent">Fluster</a>'

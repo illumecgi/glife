@@ -126,6 +126,11 @@ if cheatNoEat = 1:
 	if energy ! 19:energy = 19
 	if water ! 19:water = 19
 end
+
+if CheatNoSleep = 1:
+	son = 24
+end
+
 !!!!!!!!!!!!
 
 if alko > 0 and frost > 0:frost = 0

@@ -311,7 +311,7 @@ end
 if marudatestinterface = 0:
 
 	if StoryLine = 1 and ParHomeBlock = 0:
-		'You live in the old five estate, <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''" class=plain>block number 1</a>, in your parents <a href="exec:minut += 15 & GT ''korrPar''" class=plain>apartment</a>. <<$gcartext>>'
+		'You live in the old five estate, <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''" class=plain>block number 1</a>, in your parents <a href="exec:minut += 5 & GT ''korrPar''" class=plain>apartment</a>. <<$gcartext>>'
 	elseif StoryLine = 1:
 		'The old five estate, in <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''" class=plain>block number 1</a>, your parents live. <<$gcartext>>'
 	else

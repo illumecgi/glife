@@ -25,36 +25,9 @@ if $ARGS[0] = 'start':
 
 	if money >= 100:
 		act 'Eat (100 rubles)':
-			cla
-			*clr
-			frost = 0
-			minut += 30
-			health += 10
 			money -= 100
-			manna += 5
-			willpower += 5
-			'<center><img src="images/pics/food.jpg"></center>'
-			if energy >= 30:
-				fat += 5
-				'You can no longer eat.'
-			elseif energy >= 20 and energy < 30:
-				fat += 3
-				energy += 10
-				'You force down a meal.'
-			elseif energy < 20:
-				energy += 20
-				fat += 1
-				'You gladly eat the food.'
-			end
-			if water >= 20:
-				'You don''t need any more tea.'
-			elseif water < 20:
-				water += 20
-				cumlip = 0
-				fbreath = 0
-				'You gladly drink a mug of tea.'
-
-			end
+			gs 'kitappliances'
+			dynamic $food
 
 			razvrand = rand(1, 10)
 
@@ -248,10 +221,14 @@ if $ARGS[0] = 'work':
 end
 
 if $ARGS[0] = 'workPred':
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+	$metka = $ARGS[0]
+	$loc = $CURLOC
 	cla
 	clr
 	*clr
-	gs 'kafedinamic'
+	gs 'kit_din'
 	gs 'stat'
 	'<center><b><font color="maroon">Cafe</font></b></center>'
 	'<center><img src="images/etogame/kafe.jpg"></center>'

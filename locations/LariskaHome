@@ -104,7 +104,7 @@ if $ARGS[0] = 'in':
 					lariskaBDSM += 1
 				elseif lariskaRand <= 10 and lariskaBDSM >= 10:
 					'You are opening the door and your room full view appears BDSM accessories and toys from sex-shop. In the center of the room stands a mother Lariska - Anna Igorevna in a suit of leather and what- It is doing something with a rope. She invites you to have fun.'
-					!lariskaBDSM += 1
+					lariskaBDSM += 1
 				else
 					'You are opening the door and your room full view appears BDSM accessories and toys from sex-shop.'
 				end

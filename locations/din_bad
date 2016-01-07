@@ -478,6 +478,8 @@ $dinalkowin1 = {
     alkowine = 1
     if intel  > 5 : intel -= 1
     alko += 5
+	cumlip = 0
+	fbreath = 0
     gs'stat'
     '<center><img src="images/pic/alkowin.jpg"></center>'
     
@@ -492,6 +494,8 @@ $dinalkowin2 = {
     wine = 0
     if intel > 5: intel -= 1
     alko += 5
+	cumlip = 0
+	fbreath = 0
     gs'stat'
     '<center><img src="images/pic/alkowin.jpg"></center>'
     'You opened her purse and pulled out, the remaining half bottle of wine and drank slowly threw the empty bottle.'

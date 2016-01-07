@@ -461,7 +461,7 @@ if $ARGS[0] = 'whore':
 			set minut = minut + 30
 			'<center><img src="images/etogame/parkex.jpg"></center>'
 			'You shoot the robe and walk into some pantyhose, as though-forgot to wear a skirt.'
-			act 'Go back to the park': 'park', 'start'
+			act 'Go back to the park':gt 'park', 'start'
 		end
 	end
 	act 'Go back to the park':gt 'park', 'start'

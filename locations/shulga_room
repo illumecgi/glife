@@ -102,7 +102,7 @@ if week >= 6 and hour >= 10 and hour < 17 and vasya_shulgin>=70 or week >= 6 and
 	act 'Fuck': dynamic $gopsex_select
 end
 	
-act 'Exit the room': gt'shulgahome'
+act 'Exit the room': gt'shulgahall'
 
 !event room if turnips (GorSlut >=3), Random 5%
 !Svetku catch
@@ -169,7 +169,7 @@ $sh_hooker = {
 	end		
 	act 'Leave (feigning resentment)': 
 		sub += 1
-		gt'shulgahome'
+		gt'shulgahall'
 	end
 }
 
@@ -198,7 +198,7 @@ $shulv_sexev1_sonya = {
 		'Here Basil tried to shove a member as far as possible. Sonia began to move his head back-forward, closed their lips ringlet on a limb. 
 		Shulga`s face was visible, he felt the caress of her quick tongue, elastic humidity rotika. All this was accompanied by an excited grunt Sony and wet squish.'
 		dynamic $masturb_gg
-		act 'Escape': gt'shulgahome'
+		act 'Escape': gt'shulgahall'
 	end
 }
 $shulv_sexev1_sonya = {
@@ -243,7 +243,7 @@ $shulv_sexev1_sonya = {
 				'Vasily pulling member of the wet hot captivity. Leaning forward, He sent to a member of her cute disheveled face. Even without restraint, He poured out a snub to the attractive face, wherein spattering and neck, Sonya and hangers.'
 				dynamic $masturb_gg
 				
-				act 'Escape': gt'shulgahome'
+				act 'Escape': gt'shulgahall'
 			end
 		end
 	end
@@ -298,7 +298,7 @@ $gang_sexev1_sonya = {
 				'Guys played enough with Sonya, obkonchalsya all her face and sent in a bath.'
 				dynamic $masturb_gg
 
-				act 'Escape': gt'shulgahome'
+				act 'Escape': gt'shulgahall'
 			end
 		end
 	end
@@ -315,7 +315,7 @@ $gang_sexev2_sonya = {
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev2_'+rand(1,2)+'.jpg"></center>'
 	'You went into the room and saw a kid like Sonya happy to suck their dicks.'
 
-	act 'Do not disturb': gt'shulgahome'
+	act 'Do not disturb': gt'shulgahall'
 }
 !Event with Sonia #3
 $gang_sexev3_sonya = {
@@ -329,7 +329,7 @@ $gang_sexev3_sonya = {
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sonya/group/ev3_'+rand(1,2)+'.jpg"></center>'
 	'You went into the room and saw a kid how to make Sonya guys sucking their dicks.'
 
-	act 'Do not disturb': gt'shulgahome'
+	act 'Do not disturb': gt'shulgahall'
 }
 !the choice of the opening event 3
 $gang_sex_sonya = {
@@ -538,7 +538,7 @@ $gang_sex_room_ev1 = {
 															The first to finish decided Vitek, saying, that it can not anymore, it`s time to. You put on your back, then began profusely to finish, flooding tired, but pretty face today whore. 
 															Sperm guys had a lot of, so you had to take all narrowed eyes on her body. Then you finish with his arms raised his tummy, boobs, face and licking fingers on shaky legs went into the bathroom.'
 
-															act 'Escape': gt 'shulgahome', 'bath'	
+															act 'Escape': gt 'shulgabath'	
 														end
 													end
 												end

@@ -3,6 +3,8 @@ if $ARGS[0] = 'drink':
 	cls
 	minut += 5
 	alko += 1
+	cumlip = 0
+	fbreath = 0
 	party_boys_drink += 1
 	gs'stat'
 	'<center><img src="images/qwest/alter/sisterQW/ReksHome/reksParty_2_' + rand(1,4) + '.jpg"></center>'
@@ -319,6 +321,8 @@ $party_boys_gost_drink ={
 	cls
 	minut += 5
 	alko += 1
+	cumlip = 0
+	fbreath = 0
 	party_boys_in += 1
 	gs'stat'
 	'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_boys_party_gost_1.jpg"></center>'
@@ -420,6 +424,8 @@ $party_boys_gost_drink_else ={
 	cls
 	minut += 5
 	alko +1
+	cumlip = 0
+	fbreath = 0
 	gs'stat'
 	'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_boys_party_gost_9_4.jpg"></center>'
 	'You have not abandoned the next portion of the alcohol and drank with pleasure again.

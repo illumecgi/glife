@@ -795,6 +795,10 @@
     </Folder>
     <Folder name="Shulga">
       <Location name="shulgahome"/>
+      <Location name="shulgahall"/>
+      <Location name="shulgabed"/>
+      <Location name="shulgakuh"/>
+      <Location name="shulgabath"/>
       <Location name="shulga_room"/>
       <Location name="cardgame_durak"/>
       <Location name="serge_razgovor_tv"/>

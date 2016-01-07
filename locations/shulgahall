@@ -24,27 +24,18 @@ gs'stat'
 '<center><b><font color = maroon>Hallway</font></b></center>'
 '<center><img src="images/zsoft/pod_ezd/shulgahome/korr.jpg"></center>'
 
-shd = 0
-
 if momslut >= 1 and sexev_momgg_count > 0:
 	if hour < 23 and ((week < 6 and hour >= 15) or (week >= 6 and hour >= 10)):
 		if RAND(1,100) <= 3:
-			shd = 1
+			'Have you heard any-strange sounds from the small room: <a href="exec: dynamic $shulga_home_momgg1">see</a>'
 		elseif RAND(4,100) <= 6:
-			shd = 2
+			'Have you heard any-the sounds of a small room: <a href="exec: dynamic $shulga_home_momgg2">see</a>'
 		elseif RAND(7,100) <= 9:
-			shd = 3
+			'Have you heard any-the loud sucking sound from the small room: <a href="exec: dynamic $shulga_home_momggbang">see</a>'
 		end
 	end
 end
 
-if shd = 1:
-	'Have you heard any-strange sounds from the small room: <a href="exec: dynamic $shulga_home_momgg1">see</a>'
-elseif shd = 2:
-	'Have you heard any-the sounds of a small room: <a href="exec: dynamic $shulga_home_momgg2">see</a>'	
-elseif shd = 3:
-	'Have you heard any-the loud sucking sound from the small room: <a href="exec: dynamic $shulga_home_momggbang">see</a>'	
-end
 
 act 'Go to the living room': gt'shulga_room'
 act 'Go to Shulgas room': gt 'shulgabed'

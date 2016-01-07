@@ -12,8 +12,8 @@ SaunaWhore += 1
 workDolg2 = 0
 gs 'stat'
 '<center><img src="images/sauna/bj<<whorerand>>.jpg"></center>'
-'You are in to the sauna with a client, you both undress.'
-'You fall to your knees in front of the client and in your mouth take his flaccid cock, working your jaw his member quickly rises to become an erect <<dick>> centimeters.'
+'You take your client in to the sauna, where you both undress.'
+'You fall to your knees in front of the client and take his flaccid cock in your mouth. You work your magic and his member quickly rises to <<dick>> centimeters fully erect.'
 'You carefully clasping his dick and sucking with your <<$liptalk>> you feel every movement of his hard cock in your mouth and throat.'
 
 if dick <= 12:
@@ -49,9 +49,8 @@ else
 
 	act 'Further':
 		cls
-		whorerand = rand(0, 100)
 
-		if whorerand <= 80:
+		if rand(0, 100) <= 80 and mesec = 0:
 			cls
 			minut += 45
 			sex += 1

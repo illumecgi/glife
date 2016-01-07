@@ -300,6 +300,8 @@ $din_gboy_go_to_disco = {
 				act 'Go Man and drink beer':
 					cls
 					alko += 2
+					cumlip = 0
+					fbreath = 0
 					minut += 3
 					horny += 5
 					gs 'stat'

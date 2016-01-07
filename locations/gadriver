@@ -464,9 +464,9 @@ if $ARGS[0] = 'Gadbitch':
 				end
 			end
 		end
-
-		act 'Leave':minut += 5 & gt 'Gadriver'
 	end
+
+	act 'Leave':minut += 5 & gt 'Gadriver'
 end
 
 $mirameadow = {

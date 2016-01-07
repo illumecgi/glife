@@ -72,6 +72,8 @@ if $ARGS[0] = 'b':
 	end
 
 	alko += 2
+	cumlip = 0
+	fbreath = 0
 	gs 'stat'
 	'After some time with food and wine, and was done with <<$boyA>> proposed to hold you.'
 

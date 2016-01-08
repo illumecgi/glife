@@ -108,7 +108,7 @@ end
 dynamic $lekarstvo
 dynamic $vitamin
 
-if zoo >= 6:
+if zoo >= 6 and sobaka ! 0:
 	if husband > 0 and husbandrink ! 10:
 		if hour = 7 and hour = 17:
 			act 'Call <<$namesob>>':

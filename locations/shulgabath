@@ -35,7 +35,7 @@ if cumfrot > 0:
 
 		'<center><img src="images/pic/frotsp.jpg"></center>'
 		'You rinse the semen stains from your clothes.'
-		act 'Finish': gt 'shulgahome', 'bath'
+		act 'Finish': gt 'shulgabath'
 	end
 end
 
@@ -48,7 +48,7 @@ if klisma = 1 and klismaday ! daystart:
 		klismaday1= 1
 		'<center><img src="images/picV/klisma.jpg"></center>'
 		'You give yourself an enema and clean your intestines. Your ass is now ready for anal sex.'
-		act 'Finish':gt 'shulgahome', 'bath'
+		act 'Finish':gt 'shulgabath'
 	end
 end
 
@@ -62,7 +62,7 @@ if analplug = 1 and analplugin = 1:
 
 		'<center><img src="images/body/analplug.jpg"></center>'
 		'You bent over and took out the butt plug.'
-		act 'Finish':gt 'shulgahome', 'bath'
+		act 'Finish':gt 'shulgabath'
 	end
 elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 	act 'Insert a butt plug (0:05)':
@@ -78,7 +78,7 @@ elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 		'<center><img src="images/body/analplug.jpg"></center>'
 		if butpluguse > 0:'You bent over and inserted the butt plug.'
 		if butpluguse = 0:butpluguse = 1 & '"If I don''t use it then why did I buy it!" you thought. You decided to take a closer look while thinking, "It is necessary to start developing my ass so I could have great adventures someday, you could even say a huge and thick adventures with crimson heads, uh, now I got carried away." You scratched your head. Then you directed it in your ass, it was a bit painful at first, but as soon as the widest part was plunged into the murky depths of your anus it became easier to push it all the way.'
-		act 'Leave':gt 'shulgahome', 'bath'
+		act 'Leave':gt 'shulgabath'
 	end
 end
 
@@ -93,7 +93,7 @@ if pregtest > 0:
 			'The test showed one band.'
 		end
 
-		act 'Further':gt 'shulgahome', 'bath'
+		act 'Further':gt 'shulgabath'
 	end
 end
 
@@ -106,7 +106,7 @@ if vibrator = 1 and vibratorIN = 1:
 		if vagina < 30:vagina += 1
 		'<center><img src="images/etogame/vibrator.jpg"></center>'
 		'You bend over the sink and take the vibrator out of your pussy.'
-		act 'Finish':gt 'shulgahome', 'bath'
+		act 'Finish':gt 'shulgabath'
 	end
 elseif vibrator = 1 and vibratorIN = 0:
 	act 'Insert the vibrator in your vagina (0:05)':
@@ -117,7 +117,7 @@ elseif vibrator = 1 and vibratorIN = 0:
 		if vagina < 30:vagina += 2
 		'<center><img src="images/etogame/vibrator.jpg"></center>'
 		'You bend over the sink and inserted the vibrator in your pussy.'
-		act 'Finish':gt 'shulgahome', 'bath'
+		act 'Finish':gt 'shulgabath'
 	end
 end
 

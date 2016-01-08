@@ -28,7 +28,7 @@ $pod_sex_ev1 = {
 !act 'Smer':
 cls
 minut +=2
-if gorslut >= 6 and podwhoreQW < 3: podwhoreQW +=1
+if gorslut >= 6 and podwhoreQW < 3: podwhoreQW += 1
 gs'stat'
 '<center><img src="images/zsoft/pod_ezd/event/sex_ev1_1.jpg"></center>'
 'One of the boys stood and smoked, and the other which is bolder came up to you and started matzo you in the ass.'
@@ -1091,9 +1091,9 @@ if $ARGS[0] = 'etaj_1':
 	     'Residents of the home: <a href="exec: dynamic $housemates">read</a>'
 		'Hanging Ads: <a href="exec:GT ''pod_ezd'',''pod_objava''">read</a>'
 	act '<font color = maroon><b>To go out</b></font>': gt'gorodok'     
-		if ArtomBeInHome > 0 and artemblok = 0: 
-			act 'Apartment number2 Artem Chebotarev': CLOSE ALL & gt'artemhome'
-		end
+	if ArtemBeInHome > 0 and artemblok = 0: 
+		act 'Apartment number2 Artem Chebotarev': CLOSE ALL & gt'artemhome'
+	end
 	act 'Climb the stairs to the second floor': CLOSE ALL & gt'pod_ezd','etaj_2'
 	act 'Take the elevator': CLOSE ALL & gt'pod_ezd','lift'
 end

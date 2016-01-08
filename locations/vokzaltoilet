@@ -1,4 +1,10 @@
 # vokzaltoilet
+CLOSE ALL
+
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metka = $ARGS[0]
+$loc = $CURLOC
 clr
 gs'stat'
 
@@ -14,27 +20,15 @@ act 'Exit out of the closet':gt'vokzalholle'
 
 
 act 'Look in the mirror':
-
 	cla
-
 	gs 'portmirror'
-
-	$gt1 = $curloc
-
-	$gt2 = ''
 
 	dynamic $portmirror
 
-
-
 	act 'Move away from the mirror':
-
 		cla
-
 		gt $curloc
-
 	end
-
 end
 
 if cumfrot > 0:

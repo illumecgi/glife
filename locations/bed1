@@ -66,7 +66,7 @@ if $ARGS[0] = 'sogn':
 end
 
 if $ARGS[0] = 'sog1':
-	if zoo >= 6:
+	if zoo >= 6 and sobaka ! 0:
 		if husband > 0 and husbandrink ! 10:
 			if hour > 22 or hour < 7:
 				cla

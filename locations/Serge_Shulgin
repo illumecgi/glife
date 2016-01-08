@@ -11,6 +11,9 @@
 ! >=100 - Sergei gives the keys to the apartment (at any time to get into the house)----------------------------------!
 !============================================================================================================! 
 !\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/!
+
+if serge_sleep_sex_day ! daystart: serge_sleep_sex_count = 2
+
 $serge_shulgin_rep = {
 	if serge_shulgin<10:'Sergei Borisovich You almost do not know'
 	if serge_shulgin>=10 and serge_shulgin<20:'You Sergei Borisovichёm napryazhney relations'
@@ -124,7 +127,6 @@ end
 
 if $ARGS[0] = 'sleep':
 	clr
-	if serge_sleep_sex_day ! daystart: serge_sleep_sex_count = 2
 	gs'stat'
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/sleep.jpg"></center>'
 		'Sergei fast asleep'
@@ -184,10 +186,10 @@ $sleep_prstsex = {
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/event/vert/dr'+rand(1,6)+'.gif"></center>'
 	'You began to flirt and unashamedly pester Sergei: on the ass shake, the boobs, so that pumping, then I`ll, drawing his attention to his charms, But not everyone can resist such beauty.'
 randnamek=rand(1,100)
-	if serge_sleep_sex_count > 0 and serge_shulgin >=70 and randnamek<80: dynamic $sleep_nameksex_oral
-	if serge_sleep_sex_count > 0 and serge_shulgin >=70 and randnamek>=80 and randnamek<=90: dynamic $sleep_nameksex_rought
-	if serge_sleep_sex_count > 0 and serge_shulgin >=70 and randnamek>90: dynamic $sleep_nameksex_lick	
-	if serge_sleep_sex_count <=0 and serge_shulgin >=70: dynamic $serge_sleep_sex_perebor
+	if serge_sleep_sex_count > 0 and serge_shulgin >= 70 and randnamek < 80: dynamic $sleep_nameksex_oral
+	if serge_sleep_sex_count > 0 and serge_shulgin >= 70 and randnamek >= 80 and randnamek <= 90: dynamic $sleep_nameksex_rought
+	if serge_sleep_sex_count > 0 and serge_shulgin >= 70 and randnamek > 90: dynamic $sleep_nameksex_lick	
+	if serge_sleep_sex_count <= 0 and serge_shulgin >= 70: dynamic $serge_sleep_sex_perebor
 	if serge_shulgin >=50 and serge_shulgin <70: dynamic $sleep_nameksex_otkaz	
 }
 !-------------------------------------------------------------------------!

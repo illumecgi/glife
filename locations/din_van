@@ -240,7 +240,7 @@ $brit = {
 		end
 	end
 
-	act 'Get out and get dressed':gt $curloc
+	act 'Get out and get dressed':gt $locM, $metkaM
 }
 
 $tampon = {

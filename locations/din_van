@@ -58,8 +58,10 @@ $shower = {
 		else
 			'You carefully lather soap over your body trying not to miss any spot, and then wash off in the shower.'
 		end
-
-		dynamic $brother_voyeurism
+		
+		if $loc = 'vanrPar':
+			dynamic $brother_voyeurism
+		end
 
 		if (leghair > 0 or lobok > 0) and stanok > 0:
 			act 'Get razor':dynamic $brit
@@ -138,7 +140,9 @@ $bath = {
 			'You got into the bathroom and went into the warm water stolidly staring at his smooth legs sticking out of the water. You lathered his body and then washed soap rubbing his hands over his curves of the female body.'
 		end
 
-		dynamic $brother_voyeurism
+		if $loc = 'vanrPar':
+			dynamic $brother_voyeurism
+		end
 
 		if leghair > 0 and stanok > 0 or lobok > 0 and stanok > 0:
 			act 'Get razor':dynamic $brit

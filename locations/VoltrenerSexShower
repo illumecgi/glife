@@ -250,7 +250,7 @@ $din_trener_voyeur5= {
 	end
 }
 
-if ShowerIvan <> 1:
+if ShowerIvan ! 1:
   '<center><img src="images/qwest/alter/volley/VoltrenerSexShower.jpg"></center>'
 	act 'Mytsa':
 		clr & cla

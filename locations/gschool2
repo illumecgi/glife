@@ -1029,11 +1029,13 @@ $din_bigperemena = {
 
 	if AlbFrend >= 1 and GorSlut >= 3 and SchoolGossip > 0 and kotovLoveQW <= 0 and AlbinaBlockHumiliation = 0:
 		AlbinaBlockHumiliation = 1
+		minut += 60
 		'During the break you approached the local Gopnik. "Slysh cocksucker, missed the dick? Come to jolt, feed you over." To the guys came Albina Barlovskaya "Hey kids, it took away from the quick." Boys began to run into Albina, but she just laughed in their faces, "Look, boys, pull up your pants and stomp where got out, if I see you again pestering Svetke, will have a deal with my dad, and you vkurse who he is." Guys poobzyvali Albina my father''s daughter and said that she kept in her father''s ass hiding, but Albina only grinned in response to them, soon the bell rang and the boys went to the lesson.'
 		dynamic $din_sekondparturok
 		exit
 	elseif AlbFrend >= 1 and GorSlut >= 3 and SchoolGossip = 0 and kotovLoveQW <= 0 and AlbinaBlockHumiliation = 0:
 		AlbinaBlockHumiliation = 1
+		minut += 60
 		'During the break you approached the local Gopnik. "Slysh <<$name>>. Star blowjob. Potsiki We already told you zashkvarenaya. Tolchek Come in and chat right." To the guys came Albina Barlovskaya "Hey kids, it took away from the quick." Boys began to run into Albina, but she just laughed in their faces, "Look, boys, pull up your pants and stomp where got out, if I see you again pestering Svetke, will have a deal with my dad, and you vkurse who he is." Guys poobzyvali Albina my father''s daughter and said that she kept in her father''s ass hiding, but Albina only grinned in response to them, soon the bell rang and the boys went to the lesson.'
 		dynamic $din_sekondparturok
 		exit

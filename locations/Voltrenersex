@@ -58,6 +58,7 @@ $din_trener_vagin = {
 					$sexstart2orgazm5 = 'Through cover you pleasure, you hardly understand what the coach is going to pump now your pussy cum. With a cry: "Not only in me!", - you jumped off the coaching dick and swung framed Licko under his gushing cock. Cum flew in your face, you feel, how warm drops slide down her cheek at the neck and fall asleep in the hollow between the Breasts.'
 					dynamic $sexstart2
 					act 'Wipe the cum':
+						*clr & cla
 						cumlip += 1
 						'<center><img src="images/qwest/alter/volley/voitrensex34.jpg"></center>'
 						'Waiting for the last drops, you began to collect sperm from the face fingers, and then lick them, looking at coach. After watching this picture, the mentor tried to make a joke: "And you''re insane woman, <<$name>>", - and you thought you only coach to fly was missing in your age, it''s better this way. '

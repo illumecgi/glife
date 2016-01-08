@@ -140,6 +140,7 @@ if $ARGS[0] = 'dressing room':
 		if $clothingworntype ! 'nude':
 			gt 'fit', 'start'
 		else
+			cla
 			msg'<b><font color = red>You need to get dressed.</font></b>'
 			act 'Return': gt 'fit', 'dressing room'
 		end

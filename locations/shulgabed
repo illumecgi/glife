@@ -14,10 +14,10 @@ gs'gopsex'
 '<center><img src="images/zsoft/pod_ezd/shulgahome/smroom.jpg"></center>'
 'Everything is as usual a large bed, beside tables, opposite the TV, Side cabinet.'
 
-if hour < 7 or hour >= 23: 'On the bed sleeping <<$serg_obr>> <a href="exec:GT ''Serge_Shulgin'',''serge_razbud''">Sergei</a>.'
+if hour < 7 or hour >= 23: 'On the bed sleeping <<$serg_obr>> <a href="exec:GT ''Serge_Shulgin'',''sleep''">Sergei</a>.'
 
-if week < 6 and ((hour >= 16 and hour < 18) or (hour >= 21 and hour < 23)): 'On the bed lies<<$serg_obr>> <a href="exec:GT ''serge_razgovor_tv''">Sergei</a> watching TV.'
-if week >= 6 and ((hour >= 7 and hour < 18) or (hour >= 21 and hour < 23)): 'On the bed lies<<$serg_obr>> <a href="exec:GT ''serge_razgovor_tv''">Sergei</a> watching TV.'
+if week < 6 and ((hour >= 16 and hour < 18) or (hour >= 21 and hour < 23)): 'On the bed lies<<$serg_obr>> <a href="exec:GT ''Serge_Shulgin'',''tv''">Sergei</a> watching TV.'
+if week >= 6 and ((hour >= 7 and hour < 18) or (hour >= 21 and hour < 23)): 'On the bed lies<<$serg_obr>> <a href="exec:GT ''Serge_Shulgin'',''tv''">Sergei</a> watching TV.'
 
 
 act 'Exit the room': gt'shulgahall'

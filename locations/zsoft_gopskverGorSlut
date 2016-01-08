@@ -211,6 +211,8 @@ if $ARGS[0] = '2':
 	if alko < 6:
 		minut += 5
 		alko += 1
+		cumlip = 0
+		fbreath = 0
 		energy += 5
 		water += 1
 		cumlip = 0

@@ -126,6 +126,8 @@ $d_albina_home_vine = {
 		manna += 100
 		willpower += 20
 		alko += 4
+		cumlip = 0
+		fbreath = 0
 		gs 'stat'
 		'<center><img src="images/qwest/alter/albina/drunk.jpg"></center>'
 		'You drink a glass of wine with Albina.'
@@ -224,6 +226,7 @@ $d_albina_akt_anal = {
 		act 'Rest':gt $curloc
 	end
 }
+
 
 --- albdin ---------------------------------
 

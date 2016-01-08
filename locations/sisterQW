@@ -606,6 +606,8 @@ if $ARGS[0] = 'sisboyQW_party':
 			cls
 			minut += 15
 			alko += 3
+			cumlip = 0
+			fbreath = 0
 			gs'stat'
 			'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_9.jpg"></center>'
 			'You took the bottle from his hands Ani.
@@ -619,6 +621,8 @@ if $ARGS[0] = 'sisboyQW_party':
 			cls
 			minut += 15
 			alko += 3
+			cumlip = 0
+			fbreath = 0
 			gs'stat'
 			'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_9.jpg"></center>'
 			'You are friendly tried to refuse to drink.
@@ -633,6 +637,8 @@ You took the bottle from his hands Ani, and gulp down the throat with a strong i
 			cls
 			minut += 15
 			alko += 3
+			cumlip = 0
+			fbreath = 0
 			gs'stat'
 			'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_9.jpg"></center>'
 			'Standing, you tried to get out from behind his Desk, to go dancing, but no one was there, all sat and drank.
@@ -664,6 +670,8 @@ You are approached by Anya:
 			cls
 			minut += 10
 			alko += 3
+			cumlip = 0
+			fbreath = 0
 			horny += 10
 			gs'stat'
 			'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_13.jpg"></center>'
@@ -807,6 +815,8 @@ $sisboy_reks = {
 		cls
 		minut += 5
 		alko += 1
+		cumlip = 0
+		fbreath = 0
 		gs'stat'
 		'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_19.jpg"></center>'
 		'You have come to the birthday boy, to personally congratulate, although you know little about.
@@ -911,6 +921,8 @@ $sisboy_drink = {
 		cls
 		minut += 10
 		alko += 2
+		cumlip = 0
+		fbreath = 0
 		gs'stat'
 		'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_11.jpg"></center>'
 		'All drunk undressed to the waist and went into the hall to dance.

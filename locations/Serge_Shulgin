@@ -34,7 +34,7 @@ if serge_sleep_sex_day ! daystart: serge_sleep_sex_count = 2
 gs'stat'
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/sleep.jpg"></center>'
 	'Sergei fast asleep'
-act 'Escape': dynamic $shsroom	
+act 'Escape': gt 'shulgabed'	
 act 'Wake up': 
 	if serge_shulgin < 50: dynamic $sleep_serge_otkaz
 	if serge_shulgin >= 50: dynamic $sleep_serge_soglasie
@@ -50,7 +50,7 @@ $sleep_serge_otkaz = {
 	'What do you want <<$nickname>> can not sleep?, Night yard forbid sleep!'
 	'You are asking: "Uncle Sergei can I lie down next to you, nap?"'
 	'Sergey is responsible: "<<$name>> you are quite insolent I look?, pussy home to sleep."'
-	act 'Escape': dynamic $shsroom
+	act 'Escape': gt 'shulgabed'
 }
 !---------------------!
 !allow to sleep next!
@@ -77,7 +77,7 @@ $sleep_serge_bed = {
 	minut += 180
 	gs'stat'
 	'You lay down and slept a couple of hours.'
-	act 'Up': dynamic $shsroom
+	act 'Up': gt 'shulgabed'
 }
 !---------------------------------------------------------------!
 !pristavashki to Sergei, and if the ratio>70 You can hint at sex!
@@ -104,7 +104,7 @@ act 'Further':
 	minut += 2
 	gs'stat'
 	'- <<$name>> I have important things to do tomorrow morning, do not bother me, Let`s sleep peacefully!'
-act 'Escape': dynamic $shsroom
+act 'Escape': gt 'shulgabed'
 end	
 }
 !----------------------------------------------------------------!
@@ -118,7 +118,7 @@ act 'Further':
 	'- <<$name>>, I is not young boy, Endurance is not the same, here in my youth I would have more th-th. 
 And today you are completely milked me, I`m tired as a dog, and want to sleep. 
 Dick has not exactly rise, come tomorrow!'
-act 'Escape': dynamic $shsroom
+act 'Escape': gt 'shulgabed'
 end	
 }
 !--------------------!
@@ -296,7 +296,7 @@ Your mouth spilled a powerful jet, has accumulated therein. Even fear, you zahle
 It was another delight, feel inside, slightly rough feel your tongue, sharp teeth and hot breath of the most sensitive part of the body. 
 But all good things must come to an end and let you go, Sergei sat beside. You knocked him down on the bed and lay down next, his head resting on his chest. 
 He lay pleased, relaxed hand and fingered the lush mane of your hair.'
-			act 'Escape': dynamic $shsroom		
+			act 'Escape': gt 'shulgabed'		
 		end
 	end
 end		
@@ -371,7 +371,7 @@ You just moved back, leaving in the mouth, Only the very head, and, touching her
 Judging by the contented face of Sergey, Now it was the, Just right! He just flew away! You are accelerated, sensing his growing excitement. 
 Sergei exploded, right in your mouth.
  - OheHb xorowo - He said, and nompenal You no uetoe.'
-			act 'Escape': dynamic $shsroom	
+			act 'Escape': gt 'shulgabed'	
 			end
 		end
 	end
@@ -451,7 +451,7 @@ Sergei felt your warmth, I feel your wetness between her legs, he came to the pe
 						gs'stat'
 						'<center><img src="images/zsoft/pod_ezd/shulgahome/smroom/event/cum'+rand(1,7)+'.gif"></center>'
 						'You will quickly dismounted and took Sergei mouth, after a few moments the flow of sperm hit in the face, You eagerly licked the remnants of sperm with his head.'
-					act 'Escape': dynamic $shsroom
+					act 'Escape': gt 'shulgabed'
 				end
 			end
 		end	
@@ -524,7 +524,7 @@ And unceremoniously grabbed you for <<$hapri2>> <<$hair2>> and pulled out of bed
 - Ending, I`ll be on the face and mouth... And you, slut, all lapped and not a single drop left on my dick!
 You pushed on the eggs and began, judging by the pained face, You pump the sperm directly into the throat, just sticking sprayed in the face. 
 You dutifully and executive tried to catch his mouth sperm, until he, lastly, slightly loosened his grip, giving you act on your choice.'
-				act 'Escape': dynamic $shsroom
+				act 'Escape': gt 'shulgabed'
 		end	
 	end
 end					
@@ -601,7 +601,7 @@ You dutifully looked up and looking at him <<$glaza3>>, a little red from shame.
 - I like to suck, whore? Blink, if it is true!
 You momentarily covered with fluffy eyelashes eyes, humbly and confirming the, what you like to suck, and then, what do you, pure and undefiled yesterday, agree, to you whatever you call it.
 At this point, a powerful jet of sperm hit you in the mouth, We tried to pull away, but the hand on his head did not let you do that, I had to quickly swallow constantly coming invaluable product.'
-				act 'Escape': dynamic $shsroom
+				act 'Escape': gt 'shulgabed'
 		end	
 	end
 end					

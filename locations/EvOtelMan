@@ -240,7 +240,7 @@ $din_otel_man_beforesex = {
 		end
 	end
 
-	act 'Next.':
+	act 'Next':
 		cls
 		minut += 30
 		!!sex += 1
@@ -258,7 +258,7 @@ $din_otel_man_beforesex = {
 		dynamic $sexcum
 		dynamic $din_otel_man_end
 	end
-	 if dom > 0:dynamic $din_otel_man_blow
+	if dom > 0:dynamic $din_otel_man_blow
 }
 music_on = 0
 minut += 15
@@ -279,6 +279,8 @@ if DPtipe = 1:
 			cls
 			horny += 20
 			alko += 2
+			cumlip = 0
+			fbreath = 0
 			minut += 5
 			gs 'stat'
 			'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'

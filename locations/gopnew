@@ -430,6 +430,8 @@ if $ARGS[0] = 'pivas':
 
 	if gnewQW > 0:
 		alko += 1
+		cumlip = 0
+		fbreath = 0
 		'You sat down with the guys on the bench and began to drink beer.'
 		'To the playground came burly Udmurt and shaved bald on Grey.'
 
@@ -552,6 +554,8 @@ if $ARGS[0] = 'pivas':
 
 	gopota += 1
 	alko += 2
+	cumlip = 0
+	fbreath = 0
 	'You sat on a bench and drank beer with Gopnik.'
 	'<<$gopnik>>'
 

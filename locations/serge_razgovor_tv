@@ -52,9 +52,13 @@ rndtv=rand(1,100)
 	end
 }
 
+gs'Serge_Shulgin'
 clr
+cls
+cla
 minut += 1
 gs'stat'
+
 if sergebazar_day ! daystart: sergebazar_count = 10
 '<center><img src="images/zsoft/pod_ezd/shulgahome/serge2.jpg"></center>'
 'Shulgin Sergey Borisovich - 1967 the year of birth, gray hair and a small beer belly, but in your view still looks hearty. With her mother long ago divorced Basil.'

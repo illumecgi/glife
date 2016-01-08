@@ -1,5 +1,7 @@
 # placer_house_one
 alko += 10
+cumlip = 0
+fbreath = 0
 gs 'stat'
 'A guy takes you to his house his home.'
 !!tipsexrand = rand(0, 1)

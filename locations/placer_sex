@@ -912,6 +912,8 @@ $din_analplugin_off = {
 
 $din_drink_vodca = {
 	alko += rand(0,5)
+	cumlip = 0
+	fbreath = 0
 	*clr & cla
 	'<center><img src="images/qwest/alter/parc_ev/placer_sex2.jpg"></center>'
 	'The boys quickly poured vodka into the glasses, and the whole company together drank. Guys do not for a moment did not leave you bored, telling stories and anecdotes.  <<$bname>> said: "Well, between the first and second period of the small."'
@@ -1208,6 +1210,8 @@ if kol_man < 4 and anus > 14 and vagina > 14 and mesec <= 0 :
 else
 	cls
 	alko += 20
+	cumlip = 0
+	fbreath = 0
 	minut += 30
 	gs'stat'
 	'<center><img src="images/qwest/alter/placer/drunk.jpg"></center>'

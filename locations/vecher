@@ -12,6 +12,8 @@ if $ARGS[0] = 'start':
 		cla
 		hour = 23
 		alko += 6
+		cumlip = 0
+		fbreath = 0
 		'You have fun, dance and Bukhaev.'
 		itrand = rand(1, 12)
 		gt 'vecher', 'end<<itrand>>'

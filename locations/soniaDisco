@@ -103,6 +103,8 @@ gs 'stat'
 act 'go thump':
 	cls
 	alko += 2
+	cumlip = 0
+	fbreath = 0
 	minut += 15
 	gs 'stat'
 	'<center><img src="images/qwest/alter/sonia/0.jpg"></center>'

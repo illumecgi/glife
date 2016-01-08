@@ -133,6 +133,8 @@ $sister_party_drink ={
 	cls
 	minut += 5
 	alko +=1
+	cumlip = 0
+	fbreath = 0
 	drunk_sveta += 1
 	gs'stat'
 	'<center><b><font color = maroon>Anya</font></b></center>'

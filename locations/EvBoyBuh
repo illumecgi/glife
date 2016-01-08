@@ -168,6 +168,8 @@ if GorSlut = 0:
 	act 'Drink beer':
 		cls
 		alko += 1
+		cumlip = 0
+		fbreath = 0
 		manna += 30
 		fat += 5
 		energy += 20
@@ -653,6 +655,8 @@ if GorSlut = 1 or GorSlut = 2:
 		end
 	elseif gsboyrand > 0:
 		alko += 1
+		cumlip = 0
+		fbreath = 0
 		minut += 15
 		gs 'stat'
 		'<<$bname>> beer and got you started drinking with him. When the beer was done with a guy came up to you and hug you.'

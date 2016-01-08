@@ -48,7 +48,7 @@ act 'Undress and go to bed':
 	if hour = timer and minut = timerM:
 		manna -= 10
 		'Alarm goes off.'
-		
+
 		if kanikuli = 0 and SchoolAtestat = 0 and week < 6 and hour >= 4 and hour < 9:
 			act 'Get up out of bed and get dressed for school (0:15)':
 				cla
@@ -59,13 +59,20 @@ act 'Undress and go to bed':
 				gt $locM, $metkaM
 			end
 		end
-		
+
 		act 'Get out of bed and get dressed (0:15)':
 			cla
 			gs 'clothing', 'wear_last_worn'
 			InSleep = 0
 			minut += 15
 			tanga = 1
+			gt $locM, $metkaM
+		end
+
+		act 'Get out of bed (0:10)':
+			cla
+			InSleep = 0
+			minut += 10
 			gt $locM, $metkaM
 		end
 
@@ -92,6 +99,13 @@ act 'Undress and go to bed':
 			InSleep = 0
 			minut += 15
 			tanga = 1
+			gt $locM, $metkaM
+		end
+
+		act 'Get out of bed (0:10)':
+			cla
+			InSleep = 0
+			minut += 10
 			gt $locM, $metkaM
 		end
 

@@ -75,16 +75,16 @@ if hour >= 6 and hour <= 21:
 		act'Visit the optometrist':
 			cla
 			*clr
-			hour+=1
-			minut+=35
+			hour += 1
+			minut += 35
 			gs'stat'
 			'You have passed a series of tests.
 			"Well. The vision you have fallen significantly. I have to write you a goggles. While I`ll write you a simple little rimmed glasses, pohzhe and you can choose to his liking, or to make corrections. Truth, the procedure is not cheap.'
-			nerdism+=1
-			glassqw=2
-			glass=1
-			blizoruk+=1
-			act 'Logout':gt $curloc
+			nerdism += 1
+			glassqw = 2
+			glass = 1
+			blizoruk += 1
+			act 'Leave':gt $curloc
 		end
 	end
 
@@ -307,7 +307,7 @@ if hour >= 6 and hour <= 21:
 								money -= 1000
 								
 								'Thank you, doctor. You can always contact. And bring your friends..'
-								act 'Logout':gt $curloc
+								act 'Leave':gt $curloc
 							end
 						end
 						
@@ -403,7 +403,7 @@ if hour >= 6 and hour <= 21:
 															'- Well, here, one good turn deserves another. - Smiling doctor said. - Come, at least once a week, with your work needed.'
 															'- Thank you, doctor. You can always contact. Site make you free. And bring your friends.'
 															
-															act 'Logout':gt $curloc
+															act 'Leave':gt $curloc
 														end
 													end
 												end
@@ -432,7 +432,7 @@ if hour >= 6 and hour <= 21:
 				GspravkaT = 1
 
 				'Gynecologist wrote Help, that you are a virgin.'
-				act 'Logout':gt $curloc
+				act 'Leave':gt $curloc
 			end
 			if vagina > 0:
 				cls
@@ -451,7 +451,7 @@ if hour >= 6 and hour <= 21:
 					'- Undress, check your health.'
 				end
 
-				act 'Verify.':
+				act 'Verify':
 					cls
 					minut += 5
 					gs'stat'
@@ -495,7 +495,7 @@ if hour >= 6 and hour <= 21:
 						end
 					end
 				end
-				act 'Go directly, in the case of.':
+				act 'Go directly, in the case of':
 					cls
 					minut += 5
 					gs'stat'
@@ -523,19 +523,20 @@ else
 end
 
 $gpoli_spravka_badend = {
-	act 'Take this certificate.':
+	act 'Take the certificate':
 		cls
 		minut += 5
 		gs'stat'
 		Gspravka = 30
 		GspravkaT = 2
-		'Gynecologist wrote Help, that you are not a virgin.'
-		act 'Logout':gt $curloc
+		'The gynecologist filled out a medical certificate, stating that you are not a virgin.'
+		'Dejected, you take it from him.'
+		act 'Leave':gt $curloc
 	end
 }
 
 $gpoli_spravka_arrange = {
-	act 'Try to negotiate.':
+	act 'Try to negotiate':
 		cls
 		minut += 5
 		gs'stat'
@@ -560,7 +561,7 @@ $gpoli_spravka_arrange = {
 				GspravkaT = 1
 				gs'stat'
 				'You grabbed almost ready help and ran out of the office. Later, you gently forged certificate.'
-				act 'Logout':gt $curloc
+				act 'Leave':gt $curloc
 			end
 		end
 		act 'What to do. Before mom does not want to palitsya.':
@@ -655,7 +656,7 @@ $gpoli_spravka_arrange = {
 												'- Bye. - Just you utter a, and headed for the exit, though his feet and listen to you.'
 												Gspravka = 30
 												GspravkaT = 1
-												act 'Logout':gt $curloc
+												act 'Leave':gt $curloc
 											end
 										end
 									end
@@ -675,14 +676,15 @@ $gpoli_spravka_arrange = {
 }
 
 $gpoli_spravka_money = {
-	act 'Suggest money.':
+	act 'Suggest money':
 		cls
 		minut += 5
 		gs'stat'
 
 		if gpoliuborka = 2:
-			'- Well, and if I tell you money, Ladies.'
-			'- <<$name>>, Well I do not know, I`m not from here-for the money, Well come on acquaintance, I go to a meeting. 2000 r'
+			'Thinking quickly, you ask, "Would that certificate read the same if I were to pay you for your time?"'
+			'"<<$name>>, I don''t know, I''m not here for the money. However, a private patient wouldn''t count as a minor, so I would have no obligation to tell your mom the truth.'
+			'"The normal consultancy fee is 2000 rubles."'
 			if money >= 2000:
 				act 'Pay':
 					cls
@@ -691,18 +693,18 @@ $gpoli_spravka_money = {
 					gs'stat'
 					Gspravka = 30
 					GspravkaT = 1
-					'Gynecologist wrote Help, that you are a virgin.'
-					act 'Logout':gt $curloc
+					'Gynecologist writes out the certificate, stating that you are a virgin.'
+					act 'Leave':gt $curloc
 				end
 			end
 			dynamic $gpoli_spravka_badend
 			dynamic $gpoli_spravka_arrange
 		else
 			'<center><img src="images/Y4enik/gpoli/gpoli_5.jpg"></center>'
-			'-Well, and if I give you money?'
-			'- Stop Girl, I am a professional doctor, and swore an oath, I`m not from here-for the money.'
-			'- It`s a pity, you can not help.'
-			'- I`d really like to help.'
+			'"Well, what if I give you money?"'
+			'"Enough!, I am a professional doctor, and swore an oath, I`m not here for the money."'
+			'"Please? I could really use your help."'
+			'"I would like to help a pretty young girl in need, but taking a bribe could get me struck off."'
 			dynamic $gpoli_spravka_badend
 			dynamic $gpoli_spravka_arrange
 		end

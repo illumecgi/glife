@@ -247,7 +247,7 @@ act 'Ask for money':
 	end
 end
 
-act 'Ask about his mother and':
+act 'Ask about him and your mother':
 	cls
 	minut += 5
 	gs 'stat'
@@ -304,7 +304,7 @@ if TorgVokzalTimes>0 and YouCanGar=0:
 	end
 end
 
-act 'Ask, as he outfit':
+act 'Ask him what he thinks of your outfit':
 	cls
 	minut+=rand(10,15)
 	gs 'stat'

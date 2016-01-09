@@ -1,7 +1,6 @@
 # vanrPar
 CLOSE ALL
 $brother_voyeurism = {
-	'test'
 	if indorf = 0 and brother >= 40 and vanr_lock = 0 and hour >= 18 and hour <= 20 and brother_ev1 ! day:
 		ivrand = RAND(1,4)
 		if ivrand = 1:
@@ -50,6 +49,8 @@ if dirtbelo > 0 and BuyHous = 0:
 	clrbelo += dirtbelo
 	dirtbelo = 0
 end
+
+if clrbelo >= 0: clrbelo = 1
 
 dynamic $shower
 dynamic $bath

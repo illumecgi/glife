@@ -312,7 +312,7 @@ if tanga = 1:
 	act 'Remove Underwear':
 		cla
 		tanga = 0
-		dirtbelo -= 0
+		dirtbelo += 1
 		gt $locM, $metkaM
 	end
 end

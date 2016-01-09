@@ -1,7 +1,6 @@
 # vanrPar
 CLOSE ALL
 $brother_voyeurism = {
-	'test'
 	if indorf = 0 and brother >= 40 and vanr_lock = 0 and hour >= 18 and hour <= 20 and brother_ev1 ! day:
 		ivrand = RAND(1,4)
 		if ivrand = 1:
@@ -50,6 +49,8 @@ if dirtbelo > 0 and BuyHous = 0:
 	clrbelo += dirtbelo
 	dirtbelo = 0
 end
+
+if clrbelo >= 0: clrbelo = 1
 
 dynamic $shower
 dynamic $bath
@@ -198,6 +199,18 @@ elseif vibrator = 1 and vibratorIN = 0 and vagina ! 0:
 		'You bend over the sink and inserted the vibrator in your pussy.'
 
 		act 'Finish':gt $curloc
+	end
+end
+
+if mosolmaz > 0 and mosol > 0:
+	act 'Rub ointment onto your pussy (0:05)':
+		cla
+		minut += 5
+		mosolmaz -= 1
+		mosol -= 5
+		'You take a tube of cream and rub it onto your itchy vulva.'
+
+		act 'Leave':gt $curloc
 	end
 end
 

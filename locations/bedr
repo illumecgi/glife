@@ -33,6 +33,8 @@ else
 	'A modern <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">wardrobe</a> stands near the door to the corridor. At a wall stand a make-up table with a mirror <a href="exec:gt ''mirror'', ''start''">mirror</a>on it.'
 end
 
+if clrbelo >= 0: clrbelo = 1
+
 if $clothingworntype = 'nude':
 	$nude = 'Go into the corridor'
 else

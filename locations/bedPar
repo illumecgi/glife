@@ -23,6 +23,8 @@ act 'Undress and go to bed':
 		end
 	end
 
+	gs 'clothing', 'strip'
+
 	cls
 	notathomesleep=0
 	health += 5

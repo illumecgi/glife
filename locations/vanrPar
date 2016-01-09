@@ -50,8 +50,6 @@ if dirtbelo > 0 and BuyHous = 0:
 	dirtbelo = 0
 end
 
-if clrbelo >= 0: clrbelo = 1
-
 dynamic $shower
 dynamic $bath
 
@@ -75,6 +73,8 @@ if tampon > 0 and mesec > 0 and isprok = 0:
 		act 'Finish':gt $curloc
 	end
 end
+
+if clrbelo <= 1: clrbelo = 2
 
 dynamic $wearpan
 dynamic $basin

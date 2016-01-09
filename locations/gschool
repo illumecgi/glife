@@ -292,7 +292,11 @@ if hour = 16 and albinaCarday ! daystart and week < 6 and kanikuli = 0:
 end
 
 if hour = 16 and week < 6 and kanikuli = 0 and katjaMeynoldday ! daystart and meynoldQW >= 2:'In the school yard stroll <a href="exec:minut += 15 & gt ''katjaEv''">Katja Meynold</a>'
-if DimaRudeQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and dimarudeday ! daystart and DimaRudeBlock = 0:'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaRudeEv''">Dimka Nosov</a>'
+if DimaBeHomeOnce = 1 and hour = 16 and week < 6 and kanikuli = 0 and DimaRudeBlock = 0:
+	'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaGoHome''">Dimka Nosov</a>'
+elseif DimaRudeQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and dimarudeday ! daystart and DimaRudeBlock = 0:
+	'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaRudeEv''">Dimka Nosov</a>'
+end
 if IgorLoverQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and igorkruglovday ! daystart and IdorBlock = 0:'In the school yard strolls <a href="exec:minut += 15 & gt ''IgorEv''">Igor Kruglov</a>'
 if fedorKozlovQW >= 10 and hour = 16 and week < 6 and kanikuli = 0:'Far away from the school entrance stands <a href="exec:minut += 15 & gt ''FedorEv''">Fedor Kozlov</a>, he was glad to see you and come to you.'
 if strelaDay ! daystart and strelaQW = 1 and hour = 16:

@@ -4,6 +4,8 @@ gs 'stat'
 '<center><b><font color="maroon"><<$npcName[1]>> <<$npcSurName[1]>></font></b></center>'
 '<center><img src="images/qwest/alter/npc/1.jpg"></center>'
 
+if dimarudorient = 2 and dimaFilm = 1:dimarudorient = 3
+
 if dimarudorient = 0:
 	'Dimka seeing you turned and said quietly, "Well, come to me, have fun."'
 
@@ -115,10 +117,11 @@ elseif dimarudorient = 3:
 			swallow += 1
 			throat += 1
 			sub += 5
+			DimaBeHomeOnce = 1
 			gs 'stat'
 			'<center><img src="images/qwest/alter/evdima/gagbj.jpg"></center>'
 			'Member unopposed went through the ring in your mouth and ran into your throat. You''re a bit choked, Dimka took a member and with full force you drove him in the throat. Do you drool flowed, tears and snot on her face. Dimka furiously drives the his penis in your mouth, burning with fire your fucking throat. Finally he groaned and drove to the base member in your mouth began to cum in your throat. You almost fainted from suffocation and spasms in the throat of any member which is clamped even tighter inside you. Finally Dimka became a member to fall and he took it out of you. After that he took the gag out of your mouth and your hands untied.'
-
+			'"Come visit me anytime."'
 			act 'Leave':gt 'gorodok'
 		end
 	end

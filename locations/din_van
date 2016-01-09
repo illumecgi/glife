@@ -300,6 +300,7 @@ if tanga = 0 and clrbelo > 0:
 	act 'Wear Underwear':
 		cla
 		tanga = 1
+		clrbelo -= 1
 		gt $locM, $metkaM
 	end
 end
@@ -311,6 +312,7 @@ if tanga = 1:
 	act 'Remove Underwear':
 		cla
 		tanga = 0
+		dirtbelo -= 0
 		gt $locM, $metkaM
 	end
 end

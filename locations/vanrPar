@@ -202,6 +202,18 @@ elseif vibrator = 1 and vibratorIN = 0 and vagina ! 0:
 	end
 end
 
+if mosolmaz > 0 and mosol > 0:
+	act 'Rub ointment onto your pussy (0:05)':
+		cla
+		minut += 5
+		mosolmaz -= 1
+		mosol -= 5
+		'You take a tube of cream and rub it onto your itchy vulva.'
+
+		act 'Leave':gt $curloc
+	end
+end
+
 if pregtest > 0:
 	act 'Do a pregnancy test':
 		cla

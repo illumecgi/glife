@@ -4,8 +4,6 @@ gs 'stat'
 '<center><b><font color="maroon"><<$npcName[1]>> <<$npcSurName[1]>></font></b></center>'
 '<center><img src="images/qwest/alter/npc/1.jpg"></center>'
 
-if dimarudorient = 2 and dimaFilm = 1:dimarudorient = 3
-
 if dimarudorient = 0:
 	'Dimka seeing you turned and said quietly, "Well, come to me, have fun."'
 
@@ -57,12 +55,16 @@ if dimarudorient = 0:
 	act 'Leave':gt 'gschool'
 elseif dimarudorient = 1:
 	'Dimka closed the front door of his room at the castle and turned to you, "Take off your clothes."'
-		act 'Undress':
-			if dimaFilm = 0:dimarudorient = 2
-			if dimaFilm = 1:dimarudorient = 3
-		gt $curloc
+	act 'Undress':
+		if dimaFilm = 0:
+			dynamic $dimarudorient2
+		else
+			dynamic $dimarudorient3
+		end
 	end
-elseif dimarudorient = 2:
+end
+
+$dimarudorient2 = {
 	'Dimka indifferent grin looked at your naked body and went to the table. You saw that he turned a small camera and took her hand. He sat on the couch and pointing the camera at you said "If otsosesh front of the camera, then I will not tell anyone how to fuck you in the mouth at the disco."'
 
 	act 'Dress':
@@ -99,7 +101,9 @@ elseif dimarudorient = 2:
 
 		act 'Leave':gt 'gorodok'
 	end
-elseif dimarudorient = 3:
+}
+
+$dimarudorient3 = {
 	'Dimka indifferent smirk examined your body. He went to the cloand rummaged in it taking out what that thing. He walked up to you and you turned rough hands behind his back. Heard-clicking handcuffs and you felt the cold steel on her wrists. He walked up to you and put back into your mouth ring to which prikrepeleny belts, then he buckled strap behind your head'
 
 	act 'Further':
@@ -125,7 +129,7 @@ elseif dimarudorient = 3:
 			act 'Leave':gt 'gorodok'
 		end
 	end
-end
+}
 
 --- dimaRudeEv ---------------------------------
 

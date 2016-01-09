@@ -39,7 +39,7 @@ end
 
 act 'Go to the living room': gt'shulga_room'
 act 'Go to Shulgas room': gt 'shulgabed'
-act 'Go to the bathroom': gt 'shulgabath'
+act 'Go to the bathroom': gt 'shulgabath', 'start'
 act 'Go to the kitchen': gt 'shulgakuh'
 act 'Leave':minut += 1 & gt'pod_ezd','etaj_3'
 

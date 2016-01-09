@@ -145,6 +145,7 @@ elseif dimaFilm > 0:
 				bja += 1
 
 				if maxdra = 0:maxdra = 1
+				if maxdra = 6:maxdra = 5
 
 				minut += 15
 				gs 'stat'
@@ -436,7 +437,7 @@ elseif dimaFilm > 0:
 			act 'further':
 				cls
 
-				if pirsA > 0:$text = 'Dimka pulled out of you and you free needles'
+				if pirsA = 1:$text = 'Dimka pulled out of you and you free needles'
 				if pirsA = 0:pirsA = 1 & $text = 'Dimka pulled out of your needles, put you in a puncture in the language bar and you free'
 
 				pirs_pain_ton = 7

@@ -559,8 +559,6 @@ $d_class_leason = {
 					$school_class_txtrand = 'Solving examples, You may have noticed, that the teacher sends the phone directly to your side. He pretends, just leafing through page after page, but in an instant outbreak occurs. Seeing, that you noticed him, He blushed, hurriedly removes the phone in your pocket.'
 				end
 			end
-			'<<$school_class_txtrand>>'
-			act'Wait for the end of the lesson':dynamic $din_bigperemena
 		end
 		'<<$school_class_txtrand>>'
 		act'Wait for the end of the lesson':dynamic $din_bigperemena

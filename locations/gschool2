@@ -1227,12 +1227,12 @@ $din_bigperemena = {
 		dynamic $din_sekondparturok
 	end
 
-	act 'Go through the corridor':
+	act 'Go to the corridor':
 		cls
 		minut += 60
 		gs 'stat'
 		'<center><img src="images/qwest/alter/school.jpg"></center>'
-		'Girls wandered through the piles and then discuss it. Guys derzhutsya separately and some went to smoke behind the school. You see the local <a href="exec:gt ''Sgrup3''">Spin the</a>, <a href="exec:gt ''Sgrup2''">sportikov</a>'
+		'Girls wandered down the corridor, gossiping. The guys stand around in separate groups and some sneak off to smoke behind the school. You can see the <a href="exec:gt ''Sgrup3''">cool kids</a> and the <a href="exec:gt ''Sgrup2''">sporty kids</a>.'
 		dynamic $din_sekondparturok
 
 		if soniaPS=5 and rand(1,3)=1:

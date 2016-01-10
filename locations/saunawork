@@ -54,13 +54,13 @@ act 'Sit on the couch (1:00)':
 
 		saunaWorkKlient = 0
 
-		if hour >= 21
+		if hour >= 21:
 			saunaWorkKlient = 1
-		elseif hour >= 16
+		elseif hour >= 16:
 			if rand(0, 100) >= 10:saunaWorkKlient = 1
-		elseif hour >= 12
+		elseif hour >= 12:
 			if rand(0, 100) >= 50:saunaWorkKlient = 1
-		elseif hour > 8
+		elseif hour > 8:
 			if rand(0, 100) >= 80:saunaWorkKlient = 1
 		end
 

@@ -293,7 +293,7 @@ end
 
 if hour = 16 and week < 6 and kanikuli = 0 and katjaMeynoldday ! daystart and meynoldQW >= 2:'In the school yard stroll <a href="exec:minut += 15 & gt ''katjaEv''">Katja Meynold</a>'
 if DimaBeHomeOnce = 1 and hour = 16 and week < 6 and kanikuli = 0 and DimaRudeBlock = 0:
-	'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaGoHome''">Dimka Nosov</a>'
+	'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>'
 elseif DimaRudeQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and dimarudeday ! daystart and DimaRudeBlock = 0:
 	'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaRudeEv''">Dimka Nosov</a>'
 end

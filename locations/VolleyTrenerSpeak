@@ -77,14 +77,14 @@ $din_trener_speak = {
 		cla
 		if trenerepa >= 0 and trener_Speak = 0:
 			trener_Speak += 1
-			'You decided to talk to the coach, he is rumored to have participated in the European championship. But the coach as painful response to your inquiries and besieged you: "Lebedev, I am not up to satisfy your curiosity".'
+			'You decided to talk to the coach, he is rumored to have participated in the European championship. But the coach as painful response to your inquiries and besieged you: "<<$surname>>, I am not up to satisfy your curiosity".'
 			if horny > 80 or GorSlut > 0:
 				trenerepa += 2
 				'"Not able to satisfy the curiosity? How about just meeting", - Flirty whispered you. Coach only puzzly looked at you, and turned away.'
 			end
 		elseif trenerepa > 10 and trener_Speak = 1:
 			trener_Speak += 1
-			'Seeing what-the irritable condition, Mikhail Nikolaevich you made attempts to cheer him up. Chatting and asking nonsense. Chirping all sorts of nonsense, you, by the way, asked about his girlfriend or wife. On what coach said: "Lebedev you do nothing except stuff you don''t to ask concerning?". But you continued to moan and say that you are very interested. Coach, all-still gave up and told: "There are, of course, beautiful and jealous, so will see, what are you hanging around me, get the first number".'
+			'Seeing what-the irritable condition, Mikhail Nikolaevich you made attempts to cheer him up. Chatting and asking nonsense. Chirping all sorts of nonsense, you, by the way, asked about his girlfriend or wife. On what coach said: "<<$surname>> you do nothing except stuff you don''t to ask concerning?". But you continued to moan and say that you are very interested. Coach, all-still gave up and told: "There are, of course, beautiful and jealous, so will see, what are you hanging around me, get the first number".'
 			if horny > 80 or GorSlut > 0:
 				trenerepa += 2
 				'"And suddenly I''m not afraid, and is prettier to me", - at your words the coach just smiled.'
@@ -131,7 +131,7 @@ $din_trener_speak = {
 			end
 		elseif trenerepa > 40 and trener_Speak = 4 and VoltrenerVoyeur = 3:
 			trener_Speak += 1
-			'"Michael and I you like? You like to spy on me in the shower, and cum on me?", - making big enthusiastic eyes and trying to look at the coach adoringly asked you. On the coach taking your hand in his, penetrating said: "<<$name>>, you are very beautiful girl, and the athlete will be great, unless of course the mind will be taken, but I told you I got a woman, and I am very worried what happened". You angrily frowned not expecting such words. "Well, at least not Lebedeva already and <<$nickname>>, we have him to stir, may be the sense of ownership it will play, need him to whom I was jealous", - flying thoughts in your head.'
+			'"Michael and I you like? You like to spy on me in the shower, and cum on me?", - making big enthusiastic eyes and trying to look at the coach adoringly asked you. On the coach taking your hand in his, penetrating said: "<<$name>>, you are very beautiful girl, and the athlete will be great, unless of course the mind will be taken, but I told you I got a woman, and I am very worried what happened". You angrily frowned not expecting such words. "Well, at least not <<$surname>>a already and <<$nickname>>, we have him to stir, may be the sense of ownership it will play, need him to whom I was jealous", - flying thoughts in your head.'
 			sopr = 1
 			ShowerIvan = 1 & ! flag start looking trainer for Vanya and you
 			if horny > 80: trenerepa += 3 & 'You decide to check so he experiences as he says.'
@@ -194,13 +194,13 @@ $din_trener_speak = {
 		elseif trener_Speak = 7 and trenerSex => 1:
 			cla & *clr
 			'<center><img src="images/qwest/alter/volley/VoltrenerSpeak21.jpg"></center>'
-			'You decided to ask the coach whether he will take you into the main part of, while trying to look as erotic. But Mikhail Nikolaevich why-then frowned and said: "Look at your behavior Lebedev". You have already caught his breath at the insult, how to rip your ass it''s the behavior not looks, and what in composition to include so it will look.'
+			'You decided to ask the coach whether he will take you into the main part of, while trying to look as erotic. But Mikhail Nikolaevich why-then frowned and said: "Look at your behavior <<$surname>>". You have already caught his breath at the insult, how to rip your ass it''s the behavior not looks, and what in composition to include so it will look.'
 			act 'To recall the incident':
 				cla & *clr
 				trenerepa = -50
 				volleysostav = -1
 				'<center><img src="images/qwest/alter/volley/VoltrenerSpeak22.jpg"></center>'
-				'"Lebedev, are you stupid, I think its the holes in the base to get", - the coach said with anger. "I seem mistaken when you believed your words, don''t come near me, I''m very disappointed in you, Yes and workout, too, may never come, you don''t belong on the team", - Michael N. Serkov in your direction quite frantic glance, turned around and left. '
+				'"<<$surname>>, are you stupid, I think its the holes in the base to get", - the coach said with anger. "I seem mistaken when you believed your words, don''t come near me, I''m very disappointed in you, Yes and workout, too, may never come, you don''t belong on the team", - Michael N. Serkov in your direction quite frantic glance, turned around and left. '
 				act 'Escape':
 					if Discoclose = 1:gt 'korrPar'
 					if trenerskaia = 1:gt 'gdksport'

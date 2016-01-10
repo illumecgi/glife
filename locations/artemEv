@@ -44,7 +44,6 @@ $din_artem_leghump = {
 			dynamic $din_artem_lern
 		else
 			act 'Further':artemhomemark = 1 & minut += 5 & gt 'artemhome'
-			act 'Go home':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 		end
 	end
 }
@@ -71,7 +70,6 @@ $din_artem_leghump2 = {
 				dynamic $din_artem_lern
 			else
 				act 'Further':artemhomemark = 1 & gt 'artemhome'
-				act 'Going home':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
 			end
 		end
 	end

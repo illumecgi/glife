@@ -810,8 +810,10 @@ if $shoplocation = 'icecream':
 			manna += 500
 			water = 20
 			energy = 20
+			cumlip = 0
+			fbreath = 0
 			!! perkice is currently only ever referenced in stat and only then to decrement itself if > 0, so it does not currently do anything
-			perkice += 1
+			!perkice += 1
 			gs 'stat'
 			'<center><img src="images/etogame/icecreem.jpg"></center>'
 			'You bought ice cream and ate it not going far.'

@@ -1151,8 +1151,7 @@ if $ARGS[0] = 'etaj_2':
 			cls
 			gs'stat'
 			'The door opens and Misha invites you into the apartment.'
-			act 'Escape': gt'pod_ezd','etaj_2'
-			act 'Login':
+			act 'Enter':
 				mishahouse_day = daystart
 				mishahouse_count -=1
 				gt'misha','1'	

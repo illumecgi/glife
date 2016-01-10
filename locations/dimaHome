@@ -1,6 +1,5 @@
 # dimaHome
 CLOSE ALL
-Mud = totminut + 120
 
 if DimaBeHomeOnce = 0:DimaBeHomeOnce = 1
 
@@ -20,6 +19,7 @@ if dimaFilm = 0:
 		manna = (intel * magik) + magik * 100 + vital * 10 + rikudo
 		horny = 100
 		nark += 10
+		Mud = totminut + 120
 		gs 'stat'
 		'<center><img src="images/pic/dur.jpg"></center>'
 		'You otsypali dose of powder and its nyuhnuli, then you feel just fine.'

@@ -181,7 +181,7 @@ if volleysostav > 0:
 end
 
 if lariskaTrenerTalk > 0:
-	'"A, Lebedev and Gruzdev, chevo wanted?"'
+	'"A, <<$surname>> and Gruzdev, chevo wanted?"'
 	if lariskaTrenerTalk = 1:
 		'You and Lariska tried to persuade the coach to take Lariska, but he threw all of your arguments to deny you.'
 	elseif lariskaTrenerTalk = 2:

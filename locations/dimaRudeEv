@@ -53,7 +53,7 @@ if dimarudorient = 0:
 	end
 
 	act 'Leave':gt 'gschool'
-elseif dimarudorient = 1:
+else
 	'Dimka closed the front door of his room at the castle and turned to you, "Take off your clothes."'
 	act 'Undress':
 		if dimaFilm = 0:
@@ -65,6 +65,7 @@ elseif dimarudorient = 1:
 end
 
 $dimarudorient2 = {
+	cla
 	'Dimka indifferent grin looked at your naked body and went to the table. You saw that he turned a small camera and took her hand. He sat on the couch and pointing the camera at you said "If otsosesh front of the camera, then I will not tell anyone how to fuck you in the mouth at the disco."'
 
 	act 'Dress':
@@ -104,6 +105,7 @@ $dimarudorient2 = {
 }
 
 $dimarudorient3 = {
+	cla
 	'Dimka indifferent smirk examined your body. He went to the cloand rummaged in it taking out what that thing. He walked up to you and you turned rough hands behind his back. Heard-clicking handcuffs and you felt the cold steel on her wrists. He walked up to you and put back into your mouth ring to which prikrepeleny belts, then he buckled strap behind your head'
 
 	act 'Further':

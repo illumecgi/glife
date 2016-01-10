@@ -33,7 +33,7 @@ if randhumiliation = 0:
 		'<center><img src="images/qwest/alter/zver/dildobj.jpg"></center>'
 		'You sit down in front of a dildo sticky sucker to the wall and began to suck in front of the girls in her class. Finally Christina laughed allowing you to stop and change.'
 
-		act 'Leave':gt 'gschool'
+		act 'Escape':gt'gschool'
 	end
 elseif randhumiliation = 1:
 	'- Well sheep, you''re the type of girl sports, I think you must be a little more pump. Christina pulled from his bag, dildo and dildo sticked with chpok to the floor. "Well <<$name>>, stop lying to accept and start sucking wrung"'
@@ -48,7 +48,7 @@ elseif randhumiliation = 1:
 		'<center><img src="images/qwest/alter/zver/dildobj2.jpg"></center>'
 		'You took the emphasis lying down and cupped her lips dildo, then you started to do push-ups allowing dildo to penetrate deeper into your mouth. Finally Christina laughed allowing you to stop and change.'
 
-		act 'Leave':gt 'gschool'
+		act 'Escape':gt'gschool'
 	end
 elseif randhumiliation = 2:
 	'- Well sheep, it''s time for the suction otcherednogo. Christina pulled from his bag, dildo and dildo sticked with chpok to the floor. "Well <<$name>>, start praktikovatsya"'
@@ -63,7 +63,7 @@ elseif randhumiliation = 2:
 		'<center><img src="images/qwest/alter/zver/dildobj3.jpg"></center>'
 		'You sit down in front of a dildo and bending low began to suck the dildo in front of odnoklasnitsy. Finally Christina laughed allowing you to stop and change.'
 
-		act 'Leave':gt 'gschool'
+		act 'Escape':gt'gschool'
 	end
 elseif randhumiliation = 3:
 	'- Well sheep, I decided to do a bit of your development. Christina pulled from his bag, three dildos and cleave them to the mirror at the groin. "Well <<$name>>, start praktikovatsya"'
@@ -78,7 +78,7 @@ elseif randhumiliation = 3:
 		'<center><img src="images/qwest/alter/zver/dildobj4.jpg"></center>'
 		'You sit down in front of a dildo and began his sosast nadrachivaya while the other two hands. Finally Christina laughed allowing you to stop and change.'
 
-		act 'Leave':gt 'gschool'
+		act 'Escape':gt'gschool'
 	end
 elseif randhumiliation = 4:
 	' - Well, sheep, I decided to do a bit of your development.'
@@ -409,7 +409,7 @@ elseif randhumiliation = 15:
 elseif randhumiliation = 16:
 	'- Okay sheep, I''m busy today, so you will have to do without the traditional suction. Christina grinned and began to dress'
 
-	act 'Leave':gt 'gschool'
+	act 'Escape':gt'gschool'
 end
 
 --- gKristinaZv ---------------------------------

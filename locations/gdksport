@@ -346,7 +346,7 @@ if albinaQWdance > 0 and AlbinaBlokDance = 0 and ZvezdEnd = 0 and sport = 1:
 				if DanceWhoreT > 0:
 					DanceWhoreT = 0
 
-					if AlbFather = 0:AlbFather = 1
+					if AlbFather = 0 and DanceWhore > rand (1, 20): AlbFather = 1
 
 					'Albina after training beckons you to her. "Good <<$name>>. Communicating with men of the business. Main keep his mouth shut. You''re doing fine, doing well. Stick with me and you will have all the money, cars and apartments."'
 				end

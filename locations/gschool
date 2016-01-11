@@ -16,7 +16,8 @@ if zverRageQW = 1:
 	zverRageQW = 2
 	gs 'stat'
 	gs 'time'
-	'You came to the school yard after school, vnezpno someone you flunked powerful Pendel in the ass, you dumbfounded turned and saw Christina Zverev contorted with rage face. She yelled at you "you ohuel, whether that bitch, about me any garbage chat? I''ll now break mug!"'
+	'As you cross the school yard after school, you are surprised by a powerful kick to your ass. Dumbfounded you turn to see Christina Zverev her face contorted with rage, she yells at you.'
+	'"You fucking bitch! How dare you spread shit about me like that? I''ll break your fucking face!"'
 	$nameV = 'Christina'
 	!!stats
 	strenV = 85
@@ -131,7 +132,7 @@ if week = 6 and schoolSorev = 2 and hour = 10:
 end
 
 if week = 6 and schoolSorev = 1 and hour = 10:
-	'Near the school are students of different classes and Athlete preparing for the competitions in running.'
+	'Near the school are students from different classes preparing for the running competition.'
 
 	act 'Participate in school running race':
 		cls
@@ -188,7 +189,7 @@ if week = 6 and schoolSorev = 1 and hour = 10:
 end
 
 if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 4 and month = 5 and day >= 25 and age = 17:
-	'Today you will have a prom.'
+	'Today is the school prom.'
 
 	act 'Go to the prom':
 		cls
@@ -228,15 +229,15 @@ if hour >= 16 and GorSlut >= 3 and SchoolGossip > 0 and afterschoolday ! daystar
 
 	if aftgopbjrand = 0:
 		cla
-		'At the exit of the school you were waiting for the boys headed cats. "Well, that nipple? Ready yet to work their fucking mouth? Come for the school."'
+		'Waiting for you at the school exit are Vitek and his friends. "Well, then cocksueker. Ready to work your fucking mouth? Come with us back to school."'
 
-		act 'Go after school':
+		act 'Return to school':
 			cls
 			afterschoolday = daystart
 			SchoolGossip += 1
 			minut += 60
 			gs 'stat'
-			'You took in school where boys giggling looking at you. Kotov said, "I do not understand why you cocksucker cheek still not get it?"'
+			'You return to school with the boys giggling and looking at you. Dan says, "I do not understand why such an experienced cocksucker, still doesn''t get it?"'
 
 			act 'Suck':
 				cls
@@ -250,7 +251,7 @@ if hour >= 16 and GorSlut >= 3 and SchoolGossip > 0 and afterschoolday ! daystar
 				sub += 1
 				gs 'stat'
 				'<center><img src="images/qwest/alter/Ev/toiletBJtreesome.jpg"></center>'
-				'You obediently squatted and pulled Witek member of his sweatpants. You clasped him with <<$liptalk3>> a hard cock and began to suck him. Dan and Bob Ryzhov Shulgin came to you and took out their members. You become one by one handle cocks with her mouth caressing those that are not in your mouth with your hands.'
+				'You obediently squat and pull Viteks member out of his sweatpants. You clasp his hard cock between your <<$liptalk3>> and start sucking him off. Dan and Bob come to you and take out their members. You become one by one to pleasure cocks with your mouth, caressing those that are not in your mouth with your hands.'
 
 				act 'Suck':
 					cls
@@ -262,7 +263,7 @@ if hour >= 16 and GorSlut >= 3 and SchoolGossip > 0 and afterschoolday ! daystar
 					sub += 1
 					gs 'stat'
 					'<center><img src="images/qwest/alter/Ev/toiletBJcum.jpg"></center>'
-					'Finally a member of the discharge of semen in your mouth. Looking at it as follows sperm from your mouth remaining guys started to cum on your face. You closed your eyes and obediently waited until the boys did not stop to stop. Finally they ended up laughing at you and walked away.'
+					'Finally, a member discharges semen in your mouth. Watching you as sperm follows from your mouth, the remaining guys cum on your face. You close your eyes and obediently wait until the boys have finished. Finally, they leave you, walking away laughing at you.'
 
 					act 'Leave':gt $curloc
 				end
@@ -273,32 +274,35 @@ if hour >= 16 and GorSlut >= 3 and SchoolGossip > 0 and afterschoolday ! daystar
 	end
 end
 
-if LinaSlut > 0 and hour = 16 and week < 6 and kanikuli = 0:
-	randLina = rand(1,10)
-	if randLina < 3:'You see how Lin Ryzhov and Shulgin gone for school.'
-end
-
-if LariskaHomeIn > 0 and hour = 16 and week < 6 and kanikuli = 0:
-	'In the courtyard of the school walks <a href="exec:minut += 1 & GT ''LariskaGo''">Lariska Gruzdev</a>'
-end
-
-if JuliaMilLernQW >= 1 and hour = 16 and week < 6 and kanikuli = 0:'In the school yard strolls <a href="exec:minut += 1 & gt ''JuliaMilGo''">Julia Milov</a>'
-if NatBelLernQW >= 1 and hour = 16 and week < 6 and kanikuli = 0:'In the school yard strolls <a href="exec:minut += 1 & gt ''NatBelGo''">Natasha Belova</a>'
-if artemLernQW >= 1 and hour = 16 and week < 6 and kanikuli = 0 and artemVitokQW ! 2:'In the school yard you already waiting <a href="exec:minut += 15 & gt ''artemEv''">Artem Chebotarev</a>'
 if week = 1 and kanikuli = 0 and arthakQW >= 10 and apmeetday ! daystart and hour >= 16:gt 'artgar'
-if hour = 16 and albinaCarday ! daystart and week < 6 and kanikuli = 0:
-	!!if DanceWhore > 0 or AlbinaLast > 0 or AlbinaBlokDance > 0:'You see standing in the school yard and BMW X5 <a href="exec:minut += 15 & gt ''albinaEv''">Albina Barlovskuyu</a> sitting behind the wheel'
-	if AlbFrend >= 1 and albrideday ! daystart:'Near a large black SUV parked near the school stands <a href="exec:minut += 15 & gt ''albinaRide''">Albina Barlovskaya</a>'
+
+if hour = 16 and week < 6 and kanikuli = 0:
+
+	if LinaSlut > 0:
+		randLina = rand(1,10)
+		if randLina < 3:'You see how Lina, Dan and Vasily leaving school.'
+	end
+
+	if LariskaHomeIn > 0:'Walking through the courtyard of the school walks <a href="exec:minut += 1 & GT ''LariskaGo''">Lariska Gruzdev</a>.'
+
+	if JuliaMilLernQW >= 1:'Strolling across the school yard is <a href="exec:minut += 1 & gt ''JuliaMilGo''">Julia Milov</a>.'
+	if NatBelLernQW >= 1:'Strolling across the school yard is <a href="exec:minut += 1 & gt ''NatBelGo''">Natasha Belova</a>.'
+	if artemLernQW >= 1 and artemVitokQW ! 2:'Waiting for you buy the school entrance is <a href="exec:minut += 15 & gt ''artemEv''">Artem Chebotarev</a>.'
+	if albinaCarday ! daystart:
+		!!if DanceWhore > 0 or AlbinaLast > 0 or AlbinaBlokDance > 0:'You see standing in the school yard and BMW X5 <a href="exec:minut += 15 & gt ''albinaEv''">Albina Barlovskuyu</a> sitting behind the wheel'
+		if AlbFrend >= 1 and albrideday ! daystart:'Near a large black SUV parked near the school stands <a href="exec:minut += 15 & gt ''albinaRide''">Albina Barlovskaya</a>.'
+	end
+
+	if katjaMeynoldday ! daystart and meynoldQW >= 2:'Strolling across the school yard is <a href="exec:minut += 15 & gt ''katjaEv''">Katja Meynold</a>.'
+	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:
+		'In the school yard, deep in thought, you see <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.'
+	elseif DimaRudeQW > 0 and dimarudeday ! daystart and DimaRudeBlock = 0:
+		'In the school yard, deep in thought, you see <a href="exec:minut += 15 & gt ''dimaRudeEv''">Dimka Nosov</a>.'
+	end
+	if IgorLoverQW > 0 and igorkruglovday ! daystart and IdorBlock = 0:'Strolling across the school yard is <a href="exec:minut += 15 & gt ''IgorEv''">Igor Kruglov</a>.'
+	if fedorKozlovQW >= 10:'Far away from the school entrance stands <a href="exec:minut += 15 & gt ''FedorEv''">Fedor Kozlov</a>, he is glad to see you and waves you over to him.'
 end
 
-if hour = 16 and week < 6 and kanikuli = 0 and katjaMeynoldday ! daystart and meynoldQW >= 2:'In the school yard stroll <a href="exec:minut += 15 & gt ''katjaEv''">Katja Meynold</a>'
-if DimaBeHomeOnce = 1 and hour = 16 and week < 6 and kanikuli = 0 and DimaRudeBlock = 0:
-	'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>'
-elseif DimaRudeQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and dimarudeday ! daystart and DimaRudeBlock = 0:
-	'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaRudeEv''">Dimka Nosov</a>'
-end
-if IgorLoverQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and igorkruglovday ! daystart and IdorBlock = 0:'In the school yard strolls <a href="exec:minut += 15 & gt ''IgorEv''">Igor Kruglov</a>'
-if fedorKozlovQW >= 10 and hour = 16 and week < 6 and kanikuli = 0:'Far away from the school entrance stands <a href="exec:minut += 15 & gt ''FedorEv''">Fedor Kozlov</a>, he was glad to see you and come to you.'
 if strelaDay ! daystart and strelaQW = 1 and hour = 16:
 	cls
 	gs 'stat'
@@ -308,6 +312,7 @@ if strelaDay ! daystart and strelaQW = 1 and hour = 16:
 
 	exit
 end
+
 gs 'family'
 
 --- gschool ---------------------------------

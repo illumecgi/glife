@@ -4,7 +4,8 @@ $din_otel_man_end = {
 		cls
 		minut += 15
 		gs 'stat'
-		'Have you started to brush up. <<$bname>> stretched and rolled over on the bed. "It was great <<$name>>."'
+		'<center><img src="images/qwest/alter/Ev/otel1.gif"></center>'
+		'Getting ready to leave you started to dress. <<$bname>> stretched and rolled over on the bed. "It was great <<$name>>."'
 
 		if cumface > 0:cumface = 0 & 'You found napkins and wiped off the face of the sperm.'
 		if cumanus > 0:'Have you tried to wipe the cum with his buttocks, but how could you not wiped out of your anus still leaking sperm.'

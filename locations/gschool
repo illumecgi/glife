@@ -280,27 +280,27 @@ if hour = 16 and week < 6 and kanikuli = 0:
 
 	if LinaSlut > 0:
 		randLina = rand(1,10)
-		if randLina < 3:'You see how Lin Ryzhov and Shulgin gone for school.'
+		if randLina < 3:'You see how Lina, Dan and Vasily leaving school.'
 	end
 
-	if LariskaHomeIn > 0:'In the courtyard of the school walks <a href="exec:minut += 1 & GT ''LariskaGo''">Lariska Gruzdev</a>'
+	if LariskaHomeIn > 0:'Walking through the courtyard of the school walks <a href="exec:minut += 1 & GT ''LariskaGo''">Lariska Gruzdev</a>.'
 
-	if JuliaMilLernQW >= 1:'In the school yard strolls <a href="exec:minut += 1 & gt ''JuliaMilGo''">Julia Milov</a>'
-	if NatBelLernQW >= 1:'In the school yard strolls <a href="exec:minut += 1 & gt ''NatBelGo''">Natasha Belova</a>'
-	if artemLernQW >= 1 and artemVitokQW ! 2:'In the school yard you already waiting <a href="exec:minut += 15 & gt ''artemEv''">Artem Chebotarev</a>'
+	if JuliaMilLernQW >= 1:'Strolling across the school yard is <a href="exec:minut += 1 & gt ''JuliaMilGo''">Julia Milov</a>.'
+	if NatBelLernQW >= 1:'Strolling across the school yard is <a href="exec:minut += 1 & gt ''NatBelGo''">Natasha Belova</a>.'
+	if artemLernQW >= 1 and artemVitokQW ! 2:'Waiting for you buy the school entrance is <a href="exec:minut += 15 & gt ''artemEv''">Artem Chebotarev</a>.'
 	if albinaCarday ! daystart:
 		!!if DanceWhore > 0 or AlbinaLast > 0 or AlbinaBlokDance > 0:'You see standing in the school yard and BMW X5 <a href="exec:minut += 15 & gt ''albinaEv''">Albina Barlovskuyu</a> sitting behind the wheel'
-		if AlbFrend >= 1 and albrideday ! daystart:'Near a large black SUV parked near the school stands <a href="exec:minut += 15 & gt ''albinaRide''">Albina Barlovskaya</a>'
+		if AlbFrend >= 1 and albrideday ! daystart:'Near a large black SUV parked near the school stands <a href="exec:minut += 15 & gt ''albinaRide''">Albina Barlovskaya</a>.'
 	end
 
-	if katjaMeynoldday ! daystart and meynoldQW >= 2:'In the school yard stroll <a href="exec:minut += 15 & gt ''katjaEv''">Katja Meynold</a>'
+	if katjaMeynoldday ! daystart and meynoldQW >= 2:'Strolling across the school yard is <a href="exec:minut += 15 & gt ''katjaEv''">Katja Meynold</a>.'
 	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:
-		'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>'
+		'In the school yard, deep in thought, you see <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.'
 	elseif DimaRudeQW > 0 and dimarudeday ! daystart and DimaRudeBlock = 0:
-		'In the school yard is worth pondering <a href="exec:minut += 15 & gt ''dimaRudeEv''">Dimka Nosov</a>'
+		'In the school yard, deep in thought, you see <a href="exec:minut += 15 & gt ''dimaRudeEv''">Dimka Nosov</a>.'
 	end
-	if IgorLoverQW > 0 and igorkruglovday ! daystart and IdorBlock = 0:'In the school yard strolls <a href="exec:minut += 15 & gt ''IgorEv''">Igor Kruglov</a>'
-	if fedorKozlovQW >= 10:'Far away from the school entrance stands <a href="exec:minut += 15 & gt ''FedorEv''">Fedor Kozlov</a>, he was glad to see you and come to you.'
+	if IgorLoverQW > 0 and igorkruglovday ! daystart and IdorBlock = 0:'Strolling across the school yard is <a href="exec:minut += 15 & gt ''IgorEv''">Igor Kruglov</a>.'
+	if fedorKozlovQW >= 10:'Far away from the school entrance stands <a href="exec:minut += 15 & gt ''FedorEv''">Fedor Kozlov</a>, he is glad to see you and waves you over to him.'
 end
 
 if strelaDay ! daystart and strelaQW = 1 and hour = 16:

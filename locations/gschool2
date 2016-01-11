@@ -563,14 +563,15 @@ $d_class_leason = {
 		'<<$school_class_txtrand>>'
 		act'Wait for the end of the lesson':dynamic $din_bigperemena
 	end
-	act'Stare at the sides':
+	act'Stare into space':
 		cla
 		Suspeh -= 1
 		if RAND(1,2) = 1:
-			'The lesson you are bored, head all the time, all sorts of thoughts climb, and you did not notice, as <<$teacher>> Once again you made â€‹â€‹a remark.'
+			'You are bored during the lesson, your mind drifts to all sorts of unrelated thoughts. You do not notice at first, but slow realise <<$teacher>> is telling you to pay attention.'
 			if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
+				cla
 				if sub < 30:
-					act'Not to pay attention':
+					act'Don''t pay attention':
 						if dom > 70:
 							'- "<<$name>>, Could you listen carefully to my lecture. I tell a very important point, he is sure to be on the exam." - The teacher turned to you.'
 							'- "Yes, of course <<$teacher>>, let us continue to listen to our fascinating lecture. Just speak slower and clearer, And then I began to fall asleep. - Boldly answer you.'
@@ -589,11 +590,10 @@ $d_class_leason = {
 						end
 					end
 				end
-				act'Focus on employment':
+				act'Focus on Lessons':
 					act'Wait for the end of the lesson':dynamic $din_bigperemena
 				end
 			end
-			act'Wait for the end of the lesson':dynamic $din_bigperemena
 		else
 			act'Wait for the end of the lesson':dynamic $din_bigperemena
 		end
@@ -742,7 +742,7 @@ $d_fiz_rand = {
 			'<center><img src="images/qwest/alter/fizra/fizperand7.jpg"></center>'	
 			'Are you good workout, lesson was boring though but productive.'
 		end
-		act 'Logout':gt'gschool'
+		act 'Leave':gt 'gschool'
 	end
 	
 }
@@ -924,6 +924,7 @@ $din_sekondparturok = {
 				end
 			end
 			if zverRageQW = 10:
+				cla
 				!!Christina broke SG
 				act 'In the locker room':gt 'gKristinaZv'
 

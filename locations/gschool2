@@ -1,17 +1,17 @@
 # gschool2
 $d_rand_gopnic={
-	'You looked at with contempt <<$npcSurName[i]>>a: «Th, ohuel?»,- but, It seems, your reputation does not allow to throw such numbers.'
+	'You looked at <<$npcSurName[i]>> with contempt, "What the fuck do want?" It seems your reputation undermines any authority you try to impose.'
 	act 'Further': 
 		*clr & cla
 		manna = manna-20
 		gs'stat'
 		'<center><img src="images/qwest/alter/uroc/rand_scoolboy5.jpg"></center>'
-		'«Who`s ohuel,  slut», - With these words, <<$npcName[i]>> suddenly he grabbed you by the hair and pressed it to his desk. «Your posture is just such a, and do not you dare answer me in that tone, then there will be huesoska me point» - at the neighing of his friends said <<$npcSurName[i]>>: «Come, boys learn of her life». '
-		act 'Going to the bathroom':
+		'"I''ll show you what the fuck, you slut." With these words, <<$npcName[i]>> suddenly grabs you by the hair and presses your face against his desk. "Your position is such that, if you dare talk to me in that tone, there will be consequences." Spurred on bt his friends <<$npcSurName[i]>> says, "Come on boys, let''s teach her the kind of life she will live."'
+		act 'Go to the bathroom':
 			cls
-			'You know perfectly well, that if you once dropped, it is now unlikely to have when released.'
-			'So you sadly went with the boys in the men`s room. One of the men drove the small fry of sortra and stood at the door.'
-			'On the wall of the toilet flaunts diligently scribbled inscription <b><<$name[2]>> <<$surname>> - <<$gnikname>>.</b>' 
+			'You know perfectly well, that the group of boys are not going to let you escape.'
+			'So you sadly go with the boys into the mens room. One of the guys drives the small fry out and stands by the door.'
+			'On the wall of the toilet, you see written in large letters <b><<$name>> <<$surname>> - <<$gnikname>>.</b>' 
 			act 'Suck':
 				cls
 				minut += 60
@@ -22,7 +22,9 @@ $d_rand_gopnic={
 				sub += 1
 				gs'stat'
 				'<center><img src="images/qwest/alter/uroc/rand_scoolboy6.gif"></center>'
-				'You dutifully sat down and <<$npcName[i]>> He took out a member of his pants, but it was the next druzhban Gopnik. You wrapped around her <<$liptalk3>> hard cock <<$npcSurName[i]>>and and began to suck, not forgetting the member standing next Gopnik. Finally, you feel like your mouth hit the jet of sperm and <<$npcName[i]>> He said in a choked voice "Swallow huesoska, if a drop of the damage, will lick." You diligently swallowing sperm trying not to drop a single drop, finally <<$npcName[i]>> I stopped to finish and put the cock back in his pants. You immediately switch to a member of the Man standing next, and from it receive a portion of sperm, which is also carefully swallowed. "Good huesoska, You are now going to go to every change in the portion of the tolchek struhni. Clear?" You nod your head, feeling the nasty taste of semen in the mouth.'
+				'You dutifully kneel down and <<$npcName[i]>> takes his cock out of his pants, a second Gopnik stands to your right and takes his cock out too. You wrap your <<$liptalk3>> around <<$npcSurName[i]>>s hard cock and and start to suck, not forgetting the other Gopniks memeber you spend some time alternating between the two.'
+				'Finally, you feel a jet of sperm hit your throat and <<$npcName[i]>> says in a choked voice "Swallow whore, if you miss a drop, you will have to lick it up." You diligently swallow sperm trying not to spill a single drop, finally <<$npcName[i]>> is satisfied and puts his cock back in his pants.'
+				'You immediately switch to the member of the guy standing to your right, and from it receive another mouthful, which you carefully swallow. "Good whore, you are now going to come here to the toilet every lunchtime. Understand?" You nod your head, aware of the nasty taste of semen in the your mouth.'
 				dynamic $din_sekondparturok
 			end
 		end
@@ -46,8 +48,8 @@ npcdick[11] = 16
 i=rand(1,11)
 *clr & cla
 '<center><img src="images/qwest/alter/npc/<<i>>.jpg"></center>'
-if npcsex[i]=0:
-	if grupTipe[i]=1:
+if npcsex[i] = 0:
+	if grupTipe[i] = 1:
 		'By blackened face you realize, that touched you in the ass <<$npcName[i]>> <<$npcSurName[i]>>, nifiga a nerdy ofonareli.'
 	elseif grupTipe[i] = 2:
 		'By petrified face and imperturbable mind you realize, that touched you in the ass <<$npcName[i]>> <<$npcSurName[i]>>, This jock she knows whom to contact.'
@@ -69,23 +71,23 @@ if npcsex[i]=0:
 	else 
 		'Who are these people??? what are you doing here. If you see it then I made â€‹â€‹a mistake somewhere'
 	end		
-	if grupNPC[i]<=50:
+	if grupNPC[i] <= 50:
 		act 'slapped across the face':
 			*clr & cla
-			grupNPC[i]-=5
+			grupNPC[i] -= 5
 			'<center><img src="images/qwest/alter/uroc/rand_scoolboy1.jpg"></center>'
 			'Shouting in anger and resentment you slapped across the face <<$npcSurName[i]>>at, under the laughter of other kids.'
 			dynamic $din_sekondparturok
 		end
-	elseif grupNPC[i]>50 and grupNPC[i]<=90:
+	elseif grupNPC[i] > 50 and grupNPC[i] <= 90:
 		act 'Lightly hit':
-			grupNPC[i]-=2
+			grupNPC[i] -= 2
 			*clr & cla
 			'<center><img src="images/qwest/alter/uroc/rand_scoolboy2.jpg"></center>'
 			'Thinking, that nothing had happened, but no answer is you can not leave a little banged <<$npcSurName[i]>>and, under the laughter of classmates gathered in a circle.'
 			dynamic $din_sekondparturok
 		end
-	elseif grupNPC[i]>90: 
+	elseif grupNPC[i] > 90: 
 		act 'Lift the skirt':
 			*clr & cla
 			'<center><img src="images/qwest/alter/uroc/rand_scoolboy3.jpg"></center>'
@@ -94,12 +96,12 @@ if npcsex[i]=0:
 		end	
 	end
 	
-elseif	npcsex[i]=1:
+elseif	npcsex[i] = 1:
 	'As confident and almost paralytic mean you understand it <<$npcName[i]>> <<$npcSurName[i]>>.'
 	act'View the challenge':
-		hory+=50
-		$boy=$npcName[i]
-		dick=npcdick[i]
+		hory += 50
+		$boy = $npcName[i]
+		dick = npcdick[i]
 		gs'stat'
 		*clr & cla
 		'<center><img src="images/qwest/alter/uroc/rand_scoolboy4.jpg"></center>'
@@ -110,7 +112,7 @@ elseif	npcsex[i]=1:
 			'Going into a toilet cubicle you allowed <<$npcSurName[i]>>at, you climb under her skirt unashamedly. And then the whole crowd gathered decent girl under her skirt to climb.'
 			act 'Get cock':
 				*clr & cla
-				hory+=50
+				hory += 50
 				gs'stat'
 				'<center><img src="images/qwest/alter/uroc/boysex_tualet2.jpg"></center>'
 				'Have you got impatient dick out of his pants <<$npcSurName[i]>>and, and just an excuse for him handle, relish kissed the head. The situation is very strong winds you, you are in the men`s room sitting on the toilet going to suck cock classmate. '
@@ -147,7 +149,7 @@ elseif	npcsex[i]=1:
 			'<center><img src="images/qwest/alter/uroc/boysex_scool1.jpg"></center>'
 			'Going beyond school, You went into the unfinished housing, and you`re not thinking lowered her panties, inviting <<$npcSurName[i]>>and fuck you, your pussy languished with desire, in my head confused thoughts, and wanted only one member inside.'
 			act 'Extend the legs':
-				hory+=50
+				hory += 50
 				gs'stat'
 				*clr & cla
 				'<center><img src="images/qwest/alter/uroc/boysex_scool2.jpg"></center>'
@@ -161,7 +163,7 @@ elseif	npcsex[i]=1:
 					dynamic $sexstart2
 					act 'Open mouth':
 						*clr & cla
-						bj+=1
+						bj += 1
 						gs'stat'
 						'<center><img src="images/qwest/alter/uroc/boysex_scool7.jpg"></center>'
 						'You pulled off a window sill, <<$npcName[i]>> said: «open your mouth», - you obediently opened her mouth, giving the guy the opportunity to get into it. Feeling a member in his mouth, You went with enthusiasm to move your mouth up and down the trunk. Adding language boat, and trying to swallow it as deep as possible. Unable to withstand long this sweet torture <<$npcName[i]>>, growl, and began to fill your mouth with sperm. It was so much, that you did not try to swallow, you poured out of the chin, and began to flock to the neck down to the chest.'
@@ -189,7 +191,7 @@ elseif	npcsex[i]=1:
 							manna += 20
 							orgasm += 1
 							horny = 0
-							analorgasm +=1
+							analorgasm += 1
 							gs'stat'
 							'<center><img src="images/qwest/alter/uroc/boysex_scool6.jpg"></center>'
 							'Turning back to the partner, and, without removing a member from the ass, which added brightness impressions. Are you after a-While started to jump on a limb. Please carefully, fear of losing the wonderful feeling of pleasure, and then more confidently, understanding, what do you want, that you ripped in the ass. And in a couple of minutes <<$npcName[i]>> I grab your ass, and began to stick your writhing body, like a carcass on a spit... And you did not stand a wild horse race, collapsed in orgasm. You may feel, like your anus pulsing hard trunk,  but you were not here, in Nirvana, in space , or even inside a volcano. The guy could not resist His bright orgasm, and began to fill your ass with his seed.'
@@ -202,7 +204,7 @@ elseif	npcsex[i]=1:
 			end
 		end
 
-		if katja_scool_sex=1:
+		if katja_scool_sex = 1:
 			act 'Go into the back room with the guy':
 				*clr & cla
 				'<center><img src="images/qwest/alter/Ev/kiss.gif"></center>'
@@ -226,7 +228,7 @@ elseif	npcsex[i]=1:
 								dynamic $sexstart2
 								act 'lick member':
 									*clr & cla
-									bj+=1
+									bj += 1
 									gs'stat'
 									'<center><img src="images/qwest/alter/uroc/boysex_secretroom5.jpg"></center>'
 									'When he came to see you are still not a member of the fallen <<$npcSurName[i]>>a, and what is greed and frenzy seized him, and began to suck and lick cleared of sperm and their secretions.'
@@ -243,11 +245,11 @@ elseif	npcsex[i]=1:
 	end
 	! apmeet=6 This closure molestation nerds, Well I think so from the code, who knows if there is no correct.
 	! dimarudeblock=1 This video stolen from Nosov.
-	if (apmeet=6 and (i=6 or i=2)) or (dimarudeblock=1 and (i=1 or i=4)): 
+	if (apmeet = 6 and (i = 6 or i = 2)) or (dimarudeblock = 1 and (i = 1 or i = 4)): 
 		delact'View the challenge'
 		'Do you know, after all, what did you do, you still pinching my ass. You turned cute <<$npcSurName[i]>>at'
 		Act 'Embedding between the legs':
-			grupNPC[i]-=10
+			grupNPC[i] -= 10
 			*clr & cla
 			'<center><img src="images/qwest/alter/uroc/rand_scoolboy8.jpg"></center>'
 			'You are embedded between the legs <<$npcSurName[i]>>at, from this you become so good at heart, watch him writhing in pain, suffers.'
@@ -622,7 +624,7 @@ $d_rand_klass = {
 		*clr & cla
 		school_event_hour = day
 		scooltiperand = RAND(1,7)
-		if scooltiperand  = 1 and Katja_tanga_end=1 and tanga=1:
+		if scooltiperand  = 1 and Katja_tanga_end = 1 and tanga = 1:
 			'<center><img src="images/qwest/alter/uroc/scoolrand_1.jpg"></center>'
 			'You went to class and then you came Katya kissed you on the lips, lifted up her skirt and start to touch your ass. Whistling and hooting found that Katina trick noticed and appreciated.'
 		elseif scooltiperand = 2:
@@ -648,7 +650,7 @@ $d_rand_klass = {
 			gs'stat'
 			'<center><img src="images/qwest/alter/uroc/scoolrand_5.jpg"></center>'
 			'Going to class, you saw Lariska, sitting on the splits between the two parties. And it is that-it proved gathered around her friends: «Now believe, I can do that», - girlfriend actively nodded asked to continue the story. «So I also climbed two tables, as he lies on the bed member up.  Well, I quietly dressed to member, and just the way he came at me, like this jerk and finished. And right at me almost killed moron. And it is not finished, and pills had to drink, not to fly».  Larissa looked girlfriends and, see you, confused. And you sat down and thought:  «Our class charm, Sample nowhere to put».'
-		elseif scooltiperand = 6 and Katja_tanga_end=1:
+		elseif scooltiperand = 6 and Katja_tanga_end = 1:
 			hory+=10
 			gs'stat'
 			if rand(1,2)=1:
@@ -657,7 +659,7 @@ $d_rand_klass = {
 			'<center><img src="images/qwest/alter/uroc/scoolrand_6_2.jpg"></center>'
 			end
 			'Defiliruya by Katie, you look at it, and then she suddenly furtively looking around and making sure, that you do not pay attention, He lifted his leg on the desk and showed no panties. You just bit my lip and thought, that it will be necessary for her to look after school.'
-		elseif scooltiperand = 7 and npcsex[12]=1: 
+		elseif scooltiperand = 7 and npcsex[12] = 1: 
 			'<center><img src="images/qwest/alter/uroc/scoolrand_7.jpg"></center>'
 			'Julia looks great today, transparent blouse barely hides the chest.  I wonder how her school started up in this way and for whom she was so dressed up?'
 		elseif scooltiperand = 8: 
@@ -699,41 +701,41 @@ $d_fiz_rand = {
 	fizrand = RAND(0,6)
 	if fizrand = 0:
 		fizperand = RAND(1,6)
-		if fizperand = 1 and tanga=0:
+		if fizperand = 1 and tanga = 0:
 			*clr & cla
-			manna = manna-20
+			manna -= 20
 			gs'stat'
 			'<center><img src="images/qwest/alter/fizra/fizperand1.jpg"></center>'
 			'You no panties , and pull-ups while you slide a little shorts, showing just your pubic area to the whole class. Whistle, laugh, shouts as the support and disapproval. The whole range of emotions you shook for a very short period of time.'
 		elseif fizperand = 2 and vnesh >= 30:
-			hory+=10
+			hory += 10
 			gs'stat'
 			*clr & cla
 			'<center><img src="images/qwest/alter/fizra/fizperand2.jpg"></center>'
 			'During the warm-up fizruk came up to you and helped to warm up, pressing your ass to his groin. Looking Zvereva at this moment seemed to have found the physical capability to kill. '
 		elseif fizperand = 3:	
 			*clr & cla
-			manna = manna+20
+			manna += 20
 			gs'stat'
 			'<center><img src="images/qwest/alter/fizra/fizperand3.jpg"></center>'
 			'You knead with girls, and bathed in the attention of boys, keep your eyes on your ass and asses your classmates. Determined to further their teasing, You girls, at the same time saving training pants, panties showing ass covered. At the same time have stood in different poses guys and even physical education teacher looks pretty funny. And you merge laughter.'
 		elseif fizperand = 4:
 			*clr & cla
-			manna = manna+20
+			manna += 20
 			gs'stat'
 			'<center><img src="images/qwest/alter/fizra/fizperand4.jpg"></center>'
 			'Having decided to fool around a bit with the girls you tuck under shirts balls, and run with them showing off in front of the guys "giant" breast. The lesson goes pretty fun.'
 		elseif fizperand = 5 and npcSex[3] = 1:
-			hory+=10
+			hory += 10
 			gs'stat'
 			*clr & cla
-			manna = manna+20
+			manna += 20
 			gs'stat'
 			'<center><img src="images/qwest/alter/fizra/fizperand5.jpg"></center>'
 			'Vanya offered you work out on the balls, it immediately became interested in Larissa, it seems like Vanya, settled down with her on the balls, you have become to perform any kind of exercise under the guidance of Vani. You have not understood what is the meaning of training, but Ivan during this time clearly naderzhalsya both your ass and ass for Larissa. Maybe that was the point, - with joy you thought.'
 		elseif fizperand = 6 and temper >= 20 and sunWeather = 1 and vnesh >= 30:
 			*clr & cla
-			manna = manna+20
+			manna += 20
 			gs'stat'
 			'<center><img src="images/qwest/alter/fizra/fizperand6.jpg"></center>'	
 			'Stretching in the stadium, where were physical education classes. You worked with dumbbells, deflection and straightening. We came out of the silence behind you, looking back you see all the guys class, and what that bystanders are intently watching your exercises. Confused and a little puffed up. You still stopped, provoke guys.'
@@ -1029,13 +1031,13 @@ $din_bigperemena = {
 	if AlbFrend >= 1 and GorSlut >= 3 and SchoolGossip > 0 and kotovLoveQW <= 0 and AlbinaBlockHumiliation = 0:
 		AlbinaBlockHumiliation = 1
 		minut += 60
-		'During the break you approached the local Gopnik. "Slysh cocksucker, missed the dick? Come to jolt, feed you over." To the guys came Albina Barlovskaya "Hey kids, it took away from the quick." Boys began to run into Albina, but she just laughed in their faces, "Look, boys, pull up your pants and stomp where got out, if I see you again pestering Svetke, will have a deal with my dad, and you vkurse who he is." Guys poobzyvali Albina my father''s daughter and said that she kept in her father''s ass hiding, but Albina only grinned in response to them, soon the bell rang and the boys went to the lesson.'
+		'During the break you approached the local Gopnik. "Slysh cocksucker, missed the dick? Come to jolt, feed you over." To the guys came Albina Barlovskaya "Hey kids, it took away from the quick." Boys began to run into Albina, but she just laughed in their faces, "Look, boys, pull up your pants and stomp where got out, if I see you again pestering <<$nickname>>, will have a deal with my dad, and you vkurse who he is." Guys poobzyvali Albina my father''s daughter and said that she kept in her father''s ass hiding, but Albina only grinned in response to them, soon the bell rang and the boys went to the lesson.'
 		dynamic $din_sekondparturok
 		exit
 	elseif AlbFrend >= 1 and GorSlut >= 3 and SchoolGossip = 0 and kotovLoveQW <= 0 and AlbinaBlockHumiliation = 0:
 		AlbinaBlockHumiliation = 1
 		minut += 60
-		'During the break you approached the local Gopnik. "Slysh <<$name>>. Star blowjob. Potsiki We already told you zashkvarenaya. Tolchek Come in and chat right." To the guys came Albina Barlovskaya "Hey kids, it took away from the quick." Boys began to run into Albina, but she just laughed in their faces, "Look, boys, pull up your pants and stomp where got out, if I see you again pestering Svetke, will have a deal with my dad, and you vkurse who he is." Guys poobzyvali Albina my father''s daughter and said that she kept in her father''s ass hiding, but Albina only grinned in response to them, soon the bell rang and the boys went to the lesson.'
+		'During the break you approached the local Gopnik. "Slysh <<$name>>. Star blowjob. Potsiki We already told you zashkvarenaya. Tolchek Come in and chat right." To the guys came Albina Barlovskaya "Hey kids, it took away from the quick." Boys began to run into Albina, but she just laughed in their faces, "Look, boys, pull up your pants and stomp where got out, if I see you again pestering <<$nickname>>, will have a deal with my dad, and you vkurse who he is." Guys poobzyvali Albina my father''s daughter and said that she kept in her father''s ass hiding, but Albina only grinned in response to them, soon the bell rang and the boys went to the lesson.'
 		dynamic $din_sekondparturok
 		exit
 	end
@@ -1134,7 +1136,7 @@ $din_bigperemena = {
 	elseif GorSlut >= 3 and SchoolGossip = 0 and kotovLoveQW <= 0 and AlbinaBlockHumiliation = 0:
 		gopbjtoiletrand = rand(0, 2)
 
-		if gopbjtoiletrand=0:
+		if gopbjtoiletrand = 0:
 			'During the break you approached the local Gopnik. "Slysh <<$name>>. Star blowjob. Potsiki We already told you zashkvarenaya. Tolchek Come in and chat right."'
 
 			act 'Go to the toilet':
@@ -1163,7 +1165,7 @@ $din_bigperemena = {
 			end
 
 			exit
-		elseif gopbjtoiletrand=1:
+		elseif gopbjtoiletrand = 1:
 			'On the reverse to you guy came from another class. "Hey <<$nickname>>, star blowjob, I heard that you <<$gnikname>>, go to jolt me sosnesh."'
             if gorslut = 6:'50 RUR you want?'
 
@@ -1220,7 +1222,7 @@ $din_bigperemena = {
 		gs 'stat'
 		'<center><img src="images/qwest/alter/peremena<<urand>>.jpg"></center>'
 		'You sit in a classroom with a few <a href="exec:gt ''Sgrup1''">and botanists zauchkami</a>. The class also remained <a href="exec:gt ''Sgrup5''">rogue</a>. Most of the students came out into the corridor.'
-		if rand(1,6)=1 and tanga=1 and vagina > 12 and mesec <= 0:
+		if rand(1,6) = 1 and tanga = 1 and vagina > 12 and mesec <= 0:
 			'<center><img src="images/qwest/alter/uroc/boysex_tualet.jpg"></center>'
 			'You went to class and then someone-then, you lifted up her skirt, I grabbed you for the ass. Turning, you see half the guys class standing with a straight face , and looking anywhere but not on you.'
 			dynamic $d_rand_scoolboy
@@ -1236,7 +1238,7 @@ $din_bigperemena = {
 		'Girls wandered down the corridor, gossiping. The guys stand around in separate groups and some sneak off to smoke behind the school. You can see the <a href="exec:gt ''Sgrup3''">cool kids</a> and the <a href="exec:gt ''Sgrup2''">sporty kids</a>.'
 		dynamic $din_sekondparturok
 
-		if soniaPS=5 and rand(1,3)=1:
+		if soniaPS = 5 and rand(1,3) = 1:
 			cls
 			gs'stat'
 			'<center><img src="images/qwest/alter/school.jpg"></center>'
@@ -1244,13 +1246,13 @@ $din_bigperemena = {
 				act'See':
 					cls
 					gs'stat'
-					horny+=5
+					horny += 5
 					'<center><img src="images/Nigma/gor/sonia/sonia.teach0,'+rand(0,1)+'.jpg"></center>'
 					'You carefully priotkyli animal study and look inside. In the office, Your classmate Sonja Oatescyvala geography teacher. It seems, her fame spread throughout the school, and teachers do not miss the opportunity to take advantage of the school slut.'
 						act'Further':
 							cls
 							gs'stat'
-							horny+=10
+							horny += 10
 							'<center><img src="images/Nigma/gor/sonia/sonia.teach1,0.jpg"></center>'
 							'When the teacher quite excited, he raised to his feet and Sonia poslaviv cancer, I began to fuck.'
 							dynamic $din_sekondparturok
@@ -1272,36 +1274,36 @@ $din_bigperemena = {
 		soniarand = rand(0,30)
 
 		if soniarand >= 10:
-			if soniaPS=3:soniasexrand=1
-			if soniaPS=4:soniasexrand=rand(1,2)
-			if soniaPS=5:soniasexrand=rand(1,3)
-			if soniasextime=>3 and soniaPS=3:soniaPS=4&soniasextime=0
-			if soniasextime=>5 and soniaPS=4:soniaPS=5&soniasextime=0
-				if soniasexrand=1:
+			if soniaPS = 3:soniasexrand = 1
+			if soniaPS = 4:soniasexrand = rand(1,2)
+			if soniaPS = 5:soniasexrand = rand(1,3)
+			if soniasextime => 3 and soniaPS = 3:soniaPS = 4 & soniasextime = 0
+			if soniasextime => 5 and soniaPS = 4:soniaPS = 5 & soniasextime = 0
+				if soniasexrand = 1:
 					cls
 					horny += 10
-					if soniaPS<5:soniasextime+=1
+					if soniaPS < 5:soniasextime += 1
 					gs 'stat'
 					'<center><img src="images/qwest/alter/sonia/t.jpg"></center>'
 					'Going to the toilet you see, that Sonia sucks dick at what that kid. Hard cock entering her mouth and Sonia champs and skillfully works sponges.'
 					dynamic $din_sekondparturok
-				elseif soniasexrand=2:
+				elseif soniasexrand = 2:
 					cls
-					horny+=15
-					if soniaPS<5:soniasextime+=1
+					horny += 15
+					if soniaPS < 5:soniasextime += 1
 					gs'stat'
 					'<center><img src="images/Nigma/gor/sonia/sonia.school1,'+rand(0,3)+'.jpg"></center>'
 					'You went to the bathroom and see how your classmate Sonia fucks with some-the kid.'
 					dynamic $din_sekondparturok
-				elseif soniasexrand=3:
+				elseif soniasexrand = 3:
 					cls
-					horny+=20
+					horny += 20
 					gs'stat'
 					'<center><img src="images/Nigma/gor/sonia/sonia.orgy.pre0,0.jpg"></center>'
 					'You went to the bathroom and see that Sonia is surrounded by guys. They have already pulled out their members and their wanker, Sonia is undressed.'
 					act'Further':
 						cls
-						horny+=10
+						horny += 10
 						gs'stat'
 						'<center><img src="images/Nigma/gor/sonia/sonia.orgy0,0.jpg"></center>'
 						'Sonia took a member of one of the guys in her mouth and started sucking. The remaining members continued their nadrachivat, and came close to Sonia.'
@@ -1339,11 +1341,11 @@ $din_bigperemena = {
 				if energy >= 30:
 					fat += 5
 					'You can no longer eat.'
-				elseif energy >= 20 and energy < 30:
+				elseif energy >= 20:
 					fat += 3
 					energy += 10
 					'You pushed through the power of a meal.'
-				elseif energy < 20:
+				else
 					energy += 20
 					!!fat += 1
 					'You gladly ate cooked food.'
@@ -1351,7 +1353,7 @@ $din_bigperemena = {
 
 				if water >= 20:
 					'You don''t need any more tea.'
-				elseif water < 20:
+				else
 					water += 20
 					cumlip = 0
 					fbreath = 0

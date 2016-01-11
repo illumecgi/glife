@@ -169,7 +169,7 @@ end
 
 act 'Logout':
 	if $clothingworntype ! 'nude':
-		if lariskaQwestStart >= daystart and week = 4 and grupNPC[13] >= 80 and lariskaHelp = 0 and zverSlutQW = 1:
+		if lariskaQwestStart <= daystart and week = 4 and grupNPC[13] >= 80 and lariskaHelp = 0 and zverSlutQW = 1:
 			gt'LariskaStart','start'
 		elseif lariskaQwestDay = daystart and AlbZverHelp ! 1 and lariskaHelp ! 0:
 			gt'LariskaStart','end'

@@ -59,20 +59,20 @@ if day = 29 and month = 12 and age <= 17 and StoryLine = 1 and SchoolAtestat = 0
 	end
 end
 if week = 6 and schoolSorev = 2 and hour = 10:
-	'Near the school are students from different schools and athletes preparing for the competitions in running.'
+	'Near the school students from different schools and athletes prepare for the running competition.'
 
 	act 'Participate in city running race':
 		cls
 		minut += 30
 		gs 'stat'
-		'You came to the athletes and he wrote you. After this athlete finished all the preparations for the competition and the guys went to a stratum. The guys went over and as expected won the Ivan Prokhorov. After the guys finished the turn girls.'
+		'You sign up to the race with the other athletes. As you prepare for the competition, you watch the guys race. As expected Ivan Prokhorov won. After the guys have finished it''s the girls turn.'
 
 		if swinbeggor = 0:
-			'Ready to start Christina Zvereva, one of the girls in your class. She scoff at you, "You''ll never beat me."'
+			'Getting ready at the start is Christina Zvereva, one of the girls in your class. She scoffs at you, "You''ll never beat me."'
 		elseif swinbeggor = 1:
-			'Ready to start Christina Zvereva, one of the girls in your class. She looks at you angrily, "You beat me once, but now you will not work."'
+			'Getting ready at the start is Christina Zvereva, one of the girls in your class. She looks at you angrily, "You beat me once, but never again."'
 		elseif swinbeggor = 2:
-			'Ready to start Christina Zvereva, one of the girls in your class. She looks at you with hatred "Again came bitch? Never mind, this time I''ll do it!"'
+			'Getting ready at the start is Christina Zvereva, one of the girls in your class. She looks at you with hatred "You again, bitch? Never mind, this time I''ll do it!"'
 		end
 
 		act 'Go to start':
@@ -82,30 +82,37 @@ if week = 6 and schoolSorev = 2 and hour = 10:
 			schoolSorev = 0
 			gs 'stat'
 			'<center><img src="images/etogame/begsor.jpg"></center>'
-			'Girls, on the 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
+			'Girls 400 meters race. You change clothes and go to the track.'
+			wait 725
+			'On your marks.'
+			wait 725
+			'Get set.'
+			wait 725
+			'Go!'
+			wait 725
 
-			begresult = beg + speed + vital + rand(1, 20) - salo - rand(1, 20)
+			begresult = beg + speed + vital + rand(1, 20) - salo/2 - rand(1, 20)
 
 			if begresult <= 0:
-				'You barely managed to reach the finish line, what place is really there, of course you are the last.'
+				'You barely managed to reach the line, there''s no point checking were you finished, you are last by some distance.'
 			elseif begresult < 70:
-				'You are not bad ran for dilettante course, as ranked last 8th place.'
+				'You struggle through the race, finishing in last place.'
 			elseif begresult < 80:
-				'You fought hard, but managed to take only 7 penultimate place.'
+				'You fought hard, but only manage to finish second to last.'
 			elseif begresult < 90:
-				'You fought hard, but only managed to take 6th place.'
+				'You fought hard, but only manage to take 6th place.'
 			elseif begresult < 100:
-				'You fought hard, but only managed to take 5th place.'
+				'You fought hard, but only manage to take 5th place.'
 			elseif begresult < 110:
-				'You fought hard, but only managed to take 4th place.'
+				'You fought hard, but only manage to take 4th place.'
 			elseif begresult < 120:
-				'You fought hard and managed to take 3rd place. Fizruk congratulates you on your success.'
+				'You fought hard and manage to take 3rd place. The P.E. teacher congratulates you.'
 			elseif begresult < 130:
-				'You fought hard and managed to take 2nd place. Fizruk congratulates you in hurry.'
+				'You fought hard and managed to take 2nd place. The P.E. teacher congratulates you on your success.'
 			else
 				swinbeggor += 1
 				dom += 1
-				'You fought hard and managed to take 1st place. Fizruk congratulate you on winning the competition.'
+				'You fought hard and managed to take 1st place. The P.E. teacher congratulate you on winning the competition.'
 			end
 
 			beg += 1
@@ -115,13 +122,13 @@ if week = 6 and schoolSorev = 2 and hour = 10:
 				razradbeg = 2
 				grupNPC[18] = 0
 				zverevaQW = 1
-				'You won the three competitions and urban Fizruk announces you that he and you are handed pohadataystvoval 2nd sports category on the run. Christina Zvereva stands apart clenched his hands into fists and hatred looks at you.'
+				'You have won the competition three times and your P.E. teacher awards you the second sports category in running. Christina Zvereva stands nearby, staring at you the whole time snarling, her hands balled into fists.'
 			elseif swinbeggor = 2 and begresult >= 130:
 				grupNPC[18] = 0
-				'At the finish line worth Christina Zvereva and trying to catch her breath, she was not able to overtake you, and came second. Christina tries not to look you in the eye.'
+				'At the finish line is Christina Zvereva trying to catch her breath, she was unable to overtake you, and came second. Christina tries not to look you in the eye.'
 			elseif swinbeggor = 1 and begresult >= 130:
 				grupNPC[18] = 0
-				'At the finish line worth Christina Zvereva and trying to catch her breath, she was not able to overtake you, and came second. Christina through her teeth growls at you, "That bitch!"'
+				'At the finish line is Christina Zvereva trying to catch her breath, she was unable to overtake you, and came second. Through clenched teeth Christina growls at you, "You bitch!"'
 			end
 
 			gs 'stat'
@@ -147,30 +154,37 @@ if week = 6 and schoolSorev = 1 and hour = 10:
 			kolsorev += 1
 			gs 'stat'
 			'<center><img src="images/etogame/begsor.jpg"></center>'
-			'Girls, on the 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
+			'Girls 400 meters race. You change clothes and go to the track.'
+			wait 725
+			'On your marks.'
+			wait 725
+			'Get set.'
+			wait 725
+			'Go!'
+			wait 725
 
-			begresult = beg + speed + vital + rand(1, 20) - salo - rand(1, 20)
+			begresult = beg + speed + vital + rand(1, 20) - salo/2 - rand(1, 20)
 
 			if begresult <= 0:
-				'You barely managed to reach the finish line, what place is really there, of course you are the last.'
+				'You barely managed to reach the line, there''s no point checking were you finished, you are last by some distance.'
 			elseif begresult < 10:
-				'You are not bad ran for dilettante course, as ranked last 8th place.'
+				'You struggle through the race, finishing in last place.'
 			elseif begresult < 20:
-				'You fought hard, but managed to take only 7 penultimate place.'
+				'You fought hard, but only manage to finish second to last.'
 			elseif begresult < 30:
-				'You fought hard, but only managed to take 6th place.'
+				'You fought hard, but only manage to take 6th place.'
 			elseif begresult < 40:
-				'You fought hard, but only managed to take 5th place.'
+				'You fought hard, but only manage to take 5th place.'
 			elseif begresult < 50:
-				'You fought hard, but only managed to take 4th place.'
+				'You fought hard, but only manage to take 4th place.'
 			elseif begresult < 60:
-				'You fought hard and managed to take 3rd place. Fizruk congratulates you on your success.'
+				'You fought hard and manage to take 3rd place. The P.E. teacher congratulates you.'
 			elseif begresult < 70:
-				'You fought hard and managed to take 2nd place. Fizruk congratulates you in hurry.'
+				'You fought hard and manage to take 2nd place. The P.E. teacher congratulates you on your success.'
 			else
 				swinbeg += 1
 				dom += 1
-				'You fought hard and managed to take 1st place. Fizruk congratulate you on winning the competition.'
+				'You fought hard and manage to take 1st place. The P.E. teacher congratulate you on winning the competition.'
 			end
 
 			beg += 1
@@ -178,7 +192,7 @@ if week = 6 and schoolSorev = 1 and hour = 10:
 
 			if swinbeg = 3 and razradbeg = 0:
 				razradbeg = 1
-				'You have won three times on the school competitions and you Fizruk announces that he pohadataystvoval and you are handed a third sports category on the run.'
+				'You have won the school competition three times and your P.E. teacher announces that your success has not gone unnoticed and awards you the third sports category in running.'
 			end
 
 			gs 'stat'

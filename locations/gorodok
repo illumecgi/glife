@@ -345,7 +345,7 @@ if marudatestinterface = 0:
 	'It is serviced by a <a href="exec:minut += 15 & gt ''vokzalG''">Train Station</a> by the highway, with a nearby <a href="exec:gt ''zaprF'', ''start''">Gas Station</a>.'
 	'There is a small <a href="exec:minut += 15 & gt ''gpoli''">Clinic</a><<$Pharmname>>'
 
-	'The town centre features a <a href="exec:gt ''gdk''">House of Culture</a><<$schoolname>>'
+	'The town centre features a <a href="exec:gt ''gdk''">Community Centre</a><<$schoolname>>'
 	
 	if hour >= 8 and hour <= 17:'The <a href="exec: minut += 3 & gt ''barbershop'', ''start''">local barbershop</a>.'
 	if hour >= 7 and hour <= 18:'Also, a <a href="exec:gt ''etoexhib'', ''pos20''">Vocational School</a>.'

@@ -1134,15 +1134,15 @@ kanikuli = 0
 if (month = 10 and day >= 27) or (month = 11 and day <= 4):
 	$holyday = '<b>Autumn holidays.</b>'
 	kanikuli = 1
-	if month = 11 and day = 4:$holyday += ' <b>Back to svchool tomorrow.</b>'
+	if month = 11 and day = 4:$holyday += ' <b>Back to school tomorrow.</b>'
 elseif (month = 12 and day >= 29) or (month = 1 and day <= 13):
 	$holyday = '<b>Winter Break.</b>'
 	kanikuli = 2
-	if month = 1 and day = 13:$holyday += ' <b>Back to svchool tomorrow.</b>'
+	if month = 1 and day = 13:$holyday += ' <b>Back to school tomorrow.</b>'
 elseif (month = 3 and day >= 25):
 	$holyday = '<b>Spring Break.</b>'
 	kanikuli = 3
-	if month = 3 and day = 25:$holyday += ' <b>Back to svchool tomorrow.</b>'
+	if month = 3 and day = 25:$holyday += ' <b>Back to school tomorrow.</b>'
 elseif (month = 5 and day >= 25) or month = 6 or month = 7 or month = 8:
 	if month = 5 and day = 25 and age = 17:
 		$holyday = '<b>Your graduation is today. Be there by 8h.</b>'
@@ -1151,7 +1151,7 @@ elseif (month = 5 and day >= 25) or month = 6 or month = 7 or month = 8:
 		$holyday = '<b>Summer holidays.</b>'
 		kanikuli = 4
 	end
-	if month = 8 and day = 31:$holyday += ' <b>Back to svchool tomorrow.</b>'
+	if month = 8 and day = 31:$holyday += ' <b>Back to school tomorrow.</b>'
 	elseif month = 1 and day = 1:$holyday = '<b>New Year!</b>' & kanikuli = 5
 end
 

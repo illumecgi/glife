@@ -203,14 +203,14 @@ if week = 6 and schoolSorev = 1 and hour = 10:
 end
 
 if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 4 and month = 5 and day >= 25 and age = 17:
-	'Today is the school prom.'
+	'Today is graduation and the school prom.'
 
-	act 'Go to the prom':
+	act 'Go to graduation':
 		cls
 		SchoolAtestat = 1
 		intel += 10
 		gs 'stat'
-		'Your class was built on a ruler and a teacher to congratulate you on the successful completion of the school.'
+		'Everyone form your year assembles. The teachers congratulate you all on successful completion of school and hand out diplomas.'
 
 		act 'Leave':gt 'gorodok'
 
@@ -220,10 +220,11 @@ if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli =
 			alko += 5
 			cumlip = 0
 			fbreath = 0
+			tanga = 0
 			gs 'stat'
 			gs 'clothing', 'strip'
 			!!gee gee, no normal outlet
-			'At graduation all get drunk in the asshole. You almost do not remember anything, only that bathed in the fountain as a paratrooper and woke up naked.'
+			'After graduation all get as drunk as assholes. You barely remember anything that happened, only that you were one of the group who went skinny-dipping in the fountain. You wake up by the town center completely naked.'
 
 			act 'Leave':gt 'gorodok'
 		end
@@ -243,7 +244,7 @@ if hour >= 16 and GorSlut >= 3 and SchoolGossip > 0 and afterschoolday ! daystar
 
 	if aftgopbjrand = 0:
 		cla
-		'Waiting for you at the school exit are Vitek and his friends. "Well, then cocksueker. Ready to work your fucking mouth? Come with us back to school."'
+		'Waiting for you at the school exit are Vitek and his friends. "Well, then cocksucker. Ready to work your fucking mouth? Come with us back to school."'
 
 		act 'Return to school':
 			cls
@@ -294,7 +295,7 @@ if hour = 16 and week < 6 and kanikuli = 0:
 
 	if LinaSlut > 0:
 		randLina = rand(1,10)
-		if randLina < 3:'You see how Lina, Dan and Vasily leaving school.'
+		if randLina < 3:'You see Lina, Dan and Vasily leaving school.'
 	end
 
 	if LariskaHomeIn > 0:'Walking through the courtyard of the school walks <a href="exec:minut += 1 & GT ''LariskaGo''">Lariska Gruzdev</a>.'
@@ -320,9 +321,9 @@ end
 if strelaDay ! daystart and strelaQW = 1 and hour = 16:
 	cls
 	gs 'stat'
-	'To school drove Mitsubishi Pajero and BMW. Of the cars went out strong, inflated guys in leather jackets and tracksuits. They came to the meeting Kotov, Auburn and Shulga. They talked about something and came here from school Fedor Kozlov with a swollen face, bruised. Kotov you waved a hand "<<$name>>, come here, you''re a witness."'
+	'A Mitsubishi Pajero and BMW drive upto the school gates. Strong, musclular guys in leather jackets and tracksuits get out of the cars. They have came to meet Vitek, Dan and Bob. You watch them talking about something before you notice Fedor Kozlov leaving school, his face swollen and bruised. Kozlov waves his hand at you, "<<$name>>, come here, you''re a witness."'
 
-	act 'Start at the arrow':gt 'strela'
+	act 'Go and see what he needs':gt 'strela'
 
 	exit
 end

@@ -1,42 +1,102 @@
 # body
 
-if throat = 0:thpic = 0 & $throat = 'You have a chaste <a href="exec:view''images/body/th0.jpg''">mouth</a>.' & $throattipe = 'absolutely unusual'
-if throat > 0 and throat <= 5:thpic = 1 & $throat = 'You have an inexperienced <a href="exec:view''images/body/th1.jpg''">mouth</a>.' & $throattipe = 'virgin'
-if throat > 5 and throat <= 10:thpic = 2 & $throat = 'Your working mouth leads to a sensitive <a href="exec:view''images/body/th2.jpg''">throat</a>.' & $throattipe = 'sensitive'
-if throat > 10 and throat <= 15:thpic = 3 & $throat = 'You have an experienced mouth and slightly stretched <a href="exec:view''images/body/th3.jpg''">throat</a>.' & $throattipe = 'slightly stretched'
-if throat > 15 and throat <= 25:thpic = 4 & $throat = 'You have a capacious mouth and trained <a href="exec:view''images/body/th4.jpg''">throat</a>.' & $throattipe = 'stretched'
-if throat > 25 and throat <= 35:thpic = 5 & $throat = 'Your deep tunnel of a <a href="exec:view''images/body/th5.jpg''">throat</a> may adopt any member.' & $throattipe = 'tinned'
-if throat > 35:thpic = 6 & $throat = 'Your completely absent gag reflex and ravenous <a href="exec:view''images/body/th6.jpg''">throat</a> is like a bottomless pit.' & $throattipe = 'bottomless'
-if fbreath = 1:$throat = $throat+' Which smelled fresh and minty last time you checked.'
+if throat = 0:
+	thpic = 0
+	$throat = 'You have a chaste <a href="exec:view''images/body/th0.jpg''">mouth</a>.'
+	$throattipe = 'absolutely unusual'
+elseif throat <= 5:
+	thpic = 1
+	$throat = 'You have an inexperienced <a href="exec:view''images/body/th1.jpg''">mouth</a>.'
+	$throattipe = 'virgin'
+elseif throat <= 10:
+	thpic = 2
+	$throat = 'Your working mouth leads to a sensitive <a href="exec:view''images/body/th2.jpg''">throat</a>.'
+	$throattipe = 'sensitive'
+elseif throat <= 15:
+	thpic = 3
+	$throat = 'You have an experienced mouth and slightly stretched <a href="exec:view''images/body/th3.jpg''">throat</a>.'
+	$throattipe = 'slightly stretched'
+elseif throat <= 25:
+	thpic = 4
+	$throat = 'You have a capacious mouth and trained <a href="exec:view''images/body/th4.jpg''">throat</a>.'
+	$throattipe = 'stretched'
+elseif throat <= 35:
+	thpic = 5
+	$throat = 'Your deep tunnel of a <a href="exec:view''images/body/th5.jpg''">throat</a> may adopt any member.'
+	$throattipe = 'tinned'
+else
+	thpic = 6
+	$throat = 'Your completely absent gag reflex and ravenous <a href="exec:view''images/body/th6.jpg''">throat</a> is like a bottomless pit.'
+	$throattipe = 'bottomless'
+end
 
-if vagina = 0:puspic = 0 & $vagina = 'Your virgin <a href="exec:view''images/body/vag0.jpg''">pussy</a> still has a membrane.' & $vaginatipe = 'virgin'
-if vagina > 0 and vagina <= 5:puspic = 1 & $vagina = 'Your <a href="exec:view''images/body/vag1.jpg''">pussy</a> has a tiny hole.' & $vaginatipe = 'narrow'
-if vagina > 5 and vagina <= 10:puspic = 2 & $vagina = 'Your closed, similar to a slit <a href="exec:view''images/body/vag2.jpg''">vagina</a>.' & $vaginatipe = 'close'
-if vagina > 10 and vagina <= 15:puspic = 3 & $vagina = 'You have a slightly stretched, elastic <a href="exec:view''images/body/vag3.jpg''">vagina</a>.' & $vaginatipe = 'tight'
-if vagina > 15 and vagina <= 25:puspic = 4 & $vagina = 'You have a well-developed <a href="exec:view''images/body/vag4.jpg''">vagina</a>.' & $vaginatipe = 'developed'
-if vagina > 25 and vagina <= 35:puspic = 5 & $vagina = 'Between your legs and unable to close, you have a hefty <a href="exec:view''images/body/vag5.jpg''">tunnel</a>.' & $vaginatipe = 'broken-down'
-if vagina > 35:puspic = 6 & $vagina = 'The fact is, in place of a pussy, you have a <a href="exec:view''images/body/vag6.jpg''">well</a> as deep as the Mariana Trench.' & $vaginatipe = 'dimensionless'
+if fbreath = 1:$throat += ' Which smelled fresh and minty last time you checked.'
+
+
+if vagina = 0:
+	puspic = 0
+	$vagina = 'Your virgin <a href="exec:view''images/body/vag0.jpg''">pussy</a> still has a membrane.'
+	$vaginatipe = 'virgin'
+elseif vagina <= 5:
+	puspic = 1
+	$vagina = 'Your <a href="exec:view''images/body/vag1.jpg''">pussy</a> has a tiny hole.'
+	$vaginatipe = 'narrow'
+elseif vagina <= 10:
+	puspic = 2
+	$vagina = 'Your closed, similar to a slit <a href="exec:view''images/body/vag2.jpg''">vagina</a>.'
+	$vaginatipe = 'close'
+elseif vagina <= 15:
+	puspic = 3
+	$vagina = 'You have a slightly stretched, elastic <a href="exec:view''images/body/vag3.jpg''">vagina</a>.'
+	$vaginatipe = 'tight'
+elseif vagina <= 25:
+	puspic = 4
+	$vagina = 'You have a well-developed <a href="exec:view''images/body/vag4.jpg''">vagina</a>.'
+	$vaginatipe = 'developed'
+elseif vagina <= 35:
+	puspic = 5
+	$vagina = 'Between your legs and unable to close, you have a hefty <a href="exec:view''images/body/vag5.jpg''">tunnel</a>.'
+	$vaginatipe = 'broken-down'
+else
+	puspic = 6
+	$vagina = 'The fact is, in place of a pussy, you have a <a href="exec:view''images/body/vag6.jpg''">well</a> as deep as the Mariana Trench.'
+	$vaginatipe = 'dimensionless'
+end
 
 if analplugIN = 0:
-	if anus = 0:anpic = 0 & $anus = 'You have a virgin <a href="exec:view''images/body/0.jpg''">anus</a>.'
-	if anus > 0 and anus <= 5:anpic = 1 & $anus = 'Your <a href="exec:view''images/body/1.jpg''">anus</a> is barely used, and looking at it noone would know it had used for sex.'
-	if anus > 5 and anus <= 10:anpic = 2 & $anus = 'Your <a href="exec:view''images/body/2.jpg''">anus</a> has the shape of an asterisk.'
-	if anus > 10 and anus <= 15:anpic = 3 & $anus = 'Your <a href="exec:view''images/body/3.jpg''">anus</a> is now slightly parted, it has been used quite often.'
-	if anus > 15 and anus <= 25:anpic = 4 & $anus = 'Your <a href="exec:view''images/body/4.jpg''">anus</a> look like a wide hole, anyone would definitely think that the only thing you do is anal sex.'
-	if anus > 25 and anus <= 35:anpic = 5 & $anus = 'Your <a href="exec:view''images/body/5.jpg''">anus</a> doesn''t fully close on its own anymore. You could put a fist through it and it wouldn''t stretch at all.'
-	if anus > 35:anpic = 6 & $anus = 'Your <a href="exec:view''images/body/6.jpg''">anus</a> is almost completely wrecked. Even with conscious effort it''s hard to close it.' & $anustipe = 'destroyed'
+	if anus = 0:
+		anpic = 0
+		$anus = 'You have a virgin <a href="exec:view''images/body/0.jpg''">anus</a>.'
+	elseif anus <= 5:
+		anpic = 1
+		$anus = 'Your <a href="exec:view''images/body/1.jpg''">anus</a> is barely used, and looking at it noone would know it had used for sex.'
+	elseif anus <= 10:
+		anpic = 2
+		$anus = 'Your <a href="exec:view''images/body/2.jpg''">anus</a> has the shape of an asterisk.'
+	elseif anus <= 15:
+		anpic = 3
+		$anus = 'Your <a href="exec:view''images/body/3.jpg''">anus</a> is now slightly parted, it has been used quite often.'
+	elseif anus <= 25:
+		anpic = 4
+		$anus = 'Your <a href="exec:view''images/body/4.jpg''">anus</a> look like a wide hole, anyone would definitely think that the only thing you do is anal sex.'
+	elseif anus <= 35:
+		anpic = 5
+		$anus = 'Your <a href="exec:view''images/body/5.jpg''">anus</a> doesn''t fully close on its own anymore. You could put a fist through it and it wouldn''t stretch at all.'
+	else
+		anpic = 6
+		$anus = 'Your <a href="exec:view''images/body/6.jpg''">anus</a> is almost completely wrecked. Even with conscious effort it''s hard to close it.' & $anustipe = 'destroyed'
+	end
 elseif analplugIN = 1 and tanga = 1:
 	$anus = 'Your <a href="exec:view''images/body/analplug.jpg''">anus</a> is currently filled with your butt plug.'
 elseif analplugIN = 1 and tanga = 0:
-	$anus = 'Your <a href="exec:view''images/picb/analplugnotanga.jpg''">anus</a> is currently filled with your butt plug.'
 	if pirsG = 1 and pirsGL = 1:
-	$anus = 'Your <a href="exec:view''images/picb/analplugpirscligub.jpg''">anus</a> is currently filled with your butt plug.'
-	end
-	if pirsG = 0 and pirsGL = 1:
-	$anus = 'Your <a href="exec:view''images/picb/analplugpirsclit.jpg''">anus</a> is currently filled with your butt plug.'
-	end
-	if pirsG = 1 and pirsGL = 0:
-	$anus = 'Your <a href="exec:view''images/picb/analplugpirsring.jpg''">anus</a> is currently filled with your butt plug.'
+		$anus = 'Your <a href="exec:view''images/picb/analplugpirscligub.jpg''">anus</a> is currently filled with your butt plug.'
+	elseif pirsG ! 1 and pirsGL = 1:
+		$anus = 'Your <a href="exec:view''images/picb/analplugpirsclit.jpg''">anus</a> is currently filled with your butt plug.'
+	elseif pirsG = 1 and pirsGL ! 1:
+		$anus = 'Your <a href="exec:view''images/picb/analplugpirsring.jpg''">anus</a> is currently filled with your butt plug.'
+	else
+		$anus = 'Your <a href="exec:view''images/picb/analplugnotanga.jpg''">anus</a> is currently filled with your butt plug.'
 	end
 end
 

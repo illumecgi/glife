@@ -9,96 +9,102 @@ else
 	'<center><img src="images/pics/son.jpg"></center>'
 end
 
-'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes.'
+if budilnikOn = 0:
+	'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes and currently turned <a href="exec: budilnikOn = 1 & GT $loc,$metka">off</a>.'
+else
+	'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes and currently turned <a href="exec: budilnikOn = 0 & GT $loc,$metka">on</a>.'
+end
 
-
-!!if son < 10:
-act 'Undress and go to bed':
-	if disable_autosave = 0:
-		if StoryLine = 0:
-			savegame 'autosave.sav'
-		else
-			savegame 'autosave_alt.sav'
-		end
-	end
-
-	gs 'clothing', 'strip'
-
-	cls
-	notathomesleep=0
-	health += 5
-	hapri = 0
-	InSleep = 1
-	:loopson
-	minut += 1
-	stime += 1
-
-	if stime = 60:stime = 0 & son += 3
-
-	clr
-	cls
-	gs 'stat'
-	'<center><img src="images/pics/son.jpg"></center>'
-
-	if analplugIN = 1 and bedanal = 0:analplugIN = 0 & 'Before going to bed you remove your butt plug.'
-	if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed you remove your vibrator'
-	if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smears your face, you think that it looks bad sleeping in makeup, and your skin will age faster from this.'
-
-	'You sleep and you dream about nothing.'
-
-	if hour = timer and minut = timerM:
-		manna -= 10
-		'Alarm goes off.'
-
-		if kanikuli = 0 and SchoolAtestat = 0 and week < 6 and hour >= 4 and hour < 9:
-			act 'Get up out of bed and get dressed for school (0:15)':
-				gs 'clothing', 'wear', 'sforma'
-				minut += 15
-				dynamic $wakepar
+if son > 17:
+	'You are not tired enougth to sleep'
+else
+	act 'Undress and go to bed':
+		if disable_autosave = 0:
+			if StoryLine = 0:
+				savegame 'autosave.sav'
+			else
+				savegame 'autosave_alt.sav'
 			end
 		end
 
-		act 'Get out of bed and get dressed (0:15)':
-			gs 'clothing', 'wear_last_worn'
-			minut += 15
-			dynamic $wakepar
-		end
+		gs 'clothing', 'strip'
 
-		act 'Get out of bed (0:10)':
-			InSleep = 0
-			minut += 10
-			dynamic $wakepar
-		end
+		cls
+		notathomesleep=0
+		health += 5
+		hapri = 0
+		InSleep = 1
+		:loopson
+		minut += 1
+		stime += 1
 
-		exit
-	end
+		if stime = 60:stime = 0 & son += 3
 
-	if son > 23 and dosip = 0:
-		'You wake up, no longer tired.'
-		
-		if kanikuli = 0 and SchoolAtestat = 0 and week < 6 and hour >= 4 and hour < 9:
-			act 'Get up out of bed and get dressed for school (0:15)':
-				gs 'clothing', 'wear', 'sforma'
+		clr
+		cls
+		gs 'stat'
+		'<center><img src="images/pics/son.jpg"></center>'
+
+		if analplugIN = 1 and bedanal = 0:analplugIN = 0 & 'Before going to bed you remove your butt plug.'
+		if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed you remove your vibrator'
+		if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smears your face, you think that it looks bad sleeping in makeup, and your skin will age faster from this.'
+
+		'You sleep and you dream about nothing.'
+
+		if hour = timer and minut = timerM and budilnikOn = 1:
+			manna -= 10
+			'Alarm goes off.'
+
+			if kanikuli = 0 and SchoolAtestat = 0 and week < 6 and hour >= 4 and hour < 9:
+				act 'Get up out of bed and get dressed for school (0:15)':
+					gs 'clothing', 'wear', 'sforma'
+					minut += 15
+					dynamic $wakepar
+				end
+			end
+
+			act 'Get out of bed and get dressed (0:15)':
+				gs 'clothing', 'wear_last_worn'
 				minut += 15
 				dynamic $wakepar
 			end
+
+			act 'Get out of bed (0:10)':
+				InSleep = 0
+				minut += 10
+				dynamic $wakepar
+			end
+
+			exit
 		end
 
-		act 'Get out of bed and get dressed (0:15)':
-			gs 'clothing', 'wear_last_worn'
-			minut += 15
-			dynamic $wakepar
+		if son > 23 and dosip = 0:
+			'You wake up, no longer tired.'
+			
+			if kanikuli = 0 and SchoolAtestat = 0 and week < 6 and hour >= 4 and hour < 9:
+				act 'Get up out of bed and get dressed for school (0:15)':
+					gs 'clothing', 'wear', 'sforma'
+					minut += 15
+					dynamic $wakepar
+				end
+			end
+
+			act 'Get out of bed and get dressed (0:15)':
+				gs 'clothing', 'wear_last_worn'
+				minut += 15
+				dynamic $wakepar
+			end
+
+			act 'Get out of bed (0:10)':
+				minut += 10
+				dynamic $wakepar
+			end
+
+			exit
 		end
 
-		act 'Get out of bed (0:10)':
-			minut += 10
-			dynamic $wakepar
-		end
-
-		exit
+		jump 'loopson'
 	end
-
-	jump 'loopson'
 end
 !!end
 

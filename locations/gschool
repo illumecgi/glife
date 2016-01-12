@@ -202,7 +202,7 @@ if week = 6 and schoolSorev = 1 and hour = 10:
 	end
 end
 
-if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 4 and month = 5 and day >= 25 and age = 17:
+if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 6:
 	'Today is graduation and the school prom.'
 
 	act 'Go to graduation':

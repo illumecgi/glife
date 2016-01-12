@@ -51,7 +51,7 @@ if zverRageQW = 1:
 	exit
 end
 
-if day = 29 and month = 12 and age <= 17 and StoryLine = 1 and SchoolAtestat = 0 and SchoolBlock ! 1:
+if day = 31 and month = 12 and age <= 17 and StoryLine = 1 and SchoolAtestat = 0 and SchoolBlock ! 1:
 	if hour = 14:
 		'Near the school are already well-dressed girls and boys in your class. Someone called you "<<$name>>, you did not hand over a thousand for the new year"'
 

@@ -134,8 +134,7 @@ if $ARGS[0] = 'start':
 								else
 									if venera > 0:'The doctor frowns and tells you that the test did not go well.'
 
-									if GerpesOnce = 1:
-									'You have genital herpes. The cure for this disease is very expensive but it is only active some of the time.'
+									if GerpesOnce = 1:'You have genital herpes. The cure for this disease is very expensive but it is only active some of the time.'
 
 									if Gerpes >= 3:
 										if GerpesNapr = 0:GerpesNapr = 3 & 'I''m going to put you on a course of herpes shots. You''ll need a total of 3 injections (no more than 1 a day), each injection will cost 1,000 rubles.'
@@ -387,21 +386,17 @@ if $ARGS[0] = 'start':
 	end
 
 	if katjob > 0:act 'Visit the chief doctor':gt 'poli', 'glavdoc'
+
 	if zub > 0:
 		act 'Go to the dentist':
 			cls
 			zubpay = zub * 30000
 			gs 'stat'
-			if zub = 1
+			if zub = 1:
 				'The dentist examines you and says, it will cost you <<zubpay>> rubles to replace your tooth'
-				
 			else
 				'The dentist examines you and says, it will cost you <<zubpay>> rubles to fill the gaps'
-				
 			end
-				
-			act 'Leave the clinic':gt 'street'
-			
 
 			if money >= zubpay:
 				act 'Sort out you teeth':
@@ -415,6 +410,8 @@ if $ARGS[0] = 'start':
 					act 'Leave the clinic':gt 'street'
 				end
 			end
+				
+			act 'Leave the clinic':gt 'street'
 		end
 	end
 

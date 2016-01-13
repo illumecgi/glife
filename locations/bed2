@@ -14,11 +14,12 @@ if disable_autosave = 0:
 end
 
 gs 'clothing', 'strip'
-health += 5
+
 hapri = 0
 InSleep = 1
 cloth_vid = 0
 '<center><img src="images/pics/son.jpg"></center>'
+cla
 
 if analplugIN = 1:analplugIN = 0 & 'Before going to bed you remove a butt plug.'
 if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed you remove a vibrator.'
@@ -41,16 +42,17 @@ else
 end
 
 :loopson
-clr
-cls
 minut += 1
 stime += 1
+health += 5
 
 if stime = 60:stime = 0 & son += 3
 
 gs 'stat'
 
 if hour = timer and minut = timerM:
+	$locM = 'bed'
+	$metkaM = 'fin'
 	manna -= 10
 	'Your alarm goes off.'
 
@@ -58,22 +60,22 @@ if hour = timer and minut = timerM:
 	if daystart >= 10 and daystart < 30 and StoryLine = 0:'Looking at your female body, you are still a little surprised it''s actually you.'
 
 	act 'Get out of bed and get dressed (0:15)':
-		cla
 		gs 'clothing', 'wear_last_worn'
 		InSleep = 0
 		minut += 15
-		tanga = 1
-		gt 'bed', 'fin'
+		dynamic $wakepar
 	end
 
 	act 'Get out of bed':
-		cla
 		InSleep = 0
-		gt 'bed', 'fin'
+		dynamic $wakepar
 	end
 
-	act 'Try to sleep':gt 'bed2', 'dosip'
-elseif son > 23 and dosip = 0:
+elseif son > 23:
+	$locM = 'bed'
+	$metkaM = 'fin'
+	clr
+	cls
 	manna -= 10
 	'You slept'
 
@@ -81,43 +83,17 @@ elseif son > 23 and dosip = 0:
 	if daystart >= 10 and daystart < 30 and StoryLine = 0:'Looking at your female body, you are still a little surprised it''s actually you.'
 
 	act 'Get out of bed and get dressed (0:15)':
-		cla
 		gs 'clothing', 'wear_last_worn'
 		InSleep = 0
 		minut += 15
-		tanga = 1
-		gt 'bed', 'fin'
+		dynamic $wakepar
 	end
 
 	act 'Get out of bed':
-		cla
 		InSleep = 0
-		gt 'bed', 'fin'
+		dynamic $wakepar
 	end
 
-	act 'Try to sleep':gt 'bed2', 'dosip'
-elseif son > 47 and dosip = 1:
-	manna -= 10
-	dosip = 0
-	son -= 24
-	'You slept.'
-
-	act 'Get out of bed and get dressed (0:15)':
-		cla
-		gs 'clothing', 'wear_last_worn'
-		InSleep = 0
-		minut += 15
-		tanga = 1
-		gt 'bed', 'fin'
-	end
-
-	act 'Get out of bed':
-		cla
-		InSleep = 0
-		gt 'bed', 'fin'
-	end
-
-	act 'Try to sleep':gt 'bed2', 'dosip'
 else
 	jump 'loopson'
 end

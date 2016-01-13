@@ -27,7 +27,6 @@ else
 
 		clr
 		cls
-		gs 'stat'
 		'<center><img src="images/pics/son.jpg"></center>'
 
 		if analplugIN = 1 and bedanal = 0:analplugIN = 0 & 'Before going to bed you remove your butt plug.'
@@ -39,14 +38,16 @@ else
 		gs 'clothing', 'strip'
 
 		cla
-		health += 5
 		hapri = 0
 		InSleep = 1
 		:loopson
 		minut += 1
 		stime += 1
+		health += 5
 
 		if stime = 60:stime = 0 & son += 3
+
+		gs 'stat'
 
 		if hour = timer and minut = timerM and budilnikOn = 1:
 			$locM = 'bedrpar'
@@ -77,7 +78,7 @@ else
 			exit
 		end
 
-		if son > 23:
+		if son > 24:
 			$locM = 'bedrpar'
 			notathomesleep = 0
 			'You wake up, no longer tired.'

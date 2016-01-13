@@ -20,6 +20,7 @@ end
 
 if tanwork = 1:
 	act 'Cook food (1:00)':
+		cla
 		minut += 60
 
 		if week < 6 and hour >= 6 and hour <= 9 and rand(0, 5) = 0 and vnesh > 20 and niksexday ! daystart:
@@ -27,13 +28,11 @@ if tanwork = 1:
 			niksexday = daystart
 			'Tanyas stepfather Nicholas is sitting at the table eating his breakfast.'
 
-			act 'Go about your business.':gt 'kitchen'
 
 			if niksex = 0 and tanga = 0:
 				cla
 				'You notice that he is not taking his eyes off your ass, not surprisingly seeing as you are not wearing panties.'
 
-				act 'Go about your business.':gt 'kitchen'
 
 				act 'Seduce':
 					cla

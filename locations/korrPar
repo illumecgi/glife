@@ -62,6 +62,8 @@ if palto > 0:'Hanging on the hook <<$palto>>'
 
 gs 'family'
 
+if indorf = 1:'With your parents away visiting your grandparents, the appartment seems quite and empty.'
+
 if hour >= 16 and hour <= 20 and indorf = 0:
 	if artemvbrosvid = 1 and artemhakday ! daystart and motherQW < 2 and mothervideotalk = 0 or BrotherNo = 1 and BrotherNoDay ! day:
 		cls

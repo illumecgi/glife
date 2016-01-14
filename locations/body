@@ -124,40 +124,83 @@ if dounspell = 0:
 		talia += koefbt
 	end
 
-	if titK <= 10:tits = 0
-	if titK > 10 and titK <= 15:tits = 1
-	if titK > 15 and titK <= 20:tits = 2
-	if titK > 20 and titK <= 25:tits = 3
-	if titK > 25 and titK <= 30:tits = 4
-	if titK > 30 and titK <= 35:tits = 5
-	!!!Probably CV edition
-	if titK > 35 and titK <= 40:tits = 6
-	if titK > 40 and titK <= 45:tits = 7
-	if titK > 45 and titK <= 50:tits = 8
-	if titK > 50 and titK <= 55:tits = 9
-	if titK > 55:tits = 10
+	if titK <= 10:
+		tits = 0
+		$titsize = 'A cup'
+	elseif titK <= 15:
+		tits = 1
+		$titsize = 'B cup'
+	elseif titK <= 20:
+		tits = 2
+		$titsize = 'C cup'
+	elseif titK <= 25:
+		tits = 3
+		$titsize = 'D cup'
+	elseif titK <= 30:
+		tits = 4
+		$titsize = 'E cup'
+	elseif titK <= 35:
+		tits = 5
+		$titsize = 'F cup'
+	elseif titK <= 40:
+		tits = 6
+		$titsize = 'G cup'
+	elseif titK <= 45:
+		tits = 7
+		$titsize = 'H cup'
+	elseif titK <= 50:
+		tits = 8
+		$titsize = 'I cup'
+	elseif titK <= 55:
+		tits = 9
+		$titsize = 'J cup'
+	else
+		tits = 10
+		$titsize = 'K cup'
+	end
 	!!!
 else
 	fat = 0
 	bedra = bedraDoun
 	talia = TaliaDoun
-	grudi = talia + 14 + silicone + nbsize
+	gr<<$titsize>>= talia + 14 + silicone + nbsize
 	ves = TaliaDoun
 	titK = grudi - talia
 
-	if titK <= 10:tits = 0
-	if titK > 10 and titK <= 15:tits = 1
-	if titK > 15 and titK <= 20:tits = 2
-	if titK > 20 and titK <= 25:tits = 3
-	if titK > 25 and titK <= 30:tits = 4
-	if titK > 30 and titK <= 35:tits = 5
-	!!!Probably CV edition
-	if titK > 35 and titK <= 40:tits = 6
-	if titK > 40 and titK <= 45:tits = 7
-	if titK > 45 and titK <= 50:tits = 8
-	if titK > 50 and titK <= 55:tits = 9
-	if titK > 55:tits = 10
-	!!!
+	if titK <= 10:
+		tits = 0
+		$titsize = 'A cup'
+	elseif titK <= 15:
+		tits = 1
+		$titsize = 'B cup'
+	elseif titK <= 20:
+		tits = 2
+		$titsize = 'C cup'
+	elseif titK <= 25:
+		tits = 3
+		$titsize = 'D cup'
+	elseif titK <= 30:
+		tits = 4
+		$titsize = 'E cup'
+	elseif titK <= 35:
+		tits = 5
+		$titsize = 'F cup'
+	elseif titK <= 40:
+		tits = 6
+		$titsize = 'G cup'
+	elseif titK <= 45:
+		tits = 7
+		$titsize = 'H cup'
+	elseif titK <= 50:
+		tits = 8
+		$titsize = 'I cup'
+	elseif titK <= 55:
+		tits = 9
+		$titsize = 'J cup'
+	else
+		tits = 10
+		$titsize = 'K cup'
+	end
 end
 
 !!! Maruda Hair Mod

@@ -32,7 +32,7 @@ $objdescrip = {
 
 	pl 'You are <<rost>> cm tall and weigh <<ves>> kgs.'
 	pl '<<$body>>'
-	pl '<a href="exec:dynamic $objbody"><<grudi>> - <<talia>> - <<bedra>> </a>, <a href="exec:dynamic $din_show_tits">you have size <<tits>> breasts</a>, the difference between your hips and your waist is <<bedra-talia>> cm'
+	pl '<a href="exec:dynamic $objbody"><<grudi>> - <<talia>> - <<bedra>> </a>, <a href="exec:dynamic $din_show_tits">you have <<$titsize>> breasts</a>, the difference between your hips and your waist is <<bedra-talia>> cm'
 	pl '<<$vnesh>>'
 	if avatar_hair = 1:
 		pl'У вас <<$av_hair>>.'
@@ -580,10 +580,10 @@ $din_cheat_menu_look = {
 	pl'<a href=>You look for <<vidage>> years</a>'
 	if vidage >= 0:pl'<a href="exec:dynamic $din_cheat_agel">Change Visible age</a>'
 	pl''
-	pl 'you <<tits>> breast size'
-	if tits => 0 and tits < 6:pl'<a href="exec:silicone += 5 & dynamic $din_cheat_menu_look">Enlarge breasts(silicone)</a>'
+	pl 'You have <<$titsize>> breasts'
+	if tits => 0 and tits < 10:pl'<a href="exec:silicone += 5 & dynamic $din_cheat_menu_look">Enlarge breasts(silicone)</a>'
 	if silicone => 1:pl'<a href="exec:silicone -= 5 & dynamic $din_cheat_menu_look">Shrink breasts(silicone)</a>'
-	if tits => 0 and tits < 6:pl'<a href="exec:nbsize += 5 & dynamic $din_cheat_menu_look">Enlarge breasts(natural)</a>'
+	if tits => 0 and tits < 10:pl'<a href="exec:nbsize += 5 & dynamic $din_cheat_menu_look">Enlarge breasts(natural)</a>'
 	if nbsize => 1:pl'<a href="exec:nbsize -= 5 & dynamic $din_cheat_menu_look">Shrink breasts(natural)</a>'
 	pl''
 	pl'<<$lip>>'
@@ -640,7 +640,7 @@ $din_cheat_menu_param = {
 	pl'<<bedra>> - bedra'
 	pl'<<titK>> - titK'
 	pl'<<silicone>> - silicone'
-	pl'<<grudi>> - <<talia>> - <<bedra>>, breast size <<tits>>, the difference between the hips and waist <<bedra-talia>> see'
+	pl'<<grudi>> - <<talia>> - <<bedra>>, <<$titsize>> breasts, the difference between the hips and waist <<bedra-talia>> see'
 	pl'Muscularity <<musle>> - musle, <<salo>> - salo, <<fat>> - fat'
 }
 

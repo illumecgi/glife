@@ -17,7 +17,7 @@ $din_trener_talk = {
 		horny += 10
 		gs 'stat'
 		'<center><img src="images/qwest/alter/volley/voitrensex2.jpg"></center>'
-		'Vigorously shaking his head you let Mikhail Nikolaevich to get you in coaching, closing the door, the coach turned to you and not saying a word, grabbed you and began to lift up your t-shirt, and paw your chest <<tits>> size.'
+		'Vigorously shaking his head you let Mikhail Nikolaevich to get you in coaching, closing the door, the coach turned to you and not saying a word, grabbed you and began to lift up your t-shirt, and paw your <<$titsize>> breasts.'
 		if guy < 3 and GorSlut = 0: 'You squeaked indignantly and began to alienate the coach and straightened the t-shirt jumped out of coaching. Although we can not say that the actions of the coach were so unpleasant, Yes and the main structure. But the passerby inside you are not ready for such'	
 		if (guy => 3 and guy < 7) or GorSlut > 0: 'You stand and wait until the coach will play with your Breasts. Bending to his every touch. You will not fall into a stupor from action coach.'
 		if guy => 7  or GorSlut > 1:

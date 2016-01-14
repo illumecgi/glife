@@ -128,8 +128,24 @@ $objskills = {
 	if stripdance > 0:pl 'Striptease skilllevel - <<stripdance>>'
 	if poledance > 0:pl 'Poledancing skilllevel- <<poledance>>'
 	if shoot > 0:pl 'Shooting Accuracy - <<shoot>>'
-	if kid = 1:pl 'You have a child, <<$polreb[1]>> named <<$kidname[1]>>. Born <<daykid[1]>>.<<monthkid[1]>>.<<yearkid[1]>>y. Age <<kidage[1]>>'
-	if workPTU > 1:pl 'Reputation as a teacher <<teachlevel>>'
+	if kid > 0:
+		i = 1
+		if kid = 1:
+			pl 'You have a child, a <<$polreb[1]>> named <<$kidname[1]>>. Born <<daykid[1]>>-<<monthkid[1]>>-<<yearkid[1]>>. Aged <<kidage[1]>>'
+		else
+			p 'You have children'
+			:LoopKidCounter
+			if i <= kid:
+				if i > 1: p ','
+				p ' a <<$polreb[i]>> named <<$kidname[i]>>. Born <<daykid[i]>>-<<monthkid[i]>>-<<yearkid[i]>>. Aged <<kidage[i]>>'
+				i += 1
+				jump 'LoopKidCounter'
+			end
+			pl '.'
+		end
+		nl
+	end
+ 	if workPTU > 1:pl 'Reputation as a teacher <<teachlevel>>'
 
 	if SchoolAtestat = 0 and StoryLine > 0:
 		if Suspeh >= 90:pl 'You are an A+ student.'
@@ -1370,7 +1386,22 @@ $objbloknot = {
 	if bumtolik = 5:pl'You volunteer at the Mercy Clinic working with the homeless. Working hours with 9 to 17, Saturday and Sunday.'
 	nl
 	if husband > 0:pl'You have been married for <<husbanday>> days. Your husband <<$husName>> <<$husBody>> <<$husFat>> <<$husHair>>. Member <<husDick>> Relationship <<husband>>'
-	if kid > 0:pl'You have a child: <<$kidname>>, aged <<kid>> days.'
+	if kid > 0:
+		i = 1
+		if kid = 1:
+			pl 'You have a child, named <<$kidname[1]>> aged <<kidage[1]>>'
+		else
+			pl 'You have children:'
+			:LoopKidCounter
+			if i <= kid:
+				pl '<<$kidname[i]>> aged <<kidage[i]>>'
+				i += 1
+				jump 'LoopKidCounter'
+			end
+			pl '.'
+		end
+		nl
+	end
 	nl
 	if $bfsex > 0:pl'<<$bfsex>>'
 	nl

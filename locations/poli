@@ -307,34 +307,40 @@ if $ARGS[0] = 'start':
 
 	if preg = 1 and pregtime = 280:
 		act 'Give birth':
+			cls
 			cla
 			vidage += 1
-			preg = 2
+			preg = 0
 			pregtime = 0
 			pregtalk = 0
-			numkid += 1
 			kid += 1
-			daykid[numkid] = day
-			monthkid[numkid] = month
-			yearkid[numkid] = year
-			$father[numkid] = $father
-			haprikid[numkid] = rand(0, 3)
-			glacol[numkid] = rand(0, 3)
+			daykid[kid] = day
+			monthkid[kid] = month
+			yearkid[kid] = year
+			$father[kid] = $father
+			haprikid[kid] = rand(0, 3)
+			glacol[kid] = rand(0, 3)
 
 			$ImageNeededPlacholder
 			! WD: IMAGE NEEDED ~ '<center><img src="images/etogame/abort.jpg"></center>'
 			'You are lain on the bed and you feet put in stirups. Your contractions get closer and closer, and sometime (and a lot of swearing) later you finally give birth.'
-			polkid[numkid] = rand(0, 1)
 
-			if polkid[numkid] = 0:$polreb[numkid] = 'girl' & '"Congratulations it''s a girl."'
-			if polkid[numkid] = 1:$polreb[numkid] = 'boy' & '"Congratulations it''s a boy."'
+			if rand(0, 1) = 0:
+				$polreb[kid] = 'girl' & '"Congratulations it''s a girl."'
+			else
+				$polreb[kid] = 'boy' & '"Congratulations it''s a boy."'
+			end
 
 			act 'Name your child':
-				$kidname[numkid] = input ("Enter your babys name")
+				cla
+				$kidname[kid] = input ("Enter your babys name")
 
-				if $kidname[numkid] <= 0:
-					if polkid[numkid] = 0:$kidname = 'Masha'
-					if polkid[numkid] = 1:$kidname = 'Misha'
+				if $kidname[kid] <= 0:
+					if $polreb[kid] = 'girl':
+						$kidname = 'Masha'
+					else
+						$kidname = 'Misha'
+					end
 				end
 
 				act 'Leave':gt 'poli', 'start'

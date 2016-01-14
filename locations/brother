@@ -747,7 +747,7 @@ if $ARGS[0] = 'brother_voyeur_ev2':
 	picrand = RAND(1,7)
 	brother += 5
 	'<center><img src="images/qwest/alter/ev2/brother/c (<<picrand>>).jpg"></center>'
-	'You turn to face the door, giving Kolka a better view, and erotically squeeze you size <<tits>> tits. Your fingers pinch your nipples, and you take the shower hose in your hand and pour water over your chest, while gazing at your brother. You close your eyes for a moment and immersed in fantasy, your heart flutters and you elicit a light moan.'
+	'You turn to face the door, giving Kolka a better view, and erotically squeeze you <<$titsize>> tits. Your fingers pinch your nipples, and you take the shower hose in your hand and pour water over your chest, while gazing at your brother. You close your eyes for a moment and immersed in fantasy, your heart flutters and you elicit a light moan.'
 	act 'Wash':gt 'brother','brother_voyeur_end'
 	if horny >= 90:
 		act 'Direct the water at your pussy':gt 'brother','brother_voyeur_ev3'

@@ -607,7 +607,7 @@ if $ARGS[0] = 'party_boys':
 	if $metkaM = 'party_kuh' or $metkaM = 'party_gost':
 		'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_boys_2.jpg"></center>'
 		''
-	else 
+	else
 		'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_boys.jpg"></center>'
 		''
 	end

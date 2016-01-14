@@ -326,7 +326,7 @@ if GorSlut = 0:
 						bmTITS[Tboynum] += 1
 						gs 'stat'
 						'<center><img src="images/qwest/alter/Ev/tits.jpg"></center>'
-						'<<$bname>> pulls your breasts <<tits>> the size of the outside and begins to knead your breasts and kiss them. Guy takes your hand and puts it on the groin, you feel that he''s got a hard cock.'
+						'<<$bname>> pulls your <<$titsize>> breasts the size of the outside and begins to knead your breasts and kiss them. Guy takes your hand and puts it on the groin, you feel that he''s got a hard cock.'
 
 						if horny <= 75:act 'Leave':gt 'gdkin'
 
@@ -508,7 +508,7 @@ $din_gorodok_boy_pristal = {
 			bmTITS[Tboynum] += 1
 			gs 'stat'
 			'<center><img src="images/qwest/alter/Ev/tits.jpg"></center>'
-			'<<$bname>> pulls your breasts <<tits>> size outside and begins to knead your breasts and kiss them. Guy takes your hand and puts it on the groin, you feel that he''s got a hard cock.'
+			'<<$bname>> pulls your <<$titsize>> breasts outside and begins to knead your breasts and kiss them. Guy takes your hand and puts it on the groin, you feel that he''s got a hard cock.'
 
 			if horny <= 75:act 'Leave':gt 'gdkin'
 

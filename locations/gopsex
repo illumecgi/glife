@@ -297,33 +297,50 @@ $accview_ggsex = {
 	if rnd_namemom_text = 5:$rnd_namemom_text = 'Mamula'
 	if rnd_namemom_text = 6:$rnd_namemom_text = 'Maman'
 
-	rnd_namesis_text = rand(1,4)
-	if rnd_namesis_text = 1:$rnd_namesis_text = 'Sister'
-	if rnd_namesis_text = 2:$rnd_namesis_text = 'Sis'
-	if rnd_namesis_text = 3:$rnd_namesis_text = 'sister'
-	if rnd_namesis_text = 4:$rnd_namesis_text = 'sis'
+	if rand(0,1) = 1:
+		$rnd_namesis_text = 'Sister'
+	else
+		$rnd_namesis_text = 'Sis'
+	end
 
 	!SG randomization if caught having sex in the stairwell
 	!----
 	!Mother:
 	rnd_mom_txt1 = rand(1,2)
-	if rnd_mom_txt1 = 1:$rnd_mom_txt1 = '- Dc` <<$rnd_namemom_text>>, I go already.'
-	if rnd_mom_txt1 = 2:$rnd_mom_txt1 = '- <<$rnd_namemom_text>>, another will come and vyebet.'
+	if rand(0,1) = 0:
+		$rnd_mom_txt1 = '- Dc` <<$rnd_namemom_text>>, I go already.'
+	else
+		$rnd_mom_txt1 = '- <<$rnd_namemom_text>>, another will come and vyebet.'
+	end
 	!---->
 	rnd_caught_mom = rand(1,6)
-	if rnd_caught_mom = 1 and GorSlut < 6:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$rnd_telogg_text>>'
-	if rnd_caught_mom = 1 and GorSlut >= 6:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$rnd_telogg2_text>>'
-	if rnd_caught_mom = 2 and momslut >= 1:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Ended serve children, Do not forget <<$rnd_domdela_text>>'
-	if rnd_caught_mom = 2 and momslut < 1:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Again you chudish <<$gop_name_gg>>, I told you not asked ebattsa on every corner, entirely at the hands strayed slut!'
-	if rnd_caught_mom = 3 and GorSlut < 6:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$gop_name_gg>>, Well, you found a place, to push the legs: unsanitary solid.
-	- "And I blame, they are impatient? Now doebut, I shall come home, pomoyus", They say you`re squatting, wiping his razÑ‘bannye holes napkin'
-	if rnd_caught_mom = 3 and GorSlut >= 6:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$gop_name_gg>>, Well, you found a place, where customers take.'
-	if rnd_caught_mom = 4:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$gop_name_gg>>, instead of, to fuck around the city, it would be better to do was learned.
-	- "Yes I did!"'
-	if rnd_caught_mom = 5 and vagina >= 30:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Docha, You have a little fucked by a rest - you have pussy like a bucket, not even close.'
-	if rnd_caught_mom = 5 and vagina < 30:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Docha, You have a little bit of a rest fucked.'
-	if rnd_caught_mom = 6:$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: -Dochka, how do you ... You will soon razebli home?
-	<<$rnd_mom_txt1>>'
+	if GorSlut >= 6:
+		if rand(0,1) = 0:
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$rnd_telogg2_text>>'
+		else
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$gop_name_gg>>, Well, you found a place, where customers take.'	
+	elseif momslut >= 1:
+		$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Ended serve children, Do not forget <<$rnd_domdela_text>>'
+	elseif vagina >= 30:
+		$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Docha, You have a little fucked by a rest - you have pussy like a bucket, not even close.'
+	else
+		if rnd_caught_mom = 1:
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$rnd_telogg_text>>'
+		elseif rnd_caught_mom = 2:
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Again you chudish <<$gop_name_gg>>, I told you not asked ebattsa on every corner, entirely at the hands strayed slut!'
+		elseif rnd_caught_mom = 3:
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$gop_name_gg>>, Well, you found a place, to push the legs: unsanitary solid.
+			- "And I blame, they are impatient? Now doebut, I shall come home, pomoyus", They say you`re squatting, wiping his razÑ‘bannye holes napkin'
+		elseif rnd_caught_mom = 4:
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - <<$gop_name_gg>>, instead of, to fuck around the city, it would be better to do was learned.
+			- "Yes I did!"'
+		elseif rnd_caught_mom = 5:
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: - Docha, You have a little bit of a rest fucked.'
+		elseif rnd_caught_mom = 6:
+			$rnd_caught_mom = '<<$rnd_rodnya_text>> your <<$rnd_namemom_text>>, <<$rnd_viewgg_text>> <<$rnd_talkgg2_text>> <<$rnd_talkgg_text>>: -Dochka, how do you ... You will soon razebli home?
+			<<$rnd_mom_txt1>>'
+		end
+	end
 
 	!------
 	!Sister:

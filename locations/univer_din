@@ -14,7 +14,7 @@ if $ARGS[0] = 'b_vika_present_start':
 	'You carefully, tsokaya heels go to the back of the room, clutching hand Vikin, so as not to fall. In the room can hear what-movement.'
 	'- Vic, If this is a surprise-party, I`m not really dressed for it.'
 	'- Here`s, Stay here. - Vick let your hand, unfolds you face the door and walks.'
-	'You hear footsteps. Suddenly, who-the tight squeezes your ass, It hugs the waist and compresses your breasts <<tits>> size at the same time.'
+	'You hear footsteps. Suddenly, who-the tight squeezes your ass, It hugs the waist and compresses your <<$titsize>> breasts at the same time.'
 	act 'Rip off the bandage':gt'univer_din','b_vika_present_1'
 end
 

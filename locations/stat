@@ -1458,11 +1458,19 @@ if frost > 0 and frost <= 5:pl '<b><font>You are a little chilly.</font></b>'
 if frost > 5 and frost < 11:pl '<b><font color="red">Are you cold.</font></b>'
 if frost >= 11:pl '<b><font color="red">You are very cold.</font></b>'
 
-if sick = 1:pl '<b><font color="red">This is not good, a tickle in the throat and a little runny nose.</font></b>'
-if sick > 1 and sick < 24:pl '<b><font color="red">You have chills. You nose is running and throat is raw, you cough and sneeze - it looks like you got a cold.</font></b>'
-if sick >= 24 and sick < 48:pl '<b><font color="red">You have a fever. Your nose is clogged, it hurts to swallow - throat aches. You continually cough and sneeze - it looks like your cold is pretty bad.</font></b>'
-if sick >= 48 and sick < 72:pl '<b><font color="red">You have a high fever. You have a stuffy nose, sore head and throat, your coughing badly - it looks like you got a strong cold. Maybe it''s the flu.</font></b>'
-if sick >= 72:pl '<b><font color="red">You toss in the heat. You have a stuffy nose, headache and ache to the bone. Your throat is inflamed and very sore. You think you''re going to cough up a lung - it looks like you are seriously ill, or maybe it''s just a sore throat.</font></b>'
+if sick ! 0:
+	if sick = 1:
+		pl '<b><font color="red">This is not good, a tickle in the throat and a little runny nose.</font></b>'
+	elseif sick < 24:
+		pl '<b><font color="red">You have chills. You nose is running and throat is raw, you cough and sneeze - it looks like you got a cold.</font></b>'
+	elseif sick < 48:
+		pl '<b><font color="red">You have a fever. Your nose is clogged, it hurts to swallow - throat aches. You continually cough and sneeze - it looks like your cold is pretty bad.</font></b>'
+	elseif sick < 72:
+		pl '<b><font color="red">You have a high fever. You have a stuffy nose, sore head and throat, your coughing badly - it looks like you got a strong cold. Maybe it''s the flu.</font></b>'
+	else
+		pl '<b><font color="red">You toss in the heat. You have a stuffy nose, headache and ache to the bone. Your throat is inflamed and very sore. You think you''re going to cough up a lung - it looks like you are seriously ill, or maybe it''s just a sore throat.</font></b>'
+	end
+end
 
 if $mudnerd ! '':pl '<<$mudnerd>>'
 
@@ -1477,10 +1485,7 @@ if alko > 0:
 	if alko >= 3 and alko < 6:pl '<b><font color="red">You''re drunk.</font></b>'
 	if alko >= 6:pl '<b><font color="red">You''re wasted.</font></b>'
 end
-if day = 29 and month = 12 and (year - year_start) < 2 and StoryLine = 1:
-	if hour >= 5 and hour <= 14:pl 'At 14 c''clock a New Year''s party will be held.'
-end
-
+if day = 31 and month = 12 and (year - year_start) < 2 and hour >= 5 and hour <= 14 and StoryLine = 1:pl 'At 14 o''clock a New Year''s party will be held.'
 
 if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and (sisboyQW = 3 or sisboyQW = 5 or sisboyQW = 7 or (sisboyQW = 9 and sisboytrioQW ! 1)):pl'' & pl'You promised my sister not to go into your room in  18 hours'
 if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and sisboytrioQW = 1:pl'' & pl'You promised my sister to come into your room in  18 hours'

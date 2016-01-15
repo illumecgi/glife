@@ -400,7 +400,7 @@ if vidage >= 45:vidagebonus = 50
 if age < 18:leghair = -5
 
 !!CV edition: tits and lobkoef (pubic hair) removed from calc, replaced with flat bonus of 9 (6 tits, 3 hair)
-!curlykoef = perm / lip = lip size / tanKoef = suntan / skin = skin condition / mop = makeup / resnic = eyelashes / glaraz = eye brows / bodykoef = hips:waist ratio / legkoef = shaved legs / odevnesh = clothes
+!curlykoef = perm / lip = lip size / tanKoef = suntan / skin = skin condition / mop = makeup / resnic = eyelashes / glaraz = eyes / bodykoef = hips:waist ratio / legkoef = shaved legs / odevnesh = clothes
 !hapri Hair brushed / bonusZ = coat (if cold) / lipbalmKoef = lip balm / fbreath = freash breath / sweatKoef = sweat / vidagebonus = youth / zub = missing teeth / tatKeof = tatoos / glassvnesh = glasses
 vnesh = (9 + curlykoef + lip + tanKoef + skin + mop + resnic + glaraz + bodykoef + legkoef + odevnesh + hapri + bonusZ + lipbalmKoef + fbreath) - sweatKoef + vidagebonus - (zub * 2) + tatKeof - glassvnesh
 !!!

@@ -156,6 +156,16 @@ if horny>50 and hadsexwithfather=1:
 					horand = RAND(1,100)
 					if horand > horny:horny = horny + 10 & 'You were not satisfied'
 					if horand <= horny:horny = 0 & orgasm += 1 & 'You feel a pleasant warmth spread from your pussy, covering your entire body as you feel yourself nearing orgasm. Suddenly, your body begins to convulse and your legs lose their strength as an intense feeling of pleasure fills you. You fall down on your knees, moaning in ecstacy as your orgasm overtakes you.'
+					if tabletki <= 0:
+						if prezik > 0:
+							prezik -= 1
+						elseif mesec <= 0:
+							gs 'preg'
+							manna -= 15
+							willpower -= 15
+							'Hell, you could get pregnant, you think in horror.'
+						end
+					end
 					act '<B>Move away</B>':gt 'gargazel'
 				end
 			end

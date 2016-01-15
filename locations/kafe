@@ -229,6 +229,7 @@ if $ARGS[0] = 'workPred':
 	cla
 	clr
 	*clr
+	gs 'kafedinamic'
 	gs 'kit_din'
 	gs 'stat'
 	'<center><b><font color="maroon">Cafe</font></b></center>'

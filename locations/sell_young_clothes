@@ -20,8 +20,8 @@ $yshopclo = {
 		act 'Buy it (10,000 rubles)':
 			money -= 10000
 			odekis[i] = 1
-			skirtH[i] = 100
-			skirtB[i] = bedra
+			odekisH[i] = 100
+			odekisB[i] = bedra
 			view
 			gt 'sell_young_clothes'
 		end

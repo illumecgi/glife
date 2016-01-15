@@ -3,6 +3,7 @@ $metkaM = $ARGS[0]
 $locM = $CURLOC
 $metka = $ARGS[0]
 $loc = $CURLOC
+
 gs 'stat'
 cla
 if $clothingworntype ! 'nude':
@@ -50,7 +51,11 @@ else
 		gs 'stat'
 
 		if hour = timer and minut = timerM and budilnikOn = 1:
-			$locM = 'bedrpar'
+			if gad = 1:
+				$locM = 'Gadhouse'
+			else
+				$locM = 'bedrpar'
+			end
 			notathomesleep = 0
 			manna -= 10
 			'Alarm goes off.'
@@ -79,7 +84,11 @@ else
 		end
 
 		if son > 24:
-			$locM = 'bedrpar'
+			if gad = 1:
+				$locM = 'Gadhouse'
+			else
+				$locM = 'bedrpar'
+			end
 			notathomesleep = 0
 			'You wake up, no longer tired.'
 			
@@ -114,7 +123,11 @@ act 'Options':dynamic $sopts
 
 act 'Get out of bed':
 	cla
-	gt 'bedrpar'
+	if gad = 1:
+		gt 'Gadhouse'
+	else
+		gt 'bedrpar'
+	end
 end
 
 --- bedPar ---------------------------------

@@ -159,6 +159,7 @@ if horny>50 and hadsexwithfather=1:
 					if tabletki <= 0:
 						if prezik > 0:
 							prezik -= 1
+							cumpussy -= 1
 						elseif mesec <= 0:
 							gs 'preg'
 							manna -= 15

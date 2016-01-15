@@ -33,7 +33,7 @@ end
 if $loc = 'gkafe':
 	cla
 	'Mom saw you and frowned: "Why come? I said many times, Do not go to my job. There`s nothing to do young girls!"'
-	act '<B>Move away</B>':gt $loc, $metka
+	act '<B>Move away</B>':gt $locM, $metkaM
 exit
 end
 
@@ -53,7 +53,7 @@ if $clothingworntype ! 'nude' and pregTalkFamily = 0 and pregTalkMom = 0 and pre
 	'Mother is looking at your clothes clearly acting under the belly-"<<$name>>, I flew all-yet, Mount thou my. Look, do not try to do an abortion!".'
 	pregTalkFamily = 1
 	pregTalkMom = 1
-	act '<B>Move away</B>':gt $loc, $metka
+	act '<B>Move away</B>':gt $locM, $metkaM
 	exit
 end
 
@@ -62,60 +62,54 @@ if $clothingworntype = 'nude' and pregTalkFamily = 0 and pregTalkMom = 0 and pre
 	'Mother is looking at your belly-"<<$name>>, I flew all-yet, Mount thou my. Look, do not try to do an abortion!".'
 	pregTalkFamily = 1
 	pregTalkMom = 1
-	act '<B>Move away</B>':gt $loc, $metka
+	act '<B>Move away</B>':gt $locM, $metkaM
 	exit
 end
 
 $mother_clothes[1] = {
-if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
-	if momslut < 2:
-		'The mother looks at you eyes wide:'
-		'- "<<$name>>, Here is the number of, Are not you ashamed to go in such a? Well dressed jogging!"'
-	else
-		'His mother shook her head sadly:'
-		'- "You would have your ass-is closed, and then another , and everyone will know the house, you whore"'
+	if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
+		if momslut < 2:
+			'The mother looks at you eyes wide:'
+			'- "<<$name>>, Here is the number of, Are not you ashamed to go in such a? Well dressed jogging!"'
+		else
+			'His mother shook her head sadly:'
+			'- "You would have your ass-is closed, and then another , and everyone will know the house, you whore"'
+		end
+	elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
+		if momslut < 2:
+			'The mother looked at you glare:'
+			'- "Even at home, his bare ass shine, His infant whore! I went I dressed quickly and do not get caught in my eyes!"'
+		else
+			'His mother shook her head sadly:'
+			'- "You would have your ass-is closed, and then another , and everyone will know the house, you whore"'
+		end
+	elseif motherQW >= 2:
+		'Mother looked sternly at you:'
+		'- "<<$name>>, I certainly understand it all, but could you at least not at home dress, like you used to have their fancy man pacing? You have the floor asses out-towels for video!"'
 	end
-	act '<B>Move away</B>':gt $loc, $metka
-elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
-	if momslut < 2:
-		'The mother looked at you glare:'
-		'- "Even at home, his bare ass shine, His infant whore! I went I dressed quickly and do not get caught in my eyes!"'
-	else
-		'His mother shook her head sadly:'
-		'- "You would have your ass-is closed, and then another , and everyone will know the house, you whore"'
-	end
-	act '<B>Move away</B>':gt $loc, $metka
-elseif motherQW >= 2:
-	'Mother looked sternly at you:'
-	'- "<<$name>>, I certainly understand it all, but could you at least not at home dress, like you used to have their fancy man pacing? You have the floor asses out-towels for video!"'
-	act '<B>Move away</B>':gt'vanrPar'
-end
 }
 
 $mother_clothes[2] = {
-if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
-	if momslut < 2:
-		'The mother looks at you eyes wide:'
-		'- "<<$name>>, Here is the number of, Are not you ashamed to go naked at home? Well dressed jogging!"'
-	else
-		'His mother shook her head sadly:'
-		'- "You`d at least dressed home, and then another , and all the family will know, you whore"'
+	if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
+		if momslut < 2:
+			'Your mother looks at you, her eyes wide.'
+			'"<<$name>>, you''re not a kid anymore, you don''t walk around my home naked. Now go and get dressed!"'
+		else
+			'Your mother shakes her head sadly.'
+			'"You could atleast dress at home, do you want all the family to know that you''re a whore?"'
+		end
+	elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
+		if momslut < 2:
+			'Your mother glares at you.'
+			'- "Even his home by a pussy all over the world, His infant whore! I went I dressed quickly and do not get caught in my eyes!"'
+		else
+			'Your mother shakes her head sadly.'
+			'"You could atleast dress at home, do you want all the family to know that you''re a whore?"'
+		end
+	elseif motherQW >= 2:
+		'Your mother looks at you sternly.'
+		'"<<$name>>, I certainly understand, but could you at least dress at home? If you want to impress some fancy man, do it at his place!"'
 	end
-	act '<B>Move away</B>':gt $loc, $metka
-elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
-	if momslut < 2:
-		'The mother looked at you glare:'
-		'- "Even his home by a pussy all over the world, His infant whore! I went I dressed quickly and do not get caught in my eyes!"'
-	else
-		'His mother shook her head sadly:'
-		'- "You`d at least dressed home, and then another , and all the family will know, you whore"'
-	end
-	act '<B>Move away</B>':gt $loc, $metka
-elseif motherQW >= 2:
-	'Mother looked sternly at you:'
-	'- "<<$name>>, I certainly understand it all, but could you at least at home to dress? In his fancy man in this form will pace!"'
-	act '<B>Move away</B>':gt'vanrPar'
-end
 }
 
 if $clothingworntype = 'nude' and towel = 1 and tanga = 0:
@@ -135,19 +129,19 @@ motherpirsadaytalk=daystart
 	if pirseerand>=75:
 	'Mother looks you in the mouth: "<<$name>>, and what have you got there in the language shines?"'
 		act'Nothing':
-		cla
-		'You shake my head: "Nothing." and then turn away ,that the mother had not noticed tongue piercing.'
-		act '<B>Move away</B>':gt $loc, $metka
+			cla
+			'You shake my head: "Nothing." and then turn away ,that the mother had not noticed tongue piercing.'
+			act '<B>Move away</B>':gt $locM, $metkaM
 		end
 		
 		act'Show pierced tongue':
-		cls
-		pirsAmother=1
-		gs'stat'
-		'<center><img src="images/picb/pirsA.jpg" ></center>'
-		'You open your mouth and draw out the tongue showing the mother tongue piercing.'
-		'Mother shakes her head "<<$name>>, tongue piercing made lewd women, serving men mouth."'
-		act '<B>Move away</B>':gt $loc, $metka
+			cls
+			pirsAmother=1
+			gs'stat'
+			'<center><img src="images/picb/pirsA.jpg" ></center>'
+			'You open your mouth and draw out the tongue showing the mother tongue piercing.'
+			'Mother shakes her head "<<$name>>, tongue piercing made lewd women, serving men mouth."'
+			act '<B>Move away</B>':gt $locM, $metkaM
 		end
 	exit
 	end
@@ -158,12 +152,12 @@ if pirsB = 1 and pirsBmother=0 and motherpirsbdaytalk!daystart:
 motherpirsadbytalk=daystart
 'Mother looks at your lips that appeared piercing "And this is why?"'
 	act'I just liked':
-	cls
-	pirsBmother=1
-	gs'stat'
-	'<center><img src="images/picb/pirsB.jpg" ></center>'
-	'You shrug your shoulders and say,, just you like, So you decided to make a lip piercing.'
-	act '<B>Move away</B>':gt $loc, $metka
+		cls
+		pirsBmother=1
+		gs'stat'
+		'<center><img src="images/picb/pirsB.jpg" ></center>'
+		'You shrug your shoulders and say,, just you like, So you decided to make a lip piercing.'
+		act '<B>Move away</B>':gt $locM, $metkaM
 	end
 exit
 end
@@ -193,7 +187,7 @@ if mother > 65 and mesec > 0 and preg = 0 and tampon = 0:
 		mother -= 15
 		minut += 3
 		cla 
-		act '<B>Move away</B>':gt $loc, $metka
+		act '<B>Move away</B>':gt $locM, $metkaM
 		exit
 	end
 end
@@ -211,7 +205,7 @@ act 'Chat':
 	if mother>=40 and mother<60:'You have a normal relationship with his mother.'
 	if mother>=60 and mother<80:'You have a good relationship with his mother.'
 	if mother>=80:'You have a great relationship with my mother.'
-	act '<B>Move away</B>':gt $curloc
+	act '<B>Move away</B>':gt $locM, $metkaM
 	if mother<20:
 	dynamic $d_mother[1]
 	exit
@@ -247,7 +241,7 @@ if hour > 5:
 			'<center><img src="images/qwest/alter/mother.jpg"></center>'
 			'You said to your mother, you''ve seen her in the back room of the cafe with her boss. Your mother got noticeably pale and sat down on a stool. "And what did you see?" You answered, you saw as she sucked her boss, and then he fucked her doggy style. Your mother lowered her eyes "Well yes, I sleep with Slava. But I want to warn you, don''t try to blackmail me." The mother looked into your eyes "All you can do, is to destroy our family."'
 
-			act 'Leave':gt $loc, $metka
+			act 'Leave':gt $locM, $metkaM
 		end
 	end
 
@@ -262,7 +256,7 @@ if hour > 5:
 			'<center><img src="images/qwest/alter/mother.jpg"></center>'
 			'You told your mother  you are pregnant. Your mother, shocked, sat on a stool. She said sadly "Well. I was afraid of this. Now do not try to have an abortion, if you do, it will be difficult to have children in the future. You''ll have to have the child."'
 
-			act 'Leave':gt $loc, $metka
+			act 'Leave':gt $locM, $metkaM
 		end
 	end
 
@@ -288,14 +282,14 @@ if hour > 5:
 							money += 150
 							'Frowning mother gave you 150 rubles, "When you do better in school, I will give more. Meanwhile, it''s all that you deserve!"'
 
-							act 'Move away':gt $loc, $metka
+							act 'Move away':gt $locM, $metkaM
 
 							exit
 						else
 							money += 300
 							'Your mother smiled and gave you 300 rubles, "Okay, here is your money."'
 
-							act 'Move away':gt $loc, $metka
+							act 'Move away':gt $locM, $metkaM
 
 							exit
 						end
@@ -315,14 +309,14 @@ if hour > 5:
 							money += 100
 							'Frowning mother gave you $ 100, "When you are a better student, I will give more. Meanwhile, it''s all that you deserve!"'
 
-							act 'Move away':gt $loc, $metka
+							act 'Move away':gt $locM, $metkaM
 
 							exit
 						else
 							money += 250
 							'The mother smiled and gave you 250 rubles, "Okay, have some money."'
 
-							act 'Move away':gt $loc, $metka
+							act 'Move away':gt $locM, $metkaM
 
 							exit
 						end
@@ -342,14 +336,14 @@ if hour > 5:
 							money += 50
 							'Frowning mother gave you 50 rubles, "Do better in school and I will give more. Meanwhile, it''s all that you deserve!"'
 
-							act 'Move away':gt $loc, $metka
+							act 'Move away':gt $locM, $metkaM
 
 							exit
 						else
 							money += 200
 							'Your mother smiled and gave you 200 rubles, "Okay, take some money."'
 
-							act 'Move away':gt $loc, $metka
+							act 'Move away':gt $locM, $metkaM
 
 							exit
 						end
@@ -366,7 +360,7 @@ if hour > 5:
 			'You''re old enough, earn your own money.'
 		end
 
-		act 'Move away':gt $loc, $metka
+		act 'Move away':gt $locM, $metkaM
 	end
 
 	act 'Ask about this father':
@@ -382,7 +376,7 @@ if hour > 5:
 			'You asked your mother about your real father. She pulled a face and unhappily said. "I have no idea where he is and what he does. We were at school together. We had your sister, Anka. Our parents made us marry. Michael, your father, and you made me thumped. We divorced and I married Vovk. Vova already had Kolka. But he brought you and Anya up as his own daughters. He looked after you, and bathed you, and took you for walks. And told you tales at night. "'
 		end
 
-		act 'Move away':gt $loc, $metka
+		act 'Move away':gt $locM, $metkaM
 	end
 
 	act 'Ask for new clothes':
@@ -394,7 +388,7 @@ if hour > 5:
 		'You asked for new clothes.'
 		if gorslut = 6:
 			'Mother outraged: "<<$name>>, you have a lot of customers and you`re still asking me clothes? It`s me you should ask. Buy myself."'
-			act '<B>Move away</B>':gt $loc, $metka
+			act '<B>Move away</B>':gt $locM, $metkaM
 			exit
 		end
 
@@ -428,7 +422,7 @@ if hour > 5:
 
 							'Mom bought you clothes.'
 
-							act 'Leave':gt $loc, $metka
+							act 'Leave':gt $locM, $metkaM
 						end
 					end
 
@@ -443,7 +437,7 @@ if hour > 5:
 			'Mom shook her head, "You''re an adult, you should earn your own money."'
 		end
 
-		act 'Move away':gt $loc, $metka
+		act 'Move away':gt $locM, $metkaM
 	end
 end
 
@@ -479,7 +473,7 @@ if $loc = 'kuhrPar':
 			MomPom = 1
 		end
 
-		act 'Move away':gt $loc, $metka
+		act 'Move away':gt $locM, $metkaM
 	end
 end
 
@@ -504,7 +498,7 @@ if SchoolAtestat = 0:
 				'The gynecologist wrote that you are a virgin.'
 			end
 
-			act 'Leave':gt $curloc
+			act 'Leave':gt $locM, $metkaM
 		end
 
 		exit
@@ -536,7 +530,7 @@ if SchoolAtestat = 0:
 			'"And why do you bring that to me? You can even make photocopies and hand them out at school. I doubt it will change your reputation" -  your mother said coldly.'
 		end
 
-		act 'Move away':gt $loc, $metka
+		act 'Move away':gt $locM, $metkaM
 
 		exit
 
@@ -557,13 +551,13 @@ if motherQW = 1 and mother >= 20 and $loc = 'kuhrPar':
 			minut += 30
 			'You tried to talk with your mother and make up. Whether you are too aggressive, or she is in a bad mood, but your attempt for "reconciliation" becomes yet another scandal.'
 
-			act 'Move away':gt $loc, $metka
+			act 'Move away':gt $locM, $metkaM
 		elseif mqwtRand > 2 and mqwtRand <= 8:
 			mother += rand(0, 1)
 			minut += 30
 			'You tried to talk with your mother and make up. Despite that, the whole half-hour conversation consists mainly of a fairly aggressive monologue from your mother about morality, diseases and about what awaits you in the future, if you do not change your ways. Still, there is some improvement in your relationship.'
 
-			act 'Move away':gt $loc, $metka
+			act 'Move away':gt $locM, $metkaM
 		elseif mqwtRand > 8:
 			gt'motherQW','motherQW_2'
 		end
@@ -590,7 +584,7 @@ if (cumlip > 1 or cumface > 0 or cumfrot > 0) and whoremday ! daystart:
 			'Mother shook her head sadly "When you do not even wipe the sperm off you, then the whole town will know you are a  whore."'
 		end
 
-		act 'Move away':gt $loc, $metka
+		act 'Move away':gt $locM, $metkaM
 	elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
 		monther -= 20
 
@@ -603,7 +597,7 @@ if (cumlip > 1 or cumface > 0 or cumfrot > 0) and whoremday ! daystart:
 			'Mother shook her head sadly "You do not even wipe the sperm off you. Must the whole town must know, you whore?"'
 		end
 
-		act 'Move away':gt $loc, $metka
+		act 'Move away':gt $locM, $metkaM
 	elseif motherQW >= 2:
 		monther -= 10
 
@@ -627,6 +621,7 @@ elseif week = 6 and dostupindorf = 1:
 		act 'Go to the country':hour = 12 & minut = 0 & indorf = 1 & gt 'famdorfride'
 	end
 end
+
 
 --- mother ---------------------------------
 

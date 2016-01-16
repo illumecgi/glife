@@ -157,6 +157,7 @@ $vanna_sexev1_sonya = {
 }
 !Bathtub, Sonia Event 2:
 $vanna_sexev2_sonya = {
+	gs'gopsex'
 	cls
 	minut += 5
 	sexev_sonya_day = daystart
@@ -244,7 +245,7 @@ $vanna_ev2_sonya = {
 	cls
 	minut += 2
 	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/m.jpg"></center>'
+	'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/t.jpg"></center>'
 	'You went to the bathroom and saw Sonya, which sits on the toilet.'
 	'You do not give her troubled, apologizing go.'
 	act 'Escape': gt'shulgahall'

@@ -29,7 +29,7 @@ $grandpa = {
 
 '<center><H4>Cottage</H4></center>'
 '<center><img src="images/qwest/gadukino/izba.jpg"></center>'
-'Simple village hut. In a small room is <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cupboard</a> and <a href="exec:gad = 1 & gt ''bedPar''">bed</a> where you can sleep. In a large room is <a href="exec:gt ''tvPar''">tv_set</a>. TV stands next to an ancient <a href="exec:gt ''mirror'', ''start''">trellis</a>'
+'Simple village hut. In a small room is <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cupboard</a> and <a href="exec:gad = 1 & gt ''bed2''">bed</a> where you can sleep. In a large room is <a href="exec:gt ''tvPar''">tv_set</a>. TV stands next to an ancient <a href="exec:gt ''mirror'', ''start''">trellis</a>'
 if hour >= 6 and hour < 22:
 	'Sitting on the bed your  <a href="exec: dynamic $grandma ">grandma</a>.'
 	'The room, leaning on a cane, slowly walk your  <a href="exec: dynamic $grandpa ">grandpa</a>.'

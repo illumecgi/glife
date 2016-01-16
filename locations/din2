@@ -232,9 +232,9 @@ $snkayf1 = {
 
 $budilnikOn = {
 	if budilnikOn = 0:
-		'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes and currently turned <a href="exec: budilnikOn = 1 & GT $loc,$metka">off</a>.'
+		'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes and currently turned <a href="exec: budilnikOn = 1 & GT ''bed2''">off</a>.'
 	else
-		'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes and currently turned <a href="exec: budilnikOn = 0 & GT $loc,$metka">on</a>.'
+		'You lie on the bed. Alarm set for <<timer>> hours <<timerM>> minutes and currently turned <a href="exec: budilnikOn = 0 & GT ''bed2''">on</a>.'
 	end
 }
 
@@ -263,7 +263,7 @@ $sopts = {
 				act 'If worn, you will wear your analplug through the night, click to always remove it':bedanal = 0 & dynamic $sopts
 			end
 		end
-		act 'Return':gt $locM, $metkaM
+		act 'Return':gt 'bed2'
 }
 
 --- din2 ---------------------------------

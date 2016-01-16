@@ -1,5 +1,5 @@
 # Club2
-if $ARGS[0] = 'tualet1':
+if $ARGS[0] = 'toilet1':
 	cla
 	*clr
 	gs 'stat'

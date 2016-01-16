@@ -82,14 +82,20 @@ if $ARGS[0] = 'toi':
 		'You slip unnoticed into the mens toilet room.'
 
 		act 'Go into a free booth':
-			randbj = rand(1, 100)
 
-			if TQuest = 0 and horny < 50:gt 'club', 'tou'
-			if TQuest = 0 and horny >= 50:gt 'Club2', 'toilet'
-			if TQuest = 1:gt 'Club2', 'toilet1'
-			if TQuest = 2:gt 'Club2', 'toilet2'
-			if TQuest >= 3 and randbj < 60:gt 'club', 'tou'
-			if TQuest >= 3 and randbj >= 60:gt 'Club2', 'toilet1'
+			if TQuest = 0 and horny < 50:
+				gt 'club', 'tou'
+			elseif TQuest = 0 and horny >= 50:
+				gt 'Club2', 'toilet'
+			elseif TQuest = 1:
+				gt 'Club2', 'toilet1'
+			elseif TQuest = 2:
+				gt 'Club2', 'toilet2'
+			elseif TQuest >= 3 and rand(1, 100) < 60:
+				gt 'club', 'tou'
+			elseif TQuest >= 3:
+				gt 'Club2', 'toilet1'
+			end
 		end
 	end
 
@@ -598,7 +604,7 @@ if $ARGS[0] = 'sex':
 					'<center><img src="images/picV/hand.jpg"></center>'
 					'You take his cock and point it away from you. He groans as he cums and most of his cum gets splattered onto the floor, with a few drips covering your hand.'
 
-					act 'Stand up':gt 'club', 'toi'
+					act 'Stand up':gt 'club', 'tou'
 				end
 
 				act 'Let him cum on your face':
@@ -608,7 +614,7 @@ if $ARGS[0] = 'sex':
 					'<center><img src="images/picV/clubFacial1.jpg"></center>'
 					'You grabed his cock and point his "gun" at your face. He groans as he cums and you can feel hot streams of semen covering your face.'
 
-					act 'Stand up':gt 'club', 'toi'
+					act 'Stand up':gt 'club', 'tou'
 				end
 
 				exit
@@ -620,7 +626,7 @@ if $ARGS[0] = 'sex':
 				'The bloke grabs your hair and cums on your face. You quickly close your eyes, but it''s too late, a few drips of semen make it into your eyes. It hurts a bit.'
 			end
 
-			act 'Stand up':gt 'club', 'toi'
+			act 'Stand up':gt 'club', 'tou'
 		end
 
 		act 'Swallow his cum':
@@ -631,7 +637,7 @@ if $ARGS[0] = 'sex':
 			'<center><img src="images/picV/clubSwallow.jpg"></center>'
 			'The guy came in your mouth, you can feel his hot and salty semen pouring into it. Without hesistation you swallow it, you can''t tell why, but somehow you start to enjoy the taste of fresh, warm sperm.'
 
-			act 'Stand up':gt 'club', 'toi'
+			act 'Stand up':gt 'club', 'tou'
 		end
 	end
 
@@ -654,7 +660,7 @@ if $ARGS[0] = 'sex':
 			'As you heartbeat slows and you are begining to catch your breath, you realise your arousel has peaked, a warmth fills you and your eyes loose focus.'
 		end
 		'You recover to find yourself alone in the cubicle and quickly re-dress.'
-		act 'Leave cubicle':gt 'club', 'toi'
+		act 'Leave cubicle':gt 'club', 'tou'
 	end
 end
 

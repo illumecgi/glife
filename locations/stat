@@ -1549,16 +1549,18 @@ if exhibi >= 4 and exhibiHideNewCloth ! 1:
 	pl '<b><a href="exec:dynamic $din_exhibiHideNewCloth">You have opened a new outfit</a></b>'
 end
 }
-if tanga = 0 and ski = 1 and nude = 0 or tanga = 0 and glamur = 1 and nude = 0:
-	pl '<b><font color="red">blush of shame fills your face, you did not put any panties on and now from under your short skirt sparkles sometimes your naked ass.</font></b>'
-elseif tanga = 0 and ski = 0 and glamur = 0 and opPRE = 0 and nude = 0 and bikini_cloth ! 1:
-	pl '<b><font color="red">you are not wearing panties.</font></b>'
-elseif nude = 1 and towel = 1 and tanga = 0:
-	pl'<b><font color = red>Your naked body covers only a short towel</font></b>'
-elseif tanga = 1 and nude = 1 and bikini_cloth ! 1:
-	pl'<b><font color = red>You strip down to your panties and Boobs sway invitingly when walking</font></b>'
-elseif tanga = 0 and nude = 1 and bikini_cloth ! 1:
-	pl'<b><font color = red>You completely naked, and inside, everything trembles</font></b>'
+if tanga = 1 and $clothingworntype = 'nude':
+	pl'<b><font color = red>You are stripped down to your panties and your boobs sway invitingly as you walk</font></b>'
+elseif tanga = 0:
+	if (ski = 1 or glamur = 1):
+		pl '<b><font color="red">Your face is flushed with shame, you are not wearing panties and from under your short skirt sparkles your naked ass.</font></b>'
+	elseif ski = 0 and glamur = 0 and opPRE = 0 and $clothingworntype ! 'nude':
+		pl '<b><font color="red">you are not wearing panties.</font></b>'
+	elseif towel = 1:
+		pl'<b><font color = red>Your naked body is covered only by a short towel</font></b>'
+	elseif $clothingworntype = 'nude':
+		pl'<b><font color = red>You completely naked, and inside, everything trembles</font></b>'
+	end
 end
 
 if mosol >= 50:

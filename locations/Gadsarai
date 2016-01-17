@@ -224,38 +224,34 @@ else
 
 	act 'Go outside':minut += 5 & gt 'Gaddvor'
 
-	act 'Poking around in the barn':
+	act 'Poke around in the barn':
 		cls
 		minut += 15
 		gs 'stat'
-		poiskrand = rand(0, 5)
 
-		if card > 0 and poiskrand = 0 or poiskrand > 0:
-			'In the locker old magazines Health, Equipment Youth and dusty yellowed books.'
-			if findvel=0:
-				findvelrand= RAND (0,50)
-				if findvelrand > 40:
-					'In the far corner of the barn you manage to find an old bicycle. Surprisingly, it is in good condition'
-					findvel=1
-				end
-			end
-		elseif card = 0 and poiskrand = 0:
+		if card = 0 and rand(0, 5):
 			card = 1
-			'"Hmm, what''s this?" think you''ve found a deck of cards.'
+			'"Hmm, what''s this?" You''ve found a deck of cards.'
+		elseif card > 0:
+			'In the barn you find old health magazines and equipment, toys and dusty yellowed books.'
+			if findvel = 0 and RAND (0,100) > 80:
+				'In the far corner of the barn you manage to find an old bicycle. Surprisingly, it is in good condition'
+				findvel = 1
+			end
 		end
 
-		act 'Put in place':gt $curloc
+		act 'Leave and get some fresh air':gt $curloc
 	end
 
 	if card > 0:
-		act 'Take a deck of cards':gt 'card'
+		act 'Take card from the deck':gt 'card'
 	end
 
 	if horny >= 50:
 		act 'Masturbate':gt 'selfplay'
 	end
 
-	if findvel=1 and hour >= 7 and hour < 20:
+	if findvel = 1 and hour >= 7 and hour < 20:
 		act 'Go cycling':
 			cls
 			minut += 60

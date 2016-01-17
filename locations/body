@@ -163,7 +163,7 @@ else
 	fat = 0
 	bedra = bedraDoun
 	talia = TaliaDoun
-	gr<<$titsize>>= talia + 14 + silicone + nbsize
+	grudi = talia + 14 + silicone + nbsize
 	ves = TaliaDoun
 	titK = grudi - talia
 

@@ -606,7 +606,7 @@ if $ARGS[0] = 'fin':
 end
 
 if $ARGS[0] = 'mfc':
-	if sisterHere = 0 and $loc = 'bedrPar':
+	if sisterHere = 0 or $loc ! 'bedrPar':
 		act 'Go to your mfc homepage':
 			cls
 			minut += 2
@@ -626,7 +626,7 @@ if $ARGS[0] = 'mfc':
 			gs 'stat'
 			gt 'Komp','brows'
 		end
-	elseif sisterHere > 0:
+	elseif sisterHere > 0 and $loc = 'bedrPar':
 		cls
 		minut += 2
 		topmfc = 1

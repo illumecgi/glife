@@ -64,7 +64,7 @@ elseif son < 17:
 
 		gs 'stat'
 
-		if hour = timer and minut = timerM:
+		if budilnikOn = 1 and hour = timer and minut = timerM:
 			manna -= 10
 			'Your alarm goes off.'
 

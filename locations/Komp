@@ -16,36 +16,42 @@ if $ARGS[0] = 'start':
 	!!act 'SunReview of the Dead':gt 'KGZstart'
 
 	if student > 0 and kursovik < 100:'<a href="exec:GT ''Komp'',''kursak''">Get some of your course work done.</a>'
-
-	if internet > 0:
-		internet = internetM / 60
-		'You have <<internet>> hours of Internet access remaining.'
-
+	
+	if $LOC = 'shulga_room':
+		
+		internet = 100000
 		act 'Browser':gt 'Komp', 'brows'
-	end
+	else
+		if internet > 0:
+			'You have <<internet>> hours of Internet access remaining.'
 
-	if karta >= 10:
-		'You can pay online through your bank account. 1 hour of internet access costs 10 rubles. You have <<karta>>rubles in your account.'
+			act 'Browser':gt 'Komp', 'brows'
+		end
 
-		act 'Buy more account access':
-			cla
-			intinp = input ("How much money do you wish to spend on internet access? (h = 10 rubles)")
+		if karta >= 10:
+			'You can pay online through your bank account. 1 hour of internet access costs 10 rubles. You have <<karta>>rubles in your account.'
 
-			if intinp <= 0 or intinp * 10 > karta:
-				'Invalid amount.'
-			elseif intinp * 10 <= karta:
-				inttime = intinp * 10
-				karta -= inttime
-				internetM += intinp * 60
-				internet = internetM / 60
-				'You paid for <<inttime>> hours of Internet access, you have <<internet>> hours of the Internet access remianing. <<intinp>> rubles were removed from your account.'
+			act 'Buy more account access':
+				cla
+				intinp = input ("How many hours of internet access do you wish to purchase? (1hr = 10 rubles)")
+
+				if intinp <= 0 or intinp * 10 > karta:
+					'Invalid amount.'
+				else
+					karta -= intinp * 10
+					internet += intinp
+					'You paid for <<inttime>> hours of Internet access, you have <<internet>> hours of the Internet access remianing. <<intinp>> rubles were removed from your account.'
+				end
+
+				act 'Exit payment system':gt 'Komp', 'start'
 			end
-
-			act 'Exit payment system':gt 'Komp', 'start'
 		end
 	end
 
 	act 'Shut your computer down':
+		if $LOC = 'shulga_room':
+			internet = internetS
+		end
 		cla
 		gt 'Komp', 'fin'
 	end
@@ -93,7 +99,6 @@ if $ARGS[0] = 'sale':
 	clr
 	*clr
 	minut += 60
-	internetM -= 60
 	elektro += 3
 	internet -= 1
 
@@ -136,7 +141,6 @@ if $ARGS[0] = 'remont':
 	clr
 	*clr
 	minut += 60
-	internetM -= 60
 	elektro += 3
 	internet -= 1
 	gs 'stat'
@@ -233,7 +237,6 @@ if $ARGS[0] = 'porno':
 	clr
 	*clr
 	minut += 60
-	internetM -= 60
 	manna += 5
 	elektro += 3
 	willpower += rand(5, 10)
@@ -303,7 +306,6 @@ if $ARGS[0] = 'znak':
 	clr
 	*clr
 	minut += 60
-	internetM -= 60
 	manna += 5
 	elektro += 3
 	internet -= 1
@@ -366,7 +368,6 @@ if $ARGS[0] = 'kabtv':
 	clr
 	*clr
 	minut += 60
-	internetM -= 60
 	elektro += 3
 	internet -= 1
 	gs 'stat'
@@ -410,7 +411,6 @@ end
 if $ARGS[0] = 'foto':
 	cla
 	*clr
-	internetM -= 60
 	elektro += 3
 	internet -= 1
 	gs 'stat'
@@ -464,9 +464,9 @@ if $ARGS[0] = 'rabota':
 	cla
 	*clr
 	minut += 60
-	internetM -= 60
 	internet -= 1
 	komprabota = rand(0, 10)
+	if $LOC = 'shulga_room':komprabota = rand(5, 15)
 	gs 'stat'
 	'<center><img src="images/pics/komp.jpg"></center>'
 
@@ -547,7 +547,6 @@ if $ARGS[0] = 'study':
 	cla
 	*clr
 	minut = minut + 60
-	internetM = internetM - 60
 	elektro = elektro + 3
 	internet -= 1
 	intel += 1
@@ -562,7 +561,6 @@ if $ARGS[0] = 'kursak':
 	cla
 	*clr
 	minut += 60
-	internetM += 60
 	elektro += 3
 	internet -= 1
 	manna -= 10
@@ -580,7 +578,6 @@ if $ARGS[0] = 'agent':
 	clr
 	*clr
 	minut += 60
-	internetM += 60
 	elektro += 3
 	internet -= 1
 	gs 'stat'

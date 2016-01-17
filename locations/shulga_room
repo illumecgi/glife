@@ -50,6 +50,7 @@ $vasya_shulgin_rep = {
 cls
 minut += 1
 gs'stat'
+internetS = internet
 '<center><b><font color = maroon>A large room</font></b></center>'
 '<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom.jpg"></center>'
 'In front is a large sofa <a href="exec: dynamic $shultv">TV</a>, and right in the corner of a table on which lies <a href="exec:GT ''Komp'',''start''">notebook</a>.'

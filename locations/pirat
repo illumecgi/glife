@@ -31,7 +31,7 @@ else
 				!!'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
 				'You pushed Pirate dropping him with legs.'
 
-				act 'Leave':gt $curloc
+				act 'Leave':gt 'Gadsarai'
 			end
 
 			act 'Endure':
@@ -59,7 +59,7 @@ else
 				!!'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
 				'You pushed Pirate dropping him off his back.'
 
-				act 'Leave':gt $curloc
+				act 'Leave':gt 'Gadsarai'
 			end
 
 			act 'Stand':
@@ -104,7 +104,7 @@ else
 				!'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
 				'You pushed the Pirate dropping him off his back.'
 
-				act 'escape':gt $curloc
+				act 'escape':gt 'Gadsarai'
 			end
 			act 'Take in the arm that Member':
 				cls
@@ -161,7 +161,7 @@ else
 				!'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
 				'You pushed the Pirate. He moved a little, and sat down with his tongue out, staring at you with puppy dog eyes...'
 
-				act 'escape':gt $curloc
+				act 'escape':gt 'Gadsarai'
 			end
 			act 'Take in the mouth':
 				cls
@@ -217,7 +217,7 @@ else
 				!'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
 				'You pushed the Pirate, dropping him off his back.'
 
-				act 'escape':gt $curloc
+				act 'escape':gt 'Gadsarai'
 			end
 			if vagina = 0:
 				act 'Take in the mouth':
@@ -1361,7 +1361,7 @@ if piratHorny < 20:
 		gs'stat'
 
 		'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
-		'You pat Pirate on the back.'
+		'You pat Pirate on the back. "Good boy."'
 
 		act 'Escape':gt 'Gadsarai'
 	end
@@ -1374,11 +1374,11 @@ if piratHorny < 20:
 		gs'stat'
 
 		'<center><img src="images/qwest/gadukino/dog.jpg"></center>'
-		'You long stroked back Pirate.'
+		'You spend time stroking Pirates back and make a fuss of him.'
 
 		act 'Escape':gt 'Gadsarai'
 	end
-	act 'Escape':minut += 5 & gt $loc
+	act 'Escape':gt 'Gadsarai'
 end
 
 --- pirat ---------------------------------

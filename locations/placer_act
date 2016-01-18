@@ -27,7 +27,7 @@ if plact = 0:
 		if kol_man = 1 and Frend_num > 0:
 			'<<$ev_name>> whispers to you "Interesting, who do you think he likes? You or me?"'
 		elseif kol_man > 1:
-			'Both vying for the guys attention, you invite the <<$kol_man_text>> to join you.'
+			'Vying for the guys attention, you invite the <<$kol_man_text>> to join you.'
 			if Frend_num > 0:'<<$ev_name>> whispers to you "They''re cute, let''s stay for a while."'
 		end
 	end

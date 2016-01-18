@@ -12,7 +12,7 @@ if artemhomemark = 0:
 		if hour < 16 and hour >= 7:
 			'Artem not at home.'
 		elseif hour >= 16 and hour < 20:
-			'The door you opened Artem and invited to enter.'
+			'Artem opens the door and invites you to enter.'
 
 			act 'Enter':artemhomemark = 1 & gt $curloc
 		elseif hour >= 20 or hour < 7:
@@ -22,7 +22,7 @@ if artemhomemark = 0:
 		if hour < 10:
 			'Too early time, that would go to visit.'
 		elseif hour >= 10 and hour < 20:
-			'The door you opened Artem and invited to enter.'
+			'Artem opens the door and invites you to enter.'
 
 			act 'Enter':artemhomemark = 1 & gt $curloc
 		elseif hour >= 20 or hour < 5:
@@ -32,6 +32,7 @@ if artemhomemark = 0:
 	act 'Escape':minut += 15 & gt'pod_ezd','etaj_1'
 
 elseif artemhomemark = 1:
+	if ArtemBeInHome = 0:ArtemBeInHome = 1
 	if artQW = 21:
 		gt'ArtemEv3','slut_talk'
 		exit

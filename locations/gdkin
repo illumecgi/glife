@@ -349,22 +349,19 @@ fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 
+pl ''
+
 if music_off = 0:
 	inited = 1
 	music_on = 1
 	volume = 100
 	$music_theme = 'gdis'
 	gs 'init_music'
+	pl '<a href="exec: music_off = 1 & gt $loc">Turn off the music</a>'
 else
 	music_on = 0
 	volume = 100
 	gs 'init_music'
-end
-
-pl ''
-if music_off = 0:
-	pl '<a href="exec: music_off = 1 & gt $loc">Turn off the music</a>'
-else
 	pl '<a href="exec: music_off = 0 & gt $loc">Play music</a>'
 end
 
@@ -422,8 +419,8 @@ if hour >= 20 and hour <= 23:
 
 		if alko >= 4:
 			'You''re drunk in the trash and try to dance, but the floor out from under my feet and you dance instead of just drunkenly Mota regularly bumping into other people.'
-			dynamic $din_too_drunk_dance
-		elseif alko < 4 and alko > 0:
+			if rand (0,1) = 0:dynamic $din_too_drunk_dance & exit
+		elseif alko > 0:
 			*clr 
 			'<center><img src="images/etogame/club_dance7.jpg"></center>'
 			'You''re drunk and fun skip on the dance floor without paying attention to others, and even the music.'
@@ -482,9 +479,9 @@ if hour >= 20 and hour <= 23:
 
 		if alko >= 4:
 			'You''re drunk in the trash, and standing at the wall hard for her to restrain from the fact that the floor floats you from under their feet.'
-			dynamic $din_too_drunk_dance
+			if rand (0,1) = 0:dynamic $din_too_drunk_dance & exit
 
-		elseif alko < 4 and alko > 0:
+		elseif alko > 0:
 			'You''re drunk, and standing at the wall watching the dancing.'
 		else
 			'You are standing at a modest stenochki watching dancing.'

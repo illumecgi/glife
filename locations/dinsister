@@ -217,7 +217,7 @@ $d_sister[3]={
 		'You chat with your sister about movie stars, discussing and sharing fantasies about them, and arguing about which ones are sexier.'
 	end
 	if sisterTalk = 8:
-		'Anna talks about sports clubs in the House of Culture, and how sport is very good for the figure, but she is too lazy to go there.'
+		'Anna talks about sports clubs in the community center, and how sport is very good for the figure, but she is too lazy to go there.'
 	end
 	if sisterTalk = 9:
 		'Anya says, that one of her friends had a kid, but the father denies it and she''s left looking after her kid alone. She says, that if you are smart, you will buy the pill from the pharmacy.'

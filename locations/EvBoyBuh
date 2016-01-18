@@ -130,7 +130,7 @@ if GorSlut = 0:
 			*clr
 			minut+=10
 			'<center><img src="images/etogame/dk_night.jpg"></center>'
-			'Do you talk to the guy near the House of Culture. <<$bname>> said "You`re a cool girl. Maybe we`ll meet again?"'
+			'Do you talk to the guy near the community center. <<$bname>> said "You`re a cool girl. Maybe we`ll meet again?"'
 			randvnesh = RAND(10,30)
 
 				deystrand = RAND(0,2)

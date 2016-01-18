@@ -9,14 +9,14 @@ FColor = RGB(0,0,0)
 BColor = RGB(255,255,255)
 LColor = RGB(106,90,205)
 
-'<center><b><font color = maroon>The House of Culture</font></b></center>'
+'<center><b><font color = maroon>The community center</font></b></center>'
 '<center><img src="images/lur/kru/gdkkru.jpg"></center>'
 
 
 act 'Logout':gt'gdk'
 
 if hour >= 12 and hour <= 20:
-'Now the house of culture operate various circles.'
+'Now the community center operate various circles.'
 
      if krumonth=month and kruyear=year:
      act'Going in a circle sewing':gt'krupo'

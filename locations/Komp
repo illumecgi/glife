@@ -1473,10 +1473,7 @@ if $ARGS[0] = 'waitclients':
 			act'Further':gt'Komp','waitclients'
 		end
 	end
-	gs 'family'
-	if sisterHere = 0:
-		act 'Turn off the webcam':gt 'Komp','startpagemfc'
-	elseif sisterHere > 0:
+	if sisterHere > 0 and $loc = 'bedrPar':
 		cls
 		topmfc = 1
 		backmfc = 1
@@ -1486,6 +1483,8 @@ if $ARGS[0] = 'waitclients':
 		'Suddenly you hear, the clacking handle of your locked door, and a moment later you hear, "<<$nickname>>, let me in!"'
 		'It seems that the show is over for today, so you frantically freshen up...'
 		act 'Further':gt 'Komp','mfc'
+	else
+		act 'Turn off the webcam':gt 'Komp','startpagemfc'
 	end
 end
 

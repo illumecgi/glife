@@ -13,77 +13,77 @@ if brother >= 40 and brother < 60:'You and your brother have a normal relationsh
 if brother >= 60 and brother < 80:'You have a good relationship with your brother.'
 if brother >= 80:'You have a great relationship with your brother.'
 *nl
+if hour < 7 or hour >= 21:
+	! WD: Fix old nude variable
+	if cumbelly > 0 and $clothingworntype = 'nude':
+		if brotherknowslut < 1: brotherknowslut = 1
+		'"Go wash yourself, you''re covered in cum and it''s disgusting."'
+		if brotherSex = 0:
+			brother -= 1
+			act 'Move away':gt $loc, $metka
+			exit
+		end
+	end
 
-! WD: Fix old nude variable
-if cumbelly > 0 and $clothingworntype = 'nude':
-	if brotherknowslut < 1: brotherknowslut = 1
-	'"Go wash yourself, you''re covered in cum and it''s disgusting."'
-	if brotherSex = 0:
-		brother -= 1
-		act 'Move away':gt $loc, $metka
-		exit
+	if cumface > 0:
+		if brotherknowslut < 1: brotherknowslut = 1
+		'"Is that cum on your face? That`s disgusting, Wash it off."'
+		if brotherSex = 0:
+			brother -= 1
+			act 'Move away':gt $loc, $metka
+			exit
+		end
+	end
+
+	! WD: Fix old nude variable
+	if cumass > 0 and $clothingworntype = 'nude' and tanga = 0:
+		if brotherknowslut < 1: brotherknowslut = 1
+		'"Go wash yourself, you''ve got something on your butt."'
+		if brotherSex = 0:
+			brother -= 1
+			act 'Move away':gt $loc, $metka
+			exit
+		end
+	end
+
+	! WD: Fix old nude variable
+	if cumfrot > 0 and $clothingworntype ! 'nude':
+		'"Your clothes are dirty. Wash them, or atleast get mum to do it."'
+	end
+
+	if spanked > 1 and $clothingworntype = 'nude' and tanga = 0:
+		'"Got a sore bum? Did someone punish you? You bad girl."'
+	end
+	!The reaction to the pregnancy
+	if $clothingworntype = 'nude' and pregTalkBrother = 0 and pregtime > 90:
+		'Surprised, your brother looks at your tummy. "<<$name>>, are you pregnant? '
+		pregTalkBrother = 1
+	end
+		
+		if $clothingworntype ! 'nude' and pregTalkBrother = 0 and pregtime > 150:
+		'Surprised, your brother looks at your tummy, "<<$name>>, why didn''t you tell me I''m going to be an uncle? '
+		pregTalkBrother = 1
+	end
+
+	if $clothingworntype = 'nude' and towel = 1 and tanga = 0:
+		if brotherSex < 1:
+			'Your brother sarcastically commented brief little towel for you:'
+			'- <<$nickname>>, Are you sure that this is not a hand towel?'
+		elseif brotherSex >= 1:
+			'Your brother sarcastically commented brief little towel for you:'
+			'- Sister, for me chose a towel over-short?'
+		end
+	elseif $clothingworntype = 'nude' and lobok > 2 and tanga = 0:
+		'"You should have shaved," your brother comments, "it looks like you''re growing a forest."'
+	elseif $clothingworntype = 'nude':
+		if brotherSex >= 1:
+			'"<<$nickname>>, you have an amazing body"'
+		else
+			'"What a view! Have you decided to be a nudist?"'
+			brother += 1
+		end
 	end
 end
-
-if cumface > 0:
-	if brotherknowslut < 1: brotherknowslut = 1
-	'"Is that cum on your face? That`s disgusting, Wash it off."'
-	if brotherSex = 0:
-		brother -= 1
-		act 'Move away':gt $loc, $metka
-		exit
-	end
-end
-
-! WD: Fix old nude variable
-if cumass > 0 and $clothingworntype = 'nude' and tanga = 0:
-	if brotherknowslut < 1: brotherknowslut = 1
-	'"Go wash yourself, you''ve got something on your butt."'
-	if brotherSex = 0:
-		brother -= 1
-		act 'Move away':gt $loc, $metka
-		exit
-	end
-end
-
-! WD: Fix old nude variable
-if cumfrot > 0 and $clothingworntype ! 'nude':
-	'"Your clothes are dirty. Wash them, or atleast get mum to do it."'
-end
-
-if spanked > 1 and $clothingworntype = 'nude' and tanga = 0:
-	'"Got a sore bum? Did someone punish you? You bad girl."'
-end
-!The reaction to the pregnancy
-if $clothingworntype = 'nude' and pregTalkBrother = 0 and pregtime > 90:
-	'Surprised, your brother looks at your tummy. "<<$name>>, are you pregnant? '
-	pregTalkBrother = 1
-end
-	
-	if $clothingworntype ! 'nude' and pregTalkBrother = 0 and pregtime > 150:
-	'Surprised, your brother looks at your tummy, "<<$name>>, why didn''t you tell me I''m going to be an uncle? '
-	pregTalkBrother = 1
-end
-
-if $clothingworntype = 'nude' and towel = 1 and tanga = 0:
-	if brotherSex < 1:
-		'Your brother sarcastically commented brief little towel for you:'
-		'- <<$nickname>>, Are you sure that this is not a hand towel?'
-	elseif brotherSex >= 1:
-		'Your brother sarcastically commented brief little towel for you:'
-		'- Sister, for me chose a towel over-short?'
-	end
-elseif $clothingworntype = 'nude' and lobok > 2 and tanga = 0:
-	'"You should have shaved," your brother comments, "it looks like you''re growing a forest."'
-elseif $clothingworntype = 'nude':
-	if brotherSex >= 1:
-		'"<<$nickname>>, you have an amazing body"'
-	else
-		'"What a view! Have you decided to be a nudist?"'
-		brother += 1
-	end
-end
-
 
 act 'Move away':gt $loc, $metka
 

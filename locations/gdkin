@@ -419,8 +419,7 @@ if hour >= 20 and hour <= 23:
 
 		if alko >= 4:
 			'You''re drunk in the trash and try to dance, but the floor out from under my feet and you dance instead of just drunkenly Mota regularly bumping into other people.'
-			if rand (0,1) = 0:dynamic $din_too_drunk_dance
-			exit
+			if rand (0,1) = 0:dynamic $din_too_drunk_dance & exit
 		elseif alko < 4 and alko > 0:
 			*clr 
 			'<center><img src="images/etogame/club_dance7.jpg"></center>'
@@ -480,8 +479,7 @@ if hour >= 20 and hour <= 23:
 
 		if alko >= 4:
 			'You''re drunk in the trash, and standing at the wall hard for her to restrain from the fact that the floor floats you from under their feet.'
-			if rand (0,1) = 0:dynamic $din_too_drunk_dance
-			exit
+			if rand (0,1) = 0:dynamic $din_too_drunk_dance & exit
 
 		elseif alko < 4 and alko > 0:
 			'You''re drunk, and standing at the wall watching the dancing.'

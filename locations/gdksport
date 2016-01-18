@@ -81,7 +81,7 @@ gs 'stat'
 fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
-'<center><b><font color="maroon">House of Culture</font></b></center>'
+'<center><b><font color="maroon">community center</font></b></center>'
 '<center><img src="images/qwest/alter/gdksport.jpg"></center>'
 'The house work culture section <a href="exec:dynamic $din_beg_gor_sec">Racing</a>, <a href="exec:dynamic $din_dance_gor_sec">Dance</a> and <a href="exec:dynamic $din_voll_gor_sec">Volleyball</a>.'
 

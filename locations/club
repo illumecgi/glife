@@ -144,7 +144,7 @@ if $ARGS[0] = 'tou':
 			'<center><img src="images/etogame/frotsp.jpg"></center>'
 			'You use a tissue and a bit of water to remove cum stains in your clothes. '
 
-			act 'Finish':gt 'club', 'toi'
+			act 'Finish':gt 'club', 'tou'
 		end
 	end
 

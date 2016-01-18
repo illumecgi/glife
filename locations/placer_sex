@@ -1208,19 +1208,18 @@ if kol_man < 4 and anus > 14 and vagina > 14 and mesec <= 0 :
 	Act 'Refused to drink':dynamic $din_play_game
 
 else
-	cls
-	alko += 20
-	cumlip = 0
-	fbreath = 0
-	minut += 30
-	gs'stat'
-	'<center><img src="images/qwest/alter/placer/drunk.jpg"></center>'
-	'Guys have resulted in a shabby room in a hostel. The room was almost nothing, only a few iron beds. Men began to thump, all pouring and pouring you. Soon you were drunk as hell and just helplessly collapsed on the bed. Through gripped you, you feel the intoxication, that you dragged clothing.'
-
 	if dormrape = 0:
+		cls
+		alko += 20
+		cumlip = 0
+		fbreath = 0
+		minut += 30
+		gs'stat'
+		'<center><img src="images/qwest/alter/placer/drunk.jpg"></center>'
+		'Guys have resulted in a shabby room in a hostel. The room was almost nothing, only a few iron beds. Men began to thump, all pouring and pouring you. Soon you were drunk as hell and just helplessly collapsed on the bed. Through gripped you, you feel the intoxication, that you dragged clothing.'
 		'You`re lying on the creaking iron bed in a dorm room peteushnoy. Around you are <<$kol_man_text>> and discuss with each other "Well boys, who first fucks this slut?"'
-
 		act 'Further':
+			cls
 			rape += 1
 			gang += 1
 			dormrape += 1

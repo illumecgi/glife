@@ -59,9 +59,6 @@ elseif encounter = 6:
 	!!in the square of the familiar class
 end
 
-! WD: Uninitialised ~ 'dickfrend' use 'dick'
-if dick > 0:ver_zn = 0
-
 gs 'placer_man'
 
 !_________________Change the date\nights, seasons. Beginning.___________________________

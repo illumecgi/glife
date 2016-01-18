@@ -4,6 +4,8 @@ CLOSE ALL
 if DimaBeHomeOnce = 0:DimaBeHomeOnce = 1
 
 gs 'stat'
+
+
 '<center><b><font color="maroon"><<$npcName[1]>> <<$npcSurName[1]>></font></b></center>'
 '<center><img src="images/qwest/alter/npc/1.jpg"></center>'
 
@@ -128,7 +130,7 @@ elseif dimaFilm > 0:
 			'<center><img src="images/pic/dur.jpg"></center>'
 			'You otsypali dose of powder and its nyuhnuli, then you feel just fine.'
 
-			act 'catch a buzz':gt $curloc
+			act 'catch a buzz':gt 'dimahome'
 		end
 
 		act 'Refuse':

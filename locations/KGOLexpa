@@ -53,7 +53,7 @@ $KGOLatkPoison = {
 
 $KGOLatkFB = {
 	KGHPV -= KGOLpower
-	'<font color="green">Firebol inflicts <<KGOLpower>> damage</font>'
+	'<font color="green">Fireball inflicts <<KGOLpower>> damage</font>'
 }
 
 $KGOLatkV = {

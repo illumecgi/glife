@@ -14,12 +14,11 @@ if $ARGS[0] = 'start':
 		'The stripclub is closing and security usher eveyone out.'
 		gt 'down'
 	else
-		scrand = rand(1, 100)
 
-		if scrand <= 40 and stripday ! daystart:
+		if rand(1, 100) <= 40 and stripday ! daystart:
 			stripday = daystart
 			cfnm = 1
-		elseif scrand > 40 and stripday ! daystart:
+		elseif stripday ! daystart:
 			stripday = daystart
 			cfnm = 0
 		end
@@ -242,11 +241,11 @@ if $ARGS[0] = 'forwoman':
 				shantfoto += 1
 				'You struggle to take a normal picture, the girls surrounding you in obscure states of undress, but the guard is very close. In the end you manage to take a normal picture.'
 
-				act 'Leave':gt 'stripclub', 'start'
+				act 'Return':gt 'stripclub', 'forwoman'
 			elseif stripfotorand >= 6:
 				'You struggle to take a normal picture, the girls surrounding you in obscure states of undress, but the guard is very close.'
 
-				act 'Leave':gt 'stripclub', 'start'
+				act 'Return':gt 'stripclub', 'forwoman'
 			end
 		end
 	end

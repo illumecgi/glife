@@ -5,7 +5,7 @@ if $ARGS[0] = 'kurit':
 	*clr
 	minut += 10
 	vikureno += 1
-	sigaret -= 1
+	siga -= 1
 	son += 1
 	gs 'stat'
 	'<center><img src="images/etogame/kurit.jpg"></center>'

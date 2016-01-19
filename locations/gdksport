@@ -200,15 +200,26 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 			gs 'stat'
 			'<center><img src="images/pics/dush.jpg"></center>'
 
+			ShowerRand = rand(0,3) 
+			if IvanShowerYes = 1 and ShowerRand = 1:
+				'You enter the women''s shower and turning the water on begin to lather your body with a washcloth. Suddenly the door creaks and you remember that you agreed not to close it for Ivan. You look around and see, that threshold is Ivan Prokhorov considers you. "Hello <<$nickname>>. In the men`s shower all, so I`m back to you." Ivan smiled after these words.'
+				act 'Further':dynamic $ShowerWithIvan
+			elseif kotovVSprohorov ! 1:
+				'You enter the women''s shower and turning the water on begin to lather your body with a washcloth. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
+				if Voltrenersee => 3 and ShowerRand = 0 and sopr = 1: gt 'VoltrenerSexShower'
+				'After a shower, you comb your hair and dressed.'
+				act 'Get out of the shower':gt $locM, $metkaM
+			end
+
 			if kotovVSprohorov = 1:
 				kotovVSprohorov = 2
-				'You entered the women''s shower and turning the water began to lather your body washcloth. Suddenly, the door creaked and you remember that you forgot to close it. You looked back and saw that standing in the doorway Ivan Prokhorov and treat you. "Hi <<$name>>. Can I join? And then the men''s shower place." Ivan smiled after these words.'
+				'You enter the women''s shower and turning the water on begin to lather your body with a washcloth. Suddenly, the door creaked and you remember that you forgot to close it. You looked back and saw that standing in the doorway Ivan Prokhorov and treat you. "Hi <<$name>>. Can I join? And then the men''s shower place." Ivan smiled after these words.'
 
 				act 'expel Ivan':
 					cls
 					IvanShowerQW = 1
 					gs 'stat'
-					'<center><img src="images/pics/dush.jpg"></center>'
+					'<center><img src="images/qwest/alter/ev/Shower1.jpg"></center>'
 					'You covered the chest hand and the other hand launched a washcloth in Ivan. He easily dodged the flying sponges and laughter came out of the shower. You locked the door and quickly domylis shower.'
 
 					act 'Get out of the shower':gt $locM, $metkaM
@@ -217,7 +228,7 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 				act 'Uh, what?':
 					cls
 					gs 'stat'
-					'<center><img src="images/pics/dush.jpg"></center>'
+					'<center><img src="images/qwest/alter/ev/Shower2.jpg"></center>'
 					'Were you surprised like, and your insecurities Ivan regarded as consent. He went into the shower and closed the door behind him.'
 
 					act 'Escape from the shower':IvanShowerQW = 1 & gt $locM, $metkaM
@@ -230,12 +241,9 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 
 				exit
 			end
-		act 'Get out and get dressed':gt $locM, $metkaM
-		
 		end
 	end
 end
-
 
 $ShowerWithIvan = {
 	cls

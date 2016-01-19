@@ -42,6 +42,7 @@ if anus > 1:
 	if anusK < 0:anusK = 0
 	if anusK < ashrinkdays:anusK += 1
 	if anusK >= ashrinkdays:anus -= ashrink & anusK = 0
+	if anus < 0: anus = 0
 end
 if vagina > 10:
 	if vaginaK < 0:vaginaK = 0

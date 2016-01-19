@@ -131,7 +131,7 @@ if hour >= 8 and hour <= 22:
 						'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 					end
 					'You ask Miroslav if she has already met everyone in the village. When she says no you offer to introduce her to the local guys and she readily agrees, asking you to wait a couple of minutes while she changes, then quickly hides in the hut. When she comes out, you go drinking with the group of boys near your house...'
-					act 'Further':minut += 15 & temp = 0 & miralko = 0 & gt 'mitkabuh'
+					act 'Further':minut += 15 & temp = 0 & miralko = 0 & miraingop = 1 & gt 'mitkabuh'
 				end
 			elseif miraQW >= 15 and hour >= 20 and miragopQW > 0:
 				act 'Suggest drinking with the locals':
@@ -158,7 +158,7 @@ if hour >= 8 and hour <= 22:
 					else
 						'You suggest drinking with the village boys and Miroslava readily agrees, then asks you to wait a couple of minutes while she changes. When she comes out, you go to to drink with the group of boys near your house....'
 					end
-					act 'Further':minut += 15 & temp = 0 & miralko = 0 & gt 'mitkabuh'
+					act 'Further':minut += 15 & temp = 0 & miralko = 0 & miraingop = 1 & gt 'mitkabuh'
 				end
 			elseif miraQW >= 30 and week = 6 and miragopQW < 4 and hour > 18 and hour < 22:
 				act 'Suggest taking a steam bath':

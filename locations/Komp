@@ -314,38 +314,46 @@ if $ARGS[0] = 'znak':
 	'You are log on to a dating site.'
 	'There''s plenty of hot men, if you''re single.'
 
-	if bfA <= 0:
-		act 'Look for a kind man':
-			cla
-			gs 'boy'
-			gs 'boyfrend', 'start'
-			stopboy = 0
-			harakBoyA = 0
-			'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
+	if housrA = 0:
+		manna += 3
+		willpower += rand(5, 10)
+		manna += rand(10, 50)
+		'You spend time looking at the various profiles, but it won''t let you register unless you have your own home.'
+		'Still, some of the pictures were quite raunchy and the more desperate profiles were really funny.'
+	else
+		if bfA <= 0:
+			act 'Look for a kind man':
+				cla
+				gs 'boy'
+				gs 'boyfrend', 'start'
+				stopboy = 0
+				harakBoyA = 0
+				'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
 
-			act 'Leave':gt 'Komp', 'brows'
-		end
+				act 'Leave':gt 'Komp', 'brows'
+			end
 
-		act 'Look for a normal guy':
-			cla
-			gs 'boy'
-			gs 'boyfrend', 'start'
-			stopboy = 0
-			harakBoyA = 1
-			'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
+			act 'Look for a normal guy':
+				cla
+				gs 'boy'
+				gs 'boyfrend', 'start'
+				stopboy = 0
+				harakBoyA = 1
+				'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
 
-			act 'Leave':gt 'Komp', 'brows'
-		end
+				act 'Leave':gt 'Komp', 'brows'
+			end
 
-		act 'Look for a strong man':
-			cla
-			gs 'boy'
-			gs 'boyfrend', 'start'
-			stopboy = 0
-			harakBoyA = 2
-			'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
+			act 'Look for a strong man':
+				cla
+				gs 'boy'
+				gs 'boyfrend', 'start'
+				stopboy = 0
+				harakBoyA = 2
+				'You find a guy named <<$boyA>>, check out his profile and send him your number hoping that he will call you.'
 
-			act 'Leave':gt 'Komp', 'brows'
+				act 'Leave':gt 'Komp', 'brows'
+			end
 		end
 	end
 

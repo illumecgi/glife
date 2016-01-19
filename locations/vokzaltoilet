@@ -19,17 +19,7 @@ LColor = RGB(106,90,205)
 act 'Exit out of the closet':gt'vokzalholle'
 
 
-act 'Look in the mirror':
-	cla
-	gs 'portmirror'
-
-	dynamic $portmirror
-
-	act 'Move away from the mirror':
-		cla
-		gt $curloc
-	end
-end
+act 'Look in the mirror':gt 'mirror', 'start'
 
 if cumfrot > 0:
 	act 'Wipe the cum off your clothes (0:10)':
@@ -38,9 +28,9 @@ if cumfrot > 0:
 		cumfrot = 0
 		minut += 10
 
-		'You have erased the traces of semen from clothing.'
+		'You have washed out all traces of semen from your clothing.'
 
-		act 'Logout':gt $curloc
+		act 'Done':gt 'vokzaltoilet'
 	end
 end
 

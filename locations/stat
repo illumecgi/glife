@@ -1,4 +1,9 @@
 # stat
+if vshrink = 0:vshrink = 1
+if vshrinkdays = 0:vshrinkdays = 6
+if ashrink = 0:ashrink = 1
+if ashrinkdays = 0:ashrinkdays = 3
+
 clr
 view
 gs'din_pav'
@@ -765,12 +770,6 @@ if hour >= 24:
 	if hour >= 24:jump 'loop'
 end
 
-if budilnikOn = 0:
-	$budilnikInfo = 'Alarm clock  <a href="exec: budilnikOn = 1 & GT $loc,$metka">off</a>'
-else
-	$budilnikInfo = 'Alarm clock  <a href="exec: budilnikOn = 0 & GT $loc,$metka">set</a>'
-end
-
 !!payments
 if day = 25:
 	if PersSecWork = 1 and PersSecWorkTimes > 0 and paydaybistrosec = 0:
@@ -1360,6 +1359,22 @@ $smoker = {
 	if energy < 20:energy += 3
 	gs 'stat'
 }
+
+if PillToggle = 1 and tabletki > 0:
+	Stabletki += tabletki
+	tabletki = 0
+elseif PillToggle = 0 and Stabletki > 0:
+	tabletki += Stabletki
+	Stabletki = 0
+end
+
+if CondomToggle = 1 and prezik > 0:
+	Sprezik += prezik
+	prezik = 0
+elseif CondomToggle = 0 and Sprezik > 0:
+	prezik += Sprezik
+	Sprezik = 0
+end
 
 if $mud ! '':pl '<font color="green"><b><<$mud>></b></font>'
 if siga <= 0 and smoker >= 20:pl '<font color="red"><b>You have run out of cigarettes.</b></font>'

@@ -219,12 +219,12 @@ if $ARGS[0] = 'forwoman':
 		gt 'stripclub', 'start'
 	end
 
-	if hour < 23 and zenit > 0 and minifoto = 0:
+	if hour ! 2 and zenit > 0 and minifoto = 0:
 		act 'Photograph':
 			minut += 10
 			'As soon as you get the camera out you are immediately approached by a security guard, and told that there is no photography allowed, you apologize and hide the camera in your purse.'
 		end
-	elseif hour < 23 and minifoto > 0:
+	elseif hour ! 2 and minifoto > 0:
 		act 'Photograph':
 			cla
 			minut += 60

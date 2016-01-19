@@ -245,19 +245,6 @@ if albinaQWdance > 0 or gsAboDance > 0 or gsAboBeg > 0 or gsAboVolley > 0:
 	end
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 $ShowerWithIvan = {
 	cls
 	minut += 5

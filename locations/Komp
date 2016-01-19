@@ -7,7 +7,7 @@ if $ARGS[0] = 'start':
 	'<center><img src="images/pics/komp.jpg"></center>'
 	'Your computer starts up and loads Windows.'
 
-	act 'Play Patience (0:15)':gt 'Komp', 'pasians'
+	act 'Play Patience (1:00)':gt 'Komp', 'pasians'
 
 	if GameCD > 0:act 'Play Disopl':gt 'KGDstart'
 	if GameCD2 > 0:act 'Play Sunset Dead':gt 'KGZstart'
@@ -67,16 +67,16 @@ if $ARGS[0] = 'brows':
 
 	'<a href="exec:GT ''Komp'',''agent''">Site agentsvo property</a>'
 
-	act 'Interior design website (0:15)':gt 'Komp', 'remont'
+	act 'Interior design website (1:00)':gt 'Komp', 'remont'
 
 	if housr = 1 and husband = 0:act 'Rent your apartment out':gt 'Komp', 'sale'
 
-	act 'Porn (0:15)':gt 'Komp', 'porno'
-	act 'Search for love (0:15)':gt 'Komp', 'znak'
+	act 'Porn (1:00)':gt 'Komp', 'porno'
+	act 'Search for love (1:00)':gt 'Komp', 'znak'
 
 	if hour < 20 and hour > 7:act 'Jobs site':gt 'Komp', 'rabota'
 
-	act 'Cable TV services (0:15)':gt 'Komp', 'kabtv'
+	act 'Cable TV services (1:00)':gt 'Komp', 'kabtv'
 	act 'Online gaming':gt 'KGstart'
 
 	if shantfoto > 0:act 'Search for the heroine you photoed on "Assbook" wesite':gt 'Komp', 'foto'
@@ -278,7 +278,7 @@ if $ARGS[0] = 'porno':
 		act 'Finish':gt 'Komp', 'porno'
 	end
 
-	if horny >= 50:act 'Masturbate (0:15)':dynamic $pornomastr
+	if horny >= 50:act 'Masturbate (1:00)':dynamic $pornomastr
 
 	act 'Leave':gt 'Komp', 'brows'
 end

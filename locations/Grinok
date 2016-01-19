@@ -199,53 +199,55 @@ if hour >= 8 and hour <= 18:
 	end
 
 	
-	if gobelen>0 and gobQW=0:
+	if gobelen > 0 and gobQW = 0:
 		act'Sell ​​tapestry':
 			cls
-			gobQW=1
-			minut+=15
+			gobQW = 1
+			minut += 15
 			gs'stat'
-			'You get up quietly at the entrance to the market and waiting for customers deploying Tapestry. To you immediately together buyers fit man and tells you, that the illegal trade in banned in the market, but it can buy you in any number of tapestries, on 500 rubles apiece.'
+			'You stand quietly by the entrance to the market, waiting for customers displaying your tapestry. Immediately buyers start to gather, but a fit man approaches you and says, "It is illegal to trade in the market without a traders licence, but I may be interesting in buying your tapestries, 500 rubles apiece. Come and see me at my stall."'
+			'Not wanting to get into trouble, you pack stuff away, the man has already gone, but you saw which direction so he should be easy to find.'
 			act 'Escape':gt $curloc
 		end
 	end
 
-	if gobelen>0 and gobQW>=1:
+	if gobelen > 0 and gobQW >= 1:
 		act'Sell ​​tapestry':
 			cls
-			minut+=15
+			minut += 15
 			gs'stat'
-			'You go to a man who offered to buy you for tapestries 500 rubles. You have been spotted smiling.'
+			'You go to the man who offered to buy your tapestries for 500 rubles. You find him by his stall, smiling.'
 
-			if gobQW=2:
-				'Roman welcomes you interested and businesslike, that you have for sale.'
+			if gobQW = 2:
+				'Roman welcomes you, all interested and businesslike, he asks what you have for sale.'
 	        end
 
-	        if gobQW=1:
-				gobQW=2
-				'Man greets you and seems Roman, you just answer, that your name is Sveta. After greeting the Roman busily interested, that you have for sale.'
+	        if gobQW = 1:
+				gobQW = 2
+				minute + 5
+				'The man greets you and introduces himself as Roman, you tell him that your name is <<$name>>. After a brief chat Roman says that he is interested in seeing what you have for sale.'
 	        end
-	    end
 
-		act'Show tapestry':
-			cls
-			gobelen-=1
-			money+=500
-			gs'stat'
-			'You show tapestry Roman and he gives you five hundred for it. You take the money and give him a tapestry.'
-			act 'Escape':gt $curloc
-		end
-
-		if gobelen>1:
-			act'Sell ​​all tapestries':
+			act'Show tapestry':
 				cls
-				kolgob=gobelen
-				gobelen=0
-				moneyGob=kolgob*500
-				money+=moneyGob
+				gobelen -= 1
+				money += 500
 				gs'stat'
-				'You show tapestries novels and it gives you <<moneyGob>> rubles for them. You take the money and give him a tapestry.'
+				'You show tapestry Roman and he gives you five hundred for it. You take the money and give him a tapestry.'
 				act 'Escape':gt $curloc
+			end
+
+			if gobelen > 1:
+				act'Sell ​​all tapestries':
+					cls
+					kolgob = gobelen
+					gobelen = 0
+					moneyGob = kolgob*500
+					money += moneyGob
+					gs'stat'
+					'You show tapestries novels and it gives you <<moneyGob>> rubles for them. You take the money and give him a tapestry.'
+					act 'Escape':gt $curloc
+				end
 			end
 
 			act 'Leave':gt $curloc

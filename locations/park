@@ -12,8 +12,7 @@ if $ARGS[0] = 'start':
 			if hour >= 0 and hour <= 7:PLAY 'sound/street_night.mp3',30
 		end
 	end
-	gs 'parkivent'
-	gs 'parkdin'
+	
 
 	$torchki = {
 		cls
@@ -82,27 +81,7 @@ if $ARGS[0] = 'start':
 	act 'Walk in the park (1:00)':
 		cla
 		minut += 60
-
-		if hour > 7 and hour < 21:
-			parkrand = rand(0, 20)
-
-			if parkrand < 10 and parkrand > 0:
-				dynamic $parkrandivdin
-				exit
-			end
-
-			if parkrand > 14:
-				dynamic $parkrandivdin
-				exit
-			end
-		end
-
-		manna += 10
-		willpower += 10
-		gs 'stat'
-		'You take a relaxing and refreshing walk through the park, trying to figure out the meaning of life.'
-
-		act 'Finish the walk':gt 'park', 'start'
+		gt 'parkdin'
 	end
 
 	

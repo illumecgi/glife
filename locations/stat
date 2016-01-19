@@ -1385,6 +1385,13 @@ elseif siga > 0 and smoker >= 20:
 	pl '<a href="exec:dynamic $smoker"><font color="blue"><b>You have <<siga>> cigarettes left</b></font></a>'
 end
 
+if siga > 0 and smoker < 20:
+	if smokeHour = hour and smokeday = day and smokeminut >= minut:
+	else
+		pl'<a href="exec:dynamic $smoker"><font color = blue><b>You have <<siga>> cigarettes</b></font></a>'
+	end
+end
+
 if smokeHour = hour and smokeday = day and smokeminut >= minut:pl '<font color="green">You are smoking a cigarette</font>'
 
 if pirs_pain_ton = 1:

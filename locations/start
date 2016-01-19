@@ -133,6 +133,11 @@ tanga = 1
 clrbelo = 1
 birthday = 5
 birthmonth = 3
+!initializing elasticity
+vshrink = 1
+vshrinkdays = 6
+ashrink = 1
+ashrinkdays = 3
 
 GameUpdate = 1
 update_2014_08_28 = 1

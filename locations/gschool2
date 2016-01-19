@@ -596,6 +596,8 @@ $d_class_leason = {
 					act'Wait for the end of the lesson':dynamic $din_bigperemena
 				end
 			end
+
+			act'Wait for the end of the lesson':dynamic $din_bigperemena
 		else
 			act'Wait for the end of the lesson':dynamic $din_bigperemena
 		end

@@ -419,6 +419,73 @@ if hour >= 6 and hour <= 21:
 		end
 	end
 
+	if narkoman = 1 and storyline > 0:
+		act 'See a doctor for help with weakness and pain':
+			cls
+			minut += 5
+			gs'stat'
+			'<center><img src="images/Y4enik/gpoli/gpoli_1.jpg"></center>'
+			if gpoli_doctorhavesex = 1:
+				'You go to the doctor for help for your addiction since you''re sure he won''t tell your mother.'
+				'"Hi <<$name>>. What brings you in today?" Doctor Petrovich says with a smile.'
+				'"Hello, Doctor. I''m feeling weak and I hurt all over." You reply.'
+				'"Well, let''s take a look, shall we?" the doctor replies as you get up to stand by the examination table.'
+			else
+				'You go to the doctor for help for your addiction.'
+				'"Hello, young lady, I''m Doctor Petrovich. Complaints, or a check up?" The doctor asks as he comes into the examination room.'
+				'"Hello. I''m feeling really weak and shaky and I hurt all over." You explain.'
+				'"Let''s take a look, shall we?" the doctor replies and gestures for me to stand next to the examination table.'
+			end
+
+			act 'Proceed':
+				cls
+				minut += 5
+				gs'stat'
+				'You tell the doctor about the white powder you''ve been sniffing while he checks your temperature, blood pressure and pulse.'
+				'"Lift your shirt so we can take a listen." he tells you as he warms his stethescope by breathing on it.'
+				'You lift your shirt and bra above your breasts as instructed and the doctor presses the stethescope to various places on your chest. He places his left hand on your tummy to steady you as he listens to my heart and breathing, occasionally bringing the stethescope to his mouth to rewarm it. The hand on your tummy moves in small circles that slip steadily lower until his finger tips slip just below the waistband of your skirt. Unlike other doctors I have seen before, Doctor Petrovich began to listen by pressing the stethescope to my boobs. He also started warming it more often and it felt moist and warm on my nipples. To my embarassment, I could feel my nipples begin to get hard. I''m not sure, but I think Doctor Petrovich was pleased to see them crinkle up.'
+				'<center><img src="images/Y4enik/gpoli/gpoli_2.jpg"></center>'
+				'"Well, so far everything is OK." As he speaks, I notice that his eyes begin to shine and he is looking with interest at my <<$titsize>> breasts. I feel my nipples get even harder and start imagining my mother is watching. To my relief, the tingle I started to feel in my pussy goes away.'
+				'"Please undress and sit down in that chair." the doctor tells you as he steps from the room, "I will be back momentarily."'
+				act 'Undress':
+					cls
+					minut += 10
+					gs'stat'
+					'<center><img src="images/Y4enik/gpoli/gpoli_3.jpg"></center>'
+					'You reluctantly undress knowing that it''s better to be checked, but suspect the doctor has other reasons to want you naked.'
+					act 'Sit in a chair':
+						cls
+						minut += 5
+						gs'stat'
+						'<center><img src="images/Y4enik/gpoli/gpoli_4.jpg"></center>'
+						'You quickly undress and climb into the chair. The leather-like surface feels strangely warm on your bottom and I realize that it is heated. Yuo fidget nervously as you wait for the doctor to return.'
+						'After what seems like hours, the doctor comes back into the room. You notice his face seems redder than it was and his hair seems to be a little damp. He has also taken off the apron-like smock he had on before. He continues with his examination, taking your hands and arms and massaging the joints and flexing them. He does the same with your feet and legs. To your surprise, he also examines your ass and pussy, easing his gloved fingers into first your pussy and then your asshole. He even speads your lips apart and pushes the hood back to expose your clitoris which he gently massages for a moment before suddenly getting to his feet with a deep sigh, his eyes lingering on my exposed pussy for a moment before he seems to give himself a little shake. You''re glad he stopped when he did because you would have started to get wet had he continued.'
+						$gpoli_sick = ''
+						if preg > 0:
+							$gpoli_sick = 'pregnant'
+						end
+						if venera > 0:
+							if $gpoli_sick ! '':$gpoli_sick = $gpoli_sick + ', you have a sexually transmitted disease'
+							if $gpoli_sick = '':$gpoli_sick = 'you have a sexually transmitted disease'
+						end
+						if $gpoli_sick = '':
+							'"Well, other than the fact that you are addicted to cocaine, you are completely healthy. Truth be told, you have a very mature body." At these words you see the corners of his mouth twitch and you think his trousers look a little tighter in his crotch, "But, that''s not what you are here for. Now wait while I write a note for your mother to authorize the shot to cure your addiction."'
+							'"Could you just give me the shot without telling her?" You ask feeling my heart start to race at the thought of your mother knowing what you had been doing.'
+							'"Well now, you are not an adult. I need her permission to treat you." he says looking at me sternly, "Those are the rules."'
+						else
+							'"Well, <<$name>>, you have a problem. You have <<$gpoli_sick>> as well as being addicted to cocaine. I''ll have to write a note to your mother for permission to treat you." the doctor pronounces.'
+							'"Could you just give me the shot without telling her?" You ask in a panic at the thought of your mother finding out. You knew she would kill you.'
+							'"Well now, you are not an adult. I need her permission to treat you." he says looking at you sternly, "You have been a very naughty girl."'
+						end
+						dynamic $gpoli_spravka_money_pale
+						dynamic $gpoli_spravka_arrange_pale
+					end
+				end
+			end
+		end
+	end
+
+
 	if StoryLine > 0 and SchoolAtestat = 0 and Gspravka < 3 and motherKnowSpravka = 0:
 		act 'Going to the gynecologist for help':
 			if vagina = 0:
@@ -707,6 +774,175 @@ $gpoli_spravka_money = {
 			'"I would like to help a pretty young girl in need, but taking a bribe could get me struck off."'
 			dynamic $gpoli_spravka_badend
 			dynamic $gpoli_spravka_arrange
+		end
+	end
+}
+
+$gpoli_spravka_money_pale = {
+	act 'Suggest money':
+		cls
+		minut += 5
+		gs'stat'
+
+		if gpoli_doctorhavesex = 0:
+			'Thinking quickly, you ask, "Could you overlook my age if I were to pay you for your time?"'
+			'"<<$name>>, I don''t know, I''m not here for the money." he lies unconvincingly, a gleam of greed appearing in his eyes, "However, a private, confidential patient wouldn''t count as a minor, so I would have no obligation to tell anyone anything. It would be like you were never here."'
+			'"The normal consultancy fee is 2000 rubles."'
+			if money >= 2000:
+				act 'Pay':
+					cls
+					minut += 5
+					money -= 2000
+					horny += 5
+					gs'stat'
+					'The doctor carefully counts the money then goes and prepares an injection from a bottle marked "0.45% Sodium Chloride Injection USP". You swallow nervously as he fills a rather large looking needle with the unfamiliar chemical.'
+					'He tells me to bend over. He seems to have some problems finding the correct spot for the shot and you feel his hand squeezing your ass cheeks in several spots before he finally finds the right place. For a moment, you''re afraid he is going to stick the needle in you asshole as he even rubbed you there. He finally swabs a spot on your bottom.'
+					'You feel a sharp pinch then the feeling of a cold liquid being injected into your ass cheek. It isn''t as bad as you thought it was going to be and you''re releved it is over.'
+					'"There, all done." the doctor says with a satisfied tone, "It could take up to 30 days for the symptoms to fully disappear, just be sure not to snort any more, or the cure will not work."'
+					act 'Leave':gt $curloc
+				end
+			end
+			dynamic $gpoli_spravka_arrange_pale
+		else
+			'<center><img src="images/Y4enik/gpoli/gpoli_5.jpg"></center>'
+			'"Well, what if I give you money?" You ask in desperation.'
+			'"Enough! I am a professional doctor, and swore an oath, I`m not here for the money." he declaims, although you are not sure that you believe him.'
+			'"Please? I could really use your help." You beg as tears begin to fill your eyes and a sob escapes your mouth, "I don''t know what else to do."'
+			'"I would like to help a pretty young girl in need, but taking a bribe could get me fired." Doctor Petrovich replies with a strange huskiness in his voice.'
+			dynamic $gpoli_spravka_arrange_pale
+		end
+	end
+}
+
+$gpoli_spravka_arrange_pale = {
+	act 'Try to negotiate':
+		cls
+		minut += 5
+		gs'stat'
+		if gpoli_doctorhavesex = 1:
+			'"Can I, I mean, can we, er.. how.. Is there something that can resolve this issue? My mother can''t find out." You sob in desperation, terror at the thought of what your mother would do if she knew ripping through your mind.'
+			'"Well, <<$name>>, you really need the treatment." the doctor says and then he licks his lips and smiles.'
+			'"I think it is possible to offer you an option, just between us, of course." he says and puts his hand on your shoulder.'
+			'"What do I have to do?" You ask, but you have a strange feeling you know what he will say.'
+			'"Well, as you know my wife went on a business trip and has been gone for some time." he states as his eyes rove my still naked body, "My job can get stressful, you see, and sometimes it becomes necessary to relieve the tension, relax, so to speak. Well, what do you say...'
+			'You understand what he is alluding to and you sit for a few seconds thinking.'
+		else
+			'"Can I, I mean, can we, er.. how.. Is there something that can resolve this issue? My mother can''t find out." You sob in desperation, terror at the thought of what your mother would do if she knew ripping through my mind.'
+			'"Well, everyone has their needs. All that is necessary is to help me with mine and I can help you with your''s." the docor replies, his eyes roving my still naked body, "My job can get stressful, you see, and sometimes it becomes necessary to relieve the tension, relax, so to speak. Well, what do you say...'
+			'"What do you..." and here you hesitate, you know what he wants you to do, but you can''t say it.'
+			'"What do I want you to do?" the docter responds with a look of interest, "Is that what you are trying to say?"'
+			'The doctor walks up to me and puts his hands on your shoulders. He licks his lips and slowly starts to move them down my body.'
+			'"A beautiful girl like you always has other options." he says and you feel a shiver up your spine as his hands caress the sides of your <<$titsize>> boobs before he moves them to his trousers.'
+			'You am sitting with his belt at eye level, which he starts to unfasten.'
+			act 'Run out of the office':
+				cls
+				gs'stat'
+				'In a panic, you grab your clothes and run out of the office. You decide not to say anything about this in fear he will tell your mother about your addiction.'
+				act 'Leave':gt $curloc
+			end
+		end
+		act 'Do what you have to do':
+			cls
+			minut += 5
+			horny += 5
+			gs'stat'
+			'<center><img src="images/Y4enik/gpoli/gpoli_6.jpg"></center>'
+			'You slowly slide off your chair and kneel in front of the doctor as he undoes his trousers and lets them slide to the floor, exposing his semi-hard penis. You grasp it in your hand and reluctantly begin to lick his member while sliding your hand up and down the shaft. As his cock begins to get harder, you become interested in the changes to his manhood. You find myself starting to get involved in pleasuring him. To my surprise, you think you might even be starting to enjoy the feel and taste of his hot flesh. You start moving your hand faster, still licking his now fully erect cock and his breathing slightly accelerates. You think maybe that`s it, the end is near and he is about to come, but, no, instead the doctor lays his hand on your head. You want to raise your head to see what he wants but instead he pulls you towards his penis and your <<$liptalk>> begin to stretch over his slippery cockhead.'
+			act 'Blow job':
+				cls
+				minut += 5
+				horny += 5
+				bj += 1
+				if gpoli_doctorhavesex = 0:gpoli_doctorhavesex = 1 & guy += 1
+				gs'stat'
+				'<center><img src="images/Y4enik/gpoli/gpoli_7.jpg"></center>'
+				'You want to move back, but there is nowhere to go, his stiff cock in front of you and his powerful hand on the back of your head pulling me closer. The masculine smell of his throbbing cock fills your nose as you breath and you find that it excites you. He begins to relax a little, letting you pull back until just the tip of his cock is between your lips then pulling your head closer forcing his cock deeper each time. At first, it is easy to take his cock into your mouth, but he continues to pull your head closer with each movement forward. Breathing becomes more difficult, until you learn to breath through your nose when he lets you pull back.'
+				'Soon he is fucking your mouth harder and harder, your saliva drooling down his shaft and over his hairy balls. The air of the office is filled with wet slurps and snorts as he pounds his cock into your mouth deeper and deeper, sometimes making you want to gag as the head of his cock slips down your throat. With a sudden thrust, you can feel his curly pubic hair against your lips as he forces his cock down your throat. You feel the urge to panic as you can''t breathe, but Doctor Petrovich just as suddenly pulls his dick out of your mouth. thankfully, you get a chance to catch your breath.'
+				'"I think that got me lubed up." Doctor Petrovich says with a lusty voice and you can tell he is very excited now, "Come on, now it''s time to go deep.'
+				'"What do you mean?" You start to ask but get your answer almost immediately as Doctor Petrovich raises you from the floor, and bends you over the chair. You can''t help letting out a moan as he begins to rub the head of his slippery cock against your engorged clitoris. You didn''t realize how excited you were getting when you were sucking his cock.'
+				act 'Further':
+					cls
+					minut += 5
+					horny += 5
+					gs'stat'
+					'<center><img src="images/Y4enik/gpoli/gpoli_8.jpg"></center>'
+					'You can feel your body''s need rising when his body touches you. As Doctor Petrovich keeps massaging your clitoris with his cockhead, you can feel your juices start to leak from your swollen pussy and run down your quivering thighs. You can hear the wet squelching as he plows his throbbing cock between your soaking wet pussy lips. You close your eyes for a moment as you feel him push against your sopping wet pussy. Your tender flesh resists for a moment then surrenders and you feel the walls of your vagina stretch open letting the invader in. You let out a passionate groan as he fills you.'
+					act 'Sex':
+						cls
+						minut += 5
+						orgasm += 1
+						sex += 1
+						horny = horny/2
+						vagina += 1
+						gs'stat'
+						'<center><img src="images/Y4enik/gpoli/gpoli_9.jpg"></center>'
+						'Your body begins to get hotter and hotter, beads of sweat forming on your forehead and upper lip. The doctor starts moving, at first you can feel just little twitches, like a bird pecking, however, with each thrust, he begins to go faster and harder, and you can feel your excitement growing too. Involuntarily you start to moan and gasp for air. You begin to groan louder and louder as you become more and more aroused. His hard hot member keeps piercing you harder and deeper, going faster and faster without stopping. You could feel what seemed like rivers of your pussy juice running down your legs. "I hope the room is soundproofed." You think as the sound of his body slapping wetly against yours gets louder and your cries of passion fill the room along with his animal grunts. The pace has become so fast, you can no longer control yourself and your orgasm rips through you like lightning. Waves of bliss sear your nerves and your mouth opens in a silent scream as you are consumed with pleasure. Suddenly, Doctor Petrovich pulls his dick out of you and you almost fall to the floor but the doctor scoops you up in his powerful arms and sits you on the counter where you once again feel his cock slide into your quivering vagina.'
+						act 'Sex on the counter':
+							cls
+							minut += 5
+							horny += 5
+							gs'stat'
+							'<center><img src="images/Y4enik/gpoli/gpoli_10.jpg"></center>'
+							'Again he starts with small little thrusts but soon begins to go faster. Your body is no longer under your control as you feel your hips rising to meet his thrusts, an electric shock coursing through your body as his hard pubic bone smashes into your clitoris with each impassioned thrust. Everything ceases to exist except for the wonderful feeling of his hard throbbing shaft moving in and out of your <<age>> year old pussy. Again, you feel the overwhelming power of an orgasm explode from your belly.'
+							'"You come so quickly," Doctor Petrovich pants in your ear, "I will be right back, we are not done yet. Let me show you, what you need to do, so we can take care of each other''s problems."'
+							'You kind of heard what he said, but as convulsions continued to beat your senses after your orgasms, you cannot understand what is next, you have nothing but confused thoughts about whether you want more orgasms, or if you want it to be over. Then the doctor comes back wearing a glove and carrying a jar of thick liquid. He sticks his gloved fingers into the jar then turns you over. He spreads the thick liquid on your ass and anus. You just come to your senses as you feel your anus being painfully stretched as you are penetrated by Doctor Petrovich''s cock. He gives a sudden thrust and you cry out at the sudden pain. You let out a painful sob when he is finally all the way in.'
+							act 'Anal':
+								cls
+								minut += 5
+								horny += 15
+								anal += 1
+								anus += 1
+								gs'stat'
+								'<center><img src="images/Y4enik/gpoli/gpoli_11.jpg"></center>'
+								'You want to move away from it, but you are against the wall with no escape. Petrovich begins to move again, not as sharply, more smoothly, but no less painful. You try to relax your anus, but you can''t do it. Now the movement begins to accelerate, stretching your asshole and penetrating you deeper and deeper. You am almost screaming when the pace quickens even more.'
+								'"That will not do, people in the hallway could hear." grunts Doctor Petrovich and he takes his penis out of your ass. You feel both relieved and excited.'
+								'He throws his coat onto the floor, removes you from the counter and lays you on the floor. Your legs will not obey you, so you have no choice but to grab onto the doctor''s arm and go where he puts you. He slathers more of the liquid on your ass then rubs his cock against you.'
+								act 'Sex on the floor':
+									cls
+									minut += 5
+									horny += 15
+									gs'stat'
+									'<center><img src="images/Y4enik/gpoli/gpoli_12.jpg"></center>'
+									'The doctor lays down behind you, spooning you then he drives his penis into your vagina and starts to fuck you fast and hard. You don''t like the brutal pounding, but after awhile start to enjoy it, especially since it is not in your ass. In anticipation of an orgasm, you relax, and begin to actively moan. But at this point, Doctor Petrovich takes his penis out of your pussy and rams it into your ass. You cry out, but a foretaste of your orgasm shoots through some of the pain. He is going as fast as before and it hurts just as much. Hoping in any way to relieve the pain you start to knead your clitoris, trying to hurry your orgasm.'
+									act 'Anal':
+										cls
+										minut += 5
+										horny = 0
+										orgasm += 1
+										gs'stat'
+										'<center><img src="images/Y4enik/gpoli/gpoli_13.jpg"></center>'
+										'Already well aroused before having his cock in your ass, mashing your clitoris begins to help you to come. You have no thoughts in your head as Petrovich fucks you hard in the ass except to come as fast as you can. You begin to shake and you almost pass out as your release takes you, the waves of orgasmic bliss soothing the pain away until they become one. You relax and his cock pounds your ass deeper and harder. A few more hard deep thrusts and suddenly Petrovich pulls his cock out of your ass and takes you by the hair and he puts his penis into your mouth.'
+										act 'Accept':
+											cls
+											minut += 5
+											horny += 5
+											cumlip += 1
+											swallow += 1
+											gs'stat'
+											'<center><img src="images/Y4enik/gpoli/gpoli_14.jpg"></center>'
+											'In your weakened condition, you have no choice but to take his cock in your mouth. He grunts as he thrusts his slimy cock into your mouth about four or five times then I can taste his hot seed spurting from his throbbing member. He holds my head to his stomach as ropes of his thick spend fill my mouth. You have to start swallowing his hot tangy sperm or you''ll choke. As his orgasm comes to an end, he makes a few more shallow thrusts into your mouth to enjoy the afterglow then pulls his softening cock from your mouth and takes a deep breath. He then begins to carry on as if nothing had happened. You sit naked on the floor trying to marshal your thoughts and absently wipe the sperm that leaked from the corners of your mouth onto your thigh. You blink as if waking up from a sound sleep and climb to your feet on shaky legs.'
+											act 'Gather':
+												cls
+												minut += 5
+												horny += 5
+												gs'stat'
+												'<center><img src="images/Y4enik/gpoli/gpoli_15.jpg"></center>'
+												'"Well, one good turn deserves another." the smiling doctor says as he prepares an injection from a bottle marked "0.45% Sodium Chloride Injection USP". You swallow nervously as he fills a rather large looking needle with the unfamiliar chemical.'
+												'He tells you to bend over. He seems to have some problems finding the correct spot for the shot and you feel his hand squeezing your ass cheeks in several spots before he finally finds the right place. For a moment, you''re afraid he is going to stick the needle in your asshole as he even rubbed you there. He finally swabs a spot on your bottom.'
+												'You feel a sharp pinch then the feeling of a cold liquid being injected into your ass cheek. It isn''t as bad as you thought it was going to be and you''re releved it is over.'
+												'"There, all done." the doctor says with a satisfied tone, "It could take up to 30 days for the symptoms to fully disappear, just be sure not to snort any more, or the cure will not work."'
+												'"Please get dressed now, I still have other patients waiting." he says as he tidies the room, "Please take care of yourself. Good bye."'
+												'"Bye." You mumble after gathering and putting your clothes back on and heading for the exit.'
+												act 'Leave':gt $curloc
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
 		end
 	end
 }

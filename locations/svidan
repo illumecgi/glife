@@ -310,7 +310,7 @@ if $ARGS[0] = 'hisA':
 		'<<$nameV>> you put on your back and spread your legs.'
 		gs 'orgazm', 'start'
 
-		act 'Leave.':
+		act 'Show him out':
 			cla
 			dynamic $brodilr
 		end
@@ -340,7 +340,7 @@ if $ARGS[0] = 'hisA':
 			'<center><img src="images/picV/swallow.jpg"></center>'
 			'Hot jet of sperm hit you in the mouth. You started to swallow cum, and <<$nameV>> continued to cum in your mouth. Finally the flow of hot liquid with a pungent taste stopped.'
 
-			act 'Leave.':
+			act 'Show him out':
 				cla
 				dynamic $brodilr
 			end
@@ -372,7 +372,7 @@ if $ARGS[0] = 'hisA':
 				'<<$nameV>> hold your hair took a member of your mouth and cum on your face, covering it with warm and sticky cum.'
 			end
 
-			act 'Leave.':
+			act 'Show him out':
 				cla
 				dynamic $brodilr
 			end
@@ -405,9 +405,9 @@ if $ARGS[0] = 'kvartA':
 			'<<$nameV>> you put on your back and spread your legs.'
 			gs 'orgazm', 'start'
 
-			act 'Hold up doors.':
+			act 'Show him out':
 				cla
-				gt 'mirror', 'fin'
+				dynamic $brodilr
 			end
 		end
 
@@ -435,13 +435,13 @@ if $ARGS[0] = 'kvartA':
 				'<center><img src="images/picV/swallow.jpg"></center>'
 				'Hot jet of sperm hit you in the mouth. You started to swallow cum, and <<$nameV>> continued to cum in your mouth. Finally the flow of hot liquid with a pungent taste stopped.'
 
-				act 'Hold up doors.':
+				act 'Show him out':
 					cla
-					gt 'mirror', 'fin'
+					dynamic $brodilr
 				end
 			end
 
-			act 'Remove the mouth.':
+			act 'Remove the mouth':
 				cla
 				*clr
 
@@ -467,9 +467,9 @@ if $ARGS[0] = 'kvartA':
 					'<<$nameV>> hold your hair took a member of your mouth and cum on your face, covering it with warm and sticky cum.'
 				end
 
-				act 'Hold up doors.':
+				act 'Show him out':
 					cla
-					gt 'mirror', 'fin'
+					dynamic $brodilr
 				end
 			end
 
@@ -491,9 +491,9 @@ if $ARGS[0] = 'kvartA':
 				if harakBoyA = 1:bfA -= 5
 				if harakBoyA = 2:bfA -= 10
 
-				act 'Wipe your hands and hold up to the door.':
+				act 'Wipe your hands and show him out':
 					cla
-					gt 'mirror', 'fin'
+					dynamic $brodilr
 				end
 			end
 
@@ -528,7 +528,7 @@ if $ARGS[0] = 'kvartA':
 					end
 				end
 
-				act 'Further.':
+				act 'Further':
 					cla
 					gt 'svidan', 'kvartA'
 				end

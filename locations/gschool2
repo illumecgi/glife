@@ -574,6 +574,7 @@ $d_class_leason = {
 				cla
 				if sub < 30:
 					act'Don''t pay attention':
+						cla
 						if dom > 70:
 							'- "<<$name>>, Could you listen carefully to my lecture. I tell a very important point, he is sure to be on the exam." - The teacher turned to you.'
 							'- "Yes, of course <<$teacher>>, let us continue to listen to our fascinating lecture. Just speak slower and clearer, And then I began to fall asleep. - Boldly answer you.'
@@ -585,7 +586,7 @@ $d_class_leason = {
 								act'Wait for the end of the lesson':dynamic $din_bigperemena
 							end
 							act'Get out of class':school_event_hour = day & dynamic $din_bigperemena
-							!end
+							exit
 						else
 							'In response to your rudeness teacher threatened to complain to the Director, you do in response to this, They gave him his empty eyes and disregard.'
 							act'Wait for the end of the lesson':dynamic $din_bigperemena
@@ -595,6 +596,7 @@ $d_class_leason = {
 				act'Focus on Lessons':
 					act'Wait for the end of the lesson':dynamic $din_bigperemena
 				end
+				exit
 			end
 
 			act'Wait for the end of the lesson':dynamic $din_bigperemena

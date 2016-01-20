@@ -62,7 +62,7 @@ if $ARGS[0] = 'br':
 	beg += 1
 	fat -= 10
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = salo + rand(1, 20)
+	begminus = salo/2 + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'Women''s 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
@@ -85,7 +85,7 @@ if $ARGS[0] = '3':
 	beg += 1
 	fat -= 10
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = salo + rand(1, 20)
+	begminus = salo/2 + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
@@ -108,7 +108,7 @@ if $ARGS[0] = '2':
 	beg += 1
 	fat -= 10
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = salo + rand(1, 20)
+	begminus = salo/2 + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'Women''s 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
@@ -131,7 +131,7 @@ if $ARGS[0] = '1':
 	beg += 1
 	fat -= 10
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = salo + rand(1, 20)
+	begminus = salo/2 + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'Women''s 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
@@ -154,7 +154,7 @@ if $ARGS[0] = 'kms':
 	beg += 1
 	fat -= 10
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = salo + rand(1, 20)
+	begminus = salo/2 + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'Women''s 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
@@ -177,7 +177,7 @@ if $ARGS[0] = 'ross':
 	beg += 1
 	fat -= 10
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = (salo * 2) + rand(1, 20)
+	begminus = salo + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'Women''s 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
@@ -201,7 +201,7 @@ if $ARGS[0] = 'kval':
 	fat -= 10
 	razradbeg += 1
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = (salo * 3) + rand(1, 20)
+	begminus = (salo * 2) + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'Women''s 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'
@@ -225,7 +225,7 @@ if $ARGS[0] = 'evro':
 	fat -= 10
 	razradbeg += 1
 	begplus = beg + speed + vital + rand(1, 20)
-	begminus = (salo * 4) + rand(1, 20)
+	begminus = (salo * 3) + rand(1, 20)
 	begresult = begplus - begminus
 	'<center><img src="images/etogame/begsor.jpg"></center>'
 	'Women''s 400 meters race. You change clothes and go out on the treadmill. Get up at the start. Distributed starting shot.'

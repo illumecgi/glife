@@ -570,7 +570,7 @@ if alko > 0 and alkomday ! daystart:
 	'Mom sniffed "<<$name>> you smell of alcohol, what is this mess? You''re still too young to drink that!"'
 end
 
-if (cumlip > 1 or cumface > 0 or cumfrot > 0) and whoremday ! daystart:
+if (cumface > 0 or cumfrot > 0) and whoremday ! daystart:
 	cla
 	whoremday = daystart
 	if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:

@@ -12,7 +12,7 @@ gs 'stat'
 '<center><b>Bedroom</b></center>'
 '<center><img src="images/img/centr/spaln.jpg"></center>'
 'There is  a <a href="exec:gt ''bed'', ''start''">double bed</a> and an <a href="exec:gt ''budilnik'', ''start''">alarm clock</a>.'
-'Also, a plain <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">wardrobe</a> standing against the wall, bestide which stands a make-up table with a mirror <a href="exec:gt ''mirror'', ''start''">mirror</a> on it.'
+'Also, a plain <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">wardrobe</a> standing against the wall, bestide which stands a make-up table with a <a href="exec:gt ''mirror'', ''start''">mirror</a> on it.'
 if komp = 1:'You can use your <a href="exec:gt ''Komp'', ''start''">Computer</a> here.'
 
 act 'Goto the corridor':

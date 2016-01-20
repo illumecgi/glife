@@ -1182,7 +1182,7 @@ elseif manna >= (intel * magik + magik * 100 + vital * 10 + rikudo) * 50 / 100:
 elseif manna >= (intel * magik + magik * 100 + vital * 10 + rikudo) * 25 / 100:
 	$manna = '<font color="red">You are in a terrible mood.</font>'
 else
-	$manna = '<font color="red">Your mood is below any skirting and urban sanitation.</font>'
+	$manna = '<font color="red">Your mood is stuck in the gutter.</font>'
 end
 
 if energy >= 20:$energy = '<font color="green">You couldn''t eat one more bite.</font>'

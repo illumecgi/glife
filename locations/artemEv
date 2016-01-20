@@ -245,7 +245,7 @@ $din_artem_lern = {
 					'You just do lessons.'
 				end
 				act 'Further':artemhomemark = 1 & gt 'artemhome'
-			elseif artemStripSee = 4:
+			elseif artemStripSee = 4 and artemAndPetja = 0:
 				cls
 				minut += 5
 				gs 'stat'

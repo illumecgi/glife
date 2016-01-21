@@ -133,7 +133,7 @@ $din_kotov_anal = {
 		'<center><img src="images/qwest/alter/Ev/anal.jpg"></center>'
 		dynamic $sexstart
 		dynamic $analsex
-		if dikos = 1:'All <<$name[2]>> Hare. I can not anymore.'
+		if dikos = 1:'All <<$nickname>> Hare. I can not anymore.'
 		
 		if dikos = 0 and horny >= 30: 
 		    act 'Vitya, want more.':
@@ -164,7 +164,7 @@ $din_kotov_sex = {
 		dynamic $sexstart
 		dynamic $sexstart2
 		dynamic $sexcum
-		if dikos = 1:'All <<$name[2]>> Hare. I can not anymore.'
+		if dikos = 1:'All <<$nickname>> Hare. I can not anymore.'
 		
 		if dikos = 0 and horny >= 30: 
 		    act 'Request More':

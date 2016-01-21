@@ -298,7 +298,7 @@ $din_play_card_sex = {
 		gs'stat'
 		*clr & cla
 		'<center><img src="images/qwest/alter/parc_ev/placer_sex79.jpg"></center>'
-		'Initially, you will see this as a necessity, but the skillful hands and lips whetted you guys in earnest. Digging on the lips of one of the guys passionate kiss, You cowards groped through the second member of the Man, and though it was not very comfortable you become its stroke. dreaming, that he was in your pussy. there <<$bname>>   picked up the edge of her panties, He lifted them, He slipped his hand under them grinning, said: «It seems, <<$name[1]>> so you do not give us , and against our gain, anyway, Your pussy is not exactly against».'
+		'Initially, you will see this as a necessity, but the skillful hands and lips whetted you guys in earnest. Digging on the lips of one of the guys passionate kiss, You cowards groped through the second member of the Man, and though it was not very comfortable you become its stroke. dreaming, that he was in your pussy. there <<$bname>>   picked up the edge of her panties, He lifted them, He slipped his hand under them grinning, said: «It seems, <<$name>> so you do not give us , and against our gain, anyway, Your pussy is not exactly against».'
 		Act 'Further':
 			horny += 20
 			gs'stat'
@@ -479,7 +479,7 @@ $din_play_card = {
 						Act 'Require win': dynamic $din_play_card_win
 					else 
 						'<center><img src="images/qwest/alter/parc_ev/placer_sex77.jpg"></center>'
-						'«Well <<$name[2]>>, your card bit, revenge you could not. What we are going to do?», - said <<$bname>>. You sighed and pulled her dress, remained in his underwear: «I hate to lose», - you said. The guys laughed, and <<$bname2>> said: «Nothing will compare this loss with a win, so we will try to», - and also began to undress.'
+						'«Well <<$nickname>>, your card bit, revenge you could not. What we are going to do?», - said <<$bname>>. You sighed and pulled her dress, remained in his underwear: «I hate to lose», - you said. The guys laughed, and <<$bname2>> said: «Nothing will compare this loss with a win, so we will try to», - and also began to undress.'
 						Act 'Further': dynamic $din_play_card_sex
 					end
 				end
@@ -539,7 +539,7 @@ $din_stay_in_bed = {
 							Act 'Get off the member':
 								*clr & cla
 								'<center><img src="images/qwest/alter/parc_ev/placer_sex53.jpg"></center>'
-								'You lifted the ass and <<$bname>>, I pulled out a member of your ass.  He kissed you in the neck, he said: "<<$name[2]>>, you`re lovely. Hope, did you like it, just like me". You languidly smiled and told the guy: "Everything was great. But still I have to go home".'
+								'You lifted the ass and <<$bname>>, I pulled out a member of your ass.  He kissed you in the neck, he said: "<<$nickname>>, you`re lovely. Hope, did you like it, just like me". You languidly smiled and told the guy: "Everything was great. But still I have to go home".'
 								Act 'To go to the shower':
 									$din_dush_text='Taking a shower, and thoroughly washed all their holes. You This collection of steel.'
 									dynamic $din_dush 
@@ -582,7 +582,7 @@ $din_stay_in_bed = {
 						gs'stat'
 						*clr & cla
 						'<center><img src="images/qwest/alter/parc_ev/placer_sex58.jpg"></center>'
-						'"Time for ass, <<$name[2]>> After all, I would not mind?", - I asked <<$bname2>>, as if you could answer that is given his dick in your mouth. Boys again just as easily have thrown you."Spread your ass", - I said, <<$bname2>>, and you are willing to obey, apart his ass handed. <<$bname2>> He pressed his dick to your anus and slowly began to enter it. You groaned aloud, leaning back and clutched his hands in the sheets. <<$bname2>> He drove his cock on the eggs and started as slowly pull it. Leaving your ass one head, he again drove into his dick and began to fuck you faster. You screamed so probably heard all the neighbors: " Another-e-e... fuck my ass... Do not stop-I-I",- but yell at your pleasure you have not given, <<$bname>>  stuffed your mouth with his cock his. A member in the ass, member of the mouth. Before that, they were in your pussy. It`s so exciting and so dissolute. '
+						'"Time for ass, <<$nickname>> After all, I would not mind?", - I asked <<$bname2>>, as if you could answer that is given his dick in your mouth. Boys again just as easily have thrown you."Spread your ass", - I said, <<$bname2>>, and you are willing to obey, apart his ass handed. <<$bname2>> He pressed his dick to your anus and slowly began to enter it. You groaned aloud, leaning back and clutched his hands in the sheets. <<$bname2>> He drove his cock on the eggs and started as slowly pull it. Leaving your ass one head, he again drove into his dick and began to fuck you faster. You screamed so probably heard all the neighbors: " Another-e-e... fuck my ass... Do not stop-I-I",- but yell at your pleasure you have not given, <<$bname>>  stuffed your mouth with his cock his. A member in the ass, member of the mouth. Before that, they were in your pussy. It`s so exciting and so dissolute. '
 						Act 'Further':
 							*clr & cla
 							'<center><img src="images/qwest/alter/parc_ev/placer_sex59.jpg"></center>'
@@ -745,7 +745,7 @@ gs'stat'
 								gs'stat'
 								'<center><img src="images/qwest/alter/parc_ev/placer_sex46.jpg"></center>'
 								'When finished pour <<$bname>>,  gently kissed you, and he said,:' 
-								'- Thank you, <<$name[2]>> you`re lovely, Tomorrow we prepare for you? - you laughed.'
+								'- Thank you, <<$nickname>> you`re lovely, Tomorrow we prepare for you? - you laughed.'
 								'- Oh no, your breakfast you protrahal, I have to go, give the towel, and that on a shower no, but I `m not sure that I was not fucked again. -  heavy sigh <<$bname>>,  you handed the towel, you wiped off the sperm Man. And they ran to gather.'
 								Act 'Coming and going home': minut += 10 & gs'stat' & gt'gorodok'
 							end
@@ -760,7 +760,7 @@ gs'stat'
 $din_breakfast = {
 	*clr & cla
 	'<center><img src="images/qwest/alter/parc_ev/placer_sex36.jpg"></center>'
-	'While the guys are sleeping you decide to prepare breakfast. I went to the kitchen <<$bname>>: "<<$name[2]>>, and what on you so many clothes", - You stared at the guy. "Yes, YES Remove anything ".'
+	'While the guys are sleeping you decide to prepare breakfast. I went to the kitchen <<$bname>>: "<<$nickname>>, and what on you so many clothes", - You stared at the guy. "Yes, YES Remove anything ".'
 	Act 'Remove a bra': dynamic $din_breakfast_sex
 	Act 'Show language':
 		*clr & cla
@@ -829,7 +829,7 @@ $din_drink_vodca2 = {
 						Act 'Exit out of the shower':
 							*clr & cla
 							'<center><img src="images/qwest/alter/parc_ev/placer_sex28.jpg"></center>'
-							'Boys meet you in the hallway and, see you, We began to laugh, <<$bname>> said: «Still cool towel to buy». Have you already thought offended, but <<$bname>> continued: «You <<$name[2]>> no offense, you really are a towel, besides the, below that there is much better». You smiled and forgave them rzhach: «Okay, guys I`m home», - Guys were upset by the prospect, and tried to persuade you to stay still: «sit, talk, we can all stay», - offered <<$bname>>.'
+							'Boys meet you in the hallway and, see you, We began to laugh, <<$bname>> said: «Still cool towel to buy». Have you already thought offended, but <<$bname>> continued: «You <<$nickname>> no offense, you really are a towel, besides the, below that there is much better». You smiled and forgave them rzhach: «Okay, guys I`m home», - Guys were upset by the prospect, and tried to persuade you to stay still: «sit, talk, we can all stay», - offered <<$bname>>.'
 							Act 'Coming and going home': minut += 30 & gs'stat' & gt'gorodok'
 							Act 'Staying with the guys': dynamic $din_stay_the_night
 						end	
@@ -860,14 +860,14 @@ $din_drink_vodca2 = {
 								Act 'And put my feet up':
 									*clr & cla
 									'<center><img src="images/qwest/alter/parc_ev/placer_sex34.jpg"></center>'
-									'«Hammer druzhban, <<$name[2]>> Now you do not have to scream?», - in jest, I asked <<$bname>>, you just smiled and put his feet up on the table. Put on display their cum -drenched pussy.  «Yes, my majesty pretty, although Gandon would not prevent, and then see what done», - guys said, that very nice, and that you have a very beautiful pussy, and that`s how she is flooded with sperm looks nice.  Interrupting their chatter you`re headed to the shower.'
+									'«Hammer druzhban, <<$nickname>> Now you do not have to scream?», - in jest, I asked <<$bname>>, you just smiled and put his feet up on the table. Put on display their cum -drenched pussy.  «Yes, my majesty pretty, although Gandon would not prevent, and then see what done», - guys said, that very nice, and that you have a very beautiful pussy, and that`s how she is flooded with sperm looks nice.  Interrupting their chatter you`re headed to the shower.'
 									Act 'Go into the shower':
 										$din_dush_text='Okay, I`m in the shower, I go wash your sperm from her pussy. The guys take you to the soul, showing where that is. you showered, and thoroughly washed all of a, with the idea that, only be carried by and you have not flown. During sex of it as I do not think.'
 										dynamic $din_dush 
 										Act 'Exit out of the shower':
 											*clr & cla
 											'<center><img src="images/qwest/alter/parc_ev/placer_sex28.jpg"></center>'
-											'Boys meet you in the hallway and, see you, We began to laugh, <<$bname>> said: «Still cool towel to buy». Have you already thought offended, but <<$bname>> continued: «You <<$name[2]>> no offense, you really are a towel, besides the, below that there is much better». You smiled and forgave them rzhach: «Okay, guys I`m home», - Guys were upset by the prospect, and tried to persuade you to stay still: «sit, talk, we can all stay», - offered <<$bname>>.'
+											'Boys meet you in the hallway and, see you, We began to laugh, <<$bname>> said: «Still cool towel to buy». Have you already thought offended, but <<$bname>> continued: «You <<$nickname>> no offense, you really are a towel, besides the, below that there is much better». You smiled and forgave them rzhach: «Okay, guys I`m home», - Guys were upset by the prospect, and tried to persuade you to stay still: «sit, talk, we can all stay», - offered <<$bname>>.'
 											if (week >= 1 and week < 5) or week = 7: '"Not at my school tomorrow, some stay. Maybe another time", - bit ruefully told you.'
 											if week = 5 or week = 6 : 
 												'"You can and stay, Tomorrow off", - We think you.'
@@ -1040,7 +1040,7 @@ $din_drink_vodca = {
 															Act 'Further':
 																*clr & cla
 																'<center><img src="images/qwest/alter/parc_ev/placer_sex21.gif"></center>'
-																'By putting your cancer <<$bname>>,  completely took your mouth, said another «I`ve already been there, so go you try, <<$name[2]>> After all, you do not mind?», - as if you could, that the answer, given dick in her mouth. Although you did not care who or where you fucks,  you like, that it simply does not cease.  The second guy came in you, in oil, hot and hard, moving deeper, member will drive the full length. You seem, that his heart be broken off from this buzz. You fucking two guys, feeling within yourself two powerful member - one in the mouth, the other vagina, you are floating in the mind, feelings. Your body is malleable and subject to any request of the guys.'
+																'By putting your cancer <<$bname>>,  completely took your mouth, said another «I`ve already been there, so go you try, <<$nickname>> After all, you do not mind?», - as if you could, that the answer, given dick in her mouth. Although you did not care who or where you fucks,  you like, that it simply does not cease.  The second guy came in you, in oil, hot and hard, moving deeper, member will drive the full length. You seem, that his heart be broken off from this buzz. You fucking two guys, feeling within yourself two powerful member - one in the mouth, the other vagina, you are floating in the mind, feelings. Your body is malleable and subject to any request of the guys.'
 																Act 'Further':
 																	*clr & cla
 																	'<center><img src="images/qwest/alter/parc_ev/placer_sex22.gif"></center>'

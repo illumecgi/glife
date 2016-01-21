@@ -482,9 +482,9 @@ if $ARGS[0] = 'BjBeerBeaten':
 		end
 	elseif BjBeerQW = 4:
 		''
-		'You routinely embarks on her knees and takes carefully suck dick. Suddenly came Vitek and grabbed you for your ass "Listen <<$name[2]>>, Ass well you work?"'
+		'You routinely embarks on her knees and takes carefully suck dick. Suddenly came Vitek and grabbed you for your ass "Listen <<$nickname>>, Ass well you work?"'
 		if anus <= 5:
-			'No, not working, you answer. "At this point Shmarov and off? Disorder boys." - Gopnik cheered. - "Do not worry <<$name[2]>> we`ll sobem hymen with assholes." You re dragged deeper into the park.'
+			'No, not working, you answer. "At this point Shmarov and off? Disorder boys." - Gopnik cheered. - "Do not worry <<$nickname>> we`ll sobem hymen with assholes." You re dragged deeper into the park.'
 		elseif anus > 5:
 			'Yes, working, answer you suddenly embarrassed. "No, you see what a clever JUMPS, at the very point operation, boys and then serve vpadlu? Let`s talk".'
 		end
@@ -518,9 +518,9 @@ if $ARGS[0] = 'BjBeerYes':
 		end
 	elseif BjBeerQW = 4:
 		''
-		'You are accustomed to kneel and accept carefully suck dick. Suddenly came Vitek and grabbed you for your ass "Listen <<$name[2]>>, Ass well you work?"'
+		'You are accustomed to kneel and accept carefully suck dick. Suddenly came Vitek and grabbed you for your ass "Listen <<$nickname>>, Ass well you work?"'
 		if anus <= 5:
-			'No, not working, you answer. "At this point Shmarov and off? Disorder boys." - Gopnik cheered. Do not worry <<$name[2]>> we`ll sobem hymen with assholes. You re dragged deeper into the park.'
+			'No, not working, you answer. "At this point Shmarov and off? Disorder boys." - Gopnik cheered. Do not worry <<$nickname>> we`ll sobem hymen with assholes. You re dragged deeper into the park.'
 		elseif anus > 5:
 			'Yes, working, answer you suddenly embarrassed. "No, you see what ohrenevshy JUMPS, at the very point operation, and means for kids to push the rolls vpadlu? Let`s talk".'
 		end
@@ -653,7 +653,7 @@ if $ARGS[0] = 'BjBeerFace':
 	if BjBeerQW = 0:
 		'-"It should be the next time the phone remove, then she chokes, yes kid show" - you hear a soft voice behind Dan, facing the rest of the Gopnik. Behind you heard laughter.'
 	elseif BjBeerQW = 1:
-		'Boys whispering behind you thinking that you can not hear, you hear snatches of conversation- "...<<$name[2]>> then? Well, Dad told me that her mother, she was still a whore in his youth, sucking like a vacuum cleaner, so it genes!". You have reddened.' 
+		'Boys whispering behind you thinking that you can not hear, you hear snatches of conversation- "...<<$nickname>> then? Well, Dad told me that her mother, she was still a whore in his youth, sucking like a vacuum cleaner, so it genes!". You have reddened.' 
 	elseif BjBeerQW = 2:
 		'-"Good nipple, interestingly, and the other hole in her work, too? I`ll check." - You hear the quiet whispers behind his back.'
 	end
@@ -698,9 +698,9 @@ if $ARGS[0] = 'BjBeerPhone':
 
 	'<center><img src="images/qwest/alter/placer/BjBeerPhone.jpg"></center>'
 	'You bow your <<$liptalk>> lips member Vic, at this point, and with suitable Den clovami "Open wider jaws, slut" begins unceremoniously cram even your, stretching your girl`s mouth to the limit.' 
-	'Suddenly Shulga took the phone and began to shoot you, commenting on what is happening. "All hi, This news Pavlovsky, Today our guest <<$gnikname>> <<$name[1]>>, Hi <<$name[1]>>"'
+	'Suddenly Shulga took the phone and began to shoot you, commenting on what is happening. "All hi, This news Pavlovsky, Today our guest <<$gnikname>> <<$name>>, Hi <<$name>>"'
 	'"Mvhr ... mflm ..." - mychite you can not say anything. Guys keep you strong, preventing escape, and continue to roughly fuck you in the mouth two huyami.' 
-	'-"<<$name[1]>> Now for the beer sucks, she loves this business. Do you like because?" - Dan squeezed your <<$hapri2>> <<$hair2>> hair in his fist and bellowed yes you, Nodding.' 
+	'-"<<$name>> Now for the beer sucks, she loves this business. Do you like because?" - Dan squeezed your <<$hapri2>> <<$hair2>> hair in his fist and bellowed yes you, Nodding.' 
 	'- "Over a bottle of beer - suction to swallow in three, Where else can you find such cheap huesoska?" - continues to scoff gopar.'
 	'You mychite protest and try to turn away from the camera, but the guys firmly hold your head, without letting move.'
 	'You can imagine how horrified foolish and humiliating you look at the video: on the knees, with two thick huyami your maiden rotike, wedged so tightly, that ottopyrivayutsya cheek, and the lips are stretched to the limit.' 
@@ -777,7 +777,7 @@ if $ARGS[0] = 'BjBeerVag':
 		'At the sight of your intimate piercing boys began lybitsya and pull him, making you moan and blush.'
 	end
 	if tatvag > 0 or tatupb > 0: 'Finding your tattoo Vitek said approvingly: "Right, Tipo litter you should carry a stigma, that they are not confused with normal people".'
-	if tatvag = 0 and tatupb = 0:'Lapaya you for the priest noticed Vitek: "It`s time to you <<$name[2]>> I have to make the appropriate nakolochku, to normal guys just saw, they face a whore"'
+	if tatvag = 0 and tatupb = 0:'Lapaya you for the priest noticed Vitek: "It`s time to you <<$nickname>> I have to make the appropriate nakolochku, to normal guys just saw, they face a whore"'
 	'Splash around with your breasts and labia, the boys looked at each other: "The machine is ready, who was the first to climb recess?"'
 
 	act 'Lie':
@@ -946,7 +946,7 @@ if $ARGS[0] = 'BjBeerAnal2':
 
 	dynamic $analsex
 	
-	'Dan silently bored to fuck you in the ass: "Listen <<$name[2]>>, Artist point stud substitute?". "Yes"... - softly whisper you understand what kind of response is expected of you.' 
+	'Dan silently bored to fuck you in the ass: "Listen <<$nickname>>, Artist point stud substitute?". "Yes"... - softly whisper you understand what kind of response is expected of you.' 
 	'-"Louder, blyadina, I can not hear!" - Dan firmly grabbed you by the hair and pulled them, It makes you an involuntary cry and tears from the eyes. - "Who are you with us?"'
 	'Without waiting for the next leap you wail voice not his own - "Yes, I love when I have the ass...I anal slut...zhopodayka...beetle...Fuck me please asshole...ahhh.."'
 	'The boys laughed - "Look at this kind of pie girl, and it is expressed as a last whore". Under your lamentations Deng began to move faster and, lastly, by driving the final effort of a screw you deep in the ass, I began to finish, pumping your ass more seed.'
@@ -971,7 +971,7 @@ if $ARGS[0] = 'BjBeerAnal2':
 		'You groan in time with the movements, when his hefty elda your hammer filled with sperm <<$anustipe>> anus with squish. Finally, he '
 		'Come, He pulled out a member and filled your buttocks white viscous liquid, and then keep you thoroughly clean and sucked his dick.'
 		''
-		if BjBeerQW = 4: 'Room service is the last you are tired valites on the grass. It suits you Shulga and asks izdvevkoy: "Well, <<$name[2]>>, your ass is now working?" -"Yes Working", you answer, blushing and hiding her eyes. - "You will now always point to substitute kid?" - not appeased Gopnik. "Yes, I will expose points." - you mechanically repeat. "That`s clever" - the guy laughed.'
+		if BjBeerQW = 4: 'Room service is the last you are tired valites on the grass. It suits you Shulga and asks izdvevkoy: "Well, <<$nickname>>, your ass is now working?" -"Yes Working", you answer, blushing and hiding her eyes. - "You will now always point to substitute kid?" - not appeased Gopnik. "Yes, I will expose points." - you mechanically repeat. "That`s clever" - the guy laughed.'
 		'Then Vitek told you: "Now turn around and show all your working point"'
 		
 		act 'Show':

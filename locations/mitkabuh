@@ -23,7 +23,7 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 	if mitkadaybuh ! daystart:
 		mitkadaybuh = daystart
 		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
-		if mirasextimes < 13:'You got drunk in the trash, leg practically no longer hold you. Mitya, noticing your condition, holds you by the waist. "Well Cho, <<$name[2]>>, come on to fuck?"'
+		if mirasextimes < 13:'You got drunk in the trash, leg practically no longer hold you. Mitya, noticing your condition, holds you by the waist. "Well Cho, <<$nickname>>, come on to fuck?"'
 		if mirasextimes >= 13:'You got drunk in the trash, leg practically no longer hold you. One of the boys, noticing your condition, demanding offers perepihnutsya.'
 		
 		if mitkasextimes < 3:
@@ -178,7 +178,7 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 				gs'stat'
 
 				'<center><img src="images/qwest/gadukino/drunkgirl.jpg"></center>'
-				' - Gee-gee, - Mitya suddenly amused. - But fuck, that-it broke my feet to stomp, and cock-it itches... Listen, <<$name[2]>>, come on, is folded right there, what could be the corners so the bushes to hide, anyway guys already know, I fuck you. You do not mind, yes? - he has turned to the tipsy druzhbanov.'
+				' - Gee-gee, - Mitya suddenly amused. - But fuck, that-it broke my feet to stomp, and cock-it itches... Listen, <<$nickname>>, come on, is folded right there, what could be the corners so the bushes to hide, anyway guys already know, I fuck you. You do not mind, yes? - he has turned to the tipsy druzhbanov.'
 				' - her, - drunkenly stretched Kolyamba. - Have fun, Cho really there, but we are still roll forward with Service...'
 				' - Well, that`s... Hic... beautifully, - stammeringly, smugly muttered Mitya, - so let`s, Svetiiii... Hic... Stoop!'
 				
@@ -1098,7 +1098,7 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 		if mirasextimes < 12:
 			'Guys talk about-then his, not paying any attention to you committed.'
 		else
-			' - Cho, <<$name[2]>>, Again came a stick of tea? Ha-ha! You should not have, apologize, Find someone-else, something... Ha-ha-ha...'
+			' - Cho, <<$nickname>>, Again came a stick of tea? Ha-ha! You should not have, apologize, Find someone-else, something... Ha-ha-ha...'
 		end
 		act 'Escape':gt'Gaddvor'	
 	end
@@ -1115,7 +1115,7 @@ if miraingop = 1 and miragopQW > 0:
 		cls
 		
 		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
-		'You got drunk in the trash, leg practically no longer hold you. Mitya, noticing your condition, holds you by the waist. "Well Cho, <<$name[2]>>, come on to fuck?"'
+		'You got drunk in the trash, leg practically no longer hold you. Mitya, noticing your condition, holds you by the waist. "Well Cho, <<$nickname>>, come on to fuck?"'
 		
 		temp = RAND(0,5)
 		

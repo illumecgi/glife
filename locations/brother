@@ -447,7 +447,7 @@ $brother_homework = {
 				if brotherSex > 0 and father_go = 1 and ivrand = 1 and brotherEvSex ! day:
 					cla
 					'After finishing engaged, Kolka c red with excitement person asks:'
-					'- "<<$name[2]>>, It can be a little indulged?"'
+					'- "<<$nickname>>, It can be a little indulged?"'
 					dynamic $brotherSexStart
 					act 'Takeout':gt $loc
 				elseif ivrand = 2 and brotherEvSex ! day:
@@ -829,7 +829,7 @@ $brother_anus_check = {
 			'- "What?"'
 			'- "I`m serious, less than it was before!"'
 			'- "Do not invent, Nothing there has changed , and it is not necessary to stare at him!"'
-			'- "changed, exactly say! Previously, it was less! <<$name[2]>>, you give up your ass?"'
+			'- "changed, exactly say! Previously, it was less! <<$nickname>>, you give up your ass?"'
 			'- "ohrenel? No of course!" - you blush.'
 			'- "Just give!"'
 			'- "Kohl, go fuck!"'

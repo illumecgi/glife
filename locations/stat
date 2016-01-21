@@ -1036,45 +1036,6 @@ else
 	end
 end
 
-
-
-!!!!!!!!!!!!!!!!!!!
-!!!end OF TIME!!!
-!!!!!!!!!!!!!!!!!!!
-subage = 0
-:metakasubage
-subage += 10
-
-if subage + 10 < age:
-	jump 'metakasubage'
-else
-	subage = age - subage
-end
-
-if subage = 0 or subage >= 5:
-	$letgoda = 'years'
-elseif subage = 1:
-	$letgoda = 'year'
-else
-	$letgoda = 'year'
-end
-
-subagevne = 0
-:metakasubagevne
-subagevne += 10
-
-if subagevne + 10 < vidage:
-	jump 'metakasubagevne'
-else
-	subagevne = vidage - subagevne
-end
-
-if subagevne ! 1:
-	$letgoda2 = 'years'
-else
-	$letgoda2 = 'year'
-end
-
 !!!!!!!!!!!!!
 !!!ENERGY!!!
 !!!!!!!!!!!!!

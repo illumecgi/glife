@@ -66,7 +66,7 @@ if $ARGS[0] = 'room':
 	end
 
 	if sexrand = 0:
-		'"<<$name[2]>>, I pine juicy huytsa."'
+		'"<<$nickname>>, I pine juicy huytsa."'
 
 		act 'Make a blowjob':
 			cla
@@ -75,7 +75,7 @@ if $ARGS[0] = 'room':
 		end
 		act 'I do not want, Let`s take another':husband -= 1 & gt'husbsex','variant'
 	elseif sexrand = 1:
-		'"<<$name[2]>>, cup your ass."'
+		'"<<$nickname>>, cup your ass."'
 
 		act 'Anal':
 			cla
@@ -84,12 +84,12 @@ if $ARGS[0] = 'room':
 		end
 		act 'Oh nafig, Let`s take another':husband -= 1 & gt'husbsex','variant'
 	elseif sexrand = 2:
-		'"lie <<$name[2]>> and push the legs."'
+		'"lie <<$nickname>> and push the legs."'
 
 		act 'Extend the legs':gt'husbsex','miss'
 		act 'I do not want, Let`s take another':husband -= 1 & gt'husbsex','variant'
 	elseif sexrand = 3:
-		'"Arise cancer <<$name[2]>>."'
+		'"Arise cancer <<$nickname>>."'
 
 		act 'Get cancer':gt'husbsex','dog'
 		act 'I do not want, Let`s take another':husband -= 1 & gt'husbsex','variant'
@@ -405,7 +405,7 @@ if $ARGS[0] = 'anal':
 	if klismaday ! day:
 		husband -= 1
 
-		'<<$husName>> I took out a member of your ass and seeing shit on his dick told, "Damn. <<$name[2]>> my ass before sex."'
+		'<<$husName>> I took out a member of your ass and seeing shit on his dick told, "Damn. <<$nickname>> my ass before sex."'
 	elseif klismaday = day:
 		husband += 5
 

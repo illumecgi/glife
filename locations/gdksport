@@ -309,7 +309,7 @@ if hour < 16 or hour > 20:
 end
 
 if albinaQWdance > 0 and AlbinaBlokDance = 0 and ZvezdEnd = 0 and sport = 1:
-	act 'Train with Zvezdushkami':
+	act 'Train with Starlets':
 		cls
 		minut += 120
 		fat -= 5
@@ -325,14 +325,14 @@ if albinaQWdance > 0 and AlbinaBlokDance = 0 and ZvezdEnd = 0 and sport = 1:
 
 		if dancePRO < 20:
 			sub += 1
-			'You train together with sex of "Zvezdushek", you get bad and Albina constantly yelling at you and calling them bowlegged kolkhoz.'
+			'You train together with sex of "Starlets", you get bad and Albina constantly yelling at you and calling them bowlegged kolkhoz.'
 		elseif dancePRO >= 20 and dancePRO < 40:
 			sub += 1
-			'You train together with sex of "Zvezdushek" you sometimes get something, but most movements by Albina constantly yelling at you and calling them bowlegged kolkhoz.'
+			'You train together with sex of "Starlets" you sometimes get something, but most movements by Albina constantly yelling at you and calling them bowlegged kolkhoz.'
 		elseif dancePRO >= 40 and dancePRO < 60:
-			'You train together with sex of "Zvezdushek" you dance with sex getting in the general rhythm, but not happy Albina "<<$name>>, very sluggish, more life."'
+			'You train together with sex of "Starlets" you dance with sex getting in the general rhythm, but not happy Albina "<<$name>>, very sluggish, more life."'
 		elseif dancePRO >= 60 and dancePRO < 80:
-			'You train together with sex of "Zvezdushek" you normally get all but Albina regularly you niggles "<<$name>>, you are not at the funeral, raise your head and smile!"'
+			'You train together with sex of "Starlets" you normally get all but Albina regularly you niggles "<<$name>>, you are not at the funeral, raise your head and smile!"'
 		elseif dancePRO >= 80:
 			stardance += 1
 			'You dance beautifully and Albina you start to put an example to other girl.'
@@ -347,7 +347,7 @@ if albinaQWdance > 0 and AlbinaBlokDance = 0 and ZvezdEnd = 0 and sport = 1:
 						otkazDanceWhore = 0
 						if AlbFather = 0:AlbFather = 1
 
-						'After training Albina withdraws you aside and starts berating. "I know you''re young and stupid, but I explain to you in the first and last time. Again swept me with clients fly from Zvezdushek miserably. Entertain men is part of the business."'
+						'After training Albina withdraws you aside and starts berating. "I know you''re young and stupid, but I explain to you in the first and last time. Again swept me with clients fly from Starlets miserably. Entertain men is part of the business."'
 					end
 				end
 

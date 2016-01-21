@@ -44,7 +44,7 @@ $askfather = {
 				'<center><img src="images/qwest/alter/trfatherQW/trfatherQW_14.jpg"></center>'
 				'- Hello, You Mikhail Kuznetsov?'
 				'- Yes, Hello, it`s me, that-Something happened? Are you from the control room? If anything, tell it again, I`m the fucking crystal on such roads will not be transported...'
-				'- No no, I was not there, I <<$name[1]>> <<$surname>>...'
+				'- No no, I was not there, I <<$name>> <<$surname>>...'
 				'- <<$name>>? Hell, daughter....? This.... you?'
 				'Your father broke down in tears, looking in your eyes, and recognizing the facial features, quickly wiped his oily hands and you hugged, together crying from happiness.'
 				act 'Hug':

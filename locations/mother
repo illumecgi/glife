@@ -33,7 +33,7 @@ end
 if $loc = 'gkafe':
 	cla
 	'Mom saw you and frowned: "Why come? I said many times, Do not go to my job. There`s nothing to do young girls!"'
-	act '<B>Move away</B>':gt $locM, $metkaM
+	act '<B>Move away</B>':gt 'gkafe'
 exit
 end
 

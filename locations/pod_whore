@@ -498,13 +498,13 @@ act 'Close the door': gt'korrPar'
 }
 $pod_client_talk_bazar8 = {
 cla
-'- "Okay, so you do not strain, <<$name[1]>> it`s me. Like you I, I heartily amused."'
+'- "Okay, so you do not strain, <<$name>> it`s me. Like you I, I heartily amused."'
 '- "Well then voiced that how much"'
 act 'NARRATION pricelist': dynamic $pod_whore_price
 }
 $pod_client_talk_bazar9 = {
 cla
-'- "And so easy to give up?, nothing more to say?, or maybe I have that same <<$name[2]>>!?"'
+'- "And so easy to give up?, nothing more to say?, or maybe I have that same <<$nickname>>!?"'
 '- "You`re here with me decided to play the game?", evil man responsible'
 act 'Yes': dynamic $pod_client_talk_bazar10
 act 'No': dynamic $pod_client_talk_bazar11
@@ -518,7 +518,7 @@ act 'No, I was joking': dynamic $pod_client_talk_bazar13
 }
 $pod_client_talk_bazar11 = {
 cla
-'- "Okay, so you do not kipish, <<$name[2]>> it`s me."'
+'- "Okay, so you do not kipish, <<$nickname>> it`s me."'
 '- "And what was all this talk?", asks a man.'
 '- "Check I have this, sift all"'
 '- "Well then voiced that how much"'
@@ -545,12 +545,12 @@ act 'Close the door': gt'korrPar'
 $pod_client_talk_bazar14 = {
 cla
 '- "No, I have clients in such places do not go", laughing answer you'
-'- "That`s it, it means that you still <<$name[2]>> and just kidding me?"'
+'- "That`s it, it means that you still <<$nickname>> and just kidding me?"'
 '- "This is a test I have this, but you really liked, do not be offended good discount..."'
 '- "Well then voiced that how much"'
 act 'NARRATION pricelist': dynamic $pod_whore_price
 }
-!gg he said, that it does not <<$name[1]>>
+!gg he said, that it does not <<$name>>
 $pod_client_talk_no = {
 cla
 gs'stat'
@@ -590,7 +590,7 @@ elseif whore_money_bjsex >=50:
 act 'Yes': 
 	cla
 	gs'stat'
-	'- "Yes, I <<$name[1]>>, and to you that-then you need from me?"'
+	'- "Yes, I <<$name>>, and to you that-then you need from me?"'
 	'- "They say the body was moonlighting, I served basis?"'
 	if son >= 2 and pod_whore_client_count > 0: act 'NARRATION pricelist': dynamic $pod_whore_price
 	if son >= 2 and pod_whore_client_count > 0: act 'Refuse': dynamic $pod_whore_no	

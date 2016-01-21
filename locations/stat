@@ -252,7 +252,7 @@ if Kik > 120:Kik = 120
 if KikDef > 120:KikDef = 120
 if nark >= 30 and narkoman = 0:
 	narkoman = 1
-elseif nark = 0 and narkoman = 0:
+elseif nark = 0 and narkoman = 1:
 	narkoman = 0
 end
 

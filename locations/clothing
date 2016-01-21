@@ -311,6 +311,7 @@ end
 
 if $ARGS[0] = 'strip':
 	if cumfrot > 0:cumfrot = 0
+	if cloth_vid = 1:last_vid = 1
 	$lastwornclothingtype = $clothingworntype
 	lastwornclothingnumber = clothingwornnumber
 	$clothingworntype = 'nude'
@@ -382,6 +383,7 @@ end
 
 if $ARGS[0] = 'wear_last_worn':
 	gs 'clothing', 'wear', $lastwornclothingtype, lastwornclothingnumber
+	if last_vid = 1:cloth_vid = 1
 end
 
 --- clothing ---------------------------------

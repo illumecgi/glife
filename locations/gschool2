@@ -687,7 +687,7 @@ $d_rand_klass = {
 			act'On change':dynamic $din_bigperemena
 		else
 			act'On change':	
-				if n_tanga = 3:  *clr & '<center><img src="images/qwest/alter/katja/tanga5_6.jpg"></center>' & 'Sitting in the classroom you hear: «Oh, <<$name[2]>>, I dropped the pen, could you get it», - you, grunting, climb under the desk , and then pay attention to the part in the divorced legs Katie. Panties on a lesson she never wore.'
+				if n_tanga = 3:  *clr & '<center><img src="images/qwest/alter/katja/tanga5_6.jpg"></center>' & 'Sitting in the classroom you hear: «Oh, <<$nickname>>, I dropped the pen, could you get it», - you, grunting, climb under the desk , and then pay attention to the part in the divorced legs Katie. Panties on a lesson she never wore.'
 				dynamic $d_class_leason
 			end
 		end
@@ -695,7 +695,7 @@ $d_rand_klass = {
 		if hour <= 12:
 			dynamic $din_bigperemena
 		else
-			if n_tanga = 3:  *clr & '<center><img src="images/qwest/alter/katja/tanga5_6.jpg"></center>' & 'Sitting in the classroom you hear: «Oh, <<$name[2]>>, I dropped the pen, could you get it», - you, grunting, climb under the desk , and then pay attention to the part in the divorced legs Katie. Panties on a lesson she never wore.'
+			if n_tanga = 3:  *clr & '<center><img src="images/qwest/alter/katja/tanga5_6.jpg"></center>' & 'Sitting in the classroom you hear: «Oh, <<$nickname>>, I dropped the pen, could you get it», - you, grunting, climb under the desk , and then pay attention to the part in the divorced legs Katie. Panties on a lesson she never wore.'
 			dynamic $d_class_leason
 		end
 	end

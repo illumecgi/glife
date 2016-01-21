@@ -544,7 +544,7 @@ $MitkaGuysRiver = {
 	gs 'stat'
 	
 	'<center><img src="images/qwest/gadukino/river/MitkaGuysRiver.jpg"></center>'
-	' - Oh, <<$name[2]>>, us-that`s just you and not enough, - smiled Kolyamba.'
+	' - Oh, <<$nickname>>, us-that`s just you and not enough, - smiled Kolyamba.'
 	if temp < 4:
 		' - It seems nobody around, and I want to fuck, so let`s, Spreads legs, After working her pussy...'
 	elseif temp >= 4 and temp < 8:

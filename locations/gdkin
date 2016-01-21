@@ -338,6 +338,8 @@ $din_too_drunk_dance = {
 		end
 
 		exit
+	else
+		gt 'gdkin'
 	end
 }
 

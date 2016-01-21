@@ -8,7 +8,7 @@ $objdescrip = {
 	clr
 	pl'<center><img src="images/pic/icon/description.png"><br></center>'
 	pl 'Your name is <<$name>> <<$surname>>.'
-	pl 'You are <<age>> <<$letgoda>> old, but you look <<vidage>>.'
+	pl 'You are <<age>> years old, but you look <<vidage>>.'
 
 	!!!0.2.6 extension
 	if StoryLine > 0:

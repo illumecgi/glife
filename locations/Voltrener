@@ -320,11 +320,11 @@ act 'Talk with the coach':
 		end
 	else
 		if trenerSex = 0:
-			'Coach looked at you "And <<$surname>>. Do not distract me from things."'
-			'The coach looked at you "But <<$surname>>. Your volleyball skills  <<volleyboll>> , And team stats: Number of games <<volsesongame>>, Win - <<volsesonwin>>, defeats - <<volsesonloss>>, draws - <<volsesondraw>>."'
+			'Coach looks at you, "<<$surname>>. Do not distract me from things."'
+			'"Your volleyball skill is <<volleyboll>>, the team has played <<volsesongame>> games: Won - <<volsesonwin>>, lost - <<volsesonloss>>, drawn - <<volsesondraw>>."'
 		else
 			'Coach looked at you "And <<$surname>>. Well done for coming."'
-			'"Your volleyball skills <<volleyboll>> , And team stats: Number of games <<volsesongame>>, Win - <<volsesonwin>>, defeats - <<volsesonloss>>, draws - <<volsesondraw>>."'
+			'"Your volleyball skill is <<volleyboll>>, the team has played <<volsesongame>> games: Won - <<volsesonwin>>, lost - <<volsesonloss>>, drawn - <<volsesondraw>>."'
 
 			act 'Put your hand on coach''s knee':
 				cls

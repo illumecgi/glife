@@ -798,6 +798,8 @@ $din_sekondparturok = {
 	act 'Go to lessons':
 		cls
 		minut += 60 * 3
+		hour = 16
+		minut = 0
 		schoolprogul -= 1
 
 		if week ! 3 and week ! 5:

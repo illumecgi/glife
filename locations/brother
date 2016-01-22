@@ -120,13 +120,10 @@ if $loc = 'gschool':
 
 					if rand(0, 1) = 0 and seepornofut = 0:
 						'The boys are whispering something to each other.'
-
 						act 'What you are talking about?':
 							cls
 							gs 'stat'
 							'The boys hesitate, "Err.. nothing".'
-
-							act 'Move away':gt $loc, $metka
 
 							if dom > 0:
 								'You press them on it "What are you? A bunch of girls whispering about which boy you want to kiss?." One of the boys immediately spits out "No, we want to go look at porn, but didn''t think. a girl like you could handle it."'
@@ -138,6 +135,21 @@ if $loc = 'gschool':
 
 									act 'Go watch porn':minut += 5 & gt 'seeporn'
 								end
+
+							elseif brotherQW >=3:
+								'Kolka hesitates for a moment then looks at you funny. "Actually <<$name>>, we want to go look at porn, but, you know what, I think a girl like you could handle it."'
+								act 'Move away':gt $loc, $metka
+								act 'Show interest':
+									cls
+									gs 'stat'
+									'You tell them that you are curious. The guys aren''t pleased, but Kolka persuades them.'
+
+									act 'Go watch porn':minut += 5 & gt 'seeporn'   
+
+								end
+							else
+								act 'Move away':gt $loc, $metka
+
 							end
 						end
 					end
@@ -179,11 +191,25 @@ if $loc = 'gschool':
 
 								act 'Go watch porn':minut += 5 & gt 'seeporn'
 							end
+
+						elseif brotherQW >=3:
+							'Kolka hesitates for a moment then looks at you funny. "Actually <<$name>>, we want to go look at porn, but, you know what, I think a girl like you could handle it."'
+							act 'Move away':gt $loc, $metka
+							act 'Show interest':
+								cls
+								gs 'stat'
+								'You tell them that you are curious. The guys aren''t pleased, but Kolka persuades them.'
+
+								act 'Go watch porn':minut += 5 & gt 'seeporn'   
+
+							end
 						else
 							act 'Move away':gt $loc, $metka
+
 						end
 					end
 				end
+
 				if seepornofut >= 1:
 					'The guys gather together and ask you "<<$nickname>>, want to watch some porn?"'
 

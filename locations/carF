@@ -12,6 +12,7 @@ $enddrive = {
 	if cardrive = 10:gt 'park', 'whore'
 	if cardrive = 11:gt 'sauna'
 	if cardrive = 12:gt 'obekt'
+	if cardrive = 13:gt 'dachi'	
 	if cardrive = 18:gt 'youplace'
 	if cardrive = 19:gt'vokzal'
 	if cardrive = 20:gt'gorodok'
@@ -338,6 +339,24 @@ if $ARGS[0] = 'salon':
 					benz -= 1
 					teh -= rand(2, 5)
 					cardrive = 12
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 13:
+				act 'Go to the Suburban Cooperative':
+					cla
+					if cardrive >= 20:
+						minut += 60
+						'It takes an hour to get to your destination.'
+					else
+						minut += 15
+						'15 minutes later, you arrive at your destination.'
+					end
+					benz -= 1
+					teh -= rand(2, 5)
+					cardrive = 13
 
 					dynamic $enddrive
 				end

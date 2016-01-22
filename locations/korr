@@ -61,7 +61,7 @@ if remkorr = 0:
 	'In the hallway wallpaper which where moved away from the walls, and has long faded. A coat rack and a shelf for shoes are near the entrance. A <a href="exec:gt ''mirror'', ''start''">mirror</a> hangs on the wall.'
 else
 	'<center><img src="images/etogame/korr2.jpg"></center>'
-	'Modern hall with stylish furniture, a wall-mounted <a href="exec:gt ''mirror'', ''start''">mirror</a>, and a <a href="exec:gt ''telefon'', ''start''">phone</a>'
+	'Modern hall with stylish furniture, a wall-mounted <a href="exec:gt ''mirror'', ''start''">mirror</a>.'
 end
 
 if suhbelo > 0:'Drying on the clothesline are <<suhbelo>> laundry items.'

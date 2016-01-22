@@ -475,8 +475,11 @@ $pavser10 = {
     gs'stat'
     '<center><img src="images/lmps/1day/13.jpg" ></center>'
     'You rolled away and lay kakoeto time watching how he dressed and left in silence.'
-    act 'Get up and get dressed':nude = 0 & tanga = 1 & gt'koncepod1','str2x'
-
+    act 'Get up and get dressed':
+		if $clothingworntype = 'nude':gs 'clothing', 'wear_last_worn'
+		tanga = 1
+		gt'koncepod1','str2x'
+	end
 }
 --- din_pav ---------------------------------
 

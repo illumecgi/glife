@@ -17,9 +17,13 @@ end
 !parameters plus:
 !silicone
 money_silicone = 0
-if silicone >= 20 and silicone < 30: money_silicone = 50
-if silicone >= 30 and silicone < 40: money_silicone = 100
-if silicone >= 40: money_silicone = 150
+if silicone >= 20 and silicone < 30:
+	money_silicone = 50
+elseif silicone < 40:
+	money_silicone = 100
+elseif silicone >= 40:
+	money_silicone = 150
+end
 !cosmetics
 money_mop = 0
 if mop >= 2: money_mop = 50
@@ -122,25 +126,25 @@ whore_money_bjanalsex = whore_money_bjsex + whore_money_analsex
 
 !anal tube and lubrication:
 $pod_whore_analplugin = {
-if analplugin = 1:
-	analplugin = 0
-	'- "It`s plug in your ass?", the customer asks in surprise.'
-	'- Aha, Artist?, I myself chose to pebble.'
-	'- "Nothing so, but now we will interfere", he said, and pulled out of your ass anal plug.<br>'
-end	
+	if analplugin = 1:
+		analplugin = 0
+		'- "It`s plug in your ass?", the customer asks in surprise.'
+		'- Aha, Artist?, I myself chose to pebble.'
+		'- "Nothing so, but now we will interfere", he said, and pulled out of your ass anal plug.<br>'
+	end	
 }
 $pod_whore_lubri = {
-if lubri > 0:
-	lubri -= 1
-	agape = 1
-	agapetime = totminut
-	horny += 20
-	$pod_whore_lubri_text = '<br>- "Wait it is necessary to download", You say you took out a tube from her purse. You squeezed anal grease on his hand and smeared his ass.'
-elseif lubri = 0:
-	agape = 2
-	agapetime = totminut
-	horny = 0
-end
+	if lubri > 0:
+		lubri -= 1
+		agape = 1
+		agapetime = totminut
+		horny += 20
+		$pod_whore_lubri_text = '<br>- "Wait it is necessary to download", You say you took out a tube from her purse. You squeezed anal grease on his hand and smeared his ass.'
+	elseif lubri = 0:
+		agape = 2
+		agapetime = totminut
+		horny = 0
+	end
 }
 
 
@@ -148,64 +152,64 @@ end
 !text `s Event:
 !sucking
 $text_pod_whore_bj = {
-txt_pod_whore_bj = rand(1,5)
-if txt_pod_whore_bj = 1:$txt_pod_whore_bj = 'On you a flooded-something strange elation, you are very excited that thought, Now that you `re sucking dick what-the adult, ugly men in the stairwell for the money. 
-Have you noticed, that little tremble - whether from fear, whether from excitement.: 
-- Kneel, whore and I take my cock in her mouth. -Roughly he ordered. 
-With these words, he unbuttoned his pants. You knelt and took first in the hands of his swollen red member, then he grabbed his lips, sucking. Then he grabbed you by the head and began to stick to your own Member. 
-- Come on, girl, Suck, Do not stop, - he mumbled inarticulately.'
-if txt_pod_whore_bj = 2:$txt_pod_whore_bj = 'You would not look at him. A man said to you: 
-- Kneel down, stupid bitch, and suck, until you fucked in the ass!. 
-you backed, yet-still made â€‹â€‹it, What did he say. You are not looking at him, but just think about the money and worked her mouth.'
-if txt_pod_whore_bj = 3:$txt_pod_whore_bj = 'He pulled out his penis and told you: 
-- suck-ka beauty. 
-Without saying a word, you started to suck his huge dick, feeling, it hardens in your mouth. 
-Then he pulled it from your mouth , and said,:
-- Processed Eggs, whore.
-You silently served his full program, Doing all that will tell.'
-if txt_pod_whore_bj = 4:$txt_pod_whore_bj = 'You knelt before him , and how could open his mouth wider, he inserted his penis and it went. 
-- Suck, huesosochka, lowered, I`ll eat the sausage.
-Cleverly worked not only with his lips. But the tongue, so that he soon began to moan softly.'
-if txt_pod_whore_bj = 5:$txt_pod_whore_bj = 'You went to the entrance to the stairwell, squatted and went down with the men pants. 
-For a while it looked protruding member, then exhale, and taking his hand, I licked the head. Then he began to suck dick, I do not take the head deep in her mouth. 
-He put his hands on your head and you have been actively sucking, occasionally taking out a member of his mouth and his eyes looking up at him. '
-if txt_pod_whore_bj = 6:$txt_pod_whore_bj = ''
-if txt_pod_whore_bj = 7:$txt_pod_whore_bj = ''
+	txt_pod_whore_bj = rand(1,5)
+	if txt_pod_whore_bj = 1:$txt_pod_whore_bj = 'On you a flooded-something strange elation, you are very excited that thought, Now that you `re sucking dick what-the adult, ugly men in the stairwell for the money. 
+		Have you noticed, that little tremble - whether from fear, whether from excitement.: 
+		- Kneel, whore and I take my cock in her mouth. -Roughly he ordered. 
+		With these words, he unbuttoned his pants. You knelt and took first in the hands of his swollen red member, then he grabbed his lips, sucking. Then he grabbed you by the head and began to stick to your own Member. 
+		- Come on, girl, Suck, Do not stop, - he mumbled inarticulately.'
+	if txt_pod_whore_bj = 2:$txt_pod_whore_bj = 'You would not look at him. A man said to you: 
+		- Kneel down, stupid bitch, and suck, until you fucked in the ass!. 
+		you backed, yet-still made â€‹â€‹it, What did he say. You are not looking at him, but just think about the money and worked her mouth.'
+	if txt_pod_whore_bj = 3:$txt_pod_whore_bj = 'He pulled out his penis and told you: 
+		- suck-ka beauty. 
+		Without saying a word, you started to suck his huge dick, feeling, it hardens in your mouth. 
+		Then he pulled it from your mouth , and said,:
+		- Processed Eggs, whore.
+		You silently served his full program, Doing all that will tell.'
+	if txt_pod_whore_bj = 4:$txt_pod_whore_bj = 'You knelt before him , and how could open his mouth wider, he inserted his penis and it went. 
+		- Suck, huesosochka, lowered, I`ll eat the sausage.
+		Cleverly worked not only with his lips. But the tongue, so that he soon began to moan softly.'
+	if txt_pod_whore_bj = 5:$txt_pod_whore_bj = 'You went to the entrance to the stairwell, squatted and went down with the men pants. 
+		For a while it looked protruding member, then exhale, and taking his hand, I licked the head. Then he began to suck dick, I do not take the head deep in her mouth. 
+		He put his hands on your head and you have been actively sucking, occasionally taking out a member of his mouth and his eyes looking up at him. '
+	if txt_pod_whore_bj = 6:$txt_pod_whore_bj = ''
+	if txt_pod_whore_bj = 7:$txt_pod_whore_bj = ''
 
 	'<<$txt_pod_whore_bj>>'
 }
 
 !vaginas sex
 $text_pod_whore_vag = {
-txt_pod_whore_vag = rand(1,3)
-if txt_pod_whore_vag = 1:$txt_pod_whore_vag = 'You pulled his pants, exposing ass and, paste in a pose cancer, I framed it to him. You immediately feel, How he entered into you from behind. He fucked rough, patting your ass hand. 
-You were quite tolerant. With one hand he loudly slapped you on the ass, if adjusting to the activity, and the other hand you shut your mouth. And then he pushed so hard to have his penis, you moaned loudly. 
-He has hit you in the ass. 
-- Do not try to yell, fool, here people live. Quietly moaning, - he gasped and laughed. '
-if txt_pod_whore_vag = 2:$txt_pod_whore_vag = 'You stood back to him, his hands on the window sill. He pushed aside your panties - They were pretty wet. 
-Meanwhile, the guy already fell in behind , and finally entered my dick in pussy you. He walked easily to the end. 
-You gasp, and he slowly began to fuck, holding your strong breasts with protruding nipples, but not for long.'
-if txt_pod_whore_vag = 3:$txt_pod_whore_vag = 'He turned you, leaning, hand , he sent a member of your pussy, it was so hot, He began to move it. 
-The guy became accelerated, you started to moan louder, he was afraid, you wake up the neighbors and shut your mouth with your hand.'
+	txt_pod_whore_vag = rand(1,3)
+	if txt_pod_whore_vag = 1:$txt_pod_whore_vag = 'You pulled his pants, exposing ass and, paste in a pose cancer, I framed it to him. You immediately feel, How he entered into you from behind. He fucked rough, patting your ass hand. 
+		You were quite tolerant. With one hand he loudly slapped you on the ass, if adjusting to the activity, and the other hand you shut your mouth. And then he pushed so hard to have his penis, you moaned loudly. 
+		He has hit you in the ass. 
+		- Do not try to yell, fool, here people live. Quietly moaning, - he gasped and laughed. '
+	if txt_pod_whore_vag = 2:$txt_pod_whore_vag = 'You stood back to him, his hands on the window sill. He pushed aside your panties - They were pretty wet. 
+		Meanwhile, the guy already fell in behind , and finally entered my dick in pussy you. He walked easily to the end. 
+		You gasp, and he slowly began to fuck, holding your strong breasts with protruding nipples, but not for long.'
+	if txt_pod_whore_vag = 3:$txt_pod_whore_vag = 'He turned you, leaning, hand , he sent a member of your pussy, it was so hot, He began to move it. 
+		The guy became accelerated, you started to moan louder, he was afraid, you wake up the neighbors and shut your mouth with your hand.'
 
 	'<<$txt_pod_whore_vag>>'
 }
 
 !anal sex
 $text_pod_whore_anal = {
-dynamic $pod_whore_lubri
-txt_pod_whore_anal = rand(1,2)
-if txt_pod_whore_anal = 1:$txt_pod_whore_anal = 'He put his arm around you waist and hugged, lowered panties you feel your bare ass, how his cock gets. <<$pod_whore_lubri_text>>
-Finally, he put his hand under your ass, where his pants and, groped his cock your anus, I put it there.
-It was, not without pleasure. What-the middle-aged porter had a young girl in the ass for money!'
-if txt_pod_whore_anal = 2:$txt_pod_whore_anal = 'You pulled his pants, exposing ass and, paste in a pose cancer, He offered him his hole. <<$pod_whore_lubri_text>>
-After a moment, you feel, how it came into your ass. He fucked rough, patting your ass hand.
-You were quite tolerant. With one hand he loudly slapped you on the ass, if adjusting to the activity, and the other hand you shut your mouth. And then he pushed so hard to have his penis, you moaned loudly. 
-He has hit you on the ass and said hoarsely:
-- Do not try to yell, fool, here people live. Quietly moaning!'
-if txt_pod_whore_anal = 3:$txt_pod_whore_anal = ''
-if txt_pod_whore_anal = 4:$txt_pod_whore_anal = ''
-if txt_pod_whore_anal = 5:$txt_pod_whore_anal = ''
+	dynamic $pod_whore_lubri
+	txt_pod_whore_anal = rand(1,2)
+	if txt_pod_whore_anal = 1:$txt_pod_whore_anal = 'He put his arm around you waist and hugged, lowered panties you feel your bare ass, how his cock gets. <<$pod_whore_lubri_text>>
+		Finally, he put his hand under your ass, where his pants and, groped his cock your anus, I put it there.
+		It was, not without pleasure. What-the middle-aged porter had a young girl in the ass for money!'
+	if txt_pod_whore_anal = 2:$txt_pod_whore_anal = 'You pulled his pants, exposing ass and, paste in a pose cancer, He offered him his hole. <<$pod_whore_lubri_text>>
+		After a moment, you feel, how it came into your ass. He fucked rough, patting your ass hand.
+		You were quite tolerant. With one hand he loudly slapped you on the ass, if adjusting to the activity, and the other hand you shut your mouth. And then he pushed so hard to have his penis, you moaned loudly. 
+		He has hit you on the ass and said hoarsely:
+		- Do not try to yell, fool, here people live. Quietly moaning!'
+	if txt_pod_whore_anal = 3:$txt_pod_whore_anal = ''
+	if txt_pod_whore_anal = 4:$txt_pod_whore_anal = ''
+	if txt_pod_whore_anal = 5:$txt_pod_whore_anal = ''
 
 	dynamic $pod_whore_analplugin
 	'<<$txt_pod_whore_anal>>'
@@ -214,19 +218,19 @@ if txt_pod_whore_anal = 5:$txt_pod_whore_anal = ''
 
 !ending
 $text_pod_whore_cum = {
-txt_pod_whore_cum = rand(1,4)
-if txt_pod_whore_cum = 1:$txt_pod_whore_cum = 'A man began to moan. In less than five minutes, he pulled you in the mouth, and you had to swallow. 
-You stood up and wiped his mouth. A man in his pants tucked member, He took the purse and took out a couple of bills, I handed to you. 
-- I like it, More like a slut `ll come.
-You watched him go, I am thinking about money and about, What will happen, if he tells his buddies about it, and they also want to try!?'
-if txt_pod_whore_cum = 2:$txt_pod_whore_cum = 'And how-then quickly ended, and when it is, lastly, buttoned pants, I told: 
-- "Good good slut, hold earned" and handed you a couple of crumpled papers. You have a money, He said goodbye and left.'
-if txt_pod_whore_cum = 3:$txt_pod_whore_cum = 'He moaned softly , and soon began to descend. You want to spit his semen. But he saw and keeping your mouth with both hands told swallow.
-- "good job, slut deserved", he said, and held out a pair of crumpled papers.'
-if txt_pod_whore_cum = 4:$txt_pod_whore_cum = 'Member has increased, you could not feel any of this... but when the semen began to shoot you in the mouth you have not pulled, and just more selected him in hot mouth. 
-You wait until the end of his orgasm , and continues to suck, licking his cock clean of sperm. He rested, leaning back against the wall.
-- "Good job bitch, hold the coin, He earned!"'
-if txt_pod_whore_cum = 5:$txt_pod_whore_cum = ''
+	txt_pod_whore_cum = rand(1,4)
+	if txt_pod_whore_cum = 1:$txt_pod_whore_cum = 'A man began to moan. In less than five minutes, he pulled you in the mouth, and you had to swallow. 
+		You stood up and wiped his mouth. A man in his pants tucked member, He took the purse and took out a couple of bills, I handed to you. 
+		- I like it, More like a slut `ll come.
+		You watched him go, I am thinking about money and about, What will happen, if he tells his buddies about it, and they also want to try!?'
+	if txt_pod_whore_cum = 2:$txt_pod_whore_cum = 'And how-then quickly ended, and when it is, lastly, buttoned pants, I told: 
+		- "Good good slut, hold earned" and handed you a couple of crumpled papers. You have a money, He said goodbye and left.'
+	if txt_pod_whore_cum = 3:$txt_pod_whore_cum = 'He moaned softly , and soon began to descend. You want to spit his semen. But he saw and keeping your mouth with both hands told swallow.
+		- "good job, slut deserved", he said, and held out a pair of crumpled papers.'
+	if txt_pod_whore_cum = 4:$txt_pod_whore_cum = 'Member has increased, you could not feel any of this... but when the semen began to shoot you in the mouth you have not pulled, and just more selected him in hot mouth. 
+		You wait until the end of his orgasm , and continues to suck, licking his cock clean of sperm. He rested, leaning back against the wall.
+		- "Good job bitch, hold the coin, He earned!"'
+	if txt_pod_whore_cum = 5:$txt_pod_whore_cum = ''
 
 	'<<$txt_pod_whore_cum>>'
 }
@@ -368,12 +372,12 @@ $pod_whore_noprice = {
 }
 !Voice actor pricelist
 $pod_whore_price = {
-cla
-'- "Certainly cute!", and he voiced the price of services:'
+	cla
+	'- "Certainly cute!", and he voiced the price of services:'
 	if whore_money_rnd <= 0:
 		' - So how do you like me, for you all services for special price:'
 	end
-' - For suction <<whore_money_bjsex>>r, the ladies in the pussy for <<whore_money_clsex>>r, ass <<whore_money_analsex>>r, and all at once cheaper: <<whore_money_allsex>>r. If you are with your friends, I `ll take <<whore_money_groupsex>> RUB.'
+	' - For suction <<whore_money_bjsex>>r, the ladies in the pussy for <<whore_money_clsex>>r, ass <<whore_money_analsex>>r, and all at once cheaper: <<whore_money_allsex>>r. If you are with your friends, I `ll take <<whore_money_groupsex>> RUB.'
 
 !'<<money_silicone>> + <<money_mop>> + <<money_hapri>> + <<money_glamur>> + <<money_odethooker>> + <<money_skin>> + <<money_skin_tan>> + <<money_leghair>> + <<money_resnic>> + <<money_lipbalmstat>> + <<whore_dopmoney>> + <<money_throat>> | - <<money_vagina>> - <<money_anus>> - <<money_vnesh>> - <<money_horny>> - <<money_cumfrot>> - <<money_sweat>> - <<money_cumlip>> - <<money_cumface>> - <<money_cumbelly>> - <<money_cumpussy>> - <<money_cumanus>> - <<money_cumass>> - <<money_son>>'
 
@@ -443,280 +447,214 @@ rnd_clint_torg = RAND(1,5)
 
 !long talk nothing)
 $pod_client_talk_bazar1 = {
-cla
-'- "Yes, there is such a thing, friends tossed the address, They said there lived a beautiful little girl, You can relax body and soul.", softly mumbled the man.'
-act 'Rebelled': dynamic $pod_client_talk_bazar2
+	cla
+	'- "Yes, there is such a thing, friends tossed the address, They said there lived a beautiful little girl, You can relax body and soul.", softly mumbled the man.'
+	act 'Rebelled': dynamic $pod_client_talk_bazar2
 }
 $pod_client_talk_bazar2 = {
-cla
-'- "What kind of chutzpah that such?, it is generally okay for me to say this here?", loudly express their dissatisfaction.'
-if pod_whore_countQW <= 15:
-	'- "So wrong, sorry.", He muttered the man and left.'
-	act 'Close the door': gt'korrPar'
-elseif pod_whore_countQW > 15:
-	'- "And what is wrong with that?, won even hanging on the wall announced: Here lives a whore...", brazenly responsible man.'
-	act 'fend off': dynamic $pod_client_talk_bazar3	
-	act 'to tone down': dynamic $pod_client_talk_bazar5	
-end
+	cla
+	'- "What kind of chutzpah that such?, it is generally okay for me to say this here?", loudly express their dissatisfaction.'
+	if pod_whore_countQW <= 15:
+		'- "So wrong, sorry.", He muttered the man and left.'
+		act 'Close the door': gt'korrPar'
+	elseif pod_whore_countQW > 15:
+		'- "And what is wrong with that?, won even hanging on the wall announced: Here lives a whore...", brazenly responsible man.'
+		act 'fend off': dynamic $pod_client_talk_bazar3	
+		act 'to tone down': dynamic $pod_client_talk_bazar5	
+	end
 }
 $pod_client_talk_bazar3 = {
-cla
-sub += 1
-gs'stat'
-'- "You never know what is written here, Any fool can write any crap, and then go here all sorts, live interfere."'
-'- "Okay, I get it, no, so no...Sorry.", He muttered the man.'
-act 'And that`s all?': dynamic $pod_client_talk_bazar9
-act 'Close the door': gt'korrPar'
+	cla
+	sub += 1
+	gs'stat'
+	'- "You never know what is written here, Any fool can write any crap, and then go here all sorts, live interfere."'
+	'- "Okay, I get it, no, so no...Sorry.", He muttered the man.'
+	act 'And that`s all?': dynamic $pod_client_talk_bazar9
+	act 'Close the door': gt'korrPar'
 }
 $pod_client_talk_bazar4 = {
-cla
-'- "I do not know, there are no such nebylo", Answer You.'
-act 'Close the door': gt'korrPar'
+	cla
+	'- "I do not know, there are no such nebylo", Answer You.'
+	act 'Close the door': gt'korrPar'
 }
 $pod_client_talk_bazar5 = {
-cla
-'- "Well, the inscription still about what does not speak, maybe it`s you then painted the walls.", smile you say.'
-'- "As if I do nothing!", troubled man.'
-act 'continue mockery': dynamic $pod_client_talk_bazar6
-act 'End a conversation': dynamic $pod_client_talk_bazar7
+	cla
+	'- "Well, the inscription still about what does not speak, maybe it`s you then painted the walls.", smile you say.'
+	'- "As if I do nothing!", troubled man.'
+	act 'continue mockery': dynamic $pod_client_talk_bazar6
+	act 'End a conversation': dynamic $pod_client_talk_bazar7
 }
 $pod_client_talk_bazar6 = {
-cla
-sub += 1
-gs'stat'
-'- "Well, just go from door to door and look for any-it means itch Svetku...", do not tell you not to laugh.'
-'The guy is clearly taken aback, his face was read, he did not expect such a turn in the conversation and did not know what to answer.'
-act 'Confess': dynamic $pod_client_talk_bazar8
-act 'End a conversation': dynamic $pod_client_talk_bazar7
+	cla
+	sub += 1
+	gs'stat'
+	'- "Well, just go from door to door and look for any-it means itch Svetku...", do not tell you not to laugh.'
+	'The guy is clearly taken aback, his face was read, he did not expect such a turn in the conversation and did not know what to answer.'
+	act 'Confess': dynamic $pod_client_talk_bazar8
+	act 'End a conversation': dynamic $pod_client_talk_bazar7
 }
 $pod_client_talk_bazar7 = {
-cla
-sub += 1
-gs'stat'
-'- "This conversation is over", you said , and closed the door.'
-act 'Close the door': gt'korrPar'
+	cla
+	sub += 1
+	gs'stat'
+	'- "This conversation is over", you said , and closed the door.'
+	act 'Close the door': gt'korrPar'
 }
 $pod_client_talk_bazar8 = {
-cla
-'- "Okay, so you do not strain, <<$name>> it`s me. Like you I, I heartily amused."'
-'- "Well then voiced that how much"'
-act 'NARRATION pricelist': dynamic $pod_whore_price
+	cla
+	'- "Okay, so you do not strain, <<$name>> it`s me. Like you I, I heartily amused."'
+	'- "Well then voiced that how much"'
+	act 'NARRATION pricelist': dynamic $pod_whore_price
 }
 $pod_client_talk_bazar9 = {
-cla
-'- "And so easy to give up?, nothing more to say?, or maybe I have that same <<$nickname>>!?"'
-'- "You`re here with me decided to play the game?", evil man responsible'
-act 'Yes': dynamic $pod_client_talk_bazar10
-act 'No': dynamic $pod_client_talk_bazar11
+	cla
+	'- "And so easy to give up?, nothing more to say?, or maybe I have that same <<$nickname>>!?"'
+	'- "You`re here with me decided to play the game?", evil man responsible'
+	act 'Yes': dynamic $pod_client_talk_bazar10
+	act 'No': dynamic $pod_client_talk_bazar11
 }
 $pod_client_talk_bazar10 = {
 cla
-'- "Why not?, maybe you liked me...", smiling answer you'
-'- "Even so?", surprised man'
-act 'Even so': dynamic $pod_client_talk_bazar12
-act 'No, I was joking': dynamic $pod_client_talk_bazar13
+	'- "Why not?, maybe you liked me...", smiling answer you'
+	'- "Even so?", surprised man'
+	act 'Even so': dynamic $pod_client_talk_bazar12
+	act 'No, I was joking': dynamic $pod_client_talk_bazar13
 }
 $pod_client_talk_bazar11 = {
 cla
-'- "Okay, so you do not kipish, <<$nickname>> it`s me."'
-'- "And what was all this talk?", asks a man.'
-'- "Check I have this, sift all"'
-'- "Well then voiced that how much"'
-act 'NARRATION pricelist': dynamic $pod_whore_price
+	'- "Okay, so you do not kipish, <<$nickname>> it`s me."'
+	'- "And what was all this talk?", asks a man.'
+	'- "Check I have this, sift all"'
+	'- "Well then voiced that how much"'
+	act 'NARRATION pricelist': dynamic $pod_whore_price
 }
 $pod_client_talk_bazar12 = {
-cla
-'- "Aha" playfully you say'
-'- "Maybe then we go somewhere?", he asks'
-'- "Where?"'
-'- "Well, walk, in a cafe or in the movies..."'
-act 'No': dynamic $pod_client_talk_bazar14
+	cla
+	'- "Aha" playfully you say'
+	'- "Maybe then we go somewhere?", he asks'
+	'- "Where?"'
+	'- "Well, walk, in a cafe or in the movies..."'
+	act 'No': dynamic $pod_client_talk_bazar14
 }
 $pod_client_talk_bazar13 = {
-cla
-sub += 1
-gs'stat'
-'- "No, I was joking" laughing you say'
-'- "That`s sarcasm , or you just sneered at me?", he asks'
-'- "And you yourself do not you think?", You were not appeased'
-'- "I think, that all this talk just a stupid waste of time", the man said angrily and left'
-act 'Close the door': gt'korrPar'
+	cla
+	sub += 1
+	gs'stat'
+	'- "No, I was joking" laughing you say'
+	'- "That`s sarcasm , or you just sneered at me?", he asks'
+	'- "And you yourself do not you think?", You were not appeased'
+	'- "I think, that all this talk just a stupid waste of time", the man said angrily and left'
+	act 'Close the door': gt'korrPar'
 }
 $pod_client_talk_bazar14 = {
-cla
-'- "No, I have clients in such places do not go", laughing answer you'
-'- "That`s it, it means that you still <<$nickname>> and just kidding me?"'
-'- "This is a test I have this, but you really liked, do not be offended good discount..."'
-'- "Well then voiced that how much"'
-act 'NARRATION pricelist': dynamic $pod_whore_price
+	cla
+	'- "No, I have clients in such places do not go", laughing answer you'
+	'- "That`s it, it means that you still <<$nickname>> and just kidding me?"'
+	'- "This is a test I have this, but you really liked, do not be offended good discount..."'
+	'- "Well then voiced that how much"'
+	act 'NARRATION pricelist': dynamic $pod_whore_price
 }
 !gg he said, that it does not <<$name>>
 $pod_client_talk_no = {
-cla
-gs'stat'
-'- "No, I do not <<$gop_name_gg>>", You are mistaken!'
-'- "Sorry, Where can I find the light?", he asked.'
+	cla
+	gs'stat'
+	'- "No, I do not <<$gop_name_gg>>", You are mistaken!'
+	'- "Sorry, Where can I find the light?", he asked.'
 	act 'There are no such': dynamic $pod_client_talk_bazar4
 	act 'And you why?': dynamic $pod_client_talk_bazar1
 }
 !gg tired and can not accept a client
 $pod_client_talk_noson = {
-cla
-gs'stat'
-'- "Today I am very tired, I have no power to you. come back tomorrow!'
-'- "Good", frustrated man he muttered and retired.'
-act 'Close the door': gt'korrPar'
+	cla
+	gs'stat'
+	'- "Today I am very tired, I have no power to you. come back tomorrow!'
+	'- "Good", frustrated man he muttered and retired.'
+	act 'Close the door': gt'korrPar'
 }
 !chatter with the client
 $pod_client_talk = {
-cls
-gs'stat'
-if whore_money_bjsex < 50: '<center><img src="images/zsoft/pod_ezd/whore/fear.jpg"></center>'
-if nude => 1 and whore_money_bjsex >= 50: 
-'<center><img src="images/zsoft/pod_ezd/whore/door_nude'+rand(1,3)+'.jpg"></center>'
-elseif nude <=0 and whore_money_bjsex >= 50: 
-	if glamur >= 1:'<center><img src="images/zsoft/pod_ezd/whore/door_glamur.jpg"></center>'
-	if glamur < 1:'<center><img src="images/zsoft/pod_ezd/whore/door.jpg"></center>'
-end
-if whore_money_bjsex < 50:
-'You opened the door and saw the surprised man, who accidentally uttered aloud: 
-- "Fu shit what straholyudina", then he pulled himself together and said,:
-- "I`m sorry I was wrong apartment march!"
-You just had to open my mouth, to tell him that he was not mistaken, but he was gone.'
-	act 'Escape': gt'korrPar'
-elseif whore_money_bjsex >=50:
-'You opened the door and saw a-the guy who asked loudly:
-- "You <<$gop_name_gg>>?"'
-act 'Yes': 
-	cla
+	cls
 	gs'stat'
-	'- "Yes, I <<$name>>, and to you that-then you need from me?"'
-	'- "They say the body was moonlighting, I served basis?"'
-	if son >= 2 and pod_whore_client_count > 0: act 'NARRATION pricelist': dynamic $pod_whore_price
-	if son >= 2 and pod_whore_client_count > 0: act 'Refuse': dynamic $pod_whore_no	
-	if son < 2 or pod_whore_client_count <= 0: act 'Refuse': dynamic $pod_client_talk_noson
+	if whore_money_bjsex < 50: '<center><img src="images/zsoft/pod_ezd/whore/fear.jpg"></center>'
+	if nude => 1 and whore_money_bjsex >= 50: 
+		'<center><img src="images/zsoft/pod_ezd/whore/door_nude'+rand(1,3)+'.jpg"></center>'
+	elseif nude <=0 and whore_money_bjsex >= 50: 
+		if glamur >= 1:'<center><img src="images/zsoft/pod_ezd/whore/door_glamur.jpg"></center>'
+		if glamur < 1:'<center><img src="images/zsoft/pod_ezd/whore/door.jpg"></center>'
 	end
-act 'No': dynamic $pod_client_talk_no	
-!act 'Test gifok': dynamic $pod_whore_test_gifs
-end	
+	if whore_money_bjsex < 50:
+		'You opened the door and saw the surprised man, who accidentally uttered aloud: 
+		- "Fu shit what straholyudina", then he pulled himself together and said,:
+		- "I`m sorry I was wrong apartment march!"
+		You just had to open my mouth, to tell him that he was not mistaken, but he was gone.'
+			act 'Escape': gt'korrPar'
+	elseif whore_money_bjsex >=50:
+		'You opened the door and saw a-the guy who asked loudly:
+		- "You <<$gop_name_gg>>?"'
+	act 'Yes': 
+		cla
+		gs'stat'
+		'- "Yes, I <<$name>>, and to you that-then you need from me?"'
+		'- "They say the body was moonlighting, I served basis?"'
+		if son >= 2 and pod_whore_client_count > 0: act 'NARRATION pricelist': dynamic $pod_whore_price
+		if son >= 2 and pod_whore_client_count > 0: act 'Refuse': dynamic $pod_whore_no	
+		if son < 2 or pod_whore_client_count <= 0: act 'Refuse': dynamic $pod_client_talk_noson
+		end
+	act 'No': dynamic $pod_client_talk_no	
+	!act 'Test gifok': dynamic $pod_whore_test_gifs
+	end	
 }
 
 
 $pod_whore_test_gifs = {
-cls
-'<center><img src="images/zsoft/pod_ezd/whore/sex/cum'+rand(1,7)+'.gif"></center>'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(1,14)+'.gif"></center>'
-act 'Another': dynamic $pod_whore_test_gifs
-act 'Exit': gt'pod_ezd','etaj_2'
-
+	cls
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/cum'+rand(1,7)+'.gif"></center>'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(1,14)+'.gif"></center>'
+	act 'Another': dynamic $pod_whore_test_gifs
+	act 'Exit': gt'pod_ezd','etaj_2'
 }
 
 !==========================================================
 !end `s Event:
 $pod_whore_ev_end = {
-cls
-guy += 1
-swallow += 1
-facial += 1
-cumlip += 1
-cumface +=1
-if nude = 0: cumfrot = 1
-if energy >=3: energy -= 1
-hapri = 0
-minut += ''+rand(2,5)+''
-money += '<<total_money>>'
-pod_whore_countQW += 1
-pod_whore_client_day = daystart
-pod_whore_client_count -= 1
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/cum'+rand(1,7)+'.gif"></center>'
-dynamic $text_pod_whore_cum
-'you paid: <<total_money>>'
-act 'Escape': gt'pod_ezd','etaj_2'	
+	cls
+	guy += 1
+	swallow += 1
+	facial += 1
+	cumlip += 1
+	cumface +=1
+	if $clothingworntype ! 'nude': cumfrot = 1
+	if energy >=3: energy -= 1
+	hapri = 0
+	minut += ''+rand(2,5)+''
+	money += '<<total_money>>'
+	pod_whore_countQW += 1
+	pod_whore_client_day = daystart
+	pod_whore_client_count -= 1
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/cum'+rand(1,7)+'.gif"></center>'
+	dynamic $text_pod_whore_cum
+	'you paid: <<total_money>>'
+	act 'Escape': gt'pod_ezd','etaj_2'
 }
 !==============
 !start `s Event:
 !--------------
 !sucking
 $pod_whore_ev1 = {
-cls
-bj +=1
-horny += 5
-minut += ''+rand(5,15)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
-dynamic $text_pod_whore_bj
-dynamic $accview_ggsex
-act 'Further': dynamic $pod_whore_ev_end
+	cls
+	bj +=1
+	horny += 5
+	minut += ''+rand(5,15)+''
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
+	dynamic $text_pod_whore_bj
+	dynamic $accview_ggsex
+	act 'Further': dynamic $pod_whore_ev_end
 }
 !classic sex
 $pod_whore_ev2 = {
-cls
-sex +=1
-horny += 10
-minut += ''+rand(7,15)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(1,7)+'.gif"></center>'
-dynamic $text_pod_whore_vag
-dynamic $gg_sex_orgasm
-dynamic $accview_ggsex
-act 'Further': dynamic $pod_whore_ev_end
-}
-!anal sex
-$pod_whore_ev3 = {
-cls
-anal +=1
-horny += 5
-minut += ''+rand(7,15)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(8,14)+'.gif"></center>'
-dynamic $text_pod_whore_anal
-dynamic $accview_ggsex
-act 'Further': dynamic $pod_whore_ev_end
-}
-!all inclusive
-$pod_whore_ev4 = {
-cls
-bj +=1
-horny += 5
-minut += ''+rand(3,12)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
-dynamic $text_pod_whore_bj
-	act 'Further':
-	cls
-	sex +=1
-	horny += 10
-	minut += ''+rand(5,13)+''
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(1,7)+'.gif"></center>'
-	dynamic $text_pod_whore_vag
-	dynamic $gg_sex_orgasm
-	dynamic $accview_ggsex
-		act 'Further':
-		cls
-		anal +=1
-		horny += 5
-		minut += ''+rand(7,15)+''
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(8,14)+'.gif"></center>'
-		dynamic $text_pod_whore_anal
-		act 'Further': dynamic $pod_whore_ev_end
-	end
-end		
-}
-
-!blow job + classic sex
-$pod_whore_ev6 = {
-cls
-bj +=1
-horny += 5
-minut += ''+rand(5,15)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
-dynamic $text_pod_whore_bj
-	act 'Further':
 	cls
 	sex +=1
 	horny += 10
@@ -727,18 +665,9 @@ dynamic $text_pod_whore_bj
 	dynamic $gg_sex_orgasm
 	dynamic $accview_ggsex
 	act 'Further': dynamic $pod_whore_ev_end
-end
 }
-!blow job + anal sex
-$pod_whore_ev7 = {
-cls
-bj +=1
-horny += 5
-minut += ''+rand(5,15)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
-dynamic $text_pod_whore_bj
-	act 'Further':
+!anal sex
+$pod_whore_ev3 = {
 	cls
 	anal +=1
 	horny += 5
@@ -748,7 +677,81 @@ dynamic $text_pod_whore_bj
 	dynamic $text_pod_whore_anal
 	dynamic $accview_ggsex
 	act 'Further': dynamic $pod_whore_ev_end
-end
+}
+!all inclusive
+$pod_whore_ev4 = {
+	cls
+	bj +=1
+	horny += 5
+	minut += ''+rand(3,12)+''
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
+	dynamic $text_pod_whore_bj
+	act 'Further':
+		cls
+		sex +=1
+		horny += 10
+		minut += ''+rand(5,13)+''
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(1,7)+'.gif"></center>'
+		dynamic $text_pod_whore_vag
+		dynamic $gg_sex_orgasm
+		dynamic $accview_ggsex
+		act 'Further':
+			cls
+			anal +=1
+			horny += 5
+			minut += ''+rand(7,15)+''
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(8,14)+'.gif"></center>'
+			dynamic $text_pod_whore_anal
+			act 'Further': dynamic $pod_whore_ev_end
+		end
+	end
+}
+
+!blow job + classic sex
+$pod_whore_ev6 = {
+	cls
+	bj +=1
+	horny += 5
+	minut += ''+rand(5,15)+''
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
+	dynamic $text_pod_whore_bj
+	act 'Further':
+		cls
+		sex +=1
+		horny += 10
+		minut += ''+rand(7,15)+''
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(1,7)+'.gif"></center>'
+		dynamic $text_pod_whore_vag
+		dynamic $gg_sex_orgasm
+		dynamic $accview_ggsex
+		act 'Further': dynamic $pod_whore_ev_end
+	end
+}
+!blow job + anal sex
+$pod_whore_ev7 = {
+	cls
+	bj +=1
+	horny += 5
+	minut += ''+rand(5,15)+''
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/bj'+rand(1,17)+'.gif"></center>'
+	dynamic $text_pod_whore_bj
+	act 'Further':
+		cls
+		anal +=1
+		horny += 5
+		minut += ''+rand(7,15)+''
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/whore/sex/sex'+rand(8,14)+'.gif"></center>'
+		dynamic $text_pod_whore_anal
+		dynamic $accview_ggsex
+		act 'Further': dynamic $pod_whore_ev_end
+	end
 }
 
 !-----------------
@@ -756,170 +759,169 @@ end
 !=================
 !blow job
 $text_pod_whore_groupbj = {
-txt_pod_whore_groupbj = rand(1,2)
-if txt_pod_whore_groupbj = 1:$txt_pod_whore_groupbj = 'You suck at it, feeling him groan and enthusiastic view of his friend, a couple of minutes each unable to bear the said: 
-- bear off, now it`s my turn.
-- Do not you so kipish, now it is two expertly serve.  
-He stood next to his cock poking you on the cheek. You began to actively cultivate and Two Smoking Barrels.'
-if txt_pod_whore_groupbj = 2:$txt_pod_whore_groupbj = 'You went to the stairwell, Your knees have trembled , and between the legs become wet. 
-The guy just dumped his dick out of his pants, and his friend while standing, I looked and stroked his hump on the pants. 
-You silently knelt before him and took his hand member, but he rudely said,: 
-- Take your hands and mouth wide, bitch, here, softer suck. 
-And he has your breasts out of her bra and pulled Matza. You were both softer and deeper can take by mouth, suddenly I approached him drugan, He pulled out a member, boyfriend pushed and shoved in your mouth a lump.'
-if txt_pod_whore_groupbj = 3:$txt_pod_whore_groupbj = 'Before you were unfamiliar to you guys, you just waited and said nothing. Suddenly the, that suits lower and pulls his dick - Suck, You become like-is reluctant to suck, and even a member of his-it was a small.
-Then the second came and you become one alternately sucking, else. They looked at each other, one of them said,:
-- davalka, Let`s actively Fulfil, I do not see the enthusiasm...
-You became podrachivat and suck them with greater activity.'
-if txt_pod_whore_groupbj = 4:$txt_pod_whore_groupbj = 'Let`s go into the entrance, the stairwell and asked: - what`s next and how? 
-The boys stepped from foot to foot, it was evident that they were uncomfortable. You come to one of them unbuttoned his pants pulled limp dick, We sat down and began to suck. 
-Another he unbuttoned his pants, He pulled out his dick and stood next.
-You are naked in the stairwell squatting suck two guys at once. '
+	txt_pod_whore_groupbj = rand(1,2)
+	if txt_pod_whore_groupbj = 1:$txt_pod_whore_groupbj = 'You suck at it, feeling him groan and enthusiastic view of his friend, a couple of minutes each unable to bear the said: 
+		- bear off, now it`s my turn.
+		- Do not you so kipish, now it is two expertly serve.  
+		He stood next to his cock poking you on the cheek. You began to actively cultivate and Two Smoking Barrels.'
+	if txt_pod_whore_groupbj = 2:$txt_pod_whore_groupbj = 'You went to the stairwell, Your knees have trembled , and between the legs become wet. 
+		The guy just dumped his dick out of his pants, and his friend while standing, I looked and stroked his hump on the pants. 
+		You silently knelt before him and took his hand member, but he rudely said,: 
+		- Take your hands and mouth wide, bitch, here, softer suck. 
+		And he has your breasts out of her bra and pulled Matza. You were both softer and deeper can take by mouth, suddenly I approached him drugan, He pulled out a member, boyfriend pushed and shoved in your mouth a lump.'
+	if txt_pod_whore_groupbj = 3:$txt_pod_whore_groupbj = 'Before you were unfamiliar to you guys, you just waited and said nothing. Suddenly the, that suits lower and pulls his dick - Suck, You become like-is reluctant to suck, and even a member of his-it was a small.
+		Then the second came and you become one alternately sucking, else. They looked at each other, one of them said,:
+		- davalka, Let`s actively Fulfil, I do not see the enthusiasm...
+		You became podrachivat and suck them with greater activity.'
+	if txt_pod_whore_groupbj = 4:$txt_pod_whore_groupbj = 'Let`s go into the entrance, the stairwell and asked: - what`s next and how? 
+		The boys stepped from foot to foot, it was evident that they were uncomfortable. You come to one of them unbuttoned his pants pulled limp dick, We sat down and began to suck. 
+		Another he unbuttoned his pants, He pulled out his dick and stood next.
+		You are naked in the stairwell squatting suck two guys at once. '
 
 	'<<$txt_pod_whore_groupbj>>'
 }
 !sex
 $text_pod_whore_groupsex = {
-txt_pod_whore_groupsex = rand(1,3)
-if txt_pod_whore_groupsex = 1:$txt_pod_whore_groupsex = 'In their order, You pulled his pants. One of them came up to you and started to paw impudently, then unbuttoned his pants. 
-You obediently spread her legs. Without saying a word began to fuck. This time it was even nice and you moan with pleasure, feeling, as dirty middle-aged man pulls you as a member. 
-And his friend waiting for their turn with pleasure watching you and jerked off his dick.'
-if txt_pod_whore_groupsex = 2:$txt_pod_whore_groupsex = 'Become cancer and push the ass, - He said a man and fell in behind, to push through his dick, First a little unusual, then nothing, It went like clockwork. 
-You even become a pleasure and you began to softly moan, and they neigh, one of them said,:
-- You need to be in two dick in the ass fuck, pity there is not a place.'
-if txt_pod_whore_groupsex = 3:$txt_pod_whore_groupsex = 'They looked at each other and one of them said,:
-- a real whore, let cancer get up. 
-You stood, and he fell in behind began to rhythmically fuck your body.'
-!if txt_pod_whore_groupsex = 4:$txt_pod_whore_groupsex = ''
+	txt_pod_whore_groupsex = rand(1,3)
+	if txt_pod_whore_groupsex = 1:$txt_pod_whore_groupsex = 'In their order, You pulled his pants. One of them came up to you and started to paw impudently, then unbuttoned his pants. 
+		You obediently spread her legs. Without saying a word began to fuck. This time it was even nice and you moan with pleasure, feeling, as dirty middle-aged man pulls you as a member. 
+		And his friend waiting for their turn with pleasure watching you and jerked off his dick.'
+	if txt_pod_whore_groupsex = 2:$txt_pod_whore_groupsex = 'Become cancer and push the ass, - He said a man and fell in behind, to push through his dick, First a little unusual, then nothing, It went like clockwork. 
+		You even become a pleasure and you began to softly moan, and they neigh, one of them said,:
+		- You need to be in two dick in the ass fuck, pity there is not a place.'
+	if txt_pod_whore_groupsex = 3:$txt_pod_whore_groupsex = 'They looked at each other and one of them said,:
+		- a real whore, let cancer get up. 
+		You stood, and he fell in behind began to rhythmically fuck your body.'
+	!if txt_pod_whore_groupsex = 4:$txt_pod_whore_groupsex = ''
 
 	'<<$txt_pod_whore_groupsex>>'
 }
 
 $pod_whore_ev5 = {
-pod_whore_groupsexev = rand(1,2)
-if pod_whore_groupsexev = 1: dynamic $pod_whore_groupsexev1
-if pod_whore_groupsexev = 2: dynamic $pod_whore_groupsexev2
+	pod_whore_groupsexev = rand(1,2)
+	if pod_whore_groupsexev = 1: dynamic $pod_whore_groupsexev1
+	if pod_whore_groupsexev = 2: dynamic $pod_whore_groupsexev2
 }
 !gangbang event 1
 $pod_whore_groupsexev1 = {
-cls
-guy +=2
-bj +=2
-horny += 10
-minut += ''+rand(3,10)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_1_'+rand(1,2)+'.jpg"></center>'
-dynamic $text_pod_whore_groupbj
-	act 'Further':
 	cls
-	sex +=1
+	guy +=2
+	bj +=2
 	horny += 10
-	minut += ''+rand(5,11)+''
+	minut += ''+rand(3,10)+''
 	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_2_'+rand(1,2)+'.jpg"></center>'
-	dynamic $text_pod_whore_groupsex 
-	dynamic $gg_sex_orgasm
-	dynamic $accview_ggsex
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_1_'+rand(1,2)+'.jpg"></center>'
+	dynamic $text_pod_whore_groupbj
 		act 'Further':
 		cls
 		sex +=1
-		horny += 15
-		minut += ''+rand(7,12)+''
+		horny += 10
+		minut += ''+rand(5,11)+''
 		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_3.jpg"></center>'
-		dynamic $text_pod_whore_groupsex
+		'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_2_'+rand(1,2)+'.jpg"></center>'
+		dynamic $text_pod_whore_groupsex 
 		dynamic $gg_sex_orgasm
-				act 'Further':
-				cls
-				cumlip += 1
-				cumface +=1
-				if nude = 0: cumfrot = 1
-				swallow += 1
-				facial += 1
-				if energy >= 3: energy -= 2
-				hapri = 0
-				minut += ''+rand(3,7)+''
-				money += '<<total_money>>'
-				pod_whore_countQW += 1			
-				pod_whore_client_day = daystart
-				pod_whore_client_count -= 1			
-				gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_4_'+rand(1,2)+'.jpg"></center>'
-				'Enjoy your body, obkonchal your entire face, paying your coin, guys retired.'
-				'you paid: <<total_money>>'
-			act 'Escape': gt'pod_ezd','etaj_2' 
-		end
-	end
-end	
-}
-!gangbang event 2
-$pod_whore_groupsexev2 = {
-cls
-guy +=2
-bj +=2
-horny += 10
-minut += ''+rand(3,10)+''
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_1_'+rand(1,2)+'.gif"></center>'
-dynamic $text_pod_whore_groupbj
-	act 'Further':
-	cls
-	sex +=1
-	horny += 10
-	minut += ''+rand(5,10)+''
-	gs'stat'
-	'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_2_1.gif"></center>'
-	dynamic $text_pod_whore_groupsex 
-	dynamic $gg_sex_orgasm
-	dynamic $accview_ggsex
-		act 'Further':
-		cls
-		sex +=1
-		horny += 15
-		minut += ''+rand(5,10)+''
-		gs'stat'
-		'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_3_1.gif"></center>'
-		'They launched your body, and continued a spire in the mouth, another in her pussy. You were not very comfortable to suck dick, when the rear hollow, but you`ll quickly get the hand, and the guys caught the right rhythm.'
-		dynamic $gg_sex_orgasm
+		dynamic $accview_ggsex
 			act 'Further':
 			cls
-			minut += ''+rand(5,10)+''
+			sex +=1
+			horny += 15
+			minut += ''+rand(7,12)+''
 			gs'stat'
-			'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_2_'+rand(2,3)+'.gif"></center>'
-			'One of them lay down on his back , and put you on top, on his penis , and you become a jump on it. The second came from behind and put his dick in your mouth. You gladly opened her mouth wide and let herself be fucked in the mouth and more.' 
-			'You feel dirty slut, capable only fucking.'
+			'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_3.jpg"></center>'
+			dynamic $text_pod_whore_groupsex
 			dynamic $gg_sex_orgasm
-				act 'Further':
-				cls
-				minut += ''+rand(5,10)+''
-				gs'stat'
-				'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_3_2.gif"></center>'
-				'Boys swapped again and you jumped on a limb, you become a man podmahivat, clinging to your hips. The boys began vigorously to fuck your body.'
-				dynamic $gg_sex_orgasm	
 					act 'Further':
 					cls
 					cumlip += 1
 					cumface +=1
-					if nude = 0: cumfrot = 1
+					if $clothingworntype ! 'nude': cumfrot = 1
 					swallow += 1
 					facial += 1
 					if energy >= 3: energy -= 2
 					hapri = 0
 					minut += ''+rand(3,7)+''
 					money += '<<total_money>>'
-					pod_whore_countQW += 1				
+					pod_whore_countQW += 1			
 					pod_whore_client_day = daystart
 					pod_whore_client_count -= 1			
 					gs'stat'
-					'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_4.jpg"></center>'
-					'Enjoy your body, They obkonchalsya your pussy and pay you a money, guys retired.'
+					'<center><img src="images/zsoft/pod_ezd/whore/sex/group/1_4_'+rand(1,2)+'.jpg"></center>'
+					'Enjoy your body, obkonchal your entire face, paying your coin, guys retired.'
 					'you paid: <<total_money>>'
-					act 'Escape': gt'pod_ezd','etaj_2' 
-				end	
+				act 'Escape': gt'pod_ezd','etaj_2' 
+			end
+		end
+	end	
+}
+!gangbang event 2
+$pod_whore_groupsexev2 = {
+	cls
+	guy +=2
+	bj +=2
+	horny += 10
+	minut += ''+rand(3,10)+''
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_1_'+rand(1,2)+'.gif"></center>'
+	dynamic $text_pod_whore_groupbj
+		act 'Further':
+		cls
+		sex +=1
+		horny += 10
+		minut += ''+rand(5,10)+''
+		gs'stat'
+		'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_2_1.gif"></center>'
+		dynamic $text_pod_whore_groupsex 
+		dynamic $gg_sex_orgasm
+		dynamic $accview_ggsex
+			act 'Further':
+			cls
+			sex +=1
+			horny += 15
+			minut += ''+rand(5,10)+''
+			gs'stat'
+			'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_3_1.gif"></center>'
+			'They launched your body, and continued a spire in the mouth, another in her pussy. You were not very comfortable to suck dick, when the rear hollow, but you`ll quickly get the hand, and the guys caught the right rhythm.'
+			dynamic $gg_sex_orgasm
+				act 'Further':
+				cls
+				minut += ''+rand(5,10)+''
+				gs'stat'
+				'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_2_'+rand(2,3)+'.gif"></center>'
+				'One of them lay down on his back , and put you on top, on his penis , and you become a jump on it. The second came from behind and put his dick in your mouth. You gladly opened her mouth wide and let herself be fucked in the mouth and more.' 
+				'You feel dirty slut, capable only fucking.'
+				dynamic $gg_sex_orgasm
+					act 'Further':
+					cls
+					minut += ''+rand(5,10)+''
+					gs'stat'
+					'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_3_2.gif"></center>'
+					'Boys swapped again and you jumped on a limb, you become a man podmahivat, clinging to your hips. The boys began vigorously to fuck your body.'
+					dynamic $gg_sex_orgasm	
+						act 'Further':
+						cls
+						cumlip += 1
+						cumface +=1
+						if $clothingworntype ! 'nude': cumfrot = 1
+						swallow += 1
+						facial += 1
+						if energy >= 3: energy -= 2
+						hapri = 0
+						minut += ''+rand(3,7)+''
+						money += '<<total_money>>'
+						pod_whore_countQW += 1				
+						pod_whore_client_day = daystart
+						pod_whore_client_count -= 1			
+						gs'stat'
+						'<center><img src="images/zsoft/pod_ezd/whore/sex/group/2_4.jpg"></center>'
+						'Enjoy your body, They obkonchalsya your pussy and pay you a money, guys retired.'
+						'you paid: <<total_money>>'
+						act 'Escape': gt'pod_ezd','etaj_2' 
+					end
+				end
 			end
 		end
 	end
-end		
-			
 }
 --- pod_whore ---------------------------------
 

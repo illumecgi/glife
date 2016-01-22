@@ -1537,7 +1537,9 @@ if tanga = 1 and $clothingworntype = 'nude':
 elseif tanga = 0:
 	if (ski = 1 or glamur = 1):
 		pl '<b><font color="red">Your face is flushed with shame, you are not wearing panties and from under your short skirt sparkles your naked ass.</font></b>'
-	elseif ski = 0 and glamur = 0 and opPRE = 0 and $clothingworntype ! 'nude':
+	elseif $clothingworntype = 'hooker':
+		pl '<b><font color="red">you are not wearing panties, but you are dressed as a hooker, so that''s hardly surprising.</font></b>'
+	elseif opPRE = 0 and $clothingworntype ! 'nude':
 		pl '<b><font color="red">you are not wearing panties.</font></b>'
 	elseif towel = 1:
 		pl'<b><font color = red>Your naked body is covered only by a short towel</font></b>'

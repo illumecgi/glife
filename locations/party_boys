@@ -60,14 +60,14 @@ if $ARGS[0] = 'drink':
 					'The room sat one of your girlfriends and was recovering from the violent party.'
 					if Rex_save =1:'Rex burst into his room with you at the hands of, and cast out all those present, and shut the door.
 					Gently put you on a soft bed, while he lay on the floor near you.'
-					if party_boys_in =1:'Several guys switched their attention to it, note quickly gave them rebuff, I continue to watch over you.
+					if party_boys_in >= 1 =1:'Several guys switched their attention to it, note quickly gave them rebuff, I continue to watch over you.
 					You sat unceremoniously on his knees,  and in a drunken delirium you are admitted...'
 				elseif i = 2:
 					'<center><img src="images/qwest/alter/sisterQW/ReksHome/reksParty_party_kuh_5_2.jpg"></center>'
 					'The room lay one of your girlfriends and was recovering from the violent party.'
 					if Rex_save =1:'Rex burst into his room with you at the hands of, and cast out all those present, and shut the door.
 					Gently put you on a soft bed, while he lay on the floor near you.'
-					if party_boys_in =1:'anticipating, that there will be up to you, She instantly dodged out of here far away.
+					if party_boys_in >= 1:'anticipating, that there will be up to you, She instantly dodged out of here far away.
 					You sat unceremoniously on his knees,  and in a drunken delirium you are admitted...'
 				elseif i = 3:
 					'<center><img src="images/qwest/alter/sisterQW/ReksHome/reksParty_party_kuh_5_' + rand(3,4) + '.jpg"></center>'
@@ -77,7 +77,7 @@ if $ARGS[0] = 'drink':
 					-Yes, I`m all for it, I just keep fucking, Th stopped?
 					-You bring down already here, menacingly threatened to Rex Roma and Anya left the room.
 					Gently put you on a soft bed, while he lay on the floor near you.'
-					if party_boys_in =1:'-Opa, currently do not need help? 
+					if party_boys_in >= 1:'-Opa, currently do not need help? 
 					-dumps fuck, you have your own bitch, guys laugh a little and left the couple alone.
 					You sat unceremoniously on his knees,  and in a drunken delirium you are admitted...'
 				elseif i = 4:
@@ -85,7 +85,7 @@ if $ARGS[0] = 'drink':
 					'The room was already lying Lena, flashing on the general overview obkonchalsya pussy.'
 					if Rex_save =1:'Rex burst into his room with you at the hands of, and cast out all those present, and shut the door.
 					Gently put you on a soft bed, while he lay on the floor near you.'
-					if party_boys_in =1:'-Watch, there is another knot, robust design this evening we are lucky.
+					if party_boys_in >= 1:'-Watch, there is another knot, robust design this evening we are lucky.
 					-Yes, it is all obkonchennaya, without strength lies, it is not, that our straight from the tin <<$name>>.
 					You sat unceremoniously on his knees,  and in a drunken delirium you are admitted...'
 				elseif i = 5:
@@ -93,12 +93,12 @@ if $ARGS[0] = 'drink':
 					'However, we wandered into the room, already there in two trunks fucked Lena.'
 					if Rex_save =1:'Rex burst into his room with you at the hands of, and cast out all those present, and shut the door.
 					Gently put you on a soft bed, while he lay on the floor near you.'
-					if party_boys_in =1:'-ITS, did not prevent, guys?
+					if party_boys_in >= 1:'-ITS, did not prevent, guys?
 					-Sit, space enough for everyone!
 					You sat unceremoniously on his knees,  and in a drunken delirium you are admitted...'
 				end
 				if Rex_save =1:act 'Fall asleep':dynamic $Party_sleep
-				if party_boys_in =1:act 'Suck':dynamic $party_boys_in
+				if party_boys_in >= 1:act 'Suck':dynamic $party_boys_in
 			}
              
 			$Rex_save ={

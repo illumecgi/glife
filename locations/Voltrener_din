@@ -1,4 +1,4 @@
-# Voltrener_din
+ï»¿# Voltrener_din
 $din_trener_discoSex = {
 	*clr & cla
 	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener4.jpg"></center>'
@@ -73,7 +73,7 @@ $din_trener_SpeakHis = {
 	trenerepa += 1
 	'Will tell you better volleyball history, you know what:'
 	$volleyhistory[1]='The 1895 Williaam J. Morgan instructor of the young men`s Christian Association  (YMCA,Holyoke, Mass.) - religion is the cradle of modern civilization)) decided to blend elements of basketball, baseball, tennis and handball  (well he was there, the bobsled is not mixed) for, to create a new game for their friends-business, less contact, than basketball  (he was a prude...). He created the game of volleyball  (at that time it was called  mintonette - a good name, in vain have left..). Morgan borrowed the net from tennis and installed it at the approximate height of  196 cm from the floor, that the net was slightly above the heads of the average person in those times of growth.'
-	$volleyhistory[2]='During a demonstration of the game-then noticed Morgan, what the players smash  (to volley) the ball back and forth over the net and maybe  «Volleyball» (volleyball) , it would be the most appropriate name for this sport. 7 July_ 1896 g. in College g. Springfield was played the first game of volleyball'
+	$volleyhistory[2]='During a demonstration of the game-then noticed Morgan, what the players smash  (to volley) the ball back and forth over the net and maybe  Â«VolleyballÂ» (volleyball) , it would be the most appropriate name for this sport. 7 July_ 1896 g. in College g. Springfield was played the first game of volleyball'
 	$volleyhistory[3]='The 1916 The Philippines was first demonstrated by a combination of passing and striker blow, this pass was on a high trajectory for attacking kick another player'
 	$volleyhistory[4]='The 1920 Were established the rule of three touches of the ball by players of one team before moving it to the opponent, as well as a typically attack the back line players. '
 	$volleyhistory[5]='The 1930 Played the first game in beach volleyball teams had two players.'

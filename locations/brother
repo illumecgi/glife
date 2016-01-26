@@ -322,27 +322,27 @@ if $loc = 'sitrPar':
 					dynamic $brothersleepSexEnd
 					end
 				end	
-			end
-		else 
-			act 'Solve your brothers morning problem':
-				cls
-				minut += 5
-				horny += 10
-				bj += 1
-				cumlip += 1
-				swallow += 1
-				brotherSex += 1
-				brotherSexCount -= 1
-				brotherMorningSex = daystart
-				gs 'stat'
+			else 
+				act 'Solve your brothers morning problem':
+					cls
+					minut += 5
+					horny += 10
+					bj += 1
+					cumlip += 1
+					swallow += 1
+					brotherSex += 1
+					brotherSexCount -= 1
+					brotherMorningSex = daystart
+					gs 'stat'
 
-				'<center><img src="images/qwest/alexey/bj6.jpg"></center>'
-				'Approaching your brother, you gently pull back the covers and begin to suck his <<brotherDick>> cm dick. After a few minutes, he moans softly in his sleep and his cock twitches.'
-				'Your mouth quickly fills with warm sperm and you feel its sharp taste.'			
-				'Swallowing the semen, you gently replace the blanket and, seeing a slight smile on your sleeping brother, leave.'
+					'<center><img src="images/qwest/alexey/bj6.jpg"></center>'
+					'Approaching your brother, you gently pull back the covers and begin to suck his <<brotherDick>> cm dick. After a few minutes, he moans softly in his sleep and his cock twitches.'
+					'Your mouth quickly fills with warm sperm and you feel its sharp taste.'			
+					'Swallowing the semen, you gently replace the blanket and, seeing a slight smile on your sleeping brother, leave.'
 
-				act '<B>Move away</B>':gt 'sitrPar'
-				exit
+					act '<B>Move away</B>':gt 'sitrPar'
+					exit
+				end
 			end
 		end
 

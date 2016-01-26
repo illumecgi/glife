@@ -1060,6 +1060,12 @@ $din_bigperemena = {
 			'<center><img src="images/qwest/alter/katja/petting.jpg"></center>'
 			'Katja brought you into a small room where it was stored inventory for cleanup. She barely closed the door immediately dug into your lips on my lips and whispered passionately "<<$name>>, I want you."'
 
+			if rand(1,2) = 1 and katja_scool_sex = 1:
+				gs 'Katja_Tanga'
+				*clr & cla
+				dynamic  $din_katja_secretroom
+			else
+
 			act 'Lick Katja':
 				cls
 				lesbian += 1

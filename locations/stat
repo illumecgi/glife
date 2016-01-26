@@ -512,7 +512,7 @@ end
 
 if minut >= 60:
 	:loopmin
-	if SbrosNerdism = 1:nerdism = will / 10 + orgasm
+	if SbrosNerdism = 1:nerdism = will / 10 - orgasm
 	if nerdism < 0:nerdism = 0
 	if obkvsdam > 0:obkvsdam = rand(2, 5)
 	hour += 1

@@ -274,26 +274,6 @@ if StoryLine > 0 and hour < 4 and motherWorry = 0 and SchoolAtestat = 0 and age 
 	motherWorry = 1
 end
 
-if NosovRevenge = 2 and daynosovrevenge + 1 >= daystart:
-	cls
-	gs 'stat'
-	'<center><b><font color="maroon"><<$npcName[1]>> <<$npcSurName[1]>></font></b></center>'
-	'<center><img src="images/qwest/alter/npc/1.jpg"></center>'
-	'Near the house "Well slut. If you do not want that to video became public, Now let''s go and talk to me."'
-
-	act 'Go to Dimka':
-		cls
-		NosovRevenge = 3
-		minut += 30
-		gs 'stat'
-		'You went to the house of Dimka. The house where he lives belongs to his parents, this is a big two-storey, detached house with a manicured lawn and a large garden. With Dimka you have gone to his room and he closed the door with a key.'
-
-		act 'Go into the room Dima':gt 'dimaHome'
-	end
-
-	exit
-end
-
 if rand(1, 5) >= 4:
 	if GorSlut = 3:'You catch people staring at you, some you recognize, but you hope they don''t recognize you or remember where from. Occasionally you hear people chuckle, looks like someone found out about your adventures.'
 	if GorSlut = 4:'People look at you with a grin, someone makes vulgar gestures towards you hinting at your adventures.'

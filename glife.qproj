@@ -30,7 +30,6 @@
       <Location name="AnalPR"/>
       <Location name="dinSex"/>
       <Location name="dinSex2"/>
-      <Location name="dinsexFX"/>
       <Location name="din2"/>
       <Location name="MenuLoc"/>
       <Location name="MenuMainLoc"/>
@@ -260,6 +259,7 @@
       <Location name="dimaGoHome"/>
       <Location name="dimaGoHome2"/>
       <Location name="dinnpc"/>
+      <Location name="DimkaWarning"/>
       <Location name="krutishi"/>
     </Folder>
     <Folder name="Artem Chebotarev">

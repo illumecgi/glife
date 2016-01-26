@@ -1064,7 +1064,7 @@ $din_bigperemena = {
 				gs 'Katja_Tanga'
 				*clr & cla
 				dynamic  $din_katja_secretroom
-			else
+			end
 
 			act 'Lick Katja':
 				cls

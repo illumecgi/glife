@@ -42,38 +42,70 @@ $card_game_durak_play = {
 	minut +=3
 	gs'stat'
 	!strip)
-	if card_game_durak_clothes = 0:$cgd_clothes = '<font color=red><b>You naked</b></font>'
-	if card_game_durak_clothes = 1:$cgd_clothes = 'You are now wearing: panties'
-	if card_game_durak_clothes = 2:$cgd_clothes = 'You are now wearing: panties, brassiere'
-	if card_game_durak_clothes = 3:$cgd_clothes = 'You are now wearing: panties, brassiere, skirt'
-	if card_game_durak_clothes = 4:$cgd_clothes = 'You are now wearing: panties, brassiere, skirt, shirt'
-	if card_game_durak_clothes = 5:$cgd_clothes = 'You are now wearing: panties, brassiere, skirt, shirt, socks'
+	if card_game_durak_clothes = 0:
+		$cgd_clothes = '<font color=red><b>You naked</b></font>'
+	elseif card_game_durak_clothes = 1:
+		$cgd_clothes = 'You are now wearing: panties'
+	elseif card_game_durak_clothes = 2:
+		$cgd_clothes = 'You are now wearing: panties, bra'
+	elseif card_game_durak_clothes = 3:
+		$cgd_clothes = 'You are now wearing: panties, bra, skirt'
+	elseif card_game_durak_clothes = 4:
+		$cgd_clothes = 'You are now wearing: panties, bra, skirt, shirt'
+	elseif card_game_durak_clothes = 5:
+		$cgd_clothes = 'You are now wearing: panties, bra, skirt, shirt, socks'
+	end
 
-	if card_game_durak_npc_vasya = 0:$cgd_vasya_clothes = '<b>Vasya naked</b>'
-	if card_game_durak_npc_vasya = 1:$cgd_vasya_clothes = 'On Vasya is now wearing: briefs'
-	if card_game_durak_npc_vasya = 2:$cgd_vasya_clothes = 'On Vasya is now wearing: briefs, shorts'
-	if card_game_durak_npc_vasya = 3:$cgd_vasya_clothes = 'On Vasya is now wearing: briefs, shorts, shirt'
-	if card_game_durak_npc_vasya = 4:$cgd_vasya_clothes = 'On Vasya is now wearing: briefs, shorts, shirt, socks'
+	if card_game_durak_npc_vasya = 0:
+		$cgd_vasya_clothes = '<b>Vasya naked</b>'
+	elseif card_game_durak_npc_vasya = 1:
+		$cgd_vasya_clothes = 'On Vasya is now wearing: briefs'
+	elseif card_game_durak_npc_vasya = 2:
+		$cgd_vasya_clothes = 'On Vasya is now wearing: briefs, shorts'
+	elseif card_game_durak_npc_vasya = 3:
+		$cgd_vasya_clothes = 'On Vasya is now wearing: briefs, shorts, shirt'
+	elseif card_game_durak_npc_vasya = 4:
+		$cgd_vasya_clothes = 'On Vasya is now wearing: briefs, shorts, shirt, socks'
+	end
 
-	if card_game_durak_npc_den = 0:$cgd_den_clothes = '<b>Den naked</b>'
-	if card_game_durak_npc_den = 1:$cgd_den_clothes = 'At Den is now wearing: briefs'
-	if card_game_durak_npc_den = 2:$cgd_den_clothes = 'At Den is now wearing: briefs, Sports trousers'
-	if card_game_durak_npc_den = 3:$cgd_den_clothes = 'At Den is now wearing: briefs, Sports trousers, sport jacket'
-	if card_game_durak_npc_den = 4:$cgd_den_clothes = 'At Den is now wearing: briefs, Sports trousers, sport jacket, socks'
+	if card_game_durak_npc_den = 0:
+		$cgd_den_clothes = '<b>Den naked</b>'
+	elseif card_game_durak_npc_den = 1:
+		$cgd_den_clothes = 'At Den is now wearing: briefs'
+	elseif card_game_durak_npc_den = 2:
+		$cgd_den_clothes = 'At Den is now wearing: briefs, Sports trousers'
+	elseif card_game_durak_npc_den = 3:
+		$cgd_den_clothes = 'At Den is now wearing: briefs, Sports trousers, sport jacket'
+	elseif card_game_durak_npc_den = 4:
+		$cgd_den_clothes = 'At Den is now wearing: briefs, Sports trousers, sport jacket, socks'
+	end
 
-	if card_game_durak_npc_vitek = 0:$cgd_vitek_clothes = '<b>Vitek naked</b>'
-	if card_game_durak_npc_vitek = 1:$cgd_vitek_clothes = 'On Vitek is now wearing: briefs'
-	if card_game_durak_npc_vitek = 2:$cgd_vitek_clothes = 'On Vitek is now wearing: briefs, jeans'
-	if card_game_durak_npc_vitek = 3:$cgd_vitek_clothes = 'On Vitek is now wearing: briefs, jeans, shirt'
-	if card_game_durak_npc_vitek = 4:$cgd_vitek_clothes = 'On Vitek is now wearing: briefs, jeans, shirt, socks'
+	if card_game_durak_npc_vitek = 0:
+		$cgd_vitek_clothes = '<b>Vitek naked</b>'
+	elseif card_game_durak_npc_vitek = 1:
+		$cgd_vitek_clothes = 'On Vitek is now wearing: briefs'
+	elseif card_game_durak_npc_vitek = 2:
+		$cgd_vitek_clothes = 'On Vitek is now wearing: briefs, jeans'
+	elseif card_game_durak_npc_vitek = 3:
+		$cgd_vitek_clothes = 'On Vitek is now wearing: briefs, jeans, shirt'
+	elseif card_game_durak_npc_vitek = 4:
+		$cgd_vitek_clothes = 'On Vitek is now wearing: briefs, jeans, shirt, socks'
+	end
 
 	!Pictures undressing
-	if card_game_durak_clothes = 0:$cgd_clothes_set1 = '6'
-	if card_game_durak_clothes = 1:$cgd_clothes_set1 = '5'
-	if card_game_durak_clothes = 2:$cgd_clothes_set1 = '4'
-	if card_game_durak_clothes = 3:$cgd_clothes_set1 = '3'
-	if card_game_durak_clothes = 4:$cgd_clothes_set1 = '2'
-	if card_game_durak_clothes = 5:$cgd_clothes_set1 = '1'
+	if card_game_durak_clothes = 0:
+		$cgd_clothes_set1 = '6'
+	elseif card_game_durak_clothes = 1:
+		$cgd_clothes_set1 = '5'
+	elseif card_game_durak_clothes = 2:
+		$cgd_clothes_set1 = '4'
+	elseif card_game_durak_clothes = 3:
+		$cgd_clothes_set1 = '3'
+	elseif card_game_durak_clothes = 4:
+		$cgd_clothes_set1 = '2'
+	elseif card_game_durak_clothes = 5:
+		$cgd_clothes_set1 = '1'
+	end
 		
 	'<center><b>You play the fool on the strip. The game will continue until such time until somebody did not undress.</b></center>'
 	'<table width="100%" cellspacing="0" cellpadding="5"><td width="200" valign="top"><img src="images/zsoft/pod_ezd/shulgahome/bigroom/card/<<cgd_clothes_set>>-<<$cgd_clothes_set1>>.jpg"></td><td valign="top">'
@@ -131,7 +163,7 @@ $card_game_durak_play = {
 			end
 		end		
 	end
-	if card_game_durak_npc_vasya <=0 or card_game_durak_npc_den <=0 or card_game_durak_npc_vitek <=0:
+	if card_game_durak_npc_vasya <= 0 or card_game_durak_npc_den <= 0 or card_game_durak_npc_vitek <= 0:
 		horny += 10
 		health += 10
 		manna += 5
@@ -159,7 +191,6 @@ $card_game_durak_play = {
 			end
 		end	
 		if GorSlut >= 3:
-		rnd_ggwin_select = RAND(0,100)
 			if RAND(1,100) <= 70: 
 				if RAND(1,100) <= 50:
 					act 'Further': dynamic $card_game_ggwin_clothercum
@@ -231,13 +262,13 @@ $card_game_nosex = {
 	gs'stat'
 	card_game_texta = RAND(0,6)
 		if card_game_texta = 0:$card_game_texta = 'I want you to suck me!'		
-		if card_game_texta = 1:$card_game_texta = 'Can I masturbate?'
-		if card_game_texta = 2:$card_game_texta = 'Kiss my dick'
-		if card_game_texta = 3:$card_game_texta = 'Take the cheek'
-		if card_game_texta = 4:$card_game_texta = 'I want to fuck you'
-		if card_game_texta = 5:$card_game_texta = 'I want to touch your pussy'
-		if card_game_texta = 6:$card_game_texta = 'Give your tits pomatsat'
-		if card_game_texta = 7:$card_game_texta = 'Let me touch boobs'
+		if card_game_texta = 1:$card_game_texta = 'Can ypu masturbate?'
+		if card_game_texta = 2:$card_game_texta = 'Kiss my dick.'
+		if card_game_texta = 3:$card_game_texta = 'Suck me off.'
+		if card_game_texta = 4:$card_game_texta = 'I want to fuck you.'
+		if card_game_texta = 5:$card_game_texta = 'I want to touch your pussy.'
+		if card_game_texta = 6:$card_game_texta = 'Boob job!'
+		if card_game_texta = 7:$card_game_texta = 'Let me touch your tits.'
 	if cgd_win_vasya = 1:
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/vasya.jpg"></center>'
 		'<<$shulga_name_rnd>> speaks: -"<<$card_game_texta>>"'

@@ -262,7 +262,7 @@ $card_game_nosex = {
 	gs'stat'
 	card_game_texta = RAND(0,6)
 		if card_game_texta = 0:$card_game_texta = 'I want you to suck me!'		
-		if card_game_texta = 1:$card_game_texta = 'Can ypu masturbate?'
+		if card_game_texta = 1:$card_game_texta = 'Can you masturbate?'
 		if card_game_texta = 2:$card_game_texta = 'Kiss my dick.'
 		if card_game_texta = 3:$card_game_texta = 'Suck me off.'
 		if card_game_texta = 4:$card_game_texta = 'I want to fuck you.'

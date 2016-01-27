@@ -155,21 +155,17 @@ else
 					dynamic $d_katjaSextalk
 					exit
 				end
-			elseif katjaPreg > 0 and knowKatjaPreg = 0:
-				if knowKatjaPreg = 0:
-					'Katja biting her lip and without looking you in the eye, finally plucks up the courage and says, "<<$name>>, i am pregnant."'
+			else
+				'Katja biting her lip and without looking you in the eye, finally plucks up the courage and says, "<<$name>>, i am pregnant."'
 
-					act 'Whos is it?':
-						cls
-						minut += 5
-						knowKatjaPreg = 1
-						gs 'stat'
-						'Dumbfounded, you ask, "Who?" Katja wrinkles her nose, "Santa Claus? Well, it was Voinov. I was with him at the Christmas party at school, we slept together and boom! Jesus, what do I do now?"'
+				act 'Whos is it?':
+					cls
+					minut += 5
+					knowKatjaPreg = 1
+					gs 'stat'
+					'Dumbfounded, you ask, "Who?" Katja wrinkles her nose, "Santa Claus? Well, it was Voinov. I was with him at the Christmas party at school, we slept together and boom! Jesus, what do I do now?"'
 
-						act 'I have no idea':gt $curloc
-					end
-				else
-					''
+					act 'I have no idea':gt $curloc
 				end
 			end
 

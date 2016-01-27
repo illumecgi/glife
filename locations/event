@@ -760,7 +760,7 @@ if $ARGS[0] = 'dima46':
 	'With your head pressed tightly against the wall, you can not spit, and are forced to swallow.'
 	'"Your companion has been paid for a certain number of customers. Do you think you can manage, or do you need my help?'
 
-	act 'agree to suck':gt 'event', 'dima47'
+	act 'Agree to suck':gt 'event', 'dima47'
 	act 'Two of you would make it easier':gt 'event', 'dima48'
 end
 
@@ -778,7 +778,7 @@ if $ARGS[0] = 'dima47':
 	money += 1000
 	gs 'stat'
 	'<center><img src="images/picQW/15933_MarkDavisDonnaAnnika_494.jpg"></center>'
-	'"That`s wonderful", she says, "I''ll go tell your friend, give you some space so you''r not distracted". With these words, she points to the hole, which already has a new member.'
+	'"That`s wonderful", she says, "I''ll go tell your friend, give you some space so you''re not distracted". With these words, she points to the hole, which already has a new member.'
 	'You dutifully bend down, and begin to service the next stranger. This carrys on. Men erupt, leave and another appears.'
 	'Lost in your enthusiasm, you don`t hear Alex enter the room.'
 	'The realization that you are not alone in the room hits you just as he forcfully rams his cock into your pusssy.'
@@ -844,7 +844,7 @@ if $ARGS[0] = 'dima50':
 	act 'Suck':gt 'event', 'dima51'
 
 	if agil < 50:
-		act 'Dimiss':gt 'event', 'dima52'
+		act 'Dismiss':gt 'event', 'dima52'
 	else
 		act 'Dismiss':gt 'event', 'dima53'
 	end

@@ -494,8 +494,8 @@ $party_girls_boys ={
 			Some guys still are not enough girls, and you notice how they are connected to your sister with Roma, Anya and gladly accepts new members.
 			The apartment reigned depraved atmosphere wild sex, groans and cries of bellowing.
 			Time seems to have stopped, They fuck you until you run out of all forces.'
-			if preg = 0 or preg = 1 and pregtime < 7:'Hell, because after all, you can fly, you thought with horror.'
-			if preg = 1 and pregtime >= 7:'You chuckled to himself, Well, at least you do not zalet.'
+			if preg = 0 or preg = 1 and knowpreg = 0:'"Damn! I could get pregnant!" you think in horror.'
+			if preg = 1 and knowpreg = 1:'You chuckle to yourself, "Well at least I cannot get more pregnant.'
 			act 'Fall asleep':
 				cla
 				*clr

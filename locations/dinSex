@@ -1050,8 +1050,8 @@ $sexcum = {
 			manna -= 15
 			willpower -= 15
 
-			if preg = 0 or preg = 1 and pregtime < 7:'Damn, (! because after all, you can fly, you thought with horror. !)'
-			if preg = 1 and pregtime >= 7:'You chuckled to yourself, well at least you cannot get pregnant.'
+			if preg = 0 or preg = 1 and knowpreg = 0:'"Damn! I could get pregnant!" you think in horror.'
+			if preg = 1 and knowpreg = 1:'You chuckle to yourself, "Well at least I cannot get more pregnant.'
 		elseif finrand = 1:
 			!!Out
 
@@ -1100,8 +1100,8 @@ $sexcumsk = {
 
 			manna = manna - 15
 			willpower = willpower - 15
-			if preg = 0 or preg = 1 and pregtime < 7:'Hell, because after all, you can fly, you thought with horror. Just like that without your consent to your pussy finished and nothing can be done about it. We ought not to forget to take the pill - We think you.'
-			if preg = 1 and pregtime >= 7:'You chuckled to himself, Well, at least you do not zalet.'
+			if preg = 0 or preg = 1 and knowpreg = 0:'"Damn! I could get pregnant!" you think in horror. Just like that without your consent to your pussy finished and nothing can be done about it. We ought not to forget to take the pill - We think you.'
+			if preg = 1 and knowpreg = 1:'You chuckle to yourself, "Well at least I cannot get more pregnant.'
 		elseif finrand = 1:
 			!out
 			if pose = 0:

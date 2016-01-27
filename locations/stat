@@ -512,7 +512,7 @@ end
 
 if minut >= 60:
 	:loopmin
-	if SbrosNerdism = 1:nerdism = will / 10 + orgasm
+	if SbrosNerdism = 1:nerdism = will / 10 - orgasm
 	if nerdism < 0:nerdism = 0
 	if obkvsdam > 0:obkvsdam = rand(2, 5)
 	hour += 1
@@ -1377,7 +1377,7 @@ elseif sweat > 3:
 end
 if preg = 1:
 	rodtime = 280 - pregtime
-	if pregtime < 280 and pregtime > 6:pl '<b><font color="blue">You have been pregnant for <<pregtime>> days. Days until delivery <<rodtime>></font></b>'
+	if pregtime < 280 and pregtime > 27:knowpreg = 1 & pl '<b><font color="blue">You have been pregnant for <<pregtime>> days. Days until delivery <<rodtime>></font></b>'
 	if pregtime = 280:pl '<b><font color="red">You urgently need to go to the hospital</font></b>'
 	if pregtime >= 210:
 		pl'<font color = black>You have a huge <a href="exec:view''images/pregnant/3.jpg''"> stomach</a> pregnant woman</font>'

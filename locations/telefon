@@ -208,7 +208,7 @@ if $ARGS[0] = 'boyA':
 		'"Pretty good, you?"'
 		'<<$boyA>>, "Great, but I kind of miss you, can we meet today?"'
 
-		if pregtime <= dayA and pregtime >= 7 and pregtalk = 0:
+		if pregtime <= dayA and knowpreg = 1 and pregtalk = 0:
 			act 'Tell him he''s going to be a dad':
 				cla
 				pregtalk = 1
@@ -262,7 +262,7 @@ if $ARGS[0] = 'boyA':
 					act 'Hang up':gt 'telefon', 'fin'
 				end
 			end
-		elseif pregtime > dayA and pregtime >= 7 and pregtalk = 0:
+		elseif pregtime > dayA and knowpreg = 1 and pregtalk = 0:
 			act 'Honey, you will soon become a dad':
 				cla
 				bfA = 0

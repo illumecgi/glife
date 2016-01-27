@@ -224,8 +224,8 @@ if $ARGS[0] = 'drink':
 						you are relaxed, continuing to suck with relish and a receiving member, completely given to boys.
 						After playing with you, guys finishing, half-awake drunk you could hardly discern where one ends.
 						Boozer, in such a shabby state you have brought into the room...'
-						if preg = 0 or preg = 1 and pregtime < 7:'Hell, because after all, you can fly, you thought with horror.'
-						if preg = 1 and pregtime >= 7:'You chuckled to himself, Well, at least you do not zalet.'
+						if preg = 0 or preg = 1 and knowpreg = 0:'"Damn! I could get pregnant!" you think in horror.'
+						if preg = 1 and knowpreg = 1:'You chuckle to yourself, "Well at least I cannot get more pregnant.'
 						act 'Fall asleep':dynamic $Party_sleep
 					end
 				elseif i = 3:
@@ -249,8 +249,8 @@ if $ARGS[0] = 'drink':
 						Under the charm of your guys were finishing in you, hot jet hit the inside, finish on the back, in the ass...
 						-Uhh, Crown whore this evening awarded to you, <<$name>>.
 						Boozer, in such a shabby state you have brought into the room...'
-						if preg = 0 or preg = 1 and pregtime < 7:'Hell, because after all, you can fly, you thought with horror.'
-						if preg = 1 and pregtime >= 7:'You chuckled to himself, Well, at least you do not zalet.'
+						if preg = 0 or preg = 1 and knowpreg = 0:'"Damn! I could get pregnant!" you think in horror.'
+						if preg = 1 and knowpreg = 1:'You chuckle to yourself, "Well at least I cannot get more pregnant.'
 						act 'Fall asleep':dynamic $Party_sleep
 					end
 				elseif i = 4:

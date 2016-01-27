@@ -418,8 +418,8 @@ $sleepsexcum = {
 			manna -= 15
 			willpower -= 15
 
-			if preg = 0 or preg = 1 and pregtime < 7:'Damn, I could get pregnant, you think with horror.'
-			if preg = 1 and pregtime >= 7:'You chuckle to yourself, well at least you cannot get pregnant.'
+			if preg = 0 or preg = 1 and knowpreg = 0:'Damn, I could get pregnant, you think with horror.'
+			if preg = 1 and knowpreg = 1:'You chuckle to yourself, well at least you cannot get pregnant.'
 		else
 			!!Out
 

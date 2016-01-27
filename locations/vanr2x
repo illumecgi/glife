@@ -218,6 +218,7 @@ if pregtest > 0:
 		gs'stat'
 
 		if preg = 1:
+			knowpreg = 1
 			'The test showed the two strips. Are you pregnant.'
 
 			!'Father - <<$father>>.'

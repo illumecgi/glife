@@ -39,7 +39,7 @@ if SStip = 0:
 				gs 'preg'
 				manna -= 15
 				willpower -= 15
-				'Hell, because after all, you can fly, you thought with horror.'
+				'"Damn! I could get pregnant!" you think in horror.'
 			end
 
 			act 'Breathe':

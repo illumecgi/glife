@@ -61,7 +61,7 @@ $din_trener_speak = {
 					'You pulled the shorts, like correcting them, and pulled them so hard, that is clearly covered your pussy.  Opinion of the coach staring at you between legs. "The ball on the court so you don`t watch carefully", - rather you noticed. Michael N., a bit confused, turned away. "I''ll have something to tease him, maybe not to wear panties on a workout", - the thought flashed in your head, and the thought of sinking feeling in the pit of your stomach intensified.'
 				end
 			end
-		elseif trenerepa > 40 and trener_Speak = 4 and VoltrenerVoyeur = 3:
+		elseif trenerepa > 40 and trener_Speak = 4 and VoltrenerVoyeur >= 3:
 			trener_Speak += 1
 			'"Michael and I you like? You like to spy on me in the shower, and cum on me?", - making big enthusiastic eyes and trying to look at the coach adoringly asked you. On the coach taking your hand in his, penetrating said: "<<$name>>, you are very beautiful girl, and the athlete will be great, unless of course the mind will be taken, but I told you I got a woman, and I am very worried what happened". You angrily frowned not expecting such words. "Well, at least not <<$surname>>a already and <<$nickname>>, we have him to stir, may be the sense of ownership it will play, need him to whom I was jealous", - flying thoughts in your head.'
 			sopr = 1
@@ -85,7 +85,7 @@ $din_trener_speak = {
 					'"Mikhail, could you please help me", - waiting for a positive nod from coach, you get down on your knees turned to coach''s ass and people lower with the shorts: "Please look it seems to me I have been there during training something rubbed, but soon the game", - coach trying to look indifferent looked carefully at your holes:"Nothing you have there, and generally cowards under the form needs to wear then and will not RUB", - but despite his growling you see how your dick in your pants at the trainer took a fighting position.'
 				end
 			end
-		elseif trenerepa > 50 and trener_Speak = 5 and VoltrenerVoyeur = 5:
+		elseif trenerepa > 50 and trener_Speak = 5 and VoltrenerVoyeur >= 5:
 			trener_Speak += 1
 			'"Michael N., you''re not angry at me for Vanya, we''re not serious, he''s got competition, I have my race. And in General I like you better".  Coach, gathered, that-the answer, only choked and coughed. And you continued: "But still wanted to ask, do the coaches of the Junior volleyball teams are well paid? Then I also want to become a coach, you won and you got a car and you dress up stylishly, or you, as a former national team player and member of the European championship that- then pay extra", - you decided to once again gradually to touch the topic of the championship.'
 			act 'Humbly listen':

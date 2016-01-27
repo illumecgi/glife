@@ -64,6 +64,12 @@ gs 'family'
 
 if indorf = 1:'With your parents away visiting your grandparents, the appartment seems quite and empty.'
 
+!to add a counter if you avoid Dimka
+if nodimkaK >= rand(7,10) and DimkaWarnedToday = 0:
+   if hour >= 16 and hour < 24 and week <=5 and DimkaWarnedToday = 0: gt 'DimkaWarning'
+   if hour >= 9 and hour < 24 and week >=6 and DimkaWarnedToday = 0: gt 'DimkaWarning'
+end
+
 if hour >= 16 and hour <= 20 and indorf = 0:
 	if artemvbrosvid = 1 and artemhakday ! daystart and motherQW < 2 and mothervideotalk = 0 or BrotherNo = 1 and BrotherNoDay ! day:
 		cls

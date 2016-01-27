@@ -1,27 +1,4 @@
 # Voltrenersex
-minut += 15
-gs'stat'
-gs 'Voltrener_din'
-
-'<center><img src="images/qwest/alter/volley/voitrensex1.jpg"></center>'
-'You go to the bathroom coach, and just pull arm to open the door as it swings open, and trainer grab you by the hand, literally draws you inside.'
-
-	$boy = 'Michael N.'
-	silavag = 2
-	dick = 18
-	pose = 0
-	finrand=1
-
-if  trenerSex > 0:
-	act 'Don''t resist':  cla & dynamic $din_trener_sex
-elseif trenerSex = 0 and sopr ! 1:
-	act 'Look at the coach':
-		cla
-		dynamic $din_trener_talk
-	end
-end
-
-act 'Escape':gt'gdksport'
 
 $din_trener_talk = {
 	if Voltrenersee = 1:
@@ -311,6 +288,30 @@ $din_trener_sex = {
 		end
 	end
 }
+
+minut += 15
+gs'stat'
+gs 'Voltrener_din'
+
+'<center><img src="images/qwest/alter/volley/voitrensex1.jpg"></center>'
+'You go to the bathroom coach, and just pull arm to open the door as it swings open, and trainer grab you by the hand, literally draws you inside.'
+
+	$boy = 'Michael N.'
+	silavag = 2
+	dick = 18
+	pose = 0
+	finrand=1
+
+if  trenerSex > 0:
+	act 'Don''t resist':  cla & dynamic $din_trener_sex
+elseif trenerSex = 0 and sopr ! 1:
+	act 'Look at the coach':
+		cla
+		dynamic $din_trener_talk
+	end
+end
+
+act 'Escape':gt'gdksport'
 
 --- Voltrenersex ---------------------------------
 

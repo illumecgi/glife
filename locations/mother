@@ -245,7 +245,7 @@ if hour > 5:
 		end
 	end
 
-	if preg = 1 and pregTalkFamily = 0:
+	if preg = 1 and pregTalkFamily = 0 and knowpreg = 1:
 		act 'Tell your mother that you are pregnant':
 			cls
 			minut += 5

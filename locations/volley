@@ -12,20 +12,20 @@ if volltime = 0:
 	!! reserve player or you were caught drinking by the coach and he forbid you from playing
 	if trener_Speak < 9 or seealko = 1:
 		volleysostav = 1
-		poverkomand = 600
+		poverkomand = 500
 		'<center><img src="images/qwest/alter/volley/game3.jpg"></center>'
 		'You sit on the bench watching your team plays.'
 
 	!! starter
 	else
 		volleysostav = 2
-		poverkomand 500 + volleyboll
+		poverkomand = 500 + (volleyboll*2) + ((stren + vital + agil + react)/2)
 		'<center><img src="images/qwest/alter/volley/game4.jpg"></center>'
 		'After warming up you ran out on the court with teammates.'
 	end
 
 	!! opponent skill
-	poverkomandV = rand(500, 1500)
+	poverkomandV = rand(300, 1300)
 
 	if poverkomand > poverkomandV:
 		volpoint = 1
@@ -72,8 +72,7 @@ elseif volltime = 1:
 				if trenerepa >= rand(0, 80):
 					volleysostav = 2
 					dom += 1
-					poverkomand -= 100
-					poverkomand += volleyboll
+					poverkomand += (volleyboll*2) + ((stren + vital + agil + react)/2)
 					'The coach has agreed to release you on the field.'
 
 					act 'Continue':volltime = 2 & gt $curloc
@@ -137,9 +136,15 @@ elseif volltime = 3:
 		'<center><img src="images/qwest/alter/volley/game8.jpg"></center>'
 		'Your team lost.'
 	else
-		volsesondraw += 1
-		'<center><img src="images/qwest/alter/volley/game7.jpg"></center>'
-		'Draw.'
+		if rand (0, 1) = 0:
+			volsesonwin += 1
+			'<center><img src="images/qwest/alter/volley/game7.jpg"></center>'
+			'The match was very close, but in the end your team gets the win.'
+		else
+			volsesonloss += 1
+			'<center><img src="images/qwest/alter/volley/game7.jpg"></center>'
+			'The match was very close, but in the end your team losses.'
+		end
 	end
 
 	act 'Leave':gt 'gdksport'

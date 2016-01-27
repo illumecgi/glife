@@ -17,16 +17,16 @@ if otnBoyFrend[numnpc] >= 80:'You have a great relationship.'
 ''
 ''
 
-if preg = 1 and pregtime <= 80 and pregTalk[numnpc] = 0 and gnpcSex[numnpc] = 1:
+if preg = 1 and pregtime <= 80 and pregTalk[numnpc] = 0 and gnpcSex[numnpc] = 1 and knowpreg = 1:
 	if $father ! $nameBoyfrend[numnpc]:
-		$pregLie = '(To try to deceive)'
+		$pregLie = '(Lie to him)'
 	else
 		$pregLie = ''
 	end
-	act 'Say the guy, what did he knock you up  <<$pregLie>>':
+	act 'Tell the guy he knocked you up <<$pregLie>>':
 		cls
 		gs'stat'
-		'You said the guy, that became pregnant by him. He just did not come out the eyes of the orbits.'
+		'You tell the guy you are pregnant by him. His eyes nearly pop out of their sockets.'
 
 		if $father ! $nameBoyfrend[numnpc]: pregLieRand = rand(1,5)
 		if $father = $nameBoyfrend[numnpc] or ($father ! $nameBoyfrend[numnpc] and pregLieRand >= 4):

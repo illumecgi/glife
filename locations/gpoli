@@ -278,6 +278,7 @@ if hour >= 6 and hour <= 21:
 						'Doctor check you.'
 						$gpoli_sick = ''
 						if preg > 0:
+							knowpreg = 1
 							$gpoli_sick = 'pregnant'
 						end
 						if venera > 0:
@@ -462,6 +463,7 @@ if hour >= 6 and hour <= 21:
 						'After what seems like hours, the doctor comes back into the room. You notice his face seems redder than it was and his hair seems to be a little damp. He has also taken off the apron-like smock he had on before. He continues with his examination, taking your hands and arms and massaging the joints and flexing them. He does the same with your feet and legs. To your surprise, he also examines your ass and pussy, easing his gloved fingers into first your pussy and then your asshole. He even speads your lips apart and pushes the hood back to expose your clitoris which he gently massages for a moment before suddenly getting to his feet with a deep sigh, his eyes lingering on my exposed pussy for a moment before he seems to give himself a little shake. You''re glad he stopped when he did because you would have started to get wet had he continued.'
 						$gpoli_sick = ''
 						if preg > 0:
+							knowpreg = 1
 							$gpoli_sick = 'pregnant'
 						end
 						if venera > 0:
@@ -541,6 +543,7 @@ if hour >= 6 and hour <= 21:
 							'Doctor check you.'
 							$gpoli_sick = ''
 							if preg > 0:
+								knowpreg = 1
 								$gpoli_sick = 'pregnant'
 							end
 							if venera > 0:

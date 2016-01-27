@@ -19,7 +19,7 @@ if volltime = 0:
 	!! starter
 	else
 		volleysostav = 2
-		poverkomand = 500 + (volleyboll*2) + ((stren + vital + agil + react)/2)
+		poverkomand = 500 + ((volleyboll*2) + ((stren + vital + agil + react)/2))/2
 		'<center><img src="images/qwest/alter/volley/game4.jpg"></center>'
 		'After warming up you ran out on the court with teammates.'
 	end
@@ -72,7 +72,7 @@ elseif volltime = 1:
 				if trenerepa >= rand(0, 80):
 					volleysostav = 2
 					dom += 1
-					poverkomand += (volleyboll*2) + ((stren + vital + agil + react)/2)
+					poverkomand += ((volleyboll*2) + ((stren + vital + agil + react)/2))/2
 					'The coach has agreed to release you on the field.'
 
 					act 'Continue':volltime = 2 & gt $curloc

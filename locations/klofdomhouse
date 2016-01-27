@@ -1,4 +1,6 @@
 # klofdomhouse
+!Jora dick = 16, silavag = 1
+!Seymon dick = 18, silavag = 2
 if $ARGS[0] = 'start':
 	cla
 	*clr
@@ -161,6 +163,7 @@ if $ARGS[0] = 'ev7':
 end
 
 if $ARGS[0] = 'ev8':
+	gs 'dinsexFX'
 	cla
 	*clr
 	minut += 5
@@ -177,6 +180,9 @@ end
 if $ARGS[0] = 'ev9':
 	cla
 	*clr
+	$boy = 'Jora'
+	dick = 16
+	silavag = 1
 
 	act 'Have Jora fuck your pussy':gt 'klofdomhouse', 'ev13'
 	act 'Have Jora fuck your ass':gt 'klofdomhouse', 'ev14'
@@ -189,26 +195,22 @@ if $ARGS[0] = 'ev13':
 	minut += 30
 	klofQW += 1
 	money += 100
-	vagina += 1
-	sex += 1
-	cumpussy += 1
-	'Jora fucks you in your pussy.'
+	pose = 3
 	picrand = rand(7, 9)
 	'<center><img src="images/klof/klof <<picrand>>.jpg"></center>'
-	horand = rand(1, 100)
+	dynamic $vagstart2
+	'Jora fucks you in your pussy.'
 
-	if horand <= sex:
-		horny = 0 & orgasm += 1 & 'You orgasm.'
-	elseif horand > sex:
-		horny += 10 & 'You are not satisfied'
+	act '...':
+		cla
+		*clr
+		'<center><img src="images/klof/klof 10.jpg"></center>'
+		dynamic $vagend
+		'You get dressed and get ready to go home.'
+		'Jora hands you money, "Earned yourself a crumb."'
+
+		act 'Go home':gt 'street'
 	end
-	
-	'You feel Jora cum inside you.'
-	'<center><img src="images/klof/klof 10.jpg"></center>'
-	'You get dressed and get ready to go home.'
-	'Jora hands you money, "Earned yourself a crumb."'
-
-	act 'Go home':gt 'street'
 end
 
 if $ARGS[0] = 'ev14':
@@ -277,6 +279,10 @@ end
 if $ARGS[0] = 'ev10':
 	cla
 	*clr
+	$boy = 'Semyon'
+	dick = 18
+	silavag = 2
+
 	act 'Have Semyon fuck your pussy':gt 'klofdomhouse', 'ev 16'
 	act 'Have Semyon fuck your ass':gt 'klofdomhouse', 'ev 17'
 	act 'Suck Semyon':gt 'klofdomhouse', 'ev 18'
@@ -288,24 +294,17 @@ if $ARGS[0] = 'ev 16':
 	minut += 30
 	klofQW += 1
 	money += 100
-	vagina += 1
-	sex += 1
-	'Semyon fucks you in your pussy.'
+	pose = 3
 	picrand = rand(7, 9)
 	'<center><img src="images/klof/klof <<picrand>>.jpg"></center>'
-	horand = rand(1, 100)
-
-	if horand <= sex:
-		horny = 0 & orgasm += 1 & 'You orgasm.'
-	elseif horand > sex:
-		horny += 10 & 'You are not satisfied'
-	end
+	dynamic $vagstart2
+	'Semyon fucks you in your pussy.'
 
 	act '...':
 		cla
 		*clr
 		'<center><img src="images/klof/klof 10.jpg"></center>'
-		'You feel Semyon cum inside of you.'
+		dynamic $vagend
 		'You get dressed and get ready to go home.'
 		'Seymon hands you money, "Earned yourself a crumb."'
 
@@ -926,9 +925,11 @@ end
 if $ARGS[0] = 'ev60':
 	cla
 	*clr
-	minut += 10
-	vagina += 1
-	sex += 1
+	$boy = 'Jora'
+	dick = 16
+	silavag = 1
+	pose = 3
+	dynamic $vagstart2
 	'<center><img src="images/klof/bas 27.jpg"></center>'
 	'You furiously grind on Joras dick.'
 	'Jora is ready to cum.'
@@ -939,12 +940,9 @@ end
 if $ARGS[0] = 'ev61':
 	cla
 	*clr
-	cumpussy += 1
-	minut += 10
-	orgasm += 1
-	horny = 0
+	horny = 100
 	'<center><img src="images/klof/bas22.jpg"></center>'
-	'You cum again as Jora fills you with sperm.'
+	dynamic $vagend
 	'Jora gets up and goes to the showers saying to the crowd, "This bitch is all yours."'
 
 	act 'Fuck the crowd':gt 'klofdomhouse', 'ev62'
@@ -957,7 +955,7 @@ if $ARGS[0] = 'ev62':
 	orgasm += 1
 	cumlip += 3
 	'<center><img src="images/klof/bas23.jpg"></center>'
-	'You haven''t got ant choice and are fucked by the group of men.'
+	'You haven''t got any choice and are fucked by the group of men.'
 	'Someone bends you over and sticks his dick in your ass.'
 
 	act 'Fuck the crowd':gt 'klofdomhouse', 'ev63'

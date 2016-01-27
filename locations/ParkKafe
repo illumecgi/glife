@@ -214,29 +214,18 @@ if $ARGS[0] = 'man':
 
 			act 'In the sauna':
 				cla
+				gs 'dinsexFX'
+				$boy = 'the respectable man'
+				dick = rand (12, 18)
+				silavag = 2
 
 				if saunasex = 0:saunasex = 1 & guy += 1
 
-				sex += 1
-				cumlip += 1
-				cumass += 1
-				! WD: breaks horny test below ~
-				!horny = 0
-				vnesh += 1
-				vagina += 1
 				'<center><img src="images/pics2/sauna.jpg"></center>'
-				'In the sauna you two are completely naked, having fun and enjoying yourselves, which gradually turns into very passionate sex'
-
-				! WD: fix horny test logic stop both trigger
-				if horny > 75:
-					horny = 0
-					orgasm += 1
-					'You orgasm'
-				! if horny <= 75:
-				else
-					horny += 10
-					'You were not satisfied'
-				end
+				'In the sauna you two are completely naked, having fun and enjoying yourselves.'
+				dynamic $vagstart
+				'The two of you have very passionate sex'
+				dynamic $vagend
 
 				act 'Leave':gt 'street'
 			end

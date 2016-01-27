@@ -393,62 +393,35 @@ end
 
 streetrand = rand(0, 100)
 
-if streetrand >= 100 and hour <= 3:
+if streetrand >= 90 and hour <= 3:
 	cla
 	*clr
 	'<center><img src="images/etogame/street.jpg"></center>'
 	'Out of the blue you are grapped by a man. He drags you into the closest bush, saying "Honey, you better not scream for help."'
 
 	act 'Useless to resist':
+		gs 'dinsexFX'
 		cla
 		*clr
-		!!money += 500
 		$nameV = 'Rapist'
-		sex += 1
+		$boy = 'the rapist'
+		dick = rand (8, 20)
+		silavag = 0
+		pose = 3
+		
 		guy += 1
-		vagina += 1
 		'<center><img src="images/picV/dogging.jpg"></center>'
 
 		if prezik > 0:
-			protect = 1
+			protect = 2
 			prezik -= 1
 			'You give him a condom. "At least wear protection asshole. I don''t want a bastards child.", you tell him. He nods in silence, then puts it on.'
 		end
+		dynamic $vagstart2
 
 		'"Get ready, bitch." He says pushing you onto your knees. He moves behind you and takes you doggy-style. You can feel his hard cock entering your vagina.'
 
-		if horny >= 90:
-			horny = 0
-			manna += 15
-			willpower += 15
-			orgasm += 1
-			'Gradually a pleasantly warm ripple grows in your lower abdomen, then hits you full force as your entire body is covered in hot waves of orgasm, you involuntarily scream with pleasure writhing on your attacker.'
-		end
-
-		if protect ! 1:
-			!!unprotected sex
-			finrand = rand(0, 1)
-
-			if finrand = 0:
-				!!inside
-				cumpussy += 1
-				'The man groans and you feel like a jet of sperm hit you inside your body.'
-
-				if tabletki <= 0 and mesec <= 0:
-					gs 'preg'
-					manna -= 15
-					willpower -= 15
-					'Damn, after all, you could get pregnant, you think with horror.'
-				end
-			else
-				!!out
-				cumass += 1
-				'<<$nameV>> groans and removing his member, he finished on your ass.'
-			end
-		else
-			protect = 0
-			'Guy cums in a condom. Pulls his member out of you and removing the condom throws it to the ground, afterward he pulls his pants up and leaves.'
-		end
+		dynamic $vagend
 
 		act 'Leave':gt 'street'
 	end

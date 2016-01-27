@@ -101,6 +101,7 @@ if pregtest > 0:
 		pregtest -= 1
 		gs 'stat'
 		if preg = 1:
+			knowpreg = 1
 			'The test showed the two strips. you are pregnant.'
 		else
 			'The test showed one band.'

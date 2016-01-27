@@ -279,7 +279,7 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if money >= 20000 and preg = 1 and pregtime < 84:
+	if money >= 20000 and preg = 1 and pregtime < 84 and knowpreg = 1:
 		act 'Get an abortion (20,000 rubles)':
 			cla
 			vidage += 1
@@ -314,6 +314,7 @@ if $ARGS[0] = 'start':
 			pregtime = 0
 			pregtalk = 0
 			kid += 1
+			knowpreg = 0
 			daykid[kid] = day
 			monthkid[kid] = month
 			yearkid[kid] = year

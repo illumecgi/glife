@@ -19,7 +19,7 @@ if volltime = 0:
 	!! starter
 	else
 		volleysostav = 2
-		poverkomand 500 + volleyboll
+		poverkomand = 500 + volleyboll
 		'<center><img src="images/qwest/alter/volley/game4.jpg"></center>'
 		'After warming up you ran out on the court with teammates.'
 	end

@@ -1,8 +1,6 @@
 # stat
-if vshrink = 0:vshrink = 1
-if vshrinkdays = 0:vshrinkdays = 6
-if ashrink = 0:ashrink = 1
-if ashrinkdays = 0:ashrinkdays = 3
+if vshrink = 0 and vshrinkdays = 0 and ashrink = 0 and ashrinkdays = 0:vshrink = 1 & vshrinkdays = 6 & ashrink = 1 & ashrinkdays = 3
+
 
 clr
 view

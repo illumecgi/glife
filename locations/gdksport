@@ -733,16 +733,17 @@ if volleysostav > 0 and sport = 1:
 			'At the beginning of the workout you ran a few laps around the room. After you press the jog and do abdominal exercises. Then began to practice reception and feeding the ball. At the end of the workout you had a game.'
 
 			act 'Leave':gt 'gdksport'
-			act 'Go to coaching':gt 'Voltrener'
-			if tanga=0 and rand(1,1)=1 and volleytanga=1: 
-				delact 'Go to coaching'
+			if tanga = 0 and rand(0,1) = 1 and (volleytanga = 1 or VoltrenerVoyeur >= 5): 
 				act 'Correct clothing':  
 					*clr & cla			
-					Voltrenersee +=1 & ! setcheck on gg without panties 
-					'<center><img src="images/qwest/alter/volley/game'+rand(1,2)+'.jpg"></center>' & 'It seems the coach noticed your manipulation and your young pussy, his eyes lit up and he said turning away: "<<$surname>> Will you come to me after training. I need to show you UH  ... a few things" '
+					Voltrenersee += 1 & ! setcheck on gg without panties 
+					'<center><img src="images/qwest/alter/volley/game'+rand(1,2)+'.jpg"></center>'
+					'It seems the coach noticed your manipulation and your young pussy, his eyes lit up and he said turning away: "<<$surname>> Will you come to me after training. I need to show you UH  ... a few things" '
 					act 'Escape':gs'stat'& gt'gdksport' 
 					act 'To come to the door coaching':gt'Voltrenersex' 
-				end	 
+				end
+			else
+				act 'Go to coaching':gt 'Voltrener'
 			end
 		end
 	elseif week = 6 and sorevday ! daystart:

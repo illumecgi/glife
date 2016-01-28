@@ -1,17 +1,17 @@
 # Voltrener_din
 $din_trener_discoSex = {
-	*clr & cla
+	cls
 	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener4.jpg"></center>'
-	'"<<$surname>>, said catch in a secluded place fuck",- you began to say that there is not a quiet place. Coach, promising smile, said to follow him.'
-	act 'To come after him':
+	'"<<$surname>>, let''s find a secluded place fuck." You are about to say that there isn''t a quiet place, when coach smiles and says, "Follow me."'
+	act 'Follow him':
 		if rand (0,2) = 0:
-			*clr & cla
+			cls
 			Joke = 0
 			if horny > 80:
 				'<center><img src="images/qwest/alter/volley/voitrensexdisco1.gif"></center>'
 				'Having brought you to the toilet, the coach was delayed about an open door, missing you forward. You think, what a secluded place out of the toilet so myself, but not to break, because to feel the member wanted to colic in the abdomen, and went to the toilet.'
 				act 'Pulling up the hem':
-					*clr & cla
+					cls
 					trenerepa += 5
 					horny += 10
 					if tanga = 1:
@@ -22,19 +22,19 @@ $din_trener_discoSex = {
 						'You put legs and pulled up the hem, showing their coach naked dick,  Horny glancing at Mikhail Nikolaevich. It, after admiring,  put pressure on your back causing, SAG.'
 					end
 					act 'To expose the ass':
-						*clr & cla
+						cls
 						hory += 10
 						minut += 20
 						gs 'stat'
 						'<center><img src="images/qwest/alter/volley/voitrensexdisco4.gif"></center>'
 						'Bowed over the sink, coach pulled out a member and began to RUB it over your ass, before settling on anus and started to fuck, but the member was not, and you winced painfully. The coach said after a short pause: "First, it''s better to handle".'
 						act 'To sign':
-							*clr & cla
+							cls
 							'<center><img src="images/qwest/alter/volley/voitrensexdisco5.gif"></center>'
 							$analsexorgazm2='You podmahivat, ottopyrivaya your ass towards the cock trainer, member already so deeply, that eggs partner hit you in the pussy,  member, penetrating the full length, evoking a feeling of sweet languor in the chest, the abdomen.  You moan... And yelling... And screamed... But these were not cries of pain, you shook orgasm...'
 							dynamic $analsex
 							act 'Further':
-								*clr & cla
+								cls
 								cumass += 1
 								'<center><img src="images/qwest/alter/volley/voitrensexdisco6.gif"></center>'
 								'In spasms of pleasure you has a tight grip on the stick trainer the anus, saviv in voice with you, the coach pulled his cock from the anus and began to cover your ass with sperm.'
@@ -43,7 +43,7 @@ $din_trener_discoSex = {
 									!closing disco on this day not to forget  stat
 									minut += 20
 									gs 'stat'
-									*clr & cla
+									cls
 									'<center><img src="images/etogame/gorodok.jpg"></center>'
 									'You are on the jagged road town, to his house, next is the coach and looks at you.'
 									dynamic $din_trener_speak
@@ -52,19 +52,29 @@ $din_trener_discoSex = {
 						end
 					end
 				end
+			else
+			  '<center><img src="images/qwest/alter/volley/voitrensexdisco7.jpg"></center>'
+				'Having brought you to the toilet, the coach was delayed about an open door, missing you forward. "Not the most secluded place Michael N.",- you said and turned around, gone. Coach only carried out your ass lustful gaze. But then, having caught up with you, said: "go home spend, if you''re so unapproachable". '
+				act 'To go with the coach':
+					Discoclose = 1
+					minut += 20
+					gs 'stat'
+					cls
+					'<center><img src="images/etogame/gorodok.jpg"></center>'
+					'You are on the jagged road town, to his house, next is the coach and looks at you.'
+					dynamic $din_trener_speak
+				end
 			end
 		else
-		  '<center><img src="images/qwest/alter/volley/voitrensexdisco7.jpg"></center>'
-			'Having brought you to the toilet, the coach was delayed about an open door, missing you forward. "Not the most secluded place Michael N.",- you said and turned around, gone. Coach only carried out your ass lustful gaze. But then, having caught up with you, said: "go home spend, if you''re so unapproachable". '
-			act 'To go with the coach':
-				Discoclose=1
-				minut += 20
-				gs 'stat'
-				*clr & cla
-				'<center><img src="images/etogame/gorodok.jpg"></center>'
-				'You are on the jagged road town, to his house, next is the coach and looks at you.'
-				dynamic $din_trener_speak
-			end
+			Discoclose = 1
+			minut += 20
+			gs 'stat'
+			cls
+			'<center><img src="images/etogame/gorodok.jpg"></center>'
+			'Having brought you to the toilet, the coach opened the door and sees it is full of students. "Now that is a pity." says coach.'
+			'He looks genuinely upset and dejectedly offers to walk you home. You don''t think he''ll let you say no, so you agree.'
+			'You get to the entrance to your apartment block, the coach stops and looks at you.'
+			dynamic $din_trener_speak
 		end
 	end
 }

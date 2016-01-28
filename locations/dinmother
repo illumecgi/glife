@@ -29,7 +29,7 @@ $d_mother[2]={
 }
 $d_mother[3]={
 	!good relationship
-	motherTalk = rand (1,10)
+	motherTalk = rand (1,9)
 	if motherTalk = 1:
 		'You chat with mom and she tells you how, in her youth her friends made fun of the teachers at school.'
 	end
@@ -58,9 +58,6 @@ $d_mother[3]={
 	end
 	if motherTalk = 9:
 		'You chat with mom and she tells you how important it is to get an education.'
-	end
-	if motherTalk = 10:
-		'You chat with your mom and she tells you she had to go to the tailors at the Garment Factory to get some clothes adjusted.'
 	end
 }
 --- dinmother ---------------------------------

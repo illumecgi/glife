@@ -55,7 +55,7 @@ if $ARGS[0] = 'tv':
 	serge_textb = RAND(0,8)
 		if serge_textb = 0:$serge_textb = 'You asked about the mother of Basil, Sergei was surprised this issue and began to tell: -"Everything is very simple, I met Vaska nurse at a banquet after the celebrated graduation, Well then all get drunk, in short it happened, she flew. Quickly we got married, Bob was born a year later. 
 		A year later, he tired of this life, and when she was offered a job abroad, She left without thinking. Since then, the more we did not communicate and I honestly do not even interested in."'
-		if serge_textb = 1:$serge_textb = 'You spend 15 minutes chatting about nothing in particular.'
+		if serge_textb = 1:$serge_textb = 'Minutes 15 you chat on various topics'
 		if serge_textb = 2:$serge_textb = 'You asked about work, Sergei began to talk: -"I worked in a factory for the production of bricks, work the first shift with 9:00 to 15:00, 5 days per week.
 		The work is not dusty, wages are not great, but life enough. The duty is to monitor the quality of the equipment and personnel."'
 		if serge_textb = 3:$serge_textb = 'You asked about his relationship with his son, Sergei waved his hand and said,: -"Normal relations with us, that`s just the idiot with everything got out of hand, the last years does not want to do anything, learning sucks, He is hanging around constantly hell knows where.
@@ -83,7 +83,7 @@ if $ARGS[0] = 'tv':
 		She answers: "The entropy of an isolated system can not decrease". 
 		Homeless goes further and thinks: "Normal woman! And that was thrown?"'
 		if serge_textb = 7:$serge_textb = 'You listen carefully to what my uncle says Serge sometimes assents.'
-		if serge_textb = 8:$serge_textb = 'You chat about clothes, he clearly isn''t that interested and the only thing thing he knows on the subject is that the tailor at the Garment factory adjusted some jeans for him.'
+		if serge_textb = 8:$serge_textb = 'Chatted, are you leaving.'
 	serge_textb2 = RAND(0,7)
 		if serge_textb2 = 0:$serge_textb2 = 'Sergei tells you a vulgar anecdote: 
 		- Masha, I call you all night. And you all the time was not available!

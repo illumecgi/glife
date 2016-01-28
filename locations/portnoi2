@@ -73,11 +73,7 @@ if c ! 130:jump 'newclomet'
 if money < poshvalldrop * 500:
 	'You do not have enough money to resize all of your clothing. The total cost would be <<poshvalldrop * 500>> rubles.'
 
-	if $loc = 'Gshveyfab':
-		act 'Leave':gt 'Gshveyfab', 'start'
-	else
-		act 'Leave':gt 'clener', 'start'
-	end
+	act 'Leave':gt 'clener', 'start'
 
 	exit
 elseif money >= poshvalldrop * 500:
@@ -154,11 +150,7 @@ elseif money >= poshvalldrop * 500:
 
 	'You resize all clothing for <<poshvalldrop*500>> rubles.'
 
-	if $loc = 'Gshveyfab':
-		act 'Leave':gt 'Gshveyfab', 'start'
-	else
-		act 'Leave':gt 'clener', 'start'
-	end
+	act 'Leave':gt 'clener', 'start'
 
 	exit
 end

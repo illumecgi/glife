@@ -10,7 +10,7 @@ if $ARGS[0] = 'start':
 	
 	'<center><B>Garment factory named."Paris Commune"</B></center>'
 	'<center><img src="images/pic/Gshveyfab.jpg"></center>'
-	'Local garment factory, one of the few companies in Pavlovsky.'
+	'Local garment factory, one of the few company towns you Pavlovsky.'
 	if hour => 8 and hour =< 20 and week => 1 and week <= 5:
 		'Near <a href="exec:minut += 15 & GT ''Gshveyfab'', ''enter''">the front door</a> is communicating factory which sits protection.'
 	elseif hour < 8 or hour > 20 or week > 5:
@@ -19,39 +19,6 @@ if $ARGS[0] = 'start':
 		'First change - with 8 to 16 hours.'
 		'Second shift - with 16 to 20 hours.'
 	end
-	if hour >= 8 and hour <= 15:
-		'A small room near the entrance is being used as a tailor shop.'
-		act 'Go to the tailor':
-			cla
-			*clr
-			'An elderly man is inspecting finished garments fresh from the factory floor, he pulls his glasses down a little and looking over the top of them walks up to the desk.'
-			
-			'"Hello there, come to get some clothes adjusted? It''ll cost you 500 rubles per item."'
-
-			if money >= 500:
-				act 'Take in the clothes you are wearing (500 rubles)':
-					cla
-					*clr
-					minut += 15
-					if $clothingworntype = 'vatnik' or $clothingworntype = 'sforma' or $clothingworntype = 'yoga' or $clothingworntype = 'sarafan':
-						'What are you wasting my time for? This type of clothing does not need to be resized.'
-					else
-						money -= 500
-						dynamic '<<$clothingworntype>>B[<<clothingwornnumber>>] = bedra'
-						'You undress and give the clothes you need adjusting to the tailor, it is fifteen minutes until your clothes are ready. you redress.'
-					end
-
-					act 'Leave':gt 'Gshveyfab', 'start'
-				end
-
-				act 'Take in different clothes':gt 'clothing', 'view_clothing_list', 'resize'
-				act 'Take in all the clothes':gt 'portnoi2'
-			end
-			act 'Leave':gt 'Gshveyfab', 'start'
-	
-		end
-	end
-
 	act '<B>Escape</B>':gt'gorodok'
 end
 

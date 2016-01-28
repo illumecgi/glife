@@ -191,7 +191,7 @@ $d_sister[2]={
 $d_sister[3]={
 	!good relationship
 	'You start a conversation with your sister.'
-	sisterTalk = rand (1,18)
+	sisterTalk = rand (1,19)
 	if sisterTalk = 1:
 		'As you chat with your sister, she says it is possible to rent an apartment in the city and live and work there, but she is happy living in Pavlovsky.'
 	end
@@ -248,6 +248,9 @@ $d_sister[3]={
 	end
 	if sisterTalk = 18:
 		'You chat with your sister, Anya, she asks you how you feel about womens sexual rights. You spend sometime have a very frank and quite revealing conversation.'
+	end
+	if sisterTalk = 19
+		'You chat with your sister, Anya, she tells you the tailor at the Garment factory is a creep who makes his customers wait around in their underwear.'
 	end
 }
 $d_sistersexstories[1]={

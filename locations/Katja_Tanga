@@ -17,34 +17,35 @@ $din_katja_secretroom = {
 			'<center><img src="images/qwest/alter/katja/tanga4_10.jpg"></center>'
 			'You kiss Katja, and she responds with a kiss, Get down on the arm girl`s body through Sisi, its languishing cave. Katja winces every touch. You petting Katja pussy, finger goes inside, then another, and start translational motion, feeling how wet and hot Katya there. You then accelerates, then quietly doing their movements, and here you enter the fingers to the full depth, Kate arched in pleasure. She is thirsty, so you do not stop and continues to do so, but you decide to move on to something-something more substantial.'
 			if (middildo = 1 or dildo = 1 or largedildo = 1 ) and vagina > 15: 
-			Act 'Get dildo':
-				horny += 10 
-				gs'stat'
-				*clr & cla
-				'<center><img src="images/qwest/alter/katja/tanga4_5.jpg"></center>'
-				'mysteriously smiling, You got bags of your favorite dildo, and turned to Katja licked it carefully looking into her eyes. Katja said, looking at it: "the park will have to go, but then you look at missed member", - you are not really listening to her licked the valley between her breasts and holding between them began breasts dildo fucking Breasts classmates. Through groans only whispered Katya: "I`ll try as well to the member".'
-				act 'fuck Katja':
-					horny += 20 
-					KatjaHorny = 0
-					KatjaSlut += 2
-					KatjaLust += 2
+				Act 'Get dildo':
+					horny += 10 
 					gs'stat'
 					*clr & cla
-					'<center><img src="images/qwest/alter/katja/tanga4_9.jpg"></center>'
-					'Katja, Inflamed and panting,  is waiting for what will happen next. Having turned her on her stomach , you spend your tongue in her ass and swung put in Katja pussy, from the mouth of his partner pulled out a wheeze, her body arched arc. And you do fuck cunt Katie, enjoying her moans and cries. Without taking his eyes from hiding almost the entire length, and then showing the rubber member you have not noticed, moaning like Katie, moved into shouts. And she, huddled in convulsions, finished.'
-					act'give dildo':
-						*clr & cla
-						horny = 0
-						manna = manna + 15
-						willpower = willpower + 15
-						orgasm = orgasm + 1
-						vaginalOrgasm += 1
+					'<center><img src="images/qwest/alter/katja/tanga4_5.jpg"></center>'
+					'mysteriously smiling, You got bags of your favorite dildo, and turned to Katja licked it carefully looking into her eyes. Katja said, looking at it: "the park will have to go, but then you look at missed member", - you are not really listening to her licked the valley between her breasts and holding between them began breasts dildo fucking Breasts classmates. Through groans only whispered Katya: "I`ll try as well to the member".'
+					act 'fuck Katja':
+						horny += 20 
+						KatjaHorny = 0
+						KatjaSlut += 2
+						KatjaLust += 2
 						gs'stat'
-						'<center><img src="images/qwest/alter/katja/tanga4_7.jpg"></center>'
-						'Moving away from an orgasm Katja said: «Now I come», -  and taking the dildo out of your hands you put on the floor and covering with kisses your pussy juices oozing, I lifted your feet literally on your head, looming over you discovered while enjoying views.  «You`re so beautiful, and I want to eat you», - whispered Katya, chlenozamenitel entering your pussy. You inflamed previous events whined «Faster, Faster», - not forcing myself to beg, classmate became harder and faster to drive you in Dildo, each thrust knocking of you moan, and The Living Daylights. Literally 30 seconds will bring you to the climax.'
-						''
-						'Waiting until you come to a, Kate looked at you and said,:  «Yes! Here we are then arranged, perhaps now all mladsheklassniki, with standing will walk pisyuntkami», - and you burst out laughing. «And now quickly to dress, and that fucking late for class», - you something-as given himself up to run a lesson.'
-						dynamic $din_sekondparturok
+						*clr & cla
+						'<center><img src="images/qwest/alter/katja/tanga4_9.jpg"></center>'
+						'Katja, Inflamed and panting,  is waiting for what will happen next. Having turned her on her stomach , you spend your tongue in her ass and swung put in Katja pussy, from the mouth of his partner pulled out a wheeze, her body arched arc. And you do fuck cunt Katie, enjoying her moans and cries. Without taking his eyes from hiding almost the entire length, and then showing the rubber member you have not noticed, moaning like Katie, moved into shouts. And she, huddled in convulsions, finished.'
+						act'give dildo':
+							*clr & cla
+							horny = 0
+							manna = manna + 15
+							willpower = willpower + 15
+							orgasm = orgasm + 1
+							vaginalOrgasm += 1
+							gs'stat'
+							'<center><img src="images/qwest/alter/katja/tanga4_7.jpg"></center>'
+							'Moving away from an orgasm Katja said: «Now I come», -  and taking the dildo out of your hands you put on the floor and covering with kisses your pussy juices oozing, I lifted your feet literally on your head, looming over you discovered while enjoying views.  «You`re so beautiful, and I want to eat you», - whispered Katya, chlenozamenitel entering your pussy. You inflamed previous events whined «Faster, Faster», - not forcing myself to beg, classmate became harder and faster to drive you in Dildo, each thrust knocking of you moan, and The Living Daylights. Literally 30 seconds will bring you to the climax.'
+							''
+							'Waiting until you come to a, Kate looked at you and said,:  «Yes! Here we are then arranged, perhaps now all mladsheklassniki, with standing will walk pisyuntkami», - and you burst out laughing. «And now quickly to dress, and that fucking late for class», - you something-as given himself up to run a lesson.'
+							dynamic $din_sekondparturok
+						end
 					end
 				end
 			end

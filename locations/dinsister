@@ -249,7 +249,7 @@ $d_sister[3]={
 	if sisterTalk = 18:
 		'You chat with your sister, Anya, she asks you how you feel about womens sexual rights. You spend sometime have a very frank and quite revealing conversation.'
 	end
-	if sisterTalk = 19
+	if sisterTalk = 19:
 		'You chat with your sister, Anya, she tells you the tailor at the Garment factory is a creep who makes his customers wait around in their underwear.'
 	end
 }

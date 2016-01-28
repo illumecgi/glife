@@ -8,6 +8,7 @@ $din_trener_discoSex = {
 			cls
 			Joke = 0
 			if horny > 80:
+				volume = 40
 				'<center><img src="images/qwest/alter/volley/voitrensexdisco1.gif"></center>'
 				'Having brought you to the toilet, the coach was delayed about an open door, missing you forward. You think, what a secluded place out of the toilet so myself, but not to break, because to feel the member wanted to colic in the abdomen, and went to the toilet.'
 				act 'Pulling up the hem':
@@ -42,6 +43,7 @@ $din_trener_discoSex = {
 									Discoclose = 1
 									!closing disco on this day not to forget  stat
 									minut += 20
+									music_on = 0
 									gs 'stat'
 									cls
 									'<center><img src="images/etogame/gorodok.jpg"></center>'
@@ -58,6 +60,7 @@ $din_trener_discoSex = {
 				act 'To go with the coach':
 					Discoclose = 1
 					minut += 20
+					music_on = 0
 					gs 'stat'
 					cls
 					'<center><img src="images/etogame/gorodok.jpg"></center>'
@@ -68,6 +71,7 @@ $din_trener_discoSex = {
 		else
 			Discoclose = 1
 			minut += 20
+			music_on = 0
 			gs 'stat'
 			cls
 			'<center><img src="images/etogame/gorodok.jpg"></center>'

@@ -188,6 +188,7 @@ elseif lernHome = 0:
 									gs 'stat'
 									'<center><img src="images/qwest/alter/ev2/natpee.jpg"></center>'
 									'You are angry at this bitch so you release your urine in Natasha''s face. She closes her eyes and bows her head down but does not recoil and silently accepts your golden shower until the very end.'
+								end
 							else 
 								act 'Make her stop'
 									cls

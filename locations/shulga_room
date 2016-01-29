@@ -797,7 +797,7 @@ act 'Watch porn channel':
 					act 'Watch':
 						cls
 						gs'stat'
-						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/kaif'+rand(1,7)+'.jpg"></center>'
+						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/sex/kaif'+rand(1,7)+'.jpg"></center>'
 						'The boys looked at you and obscenely commented, They said what the fuck are you and how they were lucky <<$gop_sextext1>> trouble-free this whore.'
 						act 'Further':
 							cls

@@ -190,7 +190,7 @@ elseif lernHome = 0:
 									'You are angry at this bitch so you release your urine in Natasha''s face. She closes her eyes and bows her head down but does not recoil and silently accepts your golden shower until the very end.'
 								end
 							else 
-								act 'Make her stop'
+								act 'Make her stop':
 									cls
 									minut += 5
 									horny -= 10

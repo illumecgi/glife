@@ -273,8 +273,7 @@ $din_trener_speak = {
 				if Discoclose = 1:
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak1.jpg"></center>'
 					'You spun around yourself, and your skirt hiked, so coach your feet become visible and even a little ass. The look of the trainer chased your ass and legs. "The ball on the court so you don''t watch carefully", - rather you noticed. Michael N., a bit confused, turned away. "Still beautiful legs coach more interesting trees", -  you smiled to himself, and I thought:-" In the main part you will get".'
-				end
-				if trenerskaia = 1 and Discoclose = 0:
+				else
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak2.jpg"></center>'
 					'You went to the window and straightening his hair gave the coach the opportunity to admire your flexible figure. "Still young girls coach of interesting trees", -  you smiled to himself, and I thought:-" In the main part you will get".'
 				end
@@ -292,8 +291,7 @@ $din_trener_speak = {
 				if Discoclose = 1:
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak3.jpg"></center>'
 					'Open neckline, so your CECE broke out, you turned to the coach, and arched his back has exhibited her juicy melons forward. the look of the trainer immediately focused on them, swallowing hard, the coach looked up from your Tits. "I''ll have something to tease him, maybe not to wear panties on a workout", - the thought flashed in your head, and the thought of sinking feeling in the pit of your stomach intensified.'
-				end
-				if trenerskaia = 1 and Discoclose = 0:
+				else
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak4.jpg"></center>'
 					'You pulled the shorts, like correcting them, and pulled them so hard, that is clearly covered your pussy.  Opinion of the coach staring at you between legs. "The ball on the court so you don`t watch carefully", - rather you noticed. Michael N., a bit confused, turned away. "I''ll have something to tease him, maybe not to wear panties on a workout", - the thought flashed in your head, and the thought of sinking feeling in the pit of your stomach intensified.'
 				end
@@ -312,12 +310,10 @@ $din_trener_speak = {
 				if Discoclose = 1 and tanga = 1:
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak5.jpg"></center>'
 					'"Mikhail, could you please help me", - waiting for a positive nod from coach, you lean down panties, and say: "Please look it seems to me I have been there during training something rubbed, but soon the game", - coach trying to look indifferent looked carefully at your holes: "Nothing you have there, and generally cowards under the form needs to wear then and will not RUB", but despite his growling you see how your dick in your pants at the trainer took a fighting position.'
-				end
-				if Discoclose = 1 and tanga = 0:
+				elseif Discoclose = 1 and tanga = 0:
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak6.png"></center>'
 					'"Mikhail, could you please help me", - waiting for a positive nod from coach, you rest against the backrest of the bench I passed along at this point, you do not have panties and coach perfectly visible to your crotch, and say: "Please look it seems to me I have been there during training something rubbed, but soon the game", - coach trying to look indifferent looked carefully at your holes: "Nothing you have there, and generally to wear panties should not bare ass sparkle, then grate will not be", but despite his growling you see how your dick in your pants at the trainer took a fighting position.'
-				end
-				if trenerskaia = 1 and Discoclose = 0:
+				else
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak7.gif"></center>'
 					'"Mikhail, could you please help me", - waiting for a positive nod from coach, you get down on your knees turned to coach''s ass and people lower with the shorts: "Please look it seems to me I have been there during training something rubbed, but soon the game", - coach trying to look indifferent looked carefully at your holes:"Nothing you have there, and generally cowards under the form needs to wear then and will not RUB", - but despite his growling you see how your dick in your pants at the trainer took a fighting position.'
 				end
@@ -347,8 +343,12 @@ $din_trener_speak = {
 							'<center><img src="images/qwest/alter/volley/VoltrenerSpeak10.jpg"></center>'
 							'But as soon as your lips wrapped standing stake member, as a coach pushed your head and hastily tucked in the pants member: "<<$nickname>>, stop trying to molest me. I those explained everything, be good.  And then who knows-something I never make excuses, especially after what happened in the championship", - you pretended pie girl, and myself decided that we must go to the fitness center can get there what to learn something about the damn championship.'
 							act 'Say goodbye':
-								if Discoclose = 1:gt 'pod_ezd','etaj_1'
-								if trenerskaia = 1:gt 'gdksport'
+								if Discoclose = 1:
+									Discoclose = 0
+									gt 'pod_ezd','etaj_1'
+								else
+									gt 'gdksport'
+								end
 							end
 						end
 					end
@@ -371,8 +371,12 @@ $din_trener_speak = {
 				'<center><img src="images/qwest/alter/volley/VoltrenerSpeak22.jpg"></center>'
 				'"<<$surname>>, are you stupid, I think its the holes in the base to get", - the coach said with anger. "I seem mistaken when you believed your words, don''t come near me, I''m very disappointed in you, Yes and workout, too, may never come, you don''t belong on the team", - Michael N. Serkov in your direction quite frantic glance, turned around and left. '
 				act 'Escape':
-					if Discoclose = 1:gt 'pod_ezd','etaj_1'
-					if trenerskaia = 1:gt 'gdksport'
+					if Discoclose = 1:
+						Discoclose = 0
+						gt 'pod_ezd','etaj_1'
+					else
+						gt 'gdksport'
+					end
 				end
 			end
 			act 'To bear a grudge':
@@ -383,19 +387,21 @@ $din_trener_speak = {
 				if Discoclose = 1 and tanga = 1:
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak25.jpg"></center>'
 					'you pulled her panties together with clothes. Coach with intercom of posmotrela you.'
-				end
-				if Discoclose = 1 and tanga = 0:
+				elseif Discoclose = 1 and tanga = 0:
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak24.gif"></center>'
 					'the hem of your dress lifted from under him and looked out not covered pussy panties, the coach looked at you, on your ass, and lifted her hem even higher, freeing up the ass from under the dress.'
-				end
-				if trenerskaia = 1 and Discoclose = 0:
+				else
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak23.gif"></center>'
 					'putting a hand on the ass coach, pushed to the side knickers, spread her ass and held her hard trained thousands of feeds and techniques, fingers you on the hole.'
 				end
 				'And you''re interested in can we assume this behavior is good. "<<$nickname>> I, I, why are you all driving",- you chuckled and decided to be patient quirks coach well and patrapada with him. It seems, the basis I dont get.'
 				act 'Escape':
-					if Discoclose = 1:gt 'pod_ezd','etaj_1'
-					if trenerskaia = 1:gt 'gdksport'
+					if Discoclose = 1:
+						Discoclose = 0
+						gt 'pod_ezd','etaj_1'
+					else
+						gt 'gdksport'
+					end
 				end
 			end
 		elseif trener_Speak = 8 and trenerepa > 150 and volleyboll > 150:
@@ -410,8 +416,12 @@ $din_trener_speak = {
 		end
 
 		act 'Say goodbye':
-			if Discoclose = 1:gt 'pod_ezd','etaj_1'
-			if trenerskaia = 1:gt 'gdksport'
+			if Discoclose = 1:
+				Discoclose = 0
+				gt 'pod_ezd','etaj_1'
+			else
+				gt 'gdksport'
+			end
 		end
 	end
 }

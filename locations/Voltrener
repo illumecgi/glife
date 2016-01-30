@@ -197,7 +197,6 @@ act 'Talk with the coach':
 		end
 
 		if rand(0,3) = 0:
-			trenerskaia = 1
 			dynamic $din_trener_speak
 		end
 	end

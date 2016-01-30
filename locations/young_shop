@@ -28,7 +28,7 @@ lcolor = rgb(106, 90, 205)
 '<b><center><font size="4">Keys-pussy</font></center></b>'
 '<center><img src="images/pictures/young_shop.jpg"></center>'
 'Small shop clothing for young people. Mostly pretty bold outfits for emancipated young people with attractive bodies.'
-'Manager works from 10:00 to 18:00.'
+'Manager works from 8:00 to 18:00.'
 
 !!if young_shop_work = 0:
 ! WD: Set managment hours

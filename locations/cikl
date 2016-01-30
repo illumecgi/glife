@@ -38,7 +38,7 @@ if agilbuf > agil:agilbuf -= 1
 if agilbuf < agil:agilbuf += 1
 '!
 
-if anus > 1 and ashrink > 0:
+if anus > 1 and ashrink > 0 and analplugIN = 0:
 	if anusK < 0:anusK = 0
 	if anusK < ashrinkdays:anusK += 1
 	if anusK >= ashrinkdays:anus -= ashrink & anusK = 0

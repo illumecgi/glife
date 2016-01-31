@@ -478,6 +478,10 @@ if hour >= 20 and hour <= 23:
 
 			exit
 		end
+	
+		if alko >= 6 and rand (1, 100) < 3:
+			gt 'gevent', '6'
+		end
 
 		if alko >= 4:
 			'You''re drunk in the trash, and standing at the wall hard for her to restrain from the fact that the floor floats you from under their feet.'

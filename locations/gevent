@@ -207,7 +207,8 @@ if $ARGS[0] = '6':
 	gs 'preg'
 
 	'<center><img src="images/gevent/6.1.jpg"></center>'
-	'You vaguely remember what happened. Hands probe you that something hard and hot, rests in your hands in your body. Bit and you''ve done what blowjob something guy, and when he finished, then it becomes a different place. Disco went, someone filmed, someone to stand in line, someone is attached to you from behind. Day you woke up the next day, all in the semen and without clothes, about DK. Finding her clothes, you got dressed and stood up.'
+	'You vaguely remember what happened. Someone was groping you but you were too drunk to stop them, then you were giving some guy a blowjob, and when he finished, you went to a different place. Someone was filming you, there were guys standing in line, you might have sucked and fucked them all.'
+	'It''s the middle of the next day, you are lying in a ditch covered in the semen and naked. you find your clothes in a pile next to you, get dressed and find your way back to town.'
 
 	act 'Leave':gt 'gorodok'
 end
@@ -223,6 +224,7 @@ if $ARGS[0] = '7':
 	anus += 2
 	throat += 2
 	gang += 1
+	cumface = 1
 	gs 'stat'
 	'<center><img src="images/gevent/7.jpg"></center>'
 	'You guys brought to the apartment, where you stripped and fucked in all holes, having finished on your face and prevent wash, kicked out of the apartment.'

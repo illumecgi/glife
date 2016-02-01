@@ -252,7 +252,7 @@ minut += 20
 CLOSE ALL
 gs 'stat'
 
-if ShowerIvan ! 1:
+if ShowerIvan ! 1 and VoltrenerVoyeur < 3:
   '<center><img src="images/qwest/alter/volley/VoltrenerSexShower.jpg"></center>'
 	act 'Mytsa':
 		clr & cla

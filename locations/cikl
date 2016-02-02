@@ -46,16 +46,14 @@ if fbreath = 1:fbreath = 0
 
 manna -= 10
 
-if beg >= 100:
-	if beg < 1000:
-		beg -= 1
-	elseif beg < 1500:
-		beg -= 2
-	elseif beg < 2000:
-		beg -= 3
-	else
-		beg -= 4
-	end
+if beg >= 2000:
+	beg -= 4
+elseif beg >= 1500:
+	beg -= 3
+elseif beg >= 1000:
+	beg -= 2
+elseif beg >= 100:
+	beg -= 1
 end
 
 !'

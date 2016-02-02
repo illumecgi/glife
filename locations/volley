@@ -7,7 +7,7 @@ if volltime = 0:
 	volpoint = 0
 	volpointv = 0
 
-	'Teams take to the field and started playing.'
+	'The teams take to the field and start playing.'
 
 	!! reserve player or you were caught drinking by the coach and he forbid you from playing
 	if trener_Speak < 9 or seealko = 1:

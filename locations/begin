@@ -1,4 +1,9 @@
 # begin
+gs 'din_pav'
+gs 'dinSex2'
+gs 'dina'
+gs 'din2'
+gs 'din_van'
 '<center><b><font color="maroon">CHOOSE GAME START</font></b></center>'
 *nl
 '<b>Original Start:</b>'
@@ -210,6 +215,7 @@ dynamic $din_glaza_select
 	'<center><a href="exec:dynamic $din_glaza_select">Description eye</a></center>'
 	act'<center><b>Ready</b></center>':gt'begin'
 end
+
 
 --- begin ---------------------------------
 

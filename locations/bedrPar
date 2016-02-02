@@ -10,6 +10,9 @@ gs 'stat'
 fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
+
+if sisboyday + 1 = daystart and hour = 18:gt'sisterQW','sisboyQW_expel'
+
 '<center><b><font color="maroon">Your bedroom</font></b></center>'
 ! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
 '<center><img src="images/qwest/alter/bedrPar.jpg"></center>'

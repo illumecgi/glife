@@ -309,7 +309,7 @@ $din_alter_start_ev15 = {
 	*nl
 	'Your chest then felt strange and you discovered your breasts were growing, which excited you, wondering how big they will get. Hair also began to form in your armpits and privates, and at the same time, you felt... things, things you learned to become intimate with. You eventually learned how to manage your developing body, your troublesome complexion included, and survived the transition to womanhood.'
 	*nl
-	'When you finished 9th class, you did well enough continue with your secondary education and chose to continue. The summer holiday ends soon and you''re getting ready to start 10th grade.'
+	'When you finished 9th grade, you decided yo continue with your secondary education. The summer holiday ends soon and you''re getting ready to start 10th grade.'
 	!!'You weaned these two classes and you only have a few months before graduation.'
 
 	act 'Start at the end of August':
@@ -363,8 +363,8 @@ $din_alter_start_ev15 = {
 $din_alter_start_ev = {
 	cls
 	'<center><img src="images/pic/alterstart7.jpg"></center>'
-	'The 13 years have begun monthly like most other girls in your class. You got a little sick and grow breasts, grew hair in the armpits and pubic. The skin became covered with pimples. When you`re finished 9be classes, you did not drop out of school, and to continue to learn and go to 10Grade. The 10grade all was quiet, after you have finished it you spent the summer in the village.'
-	'Soon the holidays end and you go to school, with whom you will spend the last year of study.'
+	'Your 13th year began like most other girls in your class. You occasionally got sick, you grew breasts, armpit and pubic hair. Your skin became greesy and you got pimples. When you finished with 9th grade you stayed in school, continuing on to tenth grade.'
+	'After a quiet tenth grade you spent your summer in the town of Pavlovsky. Soon the holidays came to an end and you returned to school, where you will spend your last year of study.'
 	!'You weaned these two classes and you only have a few months before graduation.'
 
 	act 'Start at the end of August':
@@ -426,9 +426,9 @@ clr
 gs 'stat'
 '<center><img src="images/pic/alterstart1.jpg"></center>'
 'You were born in <<birthyear>>.'
-'Your mother and father, Natasha Mikhail <<$surname>>, were quite young and probably didn''t know how to protect themselves.'
-'You have a sister, Anja, who is 2 years older than you.'
-'You do not remember your real father because your parents divorced when you were still too young to remember. Your mom found another man and they had your little brother Nick.'
+'Your mother and father, Natasha and Mikhail <<$surname>>, were quite young and probably didn''t intend to have children when they did.'
+'You have a sister, Anya, who is 2 years older than you.'
+'You do not remember your real father because your parents divorced when you were still very young. Your mom found another man and together they had your little brother Kolka.'
 $name = input("What is your first name? (Leave blank for default)")
 
 if $name = '':$name = 'Svetlana'

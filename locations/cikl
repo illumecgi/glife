@@ -1,4 +1,29 @@
 # cikl
+day += 1
+daystart += 1
+week += 1
+hour -= 24
+
+vidageday -= 1
+if workDolgDay > 0:workDolgDay -= 1
+if QWdogreiqTimer > 0:QWdogreiqTimer -= 1
+if husband > 0:husbanday += 1
+if kid > 0:kid += 1
+if husband > 10 and husbanday > 0:husband -= 15
+if fingal > 0:fingal -= 1
+
+if husbandMark = 1 and husband <= 10:
+	husbizvradd = 0
+	husbharmin = 0
+	husbandMark = 0
+	husband = 0
+	divorced += 1
+
+	if KFOnLineReaga > 0:KFOnLineReaga -= 1
+
+	'<b><font color="red">Your husband has filed for a divorce.</font></b>'
+end
+
 if curly > 0:curly -= 1
 
 ! WD: Added daily reduction of braids for Maruda Hair Mod
@@ -21,6 +46,18 @@ if fbreath = 1:fbreath = 0
 
 manna -= 10
 
+if beg >= 100:
+	if beg < 1000:
+		beg -= 1
+	elseif beg < 1500:
+		beg -= 2
+	elseif beg < 2000:
+		beg -= 3
+	else
+		beg -= 4
+	end
+end
+
 !'
 if salo > fat:
 	salo -= 1
@@ -37,6 +74,27 @@ if vitalbuf < vital:vitalbuf += 1
 if agilbuf > agil:agilbuf -= 1
 if agilbuf < agil:agilbuf += 1
 '!
+
+!STD check
+if SifacOnce = 1:Sifilis += 1
+if GerpesOnce = 1:Gerpes += 1
+if TriperOnce = 1:Triper += 1
+if KandidozOnce = 1:Kandidoz += 1
+
+VeneraN = 0
+
+if VeneraOnce > 0:VeneraOnce = 0
+if SifacOnce = 1:VeneraN += 1
+if GerpesOnce = 1:VeneraN += 1
+if TriperOnce = 1:VeneraN += 1
+
+Venera = VeneraN
+
+!Appearance age
+if vidageday <= 0:
+	vidageday = 360
+	vidage += 1
+end
 
 if anus > 1 and ashrink > 0 and analplugIN = 0:
 	if anusK < 0:anusK = 0
@@ -168,6 +226,9 @@ end
 !!! Maruda Hair Mod
 
 gs 'starenie'
+
+if nark > 0:nark -= 1
+if pregtime > 10:fat += 1
 
 --- cikl ---------------------------------
 

@@ -1,9 +1,6 @@
 # stat
-if vshrink = 0 and vshrinkdays = 0 and ashrink = 0 and ashrinkdays = 0:vshrink = 1 & vshrinkdays = 6 & ashrink = 1 & ashrinkdays = 3
 clr
 view
-gs'din_pav'
-gs 'dinSex2'
 rand1=rand(0,100)
 
 if poSkill > 1000:poSkill = 1000
@@ -191,9 +188,6 @@ end
 shameless = guy + bj + anal + hj + ((slutty + gang) * 2)
 moneySUM = money + karta + stolmoney
 cumSUM = cumbelly + cumpussy + cumass + cumlip + cumface + cumfrot + cumanus
-gs 'dina'
-gs 'din2'
-gs 'din_van'
 
 if husbizvradd > 5:izvratH = 1
 if husbharmin > 10:harakHusb = 0
@@ -217,15 +211,6 @@ if gopota >= 20 and gnewQW = 1:gnewQW = 2
 if workDisk = 4 and week > 5:workDisk = 1
 if workDisk = 3 and week > 5:workDiskAtkPlayer = 1
 
-VeneraN = 0
-
-if VeneraOnce > 0:VeneraOnce = 0
-if SifacOnce = 1:VeneraN += 1
-if GerpesOnce = 1:VeneraN += 1
-if TriperOnce = 1:VeneraN += 1
-
-Venera = VeneraN
-
 if fat < 0:fat = 0
 if vokal < 0:vokal = 0
 if vokal > 100:vokal = 100
@@ -246,10 +231,18 @@ if Jab > 120:Jab = 120
 if Punch > 120:Punch = 120
 if Kik > 120:Kik = 120
 if KikDef > 120:KikDef = 120
-if nark >= 30 and narkoman = 0:
+if NarkImmune = 1:
+	if narkoman ! 0:narkoman = 0
+elseif nark >= 30 and narkoman = 0 and NarkImmune = 0:
 	narkoman = 1
 elseif nark = 0 and narkoman = 1:
 	narkoman = 0
+end
+
+if CheatSlut = 1:
+	if mesec ! 0:mesec = 0
+	if preg ! 0:preg = 0
+	if horny < 50: horny = 50
 end
 
 boxing = Jab + Punch + Kik + KikDef
@@ -402,10 +395,6 @@ if willpower > intel * 5 + will * 5:willpower = intel * 5 + will * 5
 if manna > (intel * magik) + magik * 100 + vital * 10 + rikudo:manna = intel * magik + magik * 100 + vital * 10 + rikudo
 mannamax = (intel * magik) + magik * 100 + vital * 10 + rikudo
 !!musle = strenbuf + vitalbuf
-if vidageday <= 0:
-	vidageday = 360
-	vidage += 1
-end
 
 !!!!!!!!!!!
 !!!TIME!!!
@@ -423,10 +412,10 @@ if nminut ! minut:
 end
 '!
 if nminut ! minut:
-	! Zero totminut will be at New Years Eve of 2000
+	! Zero totminut will be at New Years Eve of 2015
 
-	! Years since 2000 in days
-	totminut = (year - 2000) * 365
+	! Years since 2015 in days
+	totminut = (year - 2015) * 365
 
 	! Days this year
 	if month > 1 : totminut += 31 & ! Jan
@@ -652,9 +641,7 @@ if hour >= 24:
 		NPCnow = NPCnum
 		NPCnum += rand(1, 3)
 		gs 'npc'
-	end
-
-	if NPCnum >= 290 and NPCnum < 300:
+	elseif NPCnum < 300:
 		NPCnow = NPCnum
 		NPCnum += 1
 		gs 'npc'
@@ -722,47 +709,11 @@ if hour >= 24:
 	end
 
 	petersexday = 0
-	klismaday1= 0
+	klismaday1 = 0
 	:loop
-	day += 1
-	daystart += 1
-	week += 1
-	hour -= 24
-
-	!!RFP
-	if SifacOnce = 1:Sifilis += 1
-	if GerpesOnce = 1:Gerpes += 1
-	if TriperOnce = 1:Triper += 1
-	if KandidozOnce = 1:Kandidoz += 1
-	if beg >= 100 and beg < 1000:beg -= 1
-	if beg >= 1000 and beg < 1500:beg -= 2
-	if beg >= 1500 and beg < 2000:beg -= 3
-	if beg >= 2000:beg -= 4
-
-	vidageday -= 1
-	if workDolgDay > 0:workDolgDay -= 1
-	if QWdogreiqTimer > 0:QWdogreiqTimer -= 1
-	if husband > 0:husbanday += 1
-	if kid > 0:kid += 1
-	if husband > 10 and husbanday > 0:husband -= 15
-	if fingal > 0:fingal -= 1
-
-	if husbandMark = 1 and husband <= 10:
-		husbizvradd = 0
-		husbharmin = 0
-		husbandMark = 0
-		husband = 0
-		divorced += 1
-
-		if KFOnLineReaga > 0:KFOnLineReaga -= 1
-
-		'<b><font color="red">Your husband has filed for a divorce.</font></b>'
-	end
 
 	gs 'cikl'
 
-	if nark > 0:nark -= 1
-	if pregtime > 10:fat += 1
 	if hour >= 24:jump 'loop'
 end
 
@@ -1482,17 +1433,35 @@ end
 
 if cumlip > 0:pl '<b><font color="red">Your mouth smells like sperm.</font></b>'
 
-if vgape = 3:pl '<b><font color="red">You have very sore vagina, you can hardly even walk, while trying to keep your feet apart.</font></b>'
-if vgape = 2:pl '<b><font color="red">You have a sore vagina and you can hardly keep your feet together.</font></b>'
-if vgape = 1:pl '<b><font color="red">You have a slightly sore vagina.</font></b>'
+if vgape > 0:
+	if vgape >= 3:
+		pl '<b><font color="red">You have very sore vagina, you can hardly even walk, while trying to keep your feet apart.</font></b>'
+	elseif vgape = 2:
+		pl '<b><font color="red">You have a sore vagina and you can hardly keep your feet together.</font></b>'
+	else
+		pl '<b><font color="red">You have a slightly sore vagina.</font></b>'
+	end
+end
 
-if agape = 3:pl '<b><font color="red">You have very sore anus and it emits blood.</font></b>'
-if agape = 2:pl '<b><font color="red">You have a sore anus.</font></b>'
-if agape = 1:pl '<b><font color="red">You have a slightly sore and itchy anus.</font></b>'
+if agape > 0:
+	if agape = 3:
+		pl '<b><font color="red">You have very sore anus and it emits blood.</font></b>'
+	elseif agape = 2:
+		pl '<b><font color="red">You have a sore anus.</font></b>'
+	else
+		pl '<b><font color="red">You have a slightly sore and itchy anus.</font></b>'
+	end
+end
 
-if spanked >= 3:pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss2.jpg''">poor ass</a> hurts mercilessly, it is covered in bright red scars from the blows, some of them forming bruises.</font></b>'
-if spanked = 2:pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss1.jpg''">ass</a> burns with fire, you can clearly see bands of red across both cheeks.</font></b>'
-if spanked = 1:pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss.jpg''">ass</a> is a little red from spanking and it stings a little.</font></b>'
+if spanked > 0:
+	if spanked >= 3:
+		pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss2.jpg''">poor ass</a> hurts mercilessly, it is covered in bright red scars from the blows, some of them forming bruises.</font></b>'
+	elseif spanked = 2:
+		pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss1.jpg''">ass</a> burns with fire, you can clearly see bands of red across both cheeks.</font></b>'
+	else
+		pl '<b><font color="red">Your <a href="exec:view''images/picb/SpankedAss.jpg''">ass</a> is a little red from spanking and it stings a little.</font></b>'
+	end
+end
 
 if Gerpes >= 3:pl '<b><font color="red">On your lips sores. All signs of genital herpes.</font></b>'
 if Gerpes >= 10:
@@ -1569,11 +1538,17 @@ if workrin = 1:
 	end
 end
 
-if frost > 0 and frost <= 5:pl '<b><font>You are a little chilly.</font></b>'
-if frost > 5 and frost < 11:pl '<b><font color="red">Are you cold.</font></b>'
-if frost >= 11:pl '<b><font color="red">You are very cold.</font></b>'
+if frost > 0:
+	if frost <= 5:
+		pl '<b><font>You are a little chilly.</font></b>'
+	elseif frost < 11:
+		pl '<b><font color="red">Are you cold.</font></b>'
+	else
+		pl '<b><font color="red">You are very cold.</font></b>'
+	end
+end
 
-if sick ! 0:
+if sick > 0:
 	if sick = 1:
 		pl '<b><font color="red">This is not good, a tickle in the throat and a little runny nose.</font></b>'
 	elseif sick < 24:
@@ -1600,16 +1575,14 @@ if alko > 0:
 	if alko >= 3 and alko < 6:pl '<b><font color="red">You''re drunk.</font></b>'
 	if alko >= 6:pl '<b><font color="red">You''re wasted.</font></b>'
 end
-if day = 31 and month = 12 and (year - year_start) < 2 and hour >= 5 and hour <= 14 and StoryLine = 1:pl 'At 14 o''clock a New Year''s party will be held.'
+if day = 31 and month = 12 and (year - year_start) < 2 and hour >= 5 and hour <= 14 and StoryLine = 1:pl 'At 14:00 your New Year''s party will start.'
 
 if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and (sisboyQW = 3 or sisboyQW = 5 or sisboyQW = 7 or (sisboyQW = 9 and sisboytrioQW ! 1)):pl'' & pl'You promised my sister not to go into your room in  18 hours'
 if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and sisboytrioQW = 1:pl'' & pl'You promised my sister to come into your room in  18 hours'
 
-if sisboyday + 1 = daystart and $CURLOC = 'bedrPar' and hour = 18:gt'sisterQW','sisboyQW_expel'
+
 
 dynamic $brotherSexCount
-
-gs 'din_bad'
 
 if bag > 0:pl '<a href="exec:dynamic $d_bag"><b>Handbag</b></a>'
 

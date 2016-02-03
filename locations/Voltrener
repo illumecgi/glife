@@ -218,7 +218,7 @@ if $ARGS[0] = 'talk':
 
 		n = 20 - volsesongame
 
-		'The qualify for the Junior Cup, we need:'
+		'To qualify for the Junior Cup, we need:'
 
 		r = volsesonloss - volsesonwin
 

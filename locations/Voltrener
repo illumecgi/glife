@@ -240,7 +240,8 @@ end
 
 if $ARGS[0] = 'gorslut':
 	gs 'stat'
-	'You reluctantly nod your head, "It''s true, I really am a <<$gnikname>>. What does this have to volleyball?" Coach smiles, "Indirect correlation, very indirect, we''re discussing how you get into my team. Now, I wonder what you can do. You know what I mean?"'
+	'You reluctantly nod your head, "It''s true, I really am a <<$gnikname>>. What does this have to do with volleyball?"'
+	'Coach smiles, "Indirect correlation, very indirect, we''re discussing how you get into my team. Now, I wonder what you can do. You know what I mean?"'
 
 	act 'No':
 		cls

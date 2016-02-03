@@ -1196,51 +1196,35 @@ $objmagic = {
 	end
 }
 
-$objface = {
-	if player_avatar = 1:
-		view 'avatar.jpg'
-	elseif glass <= 0:
-		if shorthair = 0:
-			if hcol = 0 and curly <= 0:view 'images/picb/hcol.jpg'
-			if hcol = 1 and curly <= 0:view 'images/picb/hcol1.jpg'
-			if hcol = 2 and curly <= 0:view 'images/picb/hcol2.jpg'
-			if hcol = 3 and curly <= 0:view 'images/picb/hcol3.jpg'
-			if hcol = 0 and curly > 0:view 'images/picb/hcolcurly.jpg'
-			if hcol = 1 and curly > 0:view 'images/picb/hcolcurly1.jpg'
-			if hcol = 2 and curly > 0:view 'images/picb/hcolcurly2.jpg'
-			if hcol = 3 and curly > 0:view 'images/picb/hcolcurly3.jpg'
-		elseif shorthair = 1:
-			if hcol = 0:view 'images/picb/SHhcol.jpg'
-			if hcol = 1:view 'images/picb/SHhcol1.jpg'
-			if hcol = 2:view 'images/picb/SHhcol2.jpg'
-			if hcol = 3:view 'images/picb/SHhcol3.jpg'
+$objclothes = {
+clr
+if $clothingworntype = 'nude' and towel = 1 and tanga = 0:
+	view 'images/ode/towel.jpg'
+	pl'You are only wearing a towel'
+elseif $clothingworntype = 'nude' and tanga = 1:
+	view 'images/ode/nude.jpg'
+	pl'You are only wearing panties'
+elseif $clothingworntype = 'nude' and tanga = 0:
+	view 'images/ode/nude1.jpg'
+	pl'You are completely naked.'
+elseif cloth_vid = 1:
+	view 'images/etogame/bimboView.jpg'
+	pl 'You are dressed like a bimbo.'
+else
+	view FUNC('$clothing_image', $clothingworntype, clothingwornnumber)
+	pl 'You are wearing ' + FUNC('$clothing_name', $clothingworntype, clothingwornnumber) + '.'
+
+	if $clothingworntype ! 'vatnik' and $clothingworntype ! 'sforma' and $clothingworntype ! 'ero':
+		$RESULT = '(strength '
+		dynamic '$RESULT += <<$clothingworntype>>H[<<clothingwornnumber>>]'
+		if $clothingworntype ! 'yoga' and $clothingworntype ! 'sarafan':
+			$RESULT += ', hip size '
+			dynamic '$RESULT += <<$clothingworntype>>B[<<clothingwornnumber>>]'
 		end
-	elseif glass > 0:
-		if glass = 1:
-			if hcol = 0 and curly <= 0:view 'images/picb/nerd.jpg'
-			if hcol = 1 and curly <= 0:view 'images/picb/nerd1.jpg'
-			if hcol = 2 and curly <= 0:view 'images/picb/nerd2.jpg'
-			if hcol = 3 and curly <= 0:view 'images/picb/nerd3.jpg'
-			if hcol = 0 and curly > 0:view 'images/picb/nerdcurly.jpg'
-			if hcol = 1 and curly > 0:view 'images/picb/nerdcurly1.jpg'
-			if hcol = 2 and curly > 0:view 'images/picb/nerdcurly2.jpg'
-			if hcol = 3 and curly > 0:view 'images/picb/nerdcurly3.jpg'
-		elseif shorthair = 1:
-			if hcol = 0:view 'images/picb/SHhcolglass.jpg'
-			if hcol = 1:view 'images/picb/SHhcolglass1.jpg'
-			if hcol = 2:view 'images/picb/SHhcolglass2.jpg'
-			if hcol = 3:view 'images/picb/SHhcolglass3.jpg'
-		elseif glass = 2:
-			if hcol = 0 and curly <= 0:view 'images/picb/hcolglass.jpg'
-			if hcol = 1 and curly <= 0:view 'images/picb/hcolglass1.jpg'
-			if hcol = 2 and curly <= 0:view 'images/picb/hcolglass2.jpg'
-			if hcol = 3 and curly <= 0:view 'images/picb/hcolglass3.jpg'
-			if hcol = 0 and curly > 0:view 'images/picb/hcolglasscurly.jpg'
-			if hcol = 1 and curly > 0:view 'images/picb/hcolglasscurly1.jpg'
-			if hcol = 2 and curly > 0:view 'images/picb/hcolglasscurly2.jpg'
-			if hcol = 3 and curly > 0:view 'images/picb/hcolglasscurly3.jpg'
-		end
+		$RESULT += ')'
+		'<<$RESULT>>'
 	end
+end
 }
 
 $objbody = {
@@ -1583,7 +1567,7 @@ if $selobj = '<font color = green>Character</font>':dynamic $objdescrip
 if $selobj = 'Skills':dynamic $objskills
 if $selobj = 'Statistics':dynamic $objstatistika
 if magik > 0:if $selobj = 'Magic':dynamic $objmagic
-if $selobj = 'Face':dynamic $objface
+if $selobj = 'Face':view FUNC('$face_image')
 if $selobj = 'Body':dynamic $objbody
 if $selobj = 'Clothing':dynamic $objclothes
 if $selobj = 'Tattoos':dynamic $objtattoos

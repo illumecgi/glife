@@ -20,7 +20,7 @@ bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 $fname = 'Tahoma'
 fsize = 12
-$version = '0.3.0 (1.2.2 compliance update) full update to latest version. Many more translation updates and bug fixes.'
+$version = '0.3.1 The, like, bimbo version.'
 
 *nl
 *nl
@@ -38,13 +38,19 @@ $version = '0.3.0 (1.2.2 compliance update) full update to latest version. Many 
 *nl
 *nl
 'This game is about the simulated life of a woman containing elements of RPG, strategy, porn and magical combat.'
-'You may choose what kind of life the character will leave according to your play style, conscience or even personal beliefs.'
+'You may choose what kind of life the character will live according to your play style, conscience or even personal beliefs.'
 'We will try to avoid rights and wrongs during the game.'
 
 
 !!!! Recent Version Tracking Block !!!!!
 *nl
 'Recent Version Tracking:'
+*nl
+"0.3.1"
+'- Bug fixes and code clean up'
+'- Text edits to start and gameover'
+'- Couple of new cheats for cheat menu'
+'- Added first part of new bimbo systems'
 *nl
 "0.3.0"
 '- Now incorporating most aspects of 1.2.2 vesion'

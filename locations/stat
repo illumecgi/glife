@@ -49,7 +49,7 @@ musle[1] = musle
 flex[1] = agil
 stamina[1] = vital * 3
 wipo[1] = will
-intel[1] = intel
+intel[1] = intel - bimbostupidity
 krasota[1] = vnesh
 rost[1] = rost
 salo[1] = salo
@@ -932,6 +932,34 @@ else
 	$mudnerd = ''
 end
 
+if bimbolevel > 0:
+   if bimbowithdrawal = 1
+      $bimbostatus = '<font color="green">You feel, like, kind of lame today.</font>'
+   end
+
+   if bimbowithdrawal >= 2 and bimbowithdrawal < 4:
+      $bimbostatus = '<font color="black">You feel, like, totally lame today.</font>'
+   end
+   if bimbowithdrawal >= 4 and bimbowithdrawal < 6:
+      if manna > mannamax / 2:manna -= 10
+      $bimbostatus = '<font color="red">You really feel, like, awful today.</font>'
+   end
+
+   if bimbowithdrawal >= 6:
+      if manna > mannamax / 10:manna -= 10
+      $bimbostatus= '<font color="red"><b>You feel that, like, horrible today!</b></font>'
+   end
+
+   if bimbowithdrawal > 30:
+      bimbowithdrawal = 0
+      bimbo = 0
+      bimbolevel = 0
+      pl 'You suddenly feel as if your head is clear, instead of filled with pink thoughts.'
+   end
+else
+   bimbowithdrawal = 0
+   $bimbostatus = ''
+end
 
 !
 ! WD: Triggers every 15 minutes if not sleeping
@@ -948,35 +976,71 @@ else
 		! begin Loop
 		:Trig15MinuteLoop
 
-			! Horny Actions
-			if horny > 100:
-				set Trig15Minute = totminut
-			else
-				set Trig15Minute += 15
+		! Horny Actions
+		if horny > 100:
+			set Trig15Minute = totminut
+		else
+			set Trig15Minute += 15
 
-				! WD: Fix vibrator arousal to trigger every 15 minutes, moved from 'time' location
-				if vibratorin = 1:horny += rand(1, 5)
+			! WD: Fix vibrator arousal to trigger every 15 minutes, moved from 'time' location
+			if vibratorin = 1:horny += rand(1, 5)
 
-				! WD: Fixed Piecing arousal to trigger every 15 minutes, instead of once per day
-				if horny < 70:
-					hornystat = 0
-					if pirsF = 1:hornystat += 1
-					if pirsG = 1:hornystat += 1
-					if pirsGL = 1:hornystat += 1
-					hornyStat = hornystat * 4					
-					if pirsA = 1:hornystat += 1
-					if pirsB = 1:hornystat += 1
-					if pirsC = 1:hornystat += 1
-					if pirsD = 1:hornystat += 1
-					if pirsE = 1:hornystat += 1
-					if pirsN = 1:hornystat += 1
-					set horny += hornyStat / 4 + rand(1,4) <= hornyStat mod 4 & ! Apply 1/4 of value on average
-				end
-
-				! WD: Clothing
-				if Sexual = 1 and horny < 70:set horny += rand(0, 2)
-				if glamur = 1 and horny < 50:set horny += rand(0, 1)
+			! WD: Fixed Piecing arousal to trigger every 15 minutes, instead of once per day
+			if horny < 70:
+				hornystat = 0
+				if pirsF = 1:hornystat += 1
+				if pirsG = 1:hornystat += 1
+				if pirsGL = 1:hornystat += 1
+				hornyStat = hornystat * 4					
+				if pirsA = 1:hornystat += 1
+				if pirsB = 1:hornystat += 1
+				if pirsC = 1:hornystat += 1
+				if pirsD = 1:hornystat += 1
+				if pirsE = 1:hornystat += 1
+				if pirsN = 1:hornystat += 1
+				set horny += hornyStat / 4 + rand(1,4) <= hornyStat mod 4 & ! Apply 1/4 of value on average
 			end
+
+			! WD: Clothing
+			if Sexual = 1 and horny < 70:set horny += rand(0, 2)
+			if glamur = 1 and horny < 50:set horny += rand(0, 1)
+		end
+			
+!!SECTION: Bimbo (15 minute interval update checks)
+		if bimbolevel = 2:
+			if manna < mannamax:manna += ((manna / 100) * (rand(0,1))
+			if arousal < 25:arousal = 25
+			if arousal < 100:arousal += 1
+		end
+		if bimbolevel = 3:
+			if (manna < mannamax):manna += ((manna / 100) * (rand(0,2)))
+			if arousal < 50:arousal = 50
+			if arousal < 100:arousal += 2
+		end
+!! level four, adds supernatural-style succubus abilities. May be removed or spun off into its own TF or obtained through special means unlike the rest.
+!! Also planning to add much more severe and rapidly advancing penalties for not having sex to offset bonuses
+		if bimbolevel = 4:
+			if arousal < 80:arousal = 80
+			if arousal < 100:arousal += 2
+			if cumlip > 0:sexnutrition += cumlip and cumlip = 0 and absorbflag = 1
+			if swallow > 0:sexnutrition += swallow * 2 and swallow = 0 and absorbflag = 1
+			if cumpussy > 0:sexnutrition += cumpussy * 4 and cumpussy = 0 and absorbflag = 1
+			if cumanus > 0:sexnutrition += cumanus * 4 and cumanus = 0 and absorbflag = 1
+			if absorbflag = 1:
+				if (manna < mannamax):manna += ((manna / 100) * 5)
+				pl 'You absorb the semen in your body, gaining nourishment.'
+				absorbflag = 0
+			end
+			if sexnutrition > 0:
+				water += sexnutrition / 2
+				energy += sexnutrition / 3
+				son += sexnutrition / 4
+				sexnutrition = 0
+			end
+		end
+!! safeguards to prevent bimbolevel from going above or below its intended limits
+		if bimbolevel > 4:bimbolevel = 4
+		if bimbolevel < 0:bimbolevel = 0			
 
 		! do loop
 		if (totminut - Trig15Minute) >= 15:jump 'Trig15MinuteLoop'

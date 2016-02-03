@@ -1,32 +1,5 @@
 # $menu_clothes
-clr
-if $clothingworntype = 'nude' and towel = 1 and tanga = 0:
-	view 'images/ode/towel.jpg'
-	pl'You are only wearing a towel'
-elseif $clothingworntype = 'nude' and tanga = 1:
-	view 'images/ode/nude.jpg'
-	pl'You are only wearing panties'
-elseif $clothingworntype = 'nude' and tanga = 0:
-	view 'images/ode/nude1.jpg'
-	pl'You are completely naked.'
-elseif cloth_vid = 1:
-	view 'images/etogame/bimboView.jpg'
-	pl 'You are dressed like a bimbo.'
-else
-	view FUNC('$clothing_image', $clothingworntype, clothingwornnumber)
-	pl 'You are wearing ' + FUNC('$clothing_name', $clothingworntype, clothingwornnumber) + '.'
-
-	if $clothingworntype ! 'vatnik' and $clothingworntype ! 'sforma' and $clothingworntype ! 'ero':
-		$RESULT = '(strength '
-		dynamic '$RESULT += <<$clothingworntype>>H[<<clothingwornnumber>>]'
-		if $clothingworntype ! 'yoga' and $clothingworntype ! 'sarafan':
-			$RESULT += ', hip size '
-			dynamic '$RESULT += <<$clothingworntype>>B[<<clothingwornnumber>>]'
-		end
-		$RESULT += ')'
-		'<<$RESULT>>'
-	end
-end
+dynamic $objclothes
 
 --- $menu_clothes ---------------------------------
 

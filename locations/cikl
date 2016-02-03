@@ -24,6 +24,51 @@ if husbandMark = 1 and husband <= 10:
 	'<b><font color="red">Your husband has filed for a divorce.</font></b>'
 end
 
+!!SECTION: Bimbo (daily status update checks)
+if bimbo < 0:
+	bimbo = 0
+elseif bimbo < 10:
+	bimbolevel = 0
+	bimbo -= 1
+elseif bimbo < 20:
+	bimbolevel = 1
+elseif bimbo < 30:
+	bimbolevel = 2
+elseif bimbo < 40:
+	bimbolevel = 3
+else
+	if succubusflag = 1:
+		bimbolevel = 4
+	else
+		bimbolevel = 3
+	end
+end
+if bimbo >= 50:bimbo = 50
+
+!!Bimbo levels. They use custom variables so they wont permanently change character stats
+if bimbolevel = 0:bimbobeauty = 0 and bimbostupidity = 0
+if bimbolevel = 1:bimbobeauty = (vnesh / 10) and bimbostupidity = (intel / 6)
+if bimbolevel = 2:bimbobeauty = (vnesh / 6) and bimbostupidity = (intel / 4)
+if bimbolevel = 3:bimbobeauty = (vnesh / 5) and bimbostupidity = (intel / 3)
+if bimbolevel = 4:bimbobeauty = (vnesh / 4) and bimbostupidity = (intel / 3)
+
+if bimbocl = 1:
+	bimbocl = 0
+	bimbo += 2
+end
+!!Checks how often sex has occured in the last 24 hours and for drops in bimbo score, for calculating withdrawal
+if bimbolevel >= 1:
+	bimbo += ((sex + bj + anal) - snapshotX) - 3
+	if snapshotY - bimbo <= 1 or bimbo > 40:
+		bimbowithdrawal = 0
+	else
+		bimbowithdrawal += 1
+	end
+end
+snapshotX = (sex + bj + anal)
+snapshotY = bimbo
+
+
 if curly > 0:curly -= 1
 
 ! WD: Added daily reduction of braids for Maruda Hair Mod
@@ -123,12 +168,12 @@ elseif preg = 1 and pregtime < 280:
 	if pregtimes = 0:pregtimes = 1
 elseif preg = 1 and pregtime = 280 and hourpreg ! hour:
 	hourpreg = hour
-	'<center><b>A sharp pain ran through your stomach, and something flows down your legs. Snap, you water broke! You have to get to the clinic fast!</b></center>'
+	'<center><b>A sharp pain runs through your stomach, and something flows down your legs. Snap, your water broke! You have to get to the clinic fast!</b></center>'
 elseif preg = 1 and pregtime > 280:
 	cla
 	*clr
 	over = 4
-	'<center><b>A horrible pain shots through your body.</b></center>'
+	'<center><b>A horrible pain shoots through your body.</b></center>'
 	xgt 'gameover'
 	exit
 end

@@ -106,7 +106,7 @@ $pavser1 = {
         
         manna = manna - 30
         gs'stat'
-        dynamic $objface
+		'<center><img src="'+FUNC('$face_image')+'"></center>'
         '<center><img src="images/pic/pavserjil.jpg" ></center>'
         '-exhaled, slowly retreating to the door and tried to pull myself together. - You scared me, - continued You,trying to stop shaking voice.At this point, you have learned it:man in the park on the lawn - How did you get here? '
         '- Through the door.'
@@ -116,7 +116,7 @@ $pavser1 = {
             *clr
             
             gs'stat'
-            dynamic $objface
+			'<center><img src="'+FUNC('$face_image')+'"></center>'
             '<center><img src="images/pic/pavserjil.jpg" ></center>'
             '- Leave the door open. But I did not hear, you entered.'
             '- I went before. - His voice slipped a note zveschaya.'
@@ -128,7 +128,7 @@ $pavser1 = {
                 *clr
                 arnksg = 1
                 gs'stat'
-                dynamic $objface
+				'<center><img src="'+FUNC('$face_image')+'"></center>'
                 '<center><img src="images/pic/pavserjil.jpg" ></center>'
                 '- Rent an apartment in a house not too expensive, - He said,.'
                 '- Do you intend to rent an apartment? - You ask.'
@@ -141,7 +141,7 @@ $pavser1 = {
                     set psihb = 0
                     
                     gs'stat'
-                    dynamic $objface
+					'<center><img src="'+FUNC('$face_image')+'"></center>'
                     '<center><img src="images/pic/pavserjil.jpg" ></center>'
                     'You purely mechanically straightened hair, Using the glass door instead of a mirror.'
                     'And in my head I stirred instant thought - I`m a fool Fool... and here-It is instantly ulutuchilas.'
@@ -166,7 +166,7 @@ $pavser3 = {
         manna = manna - 50
         horny += 20
         gs'stat'
-        dynamic $objface
+		'<center><img src="'+FUNC('$face_image')+'"></center>'
         '<center><img src="images/pic/pavserjil.jpg" ></center>'
         '– No, - He replied, - Ottoman will stand there, where there is a.'
         'It sounded like an order. Rudely, firmly and clearly.'
@@ -297,9 +297,8 @@ $pavser7 = {
 }
 
 $pavser8 = {
-    cla
-    *clr
-    dynamic $objface
+	cls
+	'<center><img src="'+FUNC('$face_image')+'"></center>'
     horny +=10
     manna = manna - 50
     SUB = SUB + 5
@@ -316,12 +315,11 @@ $pavser8 = {
     'You stand rozmyshlyaya about what happened: and he can do with you now, he wants and you will not resisting. But why?'
     'As well? But you do not know, Suddenly he began maniac and you now cut, and you are under hypnosis smotrelib him as a benefactor.'
     act 'The Hall':
-        cla
-        *clr
+		cls
         manna = mannamax
         horny += 20
         gs'stat'
-        dynamic $objface
+		'<center><img src="'+FUNC('$face_image')+'"></center>'
         '<center><img src="images/pic/pavserjil.jpg" ></center>'
         '- I thought, You`ve gone.'
         '- I locked the door.'
@@ -360,7 +358,6 @@ $pavser9 = {
             cla
             *clr
             horny += 20
-            nude = 1
             gs'stat'
             '<center><img src="images/lmps/1day/02.jpg" ></center>'
             'Picked up the chest, palms and thumbs had nipples. The rough rough skin on the balls of his fingers made her rush of desire, You clung to him.'

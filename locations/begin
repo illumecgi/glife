@@ -51,7 +51,7 @@ if $ARGS[0] = 'real_character':
 	'<center><img src="images/pic/character_creation.jpeg"></center>'
 	*nl
 	'This game has the ability to create your own character.'
-	'To do this, replace the image "<a href="exec:view''avatar.jpg''">avatar</a>" in the root folder of the game with a file of the same name and format JPEG (.jpg). That's it!
+	'To do this, replace the image "<a href="exec:view''avatar.jpg''">avatar</a>" in the root folder of the game with a file of the same name and format JPEG (.jpg). That''s it!'
 	'pay attention, this choice is given only once and in the future you will not be able to change it without starting a new game! Also in-game changes to hair color, length ect will not affect the displayed image character, If you decide to use a custom one.'
 	'This function is made solely to simplify the life of the user, who wanted to have another look, without suffering from the selection of pictures.'
 	'Your selected photo or image on the role of his character - only your personal choice, and is based on your personal preferences. By default, the game uses files from the site avatar wikimedia.org.'

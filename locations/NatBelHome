@@ -81,9 +81,10 @@ elseif lernHome = 0:
 			NatDolg = 0
 			NatDolgDay = 0
 			NatBelBestFrend += 10
+			NatDolgDay = daystart
 			gs 'stat'
 			'<center><img src="images/qwest/alter/npc/16.jpg"></center>'
-			'You decide to forgive the Natasha''s debt. She is delighted and begins heartfuly thanking you.'
+			'You decide to forgive the Natasha''s debt. She is delighted and thanks you with all her heart.'
 
 			act 'rest':gt $curloc
 		end
@@ -92,6 +93,7 @@ elseif lernHome = 0:
 			act 'Demand repayment':
 				cls
 				minut += 15
+				NatDolgDay = daystart
 				gs 'stat'
 				'<center><img src="images/qwest/alter/npc/16.jpg"></center>'
 				'You decide not to reduce Natasha''s debt. You angrily confront her, demanding the return of the money. Natasha curls up into a ball on her bed "<<$nickname>>, dear, please forgive me. I will do anything you say." Natasha looks at you with fearful eyes and comes up with a couple of ideas on how you can use this chicken. You snarl at her with an evil hiss, "You''re my creature until you''ve worked off every last kopeck."'
@@ -135,6 +137,7 @@ elseif lernHome = 0:
 				natotrab += 1
 				natsub += 1
 				dom += 1
+				NatDolgDay = daystart
 				!!natknee
 				gs 'stat'
 				'<center><img src="images/qwest/alter/ev2/natknee.jpg"></center>'
@@ -153,7 +156,6 @@ elseif lernHome = 0:
 
 					act 'Next':gt $curloc
 				end
-			end
 				if natsub >= 4:
 					act 'Make her lick':
 						cls
@@ -218,7 +220,7 @@ elseif lernHome = 0:
 					end
 				end
 			
-				if hour >= 18 and hour <21 and natsub >= 6 and natbro = 0:
+				if hour >= 18 and hour < 21 and natsub >= 6 and natbro = 0:
 					act 'Call your brother':
 						cls
 						minut += 15

@@ -157,18 +157,18 @@ if $ARGS[0] = 'talk':
 							'You convince the coach that it''s all rumors and lies and dismiss them as envy. You speak quite convincingly and coach seems to believe you.'
 
 							act 'Persuade him to let you join the team':
-							cls
-							dom -= 1
-							gs 'stat'
+								cls
+								dom -= 1
+								gs 'stat'
 
-							if dom >= 10:
-								!!if volleysostav > 0:trenerepa -= 1
-								volleysostav = 1
-								trenerepa = 20
-								'You try to prove the coach that he should include in the team, the coach tries to protest, but your arguement is so convincing that he eventually gives up. "Okay <<$surname>>, I''ll put you in the team, but you''re on the bench."'
-							else
-								'You try to prove the coach that he should include in the team, but you are no forceful enough and coach countered all your arguments denying you a place in the team.'
-							end
+								if dom >= 10:
+									!!if volleysostav > 0:trenerepa -= 1
+									volleysostav = 1
+									trenerepa = 20
+									'You try to prove the coach that he should include in the team, the coach tries to protest, but your arguement is so convincing that he eventually gives up. "Okay <<$surname>>, I''ll put you in the team, but you''re on the bench."'
+								else
+									'You try to prove the coach that he should include in the team, but you are no forceful enough and coach countered all your arguments denying you a place in the team.'
+								end
 
 								act 'Leave':gt 'gdksport'
 							end

@@ -4,7 +4,7 @@ $borodachNo = {
 		cla
 		minut += 15
 		gs 'stat'
-		'You refuse to drink and start to leave. The guard trys to persuade you to stay with him and continue.'
+		'You refuse to drink and start to leave. The guard tries to persuade you to stay with him and continue.'
 
 		if SUB < 10:act 'Leave':dom += 1 & gt 'clener', 'start'
 		dynamic $borodachDrink
@@ -16,7 +16,7 @@ $borodachNo2 = {
 		cla
 		minut += 15
 		gs 'stat'
-		'You gather your things and start to leave, Sasha trys to persuade you to stay with him and continue.'
+		'You gather your things and start to leave, Sasha tries to persuade you to stay with him and continue.'
 
 		if DOM > 0 and horny < 50:act 'Leave':dom += 1 & gt 'clener', 'start'
 		dynamic $borodachSex
@@ -28,7 +28,7 @@ $borodachDrink = {
 		minut += 15
 		horny += 20
 		gs 'stat'
-		'You drink and eat some more cheese, you just realized that you are happily drunk. The guards hand does not stop caressing your ass.'
+		'You drink and eat some more cheese, you realize that you are happily drunk. The guard''s hand does not stop caressing your ass.'
 		dynamic $borodachNo2
 		dynamic $borodachSex
 	end
@@ -43,7 +43,7 @@ $borodachSex = {
 		minut += 5
 		horny += 5
 		gs 'stat'
-		'You ease down and begin to enjoy the hands caressing you. Sasha has openly embraced and started kissing you.'
+		'You calm down and begin to enjoy the hands caressing you. Sasha has openly embraced and started kissing you.'
 		'His hands slide under your clothes, unbuttoning and removing them. Soon he has exposed your chest and begins to suck your nipples.'
 
 		act 'Lie down on the sofa':
@@ -106,7 +106,7 @@ $ohrbj = {
 		picrand = rand(1, 5)
 		'<center><img src="images/qwest/ohrannik/bj<<picrand>>.jpg"></center>'
 
-		'You wrap your <<$liptalk>> around his strong and warm 15 cm cock and quickly begin by sucking the head, caressing it with your tongue and lips. Sasha groan, "I´m going to come."'
+		'You wrap your <<$liptalk>> around his strong and warm 15 cm cock and quickly begin by sucking the head, caressing it with your tongue and lips. Sasha groans, "I´m going to come."'
 		dynamic $ohrbjcum
 		dynamic $ohrsex
 	end
@@ -121,7 +121,7 @@ $ohrbjcum = {
 		gs 'stat'
 		picrand = rand(1, 5)
 		'<center><img src="images/qwest/ohrannik/bjcum<<picrand>>.jpg"></center>'
-		'You redouble your efforts, sucking his hard cock with your <<$liptalk>>. Hot sperm hits your mouth, then again and again. You continued to suck, ignoring your mouth full of viscous sperm. Finally he has nothing left.'
+		'You redouble your efforts, sucking his hard cock with your <<$liptalk>>. Hot sperm hits your mouth, again and again. You continue to suck, ignoring your mouth full of viscous sperm. Until he finally nothing left.'
 		gs 'oral', '0'
 
 		act 'Swallow sperm':
@@ -133,7 +133,7 @@ $ohrbjcum = {
 			gs 'stat'
 			picrand = rand(1, 3)
 			'<center><img src="images/qwest/ohrannik/swallow<<picrand>>.jpg"></center>'
-			'You have opened your mouth filled with sperm to show off your hard work, then swallow it.'
+			'You open your sperm filled mouth and show off your hard work, then swallow it.'
 
 			act 'Leave':gt 'street'
 		end
@@ -148,7 +148,7 @@ $ohrbjcum = {
 			borodachSexDay = daystart
 			gs 'stat'
 			'<center><img src="images/qwest/ohrannik/spit.jpg"></center>'
-			'You have opened your mouth fill with sperm, quickly find the sink and spit it out.'
+			'You open your sperm filled mouth and show off your hard work, then quickly find the sink and spit it out.'
 
 			act 'Leave':gt 'street'
 		end

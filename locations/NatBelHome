@@ -83,7 +83,7 @@ elseif lernHome = 0:
 			NatBelBestFrend += 10
 			gs 'stat'
 			'<center><img src="images/qwest/alter/npc/16.jpg"></center>'
-			'You decide to forgive the Natasha''s debt. She is delighted and begins heartfuly thanking you.'
+			'You decide to forgive the Natasha''s debt. She is delighted and thanks you with all her heart.'
 
 			act 'rest':gt $curloc
 		end
@@ -153,7 +153,6 @@ elseif lernHome = 0:
 
 					act 'Next':gt $curloc
 				end
-			end
 				if natsub >= 4:
 					act 'Make her lick':
 						cls
@@ -218,7 +217,7 @@ elseif lernHome = 0:
 					end
 				end
 			
-				if hour >= 18 and hour <21 and natsub >= 6 and natbro = 0:
+				if hour >= 18 and hour < 21 and natsub >= 6 and natbro = 0:
 					act 'Call your brother':
 						cls
 						minut += 15

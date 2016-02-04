@@ -35,7 +35,7 @@ if $ARGS[0] = 'pos1':
 		act 'Use leggings as pants sports':
 			cla
 			*clr
-			cloth_vid = 2
+			sport = 1
 			'<center><img src="images/etogame/leggins.jpg"></center>'
 			'If much of their stretch, they become transparent. Are you sure that they can play sports on the street?'
 

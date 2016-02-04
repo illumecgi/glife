@@ -271,7 +271,7 @@ $din_vokzalg_toilet_m = {
 	'<center><img src="images/etogame/PublicToilet.jpg"></center>'
 	'You opened the door to the men''s room and went in.'
 
-	if cloth_vid = 1:
+	if bimbolevel >= 1:
 		act 'Stand and wait adventures':gt 'vokBimbo', 'pos1'
 		act 'Go to the booth':gt 'vokBimbo', 'pos5'
 	end

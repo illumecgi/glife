@@ -92,7 +92,7 @@ if $ARGS[0] = '12':
 
 			if bj <= 15:
 				'<center><img src="images/prost/bjm.jpg"></center>'
-				'With clumsy movements you suck on the customer's dick, sucking on the customer's dick until he ends up coming in your mouth, causing you to wince from the unpleasant taste.'
+				'With clumsy movements you suck on the customer''s dick, sucking on the customer''s dick until he ends up coming in your mouth, causing you to wince from the unpleasant taste.'
 
 				act 'Escape':gt $locSex, $metkaSex
 			else

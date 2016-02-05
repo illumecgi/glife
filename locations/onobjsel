@@ -1199,13 +1199,13 @@ $objmagic = {
 $objclothes = {
 clr
 if $clothingworntype = 'nude' and towel = 1 and tanga = 0:
-	view 'images/ode/towel.jpg'
+	view 'images/clothes/towel.jpg'
 	pl'You are only wearing a towel'
 elseif $clothingworntype = 'nude' and tanga = 1:
-	view 'images/ode/nude.jpg'
+	view 'images/clothes/nude.jpg'
 	pl'You are only wearing panties'
 elseif $clothingworntype = 'nude' and tanga = 0:
-	view 'images/ode/nude1.jpg'
+	view 'images/clothes/nude1.jpg'
 	pl'You are completely naked.'
 elseif cloth_vid = 1:
 	view 'images/etogame/bimboView.jpg'

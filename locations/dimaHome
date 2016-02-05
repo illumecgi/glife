@@ -19,7 +19,7 @@ $dimkaplays = {
 			horny = 100
 			nark += 10
 			gs 'stat'
-			'<center><img src="images/pic/dur.jpg"></center>'
+			'<center><img src="images/etogame/dur.jpg"></center>'
 			'You sniff up the dose of powder. For a moment, you just feel numb, then you feel just fine.'
 	
 			act 'catch a buzz':gt 'dimahome'
@@ -409,7 +409,7 @@ if dimaFilm = 0:
 		nark += 10
 		Mud = totminut + 120
 		gs 'stat'
-		'<center><img src="images/pic/dur.jpg"></center>'
+		'<center><img src="images/etogame/dur.jpg"></center>'
 		'You sniff up the dose of powder. For a moment, you just feel numb, then you feel just fine.'
 
 		act 'further':

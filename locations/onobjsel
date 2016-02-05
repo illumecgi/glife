@@ -1263,41 +1263,41 @@ $objbody = {
 
 $objtattoos = {
 	$tatlipdi = {
-		if tatlip = 1:view 'images/picBody/tatlip1.jpg'
-		if tatlip = 2:view 'images/picBody/tatlip2.jpg'
-		if tatlip = 3:view 'images/picBody/tatlip3.jpg'
+		if tatlip = 1:view 'images/body/tatlip1.jpg'
+		if tatlip = 2:view 'images/body/tatlip2.jpg'
+		if tatlip = 3:view 'images/body/tatlip3.jpg'
 	}
 	$tatpledi = {
-		if tatplech = 1:view 'images/picBody/tatplech1.jpg'
-		if tatplech = 2:view 'images/picBody/tatplech2.jpg'
-		if tatplech = 3:view 'images/picBody/tatplech3.jpg'
-		if tatplech = 4:view 'images/picBody/tatplech4.jpg'
+		if tatplech = 1:view 'images/body/tatplech1.jpg'
+		if tatplech = 2:view 'images/body/tatplech2.jpg'
+		if tatplech = 3:view 'images/body/tatplech3.jpg'
+		if tatplech = 4:view 'images/body/tatplech4.jpg'
 	}
 	$tatbackdi = {
-		if tatback = 1:view 'images/picBody/tatb1.jpg'
-		if tatback = 2:view 'images/picBody/tatb2.jpg'
-		if tatback = 3:view 'images/picBody/tatb3.jpg'
-		if tatback = 4:view 'images/picBody/tatb4.jpg'
+		if tatback = 1:view 'images/body/tatb1.jpg'
+		if tatback = 2:view 'images/body/tatb2.jpg'
+		if tatback = 3:view 'images/body/tatb3.jpg'
+		if tatback = 4:view 'images/body/tatb4.jpg'
 	}
 	$tatupbdi = {
-		if tatupb = 1:view 'images/picBody/tatupb1.jpg'
-		if tatupb = 2:view 'images/picBody/tatupb2.jpg'
-		if tatupb = 3:view 'images/picBody/tatupb3.jpg'
-		if tatupb = 4:view 'images/picBody/tatupb4.jpg'
+		if tatupb = 1:view 'images/body/tatupb1.jpg'
+		if tatupb = 2:view 'images/body/tatupb2.jpg'
+		if tatupb = 3:view 'images/body/tatupb3.jpg'
+		if tatupb = 4:view 'images/body/tatupb4.jpg'
 	}
 	$tatvagdi = {
-		if tatvag = 1:view 'images/picBody/tatvag.jpg'
-		if tatvag = 2:view 'images/picBody/tatvag2.jpg'
-		if tatvag = 3:view 'images/picBody/tatvag3.jpg'
-		if tatvag = 4:view 'images/picBody/tatvag4.jpg'
-		if tatvag = 5:view 'images/picBody/tatvag5.jpg'
-		if tatvag = 6:view 'images/picBody/tatvag6.jpg'
+		if tatvag = 1:view 'images/body/tatvag.jpg'
+		if tatvag = 2:view 'images/body/tatvag2.jpg'
+		if tatvag = 3:view 'images/body/tatvag3.jpg'
+		if tatvag = 4:view 'images/body/tatvag4.jpg'
+		if tatvag = 5:view 'images/body/tatvag5.jpg'
+		if tatvag = 6:view 'images/body/tatvag6.jpg'
 	}
 	$tatlegdi = {
-		if tatleg = 1:view 'images/picBody/tatleg1.jpg'
-		if tatleg = 2:view 'images/picBody/tatleg2.jpg'
-		if tatleg = 3:view 'images/picBody/tatleg3.jpg'
-		if tatleg = 4:view 'images/picBody/tatleg4.jpg'
+		if tatleg = 1:view 'images/body/tatleg1.jpg'
+		if tatleg = 2:view 'images/body/tatleg2.jpg'
+		if tatleg = 3:view 'images/body/tatleg3.jpg'
+		if tatleg = 4:view 'images/body/tatleg4.jpg'
 	}
 
 	clr

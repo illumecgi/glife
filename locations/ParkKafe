@@ -152,7 +152,7 @@ if $ARGS[0] = 'Armenians':
 				if parkarman = 0:guy += 2 & parkarman = 1
 				bj+= 2
 				cumlip += 2
-				'<center><img src="images/pics2/ara.jpg"></center>'
+				'<center><img src="images/picBJ/parkBJ.jpg"></center>'
 				'The Armenians put you on your knees and take out their mighty members. They use them to poke you in your face, you start to suck both members.'
 
 				if rand(1, 100) <= bj:

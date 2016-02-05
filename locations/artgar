@@ -262,7 +262,7 @@ elseif apmeet = 4:
 	minut += 30
 	sub += 1
 	gs 'stat'
-	'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+	'<center><img src="images/qwest/alter/npc/2.jpg"></center>'
 	'Artem took you by the hand and led her into the garage, where you have been waiting for Petka Klyuyev.'
 	'You sprsil the road: "Well I liked the idea Petka?"'
 	'Artem: "Yes, he delighted, and then - he says nothing`s new. And I look at you, and she was involved - the beginning of the idea to give, too bored?"'

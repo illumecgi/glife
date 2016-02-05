@@ -529,7 +529,7 @@ $ven3 = {
 	*clr
 	over = 9
 	gs'stat'
-    '<center><img src="images/pic/poli.jpg"></center>'
+    '<center><img src="images/etogame/poli.jpg"></center>'
     'Out of fear, you run from the office.'
     'Out of nowhere came nurses and other staff. You are restrained and dragged back. Confidently, the doctor explains to the patients and visitors that you are not well in the head.'
     act 'Further':gt'gameover'

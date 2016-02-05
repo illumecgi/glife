@@ -5,7 +5,7 @@ $universalklient = {
 	if klient_needs = 2:$klientwanttext = 'anal'
 	if klient_needs = 5:$klientwanttext = 'Cooney'
 
-	'<center><img src="images/pic/park2.jpg"></center>'
+	'<center><img src="images/etogame/park2.jpg"></center>'
 	'You said client, that <<$klientwanttext>> It will cost <<ProsMoney*100>> rubles.'
 	dynamic $dinprostable
 

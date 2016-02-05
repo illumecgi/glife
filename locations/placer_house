@@ -218,7 +218,7 @@ elseif kol_man = 3:
 						cls
 						horny += 10
 						gs 'stat'
-						'<center><img src="images/qwest/alter/placer/miss.jpg"></center>'
+						'<center><img src="images/qwest/gadukino/mitka.jpg"></center>'
 						'You lay on your back and one of the guys spread your legs, and the second came up to your face and put his penis in your mouth.'
 						dynamic $sexstart
 						dynamic $sexstart2
@@ -308,7 +308,7 @@ elseif kol_man = 3:
 					dick = rand(15, 20)
 					horny += 10
 					gs 'stat'
-					'<center><img src="images/qwest/alter/placer/doggyanal.jpg"></center>'
+					'<center><img src="images/picKav/grupd2.jpg"></center>'
 					'You guys have offered to fuck you in the ass, they gladly agreed. One of the guys came up to your face and put his penis between your lips, you immediately started to suck.'
 					dynamic $analsexrude
 					sexrand = rand(0, 1)

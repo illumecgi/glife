@@ -95,7 +95,7 @@ $gopsexboy1 = {
 
 if $ARGS[0] = 'start':
 	'<center><b>Yard at the house</b></center>'
-	'<center><img src="images/etogame/dvor.jpg"></center>'
+	'<center><img src="images/etogame/street.jpg"></center>'
 	'You walk slowly around the yard, you go to a meeting a few guys gopnicheskogo species, with pivasom, Semko and caps.'
 	gtalkrand = rand(0, 10)
 
@@ -417,7 +417,7 @@ if $ARGS[0] = 'pivas':
 	minut += 30
 	gs 'stat'
 	'<center><b>Do COURT HOUSE</b></center>'
-	'<center><img src="images/etogame/dvor.jpg"></center>'
+	'<center><img src="images/etogame/street.jpg"></center>'
 	'You and the guys went to the playground, where they boarded on the bench.'
 
 	if cumface > 0 or cumlip > 0 or cumfrot > 0:

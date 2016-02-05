@@ -32,7 +32,7 @@ end
 if $ARGS[0] = 'end2':
 	cla
 	*clr
-	'<center><img src="images/picparty/itog2.jpg"></center>'
+	'<center><img src="images/qwest/alter/albina/kiss.jpg.jpg"></center>'
 	'You danced and hooligans, you had the idea to dance with Vika, ended your dance light lesbian show with savory lingering kisses.'
 
 	act 'Leave':gt 'dorm', 'korr'

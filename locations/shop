@@ -280,7 +280,7 @@ if $shoplocation = 'hardware':
 				 if portion*300 <= money:
 					tkan += portion
 					money = money - portion*300
-					'<center><img src="images/pic/kassa.jpg"></center>'
+					'<center><img src="images/etogame/kassa.jpg"></center>'
 					'You paid the cashier and bought cloth.'
 				 end
 			 	

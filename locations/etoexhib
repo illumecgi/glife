@@ -1295,7 +1295,7 @@ if $ARGS[0] = 'pos37':
 	minut += 15
 	gs 'stat'
 	'<center><b><font color="maroon">Dining</font></b></center>'
-	'<center><img src="images/etogame/ptu_stolovaya.jpg"></center>'
+	'<center><img src="images/etogame/bukli_stol.jpg"></center>'
 	'You can have dinner or a snack.'
 	temp = rand(1, 100)
 

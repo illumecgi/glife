@@ -19,7 +19,7 @@ $dimkaplays = {
 			horny = 100
 			nark += 10
 			gs 'stat'
-			'<center><img src="images/pic/dur.jpg"></center>'
+			'<center><img src="images/etogame/dur.jpg"></center>'
 			'You sniff up the dose of powder. For a moment, you just feel numb, then you feel just fine.'
 	
 			act 'catch a buzz':gt 'dimahome'
@@ -86,7 +86,7 @@ $dimkaplays = {
 
 						dimasexday = daystart
 						gs 'stat'
-						'<center><img src="images/qwest/alter/evdima/deep.jpg"></center>'
+						'<center><img src="images/qwest/alter/artur/facefuck0.jpg"></center>'
 
 						if throat < 16:
 							'Dimka grabs you by the hair and pulls you onto his member. Hard cock enters your throat, you choke and tears flow from your eyes. Dimka doesn''t pay any attention to your distress, he just fucks your mouth with his hard cock. Finally the torture ends and he fills your mouth with his hot slimy sperm that you immediately swallow.'
@@ -409,7 +409,7 @@ if dimaFilm = 0:
 		nark += 10
 		Mud = totminut + 120
 		gs 'stat'
-		'<center><img src="images/pic/dur.jpg"></center>'
+		'<center><img src="images/etogame/dur.jpg"></center>'
 		'You sniff up the dose of powder. For a moment, you just feel numb, then you feel just fine.'
 
 		act 'further':

@@ -65,7 +65,7 @@ $d_dima_kiss = {
 
 					gang += 1
 					gs 'stat'
-					'<center><img src="images/qwest/alter/ev2/fuck2.jpg"></center>'
+					'<center><img src="images/qwest/alter/alexey/gang7.jpg.jpg"></center>'
 					'You bows member Ghosh and start to suck absorbing his mouth to the throat.'
 					dynamic $sexstart4
 					dynamic $sexcum
@@ -76,7 +76,7 @@ $d_dima_kiss = {
 						cumface += 1
 						facial += 1
 						gs 'stat'
-						'<center><img src="images/qwest/alter/ev2/facial.jpg"></center>'
+						'<center><img src="images/picBJ/fa2.jpg"></center>'
 						'Gosh takes dick out of your mouth and the jet of sperm hit you in the face.'
 
 						if condomDima = 1:

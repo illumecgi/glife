@@ -947,7 +947,7 @@ if $ARGS[0] = 'lesbi':
 	*clr
 	minut += 5
 	gs 'stat'
-	'<center><img src="images/qwest/lesbi.jpg"></center>'
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
 	'The woman, stares at you, you catch her eye. She looks you up and down, smiles and licks her lips.'
 
 	act 'Turn away':gt 'butik', 'start'
@@ -961,7 +961,7 @@ if $ARGS[0] = 'lesbi1':
 	minut += 5
 	lesbiQW = 1
 	gs 'stat'
-	'<center><img src="images/qwest/lesbi.jpg"></center>'
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
 	'You go to the woman. She looks at you with a twinkle in her eye "I am Natalya Petrovna, here''s my card, Call me, we`ll go somewhere interesting". Then the woman leaves the boutique with a graceful and confident gait.'
 
 	act 'Move away':gt 'butik', 'start'
@@ -973,7 +973,7 @@ if $ARGS[0] = 'lesbi2':
 	*clr
 	minut += 5
 	gs 'stat'
-	'<center><img src="images/qwest/lesbi.jpg"></center>'
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
 	'"Paris?! Yes, I had more guys than you!!! you lose".'
 	'"Guys? Yes You can twist them around your little finger, if you want, you little cutie".'
 	'"Did you ever try to force another girl to obey and do anything you desire?"'
@@ -991,7 +991,7 @@ if $ARGS[0] = 'lesbi3':
 	minut += 5
 	lesbiQW = 2
 	gs 'stat'
-	'<center><img src="images/qwest/lesbi.jpg"></center>'
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
 	'You are suddenly interested, how do you control other girls like this? Maybe you`ll ask this woman to teach you.'
 	'Then you can find yourself a very docile simpleton and make her do your small chores and help you escape from the guys.'
 	'Having deciding you asked, "Can you teach me that?"'

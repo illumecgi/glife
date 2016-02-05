@@ -1317,7 +1317,7 @@ $objpirsing = {
 		view 'images/picb/pirsA.jpg'
 	}
 	$dipirsB = {
-		view 'images/picb/pirsB.jpg'
+		view 'images/body/pirsB.jpg'
 	}
 	$dipirsC = {
 		view 'images/picb/pirsC.jpg'

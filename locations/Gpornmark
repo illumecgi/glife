@@ -56,5 +56,26 @@ elseif TimesBuyPorno > 0:
 	'Seller is suitable to you "Looking to buy a magazine? Only 500 rubles.".'
 end
 
+if TimeBuyPorno >= 5 and dildo = 0:
+	'"Or do you want to buy something else", he shows you a dildo. "Only 1000 rubles".'
+	if money >= 1000:
+		act 'Buy dildo (1000 rubles)':
+			cla
+			*clr
+			minut += 15
+			dildo = 1
+			money -= 1000
+			horny += 10
+			if horny >= 50 and GorSlut < 3:
+				'You bought a dildo and hastily hid it, while your face betrayed your embarrassment'
+			else
+				'You bought a dildo calmly hid it.'
+			end
+         
+			act 'Leave':gt 'Grinok'
+		end
+	end
+end
+
 --- Gpornmark ---------------------------------
 

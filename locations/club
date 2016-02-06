@@ -13,24 +13,24 @@ if $ARGS[0] = 'start':
 	'<center><img src="images/etogame/club.jpg"></center>'
 	'The entrance area of the club is full of young people. The entrance itself is guarded by the heavy and strong type of men, who check everyones passport. A Ticket costs 500 rubles.'
 
-	act 'Leave the club':
+	act 'Return to the city center':
 		cla
 		minut += 5
 		gt 'down'
 	end
 
-	if money >= 500 and mop > 1 and sweat < 1 and (ski = 1 or glamur = 1):
+	if money >= 250 and mop > 1 and sweat < 2 and (ski = 1 or glamur = 1):
 		'You can feel his eyes all over your body, but eventually he nods and lets you inside.'
 
-		act 'Enter the club (500 rubles)':
+		act 'Enter the club (250 rubles)':
 			cla
 			minut += 5
-			money -= 500
+			money -= 250
 			frost = 0
 			gt 'club', 'inside'
 		end
 	else
-		'The bouncer shakes his head. He tells he won''t let you in and you have no idea why.'
+		'The bouncer shakes his head. He tells he won''t let you in and you you are not sure why. Everyone else waiting in the line is wearing a skirt and wearing atleast normal makeup.'
 	end
 end
 
@@ -46,12 +46,12 @@ if $ARGS[0] = 'inside':
 	'<center><b><font color="maroon">Night club</font></b></center>'
 	'<center><img src="images/etogame/club9.jpg"></center>'
 	'<a href="exec:gt ''club'', ''vip''">Vip-room.</a>'
-	'The music here is loud and the bass bumping. You can see a laser show at the stage and on the poorly lit dancefloor you see the people dancing, like there''s no tomorrow.'
+	'The music here is loud and the bass is thumping. You see a laser show on the stage and on the poorly lit dancefloor you see the people dancing, like there''s no tomorrow.'
 
-	if hour <= 3 or hour >= 15:
-		act 'WC':gt 'club', 'toi'
-		act 'Dancefloor':gt 'club', 'dance'
-		act 'Bar':gt 'club', 'bar'
+	if hour <= 3 or hour >= 18:
+		act 'Use the toilet':gt 'club', 'toi'
+		act 'Have a dance':gt 'club', 'dance'
+		act 'Go to the bar':gt 'club', 'bar'
 	end
 
 	act 'Leave the club':
@@ -76,12 +76,12 @@ if $ARGS[0] = 'toi':
 		act 'WC':gt 'club', 'tou'
 	end
 
-	act 'Go to the mens toilet':
+	act 'Sneak into the mens toilet':
 		cla
 		acta += 1
 		'You slip unnoticed into the mens toilet room.'
 
-		act 'Go into a free booth':
+		act 'Find a free cubicle':
 
 			if TQuest = 0 and horny < 50:
 				gt 'club', 'tou'
@@ -162,9 +162,7 @@ if $ARGS[0] = 'dance':
 	'<center><img src="images/etogame/club9.jpg"></center>'
 	'The club is filled to the brink with people. Most of which are dancing on the dancefloor.'
 
-	act 'Leave':gt 'club', 'inside'
-
-	if hour <= 3 or hour >= 16:
+	if hour <= 3 or hour >= 18:
 		act 'Dance (0:30)':
 			cla
 			*clr
@@ -311,6 +309,9 @@ if $ARGS[0] = 'dance':
 
 			act 'Leave the booth':gt 'club', 'dance'
 		end
+	else
+		'Its getting late and the music stops, looks like it might be time to go home.'
+		act 'Leave':gt 'club', 'inside'
 	end
 end
 
@@ -919,7 +920,7 @@ if $ARGS[0] = 'vip':
 		end
 	end
 
-	if vipday = daystart:act 'Go back the main area':gt 'vipclub', 'inside'
+	if vipday = daystart:act 'Go back the main area':gt 'vipclub', 'start'
 
 	act 'Leave him be and go away':gt 'club', 'inside'
 end

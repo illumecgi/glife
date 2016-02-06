@@ -135,11 +135,13 @@ act 'Walk (0:15)':
 	cla
 	*clr
 	minut += 15
-	if MagicDostup ! 1:
-		if rand (1, 4) <= magik and (hour <=6 or hour >=19):$locM = 'gskver' & gt 'MagEncounterFairy'
-	end
 	place = 1
 	Frend_num = 0
+		if MagicDostup ! 1:
+			if rand (1, 4) <= magik and (hour <=6 or hour >=19):
+				gt 'MagEncounterFairy'
+			end
+		end
 	gt 'placer'
 end
 

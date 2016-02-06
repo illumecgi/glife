@@ -1317,6 +1317,8 @@ else
 	pl '<<$ind>> Sleep'
 end
 
+if fairycurse >= daystart: horny = 90
+
 $smoker = {
 	siga -= 1
 	smoker += 1

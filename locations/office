@@ -18,7 +18,7 @@ if $ARGS[0] = 'start':
 	if workSec = 0:'Salary:800 rubles/day, deposited to your bank account on the 25th of the month'
 	if workSec = 0:'Dress code:ust come to work in office clothes.'
 
-	if secrDiplom = 1 and workSec = 0 and (work = 0 and workSec = 0 and cheatWork = 1):
+	if secrDiplom = 1 and ((work = 0 and workSec = 0) or cheatWork = 1):
 		act 'Interview for a job':
 			cla
 			minut += 60

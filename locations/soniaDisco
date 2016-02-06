@@ -9,18 +9,18 @@ $din_sonia_dance = {
 
 		'You came to Sonia'
 		act 'Help':
-		    
+			cla
 		    ' and he told her that she had fallen down strap.'
-		    act 'Further':dynamic $din_sonia_dance1
+		    act 'Continue':dynamic $din_sonia_dance1
 		end
         
-        act 'Obnozhit her chest':
+        act 'Expose her chest':
             cls
             DOM = DOM + 5
             horny += 5
             '<center><img src="images/lmps/sonia1.jpg"></center>'
 		    ' and told her, that her cool breast and a must see all sakrovische. Sonia ponimayuchi not looked at you and said, - "What are you talking about?". And you pulled one hand from the shoulder strap of the second exposing her breasts.' 
-            act 'Further':dynamic $din_sonia_dance1
+            act 'Continue':dynamic $din_sonia_dance1
 		end
     end
 }

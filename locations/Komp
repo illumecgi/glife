@@ -22,29 +22,28 @@ if $ARGS[0] = 'start':
 		internet = 100000
 		act 'Browser':gt 'Komp', 'brows'
 	else
+		'You have <<internet>> hours of Internet access remaining.'
 		if internet > 0:
-			'You have <<internet>> hours of Internet access remaining.'
 
 			act 'Browser':gt 'Komp', 'brows'
 		end
+	end
 
-		if karta >= 10:
-			'You can pay online through your bank account. 1 hour of internet access costs 10 rubles. You have <<karta>>rubles in your account.'
+	if karta >= 10:
+		'You can buy internet access online through your bank account. 1 hour of internet access costs 10 rubles. You have <<karta>>rubles in your account.'
+		act 'Buy more account access':
+			cla
+			intinp = input ("How many hours of internet access do you wish to purchase? (1hr = 10 rubles)")
 
-			act 'Buy more account access':
-				cla
-				intinp = input ("How many hours of internet access do you wish to purchase? (1hr = 10 rubles)")
-
-				if intinp <= 0 or intinp * 10 > karta:
-					'Invalid amount.'
-				else
-					karta -= intinp * 10
-					internet += intinp
-					'You paid for <<inttime>> hours of Internet access, you have <<internet>> hours of the Internet access remianing. <<intinp>> rubles were removed from your account.'
-				end
-
-				act 'Exit payment system':gt 'Komp', 'start'
+			if intinp <= 0 or intinp * 10 > karta:
+				'Invalid amount.'
+			else
+				karta -= intinp * 10
+				internet += intinp
+				'You paid for <<inttime>> hours of Internet access, you have <<internet>> hours of the Internet access remianing. <<intinp>> rubles were removed from your account.'
 			end
+
+			act 'Exit payment system':gt 'Komp', 'start'
 		end
 	end
 
@@ -1440,7 +1439,7 @@ if $ARGS[0] = 'waitclients':
 			end  
 			gs 'stat'
 
-			'<center><img src="images/camwhore/camwhore85.jpg"></center>'
+			'<center><img src="images/camwhore/camwhore45.jpg"></center>'
 			'You shove two fingers in your mouth and generously cover them in saliva, by turns you gently push them into you ass, watching from the corner of your eye, so you can focus on the cam as the clients prefer it.'
 			if horny >= 100:
 				webpopular -= 1
@@ -1476,7 +1475,7 @@ if $ARGS[0] = 'waitclients':
 			end  
 			gs 'stat'
 
-			'<center><img src="images/camwhore/camwhore84.jpg"></center>'
+			'<center><img src="images/camwhore/camwhore80.jpg"></center>'
 			'You tightly squeeze your nipples between your finger tips and pull them aside, feeling sharp pain and drastically lowering your excitement.'
 			act'Further':gt'Komp','waitclients'
 		end

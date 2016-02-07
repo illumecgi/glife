@@ -1317,6 +1317,8 @@ else
 	pl '<<$ind>> Sleep'
 end
 
+if fairycurse >= daystart: horny = 90
+
 $smoker = {
 	siga -= 1
 	smoker += 1
@@ -1409,46 +1411,47 @@ if workFabrika = 1 and week => 1 and week <= 5 and hour = 8 and age >= 18 or wor
 
 if cumlip = 1:fbreath = 0
 
-$cumeater = {
+$cumeatermain = {
 	cumlip += 1
 	vaf += 1
+	energy += 2
+	water += 2
+}
+
+$cumeater = {
 	cumbelly = 0
+	dynamic $cumeatermain
 	gs 'stat'
 	'You collect the sperm from your stomach with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater2 = {
-	cumlip += 1
-	vaf += 1
 	cumpussy = 0
+	dynamic $cumeatermain
 	gs 'stat'
 	'You collect the sperm from your pussy with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater3 = {
-	cumlip += 1
-	vaf += 1
 	cumass = 0
+	dynamic $cumeatermain
 	gs 'stat'
 	'You collect the sperm from your buttocks with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater4 = {
-	cumlip += 1
-	vaf += 1
 	cumface = 0
+	dynamic $cumeatermain
 	gs 'stat'
 	'You collect the sperm from your face with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater5 = {
-	cumlip += 1
-	vaf += 1
 	cumfrot = 0
+	dynamic $cumeatermain
 	gs 'stat'
 	'You collect the sperm from your clothes with your fingers and lick them feeling the tart taste of semen.'
 }
 
 $cumeater6 = {
-	cumlip += 1
-	vaf += 1
 	cumanus = 0
+	dynamic $cumeatermain
 	gs 'stat'
 	'You collect the sperm from your anus with your fingers and lick them feeling the tart taste of semen.'
 }

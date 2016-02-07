@@ -100,7 +100,7 @@ if $ARGS[0] = 'var':
 			money += 1000
 			slutty += 1
 			bordelslutty += 1
-			minut += 120
+			minut += 10
 			zpprand = rand(0, 100)
 
 			if zpprand >= 70:dynamic $venerasiak
@@ -117,7 +117,7 @@ if $ARGS[0] = 'var':
 			money += 1000
 			slutty += 1
 			bordelslutty += 1
-			minut += 120
+			minut += 10
 			zpprand = rand(0, 100)
 
 			if zpprand >= 70:dynamic $venerasiak
@@ -134,7 +134,7 @@ if $ARGS[0] = 'var':
 			money += 1500
 			slutty += 1
 			bordelslutty += 1
-			minut += 120
+			minut += 10
 			zpprand = rand(0, 100)
 
 			if zpprand >= 70:dynamic $venerasiak
@@ -151,7 +151,7 @@ if $ARGS[0] = 'var':
 			money += 1500
 			slutty += 1
 			bordelslutty += 1
-			minut += 120
+			minut += 10
 			zpprand = rand(0, 100)
 
 			if zpprand >= 70:dynamic $venerasiak
@@ -168,7 +168,7 @@ if $ARGS[0] = 'var':
 			money += 2000
 			slutty += 1
 			bordelslutty += 1
-			minut += 120
+			minut += 10
 			zpprand = rand(0, 100)
 
 			if zpprand >= 70:dynamic $venerasiak

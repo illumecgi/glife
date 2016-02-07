@@ -1412,6 +1412,7 @@ if workFabrika = 1 and week => 1 and week <= 5 and hour = 8 and age >= 18 or wor
 if cumlip = 1:fbreath = 0
 
 $cumeater = {
+	if rand(0,3) = 0: energy += 1
 	cumbelly = 0
 	cumlip += 1
 	vaf += 1
@@ -1419,6 +1420,7 @@ $cumeater = {
 	'You collect the sperm from your stomach with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater2 = {
+	if rand(0,3) = 0: energy += 1
 	cumpussy = 0
 	cumlip += 1
 	vaf += 1
@@ -1426,6 +1428,7 @@ $cumeater2 = {
 	'You collect the sperm from your pussy with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater3 = {
+	if rand(0,3) = 0: energy += 1
 	cumass = 0
 	cumlip += 1
 	vaf += 1
@@ -1433,6 +1436,7 @@ $cumeater3 = {
 	'You collect the sperm from your buttocks with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater4 = {
+	if rand(0,3) = 0: energy += 1
 	cumface = 0
 	cumlip += 1
 	vaf += 1
@@ -1440,6 +1444,7 @@ $cumeater4 = {
 	'You collect the sperm from your face with your fingers and lick them feeling the tart taste of semen.'
 }
 $cumeater5 = {
+	if rand(0,3) = 0: energy += 1
 	cumfrot = 0
 	cumlip += 1
 	vaf += 1
@@ -1448,6 +1453,7 @@ $cumeater5 = {
 }
 
 $cumeater6 = {
+	if rand(0,3) = 0: energy += 1
 	cumanus = 0
 	cumlip += 1
 	vaf += 1

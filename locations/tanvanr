@@ -39,8 +39,15 @@ else
 	'<b><font color="red">You do not have any clean underwear.</font></b> '
 end
 
-if shampoo <= 0:shampoo = 1
-'You have enough shampoo for <b><<shampoo>></b> washes. You can <a href="exec:gt ''vann'', ''start''">wash yourself</a>.'
+if shampoo <= 0:
+	shampoo = 1
+	'You can use Tanyas shampoo.'
+else
+	'You have enough shampoo for <b><<shampoo>></b> washes.'
+end
+
+dynamic $shower
+dynamic $bath
 
 if pirsA + pirsB + pirsC + pirsD + pirsE + pirsF + pirsN + pirsG + pirsGL > 0:'<a href="exec:dynamic $pirManage">Manage Piercings</a>'
 

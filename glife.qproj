@@ -30,8 +30,8 @@
       <Location name="AnalPR"/>
       <Location name="dinSex"/>
       <Location name="dinSex2"/>
-      <Location name="din2"/>
       <Location name="dinsexFX"/>
+      <Location name="din2"/>
       <Location name="MenuLoc"/>
       <Location name="MenuMainLoc"/>
       <Location name="oral"/>
@@ -360,6 +360,7 @@
       <Location name="barbershop"/>
       <Location name="annafrends"/>
       <Location name="annafrends2"/>
+      <Location name="MagEncounterFairy"/>
       <Location name="annafrendtoilet"/>
     </Folder>
     <Folder name="House of Culture">

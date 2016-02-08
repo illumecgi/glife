@@ -88,8 +88,8 @@ if $ARGS[0] = 'inside':
 				act 'Return':gt 'club', 'inside'
 			end
 		end
-	exit
 
+		exit
 	end
 
 	if hour >= 18  and clubwork = 0 and clubno = 1:
@@ -115,8 +115,8 @@ if $ARGS[0] = 'inside':
 			else
 				'You ask him about work, but he says your not pretty enough and walks off. You are shocked enough that you just stand there and watch him walk away.'
 			end
-		exit
 
+			exit
 		end
 	end
 

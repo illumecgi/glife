@@ -1,9 +1,9 @@
 # club
+Close all
+
 if $ARGS[0] = 'start':
 	$sexloc = $CURLOC
-	cla
-	clr
-	*clr
+	cls
 	minut += 5
 	gs 'stat'
 	fcolor = rgb(0, 0, 0)
@@ -14,9 +14,27 @@ if $ARGS[0] = 'start':
 	'The entrance area of the club is full of young people. The entrance itself is guarded by the heavy and strong type of men, who check everyones passport. A Ticket costs 500 rubles.'
 
 	act 'Return to the city center':
-		cla
 		minut += 5
 		gt 'down'
+	end
+
+	if clubwork = 1:
+		act 'Meet Erik for work':
+			cla
+			*clr
+			'<center><img src="images/etogame/club.jpg"></center>'
+			'You tell the bouncer you are here to work for Erik'
+			'He looks you over.'
+			wait 250
+			if mop > 1 and sweat < 2 and (ski = 1 or glamur = 1):
+				minut += 5
+				'He nods and says something into his walkie-talkie. A couple of minutes later you meet Erik in the foyer.'
+				act 'Talk to him':gt 'club', 'work'
+			else
+				'He tells you you don''t look the part and will need to smarten yourself up if you want to work.' 
+				act 'Contiue':gt 'club', 'start'
+			end
+		end
 	end
 
 	if money >= 250 and mop > 1 and sweat < 2 and (ski = 1 or glamur = 1):
@@ -35,9 +53,7 @@ if $ARGS[0] = 'start':
 end
 
 if $ARGS[0] = 'inside':
-	cla
-	clr
-	*clr
+	cls
 	minut += 5
 	gs 'stat'
 	fcolor = rgb(0, 0, 0)
@@ -48,10 +64,77 @@ if $ARGS[0] = 'inside':
 	'<a href="exec:gt ''club'', ''vip''">Vip-room.</a>'
 	'The music here is loud and the bass is thumping. You see a laser show on the stage and on the poorly lit dancefloor you see the people dancing, like there''s no tomorrow.'
 
+	if hour >= 18 and vnesh > 22 and clubwork = 0 and clubno = 0 and rand (0,10) = 0:
+		cla
+		*clr
+		'<center><img src="images/etogame/club11.jpg"></center>'
+		'You are approached by a man in a suit, at first you think he must be security, but his suit looks too expensive.'
+		'"Hi there, my name''s Erik, I''m the promoter for the club. I''m looking for someone for some casual work and you have the right look."'
+		act 'Hear him out':
+			cla
+			*clr
+			'<center><img src="images/etogame/club11.jpg"></center>'
+			'"The club opens at 6pm you can work for an hour at a time upto 1am. The jobs vary according to time and demand, It includes finding customers to bring to the club, promoting drinks and some dancing."'
+			'"The pay depends on results, get more people in, get people taking up drink promotions or dance well and you get 200 rubles. Do worse, you get less, do well, you get a bonus. When you finish you can stay in the club, so you get free entry."'
+			'"So, are you interested?"'
+			act 'No':clubno = 1 & gt 'club', 'inside'
+			act 'Yes':
+				cla
+				*clr
+				clubwork = 1
+				'<center><img src="images/etogame/club11.jpg"></center>'
+				'You tell Erik you are interested and he takes your details.'
+				'"Great <<$name>>, you can find me here, and I''ll place your details on the door so you can get in, but you still have to do your makeup and dress for clubbing."'
+				act 'Return':gt 'club', 'inside'
+			end
+		end
+
+		exit
+	end
+
+	if hour >= 18  and clubwork = 0 and clubno = 1:
+		act 'Look for the promoter':
+			cla
+			*clr
+			minut += 5
+			'<center><img src="images/etogame/club11.jpg"></center>'
+			'You search the club for a few minutes, before finding the promoter.'
+			if vnesh > 22:
+				'He asks you if you''ve changed your mind and want to do some work for him.'
+				act 'No':clubno = 1 & gt 'club', 'inside'
+				act 'Yes':
+					cla
+					*clr
+					clubwork = 1
+					clubno = 0
+					'<center><img src="images/etogame/club11.jpg"></center>'
+					'You tell Erik you are interested and he takes your details.'
+					'"Great <<$name>>, you can find me here, and I''ll place your details on the door so you can get in, but you still have to do your makeup and dress for clubbing."'
+					act 'Return':gt 'club', 'inside'
+				end
+			else
+				'You ask him about work, but he says your not pretty enough and walks off. You are shocked enough that you just stand there and watch him walk away.'
+			end
+
+			exit
+		end
+	end
+
 	if hour <= 3 or hour >= 18:
 		act 'Use the toilet':gt 'club', 'toi'
 		act 'Have a dance':gt 'club', 'dance'
 		act 'Go to the bar':gt 'club', 'bar'
+	end
+
+	if (hour < 1 or hour >= 18) and clubwork = 1:
+		act 'Find Erik for work':
+			cla
+			*clr
+			minut += 5
+			'<center><img src="images/etogame/club11.jpg"></center>'
+			'You search around and it only takes a few minutes to find Erik in his suit.'
+			act 'Talk to him':gt 'club', 'work'
+		end
 	end
 
 	act 'Leave the club':
@@ -107,9 +190,7 @@ if $ARGS[0] = 'tou':
 	$locM = $CURLOC
 	$metka = $ARGS[0]
 	$loc = $CURLOC
-	cla
-	clr
-	*clr
+	cls
 	minut += 5
 	gs 'stat'
 	fcolor = rgb(0, 0, 0)
@@ -154,9 +235,7 @@ if $ARGS[0] = 'tou':
 end
 
 if $ARGS[0] = 'dance':
-	cla
-	clr
-	*clr
+	cls
 	gs 'stat'
 	'<center><b><font color="maroon">The dance floor</font></b></center>'
 	'<center><img src="images/etogame/club9.jpg"></center>'
@@ -208,7 +287,7 @@ if $ARGS[0] = 'dance':
 								act 'Go to the dance floor':gt 'club', 'dance'
 							end
 
-							act 'Go to Vip-room with the guy':xgt 'sex', 'var'
+							act 'Go to Vip-room with the guy':$sexloc = 'vipclub' & xgt 'sex', 'var'
 						elseif dansexclub = 0:
 							'You''re passionately kissing the guy, while he''s continously groping you, always dedicating one of his hands to either your tits or your ass. "Let''s go to the toilet.", he says with a smile.'
 
@@ -233,7 +312,7 @@ if $ARGS[0] = 'dance':
 					elseif dansexclub = 1:
 						picrand = rand(13, 17)
 
-						act '"Let''s go to VIP-Room, to have fun."':xgt 'lezbsex', 'var'
+						act '"Let''s go to VIP-Room, to have fun."':$sexloc = 'vipclub' & xgt 'lezbsex', 'var'
 					end
 
 					act 'Send it':gt 'club', 'inside'
@@ -313,12 +392,11 @@ if $ARGS[0] = 'dance':
 		'Its getting late and the music stops, looks like it might be time to go home.'
 		act 'Leave':gt 'club', 'inside'
 	end
+	act 'Stop dancing':gt 'club', 'inside'
 end
 
 if $ARGS[0] = 'bar':
-	cla
-	clr
-	*clr
+	cls
 	minut += 5
 	gs 'stat'
 	'<center><b><font color="maroon">bar</font></b></center>'
@@ -571,9 +649,7 @@ if $ARGS[0] = 'bar':
 end
 
 if $ARGS[0] = 'sex':
-	cla
-	clr
-	*clr
+	cls
 	dynamic $venerasiak
 	minut += 5
 	$nameV = 'Stranger'
@@ -923,6 +999,94 @@ if $ARGS[0] = 'vip':
 	if vipday = daystart:act 'Go back the main area':gt 'vipclub', 'start'
 
 	act 'Leave him be and go away':gt 'club', 'inside'
+end
+
+if $ARGS[0] = 'work':
+	cls
+	frost = 0
+	gs 'stat'
+	'<center><img src="images/etogame/club11.jpg"></center>'
+	if dance > 30:
+		clubr = rand (0,2)
+	else
+		clubr = rand (0,1)
+	end
+	if clubr = 0:
+		'"OK <<$name>>, I want you to go around the city center and find some customers, bring them to the door and give the bouncer a nod so he knows they are yours. See you in an hour."'
+		act 'Look for customers':
+			cla
+			*clr
+			hour += 1
+			'<center><img src="images/etogame/down.jpg"></center>'
+			'You spend an hour searching for customers in the city center.'
+			act 'Return to Erik':
+				cla
+				*clr
+				'<center><img src="images/etogame/club11.jpg"></center>'
+				if vnesh > rand (20, 30):
+					money += 300
+					'You exceed Eriks expectations and find alot of customers, he pays you 300 rubles.'
+				elseif rand (0, 1) = 0:
+					money += 200
+					'Erik seems fairly happy and he pays you 200 rubles.'
+				else
+					money += 100
+					'You hardy found anyone, Erik doesn''t seem happy, but he pays you 100 rubles for your efforts.'
+				end
+				if hour < 1 or hour >= 18:
+					act 'Get another job from Erik':gt 'club', 'work'
+				end
+				act 'Go to dancefloor':gt 'club', 'inside'
+
+			end
+		end
+	elseif clubr = 1:
+		'"OK <<$name>>, I want you to go around the club getting people to try and hopfully switch to these spirits. You can''t go wrong here, just smile and give out frre drinks."'
+		'"No need to hold back with it, the suppliers are paying and if you''re curious and want to try it, don''t its horrible. I''ll see you back here in an hour."'
+		act 'Get to work':
+			cla
+			*clr
+			hour += 1
+			'<center><img src="images/etogame/club6.jpg"></center>'
+			'You spend an hour giving away unpleasant shots.'
+			act 'Return to Erik':
+				cla
+				*clr
+				money += 200
+				'<center><img src="images/etogame/club11.jpg"></center>'
+				'You hand Erik the empty bottles, he gives you 200 rubles.'
+				if hour < 1 or hour >= 18:
+					act 'Get another job from Erik':gt 'club', 'work'
+				end
+
+			act 'Go to dancefloor':gt 'club', 'inside'
+
+			end
+		end
+	elseif clubr = 2:
+		'"OK <<$name>>, we''re short a dancer, get in that cage there and dance. If you put on a good show you get a bonus."'
+		act 'Get in the cage':
+			cla
+			*clr
+			hour += 1
+			dance += rand (1,3)
+			'<center><img src="images/etogame/club12.jpg"></center>'
+			if dance > rand (30, 100):
+				money += 300
+				'You put on a great show, getting alot of attention and drawing people up to dance.'
+				'Erik is very happy and pays you 300 rubles.'
+			else
+				money += 200
+				'You try hard, but you are mostly ignored by the customers.'
+				'Erik thanks you for helping when he was short and pays you 200 rubles, but doesn''t even mention your dancing.'
+			end
+			if hour < 1 or hour >= 18:
+				act 'Get another job from Erik':gt 'club', 'work'
+			end
+
+			act 'Go to dancefloor':gt 'club', 'inside'
+		end
+	end
 end
 
 --- club ---------------------------------

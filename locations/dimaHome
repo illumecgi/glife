@@ -320,10 +320,10 @@ $dimkaplays = {
 				sub += 5
 				gs 'stat'
 				'<center><img src="images/qwest/alter/evdima/nip.jpg"></center>'
-				'Dimka binds you until you are fully immobilized. Then he clamps your nipples in small vices and tightens the jaws. Suddenly he stabs a needle through your nipple. You howl in pain, but Dimka spits on your cries and sticks in another needle forcing you to howl again. You yell and swear at this f***ing sadist, but Dimka coldly continues to stick needle after needle in you. When he tires <<$text>>.'
+				'Dimka binds you until you are fully immobilized. Then he clamps your nipples in small vices and tightens the jaws. Suddenly he stabs a needle through your nipple. You howl in pain, but Dimka spits on your cries and sticks in another needle forcing you to howl again. You yell and swear at this f***ing sadist, but Dimka coldly continues to stick needle after needle in you.'
 
-				if pirsF > 0:$text = 'Dimka pulls the needles out out of your nipples and sets you free.'
-				if pirsF = 0:pirsF = 1 & $text = 'Dimka pierces your nipples with metal bars, then sets you free.'
+				if pirsF > 0:$text = 'When he tires Dimka pulls the needles out out of your nipples and sets you free.'
+				if pirsF = 0:pirsF = 1 & $text = 'When he tires Dimka pierces your nipples with metal bars, then sets you free.'
 
 				act 'Leave':gt 'gorodok'
 			end
@@ -339,10 +339,10 @@ $dimkaplays = {
 				sub += 5
 				gs 'stat'
 				'<center><img src="images/qwest/alter/evdima/ton.jpg"></center>'
-				'Dimka binds you until you are fully immobilized. He grabs hold of your tongue and suddenly pushes a needle through it. You squeal and twitch from the sharp pain. Dimka amuses himself by sticking needles through your tongue, lips and cheeks. The more you howl in pain, the more excited he gets. <<$text>>.'
+				'Dimka binds you until you are fully immobilized. He grabs hold of your tongue and suddenly pushes a needle through it. You squeal and twitch from the sharp pain. Dimka amuses himself by sticking needles through your tongue, lips and cheeks. The more you howl in pain, the more excited he gets.'
 
-				if pirsA > 0:$text = 'Dimka pulls the needles out out of your tongue and sets you free.'
-				if pirsA = 0:pirsA = 1 & $text = 'Dimka pulls out the needles, pierces your tongue with a metal bar, then sets you free'
+				if pirsA > 0:$text = 'When he tires Dimka pulls the needles out out of your tongue and sets you free.'
+				if pirsA = 0:pirsA = 1 & $text = 'When he tires Dimka pulls out the needles, pierces your tongue with a metal bar, then sets you free'
 
 				act 'Leave':gt 'gorodok'
 			end
@@ -358,10 +358,10 @@ $dimkaplays = {
 				sub += 5
 				gs 'stat'
 				'<center><img src="images/qwest/alter/evdima/vag.jpg"></center>'
-				'Dimka binds you until you are fully immobilized. Then he picks up a pin and pricks your labia. You howled at the sharp unbearable pain and stuggle against your bonds, but Dimka does not calm down until he has sealed your entire vagina with safety pins. <<$text>>.'
+				'Dimka binds you until you are fully immobilized. Then he picks up a pin and pricks your labia. You howled at the sharp unbearable pain and stuggle against your bonds, but Dimka does not calm down until he has sealed your entire vagina with safety pins.'
 
-				if pirsG > 0:$text = 'Dimka takes the pins out out of your pussy and sets you free.'
-				if pirsG = 0:pirsG = 1 & $text = 'Dimka takes the pins out out of your pussy, pierces your clitois, then sets you free'
+				if pirsG > 0:$text = 'When he tires Dimka takes the pins out out of your pussy and sets you free.'
+				if pirsG = 0:pirsG = 1 & $text = 'When he tires Dimka takes the pins out out of your pussy, pierces your clitois, then sets you free'
 
 				act 'Leave':gt 'gorodok'
 			end

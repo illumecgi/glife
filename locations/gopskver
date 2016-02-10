@@ -903,7 +903,7 @@ if $ARGS[0] = 'BjBeerAnal':
 		'His balls knocking on your buttocks like basketballs. Finally, his movements are accelerated and drove last on the eggs with a beatific smile, he finished deep in you.'
 		'You felt like a warm zhikdost poured into your inner. Shulga waited a bit and pulled his limp dick.'
 	
-		if klismaday ! day: 
+		if klismaday ! daystart: 
 			'"Oh creature, I have for you from all the dick in shit. You scum completely ohuel, quickly licked my shit, or I can not answer for themselves!" - So saying, he went around you and put you under the nose of his bedraggled and smelly member.'
 
 		act'Correct':
@@ -923,7 +923,7 @@ if $ARGS[0] = 'BjBeerAnal':
 			act 'Extend the buttocks': gt 'gopskver','BjBeerAnal2'
 		end	
 
-		elseif klismaday = day:
+		elseif klismaday = daystart:
 			'It suits you, Dan. "Hey quadruped, why do you not even bread spread?"'
 			act 'Extend the buttocks': gt 'gopskver','BjBeerAnal2'
 		end 		

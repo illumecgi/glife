@@ -68,9 +68,9 @@ if $ARGS[0] = '2':
 
 	'As soon as you lay down on the hood of the car, legs apart, anus you rested <<dick>> inch dick. <<$analsex>>'
 
-	if klismaday ! day and analprotect = 0:act 'Escape':gt'AnalPR','3'
+	if klismaday ! daystart and analprotect = 0:act 'Escape':gt'AnalPR','3'
 
-	if klismaday = day:
+	if klismaday = daystart:
 		money = money + 2000
 
 		cumanalRand = RAND(0,2)

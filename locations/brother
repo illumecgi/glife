@@ -2,6 +2,32 @@
 brotherAge = age - 2
 brotherDick = 14
 if brotherQW > 20 and brotherQW < 25: brotherQW = 20
+
+!' Variables used
+brothersawpirsF: Flag 0/1 Have your brother seen your nipple piercings
+brother: relationship
+brotherDick: size of brothers dick (14cm)
+brotherSex: Number of sexual interactions with brother (cap at 10)
+brotherQW: Quest stages
+brotherAge: your age - 2
+brotherknowslut: brother knowledge of your sexual activity (1 = seen cum, 2 = groupsex in park)
+pregTalkBrother: Flag 0/1 Do your brother know you are pregnant
+brotherDay:
+brotherSexCount: the number of times left that you can have sex with your brother today (resets to 5 each day)
+brotherMorningSex: Last day this happend. Used to block to once a day. 
+brotherNightSex: Last day this happend. Used to block to once a day. 
+brotherEvSex: Last day this happend. Used to block to once a day. 
+brother_homework: last day you helped your brother with homework. Used to block to once a day.
+brother_saw_analplug: 0/1 Have your brother seen you with analplug
+brother_body_show
+brother_knows_not_virgin
+natbro:  number of times Natasha sucked your brother (can only happen once at the moment)
+BrotherNo:
+brother_ev1 
+'!
+
+
+
 gs 'stat'
 '<center><b><font color="maroon">Kolka</font></b></center>'
 '<center><img src="images/qwest/alter/brother.jpg"></center>'
@@ -223,8 +249,6 @@ end
 ! WD: Fix old nude variable
 if $loc = 'sitrPar':
 
-	dynamic $brotherSexCount
-
 	if indorf = 0 and $clothingworntype ! 'nude' and brothersawpirsF=0 and father_go = 1 and brother > 85 and hour >= 18 and hour < 21 and pirsF > 0:
 		act 'Show off your nipple piercings':
 			cls
@@ -249,7 +273,6 @@ if $loc = 'sitrPar':
 	end
 
 
-! if $loc = 'sitrPar' and indorf = 0 and nude=1 and pirsF>0 and brothersawpirsF =0:
 	if indorf = 0 and $clothingworntype = 'nude' and pirsF>0 and brothersawpirsF =0:
 		if  brotherSex = 0:
 			if brother>=70:
@@ -284,13 +307,13 @@ if $loc = 'sitrPar':
 	end
 
 
-	if indorf = 0 and brotherSexCount > 0 and brotherDay = daystart:
+	if indorf = 0 and brotherSexCount > 0 and brotherSex > 0:
 		brotherRand = rand(0,10)
-		if hour >= 5 and hour < 7 and brotherSex > 0 and brotherMorningSex ! daystart and brotherRand < 2:
+		if hour >= 5 and hour < 7 and brotherMorningSex ! daystart and brotherRand < 2:
 			'Going up to your sleeping brother, you see he''s pitching a tent.'
 			if horny >= 90 and brothersex > 6:
 				act 'Mount him':
-					if brotherSex > 10: brotherSex = 10
+					brotherMorningSex = daystart
 					cls
 					minut += 5
 					horny += 10
@@ -332,6 +355,7 @@ if $loc = 'sitrPar':
 					swallow += 1
 					brotherSex += 1
 					brotherSexCount -= 1
+					if brotherSex > 10 : brotherSex = 10
 					brotherMorningSex = daystart
 					gs 'stat'
 
@@ -346,12 +370,12 @@ if $loc = 'sitrPar':
 			end
 		end
 
-		if hour >= 21 and hour < 24 and brotherSex > 0 and brotherNightSex ! daystart:
+		if hour >= 21 and hour < 24 and brotherNightSex ! daystart:
 			'When you get close, he suddenly opens his eyes and says,:'
 			! WD: Unused Var 'BJBeerQW' use 'GorSlut'
 			if sub > 0 or (evgenQW >= 4 and GorSlut >= 3):
 				'"<<$nickname>>, help me sleep." Then he throws back the blanket, revealing his erection.'
-				brotherSexCount -= 1
+				
 				brotherNightSex = daystart
 
 				dynamic $brotherSexStart
@@ -360,7 +384,6 @@ if $loc = 'sitrPar':
 				cla
 				act 'Help him':
 					'"Yes, I know what to do" Then he pulls back the blanket and reveals his erection.'
-					brotherSexCount -= 1
 					brotherNightSex = daystart
 
 					dynamic $brotherSexStart
@@ -374,12 +397,11 @@ if $loc = 'sitrPar':
 			end
 		end
 
-		if father_go = 1 and hour >= 18 and hour < 21 and brotherSex > 0 and brotherEvSex ! daystart:
+		if father_go = 1 and hour >= 18 and hour < 21 and brotherEvSex ! daystart:
 			'When you get close, He turns to you and says,:'
 			! WD: Unused Var 'BJBeerQW' use 'GorSlut'
 			if sub > 0 or (evgenQW >= 4 and GorSlut >= 3):
 				'"<<$nickname>>, Come on you have work to do, and quitely, you don''t want to wake our parents up." Then he drops his pants, and you see his hard <<brotherDick>> cm dick.'
-				brotherSexCount -= 1
 				brotherEvSex = daystart
 
 				dynamic $brotherSexStart
@@ -388,7 +410,6 @@ if $loc = 'sitrPar':
 				cla
 				act 'Help him':
 					'"I know, what will solve this problem, quietly now, take off your pants." With those words Kolka smiles and takes off his pants, exposing his erect <<brotherDick>> cm dick.'
-					brotherSexCount -= 1
 					brotherEvSex = daystart
 
 					dynamic $brotherSexStart
@@ -450,14 +471,16 @@ $sleepsexcum = {
 
 $brothersleepSexEnd = {
 	brotherSex += 1
+	brotherSexCount -= 1
 	minut += 15
+	if brotherSex > 10: brotherSex = 10
 
 	gs 'stat'
 
 	'You catch your breath then carefully climb off your still sleeping though smiling brother then gently replace the blanket and quietly step away.'
-		act 'Escape':gt $loc
-		end
+	act 'Escape':gt $loc
 	end
+	
 }
 
 $brother_showbody = {
@@ -520,7 +543,7 @@ $brother_homework = {
 	cls
 	cla
 	gs'stat'
-	brother_homework = day
+	brother_homework = daystart
 	brother += 1
 	minut += RAND(50,70)
 	ivrand = RAND(1,2)
@@ -564,16 +587,16 @@ $brother_homework = {
 				horny += RAND(5,10)
 				'You do not keep stopping to engage in homework, trying not to pay attention to Kolkinu hand on your leg. Knowing, that you absolutely do not mind, he continues to have nice iron, from what you feel the warm rush of excitement.'
 				ivrand = RAND(1,4)
-				if brotherSex > 0 and father_go = 1 and ivrand = 1 and brotherEvSex ! day:
+				if brotherSex > 0 and father_go = 1 and ivrand = 1 and brotherEvSex ! daystart:
 					cla
 					'After finishing engaged, Kolka c red with excitement person asks:'
 					'- "<<$nickname>>, It can be a little indulged?"'
 					dynamic $brotherSexStart
 					act 'Takeout':gt $loc
-				elseif ivrand = 2 and brotherEvSex ! day:
+				elseif ivrand = 2 and brotherEvSex ! daystart:
 					dynamic $brother_showbody
 					exit
-				elseif ivrand = 3 and brotherEvSex ! day:
+				elseif ivrand = 3 and brotherEvSex ! daystart:
 				end
 				act 'Finish':gt $loc
 			end
@@ -615,8 +638,8 @@ $brother_homework[1] = {
 	act 'Further': dynamic $brother_homework
 }
 
-if week = 6 and brother_homework = day - 1 or week = 7 and brother_homework = day - 2: brother_homework = day
-if $loc = 'sitrPar' and brotherAge < 18 and kanikuli = 0 and brother >= 40 and brother_homework ! day and hour >= 18 and hour < 20:
+if week = 6 and brother_homework = daystart - 1 or week = 7 and brother_homework = daystart - 2 or week = 7 and brother_homework = daystart - 1 : brother_homework = daystart
+if $loc = 'sitrPar' and brotherAge < 18 and kanikuli = 0 and brother >= 40 and brother_homework ! daystart and hour >= 18 and hour < 20:
 	if RAND(1,4) = 1:
 		cla
 		cls
@@ -641,7 +664,6 @@ act 'Move away':gt $loc, $metka
 
 $brotherSexStart = {
 	cla
-	if brotherSex = 0:brotherSex = 1 & guy += 1
 	act 'Jerk your brother':
 		cls
 		minut += 5
@@ -699,7 +721,6 @@ $brotherSexStart = {
 			end
 			if brotherSex > 6:
 				act 'Give yourself to your brother':
-					if brotherSex > 10: brotherSex = 10
 					cls
 					minut += 5
 					horny += 10
@@ -723,7 +744,6 @@ $brotherSexStart = {
 	end
 	if brotherSex > 6:
 		act 'Give yourself to your brother':
-			if brotherSex > 10: brotherSex = 10
 			cls
 			minut += 5
 			horny += 10
@@ -746,8 +766,11 @@ $brotherSexStart = {
 }
 
 $brotherSexEnd = {
+	if brotherSex = 0: guy += 1
 	brotherSex += 1
-	! WD: Unused Var 'BJBeerQW' use 'GorSlut'
+	if brotherSex > 10: brotherSex = 10
+	brotherSexCount -= 1
+	
 	if sub > 0 or (evgenQW >= 4 and GorSlut >= 3):
 		if $loc = 'sitrPar' and father_go = 1 and hour >= 18 and hour < 21:
 			minut += 15
@@ -785,24 +808,6 @@ $brotherSexEnd = {
 			'Kolka says, "Thanks for everything, Sis. Well, I`m off.", and leaves.'
 		end
 	end
-}
-
-$brotherSexCount = {
-	if brotherDay = daystart - 1 and brotherSexCount > 0:brotherSexCount = 5
-
-	if brotherMorningSex ! daystart:brotherMorningSex = daystart - 1
-	if brotherEvSex  ! daystart:brotherEvSex = daystart - 1
-	if brotherNightSex  ! daystart:brotherNightSex = daystart - 1
-
-	if brotherSexCount < 1:
-		brotherDay = daystart + 1
-		brotherSexCount = 5
-	else
-		brotherDay = daystart
-	end
-
-	if brotherDay = 0:brotherDay = 1
-	
 }
 
 
@@ -937,7 +942,7 @@ $brother_anus_check = {
 		elseif brother_saw_analplug = 1:
 			'- "There you go again with this thing in the ass?" - asked Kolya, obviously referring to sex-toy in your ass.'
 			'- "Aha..." - coquettish answer you.'
-			if  brotherSex = 1:
+			if  brotherSex > 0:
 				'- "Maybe better to that-else insert?" - he asks, clearly alluding.'
 				'- "Next time, Kohl"'
 				'- "fiasco..."'

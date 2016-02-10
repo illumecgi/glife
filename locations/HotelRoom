@@ -284,12 +284,12 @@ elseif analplug = 1 and analplugin = 0 and klismaday1 = 1 and plugday ! daystart
 	end
 end
 
-if klisma = 1 and klismaday ! day:
+if klisma = 1 and klismaday ! daystart:
 	act 'Make yourself an enema 5 min':
 		cla
 		*clr
 		minut = minut + 5
-		klismaday = day
+		klismaday = daystart
 		klismaday1 = 1
 
 		'<center><img src="images/picV/klisma.jpg"></center>'

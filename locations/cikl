@@ -273,5 +273,8 @@ gs 'starenie'
 if nark > 0:nark -= 1
 if pregtime > 10:fat += 1
 
+!! reset counter daily
+brotherSexCount = 5
+
 --- cikl ---------------------------------
 

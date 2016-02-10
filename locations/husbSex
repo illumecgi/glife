@@ -402,11 +402,11 @@ if $ARGS[0] = 'anal':
 
 	'Lastly <<$husName>> I grabbed you tight for the ass and drove into your aching ass dick down to the eggs you had finished inside.'
 
-	if klismaday ! day:
+	if klismaday ! daystart:
 		husband -= 1
 
 		'<<$husName>> I took out a member of your ass and seeing shit on his dick told, "Damn. <<$nickname>> my ass before sex."'
-	elseif klismaday = day:
+	elseif klismaday = daystart:
 		husband += 5
 
 		'<<$husName>> I took a member of you and kiss you went to the bathroom.'

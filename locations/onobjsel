@@ -1588,7 +1588,7 @@ end
 if $selobj = '<img src="images/pic/icon/Pers.png">':menu '$menu_character'
 if $selobj = '<img src="images/pic/icon/look.png">':menu '$menu_lookon'
 if $selobj = '<img src="images/pic/icon/Proch.png">':menu '$menu_other'
-if $selobj = '<img src="images/pic/icon/Phone.png">':dynamic $Phone_menu
+if $selobj = '<img src="images/pic/icon/Phone.png">':gs 'din_bad' & dynamic $Phone_menu
 if $selobj = '<img src="images/pic/icon/Purse.png">':dynamic $d_bag
 !The new menu: end
 

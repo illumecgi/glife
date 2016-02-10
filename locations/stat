@@ -1654,8 +1654,6 @@ if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and sisboytrioQW = 1
 
 
 
-dynamic $brotherSexCount
-
 if bag > 0:pl '<a href="exec:dynamic $d_bag"><b>Handbag</b></a>'
 
 !!zero checks marriage

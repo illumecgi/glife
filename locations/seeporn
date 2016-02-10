@@ -47,8 +47,6 @@ act 'watch porn':
 
 					evgenrand = rand(1,5)
 
-					dynamic $brotherSexCount
-
 					if brotherSexCount > 0 and brotherSex > 6 and evgenrand = 1:
 						cls
 						minut += 5
@@ -57,8 +55,7 @@ act 'watch porn':
 						dick = brotherDick
 						silavag = 0
 						pose = 1
-						brotherSexCount -= 1
-
+						
 						gs 'stat'
 						'Kolka tells guys, that he should take you home. As soon as you leave Mishkins house, your brother whispers:
 						"Let''s look for a quiet place, I`m still horny." Soon you find a secluded spot and Kolka says,:

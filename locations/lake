@@ -14,8 +14,6 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if lakeonce = 0:lakeonce = 1 & minut += 60
-
 	gs 'stat'
 	gs 'time'
 
@@ -181,8 +179,7 @@ if $ARGS[0] = 'start':
 
 	act 'Leave':
 		cla
-		lakeonce = 0
-		minut += 60
+		minut += 40
 		gt 'street'
 	end
 end

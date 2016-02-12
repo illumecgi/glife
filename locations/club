@@ -1041,7 +1041,7 @@ if $ARGS[0] = 'work':
 			end
 		end
 	elseif clubr = 1:
-		'"OK <<$name>>, I want you to go around the club getting people to try and hopfully switch to these spirits. You can''t go wrong here, just smile and give out frre drinks."'
+		'"OK <<$name>>, I want you to go around the club getting people to try and hopfully switch to these spirits. You can''t go wrong here, just smile and give out free drinks."'
 		'"No need to hold back with it, the suppliers are paying and if you''re curious and want to try it, don''t its horrible. I''ll see you back here in an hour."'
 		act 'Get to work':
 			cla

@@ -44,6 +44,14 @@ $din_trener_speak = {
 					'"Mikhail, could you please help me?" You wait for a positive nod from coach, you get down on your knees and turning your ass to the coach, lower your shorts: "Please look it seems to me during training something was rubbing, and it''s all sore."'
 					'Coach tries to look indifferent as he carefully inspects your butt, "Nothing there, generally comfortable and well fitted underwear will prevent rubbing." Despite his efforts to remain objective, you see his dick is straining to escape his pants.'
 				end
+				act 'Say goodbye':
+					if Discoclose = 1:
+						Discoclose = 0
+						gt 'pod_ezd','etaj_1'
+					else
+						gt 'gdksport'
+					end
+				end
 			end
 		elseif trenerepa >= 0 and trener_Speak = 0:
 			trener_Speak += 1
@@ -78,6 +86,14 @@ $din_trener_speak = {
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak2.jpg"></center>'
 					'You went to the window and straightening his hair gave the coach the opportunity to admire your flexible figure. "Still young girls coach of interesting trees", -  you smiled to himself, and I thought:-" In the main part you will get".'
 				end
+				act 'Say goodbye':
+					if Discoclose = 1:
+						Discoclose = 0
+						gt 'pod_ezd','etaj_1'
+					else
+						gt 'gdksport'
+					end
+				end
 			end
 		elseif trenerepa > 30 and trener_Speak = 3:
 			trener_Speak += 1
@@ -96,6 +112,15 @@ $din_trener_speak = {
 					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak4.jpg"></center>'
 					'You pulled the shorts, like correcting them, and pulled them so hard, that is clearly covered your pussy.  Opinion of the coach staring at you between legs. "The ball on the court so you don`t watch carefully", - rather you noticed. Michael N., a bit confused, turned away. "I''ll have something to tease him, maybe not to wear panties on a workout", - the thought flashed in your head, and the thought of sinking feeling in the pit of your stomach intensified.'
 				end
+				act 'Say goodbye':
+					if Discoclose = 1:
+						Discoclose = 0
+						gt 'pod_ezd','etaj_1'
+					else
+						gt 'gdksport'
+					end
+				end
+
 			end
 		elseif ShowerIvan = 3 and trener_Speak = 4:
 			trener_Speak += 1

@@ -82,7 +82,7 @@ if $ARGS[0] = '1':
 		'<center><img src="images/yaroslav/1365154197_studentka-ischet-rabotu-4.jpg" width = 750 height = 450 ></center>'
 		'Apparently deciding to check how I am coping, Yaroslav stands in the doorway of the bathroom, watching you. As you clean you start to imagine the situation becoming more sexual and fantisize about seducing Yaroslav.'
 
-		act 'Carry on cleaning'
+		act 'Carry on cleaning':
 			cla
 			*clr
 			minut += 15
@@ -118,7 +118,7 @@ if $ARGS[0] = '2':
 			'Yaroslav says nothing, so you decide to give him a bit of a show so that he can see exactly what you are suggesting.'
 			'"I can''t say the thought didn''t cross my mind <<$name>>. I''ll tell you what, if I''m feeeling horny I will ask you to clean the bthroom. If you want to mess around I''ll give you a nice bonus."'
 
-			act 'Agree'
+			act 'Agree':
 				cla
 				yarikwork = 1
 				money += 3000
@@ -126,7 +126,7 @@ if $ARGS[0] = '2':
 				act 'Leave':gt 'down'
 			end
 
-			act 'Decline'
+			act 'Decline':
 				cla
 				yaq = 0
 				'You tell him that you have cahnged your mind and do not want to do this.'

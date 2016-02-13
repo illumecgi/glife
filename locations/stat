@@ -1003,7 +1003,7 @@ else
 			
 !!SECTION: Bimbo (15 minute interval update checks)
 		if bimbolevel = 2:
-			if manna < mannamax:manna += ((manna / 100) * (rand(0,1))
+			if manna < mannamax:manna += ((manna / 100) * (rand(0,1)))
 			if arousal < 25:arousal = 25
 			if arousal < 100:arousal += 1
 		end

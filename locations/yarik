@@ -45,7 +45,6 @@ if $ARGS[0] = 'yaqw':
 		gs 'stat'
 		'You clean Yaroslav''s apartment, as he sits sorting through some papers and reading them.'
 		if rand (0,2) ! 0:
-			cla
 			'Suddenly he turns to you. "<<$name>>, can you also clean the floor in the bathroom?"'
 
 			act 'Decline':
@@ -65,10 +64,8 @@ if $ARGS[0] = 'yaqw':
 			money += 1500
 			uborkayar += 1
 			'After you have finished, he pays you 1500 rubles and tells you to come back at the same time any evening for more work.'
-			act 'Leave':gt 'down'
 		end
 	end
-	act 'Leave':gt 'down'
 end
 
 if $ARGS[0] = '1':
@@ -111,7 +108,7 @@ if $ARGS[0] = '2':
 		cla
 		*clr
 		'<center><img src="images/yaroslav/1365154183_studentka-ischet-rabotu-6.jpg" width = 750 height = 450 ></center>'
-		'Yaroslav starts to make excuses, as you stand up. Locking eyes with him you slowly wash the shower screen. "Listen, I want to earn a little more money and you''re a good looking guy." You say, propositioning Yaroslav.'
+		'Yaroslav I starts to make excuses, as you stood up and locking eyes with him, slowly wash the shower screen. "Listen, I want to earn a little more money and you''re a good looking guy." You say, propositioning Yaroslav.'
 
 		act 'Continue':
 			cla
@@ -159,7 +156,6 @@ if $ARGS[0] = '3':
 		if yarikwork > 2:
 			'"I''ll give you 500 for a blowjob."'
 			act 'Blow him':gt 'yarik', '5'
-		end
 		if yarikwork > 4:
 			'"I''ll give you 1000 for sex."'
 			act 'Have sex':gt 'yarik', '6'
@@ -188,10 +184,10 @@ if $ARGS[0] = '4':
 			'"Let me show you." You strip off the rest of your clothes and sit on a unit, lifting you legs to show Yaroslav everything.'
 
 			act 'Finger yourself':
-				cls
+				cla
+				*clr
 				horny += 10
 				minut += 5
-				gs 'stat'
 				'<center><img src="images/yaroslav/1365154194_studentka-ischet-rabotu-15.jpg" width = 750 height = 450 ></center>'
 				'You stick 2 fingers into your vagina, and thrust them back and forth. You feel your excitment grow.'
 				if horny > 90:
@@ -211,10 +207,10 @@ if $ARGS[0] = '4':
 end
 
 if $ARGS[0] = '5':
-		cls
+		cla
+		*clr
 		minut += 5
 		horny += 10
-		gs 'stat'
 		'<center><img src="images/yaroslav/1365154194_studentka-ischet-rabotu-10.jpg" width = 750 height = 450 ></center>'
 		'Looking down, you see that his cock is, wow, that''s a really delicious looking cock. You lick your lips in anticipation.'
 
@@ -243,11 +239,11 @@ if $ARGS[0] = '5':
 					'He starts to move his hips, trying to get more, you hold him back for a few seconds, then wrap your <<$liptalk>> around the pulsating member shift your focus to maximising his pleasure.'
 
 					act 'Continue':
-						cls
+						cla
+						*clr
 						minut += 5
 						facial += 1
 						cumface += 1
-						gs 'stat'
 						'<center><img src="images/yaroslav/1365154169_studentka-ischet-rabotu-27.jpg" width = 750 height = 450 ></center>'
 						'As he is about to come, Yaroslav moaning and holding the base of his own cock, pulls back and sparys his spunk all over your face. You sit there catchong your breath as sperm drips down onto you breasts.'
 						if horny > 90:
@@ -278,10 +274,10 @@ if $ARGS[0] = '6':
 	'"Let''s fuck then." You strip off the rest of your clothes and sit on a unit, lifting you legs to show Yaroslav everything.'
 
 	act 'Wait':
-		cls
+		cla
+		*clr
 		minut += 5
 		horny += 10
-		gs 'stat'
 		'<center><img src="images/yaroslav/1365154144_studentka-ischet-rabotu-16.jpg" width = 750 height = 450 ></center>'
 		'Yaroslav strips off his clothes, his cock is already fully erect. He walks up to you and rubs the head of it around your pussy.'
 
@@ -294,10 +290,10 @@ if $ARGS[0] = '6':
 			'You nod to show him you are ready and he slowly pushes his member past your lips and fills your pussy, you let out a small moan of pleasure.'
 
 			act 'Continue':
-				cls
+				cla
+				*clr
 				minut += 5
 				horny += 10
-				gs 'stat'
 				'<center><img src="images/yaroslav/1365154175_studentka-ischet-rabotu-19.jpg" width = 750 height = 450 ></center>'
 				'He lifts your legs and holds them straight up, he can''t reach as deeply, but the change of sensation is more than making up for that.'
 
@@ -310,10 +306,10 @@ if $ARGS[0] = '6':
 					'Yaroslav withdraws and helps you down from the unit. You climb on top of him and ride him. You move your hips, occasionally lifting until it was almost free, then thrusting down on the full length.'
 
 					act 'Change back':
-						cls
+						cla
+						*clr
 						minut += 5
 						horny += 10
-						gs 'stat'
 						'<center><img src="images/yaroslav/1365154147_studentka-ischet-rabotu-18.jpg" width = 750 height = 450 ></center>'
 						'You get off of Yaroslav and help him to his feet. He lifts you ack onto the unit and quickly starts to pond you once more.'
 
@@ -326,13 +322,13 @@ if $ARGS[0] = '6':
 							'Breathing heavily and getting slick with sweat, Yaroslav lifts your right leg up and places it on top of your left one. This gives you another new feeling of stimulation and gret respect for his endurance.'
 
 							act 'Finish':
-								cls
+								cla
+								*clr
 								minut += 5
 								vagina += 1
 								sex += 1
 								facial += 1
 								cumface += 1
-								gs 'stat'
 								'<center><img src="images/yaroslav/1365154169_studentka-ischet-rabotu-27.jpg" width = 750 height = 450 ></center>'
 								'Briskly, Yaroslav pulls you from the unit and puts you on your knees. Your face has barely reached his penis, when it sprays you with sperm, covering your face and chest.'
 								if horny > 90:
@@ -356,10 +352,10 @@ if $ARGS[0] = '6':
 end
 
 if $ARGS[0] = '7':
-	cls
+	cla
+	*clr
 	minut += 5
 	horny += 10
-	gs 'stat'
 	'<center><img src="images/yaroslav/1365154232_studentka-ischet-rabotu-22.jpg" width = 750 height = 450 ></center>'
 	'"Let''s do this then." You strip off the rest of your clothes and sit on a unit, you twist to the side and lift your butt check to expose your ass.'
 
@@ -372,10 +368,10 @@ if $ARGS[0] = '7':
 		'Yaroslav approaches you, he just goes for it without any pause or warning. You are about to shout expecting pain, but just bit your lip in pleasure as you realise he has entered your pussy.'
 
 		act 'Continue':
-			cls
+			cla
+			*clr
 			minut += 5
 			horny += 10
-			gs 'stat'
 			'<center><img src="images/yaroslav/1365154212_studentka-ischet-rabotu-23.jpg" width = 750 height = 450 ></center>'
 			'You start to get in the mood and enjoy the sex, when he removes his penis and starts to work it against your anus. Slowly you feel him enter and the head of his penis starts to fill your butt.'
 
@@ -388,10 +384,10 @@ if $ARGS[0] = '7':
 				'He turns you to your side and starts to drive his full length home. He supports your head with his hand and you suck on his thumb the initial pain giving way to bliss.'
 
 				act'Change position':
-					cls
+					cla
+					*clr
 					minut += 5
 					horny += 10
-					gs 'stat'
 					'<center><img src="images/yaroslav/1365154143_studentka-ischet-rabotu-25.jpg" width = 750 height = 450 ></center>'
 					'You push Yaroslav back and getting the hint he withdraws and helps you down. Lying on his back he guides your anus back on to his cock and you set your own rhythm trying to bring yourself to orgasm.'
 
@@ -420,15 +416,15 @@ if $ARGS[0] = '7':
 end
 
 if $ARGS[0] = 'end':
-	cls
+	cla
+	*clr
 	sweat = 0
 	hapri = 0
-	dynamic $showerdin
-	gs 'stat'
 	'<center><img src="images/yaroslav/1365154231_studentka-ischet-rabotu-28.jpg" width = 750 height = 450 ></center>'
 	'Yaroslav leaves you to shower and gives you your wage and the bonus as per your agreement. He tells you he wiill be around every evening at the same time.'
 
 	act 'Get dressed and leave':
+		cla
 		yarikwork += 1
 		gt 'down'
 	end

@@ -39,8 +39,8 @@ if $ARGS[0] = 'start':
 	'Despite it''s almost paradise-like appearence, the park can be very dangerous once the sun goes down.'
 	''
 	'There is a sign that points into general direction of the <a href="exec:minut += 47 & gt ''down''">City Center</a>. You estimate the walk to the city center would take about 40 to 50 minutes.'
-	'The second sign points into the direction of the <a href="exec:minut += 19 & gt ''street''">Residential Area</a>. If you have to guess, the walk to the residential are should take about 20 minutes.'
-	'The third sign says <a href="exec:minut += 59 & gt ''Nord''">Northern District</a> on it and points north, you suppose. You know the Northern District is rahter far away from here, you estimate taht a walk would take almost one hour'
+	'The second sign points into the direction of the <a href="exec:minut += 20 & gt ''street''">Residential Area</a>. If you have to guess, the walk to the residential are should take about 20 minutes.'
+	'The third sign says <a href="exec:minut += 60 & gt ''Nord''">Northern District</a> on it and points north, you suppose. You know the Northern District is rather far away from here, you estimate taht a walk would take almost one hour'
 	''
 
 	if SNarkPriton = 0:'Near one of the shops roll <a href="exec:dynamic $torchki">junkies</a>.'

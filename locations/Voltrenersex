@@ -334,7 +334,7 @@ if $ARGS[0] = 'bj':
 
 		if volleysostav = 0:
 			volleysostav = 1
-			trenerepa = 20
+			if trenerepa < 20:trenerepa = 20
 			'Coach puts his cock back in his pants. "Okay <<$surname>>, you are very diligent girl, I can see you fitting in very well, consider yourself in the team, as a sub of course."'
 		end
 

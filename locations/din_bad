@@ -237,19 +237,19 @@ $Phone_contactlist = {
 	pl'<center><img src="images/pic/phone/icons/icon_npc1.png">..................................................<a href="exec:dynamic $Phone_call"><b>Call</b></a></center>'
 	if hour >= 8 and hour <= 19:
 		if telalla > 0:
-			pl'<center><img src="images/pic/phone/icons/icon_ira1.png">..................................................<a href="exec:$callerid = ''images/pic/phone/icons/icon_ira1.png'' & $telsob = ''Alla'' & dynamic $objmobilaraz"><b>Call</b></a></center>'
+			pl'<center><img src="images/pic/phone/icons/icon_ira1.png">..................................................<a href="exec:$callerid = ''images/pic/phone/icons/icon_ira1.png'' & $telsob = ''Alla'' & gt ''telefon'', ''mobilaraz''"><b>Call</b></a></center>'
 		end
 
 		if telmasha > 0:
-			pl'<center><img src="images/pic/phone/icons/icon_masha.png">..................................................<a href="exec:$callerid = ''images/pic/phone/icons/icon_masha.png'' & $telsob = ''Masha'' & dynamic $objmobilaraz"><b>Call</b></a></center>'
+			pl'<center><img src="images/pic/phone/icons/icon_masha.png">..................................................<a href="exec:$callerid = ''images/pic/phone/icons/icon_masha.png'' & $telsob = ''Masha'' & gt ''telefon'', ''mobilaraz''"><b>Call</b></a></center>'
 		end
 
 		if telkat > 0:
-			pl'<center><img src="images/pic/phone/icons/icon_kat.png">..................................................<a href="exec:$callerid = ''images/pic/phone/icons/icon_kat.png'' & $telsob = ''Kate'' & dynamic $objmobilaraz"><b>Call</b></a></center>'
+			pl'<center><img src="images/pic/phone/icons/icon_kat.png">..................................................<a href="exec:$callerid = ''images/pic/phone/icons/icon_kat.png'' & $telsob = ''Kate'' & gt ''telefon'', ''mobilaraz''"><b>Call</b></a></center>'
 		end
 
 		if bfA > 0 and svidanieA = 0:
-			pl'<center><img src="images/pic/phone/icons/icon_bf'+boypicA+'.png">..................................................<a href="exec:dynamic $objmobilarazboy"><b>Call</b></a></center>'
+			pl'<center><img src="images/pic/phone/icons/icon_bf'+boypicA+'.png">..................................................<a href="exec:gt ''telefon'', ''mobilarazboy''"><b>Call</b></a></center>'
 		end
 
 	else

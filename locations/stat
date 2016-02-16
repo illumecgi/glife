@@ -1444,7 +1444,7 @@ $cumeater = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your stomach with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1452,7 +1452,7 @@ $cumeater2 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your pussy with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1460,7 +1460,7 @@ $cumeater3 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your buttocks with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1468,7 +1468,7 @@ $cumeater4 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your face with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1476,7 +1476,7 @@ $cumeater5 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your clothes with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1485,7 +1485,7 @@ $cumeater6 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your anus with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1493,7 +1493,7 @@ $cumeater7 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your body with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1501,7 +1501,7 @@ $cumeater8 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You lick your fingers clean, feeling the tart taste of semen.'
 }
@@ -1509,7 +1509,7 @@ $cumeater9 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 5
+	sparrvol[cumloc] -= 20
 	gs 'stat'
 	'You collect the sperm from your hair with your fingers and lick them, feeling the tart taste of semen.'
 }
@@ -1575,7 +1575,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10:
-			pl '<a href="exec:view''images/body/cumpussy.jpg''"><b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',0) dynamic $cumeater2"><b><font color="blue">sperm</font></b></a><b> slowly flows from your pussy</font></b></a>.'
+			pl '<a href="exec:view''images/body/cumpussy.jpg''"><b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',0) & dynamic $cumeater2"><b><font color="blue">sperm</font></b></a><b> slowly flows from your pussy</font></b></a>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm slowly flows from your <a href="exec:view''images/body/cumpussy.jpg''">pussy</a>.</font></b>'
 		end
@@ -1589,7 +1589,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',1) & dynamic $cumeater2"><b><font color="blue">sperm</font></b></a><b> is smeared across your pussy lips.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',1) & dynamic $cumeater2"><b><font color="blue">sperm</font></b></a><b> is smeared across your pussy lips.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your pussy lips.'
 		end
@@ -1601,7 +1601,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',2) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the crotch of your panties.</font></b>.'
+			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',2) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the crotch of your panties.</font></b>.'
 		else
 			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>>semen stains on the crotch of your panties.'
 		end
@@ -1614,7 +1614,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',3) & dynamic $cumeater6"><b><font color="blue">sperm</font></b></a><b> slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',3) & dynamic $cumeater6"><b><font color="blue">sperm</font></b></a><b> slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
 		end
@@ -1628,7 +1628,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',4) & dynamic $cumeater3"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumass.jpg''">ass</a>.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',4) & dynamic $cumeater3"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumass.jpg''">ass</a>.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your <a href="exec:view''images/body/cumass.jpg''">ass</a>.'
 		end
@@ -1640,7 +1640,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',5) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the ass of your panties.</font></b>.'
+			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',5) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the ass of your panties.</font></b>.'
 		else
 			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>>semen stains on the ass of your panties.'
 		end
@@ -1651,7 +1651,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',6) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the crotch of your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.</font></b>.'
+			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',6) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the crotch of your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.</font></b>.'
 		else
 			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>>semen stains on the crotch of your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.'
 		end
@@ -1662,7 +1662,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',7) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.</font></b>.'
+			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',7) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.</font></b>.'
 		else
 			pl '<b><font color="red">You have <<$cumnam>>''s <<$cumdisc>>semen stains on your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.'
 		end
@@ -1673,7 +1673,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',8) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your back.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',8) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your back.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your back.'
 		end
@@ -1685,7 +1685,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',9) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your legs.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',9) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your legs.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your legs.'
 		end
@@ -1697,7 +1697,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',10) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your arms.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',10) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your arms.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your arms.'
 		end
@@ -1709,7 +1709,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',11) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumface.jpg''">face</a>.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',11) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumface.jpg''">face</a>.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your <a href="exec:view''images/body/cumface.jpg''">face</a>.'
 		end
@@ -1730,7 +1730,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',13) & dynamic $cumeater8"><b><font color="blue">sperm</font></b></a><b> is smeared across your hands.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',13) & dynamic $cumeater8"><b><font color="blue">sperm</font></b></a><b> is smeared across your hands.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your hands.'
 		end
@@ -1743,7 +1743,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',14) & dynamic $cumeater"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumbelly.jpg''">stomach</a>.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',14) & dynamic $cumeater"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumbelly.jpg''">stomach</a>.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your <a href="exec:view''images/body/cumbelly.jpg''">stomach</a>.'
 		end
@@ -1755,7 +1755,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',15) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your breasts.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',15) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your breasts.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared across your breasts.'
 		end
@@ -1767,7 +1767,7 @@ if arrsize('sparrvol') > 0:
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
 		if swallow >= 10 and sparrage[cumloc] < 5:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',16) & dynamic $cumeater9"><b><font color="blue">sperm</font></b></a><b> is smeared in your hair.</font></b>.'
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',16) & dynamic $cumeater9"><b><font color="blue">sperm</font></b></a><b> is smeared in your hair.</font></b>.'
 		else
 			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is smeared in your hair.'
 		end

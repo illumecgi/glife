@@ -104,8 +104,8 @@ end
 !!!!!SIZE AND WEIGHT!!!
 !!!!!!!!!!!!!!!!
 if dounspell = 0:
-	strenbuf = stren
-	vitalbuf = vital
+	strenbuf = stren / 2
+	vitalbuf = vital / 2
 	vmeat = (strenbuf + vitalbuf) / 8
 	vfat = salo / 10
 	Kves = vmeat + vfat

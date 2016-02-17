@@ -750,7 +750,7 @@ if volleysostav > 0 and sport = 1:
 					'<center><img src="images/qwest/alter/volley/game'+rand(1,2)+'.jpg"></center>'
 					'It seems the coach noticed your manipulation and your young pussy, his eyes lit up and he said turning away: "<<$surname>> Will you come to me after training. I need to show you UH  ... a few things" '
 					act 'Escape':gs'stat'& gt'gdksport' 
-					act 'To come to the door coaching':gt'Voltrenersex' 
+					act 'To come to the door coaching':gt'Voltrenersex', 'start'
 				end
 			else
 				act 'Go to coaching':gt 'Voltrener', 'start'

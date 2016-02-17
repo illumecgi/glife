@@ -375,7 +375,7 @@ if $ARGS[0] = 'dance':
 								horny += 10
 								minut += 10
 								swallow += 1
-								%boy = 'Alexei'
+								$boy = 'Alexei'
 								sexpartkno = 1
 								spafinloc = 12
 								gs 'cum_manage'
@@ -432,7 +432,7 @@ if $ARGS[0] = 'bar':
 			horny += 5
 			gs 'stat'
 			'<center><img src="images/etogame/club2.jpg"></center>'
-			%boy = 'Male Stripper'
+			$boy = 'Male Stripper'
 			sexpartkno = 1
 			spafinloc = 12
 			gs 'cum_manage'
@@ -446,7 +446,7 @@ if $ARGS[0] = 'bar':
 			horny += 5
 			gs 'stat'
 			'<center><img src="images/picKav/ivrand4.jpg"></center>'
-			%boy = 'Club Dancer'
+			$boy = 'Club Dancer'
 			spafinloc = 12
 			gs 'cum_manage'
 			'The last thing you remember, is how you sucked someones cock in the middle of the dancefloor.'
@@ -665,7 +665,7 @@ if $ARGS[0] = 'sex':
 	dynamic $venerasiak
 	minut += 5
 	$nameV = 'Stranger'
-	%boy = $nameV
+	$boy = $nameV
 	dick = rand(10, 18)
 	gs 'stat'
 	'<center><b><font color="maroon">toilet stall</font></b></center>'
@@ -884,7 +884,7 @@ if $ARGS[0] = 'bar2':
 	act 'Continue to suck':
 		cla
 		*clr
-		%boy = 'Stranger'
+		$boy = 'Stranger'
 		spafinloc = 12
 		gs 'cum_manage'
 		'<center><img src="images/img/centr/barcum.jpg"></center>'
@@ -899,7 +899,7 @@ if $ARGS[0] = 'bar3':
 	cla
 	*clr
 	sex += 1
-	%boy = 'Stranger'
+	$boy = 'Stranger'
 	cumprecheck = 1
 	gs 'cum_manage'
 	spafinloc = 4
@@ -919,7 +919,7 @@ if $ARGS[0] = 'rape':
 	rape += 1
 	'<center><b><font color="maroon">Bar</font></b></center>'
 	barraperand = rand(0, 1)
-	%boy = 'Rapist'
+	$boy = 'Rapist'
 	if barraperand = 0:
 		bj += 1
 		'<center><img src="images/img/centr/barminet.jpg"></center>'

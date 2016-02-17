@@ -245,7 +245,7 @@ $kiosksig = {
 					money -= 50
 					throat += 1
 					bj += 1
-					%boy = 'Stranger'
+					$boy = 'Stranger'
 
 					if spdirtyb = 0 and spdirtyv = 0:
 						'<center><img src="images/community/kiosk_blowjob.jpg"></center>'
@@ -730,7 +730,7 @@ $polactdog = {
 		act '....':
 			cls
 			minut += 10
-			%boy = 'Dog'
+			$boy = 'Dog'
 			sexpartkno = 1
 			sexspecpot = -1
 			gs 'cum_manage'
@@ -756,7 +756,7 @@ $polactdog = {
 		act '....':
 			cls
 			minut += 10
-			%boy = 'Dog'
+			$boy = 'Dog'
 			sexpartkno = 1
 			sexspecpot = -1
 			spafinloc = 3

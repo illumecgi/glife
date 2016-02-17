@@ -20,11 +20,11 @@ $din_gop_double_bj = {
 			cls
 			minut += 5
 			horny += 10
-			%boy = $bname2
+			$boy = $bname2
 			sexpartkno = 1
 			spafinloc = 12
 			gs 'cum_manage'
-			%boy = $bname3
+			$boy = $bname3
 			sexpartkno = 1
 			spafinloc = 12
 			gs 'cum_manage'
@@ -41,9 +41,9 @@ $din_gop_end = {
 		cls
 		minut += 5
 		if rand(0,1) = 0:
-			%boy = $bname2
+			$boy = $bname2
 		else
-			%boy = $bname3
+			$boy = $bname3
 		end
 		sparrvol = 10
 		sexpartkno = 1
@@ -65,7 +65,7 @@ $din_gop_end2 = {
 	act 'Further':
 		cls
 		minut += 5
-		%boy = $bname2
+		$boy = $bname2
 		sparrvol = 10
 		sexpartkno = 1
 		spafinloc = 7
@@ -198,7 +198,7 @@ if GorSlut < 3:
 						act 'Further':
 							cls
 							minut += 5
-							%boy = $bname
+							$boy = $bname
 							sexpartkno = 1
 							spafinloc = 12
 							gs 'cum_manage'
@@ -291,7 +291,7 @@ if GorSlut < 3:
 						if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
 
 						bj += 1
-						%boy = $bname2
+						$boy = $bname2
 						sexpartkno = 1
 						spafinloc = 12
 						gs 'cum_manage'
@@ -343,15 +343,15 @@ elseif GorSlut >= 3:
 					minut += 5
 					horny += 10
 					facial += 1
-			%boy = $bname
+			$boy = $bname
 			sexpartkno = 1
 			spafinloc = 11
 			gs 'cum_manage'
-			%boy = $bname2
+			$boy = $bname2
 			sexpartkno = 1
 			spafinloc = 11
 			gs 'cum_manage'
-			%boy = $bname3
+			$boy = $bname3
 			sexpartkno = 1
 			spafinloc = 11
 			gs 'cum_manage'

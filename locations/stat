@@ -674,7 +674,7 @@ if hour >= 24:
 		salo -= fatD2roll
 		fat += fatD2roll
 	end
-   
+
 	if fat > (salo + 40):
 		salo += 3
 		fat -= 3
@@ -684,9 +684,9 @@ if hour >= 24:
 	elseif fat > (salo + 10):
 		fatD2roll = rand(0,1)
 		salo += fatD2roll
-		fat _= fatD2roll
+		fat -= fatD2roll
 	end
-   
+
 	if salo > 240:
 		salo = 240
 	elseif salo > 180:
@@ -700,7 +700,7 @@ if hour >= 24:
 	elseif salo < 60:
 		salo += 1
 	end
-   
+
 	if fat > 240:
 		fat = 240
 	elseif fat > 180:
@@ -714,13 +714,13 @@ if hour >= 24:
 	elseif fat < 60:
 		fat += 1
 	end
-   
+
 	if strenbuf > 90:
 		strenbuf -= 2
 	elseif strenbuf > 80:
 		strenbuf -= 1
 	end
-   
+
 	if vitalbuf > 90:
 		vitalbuf -= 2
 	elseif vitalbuf > 80:

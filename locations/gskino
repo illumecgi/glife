@@ -4,16 +4,17 @@ fcolor = rgb(0, 0, 0)
 bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 '<center><img src="images/gevent/kinoteatr.jpg"></center>'
-'Small cinema in which there is just one small room. A movie ticket costs 100 rubles.'
+'Small cinema in which there is just one small screen. A movie ticket costs 100 rubles.'
 
 $kinoevent = {
-	act 'Turn your head and look':
+	act 'Turn around and look':
 		cls
 		horny += 3
 		gs'stat'
 		'<center><img src="images/zsoft/kino/kino.gif"></center>'
-		'You saw on the back of the girl sucking guy, nobody hesitate to loud smacking the whole cinema.'	
-		act 'Exit the room':gt'gskver'		
+		'You see on the back row a girl sucking a guy, nobody reacts to the loud smacking sound that can be heard by the whole cinema.'
+		'You turn back and watch the rest of the film.'
+		act 'Leave the cinema':gt'gskver'		
 	end
 }
 
@@ -31,20 +32,22 @@ if money >= 100:
 			act 'Agree':gt 'gevent', '2'
 			act 'Reject':
 				'You tell him you''d rather watch the film, he mutters something that sounded like bitch and leaves you to watch the rest of the movie in peace.'
-				act 'Leave the hall':gt 'gskver'
+				act 'Leave the cinema':gt 'gskver'
 			end
+			
+			exit
 		end
 		if rand(1,100) > 10:
-			'You quietly watched the film, and then came out of the cinema.'
+			'You quietly watch the film.'
 		else
-			'You quietly watched the movie, but suddenly heard behind what-strange sounds.' & dynamic $kinoevent
+			'You quietly watch the movie, but suddenly behind you there is a strange sound.' & dynamic $kinoevent
 		end
 
-		act 'Leave the hall':gt 'gskver'
+		act 'Leave the cinema':gt 'gskver'
 	end
 end
 
-act 'Get out of the theater':minut += 5 & gt 'gskver'
+act 'Leave the cinema':minut += 5 & gt 'gskver'
 
 --- gskino ---------------------------------
 

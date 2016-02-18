@@ -31,11 +31,11 @@ if blockBedrPar = 0:
 end
 
 act 'Go to my parents'' room':gt 'bedrPar2'
-act 'Going to the living room':gt 'sitrPar'
+act 'Go to the living room':gt 'sitrPar'
 act 'Go to the bathroom':gt 'vanrPar'
 act 'Go to the kitchen':gt 'kuhrPar'
 
-act '<font color = maroon>The entrance</font>':
+act '<font color = maroon>Leave the apartment and go to the stairwell</font>':
 	if $clothingworntype ! 'nude':
 		gt'pod_ezd','etaj_2'
 	else
@@ -45,7 +45,7 @@ act '<font color = maroon>The entrance</font>':
 end
 
 
-act '<font color = maroon><b>Go to the street</b></font>':
+act '<font color = maroon><b>Leave the apartment and go outside</b></font>':
 	if $clothingworntype ! 'nude':
 		gt'gorodok'
 	else
@@ -56,13 +56,13 @@ end
 
 '<center><b><font color="maroon">corridor</font></b></center>'
 '<center><img src="images/qwest/alter/korrPar.jpg"></center>'
-'On the wall near the front door hanging <a href="exec:gt ''mirror'', ''start''">mirror</a>.'
+'A <a href="exec:gt ''mirror'', ''start''">mirror</a> hangs on the wall, near the front door.'
 
-if palto > 0:'Hanging on the hook <<$palto>>'
+if palto > 0:'Your <<$palto>> is on a hook, next to the mirror.'
 
 gs 'family'
 
-if indorf = 1:'With your parents away visiting your grandparents, the appartment seems quiet and empty.'
+if indorf = 1:'With your parents being away to visit your grandparents, the apartment seems quiet and empty.'
 
 !to add a counter if you avoid Dimka
 if nodimkaK >= rand(7,10) and DimkaWarnedToday = 0:
@@ -78,11 +78,11 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 		BrotherNoDay = day
 		manna = 0
 		gs 'stat'
-		'<center><b><font color="maroon">mom</font></b></center>'
+		'<center><b><font color="maroon">Mom</font></b></center>'
 		'<center><img src="images/qwest/alter/mother.jpg"></center>'
-		'Mom backed hips hands "I then tossed a video with you ....... I never smacked you ....yes see in vain ... You realize that maybe this video is not only my? What about you now will speak.. What about you ... about all our family ... I guess you need to teach you a lesson. Volodya!"'
+		'Your mother stands in the hallway waiting for you, clearly angry. As soon as she sees you, she grabs your ear and pinches it hard, making you wince in pain. "I just saw this video of you sucking some guy''s dick! What the hell were you thinking!? Your stepfather and I worked so hard to raise you properly, and then you do this. Do you realize that maybe this video was sent to others too? What will the people in town think of us now? I oughta teach you a lesson. What do you have to say for yourself!? Speak up!"'
 
-		act 'Beg to do nothing':
+		act 'Beg her to do nothing':
 			cls
 			mothervideotalk = 2
 			minut += 5
@@ -90,9 +90,9 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			gs 'stat'
 			'<center><b><font color="maroon">mom</font></b></center>'
 			'<center><img src="images/qwest/alter/mother.jpg"></center>'
-			'You burst into tears: "Mommy !forgive! This will never happen again! I made вЂ‹вЂ‹a fool that ''s what I ''ll never..never_..." You weep and kneel. Mother looks at you and shakes his head out.'
+			'You burst into tears: "Mommy, please forgive me! It will will never happen again! I made a stupid mistake, I''m sorry... I didn''t mean to... please... I don''t... sorry..." You fall to your knees sobbing uncontrollably, hoping she will have mercy on you. Your mother looks at down at you, still angry but not quite sure what to do. She lets out an exasperated gasp, shakes her head and walks away.'
 
-			act 'Move away':gt $curloc
+			act 'Get back on your feet':gt $curloc
 		end
 
 		act 'Be silent':
@@ -103,24 +103,24 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			spank += 1
 			gs 'stat'
 			'<center><img src="images/qwest/alter/artom/spank.jpg"></center>'
-			'You stand staring at the floor. And what can I say?'
-			'Mother takes you by the hand and leads into the room: "Take off your pants and bend over!" You shake my head. " Volodya - keep it!" Stepfather grabs you and keeps .mother pulls your underwear takes the belt and starts to flog you. Gritting her teeth . Lifting his head as you see through the open door behind it to watch your brother and sister.'
+			'You stand in the hallway staring at the floor, too embarrased to say anything. What is there to say, anyway?'
+			'Your mother grabs you by the arm and pulls you into the living room: "Take off your pants and bend over!" You shake your head, not liking where this is going at all. Getting even angrier by your refusal, she shouts: "Vladimir, hold her down!" Your stepfather pulls you down and keeps you in place, while your mother pulls away your clothing. She then grabs a belt and starts to flog your bare ass with it, not holding back at all. You take your punishment as good as you can, but towards the end you''re in tears and your cries are heard throughout the apartment. When it''s finally over, you raise your head just in time to catch the startled faces of your brother and sister in the doorway.'
 
-			act 'Move away':gt $curloc
+			act 'Stand up and straighten your clothes':gt $curloc
 		end
 
 		if momslut >= 2:
-			act 'Threaten':
+			act 'Threaten her':
 				cls
 				mothervideotalk = 1
 				minut += 5
 				gs 'stat'
-				'<center><b><font color="maroon">A_Mother</font></b></center>'
+				'<center><b><font color="maroon">Mom</font></b></center>'
 				'<center><img src="images/qwest/alter/mother.jpg"></center>'
-				'"Come on -come_on - call the father! I''ll tell you what his daughter! And who went!"'
-				'Mother is looking at you and spit on the floor leaves.'
+				'You slap away her hand with a defiant look in your eyes. "Oh, really? You''re no angel yourself either, Mom... does Dad know what YOU have been up to lately? Why don''t we go ask him, while we''re on this subject?"'
+				'Your mother looks at you furiously, but is at a loss for words. After a few seconds of awkward silence she storms off, slamming the door shut behind her.'
 
-				act 'Move away':gt $curloc
+				act 'Continue':gt $curloc
 			end
 		end
 
@@ -134,7 +134,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 		gs 'stat'
 		'<center><b><font color="maroon">Mom</font></b></center>'
 		'<center><img src="images/qwest/alter/mother.jpg"></center>'
-		'Mom backed hips hands "What''s this about a video of you? How could you be this careless? You DO realize this is going to reflect badly on the entire family..."'
+		'When you enter the hallway, you find your mother waiting there for you. "What''s all this I hear about a video of you sucking some guy''s dick? How could you be so careless, <<$name>>? You do realize this makes our whole family look bad..."'
 
 		act 'Apologize':
 			cls
@@ -142,13 +142,12 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			minut += 5
 			mother -= 40
 			gs 'stat'
-			'<center><b><font color="maroon">mom</font></b></center>'
+			'<center><b><font color="maroon">Mom</font></b></center>'
 			'<center><img src="images/qwest/alter/mother.jpg"></center>'
-			!!placeholder I guess, I''m sure I can come up with something better
-			'"I don''t know what to say, mom... I''m sorry"'
-			'Mother shakes her head, glaring at you, and walks away'
+			'"I don''t know what to say, mom... I''m really sorry."'
+			'Your mother is clearly very upset with you. After a short discussion, she walks away.'
 
-			act 'Move away':gt $curloc
+			act 'Continue':gt $curloc
 		end
 
 		exit
@@ -157,7 +156,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 	if schoolprogul > 2 and SchoolAtestat = 0:
 		cls
 		gs 'stat'
-		'<center><b><font color="maroon">mom</font></b></center>'
+		'<center><b><font color="maroon">Mom</font></b></center>'
 		'<center><img src="images/qwest/alter/mother.jpg"></center>'
 
 		if belgangQW=10000:
@@ -166,7 +165,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			GspravkaT = 2
 			motherKnowSpravka = 1
 			'"Oh, my darling <<$name>>, where have you been? We have been so worried."'
-			'You go into the kitchen with your mom and spend sometime explaining what happened to you, many of the details are too difficult to talk about and you cry and hug.'
+			'You go into the kitchen with your mom and spend some time explaining what happened to you. Many of the details are difficult to talk about, and you cry and hug as you tell your story.'
 			'Your mom tells you she will sort out everything with the school and makes you a bowl of chicken soup.'
 			if energy >= 30:
 				'You are too full to eat it.'
@@ -178,7 +177,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 				end
 				fat += 3
 				energy += 10
-				'You have some of it, but can''t finish it.'
+				'You have some of the chicken soup, but can''t finish it.'
 			elseif energy < 20:
 				if water < 20:
 					water += 20
@@ -198,7 +197,7 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			ParHomeBlock = 1
 			schoolprogul = 0
 			if $clothingworntype = 'sforma':gs 'clothing', 'strip'
-			'In the corridor you vsrechaet mother, her eyes thundered. "Doprygat? Thee out of high school. All live the way you want, I am no longer a mother!" Mother gathered your things in a bag, put the bag in your hands and thrown by the scruff of the apartment.'
+			'As you enter the hallway, you find your mother there waiting for you. You have never seen her this furious. "<<$name>>? I just got off the phone with the school, they told me you didn''t show up yet again and expelled you. I''ve had it with you! I''ve warned you so many times! Go ahead, live your irresponsible life the way you want. You''re no longer welcome here." She already packed up all your things from your room before you got home, and roughly shoves the bag into your hands. After that, she pushes you out the door and slams it shut in your face.'
 
 			act 'Leave':gt 'gorodok'
 
@@ -207,16 +206,16 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			schoolPredupr = 2
 			schoolprogul = 0
 			Suspeh -= 40
-			'In the corridor you vsrechaet mother, her eyes thundered. "That was the school. Again You absenteeism. You already want to exclude from school, I was literally on his knees begging the directors can not exclude you and give you one last chance to reform. More because of you I will not be humiliated and remember. Next time you Departure from school! And if you fly out of school, I will personally kick him out of the house if you do not understand a normal relationship, then get out, no one does not keep you here! "Mother angrily left the room.'
+			'As you enter the hallway, you find your mother there waiting for you. She seems very angry with you. "School called, they said you didn''t show up for class again. They wanted to expel you! I had to go over there and beg the principal to give you one last chance. I''ve never felt so humiliated! This is the last straw for me, <<$name>>, you will not embarrass me any further. If you miss one more day of school, they will kick you out. And if you get kicked out of school, I will personally kick you out of the house. If you cannot be responsible and behave like a normal person, then get out, no one is forcing you to stay." Having said her piece, your mother turns around and leaves.'
 		elseif schoolPredupr = 0:
 			schoolPredupr = 1
 			mother = 0
 			schoolprogul = 0
 			Suspeh -= 20
-			'In the corridor you vsrechaet mother, her eyes thundered. "That was the school. You solid absenteeism. For the first time you have forgiven, but the next you just kicked. What are you doing, balbeska?" Mother angrily left the room.'
+			'As you enter the hallway, you find your mother there waiting for you. "<<$nickname>>? The school called, they said you weren't at school today. You know they're very unforgiving when it comes to absenteeism, they said they would expel you if it happens again. What are you doing with your life? Get it together!" Your mother angrily leaves the room, leaving you to your thoughts.'
 		end
 
-		act 'Move away':gt $curloc
+		act 'Continue':gt $curloc
 
 		exit
 	end
@@ -241,7 +240,7 @@ end
 
 :markboyfrendcall2
 
-if Gcall > 0:'In the hallway rings <a href="exec:gt ''gtelefon''">phone</a>.'
+if Gcall > 0:'You hear the <a href="exec:gt ''gtelefon''">phone</a> ringing in the hallway.'
 if motherWorry = 1 and indorf = 0:
 	gt'mother'
 elseif motherWorry = 1 and indorf > 0:
@@ -254,14 +253,14 @@ if notathomesleep > 7 and hour >= 16 and  hour < 21 and mother_go = 0:
 	if mother < 40:
 		'<center><b><font color = maroon>Mom</font></b></center>'
 		'<center><img src="images/qwest/alter/mother.jpg"></center>'
-		'In the corridor you come across a mother: - Watch, who was. Permanently?'
-		act '<B>Move away</B>':gt 'korrPar'
+		'You run into your mother in the hallway. "Well well, look who decided to come home for once.'
+		act '<B>Continue</B>':gt 'korrPar'
 	end
 	if mother >= 40:
 		'<center><b><font color = maroon>Mom</font></b></center>'
 		'<center><img src="images/qwest/alter/mother.jpg"></center>'
-		'In the corridor you come across a mother: - What a surprise! My docha arrived, I missed.'
-		act '<B>Move away</B>':gt 'korrPar'
+		'You run into your mother in the hallway. She looks happy to see you. "What a surprise! Welcome home honey, I missed you.'
+		act '<B>Continue</B>':gt 'korrPar'
 	end
 end
 
@@ -270,9 +269,9 @@ end
 gs'pod_whore'
 pod_client = RAND(0,100)
 if pod_whore_countQW <= 15:
-	if pod_client <= 5 and hour >= 10 and hour <= 23 and gorslut >=6 and podwhoreQW >=3: 'Who-It is ringing your door: <a href="exec: dynamic $pod_client_talk">open</a>'	
+	if pod_client <= 5 and hour >= 10 and hour <= 23 and gorslut >=6 and podwhoreQW >=3: 'Someone is at the door: <a href="exec: dynamic $pod_client_talk">Answer</a>'	
 elseif pod_whore_countQW > 15:
-	if pod_client <= 20 and hour >= 10 and hour <= 23 and gorslut >=6 and podwhoreQW >=3: 'Who-It is ringing your door: <a href="exec: dynamic $pod_client_talk">open</a>'
+	if pod_client <= 20 and hour >= 10 and hour <= 23 and gorslut >=6 and podwhoreQW >=3: 'Someone is at the door: <a href="exec: dynamic $pod_client_talk">Answer</a>'
 end	
 !'<<$pod_client>>'
 !==========================================!

@@ -1,6 +1,6 @@
 # kuhrPar
 CLOSE ALL
-act 'Leave the room':gt 'korrPar'
+act 'Return to the hallway':gt 'korrPar'
 
 $metkaM = $ARGS[0]
 $locM = $CURLOC
@@ -14,7 +14,7 @@ bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 '<center><b><font color="maroon">Kitchen</font></b></center>'
 '<center><img src="images/qwest/alter/kuhrPar.jpg"></center>'
-'In the kitchen, the stove is next to the sink. There is a large refrigerator in the corner and a kitchen table with chairs is against the wall.'
+'The kitchen is not very impressive, but it has everything your family needs. Since everyone has the habit of eating at different times, Mom usually pre-cooks the meals and stores them in the fridge. Of course, you could also just have a snack if you''re not that hungry.'
 gs 'family'
 
 act 'Eat (0:30)':
@@ -29,15 +29,15 @@ act 'Eat (0:30)':
 
 	if energy >= 30:
 		fat += 5
-		'You can no longer eat.'
+		'You try to eat, but are too full to enjoy the meal and can''t finish it.'
 	elseif energy >= 20 and energy < 30:
 		fat += 3
 		energy += 10
-		'You pushed through the power of a meal.'
+		'You''re not all that hungry, but have a meal anyway. Half-way through, you''re starting to regret it but feel bad throwing it out so you finish it anyway.'
 	elseif energy < 20:
 		energy += 20
 		!!fat += 1
-		'You gladly ate cooked food.'
+		'The food tastes good, you quietly thank your mother for always keeping the fridge stocked with these tasty meals.'
 	end
 
 	if water >= 20:
@@ -46,7 +46,7 @@ act 'Eat (0:30)':
 		water += 20
 		cumlip = 0
 		fbreath = 0
-		'You gladly drank a mug of tea.'
+		'You have a cup of tea, quenching your thirst.'
 	end
 
 	gs 'stat'
@@ -66,15 +66,15 @@ act 'Have a snack (0:15)':
 
 	if energy >= 30:
 		fat += 3
-		'You can no longer eat.'
+		'You try to enjoy the snack, but are too full to even finish it.'
 	elseif energy >= 20 and energy < 30:
 		fat += 1
 		energy += 5
-		'You pushed through the power of a meal.'
+		'You have a snack even though you''re not all that hungry, and half-way through start to regret it.'
 	elseif energy < 20:
 		energy += 10
 		!!fat += 1
-		'You gladly ate cooked food.'
+		'Even though it''s not good for you, the snack tastes great.'
 	end
 
 	if water >= 20:
@@ -83,7 +83,7 @@ act 'Have a snack (0:15)':
 		water += 20
 		cumlip = 0
 		fbreath = 0
-		'You gladly drank a mug of tea.'
+		'You have a cup of tea, quenching your thirst.'
 	end
 
 	gs 'stat'
@@ -100,7 +100,7 @@ act 'Drink':
 		water += 20
 		cumlip = 0
 		fbreath = 0
-		'You gladly drank a mug of tea.'
+		'You have a cup of tea, quenching your thirst.'
 	end
 
 	gs 'stat'
@@ -109,7 +109,7 @@ act 'Drink':
 end
 
 if pranik > 0:
-	'Cookies will suffice for <<pranik>> time.'
+	'You have <<pranik>> cookies.'
 
 	act 'Drink tea with cookies (0:05)':
 		cla
@@ -126,7 +126,7 @@ if pranik > 0:
 		frost = 0
 		gs 'stat'
 		'<center><img src="images/pics/food.jpg"></center>'
-		'You drank tea with cookies, sweet and very bad for the figure, but so nice.'
+		'You drank tea and enjoyed the cookies. You know they''re too sweet and can''t be good for your figure, but they taste so good!'
 
 		act 'Get up from the table':gt $curloc
 	end
@@ -143,13 +143,13 @@ if edaD > 0:
 		edaD -= 1
 		'<center><img src="images/pics/food.jpg"></center>'
 		if energy >= 30:
-			'You can no longer eat.'
+			'You prepare a diet meal and try to eat it, but you're really not hungry at all. You can't finish the meal.'
 		elseif energy >= 20 and energy < 30:
 			energy += 10
-			'You pushed through the power of a meal.'
+			'You try to enjoy the diet meal, but half-way in you realize you weren''t all that hungry yet. You manage to finish the meal, but feel like it was kind of wasted.'
 		elseif energy < 20:
 			energy += 20
-			'You gladly ate cooked food.'
+			'The diet meal is tasty, and you enjoy eating it.'
 		end
 
 		if water >= 20:
@@ -158,7 +158,7 @@ if edaD > 0:
 			water += 20
 			cumlip = 0
 			fbreath = 0
-			'You gladly drank a cup of tea.'
+			'You have a cup of tea, quenching your thirst.'
 		end
 
 		act 'Get up from the table':gt $curloc
@@ -176,14 +176,14 @@ if fatdel > 0:
 
 		if fat < 0:fat = 0
 
-		'You drank fat burning capsule. These capsules are gradually and results will be seen at once.'
+		'You throw the capsule of fat burners in a glass, add some water and drink it. You''re amazed at how fast the capsule works, feeling your body slim down almost immediately.'
 
 		act 'Get up from the table':gt $curloc
 	end
 end
 
 if lekarstvo > 0:
-	'you <<lekarstvo>> tablets.'
+	'You have <<lekarstvo>> tablet(s).'
 
 	if sick > 0 and lekarday ! daystart:
 		act 'Take a pill (0:05)':
@@ -195,15 +195,15 @@ if lekarstvo > 0:
 			sick -= sick * 20 / 100
 			lekrand = rand(1, 9)
 			'<center><img src="images/inBed/lekr<<picrand>>.jpg"></center>'
-			'You swallowed the pill'
+			'You swallow the pill, and shortly after you feel a bit better.'
 
-			act 'move away':gt $curloc
+			act 'Move away':gt $curloc
 		end
 	end
 end
 
 if vitamin > 0:
-	'you <<vitamin>> vitaminok.'
+	'You have <<vitamin>> vitamin pills.'
 
 	if vitaminday ! daystart:
 		act 'Take vitamins (0:05)':
@@ -225,7 +225,7 @@ if vitamin > 0:
 
 			if skinvan = 20:skinvan = 0 & skin += 1
 
-			'You took some vitamins'
+			'You take some vitamins to stay healthy.'
 
 			act 'Move away':gt $curloc
 		end

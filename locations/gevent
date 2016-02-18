@@ -110,19 +110,19 @@ if $ARGS[0] = '2':
 	gs 'cum_manage'
 	bj += 1
 	GorSlut += 1
-	money += 10
+	money += 100
 	gs 'stat'
 	'<center><img src="images/gevent/2.jpg"></center>'
-	'You went out with him from the audience, after which he held you in the men''s room. Having got you in one of the stalls, they closed it and put it on his knees, then pulled out his penis and gave you a service, starting to shoot you on the phone. You suck at it, and then he came on your face, pulled from his pocket a crumpled ten, which threw you under the feet and left.'
+	'You went out with him from the audience, after which he leads you into the men''s room. Having got you in one of the stalls, he closes it and puts you on your knees, then pulls out his penis and practically shoves it down your throat, taking pictures of you with his phone. You suck him until he cums on your face, pulls from his pocket some crumpled notes, which he throws on the floor, then leaves.'
 
 	act 'Wash and leave':
 		cumspclnt = 2
 		gs 'cum_cleanup'
 		minut += 5
-		gt 'gskver', 'kino'
+		gt 'gskino'
 	end
 
-	act 'Leave':gt 'gskver', 'kino'
+	act 'Leave':gt 'gskino'
 end
 
 if $ARGS[0] = '3':

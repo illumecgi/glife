@@ -24,9 +24,21 @@ if money >= 100:
 		money -= 100
 		minut += 120
 		manna += rand(60, 90)
-		randkino=rand(1,100)
-		if randkino>10:	'You quietly watched the film, and then came out of the cinema.'
-		if randkino<=10: 'You quietly watched the movie, but suddenly heard behind what-strange sounds.' & dynamic $kinoevent
+		if gorslut >= 2 and rand(0,2) > 0:
+			cla
+			'As you are watching the film a guy sits next to you and whispers in your ear, "Everyone knows you like to suck cock, I''ll pay you if you have a go on this."'
+			'Its dark, but you can just about see well enough to see that he is pointing at his dick.'
+			act 'Agree':gt 'gevent', '2'
+			act 'Reject':
+				'You tell him you''d rather watch the film, he mutters something that sounded like bitch and leaves you to watch the rest of the movie in peace.'
+				act 'Leave the hall':gt 'gskver'
+			end
+		end
+		if rand(1,100) > 10:
+			'You quietly watched the film, and then came out of the cinema.'
+		else
+			'You quietly watched the movie, but suddenly heard behind what-strange sounds.' & dynamic $kinoevent
+		end
 
 		act 'Leave the hall':gt 'gskver'
 	end

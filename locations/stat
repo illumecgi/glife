@@ -663,67 +663,67 @@ if hour >= 24:
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd = 30:IvanPodstavaQW = 3
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd > 0 and PodpiskaNeviezd < 30:PodpiskaNeviezd += 1
 
-	if salo > (fat + 40)
+	if salo > (fat + 40):
 		salo -= 3
 		fat += 3
-	elseif salo > (fat + 20)
+	elseif salo > (fat + 20):
 		salo -= 1
 		fat += 1
-	elseif salo > (fat + 10)
+	elseif salo > (fat + 10):
 		fatD2roll = rand(0,1)
 		salo -= fatD2roll
 		fat += fatD2roll
 	end
    
-	if fat > (salo + 40)
+	if fat > (salo + 40):
 		salo += 3
 		fat -= 3
-	elseif fat > (salo + 20)
+	elseif fat > (salo + 20):
 		salo += 1
 		fat -= 1
-	elseif fat > (salo + 10)
+	elseif fat > (salo + 10):
 		fatD2roll = rand(0,1)
 		salo += fatD2roll
 		fat _= fatD2roll
 	end
    
-	if salo > 240
+	if salo > 240:
 		salo = 240
-	elseif salo > 180
+	elseif salo > 180:
 		salo -= 3
-	elseif salo > 120
+	elseif salo > 120:
 		salo -= 2
-	elseif salo > 60
+	elseif salo > 60:
 		salo -= 1
-	elseif salo < 30   
+	elseif salo < 30: 
 		salo += 2
-	elseif salo < 60
+	elseif salo < 60:
 		salo += 1
 	end
    
-	if fat > 240
+	if fat > 240:
 		fat = 240
-	elseif fat > 180
+	elseif fat > 180:
 		fat -= 3
-	elseif fat > 120
+	elseif fat > 120:
 		fat -= 2
-	elseif fat > 60
+	elseif fat > 60:
 		fat -= 1
-	elseif fat < 30   
+	elseif fat < 30:
 		fat += 2
-	elseif fat < 60
+	elseif fat < 60:
 		fat += 1
 	end
    
 	if strenbuf > 90:
 		strenbuf -= 2
-	elseif strenbuf > 80
+	elseif strenbuf > 80:
 		strenbuf -= 1
 	end
    
-	if vitalbuf > 90
+	if vitalbuf > 90:
 		vitalbuf -= 2
-	elseif vitalbuf > 80
+	elseif vitalbuf > 80:
 		vitalbuf -= 1
 	end
 

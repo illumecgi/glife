@@ -246,12 +246,8 @@ gs 'cum_manage'
 				cla
 				*clr
 				temp = RAND(0,15)
-				cumpussy = 0
-				cumbelly = 0
-				cumass = 0
-				cumlip = 0
-				cumface = 0
-				cumfrot = 0
+				cumspclnt = 4
+				gs 'cum_cleanup'
 				minut = minut + 20
 				sweat = -3
 				manna = manna + 5

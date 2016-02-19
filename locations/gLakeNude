@@ -100,12 +100,8 @@ if temper >= 20 and month>=5 and month<=9:
 			if bikini=1 or $clothingworntype = 'nude':
 				cla
 				*clr
-				cumpussy = 0
-				cumbelly = 0
-				cumass = 0
-				cumanus = 0
-				cumlip = 0
-				cumface = 0
+				cumspclnt = 4
+				gs 'cum_cleanup'
 				minut = minut + 60
 				sweat = -3
 				manna = manna + 5

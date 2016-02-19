@@ -803,12 +803,23 @@ if $ARGS[0] = 'BjBeerVag':
 		dynamic $sexstart
 		dynamic $sexstart2
 		if protect ! 1:
-			cumpussy = cumpussy + 1
+			sexpartkno = 1
+			gs 'cum_manage'
 			gs 'stat'
-			'Finally, he began to move faster and, powerful final movement drove his cock in her pussy you the most eggs, I groaned and began to finish. You felt warm liquid inside. Then he got up and giving you lick my dick said: "Well, all the boys can to fuck, I printed it."'
+			'Finally, he began to move faster and, in a powerful final movement drove his cock in your pussy, balls deep, you groan and begin to finish. You felt warm liquid inside. Then he got up and giving you lick my dick said: "Well, all the boys can to fuck, I printed it."'
 		else
+			sexcontra = 3
+			sexpartkno = 1
+			gs 'cum_manage
 			protect = 0
-			'Finally, he began to move faster and, powerful final movement drove his cock in her pussy you the most eggs, I groaned and began to finish. You felt inside as he filled the condom. Then he stood up, removing a condom, and giving you to lick his cock said: "Well, all the boys can to fuck, I printed it."'
+			if sexcontra = 4:
+			'Finally, he began to move faster and, in a powerful final movement drove his cock in your pussy, balls deep, you groan and begin to finish. You feel pressure, and then a burst of moisture as he fills the condom, and it gives way. Then he stood up, cum dripping off the broken condom: "Well, all the boys can to fuck, I printed it."''
+			elseif sexcontra = 5:
+			'Finally, he began to move faster and, in a powerful final movement drove his cock in your pussy, balls deep, you groan and begin to finish. You felt inside as he filled the condom. Then he stood up, his condom missing: "Well, all the boys can to fuck, I printed it."''
+			else
+			'Finally, he began to move faster and, in a powerful final movement drove his cock in your pussy, balls deep, you groan and begin to finish. You felt inside as he filled the condom. Then he stood up, removing a condom, and giving you to lick his cock said: "Well, all the boys can to fuck, I printed it."''
+			end
+			sexcontra = 0
 		end
 		'You still lying on his back, weak moaning and making no attempt to get up. Place Victor immediately took Dan. He lay down on top of you and you dutifully pushed his feet in front of him.'
 	
@@ -818,7 +829,11 @@ if $ARGS[0] = 'BjBeerVag':
 			VagRand = RAND (2,3)
 			$boy = 'Dan'
 			dick = 17
-			cumbelly = cumbelly + 1
+			cumprecheck = 1
+			gs 'cum_manage
+			sexpartkno = 1
+			spafinloc = 14
+			gs 'cum_manage
 			minut += 10
 			gs 'stat'  
 			
@@ -838,7 +853,11 @@ if $ARGS[0] = 'BjBeerVag':
 				cls
 				$boy = 'Shulga'
 				dick = 15
-				cumass = cumass + 1
+				cumprecheck = 1
+				gs 'cum_manage
+				sexpartkno = 1
+				spafinloc = 4
+				gs 'cum_manage
 				minut += 10
 				gs 'stat' 
 				
@@ -899,7 +918,9 @@ if $ARGS[0] = 'BjBeerAnal':
 		cls
 		dick = 15
 		$boy = 'Shulga'
-		cumanus = cumanus + 1
+		sexpartkno = 1
+		spafinloc = 3
+		gs 'cum_manage
 		minut += 10
 		gs 'stat'
    
@@ -944,7 +965,9 @@ if $ARGS[0] = 'BjBeerAnal2':
 	AnalRand = RAND (3,4)
 	$boy = 'Dan'
 	dick = 17
-	cumanus = cumanus + 1
+	sexpartkno = 1
+	spafinloc = 3
+	gs 'cum_manage
 	minut += 10
 
 	if mop > 1: mop = 0
@@ -967,7 +990,9 @@ if $ARGS[0] = 'BjBeerAnal2':
 		cls
 		$boy = 'Vitek'
 		dick = 18
-		cumass = cumass + 1
+		sexpartkno = 1
+		spafinloc = 4
+		gs 'cum_manage
 		minut += 10
 		gs 'stat' 
 		

@@ -82,7 +82,7 @@ if hour >= 6 and hour < 20:
 						act 'Finish':gt 'gadukino'
 					end
 					act 'Escape':gt 'gadukino'
-				elseif miraQW > 0 and temp < 7:
+				elseif miraQW > 0 and (temper < 15 or sunWeather = 0) and temp < 7:
 					cls
 					if miraQW < 25:miraQW += 1
 					minut += 10

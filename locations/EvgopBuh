@@ -343,18 +343,18 @@ elseif GorSlut >= 3:
 					minut += 5
 					horny += 10
 					facial += 1
-			$boy = $bname
-			sexpartkno = 1
-			spafinloc = 11
-			gs 'cum_manage'
-			$boy = $bname2
-			sexpartkno = 1
-			spafinloc = 11
-			gs 'cum_manage'
-			$boy = $bname3
-			sexpartkno = 1
-			spafinloc = 11
-			gs 'cum_manage'
+					$boy = $bname
+					sexpartkno = 1
+					spafinloc = 11
+					gs 'cum_manage'
+					$boy = $bname2
+					sexpartkno = 1
+					spafinloc = 11
+					gs 'cum_manage'
+					$boy = $bname3
+					sexpartkno = 1
+					spafinloc = 11
+					gs 'cum_manage'
 					gs 'stat'
 					'<center><img src="images/qwest/alter/Ev/gopdbj3.jpg"></center>'
 					'You closed your eyes and framed his face. Almost immediately you felt like hot jet of sperm fall on your face. Soon the boys run out completely covering your face with sperm.'

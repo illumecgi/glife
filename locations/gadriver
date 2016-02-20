@@ -208,9 +208,9 @@ if $ARGS[0] = 'Gadbitch':
 						pose = 0
 						sub += 1
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						spafinloc = 11
-gs 'cum_manage'
+						gs 'cum_manage'
 						gang += 1
 						bj += 3
 						swallow += RAND(0,3)
@@ -280,11 +280,11 @@ gs 'cum_manage'
 						anus += 1
 						vagina += 1
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						spafinloc = 11
-gs 'cum_manage'
+						gs 'cum_manage'
 						spafinloc = 3
-gs 'cum_manage'
+						gs 'cum_manage'
 						gs 'cum_manage'
 						gang += 1
 						swallow += RAND(0,1)
@@ -353,11 +353,11 @@ gs 'cum_manage'
 							anus += 1
 							vagina += 1
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							spafinloc = 11
-gs 'cum_manage'
+							gs 'cum_manage'
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							gs 'cum_manage'
 							gang += 1
 							swallow += RAND(0,1)
@@ -389,7 +389,7 @@ gs 'cum_manage'
 							gs 'stat'
 								
 							'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex16.jpg"></center>'
-							'After a while, you hear men`s voices, which is rapidly approaching, and in a couple of minutes before you emerge village boys. Seeing Miroslav, they immediately begin to smile obscenely, and in a couple of minutes, You did not hesitate, laid it on the sand and start to fuck in all the cracks...'
+							'After a while, you hear men`s voices, rapidly approaching, and in a couple of minutes the village boys emerge. Seeing Miroslav they smile obscenely, and without hesitation they surround her as she lays on the sand. You sit and watch as they fuck her in all her holes...'
 							
 							act 'Finish':minut += 5 & gt'Gadriver', 'Gadbitch'
 						else
@@ -432,11 +432,11 @@ gs 'cum_manage'
 							anus += 1
 							vagina += 1
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							spafinloc = 11
-gs 'cum_manage'
+							gs 'cum_manage'
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							gs 'cum_manage'
 							gang += 1
 							swallow += RAND(0,1)
@@ -600,7 +600,7 @@ $MitkaGuysRiver = {
 					minut += 5
 					dick = 15
 					spafinloc = 12
-gs 'cum_manage'
+					gs 'cum_manage'
 					bj += 1
 					gs'stat'
 					
@@ -614,7 +614,7 @@ gs 'cum_manage'
 					minut += 10
 					anus += 1
 					spafinloc = 3
-gs 'cum_manage'
+					gs 'cum_manage'
 					dick = 15
 					gs'stat'
 					
@@ -633,7 +633,7 @@ gs 'cum_manage'
 			minut += 5
 			dick = 16
 			spafinloc = 12
-gs 'cum_manage'
+			gs 'cum_manage'
 			bj += 1
 			gs'stat'
 			
@@ -668,7 +668,7 @@ gs 'cum_manage'
 					minut += 5
 					dick = 15
 					spafinloc = 12
-gs 'cum_manage'
+					gs 'cum_manage'
 					bj += 1
 					gs'stat'
 					
@@ -682,7 +682,7 @@ gs 'cum_manage'
 					minut += 10
 					anus += 1
 					spafinloc = 3
-gs 'cum_manage'
+					gs 'cum_manage'
 					dick = 15
 					gs'stat'
 					
@@ -701,7 +701,7 @@ gs 'cum_manage'
 			minut += 10
 			anus += 1
 			spafinloc = 3
-gs 'cum_manage'
+			gs 'cum_manage'
 			dick = 16
 			gs'stat'
 			
@@ -734,7 +734,7 @@ gs 'cum_manage'
 					minut += 5
 					dick = 15
 					spafinloc = 12
-gs 'cum_manage'
+					gs 'cum_manage'
 					bj += 1
 					gs'stat'
 					
@@ -748,7 +748,7 @@ gs 'cum_manage'
 					minut += 10
 					anus += 1
 					spafinloc = 3
-gs 'cum_manage'
+					gs 'cum_manage'
 					dick = 15
 					gs'stat'
 					

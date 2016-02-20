@@ -138,13 +138,8 @@ end
 if $ARGS[0] = 'dolgend':
 	cla
 	*clr
-	cumpussy = 0
-	cumbelly = 0
-	cumass = 0
-	cumanus = 0
-	cumlip = 0
-	cumface = 0
-	cumanus = 0
+	cumspclnt = 1
+	gs 'cum_cleanup'
 	gs'stat'
 
 	'<center><img src="images/img/hasb/d3.jpg"></center>'
@@ -221,7 +216,10 @@ if $ARGS[0] = 'minet':
 		cla
 		*clr
 		swallow = swallow + 1
-		cumlip = cumlip + 1
+		$boy = $husName
+		sexpartkno = 1
+		spafinloc = 12
+		gs 'cum_manage'
 		husband += 1
 
 		'<center><img src="images/picV/swallow.jpg"></center>'
@@ -238,8 +236,11 @@ if $ARGS[0] = 'minet':
 
 		tiprand = RAND(0,1)
 		if tiprand = 0:
-			facial = facial + 1
-			cumface = cumface + 1
+			facial += 1
+			$boy = $husName
+			sexpartkno = 1
+			spafinloc = 11
+			gs 'cum_manage'
 			husband += 1
 
 			'<center><img src="images/picV/facial.jpg"></center>'
@@ -265,6 +266,10 @@ if $ARGS[0] = 'hand':
 	hj = hj + 1
 	minut = minut + 30
 	horny = horny + DOM
+	$boy = $husName
+	sexpartkno = 1
+	spafinloc = 13
+	gs 'cum_manage'
 
 	'<center><img src="images/picV/hand1.jpg"></center>'
 	'You got it <<husDick>> inch cock and began to caress her arms around his hands, moving the skin of purple head.'
@@ -333,10 +338,11 @@ if $ARGS[0] = 'anal':
 	if analplugin = 1:
 		analpluginbonus = 10
 		analplugin = 0
-		spafinloc = 4
-gs 'cum_manage'
+		$boy = $husName
+		sexpartkno = 1
+		spafinloc = 3
+		gs 'cum_manage'
 		minut = minut + 3
-		cumanus = cumanus + 1
 		if anus < husDick:anus = anus + 1
 		horny = horny + ((anus-husDick)*3)
 

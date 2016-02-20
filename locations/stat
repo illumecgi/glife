@@ -1664,10 +1664,14 @@ if arrsize('sparrvol') > 0:
 	cumloc = arrpos('sparrloc',i)
 	if cumloc >= 0 and sparrloc[cumloc] = i and sparrvol[cumloc] > 0:
 		dynamic $temp[1]
-		if swallow >= 10:
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos(''sparrloc'',3) & dynamic $cumeater6"><b><font color="blue">sperm</font></b></a><b> slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
+		if analplugin = 1:
+			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm is stuffed in your ass, corked in by your anal plug.</font></b>'
 		else
-			pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
+			if swallow >= 10:
+				pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>><a href="exec:cumloc = arrpos('sparrloc',3) & dynamic $cumeater6"><b><font color="blue">sperm</font></b></a><b> slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
+			else
+				pl '<b><font color="red"><<$cumnam>>''s <<$cumdisc>>sperm slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
+			end
 		end
 		spdirty = 1
 		spdirtyi = 1

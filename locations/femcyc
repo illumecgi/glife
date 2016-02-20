@@ -109,6 +109,25 @@ if arrsize('sparrvol') > 0:
 				cumarrcon[sparrtmpv] = 0
 			end
 		end
+	else
+		KILLVAR 'spafinloc',cumarrtemp
+		KILLVAR 'sparrage',cumarrtemp
+		KILLVAR 'sparrloc',cumarrtemp
+		KILLVAR '$sparrnam',cumarrtemp
+		KILLVAR 'sparrppt',cumarrtemp
+		KILLVAR 'sparridt',cumarrtemp
+		KILLVAR 'sparrvol',cumarrtemp
+		KILLVAR 'sparrslc',cumarrtemp
+		
+	end
+	if sparrloc[cumarrtemp] = 0 or sparrloc[cumarrtemp] = 3 or sparrloc[cumarrtemp] = 12: sparrvol[cumarrtemp] -= sparrage[cumarrtemp]/2
+	if sparrloc[cumarrtemp] = 17 and sparrage[cumarrtemp] > 48:
+		cumcondslip = 1
+		health -= 3
+		'You feel nauseous.'
+		if rand(0,5) < 5: health -= 2
+	else
+		cumcondslip = 0
 	end
 	if isprok = 0 and sparrage < 5: sparrslc[cumarrtemp] += 1
 	sparrage[cumarrtemp] += 1

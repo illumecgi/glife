@@ -53,7 +53,7 @@ $kafetualet = {
 	!!0.2.6 extension: reworked how quick wash and face wash was supposed to work, it is now uniform in all toilet/bathroom locations
 	!!Removed sweat =- 1 when cum is wiped off clothes
 	!!clrbelo: Amount of clean panties available
-	if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+	if spdirtyi > 0 or spdirtyn > 0:
 		act 'Quick wash (0:15)':
 			cla
 			*clr
@@ -76,13 +76,15 @@ $kafetualet = {
 		end
 	end
 
-	if cumlip > 0 or cumface > 0:
+	if spdirtyv > 0:
 		act 'Clean your face from sperm (0:05)':
 			cla
 			*clr
 			mop = 1
-			cumlip = 0
-			cumface = 0
+			cumspclnt = 12
+			gs 'cum_cleanup'
+			cumspclnt = 9
+			gs 'cum_cleanup'
 			sweat -= 1
 			minut += 5
 			'<center><img src="images/etogame/facesp.jpg"></center>'
@@ -92,11 +94,12 @@ $kafetualet = {
 		end
 	end
 
-	if cumfrot > 0:
+	if spdirtyc > 0:
 		act 'Wipe the cum off your clothes (0:10)':
 			cla
 			*clr
-			cumfrot = 0
+			cumspclnt = 6
+			gs 'cum_cleanup'
 			minut += 10
 			'<center><img src="images/etogame/frotsp.jpg"></center>'
 			'You remove the traces of cum from your clothes.'
@@ -207,8 +210,10 @@ $gividin = {
 							cla
 							*clr
 							swallow += 1
+							$boy = 'Givi'
+							sexpartkno = 1
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							gs 'stat'
 							'<center><img src="images/picV/swallow1.jpg"></center>'
 							'A hot jet of sperm hits the back of your throat. You start to swallow cum, and Givi continues to cum in your mouth. Finally the flow of hot, pungent liquid stops.'
@@ -314,8 +319,10 @@ $ashotdin = {
 									horny += SUB - DOM + ((anus - 18) * 3)
 									anal += 1
 									Ashotsex += 1
+									$boy = 'Ashot'
+									sexpartkno = 1
 									spafinloc = 3
-gs 'cum_manage'
+									gs 'cum_manage'
 
 									if anus < 18:anus += 1
 

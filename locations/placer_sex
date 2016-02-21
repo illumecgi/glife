@@ -8,6 +8,7 @@ dick = rand (15,18)
 if frost > 0: frost =0
 
 $din_room_rape_end = {
+	$temp = $boy
 	*clr & cla
 	'<center><img src="images/qwest/alter/parc_ev/placer_sex124.jpg"></center>'
 	'You woke up in the car completely naked and smeared in sperm. After trying it even as it collected, in the absence of what you have been collecting wipe her mouth. But you did not work. His head throbbed only one thought: "where I was being taken?". You cried and then the car stopped and the door opened the trunk. There was a <<$bname>>, who said,: "shut up bitch", - You dragged out of the car and constantly looking somewhere dragged. "Careful I do not izmazh, you can not see it all in Koncha", - said <<$bname>>, his accomplice.'
@@ -47,6 +48,9 @@ $din_room_rape = {
 			'You tore off her clothes rapists unbuttoned his pants and pulled out, It has full standing, members. One of the guys tried to shove his penis into your mouth with words: "Just try to bite to kill a bitch", but you impacted his lips and tried to turn away, until someone from the waiting their turn is not tired. One grabbed your head, and the other held his nose. So you have nothing to breathe was. And you reflexively opened his mouth, who immediately turned plugged member.'
 			Act 'Further':
 				*clr & cla
+				$boy = 'Rapist'
+				cumprecheck = 1
+				gs 'cum_manage'
 				'<center><img src="images/qwest/alter/parc_ev/placer_sex104.gif"></center>'
 				'Pulling you on the floor and having fastened the handcuffs to the headboard, rapists are located around you, the recently hollowed your mouth crawled from the bottom and lifting you to put a member of the pussy. Removing his hands , he shouted with pleasure when you do not keep your weight collapsed on him, thrust his cock a. Have you noticed the pain and humiliation, as the scream you do not give another member in your mouth. Rapists and tweaked grabs your tits, beaten on the feet, in the face. By deploying your head a hundred to one member of it to another, fucking your mouth. "cool bitch", "suck whore", "Today, you`ll understand what a real fuck", - It swept all sides. '
 				Act 'Further':
@@ -69,7 +73,7 @@ $din_room_rape = {
 								'To suffer such humiliation was higher than our forces, and you angrily bit their dick in your mouth. He yelled as if you were bitten off him his dignity, and not a little bit their:"AAAAA, This litter bite". You just grabbed a lot of hands. And you showered blows, in the face, the pope, in general, anywhere, You shook with pain. One of the monsters took a rope and tied you. "Once again you show your teeth trash, kill!!!", - you are afraid in spite of the evil guys whispered that will docile. "Well, it seems she realized the boys, but you still need to be punished", - said <<$bname>>.'
 									Act 'Further':
 										spafinloc = 3
-gs 'cum_manage'
+										gs 'cum_manage'
 										gs 'cum_manage'
 										gs'stat'
 										*clr & cla
@@ -77,7 +81,7 @@ gs 'cum_manage'
 										'And you began to take just two members. Even forgetting about the resistance, you lie and wait for when these things will end. "You thought it all?", - With these words, <<$bname>>  legs apart sat on your face, you turned away but tried to hurt someone squeezed your breasts. And you cursing,  I had to lick ass hanging right above you. "Yes, a good bitch, lick me, like unruly bitches, so nice to make them obedient", - Tears poured your face, but you are afraid of pain caressing his hairy ass crazed rapist permissiveness. It looks like a picture of your submission, I liked not just hang over your face guy. The double salvo of sperm in the ass and pussy and has an orgasm moan males, was proof of that.'
 										Act 'Further':
 											spafinloc = 11
-gs 'cum_manage'
+											gs 'cum_manage'
 											gs'stat'
 											*clr & cla
 											'<center><img src="images/qwest/alter/parc_ev/placer_sex110.jpg"></center>'
@@ -97,11 +101,11 @@ gs 'cum_manage'
 												guy+=5
 												anus+=2
 												spafinloc = 14
-gs 'cum_manage'
+												gs 'cum_manage'
 												spafinloc = 4
-gs 'cum_manage'
+												gs 'cum_manage'
 												spafinloc = 12
-gs 'cum_manage'
+												gs 'cum_manage'
 												rape += 1
 												vgape = 3
 												agape = 3
@@ -161,15 +165,18 @@ gs 'cum_manage'
 														anus+=2
 														gs 'cum_manage'
 														spafinloc = 14
-gs 'cum_manage'
+														gs 'cum_manage'
 														spafinloc = 4
-gs 'cum_manage'
-														spafinloc = 3
-gs 'cum_manage'
+														gs 'cum_manage'
 														spafinloc = 11
-gs 'cum_manage'
+														gs 'cum_manage'
 														spafinloc = 12
-gs 'cum_manage'
+														gs 'cum_manage'
+														$boy = 'Big C'
+														sexpartkno = 1
+														spafinloc = 3
+														gs 'cum_manage'
+														$boy = 'Rapist'
 														rape += 1
 														orgasm += 2
 														vaginalOrgasm += 1
@@ -230,6 +237,7 @@ gs 'cum_manage'
 }
 
 $din_play_twister = {
+	$boy = $temp
 	minut += 30
 	horny += 10 
 	willpower += 25
@@ -262,6 +270,8 @@ $din_play_twister = {
 				horny += 20
 				gs'stat'
 				*clr & cla
+				cumprecheck = 1
+				gs 'cum_manage'
 				'<center><img src="images/qwest/alter/parc_ev/placer_sex98.jpg"></center>'	
 				'It is enough to moisten your cock saliva. You are estranged from members, pulled off his T-shirt, and gently pushed the boy and told him to lie down, with which-the feline murchaniem, They climbed on him and planted his upright member. You`re back whole body, He threw his head back. hesitated, began to move, your hot hole throbbed, a heart was beating like crazy. <<$bname>>  Buffet hands stroking your body is hip, ass, sisechki. At the touch of his hand on your body shiver ran, and when it became a member of the boy rhythmically peck your hole, you become deeply breathe, and then moan. You jump on a limb, then taking it out of her vagina, sharply driving it to its full length.'
 				Act 'Further':
@@ -284,7 +294,14 @@ $din_play_twister = {
 							vaginalOrgasm += 1
 							guy+=1
 							bj += 1
-							cumass = cumass + 1
+							sexpartkno = 1
+							spafinloc = 1
+							sexvolume = 20
+							gs 'cum_manage'
+							sexpartkno = 1
+							spafinloc = 3
+							sexvolume = 20
+							gs 'cum_manage'
 							gs'stat'
 							*clr & cla
 							'<center><img src="images/qwest/alter/parc_ev/placer_sex101.jpg"></center>'
@@ -326,7 +343,7 @@ $din_play_card_sex = {
 					bj += 2
 					swallow+= 1
 					spafinloc = 12
-gs 'cum_manage'
+					gs 'cum_manage'
 					throat+= 1
 					facial+=1
 					guy+=2
@@ -339,10 +356,20 @@ gs 'cum_manage'
 					vaginalOrgasm += 1
 					gs'stat'
 					*clr & cla
+					$boy = $bname2
+					cumprecheck = 1
 					'<center><img src="images/qwest/alter/parc_ev/placer_sex82.jpg"></center>'
 					'You have not really control what happens around. You guys fucked, unceasingly, changing, occasionally.  Throwing your feet on his shoulders, <<$bname2>> your pussy rammed, and <<$bname>> navisnuv over you just fucked your mouth. <<$bname>> groaned, and his cock even more swollen. Ston ... <<$bname>> I leaned forward, and your mouth filled with sticky seed, time, and again cutting and twitching, cock portion of the portion filled with his sperm in her mouth, you swallow and swallow. Member of the ends in the mouth, Member fucking your pussy. Orgasm you covered, Though expected, but very much.'
 					Act 'Further':
-						cumbelly = cumbelly + 1
+						gs 'cum_manage
+						sexpartkno = 1
+						spafinloc = 1
+						sexvolume = 10
+						gs 'cum_manage'
+						sexpartkno = 1
+						spafinloc = 14
+						sexvolume = 30
+						gs 'cum_manage'
 						gs'stat'
 						*clr & cla
 						'<center><img src="images/qwest/alter/parc_ev/placer_sex83.jpg"></center>'
@@ -420,8 +447,13 @@ $din_play_card_stript = {
 											horny += 20
 											bj += 2
 											swallow+= 1
-											spafinloc = 12
-gs 'cum_manage'
+											sexpartkno = 1
+											spafinloc = 11
+											gs 'cum_manage'
+											$boy = $bname2
+											sexpartkno = 1
+											spafinloc = 11
+											gs 'cum_manage'
 											throat+= 1
 											facial+=2
 											guy+=2
@@ -530,6 +562,8 @@ $din_stay_in_bed = {
 				horny += 30
 				gs'stat'
 				*clr & cla
+				cumprecheck = 1
+				gs 'cum_manage
 				'<center><img src="images/qwest/alter/parc_ev/placer_sex49.jpg"></center>'
 				'Kneeling over a member of a Man. Slightly-slightly parted his lips with one hand, and the other holding member, you slowly lowered so, that vyshi inner lips clung to his cock in a sort of a kiss. "kissing" several times, You fell and sat on her hips Man. Within minutes, you sat perfectly still. motionlessly, but not in vain. You "worked" the vaginal muscles clutching his penis, something completely relaxing the muscles. <<$bname>>, much moaning, It seems this kind of caresses, He liked. You yourself had so much fun on the sensations, which occurred inside your pussy.'
 				Act 'Become cancer':

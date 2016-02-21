@@ -70,12 +70,8 @@ end
 if $ARGS[0] = 'swim':
 	cla
 	*clr
-	cumpussy = 0
-	cumbelly = 0
-	cumass = 0
-	cumlip = 0
-	cumface = 0
-	cumfrot = 0
+	cumspclnt = 4
+	gs 'cum_cleanup'
 	minut += 60
 	sweat = -3
 	manna += 5

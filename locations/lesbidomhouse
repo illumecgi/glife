@@ -33,7 +33,7 @@ elseif temp >= 2:
 			minut += 5
 			gs'stat'
 
-			'<center><img src="images/etogame/irinaroom.jpg"></center>'
+			'<center><img src="images/pic/irinaroom.jpg"></center>'
 			'You look around the apartment and it is very clean, but it doesn''t feel comfortable.'
 			'"It''s not the most cozy of appartments." you say, and you''re immediately met with silence and a cold stare.'
 			'You become very uncomfortable.'
@@ -198,6 +198,7 @@ if $ARGS[0] = 'ev1':
 					spank += 1
 					sweat += 1
 					spanked = 3
+					spankedtime = totminut
 					gs'stat'
 						
 					'<center><img src="images/picQW/Mistress/subrefuse3.jpg"></center>'
@@ -255,6 +256,7 @@ if $ARGS[0] = 'ev1':
 				horny = 0
 				spank += 1
 				spanked = 2
+				spankedtime = totminut
 				sweat += 1
 				sub += 1
 				gs'stat'
@@ -572,6 +574,7 @@ if $ARGS[0] = 'ev1':
 				horny = 0
 				spank += 1
 				spanked = 3
+				spankedtime = totminut
 				gs'stat'
 	
 				'<center><img src="images/picQW/Mistress/subrefuse9.jpg"></center>'
@@ -1084,6 +1087,7 @@ if $ARGS[0] = 'ev1':
 						horny = 0
 						spank += 1
 						spanked = 2
+						spankedtime = totminut
 						sweat += 1
 						temp = RAND(0,2)
 						gs'stat'
@@ -1269,6 +1273,7 @@ if $ARGS[0] = 'ev1':
 					minut += 40
 					spank += 1
 					spanked += 3
+					spankedtime = totminut
 					fingal = 1
 					gs'stat'
 					
@@ -1353,6 +1358,7 @@ if $ARGS[0] = 'ev1':
 							if spank < 30: horny = 0
 							spank += 1
 							spanked += 2
+							spankedtime = totminut
 							gs'stat'
 	
 							'<center><img src="images/picQW/Mistress/sub48.jpg"></center>'
@@ -1703,6 +1709,7 @@ if $ARGS[0] = 'ev1':
 						spank += 1
 						sweat += 2
 						spanked = 3
+						spankedtime = totminut
 						gs'stat'
 
 						'<center><img src="images/picQW/Mistress/sub70.jpg"></center>'
@@ -2015,6 +2022,7 @@ if $ARGS[0] = 'ev1':
 							minut += 40
 							spank += 1
 							spanked += 3
+							spankedtime = totminut
 							fingal = 1
 							gs'stat'
 

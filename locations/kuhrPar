@@ -17,7 +17,7 @@ lcolor = rgb(106, 90, 205)
 'The kitchen is not very impressive, but it has everything your family needs. Since everyone has the habit of eating at different times, Mom usually pre-cooks the meals and stores them in the fridge. Of course, you could also just have a snack if you''re not that hungry.'
 gs 'family'
 
-act 'Eat (0:30)':
+act 'Eat a meal (0:30)':
 	cla
 	*clr
 	gs 'stat'
@@ -91,9 +91,9 @@ act 'Have a snack (0:15)':
 	act 'Get up from the table':gt $locM, $metkaM
 end
 
-act 'Drink':
+act 'Have a cup of tea (0:05)':
 	cls
-
+	minut += 5
 	if water >= 20:
 		'You don''t need any more tea.'
 	else
@@ -197,7 +197,7 @@ if lekarstvo > 0:
 			'<center><img src="images/inBed/lekr<<picrand>>.jpg"></center>'
 			'You swallow the pill, and shortly after you feel a bit better.'
 
-			act 'Move away':gt $curloc
+			act 'Continue':gt $curloc
 		end
 	end
 end
@@ -227,7 +227,7 @@ if vitamin > 0:
 
 			'You take some vitamins to stay healthy.'
 
-			act 'Move away':gt $curloc
+			act 'Continue':gt $curloc
 		end
 	end
 end

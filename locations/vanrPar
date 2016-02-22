@@ -36,9 +36,8 @@ lcolor = rgb(106, 90, 205)
 '<center><b><font color="maroon">Bathroom</font></b></center>'
 ! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
 '<center><img src="images/qwest/alter/vanrPar.jpg"></center>'
-'The bathroom is very small and unimpressive.'
-'Above the sink hangs a <a href="exec:GT ''mirror'',''start''">mirror</a>.'
-if vanr_hanger = 1: 'Next to the sink, you find your neatly folded <a href="exec:dynamic $vanr_hanger_dress & tanga = tanga_hanger & GT ''vanrPar'' ">clothes</a>'
+'The bathroom is very small and unimpressive. Nevertheless, it has everything you need: a shower, toilet, <a href="exec:GT ''mirror'',''start''">mirror</a>, sink and even a bath tub.'
+if vanr_hanger = 1: 'Next to the sink, you find the neatly folded <a href="exec:dynamic $vanr_hanger_dress & tanga = tanga_hanger & GT ''vanrPar'' ">clothes</a> Mom washed for you'.
 
 if stanok > 0:'Your razor will last for <b><<stanok>></b> more shavings.'
 !WD: heal chafe
@@ -55,8 +54,8 @@ dynamic $bath
 
 if pirsA + pirsB + pirsC + pirsD + pirsE + pirsF + pirsN + pirsG + pirsGL > 0:'<a href="exec:dynamic $pirManage">Manage Piercings</a>'
 
-if fillimplant = 1 and siliconeBag >= 1:'<a href="exec:cls & siliconeBag -= 1 & silicone += 10 & gt $curloc">Inject silicone into breast implants.</a>'
-if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $curloc">Drain silicone from breast implants.</a>'
+if fillimplant = 1 and siliconeBag >= 1:'<a href="exec:cls & siliconeBag -= 1 & silicone += 10 & gt $curloc">Inject silicone into breast implants</a>'
+if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $curloc">Drain silicone from breast implants</a>'
 
 dynamic $bteeth
 
@@ -217,8 +216,9 @@ if mosolmaz > 0 and mosol > 0:
 end
 
 if pregtest > 0:
-	act 'Do a pregnancy test':
+	act 'Do a pregnancy test (0:05)':
 		cla
+		minut += 5
 		pregtest -= 1
 		gs 'stat'
 

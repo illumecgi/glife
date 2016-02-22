@@ -1,16 +1,16 @@
 # dinfather
 
 gs 'fathersex'
-!_____________________Button "Chat" in the apartment _____________________________
+!!!These events can trigger randomly when you 'Chat' with your stepfather in the living room, if your relationship is good and you are attractive enough
 $d_father_act[1]={
 	if horny>=50 or TouchedByFather=1:
-		act 'It is tempting to bend':
+		act 'You feel like teasing him':
 			cls
 			minut+=5
 			gs 'stat'
 			horny+=RAND(1,5)
 			'<center><img src="images/qwest/alter/father/fatherim30.jpg"></center>'
-			'Obeying momentary impulse, you with a playful smile on his lips quite naturally and gently lean forward, providing your stepfather a view of your <<$titsize>> breasts.'
+			'In a moment of horniness, you slowly and teasingly bend over with a playful smile on your lips, providing your stepfather with an amazing view of your <<$titsize>> breasts.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -19,24 +19,24 @@ $d_father_act[1]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				'Your stepfather is clearly embarrassed and surprised by your trick. His eloquent "Cough-cough" leads you to the feeling and you feel uncomfortable from-for their behavior.'
+				'Your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable.'
 			end
 			if fatherLust=1:
-				'"- Oh..." - Stepfather did not expect this from you, but his involuntary exhalation and kindled eyes you know, he is, least, very pleasant.'
+				'Even though he did not expect this from you, you can tell by the spark in his eyes and his heavier breathing that he definitely likes what he sees.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_father_act[2]={
 	if horny>=90 or TouchedByFather=1:
-		act 'Stare at his crotch':
+		act 'Stare at his groin as you talk':
 			cls
 			minut+=5
 			gs 'stat'
 			horny+=RAND(1,5)
 			'<center><img src="images/qwest/alter/father/fatherim28.jpg"></center>'
-			'Unable to resist, you look at it through the pants bristling member, and, are not aware of their actions, involuntarily start with one hand to knead her breasts.'
+			'Unable to stop yourself, you stare at his groin and notice the outline of his erect cock through the fabric. Absent-mindedly you bring a hand to your breasts and knead it gently, letting out a barely audible moan.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -45,12 +45,12 @@ $d_father_act[2]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
+				'Even though your body is definitely having an effect on him your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable.'
 			end
 			if fatherLust=1:
-				'Stepfather instead of answering mumbled something completely unintelligible, but his greedy look, he devoured you, and you understand the fly rearing, the effect has surpassed all expectations.'
+				'Your acts have derailed his train of thought, and your stepfather just mumbles something unintelligible as he devours you with his eyes. You can tell from his look that he wants you.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
@@ -60,7 +60,7 @@ $d_father_act[3]={
 			cls
 			minut+=5
 			horny+=RAND(1,5)
-			'You, as if by chance, slightly-Spreading a little leg during a conversation, opening his eyes to your crotch.'
+			'You, while pretending to not notice, slowly spread your legs as you talk.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -69,70 +69,71 @@ $d_father_act[3]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. He tears off her panties on your vzglya, which leads you into the feeling and you feel uncomfortable from-for their behavior.'
-				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim24.jpg"></center>' & 'Eyes stepfather climb on his forehead when he realizes what he saw. You no panties, and he sees your tender young pussy. "<<$nickname>>, immediately go dress pants." - with severity in his voice he said.'
+				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'You notice your stepfather''s eyes darting down while you talk, and suddenly his face turns beet red. You look down and notice your skimpy underwear did a very poor job of hiding your pussy. Your stepfather is clearly embarrassed and surprised. He loudly clears his throat and says "<<$nickname>> don''t do that, that''s no way for a lady to behave. And go put some normal underwear on."'
+				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim24.jpg"></center>' & 'You notice your stepfather''s eyes darting down while you talk, and suddenly his face turns beet red. "What''s wrong?" you ask him innocently, knowing full well you''re not wearing underwear and that he has a great view of your bare pussy. You''re not fooling him though, and he doesn''t appreciate your teasing in the slightest. "<<$nickname>>, stop that at once and go put some pants on."'
 			end
 			if fatherLust=1:
-				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Stepfather presses you to her, His eyes burn with the desire. At this time, his hands roamed your thighs and buttocks. You have not noticed how the hands of his stepfather pushed aside her panties and began to fondle your ass'
-				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim26.jpg"></center>' & '"<<$nickname>>... I thought? Or do you not wearing panties... Spread your legs wider,, Dad must ensure..." - You Spreading her legs wide, and the hands of his stepfather unceremoniously examined your pussy, undisguised linen.'
+				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Your stepfather realizes what you''re up to and pulls you closer to him, desire burning in his eyes. He runs his hands over your ass cheeks and thighs, petting and kneading them, and then pushes your panties to the side. Two of his fingers are exploring your sphincter, rubbing and teasing you. "Is there something you want, <<$nickname>>?" he asks with a smug grin on his face, knowing he turned the tables on you. All you can do is whimper in response.'
+				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim26.jpg"></center>' & 'Your stepfather gets a glimpse of your bare pussy and realizes what you''re up to. "<<$nickname>>... are you not wearing panties? Get down on the couch and spread your legs for me, Daddy has to know now." You do as he says, lean back on the couch and spread wide. He kneels in front of you, pulls your clothes to the side and rubs your pussy and thighs with his rough hands. "Just as I thought, you little minx!" he says with a grin on his face. After he had his fun he helps you get back up and even helps you straighten your clothes, his hands lingering on your hips and ass a few seconds longer than is needed.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
+!!! These events can trigger when you 'Chat' with your stepfather in the living room.
 $d_father[1]={
-!scandal stepfather
-'You are trying to talk with her stepfather, but he refuses to talk to you.'
+!He hates you
+'You try to have a conversation with your stepfather, but he dislikes you too much to even pretend to be interested in what you have to say.'
 	if sorryday!daystart:
 		act 'Apologize':
 		cla
 		sorryday=daystart
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
-		'You apologize to her stepfather, and he seems to have forgiven.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You profusely apologize to your stepfather, and after a while you can tell his attitude towards you is slightly milder.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_father[2]={
-!strained relations
-'You are trying to talk with her stepfather, but he talks to you dry.'
+!He doesn''t like you very much
+'You try to have a conversation with your stepfather, but he''s not really interested and barely has anything to contribute while you do all the talking.'
 	if sorryday!daystart:
-		act 'Trying to smooth relations':
+		act 'Try to get on his good side':
 		cla
 		sorryday=daystart
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
-		'You suck up to her stepfather, and he begins to think you had better apply.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You spend some time trying to get on your stepfather''s good side, and you feel like he likes you a bit more after you show interest in the things he enjoys.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_father[3]={
-!gg good relations but not beautiful
+!Good relationship, but you''re not pretty enough
 fatherTalk = rand (1,5)
 	if fatherTalk = 1:
-	'Chatted, are you leaving'
+	'You enjoy a short talk with your stepfather.'
 	end
 	if fatherTalk = 2:
-	'You asked her stepfather, he met with his mother. Stepfather scratched already balding head and replied,. - "I then worked as a taxi driver. To bring up such as Natasha, your mom. She had then been quite soplyushkoy, but he has managed to marry the husband of the class-mate and give birth to you with Anya. Your father, I did not know, I saw only a couple of times. I know that his name was Mikhail Kuznetsov. He went somewhere, in another town."'
+	'You ask your stepfather how he met your mother. Your stepfather scratches his slightly balding head and replies: "I used to work as a taxi driver back then, drove your mother to places from time to time and we got along very well. Natasha is a strong and independant woman, raising you and Anya all by herself after she left your father. I didn''t know him very well, I''ve only met him a couple of times. All I know is that his name is Mikhail Kuznetsov, and that he moved to a different city soon after he and your mother divorced.'
 	end
 	if fatherTalk = 3:
-	'You asked about his stepfather`s work. Stepfather reached crunching joints. "Earlier Takser. Now tired. And dangerous and old. I bought a Gazelle and now I`m on the pickup truck breed products hucksters. You know yourself, I have two garages, one is our Volga, in another, I keep Gazelle."'
+	'You ask your stepfather about his work. Your stepfather reaches for his aching joints, with a grimace on his face. "I used to be a taxi driver. It was hard work though, often working many hours a day, and it could be dangerous too. With some money we saved up I bought a Gazelle pickup truck, and now I drive that selling goods and making deliveries. As you know I have two garages; one for our Volga, and the other one for the Gazelle."'
 	end
 	if fatherTalk = 4:
-	'Stepfather tells you a funny story: "You have a call to the caf? Drove. A man puts his wife in the back seat, said address, and that it-the style: "Yes, dear, I`ll stay here more, so do not wait too early". - I rode down the road, To expand and, returning back past the cafe, I see that the same man waving, Well, I think you never know what forget it. Stop, A man without a second thought sits in the front seat and, talking on the phone, He says into the phone "Yes, I sent my mymra, generally, wait for me, I will soon"...'
+	'Your stepfather tells you a funny story.'
 	end
 	if fatherTalk = 5:
-	'Stepfather tells you a funny story: "Which-the long holidays picked up couple. Both drunk - like shoemakers! Well, I think, Now give a light, but no - quietly asleep in the back seat. Drove them, man says, wait a minute, pier, wife sit, I bear you money. I agreed, What to do-then. But he really brought money. I still had four call, but people sat all one. And now I turn to the gas station... Watching: in the rearview mirror that-the furry, incomprehensible, grunts and pulled me. I almost cried from fear! It turned, husband money-then gave, and forgot to pick up his wife. Here she is with me and rolled. The funny, when I brought her home, he did not want her to open the door: I have, speaks, wife at home. She vzvoet: "I now look, Who have you got a wife!"'
+	'Your stepfather tells you a funny joke.'
 	end
 }
 $d_father[4]={
-!good relations and Messrs attractive
+!Good relationship, you''re attractive
 talkrand=rand(1,100)
 	if talkrand>=20:dynamic $d_father[3]
 	if talkrand<20:
-	'You sit relaxed and laughing, when he tells you another funny story.'
+	'You relax and share funny stories with your stepfather.'
 	if father>=40 and father<60:FatherMolest = RAND (1,8)
 	if father>=60 and father<80:FatherMolest = RAND (1,4)
 	if father>=80:FatherMolest = RAND (1,2)
@@ -148,13 +149,13 @@ talkrand=rand(1,100)
 !_____________________Button "Chat" garage _____________________________
 $d_fathergar_act[1]={
 	if horny>=50 or TouchedByFather=1:
-		act 'It is tempting to bend':
+		act 'You feel like teasing him':
 			cls
 			minut+=5
 			gs 'stat'
 			horny+=RAND(1,5)
 			'<center><img src="images/qwest/alter/father/fatherim30.jpg"></center>'
-			'Obeying momentary impulse, you with a playful smile on his lips quite naturally and gently lean forward, providing your stepfather a view of your <<$titsize>> breasts.'
+			'In a moment of horniness, you slowly and teasingly bend over with a playful smile on your lips, providing your stepfather with an amazing view of your <<$titsize>> breasts.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -163,24 +164,24 @@ $d_fathergar_act[1]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
+				'Your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable.'
 			end
 			if fatherLust=1:
-				'"- Oh..." - Stepfather did not expect this from you, but his involuntary exhalation and kindled eyes you know, he is, least, very pleasant.'
+				'Even though he did not expect this from you, you can tell by the spark in his eyes and his heavier breathing that he definitely likes what he sees.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fathergar_act[2]={
 	if horny>=90 or TouchedByFather=1:
-		act 'Staring at him strut':
+		act 'Stare at his groin as you talk':
 			cls
 			minut+=5
 			gs 'stat'
 			horny+=RAND(1,5)
 			'<center><img src="images/qwest/alter/father/fatherim28.jpg"></center>'
-			'Unable to resist, you look at it through the pants bristling member, and, are not aware of their actions, involuntarily start with one hand to knead her breasts.'
+			'Unable to stop yourself, you stare at his groin and notice the outline of his erect cock through the fabric. Absent-mindedly you bring a hand to your breasts and knead it gently, letting out a barely audible moan.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -189,22 +190,22 @@ $d_fathergar_act[2]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
+				'Even though your body is definitely having an effect on him your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable.'
 			end
 			if fatherLust=1:
-				'Stepfather instead of answering mumbled something completely unintelligible, but his greedy look, he devoured you, and you understand the fly rearing, the effect has surpassed all expectations.'
+				'Your acts have derailed his train of thought, and your stepfather just mumbles something unintelligible as he devours you with his eyes. You can tell from his look that he wants you.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fathergar_act[3]={
 	if horny>=100 or TouchedByFather=1:
-		act 'Extend the legs':
+		act 'Spread your legs':
 			cls
 			minut+=5
 			horny+=RAND(1,5)
-			'You, as if by chance, slightly-Spreading a little leg during a conversation, opening his eyes to his crotch.'
+			'You, while pretending to not notice, slowly spread your legs as you talk.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -213,42 +214,42 @@ $d_fathergar_act[3]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. He tears off her panties on your vzglya, which leads you into the feeling and you feel uncomfortable from-for their behavior.'
-				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim24.jpg"></center>' & 'Eyes stepfather climb on his forehead when he realizes what he saw. You no panties, and he sees your tender young pussy. "- <<$nickname>>, immediately go dress pants." - with severity in his voice he said. '
+				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'You notice your stepfather''s eyes darting down while you talk, and suddenly his face turns beet red. You look down and notice your skimpy underwear did a very poor job of hiding your pussy. Your stepfather is clearly embarrassed and surprised. He loudly clears his throat and says "<<$nickname>> don''t do that, that''s no way for a lady to behave. And go put some normal underwear on."'
+				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim24.jpg"></center>' & 'You notice your stepfather''s eyes darting down while you talk, and suddenly his face turns beet red. "What''s wrong?" you ask him innocently, knowing full well you''re not wearing underwear and that he has a great view of your bare pussy. You''re not fooling him though, and he doesn''t appreciate your teasing in the slightest. "<<$nickname>>, stop that at once and go put some pants on."'
 			end
 			if fatherLust=1:
-				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Stepfather presses you to her, His eyes burn with the desire. At this time, his hands roamed your thighs and buttocks. You have not noticed how the hands of his stepfather pushed aside her panties and began to fondle your ass'
-				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim26.jpg"></center>' & '"- <<$nickname>>... I thought? Or do you not wearing panties... Spread your legs wider,, Dad must ensure..." - You Spreading her legs wide,and the hands of his stepfather unceremoniously examined your pussy, undisguised linen.'
+				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Your stepfather realizes what you''re up to and pulls you closer to him, desire burning in his eyes. He runs his hands over your ass cheeks and thighs, petting and kneading them, and then pushes your panties to the side. Two of his fingers are exploring your sphincter, rubbing and teasing you. "Is there something you want, <<$nickname>>?" he asks with a smug grin on his face, knowing he turned the tables on you. All you can do is whimper in response.'
+				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim26.jpg"></center>' & 'Your stepfather gets a glimpse of your bare pussy and realizes what you''re up to. "<<$nickname>>... are you not wearing panties? Get down on the ground and spread your legs for me, Daddy has to know now." You do as he says, lie down on the ground and spread your legs wide. He kneels in front of you, pulls your clothes to the side and rubs your pussy and thighs with his rough hands. "Just as I thought, you little minx!" he says with a grin on his face. After he had his fun he helps you get back up and even helps you straighten your clothes, his hands lingering on your hips and ass a few seconds longer than is needed.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fathergar[1]={
-!scandal stepfather
-'You are trying to talk with her stepfather, but he refuses to talk to you.'
+!He hates you
+'You try to have a conversation with your stepfather, but he dislikes you too much to even pretend to be interested in what you have to say.'
 	if sorryday!daystart:
 		act 'Apologize':
 		cla
 		sorryday=daystart
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
-		'You apologize to her stepfather, and he seems to have forgiven.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You profusely apologize to your stepfather, and after a while you can tell his attitude towards you is slightly milder.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fathergar[2]={
-!strained relations
-'You are trying to talk with her stepfather, but he talks to you dry.'
+!He doesn''t like you very much
+'You try to have a conversation with your stepfather, but he''s not really interested and barely has anything to contribute while you do all the talking.'
 	if sorryday!daystart:
-		act 'Trying to smooth relations':
+		act 'Try to get on his good side':
 		cla
 		sorryday=daystart
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
-		'You suck up to her stepfather, and he, it seems, you better start to apply.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You spend some time trying to get on your stepfather''s good side, and you feel like he likes you a bit more after you show interest in the things he enjoys.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
@@ -257,19 +258,19 @@ $d_fathergar[3]={
 !Block any babble that can stick to any act
 fatherTalk = rand (1,5)
 	if fatherTalk = 1:
-	'Chatted, are you leaving'
+	'You enjoy a short talk with your stepfather.'
 	end
 	if fatherTalk = 2:
-	'You asked her stepfather, he met with his mother. Stepfather scratched already balding head and replied,. - "I then worked as a taxi driver. To bring up such as Natasha, your mom. She had then been quite soplyushkoy, but he has managed to marry the husband of the class-mate and give birth to you with Anya. Your father, I did not know, I saw only a couple of times. I know that his name was Mikhail Kuznetsov. He went somewhere, in another town."'
+	'You ask your stepfather how he met your mother. Your stepfather scratches his slightly balding head and replies: "I used to work as a taxi driver back then, drove your mother to places from time to time and we got along very well. Natasha is a strong and independant woman, raising you and Anya all by herself after she left your father. I didn''t know him very well, I''ve only met him a couple of times. All I know is that his name is Mikhail Kuznetsov, and that he moved to a different city soon after he and your mother divorced.'
 	end
 	if fatherTalk = 3:
-	'You asked about his stepfather`s work. Stepfather reached crunching joints. "Earlier Takser. Now tired. And dangerous and old. I bought a Gazelle and now I`m on the pickup truck breed products hucksters. You know yourself, I have two garages, one is our Volga, in another, I keep Gazelle."'
+	'You ask your stepfather about his work. Your stepfather reaches for his aching joints, with a grimace on his face. "I used to be a taxi driver. It was hard work though, often working many hours a day, and it could be dangerous too. With some money we saved up I bought a Gazelle pickup truck, and now I drive that selling goods and making deliveries. As you know I have two garages; one for our Volga, and the one we''re at now."'
 	end
 	if fatherTalk = 4:
-	'Stepfather tells you a funny story: "You have a call to the cafe. Drove. A man puts his wife in the back seat, said address, and that it-the style: "Yes, dear, I`ll stay here more, so do not wait too early". - I rode down the road, To expand and, returning back past the cafe, I see that the same man waving, Well, I think you never know what forget it. Stop, A man without a second thought sits in the front seat and, talking on the phone, He says into the phone "Yes, I sent my mymra, generally, wait for me, I will soon"...'
+	'Your stepfather tells you a funny story.'
 	end
 	if fatherTalk = 5:
-	'Stepfather tells you a funny story: "Which-the long holidays picked up couple. Both drunk - like shoemakers! Well, I think, Now give a light, but no - quietly asleep in the back seat. Drove them, man says, wait a minute, pier, wife sit, I bear you money. I agreed, What to do-then. But he really brought money. I still had four call, but people sat all one. And now I turn to the gas station... Watching: in the rearview mirror that-the furry, incomprehensible, grunts and pulled me. I almost cried from fear! It turned, husband money-then gave, and forgot to pick up his wife. Here she is with me and rolled. The funny, when I brought her home, he did not want her to open the door: I have, speaks, wife at home. She vzvoet: "I now look, Who have you got a wife!"'
+	'Your stepfather tells you a funny joke.'
 	end
 }
 $d_fathergar[4]={
@@ -277,7 +278,7 @@ $d_fathergar[4]={
 	talkrand=rand(1,100)
 	if talkrand>=20:dynamic $d_fathergar[3]
 	if talkrand<20:
-		'You sit relaxed and laughing, when he tells you another funny story.'
+		'You relax and share funny stories with your stepfather.'
 		if father>=40 and father<60:FatherMolest = RAND (1,8)
 		if father>=60 and father<80:FatherMolest = RAND (1,4)
 		if father>=80:FatherMolest = RAND (1,2)
@@ -294,14 +295,14 @@ $d_fathergar[4]={
 !_____________________Button "HELP" garage _____________________________
 $d_fatherhelp_act[1]={
 	if horny>=50 or TouchedByFather=1:
-		act 'Accidentally drop the item':
+		act '''Accidentally'' drop the wrench':
 			cla
 			minut+=5
 			gs 'stat'
 			horny+=RAND(1,5)
 			'<center><img src="images/nigma/gor/father/gar/father.gar.pre<<rand(0,5)>>.jpg"></center>'
 
-			'Obeying momentary impulse, You cry falshivm "Oh!" accidentally drop the item and lean, to pick it up, without bending the knees, which provides an excellent view of your stepfather your ass.'
+			'Feeling horny, you decide to tease your stepfather while you help him in the garage. You let the wrench slip out of your hand, the loud clattering of metal on the stone floor ringing throughout the garage. "Oops! I can be so clumsy sometimes..." you say with a smile, bending over to pick up the wrench without bending your knees. In this pose, you give your stepfather a great view of your ass.'
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
 			if vnesh >= 30 and vnesh < 50:fatherLust = Rand (1,2)
@@ -310,22 +311,22 @@ $d_fatherhelp_act[1]={
 				cls
 				horny-=RAND(1,5)
 				gs 'stat'
-				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim29.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
-				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim27.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. His phrase uttered with a smile: "<<$nickname>>, and cowards lost something?" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
+				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim29.jpg"></center>' & 'Even though your body is definitely having an effect on him your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel uncomfortable.'
+				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim27.jpg"></center>' & 'The sight of your ass makes your stepfather uncomfortable. "Clumsy you say? It seems like that wrench is not the only thing you let slip today", he snarks, referring to your lack of underwear. His snarky tone and disapproving look make you feel a bit awkward.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fatherhelp_act[2]={
 	if horny>=30 or TouchedByFather=1:
-		act 'Staring at him strut':
+		act 'Fondle your breasts as you talk':
 			cls
 			minut+=5
 			gs 'stat'
 			horny+=RAND(1,5)
 			'<center><img src="images/qwest/alter/father/fatherim28.jpg"></center>'
-			'Unable to resist, you look at it through the pants bristling member, and, are not aware of their actions, involuntarily start with one hand to knead her breasts.'
+			'In a moment of horniness, you slowly and teasingly bend over with a playful smile on your lips, providing your stepfather with an amazing view of your <<$titsize>> breasts.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -334,22 +335,22 @@ $d_fatherhelp_act[2]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
+				'Your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable.'
 			end
 			if fatherLust=1:
-				'Stepfather instead of answering mumbled something completely unintelligible, but his greedy look, he devoured you, and you understand the fly rearing, the effect has surpassed all expectations.'
+				'Even though he did not expect this from you, you can tell by the spark in his eyes and his heavier breathing that he definitely likes what he sees.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fatherhelp_act[3]={
 	if horny>=60 or TouchedByFather=1:
-		act 'Extend the legs':
+		act 'Spread your legs':
 			cls
 			minut+=5
 			horny+=RAND(1,5)
-			'You, as if by chance, slightly-Spreading a little leg during a conversation, opening his eyes to his crotch.'
+			'You, while pretending to not notice, slowly spread your legs as you talk.'
 
 			if vnesh < 15:fatherLust = 2
 			if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -358,42 +359,42 @@ $d_fatherhelp_act[3]={
 			if fatherLust>=2:
 				horny-=RAND(1,5)
 				gs 'stat'
-				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. He tears off her panties on your vzglya, which leads you into the feeling and you feel uncomfortable from-for their behavior.'
-				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim52.jpg"></center>' & 'Eyes stepfather climb on his forehead when he realizes what he saw. You no panties, and he sees your tender young pussy. "<<$nickname>>, immediately go dress pants." - with severity in his voice he said.'
+				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'You notice your stepfather''s eyes darting down while you talk, and suddenly his face turns beet red. You look down and notice your skimpy underwear did a very poor job of hiding your pussy. Your stepfather is clearly embarrassed and surprised. He loudly clears his throat and says "<<$nickname>> don''t do that, that''s no way for a lady to behave. And go put some normal underwear on."'
+				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim24.jpg"></center>' & 'You notice your stepfather''s eyes darting down while you talk, and suddenly his face turns beet red. "What''s wrong?" you ask him innocently, knowing full well you''re not wearing underwear and that he has a great view of your bare pussy. You''re not fooling him though, and he doesn''t appreciate your teasing in the slightest. "<<$nickname>>, stop that at once and go put some pants on."'
 			end
 			if fatherLust=1:
-				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Stepfather presses you to her, His eyes burn with the desire. At this time, his hands roamed your thighs and buttocks. You have not noticed how the hands of his stepfather pushed aside her panties and began to fondle your ass'
-				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim26.jpg"></center>' & '"<<$nickname>>... I thought? Or do you not wearing panties... Spread your legs wider,, Dad must ensure..." - You Spreading her legs wide, and the hands of his stepfather unceremoniously examined your pussy, undisguised linen.'
+				if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Your stepfather realizes what you''re up to and pulls you closer to him, desire burning in his eyes. He runs his hands over your ass cheeks and thighs, petting and kneading them, and then pushes your panties to the side. Two of his fingers are exploring your sphincter, rubbing and teasing you. "Is there something you want, <<$nickname>>?" he asks with a smug grin on his face, knowing he turned the tables on you. All you can do is whimper in response.'
+				if tanga=0:'<center><img src="images/qwest/alter/father/fatherim26.jpg"></center>' & 'Your stepfather gets a glimpse of your bare pussy and realizes what you''re up to. "<<$nickname>>... are you not wearing panties? Get down on the ground and spread your legs for me, Daddy has to know now." You do as he says, lie down on the ground and spread your legs wide. He kneels in front of you, pulls your clothes to the side and rubs your pussy and thighs with his rough calloused hands. "Just as I thought, you little minx!" he says with a grin on his face. After he had his fun he helps you get back up and even helps you straighten your clothes, his hands lingering on your hips and ass a few seconds longer than is needed.'
 			end
-			act '<B>Further</B>':gt $locM, $metkaM
+			act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fatherhelp[1]={
 !scandal stepfather
-'You are trying to offer help stepfather, but he shrugs: - "Not, bother me! Can not you see, I`m busy?".'
+'You offer to help your stepfather out in the garage. He waves you away and grumpily says "Get out of the way <<$nickname>>, can''t you see I''m busy? Besides, why would I want to be around you?"'
 	if sorryday!daystart:
 		act 'Apologize':
 		cla
 		sorryday=daystart
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
-		'You apologize to her stepfather, and he, it seems, I forgive you.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You profusely apologize to your stepfather, and after a while you can tell his attitude towards you is slightly milder.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_fatherhelp[2]={
 !strained relations
-'You are trying to offer help stepfather, but he shrugs, alluding, you have to be more useful in the kitchen.'
+'You ask your stepfather if there''s anything you can do to help him out in the garage, but he shrugs and shakes his head. "And what would you even do? Maybe you should go help your mother in the kitchen, that seems to suit your skill set better."'
 	if sorryday!daystart:
-		act 'Trying to smooth relations':
+		act 'Try to get on his good side':
 		cla
 		sorryday=daystart
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
-		'You suck up to her stepfather, and he begins to think you had better apply.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You spend some time trying to get on your stepfather''s good side, and you feel like he likes you a bit more after you show interest in the things he enjoys.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
@@ -401,19 +402,19 @@ $d_fatherhelp[3]={
 !gg good relations but not beautiful
 fatherTalk = rand (1,5)
 	if fatherTalk = 1:
-	'While you helping her stepfather, it, without detracting from gazelki, It tells you how, that the character of each car.'
+	'While you help your stepfather in the garage, he talks to you about how every car has its own character, all the while not looking away from his work.'
 	end
 	if fatherTalk = 2:
-	'While you helping her stepfather, it, without detracting from gazelki, It tells you about the structure of the engine.'
+	'While you help your stepfather in the garage, he talks to you about how the engine of the Gazelle works, all the while not looking away from his work.'
 	end
 	if fatherTalk = 3:
-	'While you helping her stepfather, it, without detracting from gazelki, He complains about the unreliability of the machines and the high cost of terrible details'
+	'While you help your stepfather in the garage, he talks to you about how unreliable some cars are and how expensive it is to keep them on the road, all the while not looking away from his work.'
 	end
 	if fatherTalk = 4:
-	'While you helping her stepfather, it, without detracting from gazelki, He complains about the poor state of roads.'
+	'While you help your stepfather in the garage, he complains about the poor condition the roads around Pavlovski, all the while not looking away from his work.'
 	end
 	if fatherTalk = 5:
-	'While you helping her stepfather, it, without detracting from gazelki, It tells you about the device running.'
+	'While you help your stepfather in the garage, he explains how a gear box works, all the while not looking away from his work.'
 	end
 }
 $d_fatherhelp[4]={
@@ -421,7 +422,7 @@ $d_fatherhelp[4]={
 	talkrand=rand(1,100)
 	if talkrand>=20:dynamic $d_fatherhelp[3]
 	if talkrand<20:
-		'You became stepfather to help repair the car, handing him the keys and bolts.'
+		'You help your stepfather while he works on the Gazelle, handing him the bolts and tools he needs.'
 		if father>=40 and father<60:FatherMolest = RAND (1,8)
 		if father>=60 and father<80:FatherMolest = RAND (1,4)
 		if father>=80:FatherMolest = RAND (1,2)
@@ -438,12 +439,12 @@ $d_fatherhelp[4]={
 !_____________________Button "VIEW WITH TV" in the apartment _____________________________
 $d_watchtv_act[1]={
 if horny>=50 or TouchedByFather=1:
-	act 'Lie down on his chest':
+	act 'Lean your head against his chest':
 	cls
 	minut+=5
 	gs 'stat'
 	horny+=RAND(1,5)
-	'You have not noticed, as the transmission of TV beginning you tend to sleep and you sleepy head stepfather put on chest, that immediately banishes drowsiness, replacing her growing excitement.'
+	'Soon after you join your stepfather on the couch to watch TV, you feel a bit sleepy. You snuggle up against your stepfather''s chest and close your eyes.'
 
 	if vnesh < 15:fatherLust = 2
 	if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -452,66 +453,66 @@ if horny>=50 or TouchedByFather=1:
 		if fatherLust>=2:
 			horny-=RAND(1,5)
 			gs 'stat'
-			'<center><img src="images/qwest/alter/father/fatherim22.jpg"></center>'
-			'It, without being distracted from the screen, silence embraces you by the shoulders and then the two of you watch TV, with all your thoughts revolve only around the blazing heat of the perineum.'
+			'Your stepfather does not like you getting so close to him, and pushes you away.'
 		end
 
 		if fatherLust=1:
-			'Stepfather clearly against such close proximity, and promotion of such an attitude, you just too unceremoniously cast your foot on it.'
+			'<center><img src="images/qwest/alter/father/fatherim22.jpg"></center>'
+			'The warmth of his body and his musky smell make you feel aroused, and you suddenly don''t feel tired any more. Enjoying your comfy position and closeness to him, you stay put and pretend to be asleep while sexy thoughts race through your mind.'
 		end
 
 	set fatherWantsToTouch=Rand(1,2)
 		if fatherWantsToTouch=1:
-		'Feeling, as his hand slowly rises up through your body and covers your <<$titsize>> breasts, you, with bated breath, continue to wait - stepfather hand gently squeezes and squeezes your breasts and you realize, that these actions your panties rapidly mokreyut.'
-			act 'Let him':
+		'As you lay against him with your eyes closed, you feel his arm shifting. Seconds later you feel his hand on your hip, slowly moving its way up until he rests it on your <<$titsize>> breasts. He keeps his hand there, gently kneading them as he watches TV. You do your best to stay still, but your heart is racing and you rapidly feel your pussy moisten.'
+			act 'Stay still and see if he goes any further':
 			cls
 			horny=RAND(90,95)
 			gs 'stat'
 			set TouchedByFather=1
 			'<center><img src="images/qwest/alter/father/fatherim18.jpg"></center>'
-			'Biting your lip, You lie quietly on the chest of his stepfather and enjoy his caresses, restraining their moans.'
+			'Biting your lip, you lie quietly on the chest of your stepfather and enjoy his caresses, restraining your moans. Slowly but surely he focuses more on your nipples, pinching them and tugging at them. You do your best to stay quiet, but it''s getting more and more difficult. Then you hear him let out a chuckle, and he whispers "<<$nickname>>, I know you''re not sleeping."'
 				if hadsexwithfather=1 and mother_go = 1 and hour = 16:
 				'<center><img src="images/qwest/alter/father/fatherim21.jpg"></center>'
-				'You notice, his cock was noticeably bulge through clothing. Stepfather, without hesitation, unbuttons his pants and pulls out his, while lowering your head below.'
-					act 'Going down on his knees':dynamic $d_fatherblow_act[4]
+				'You open your eyes and notice the large bulge in his pants. As you turn your head and give him a sweet smile, you put your hand on the bulge and gently start to pet it. Your stepfather, without hesitation, unbuttons his pants and pulls out his dick. You, also without hesitation, lower your head and give it a lick.'
+					act 'Get down on your knees':dynamic $d_fatherblow_act[4]
 				end
-			act '<B>Move away</B>':gt $loc, $metka
+			act 'Move away':gt $loc, $metka
 			end
 		end
 		if fatherWantsToTouch=2:
-		'You feel, as his hand slowly slides over your hips and grabs your ass, clutching it in your hand. You will not even hurt a little, but much stronger excitement...'
-			act 'Letting him':
+		'You slowly feel his hand work its way down to your ass, kneading it firmly.'
+			act 'Stay still and see if he goes any further':
 			cls
 			horny=RAND(90,95)
 			gs 'stat'
 			set TouchedByFather=1
 			anus+=1
-			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim17.jpg"></center>' & 'Hand stepfather, without encountering any resistance, passed up your ass to waist, then dives to you under your clothes and bare skin between the middle finger slips buttocks. While, when you through the languid haze of pleasure begin to understand the sexual preferences of his stepfather, his finger already being massages your wrinkled and trembled at the touch ring anus. The rhythm of his movements you, without noticing, start gently rotate the hips and attentive stepfather notices - pressure of his finger on your anus grows and after a few seconds you will understand, that he is already beginning to penetrate into them.'
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim16.jpg"></center>' & 'Slipping under clothes, Hand stepfather finds no obstacles in the form of shorts, for a moment his hand freezes, but then it starts to act with more boldness. Turning your ass to the top, he stuck two fingers in her, with your lips broke a barely audible groan. Meanwhile Fingers stepfather fucked your ass.'
+			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim17.jpg"></center>' & 'Not noticing any reluctance from you, your stepfather continues his kneading and then slides his hands underneath your clothes. His sexual preference is abundantly clear: he immediately searches out your tight asshole, and gently rubs his finger against it. Unable to help yourself you begin to gyrate your hips to mimic his movements, trying to stifle your moans. He notices anyway: the pressure of his finger against your sphincter grows, and his decisive actions make you realize he has no intentions of stopping there. When his finger penetrates you, you can''t hold back your moans any longer. He chuckles and whispers: "I knew you were awake all along <<$nickname>>, just relax and enjoy."'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim16.jpg"></center>' & 'When his hand slips under your clothes, you feel his fingers feeling around for a second, grasping for something that isn''t there. He was clearly expecting panties, and is confused by the lack of them. When he realizes you''re not wearing any his actions grow bolder, and soon feel two fingers rubbing up against your asshole with the intention of going in. You adjust your hips slightly to grant him easier access, which he recognizes as a sign of consent and increases the pressure on your sphincter, pushing his two fingers in slowly but surely.'
 				if hadsexwithfather=1 and mother_go = 1 and hour = 16:
 				'<center><img src="images/qwest/alter/father/fatherim21.jpg"></center>'
-				'You notice, his cock was noticeably bulge through clothing. Stepfather, without hesitation, unbuttons his pants and pulls out his, while lowering your head below.'
-					act 'Going down on his knees':
+				'You open your eyes and notice the large bulge in his pants. As you turn your head and give him a sweet smile, you put your hand on the bulge and gently start to pet it. Your stepfather, without hesitation, unbuttons his pants and pulls out his dick. You, also without hesitation, lower your head and give it a lick.'
+					act 'Get down on your knees':
 					dynamic $d_fatherblow_act[4]
 					end
 				end
-			act '<B>Move away</B>':gt $loc, $metka
+			act 'Move away':gt $loc, $metka
 			end
 		end
-	act '<B>Move away</B>':gt $loc, $metka
+	act 'Move away':gt $loc, $metka
 	end
  end
 }
 
 $d_watchtv_act[2]={
  if horny>=90 or TouchedByFather=1:
-	act 'Staring at him strut':
+	act 'Stare at his groin':
 	cls
 	minut+=5
 	gs 'stat'
 	horny+=RAND(1,5)
 	'<center><img src="images/qwest/alter/father/fatherim28.jpg"></center>'
-	'Unable to resist, you look at it through the pants bristling member, and, are not aware of their actions, involuntarily start with one hand to knead her breasts.'
+	'Unable to stop yourself, you stare at his groin and notice the outline of his erect cock through the fabric. Absent-mindedly you bring a hand to your breasts and knead them gently, letting out a barely audible moan.'
 
 	if vnesh < 15:fatherLust = 2
 	if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -520,22 +521,22 @@ $d_watchtv_act[2]={
 		if fatherLust>=2:
 			horny-=RAND(1,5)
 			gs 'stat'
-			'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
+				'Even though your body is definitely having an effect on him your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable.'
+			end
+			if fatherLust=1:
+				'Your acts have derailed his train of thought, and your stepfather just mumbles something unintelligible as he devours you with his eyes. You can tell from his look that he wants you.'
 		end
-		if fatherLust=1:
-			'Stepfather instead of answering mumbled something completely unintelligible, but his greedy look, he devoured you, and you understand the fly rearing, the effect has surpassed all expectations.'
-		end
-	act '<B>Further</B>':gt $locM, $metkaM
+	act 'Move away':gt $locM, $metkaM
 	end
  end
 }
 $d_watchtv_act[3]={
 if horny>=100 or TouchedByFather=1:
-	act 'Extend the legs':
+	act 'Spread your legs':
 	cls
 	minut+=5
 	horny+=RAND(1,5)
-	'You, as if by chance, slightly-Spreading a little leg during a conversation, opening his eyes to his crotch.'
+			'You, while pretending to not notice, slowly spread your legs as you talk.'
 
 	if vnesh < 15:fatherLust = 2
 	if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -544,20 +545,20 @@ if horny>=100 or TouchedByFather=1:
 	if fatherLust>=2:
 		horny-=RAND(1,5)
 		gs 'stat'
-		if tanga=1:'<center><img src="images/qwest/alter/father/fatherim19.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. He tears off her panties on your vzglya, which leads you into the feeling and you feel uncomfortable from-for their behavior.'
-		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim32.jpg"></center>' & 'Eyes stepfather climb on his forehead when he realizes what he saw. You no panties, and he sees your tender young pussy. "<<$nickname>>, immediately go dress pants." - with severity in his voice he said.'
+		if tanga=1:'<center><img src="images/qwest/alter/father/fatherim19.jpg"></center>' & 'Your stepfather is clearly embarrassed, and surprised you would do such a thing. He reaches over to your clothes and adjusts them so they cover your panties, and sends you off.'
+		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim32.jpg"></center>' & 'You notice your stepfather''s eyes darting down while you talk, and suddenly his face turns beet red. "What''s wrong?" you ask him innocently, knowing full well you''re not wearing underwear and that he has a great view of your bare pussy. You''re not fooling him though, and he doesn''t appreciate your teasing in the slightest. "<<$nickname>>, stop that at once and go put some pants on."'
 	end
 	if fatherLust=1:
-		if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Stepfather presses you to her, His eyes burn with the desire. At this time, his hands roamed your thighs and buttocks. You have not noticed how the hands of his stepfather pushed aside her panties and began to fondle your ass and pussy'
-		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim25.jpg"></center>' & 'Looking at the red face foster father, you get the idea, that your actions are effective. Stepfather grabbed you and, deploying to her ass bent and stuck a finger into your wet pussy. Convulsive sob escaped your lips, sorry to stop. Jumping off finger, You trimmed skirt, and moved, as if nothing had happened.'
+		if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Your stepfather realizes what you''re up to and pulls you closer to him, desire burning in his eyes. He runs his hands over your ass cheeks and thighs, petting and kneading them, and then pushes your panties to the side. Two of his fingers are exploring your sphincter, rubbing and teasing you. "Is there something you want, <<$nickname>>?" he asks with a smug grin on his face, knowing he turned the tables on you. All you can do is whimper in response.'
+		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim25.jpg"></center>' & 'Judging from your stepfather''s reddening face, you think your actions are definitely having an effect on him. Your stepfather grabs you around your hips without another word, pulls you down over his lap and sticks a finger deep in your soaking wet pussy. You let out a needy moan, and feel a tinge of regret when he pulls out and pretends as if nothing happened with a smug grin on his face. Realising he''s not going to go any further you straighten your clothes and try to pretend it''s okay, even though your throbbing pussy begs to differ.'
 	end
-	act '<B>Further</B>':gt $locM, $metkaM
+	act 'Move away':gt $locM, $metkaM
 	end
 end
 }
 $d_watchtv[1]={
 !scandal stepfather
-'Are you trying to lie down on the couch next to his stepfather, but he chases you and makes it clear in every possible way, that your presence is distasteful to him.'
+'You try to cuddle up against him on the couch, but he roughly shoves you off the couch. As your ass hits the ground he scowls at you: "<<$nickname>>, what the hell are you doing?" He can''t stand the thought of being anywhere near you. You rub your sensitive ass with a slight pout on your face and consider your next move.'
 	if sorryday!daystart:
 		act 'Apologize':
 		cls
@@ -565,22 +566,22 @@ $d_watchtv[1]={
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
 		'<center><img src="images/qwest/alter/father/fatherim36.jpg"></center>'
-		'You apologize to her stepfather, and he, it seems, I forgive you.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You profusely apologize to your stepfather, and after a while you can tell his attitude towards you is slightly milder.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
 $d_watchtv[2]={
 !strained relations
-'Are you trying to lie down on the couch next to her stepfather, but he responds dryly you, to you it does not interfere.'
+'As you try to cuddle up against your stepfather to watch some TV, he holds you off and makes clear that he doesn''t want you to get that close to him.'
 	if sorryday!daystart:
-		act 'Trying to smooth relations':
+		act 'Try to get on his good side':
 		cla
 		sorryday=daystart
 		father+=(intel/10)+(vnesh/5)
 		gs 'stat'
-		'You suck up to her stepfather, and he, it seems, you better start to apply.'
-		act '<B>Further</B>':gt $locM, $metkaM
+		'You spend some time trying to get on your stepfather''s good side, and you feel like he likes you a bit more after you show interest in the things he enjoys.'
+		act 'Move away':gt $locM, $metkaM
 		end
 	end
 }
@@ -588,19 +589,19 @@ $d_watchtv[3]={
 !gg good relations but not beautiful
 fatherTV = rand (1,5)
 	if fatherTV = 1:
-	'You look together for an hour transfer, in which different people show their talents in hopes of prize.'
+	'You spend an hour watching a TV show with your stepfather, in which various persons display their skill in random talents hoping to win a prize.'
 	end
 	if fatherTV = 2:
-	'You look together for an hour transfer, in which dozens of beauties-Models are fighting for the opportunity to go on a date with a handsome-bachelor.'
+	'You spend an hour watching a TV show with your stepfather, in which several girls hope to get a date with the handsome bachelor.'
 	end
 	if fatherTV = 3:
-	'You look together for an hour transfer, wherein, alleged psychics, are searching for a photo with empty boxes dyuzheny.'
+	'You spend an hour watching a TV show with your stepfather, learning all about how a platypus behaves in the wild.'
 	end
 	if fatherTV = 4:
-	'You look together for an hour transfer, wherein lead glasses and several "experts" discussing sex a-the girls, which sooner get pregnant.'
+	'You spend an hour watching a TV show with your stepfather, in which experts try to figure out which of the girls in their line-up are most likely to get pregnant by examining them through X-ray glasses.'
 	end
 	if fatherTV = 5:
-	'You look together for an hour transfer, which loudly yelling at each other and climb into the fray two thick MP.'
+	'You spend an hour watching a TV show with your stepfather, in which two guys are beating the crap out of each other in a boxing ring.'
 	end
 }
 $d_watchtv[4]={
@@ -608,7 +609,7 @@ $d_watchtv[4]={
 talkrand=rand(1,100)
 	if talkrand>=20:dynamic $d_watchtv[3]
 	if talkrand<20:
-	'You sit relaxed and laughing, when he tells you another funny story.'
+	'You relax and talk about the show you''re watching with your stepfather, cuddling up snugly against him.'
 	if father>=40 and father<60:FatherMolest = RAND (1,8)
 	if father>=60 and father<80:FatherMolest = RAND (1,4)
 	if father>=80:FatherMolest = RAND (1,2)
@@ -623,15 +624,15 @@ talkrand=rand(1,100)
 }
 !_____________________FOR booze in the garage _____________________________
 $d_fatherdrunk_act[1]={
-'You is remarkable, Uncle Misha tirelessly staring at you. It feels, he`s not just your eyes undresses, but also mentally fucks.'
+'You can''t help but notice that your uncle Misha is staring at you the whole time. You feel like he''s not just undressing you in his mind, but that he''s fucking you in all sorts of positions with reckless abandon.'
  if horny>=50 and sosedknow=1:
-	act 'It is tempting to bend':
+	act 'Show him your breasts':
 	cls
 	minut+=5
 	gs 'stat'
 	horny+=RAND(1,5)
 	'<center><img src="images/qwest/alter/father/fatherim33.jpg"></center>'
-	'Obeying momentary impulse, you with a playful smile on his lips quite naturally and gently lean forward, Uncle getting a view of your <<$titsize>> breast.'
+	'In a moment of horniness, you slowly and teasingly bend over with a playful smile on your lips, providing uncle Misha with an amazing view of your <<$titsize>> breasts.'
 
 	if vnesh < 15:mishalust = 2
 	if vnesh >= 15 and vnesh < 30:mishalust = Rand (1,4)
@@ -640,23 +641,23 @@ $d_fatherdrunk_act[1]={
 		if mishaLust>=2:
 			horny-=RAND(1,5)
 			gs 'stat'
-			'Uncle Misha clearly embarrassed and surprised by your antics. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
+			'Uncle Misha is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable. You''re happy he at least had enough decency to not clue in your stepfather, who happened to have his back turned against you.'
 		end
 		if mishaLust=1:
-			'"- Oh..." - Misha did not expect this from you, but his involuntary exhalation and kindled eyes you know, he is, least, very pleasant.'
+			'You try to be discrete so your stepfather doesn''t notice what you just did, and uncle Misha is quite flustered by the show you just gave him. He stumbles over his words while your stepfather talks to him about bumpers, as you smile mischievously and give uncle Misha a wink when your stepfather looks away.'
 		end
-	act '<B>Further</B>':gt $locM, $metkaM
+	act 'Move away':gt $locM, $metkaM
 	end
  end
 }
 $d_fatherdrunk_act[2]={
  if horny>=90 or TouchedByFather=1:
-	act 'Dropped his fork':
+	act 'Get their attention by dropping your bottle':
 	cls
 	minut+=5
 	gs 'stat'
 	horny+=RAND(1,5)
-	'Excited and offended the, stepfather and uncle Misha pay more attention to the bottle, than you. You decide to get attention, you like by chance You drop a fork and just by chance otfutbolivat her foot away from the table. And then, slowly, trying to put the most favorable light ass, Waste and lean over with a fork.'
+	'Even though you''re horny and want the guys to notice you, they are paying more attention to their booze and their conversation. You can change that. Making sure it doesn''t break, you ''accidentally'' drop your bottle and bend over to pick it up without bending your knees, giving them a spectacular view of your ass. You make a show of trying to reduce the spillage, wiping the floor while staying in your current position.'
 
 	if vnesh < 15:fatherLust = 2
 	if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -665,38 +666,38 @@ $d_fatherdrunk_act[2]={
 		if fatherLust>=2:
 			horny-=RAND(1,5)
 			gs 'stat'
-			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim35.jpg"></center>'&'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim34.jpg"></center>'&'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior. Sighing with investment, It seems, nor your stepfather, nor Uncle Misha did not notice, that you do not have on panties.'
+			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim35.jpg"></center>'&'Your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable. Uncle Misha just has a smug grin on his face.'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim34.jpg"></center>'&'Your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable. Neither of them seem to have noticed you''re not wearing panties.'
 		end
 		if fatherLust=1:
 			if tanga=1:
 				'<center><img src="images/qwest/alter/father/fatherim37.jpg"></center>'
-				'You stick out her ass so, your panties light on the whole garage, turning, discover the views of his stepfather and his friend chained to your perineum. With an easy smile and a gleam in her eyes, says knowing many men, You come back to the table. '
-				act 'More fool around':
+				'You stick your ass out as much as you can, showing off your ass as much as you can. As you turn around, you notice that both your stepfather and uncle''s gazes are glued to your ass. You simply smile and return to the table as they blubber and try to find excuses.'
+				act 'Tease them some more':
 					cls
 					'<center><img src="images/qwest/alter/father/fatherim38.jpg"></center>'
-					'Sitting in place and making sure, that the attention you provided, you are saying: ''Oh, these shorts so pisichku rub'' - you corrects panties in fact gives men better explore their vulva.'
-					act 'Show':
+					'You sit back down, still having their full attention. You try to excuse your behavior: "I''m sorry guys, my clothes rub my pussy raw, bending over normally makes me feel very uncomfortable."'
+					act 'Show them your pussy when they ask':
 						cls
 						'<center><img src="images/qwest/alter/father/fatherim39.jpg"></center>'
-						'<<$nickname>>, as well, show that there at you, for these things need to respond. And suddenly there panties rubbed, and what is worse. Truth, Vladimir? - but the only response to a question of his friend with your adoptive father only the eyes become even more. While they looked to where you, I wanted, so perhaps even longer see. And you, Without thinking pushes the strip panties aside. By providing an excellent overview, for young and tender lips sex.'
-						act '<B>Further</B>':gt $locM, $metkaM
+						'Uncle Misha is onto your act, and decides to push you to your limits. He smiles and says: "Oh really, <<$nickname>>? Why don''t you show us, maybe we can help you. Isn''t that right, Vladimir?" Too turned on to decline, you pull your panties to the side and show them your pussy. It''s really not all that sore, but your arousal has coloured it nice and red and it makes your pussy lips look a bit more puffy. The guys didn''t think you would actually follow through with this, and are flabbergasted when you do.'
+						act 'Move away':gt $locM, $metkaM
 					end
 				end
 			end
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim40.jpg"></center>'&'Departing from the table, you tripped over the leg and Uncle Misha, cry, They fell to the floor, considering, that you no panties, The man opened a beautiful view of your ass and not only. Uncle Misha reached out, and fingers spread your pussy lips: ''Beautiful you have holes, Light ... young, Juicy'' - he said pointedly, and looking up from your caps stared at her stepfather. Realizing that will not continue, you had to come back to a place at the table.'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim40.jpg"></center>'&'Slightly disappointed, you move away from the table. Lost in your own thoughts, you don''t notice your uncle Misha''s legs and trip over them. Since you''re not wearing any underwear, you''re giving your uncle one hell of a show as you fall down onto your hands and knees. He immediately reaches out and runs his fingers over your wet pussy lips. He fingers you briefly, then returning his fingers to his nose to take a deep whiff. "You have nice holes, <<$nickname>>, young and juicy..." Realizing he won''t do anything more with your stepfather right there in the room, you get up and fix your clothes before sitting back down at the table.'
 		end
-	act '<B>Further</B>':gt $locM, $metkaM
+	act 'Continue':gt $locM, $metkaM
 	end
  end
 }
 $d_fatherdrunk_act[3]={
 if horny>=100 or TouchedByFather=1:
-	act 'Extend the legs':
+	act 'Spread your legs':
 	cls
 	minut+=5
 	horny+=RAND(1,5)
-	'You, as if by chance, slightly-Spreading a little leg during a conversation, opening his eyes to his crotch.'
+	'You, pretending to not notice, slowly spread your legs while you talk with the guys.'
 
 	if vnesh < 15:fatherLust = 2
 	if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -705,79 +706,79 @@ if horny>=100 or TouchedByFather=1:
 		if fatherLust>=2:
 			horny-=RAND(1,5)
 			gs 'stat'
-			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. He tears off her panties on your vzglya, which leads you into the feeling and you feel uncomfortable from-for their behavior.'
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim52.jpg"></center>' & 'Eyes stepfather climb on his forehead when he realizes what he saw. You no panties, and he sees your tender young pussy. "<<$nickname>>, immediately go dress pants." - with severity in his voice he said.'
+			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim31.jpg"></center>' & 'Trying to direct Uncle Misha''s attention to something across the room, your stepfather signals you to cover yourself up with agitated hand movements.'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim52.jpg"></center>' & 'Your stepfather notices what you''re trying to do. After he distracts uncle Misha for long enough, he turns to you and whispers: "<<$nickname>>, don''t... just don''t. You have no idea what you''re getting yourself into." Intimidated by the gravity of his voice, you do as he says and cover up.'
 		end
 		if fatherLust=1:
-			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Stepfather presses you to her, His eyes burn with the desire. At this time, his hands roamed your thighs and buttocks. You have not noticed how the hands of his stepfather pushed aside her panties and began to fondle your ass and pussy'
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim25.jpg"></center>' & 'Looking at the red face foster father, you get the idea, that your actions are effective. Stepfather grabbed you and, deploying to her ass bent and stuck a finger into your wet pussy. Convulsive sob escaped your lips, sorry to stop. Jumping off finger, You trimmed skirt, and moved, as if nothing had happened.'
+			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim20.jpg"></center>' & 'Your stepfather realizes what you''re up to and pulls you closer to him, desire burning in his eyes. He runs his hands over your ass cheeks and thighs, petting and kneading them, and then pushes your panties to the side. Two of his fingers are exploring your sphincter, rubbing and teasing you. "Is there something you want, <<$nickname>>?" he asks with a smug grin on his face, knowing he turned the tables on you. All you can do is whimper in response. He pulls away his hand just in time, before uncle Misha notices what''s going on.'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim25.jpg"></center>' & 'Noticing your stepfather''s blush, you realize at least one person at the table noticed you''re not wearing any underwear. When your uncle Misha looks away, he quickly reaches for you and fingers your wet pussy. A needy moan escapes your lips as he pulls his hand way, and he quickly starts a conversation about wind shield wipers. Your uncle Misha has no idea what just went down.'
 		end
-	act '<B>Further</B>':gt $locM, $metkaM
+	act 'Continue':gt $locM, $metkaM
 	end
 end
 }
 $d_fatherdrunk[1]={
 !scandal stepfather
-'You are trying to talk with her stepfather, but he, barely moving his tongue, answers you: "Why come?... Hic! Not vidsh... I Zant?! Go home!"'
+'You approach your stepfather and uncle Misha and try to ask if you can join them, but your stepfather cuts you off before you can even finish your sentence. "<<$nickname>>, get out of here! This is a no bitch zone!" he shouts, laughing drunkenly as he waves you off. Uncle Misha finds your stepfather''s degrading talk hilarious, and joins in. You''re clearly not welcome in the garage.'
 	if sorryday!daystart:
-		act 'Ask permission to sit with them':
+		act 'Persist and ask if you can join them':
 		cla
 		gs 'stat'
-		'You ask permission to be with them, but it you shall chase a rigid form.'
-		act '<B>Move away</B>':gt 'gargazel'
+		'You try to get your stepfather to let you join them but he''s equally persistent in telling you to get lost, being quite rude about it too. He really doesn''t like you at all.'
+		act 'Move away':gt 'gargazel'
 		end
 	end
 }
 $d_fatherdrunk[2]={
 !strained relations
-'You are trying to talk with her stepfather, but he, barely moving his tongue answer you: "<<$nickname>>, go home! Hic! Now is the time... Hic! Unfavourable...'
+'You ask your stepfather if you can join them, but he''ll have none of it. "<<$nickname>>, isn''t it past your bedtime? *Hic!* Shoo, go home! *Hic!*"'
 	if sorryday!daystart:
-		act 'Ask permission to sit with them':
+		act 'Try to persuade him':
 		cla
 		gs 'stat'
-		'You ask permission to be with them, but he was adamant and still sends you home'
-		act '<B>Move away</B>':gt 'gargazel'
+		'You do your best, but your stepfather remains adamant and sends you home.'
+		act 'Move away':gt 'gargazel'
 		end
 	end
 }
 $d_fatherdrunk[3]={
 !gg good relations but not beautiful
-'"- Oh!..." Light-Hic! My little clever came... Sit down, Ed... Hic! Board space-and-Mpano elderly."'
+'Before you can even ask, your stepfather waves you over: "Oh, <<$nickname>>! Come join me and Misha, maybe you''ll learn something from your elders!"'
 fatherTalk = rand (1,3)
 	if fatherTalk = 1:
-	'You sit down for an impromptu table of the two tires and boards. For an hour you listen to the story of two drunk adult men.'
+	'You sit down and join the two older men for a drink. Even though they won''t give you any alcohol, you listen to their increasingly drunken tales.'
 	end
 	if fatherTalk = 2:
-	'You sit down for an impromptu table of the two tires and boards. For an hour, listening to Uncle Misha howling old songs with a guitar.'
+	'You sit down and join the older men for a drink. Uncle Misha then pulls out his guitar and plays some songs, and you and your stepfather happily sing along.'
 	end
 	if fatherTalk = 3:
-	'You sit down for an impromptu table of the two tires and boards. For an hour, then Uncle Misha and stepfather respect each-friend.'
+	'You sit down and join the older men for a drink. You can tell your stepfather and your uncle are good friends.'
 	end
 	if gorslut>=3 and dyadyamishaevent = 1 and dmishaday ! daystart and fatherandmisha!1:
 		cla
 		*clr
 		'<center><img src="images/qwest/alter/father.jpg"></center>'
-		'Uncle Misha kept staring at you. And suddenly he turned in to your stepfather.'
-		'Misha: - Listen Vovan, and you`re all up to date, that your <<$nickname>> - <<$gnikname>>?'
-		'Stepfather: - Th, fuck?! Che are you talking about?'
-		'Uncle Misha: - Yes Vovan, I`ve heard, Gopnik that her fuck they want.'
+		'Uncle Misha kept staring at you. Suddenly he turns to your stepfather.'
+		'"So, Vladimir, did you know your <<$nickname>> is a <<$gnikname>>?"'
+		'Your stepfather is clearly confused. "What are you talking about, Misha?"'
+		'Your uncle Misha continues: "Oh yes, it''s true, Gopniks fuck her whenever they want. All they have to do is tell her to get on all fours."'
 		If hadsexwithfather=0:
-		'Stepfather: - It`s true, <<$nickname>>?'
-		'You hesitated, and fidgeted in his chair. Cheeks flushed, Bay you blush. "Well...I...This..." - The start was you.'
-		'Stepfather: - Oh, you`re such a shit! My mother and I tried to make a man out of you, and you?!'
+		'Your stepfather looks you in the eyes and asks: "Is that really true, <<$nickname>>?"'
+		'You''re not really sure what to say and hesitate to give an answer, shifting uncomfortably in your chair. Your blush betrays you as you try to make up an excuse: "Well wait, I can explain..."'
+		'Your face really says it all. Your stepfather is disgusted by this revelation and cuts you off: "Are you fucking kidding me!? Your mother and I did our best to raise you properly, and this is the thanks we get?"'
 		end
 		if hadsexwithfather=1:
-		'Stepfather: - Yes, <<$nickname>>, not good to do so...'
+		'Your stepfather already knows you''re not a prude, but pretends to be a good father anyway: "<<$nickname>>, you really shouldn''t, that could be dangerous..."'
 		end
-		'Uncle Misha: - Well Vovan, it is necessary to-something to do with it. It is necessary to punish her!''In the eyes of Uncle Misha lit the flame of lust. He showed a stepfather-the sign of hands, and judging by the reaction of the latter, He understood this sign.'
-		'Stepfather: - But now we have it, and "punish".'
-		act 'Suffer punishment':gt 'misha','2'
+		'Uncle Misha realizes he''s onto something here, and decides to drive his point home: "Well Vladimir, don''t you think we should do something about it? I think <<$nickname>> needs to be punished!"'
+		'You can see the lust in his eyes. Your stepfather understands perfectly well where he''s going with this, and agrees: "I think you''re right, Misha, <<$nickname>> does deserve to be punished."'
+		act 'Accept whatever punishment they have in mind':gt 'misha','2'
 	elseif dyadyamishaevent = 1 and dmishaday ! daystart and fatherandmisha=1:
-		'Uncle Misha: - Well Vovan, "punish" besom?'
-		'Stepfather: - But now we have it, and "punish".'
-		act 'Suffer punishment':gt 'misha','2'
+		'Uncle Misha grins at your stepfather and runs one hand over his groin, you can already see a significant bulge forming. "So, Vladimir, how about now? I think we can teach her a thing or two."'
+		'Your stepfather simply nods and reaches for his zipper: "Absolutely."'
+		act 'Accept whatever punishment they have in mind':gt 'misha','2'
 	else
-		act '<B>Move away</B>':gt 'gargazel'
+		act 'Move away':gt 'gargazel'
 	end
 
 }
@@ -786,7 +787,7 @@ $d_fatherdrunk[4]={
 talkrand=rand(0,100)
 	if talkrand>=20:dynamic $d_fatherdrunk[3]
 	if talkrand<20:
-	'You sit relaxed and laughing, when he tells you another funny story.'
+	'You relax and have some drinks with the guys, happy to just sit back and listen to the funny stories they exchange.'
 	if father>=40 and father<60:FatherMolest = RAND (1,8)
 	if father>=60 and father<80:FatherMolest = RAND (1,4)
 	if father>=80:FatherMolest = RAND (1,2)
@@ -802,12 +803,12 @@ talkrand=rand(0,100)
 
 $din_potr={
 if $clothingworntype ! 'nude':
-	act 'Give him touch fabric':
+	act 'Let him touch your clothes':
 		cls
 		minut+=5
 		horny+=RAND(1,5)
 		gs 'stat'
-		'You innocently offer him try to touch the fabric, to assess the quality of the clothes, but seeing his confusion and indecision, you do take it out and put himself on the thigh. It is after a long inactivity nevertheless slowly begins to slide over your hips and these touches you feel, as the heat rises exciting in your perineum.'
+		'You innocently offer him to have a feel at the fabric, pretending you''re really interested to know what he thinks of your the quality of your clothing. Your stepfather looks at you with a slightly puzzled look on his face. "Go on, touch it, it''s so nice and soft!" you encourage him, and you take his hand and pull it towards you.'
 
 		if vnesh < 15:fatherLust = 2
 		if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -818,25 +819,25 @@ if $clothingworntype ! 'nude':
 			horny-=RAND(1,5)
 			gs 'stat'
 			'<center><img src="images/qwest/alter/father/fatherim41.jpg"></center>'
-			'Stepfather clearly embarrassed and surprised your trick. He pulls his hand, which leads you into the feeling and you feel uncomfortable from-for their behavior.'
+			'Your stepfather clearly doesn''t want to, and is slightly embarrassed by the whole situation. He quickly pulls his hand away and tells you to go straighten your clothes.'
 		end
 		if fatherLust=1:
 			TouchedByFather=1
-			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim42.jpg"></center>' & 'Hands stepfather do not hesitate crumple your ass, he looks at you and smiles a smile promises much more'
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim25.jpg"></center>' & 'Looking at the red face foster father, you get the idea, that your actions are effective. Stepfather grabbed you and, deploying to her ass bent and stuck a finger into your wet pussy. Convulsive sob escaped your lips, sorry to stop. Jumping off finger, You trimmed skirt, and moved, as if nothing had happened.'
+			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim42.jpg"></center>' & 'Your stepfather smiles and eagerly reaches for your ass, kneading it rougher than you had anticipated. A bit startled at his roughness you squeak out a soft "Oh!" as he gives it a few slaps. He then sits back on the couch, amused at your embarrassed expression and red face. "You''re right, <<$nickname>>... it''s very soft indeed. Very nice."'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim25.jpg"></center>' & 'Judging from your stepfather''s flustered face, he is more than happy to oblige. He grabs you and bends you over the rear of the couch. You can''t see what he''s doing, but immediately feel his hand brushing against your wet pussy. He slides a finger in and pumps it in and out for a little while, filling the room with squishy noises. You let out a needy moan and feel a tinge of regret when he pulls his hand away and helps you back up. "Daddy, you didn''t even touch my clothes!" you pout. He simply gives you a wink and then returns his attention to the TV.'
 		end
-		act '<B>Further</B>':gt $locM, $metkaM
+		act 'Move away':gt $locM, $metkaM
 	end
 end
  }
 $din_popravit={
 if $clothingworntype ! 'nude':
-	act 'Correct clothing':
+	act 'Adjust your clothes':
 		cls
 		minut+=5
 		gs 'stat'
 		horny+=RAND(1,5)
-		'Encouraged by the reaction stepfather, you are perfectly natural gesture put his hands on his chest, supposedly adjusting clothes. Your fingers quickly run through the soft tissue and not stopping slide down, to stomach, where, before reaching the innermost, and the stop. Stepfather of these rather uncertain manipulations significantly reddened, and his breathing quickened; it, not taking his eyes off of your body, literally devouring your eyes.'
+		'Encouraged by your stepfather''s reaction, you put your hands on your breasts and pretend you''re straightening your clothes. You run your fingers down to your stomach and groin while plucking at the fabric, giving him one hell of a show. He can''t take his eyes off your body and you can tell your actions make him want you more than ever.'
 
 		if vnesh < 15:fatherLust = 2
 		if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -846,15 +847,15 @@ if $clothingworntype ! 'nude':
 		if fatherLust>=2:
 			horny-=RAND(1,5)
 			gs 'stat'
-			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim45.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim46.jpg"></center>' & 'But why stop, slightly raised edge of the dress, you showed stepfather, panties that this is not the kind of thing, you wear. In stepfather straying breath, and he could only prosipet: ''Immediately go, dress pants''. But you just chuckled and moved away from his stepfather.'
+			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim45.jpg"></center>' & 'Your stepfather realizes you''re going too far, and interrupts you by clearing his throat loudly. He tells you to go away, making you feel rather uncomfortable.'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim46.jpg"></center>' & 'Deciding to take your teasing to the next level, you pull your clothes to the side and show him your bare pussy. Your stepfather realizes you''re taking it too far, and sends you off: "<<$nickname>>, stop that. And go put on some underwear, that''s no way for a lady to behave."'
 		end
 
 		if fatherLust=1:
-			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim43.jpg"></center>' & 'Sweep shoulders, you accidentally thrown off the straps, and more time spent on the chest, pulled the top of your clothes, and put their mouth-watering melons, on display stepfather. Cry: ''Oh, I`m so awkward'' - Stepfather instead of answering mumbled something completely unintelligible, but his greedy look, he devoured you, and you understand the fly rearing, the effect has surpassed all expectations.'
-			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim44.jpg"></center>' & 'Today you do not put panties, and decided to tease her a little more ''Daddy'' you went to the window and became so the sun`s rays enlighten your clothes are not very thick and lighten your panties are not covered pussy on display stepfather. Looking at the adoptive father, You innocently ask: ''I go?'' - Just a minute`s stepfather was able to squeeze out something like ''Yes'', but his greedy look, he devoured you, and you understand the fly rearing, the effect has surpassed all expectations..'
+			if tanga=1:'<center><img src="images/qwest/alter/father/fatherim43.jpg"></center>' & 'You run your hands over your shoulders and slide the straps off to the side, pretending it is an accident. "Oh no, I can be so clumsy sometimes!" you exclaim, while taking way longer than you need to put them back where they need to be. All the while your stepfather''s eyes are glued to your <<$titsize>> breasts, and his face turns beet red.'
+			if tanga=0:'<center><img src="images/qwest/alter/father/fatherim44.jpg"></center>' & 'You''re not wearing any panties today, and decide to tease your stepfather with it. Moving over to the window you reach for the curtains and begin to rustle them, while the contours of your body are illuminated by the sun. Your clothes are so thin, your stepfather can clearly see the outline of your bare pussy through the semi-transparent clothes. You turn to face him and innocently say "Oh I''m sorry Daddy, I didn''t mean to disturb you. Should I go?" It takes him a few seconds to nod, but his greedy look tells you there are a lot of things he would want to do to you right here, right now.'
 		end
-		act '<B>Further</B>':gt $locM, $metkaM
+		act 'Move away':gt $locM, $metkaM
 	end
 end
 }
@@ -862,17 +863,17 @@ end
 $din_father_hapri={
 if hapri<=0:
 manna-=1
- 'You notice, stepfather sometimes looks away your disheveled hair: - "Pancake, it is necessary to comb hair" - you think to yourself.'
+ 'You notice your stepfather keeps glancing at your disheveled hair with a disapproving look on his face. "Silly me, I should really take better care of my hair!" you think to yourself.'
 end
 }
 
 $din_vertetzopa={
-act 'Twirl ass':
+act 'Sway your hips back and forth':
 cls
 minut+=5
 horny+=RAND(1,5)
 gs 'stat'
-'Obeying momentary impulse, You can mischievous smile on his lips suddenly, for herself, and for his stepfather, turns his ass and hips swaying seductively.'
+'In the heat of the moment you gently start to sway your hips back and forth, without even realizing it. When you realize what you''re doing, you stare your stepfather in the eye for a second with a mischievous smile on your lips. You then turn your back to him and keep swaying your ass seductively.'
 
 if vnesh < 15:fatherLust = 2
 if vnesh >= 15 and vnesh < 30:fatherLust = Rand (1,4)
@@ -882,26 +883,27 @@ if vnesh >= 50 or TouchedByFather=1:fatherLust = 1
 	if fatherLust>=2:
 		horny-=RAND(1,5)
 		gs 'stat'
-		if tanga=1:'<center><img src="images/qwest/alter/father/fatherim47.jpg"></center>' & 'Stepfather clearly embarrassed and surprised your trick. His eloquent "Cough-cough" It leads you into the feeling and you feel uncomfortable from-for their behavior.'
-		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim48.jpg"></center>' & 'Having handles ass, you just lean and demonstrate stepfather stunned her bare crotch, wistfully sighing and staring at the wall, stepfather says: ''<<$nickname>>, I do not iron do not come to me sparkling bare ass'' - you have no choice, leaving.'
+		if tanga=1:'<center><img src="images/qwest/alter/father/fatherim47.jpg"></center>' & 'Even though your body is definitely having an effect on him your stepfather is clearly embarrassed, and surprised you would do such a thing. He clears his throat loudly and looks at you disapprovingly, and the silence that follows makes you feel a bit uncomfortable.'
+		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim48.jpg"></center>' & 'You avoid his gaze while you keep swaying your ass back and forth, slowly pulling your clothes away so he can see you''re not wearing any underwear. He sighs wistfully and tries to look away, saying in a stern voice: "<<$nickname>>, this is not fair, you know I am not made of stone. Don''t show me your bare ass like that." Realizing he wants no more part of your little show, you leave.'
 	end
 	if fatherLust=1:
 		if tanga=1:
 			'<center><img src="images/qwest/alter/father/fatherim49.jpg"></center>'
-			'Not so much showing off clothes, how many panties, exposing her ass so that her stepfather was seen, as much as possible you ask: ''Well as?'' - stepfather, silently, I looked at, that is hidden and looks like panties, that there were no panties.'
+			'As you slowly sway your ass for his viewing pleasure, you notice your stepfather focusing sharply on your ass crack. It takes a few seconds for you to figure out why, but then you remember one of his fetishes: he likes it when girls don''t wear underwear. You bet you could really turn him on if you took them off.'
 			if horny>= 90:
-				act 'Drain panties':
+				act 'Give him your panties':
 					cls
 					gs 'stat'
+					tanga=0
 					'<center><img src="images/qwest/alter/father/fatherim50.jpg"></center>'
-					'From the excitement overwhelm you in your head, that-the whacko, without giving a report of his actions, without thinking, that house can, be someone you quickly pulls off her panties down and expose his ass bare pisey stepfather on display. Furtively glancing at the door to the room, stepfather frantically begins pulling at you cowards. At the same time pronouncing: ''<<$nickname>>, crazy, Well scat here, Suddenly Mom will, and here you raskoryachishsya''. Shaking off his obsession, you helped stepfather, cope with shorts and moved away from him.'
-					act '<B>Further</B>':gt $locM, $metkaM
+					'Wanting to see just how riled up you can get your stepfather, you bend over and slowly pull your panties down. "Is this better, Daddy?" you sweetly ask him, and your stepfather panics while you run your hands over your naked ass, gently kneading your ass cheeks. "<<$nickname>>, please don''t do that! Someone could come in at any second! What do you think your mother would do to you AND me when she sees this!?" he whispers, as he moves to you and frantically tries to cover you up. You sweetly smile at him and whisper: "Relax Daddy, we''re fine! Here, for later," as you stuff your panties in his pocket.'
+					act 'Move away':gt $locM, $metkaM
 				end
 			end
 		end
-		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim51.gif"></center>' & 'Twirling his ass in front of you stepfather, It seems, how do careless movements, by which the stepfather says, panties that this is not your favorite item of clothing. Taking your zhopku into their own hands, stepfather affectionately zhmakaet it, considering openable picture. From his touch pulsation in the abdomen is reinforced, and pisya becomes wet.'
+		if tanga=0:'<center><img src="images/qwest/alter/father/fatherim51.gif"></center>' & 'As you sway your ass in front of your stepfather, you notice his eyes fixating on your ass crack. "What''s this <<$nickname>>, no panties?" He pushes you down onto your hands and knees and roughly kneads your ass cheeks, pulling them apart. Looks like he is done being teased, and turned the tables on you. He lowers his hands to your upper thighs and pulls your pussy wide open. The wet sheen on your pussy lips gives away how much you enjoy his treatment, and you do your best to stifle your moans so no one else in the house will hear. Thoroughly enjoying the stimulations he is giving you, you can feel your pussy moisten more and more.'
 	end
-act '<B>Further</B>':gt $locM, $metkaM
+act 'Move away':gt $locM, $metkaM
 end
 }
 

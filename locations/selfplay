@@ -24,7 +24,7 @@ $d_self_fingering = {
 				'<center><img src="images/qwest/selfplay/finger.jpg"></center>'
 				'You press harder, forcing your finger against your hymen. It gives in, and suddenly your finger slides all the way in. Your pussy hurts a little now, and your finger has some blood on it when you pull it out.'
 
-				act 'Rest':gt $curloc
+				act 'Stop touching yourself and rest for a while':gt $curloc
 			end
 		elseif vagina > 0:
 			'You slide one finger into your vagina, and then another.'
@@ -69,7 +69,7 @@ $d_self_fingering = {
 
 				if horny > 0:dynamic $d_self_fingering2
 
-				act 'Stop':gt $curloc
+				act 'Stop touching yourself':gt $curloc
 			end
 		elseif mesec > 0:
 			manna -= 5
@@ -78,7 +78,7 @@ $d_self_fingering = {
 
 		gs 'stat'
 
-		act 'Stop':gt $curloc
+		act 'Stop touching yourself':gt $curloc
 	end
 }
 
@@ -148,13 +148,13 @@ $d_self_fingering2 = {
 
 				dynamic $d_self_fingering2
 
-				act 'Stop':gt $curloc
+				act 'Stop touching yourself':gt $curloc
 			end
 		end
 
 		gs 'stat'
 
-		act 'Stop':gt $curloc
+		act 'Stop touching yourself':gt $curloc
 	end
 }
 
@@ -346,7 +346,7 @@ if horny > 0:
 
 		gs 'stat'
 
-		act 'Stop':gt $curloc
+		act 'Stop touching yourself':gt $curloc
 
 		if horny > 0:dynamic $d_self_fingering
 	end
@@ -377,7 +377,7 @@ if horny > 0 and agape < 3:
 		dynamic $d_sis_prov
 		gs 'stat'
 
-		act 'rest':gt $curloc
+		act 'Stop touching yourself':gt $curloc
 
 		act 'Add a second finger':
 			cls
@@ -425,7 +425,7 @@ if horny > 0 and agape < 3:
 
 			gs 'stat'
 
-			act 'rest':gt $curloc
+			act 'Stop touching yourself':gt $curloc
 
 			if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
 
@@ -477,7 +477,7 @@ if horny > 0 and agape < 3:
 						'When you slide in three fingers, you feel a sharp pain in your anus. You may have tried too much, too fast.'
 					end
 
-					act 'rest':gt $curloc
+					act 'Stop touching yourself':gt $curloc
 
 					if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
 
@@ -530,7 +530,7 @@ if horny > 0 and agape < 3:
 								'When you slide in four fingers, you feel a sharp pain in your anus. You may have tried too much, too fast.'
 							end
 
-							act 'rest':gt $curloc
+							act 'Stop touching yourself':gt $curloc
 
 							if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
 
@@ -584,7 +584,7 @@ if horny > 0 and agape < 3:
 										'When you push your hand into your asshole, you feel a sharp pain in your anus. You may have tried too much, too fast.'
 									end
 
-									act 'rest':gt $curloc
+									act 'Stop touching yourself':gt $curloc
 
 									if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
 
@@ -623,7 +623,7 @@ if horny > 10:
 					dynamic $d_vag_sex_dildo
 					gs 'stat'
 
-					act 'rest':gt $curloc
+					act 'Stop using the dildo':gt $curloc
 				end
 			end
 
@@ -644,7 +644,7 @@ if horny > 10:
 					dynamic $d_analsex_dildo
 					gs 'stat'
 
-					act 'rest':gt $curloc
+					act 'Stop using the dildo':gt $curloc
 				end
 			end
 		! WD: Fix Dildo choice Code  ~ refer above

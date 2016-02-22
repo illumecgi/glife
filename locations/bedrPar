@@ -20,7 +20,6 @@ if sisboyday + 1 = daystart and hour = 18:gt'sisterQW','sisboyQW_expel'
 if komp = 1:'Your <a href="exec:gorodokKomp = 1 & GT ''Komp'',''start''">laptop</a> is on the desk.'
 gorodokKomp = 0
 
-
 gad = 0
 
 if sisboyQW > 10:sisboyQW = 10
@@ -43,7 +42,7 @@ else
 ! WD: add Underwear change
 
 	if student > 0 and kursovik < 100:
-		act 'Write coursework (1:00)':
+		act 'Do coursework (1:00)':
 			cla
 			*clr
 			minut += 60
@@ -90,7 +89,7 @@ else
 			'<center><img src="images/etogame/dur.jpg"></center>'
 			'You snort some Pale Lady, feeling dizzy for just a moment. After that you feel fantastic, and incredibly horny.'
 
-			act 'Return':gt $curloc
+			act 'Continue':gt $curloc
 		end
 	end
 end
@@ -165,7 +164,7 @@ if poSkill>=200:
 			minut+=15
 			gs'stat'
 			'You spend 15 minutes at the embroidery frame, preparing the fabric and outlining the pattern for the tapestry.'
-			act'Set aside':gt $curloc
+			act'Set the tapestry aside':gt $curloc
 		end
 	end
 	if newgobelen>=1:
@@ -184,10 +183,11 @@ if poSkill>=200:
 				gobelen+=1
 				'Your work on the tapestry is done.'
 			end
-			act'Set aside':gt $curloc
+			act'Set the tapestry aside':gt $curloc
 		end
 	end
 end
+
 
 --- bedrPar ---------------------------------
 

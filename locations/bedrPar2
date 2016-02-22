@@ -1,6 +1,6 @@
 # bedrPar2
 CLOSE ALL
-act 'Leave the room':gt 'korrPar'
+act 'Return to the hallway':gt 'korrPar'
 
 $metkaM = $ARGS[0]
 $locM = $CURLOC

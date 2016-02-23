@@ -615,6 +615,9 @@ $din_stay_in_bed = {
 				horny += 20
 				gs'stat'
 				*clr & cla
+				$boy = '$bname2'
+				cumprecheck = 1
+				gs 'cum_manage'
 				'<center><img src="images/qwest/alter/parc_ev/placer_sex56.jpg"></center>'
 				'<<$bname2>> It seems tired of being only an observer, and styanuv with your panties he perched comfortably and accurately entered into your pussy. Member entered easily and gently into your hot and humid pussy. <<$bname2>> I clutching your leg, lifting it and moving within, making many aftershocks.  From these shocks your mouth even more began to dress on the first member of the Man. '
 				Act 'Further':
@@ -642,11 +645,15 @@ $din_stay_in_bed = {
 								vagina += 1
 								orgasm += 2
 								vaginalOrgasm += 1
+								sexpartkno = 1
+								spafinloc = 3
 								gs 'cum_manage'
 								DPorgasm += 1
 								anal += 1
+								$boy = $bname
+								sexpartkno = 1
 								spafinloc = 3
-gs 'cum_manage'
+								gs 'cum_manage'
 								gs'stat'
 								*clr & cla
 								'<center><img src="images/qwest/alter/parc_ev/placer_sex60.jpg"></center>'
@@ -667,73 +674,78 @@ gs 'cum_manage'
 
 $din_sleep_sex = {
 	*clr & cla
-	'<center><img src="images/qwest/alter/parc_ev/placer_sex93.jpg"></center>'
-	'that you-then he pulled out of sleep. Slightly, slightly open eyes, You saw through her lashes male silhouette in the room. It seems, who-of the guys decided to diversify your dream. Deciding to see, what`s next, you pretend to be asleep.'
-	Act 'Further':
-		*clr & cla
-		'<center><img src="images/qwest/alter/parc_ev/placer_sex84.jpg"></center>'
-		'This suffering «insomnia» I came up to you and pulled the blanket pulled up T-shirt, exposing boobs. You are thinking, what to do next, or continue pretending to be asleep, or «wake up» and drive the hell out of Smarty?'
-		Act '"Wake up"':
+	$boy = $bname2
+	if rand(0,2) > 0: 
+		'<center><img src="images/qwest/alter/parc_ev/placer_sex93.jpg"></center>'
+		'that you-then he pulled out of sleep. Slightly, slightly open eyes, You saw through her lashes male silhouette in the room. It seems, who-of the guys decided to diversify your dream. Deciding to see, what`s next, you pretend to be asleep.'
+		Act 'Further':
 			*clr & cla
-			'<center><img src="images/qwest/alter/parc_ev/placer_sex85.jpg"></center>'
-			'You have opened my eyes and saw that this impudent insomniacs <<$bname2>>.' 
-			'- And what are you doing here ? - <<$bname2>> He rebounded from you as if stung.'
-			'- Oh, and you do not sleep? - Confused man.'
-			'- Not sleeping, and what you`re here about sleeping with me to do? - Continued for questioning.'
-			'- Yes ... I just ... - <<$bname2>> even more confused, and out of the room. What you do not even have time to say anything. «Fool, maybe I was not against», - We think you. Looking at the clock, you realize that it`s morning. and can...'
-			Act 'Make a breakfast': dynamic $din_breakfast
-		end
-		Act '"sleep on"':
-			*clr & cla
-			horny += 20
-			gs'stat'
-			'<center><img src="images/qwest/alter/parc_ev/placer_sex86.jpg"></center>'
-			'Convinced, that you will not wake up, He continued from man and pulled off your panties. You think, that you now will fuck,  at the thought of you shits terrible fever - you were, like that today will not sleep insert your dick in your sweaty pussy,  squeeze tits and shoving a dick in your mouth ... You barely restrained, so as not to fall out of the line sleeping.'
-			Act 'Further':
+			'<center><img src="images/qwest/alter/parc_ev/placer_sex84.jpg"></center>'
+			'This suffering «insomnia» I came up to you and pulled the blanket pulled up T-shirt, exposing boobs. You are thinking, what to do next, or continue pretending to be asleep, or «wake up» and drive the hell out of Smarty?'
+			Act '"Wake up"':
+				*clr & cla
+				'<center><img src="images/qwest/alter/parc_ev/placer_sex85.jpg"></center>'
+				'You have opened my eyes and saw that this impudent insomniacs <<$bname2>>.' 
+				'- And what are you doing here ? - <<$bname2>> He rebounded from you as if stung.'
+				'- Oh, and you do not sleep? - Confused man.'
+				'- Not sleeping, and what you`re here about sleeping with me to do? - Continued for questioning.'
+				'- Yes ... I just ... - <<$bname2>> even more confused, and out of the room. What you do not even have time to say anything. «Fool, maybe I was not against», - We think you. Looking at the clock, you realize that it`s morning. and can...'
+				Act 'Make a breakfast': dynamic $din_breakfast
+			end
+			Act '"sleep on"':
 				*clr & cla
 				horny += 20
 				gs'stat'
-				'<center><img src="images/qwest/alter/parc_ev/placer_sex92.jpg"></center>'
-				'You felt the fingers, who are pushing your lips on your pussy, We heard the soft whisper:  «Yes dryly, immediately will not insert»... And the guy stopped for a moment, seen thinking, what to do.'
+				'<center><img src="images/qwest/alter/parc_ev/placer_sex86.jpg"></center>'
+				'Convinced, that you will not wake up, He continued from man and pulled off your panties. You think, that you now will fuck,  at the thought of you shits terrible fever - you were, like that today will not sleep insert your dick in your sweaty pussy,  squeeze tits and shoving a dick in your mouth ... You barely restrained, so as not to fall out of the line sleeping.'
 				Act 'Further':
+					*clr & cla
 					horny += 20
 					gs'stat'
-					*clr & cla
-					'<center><img src="images/qwest/alter/parc_ev/placer_sex87.jpg"></center>'
-					'Determined, he approached the head of the bed, and neatly turned you, lips rested his cock and tried to slip a little push deeper. Determined to help the guy, You opened her mouth, letting his rampant flesh depth. He carefully began to fuck in her mouth, moaning softly. '
+					'<center><img src="images/qwest/alter/parc_ev/placer_sex92.jpg"></center>'
+					'You felt the fingers, who are pushing your lips on your pussy, We heard the soft whisper:  «Yes dryly, immediately will not insert»... And the guy stopped for a moment, seen thinking, what to do.'
 					Act 'Further':
 						horny += 20
 						gs'stat'
 						*clr & cla
-						'<center><img src="images/qwest/alter/parc_ev/placer_sex88.jpg"></center>'
-						'«So, It seems, is enough lubrication», - again whisper to himself the man said, as you think: «If you only knew, as lubricant between my legs», - For his unusual situation you are in earnest whetted, and pussy was burning heat, and flowed like a waterfall. Moving your legs between, Night visitor put a member of your pussy, and also carefully, It seems, still thinking, Why do you sleep, I began to introduce it inside. But your current pussy so easy it launched a, the guy almost fell, collapsed. «Yes, everything is wet, interestingly, she dreams, so that it flows», - he whispered with pleasure, She began to move her hips,  squelching its stake in our lake juices. Hardly contain rushing out moans, You continue to play a limp doll.'
+						'<center><img src="images/qwest/alter/parc_ev/placer_sex87.jpg"></center>'
+						'Determined, he approached the head of the bed, and neatly turned you, lips rested his cock and tried to slip a little push deeper. Determined to help the guy, You opened her mouth, letting his rampant flesh depth. He carefully began to fuck in her mouth, moaning softly. '
 						Act 'Further':
+							horny += 20
+							gs'stat'
 							*clr & cla
-							'<center><img src="images/qwest/alter/parc_ev/placer_sex89.jpg"></center>'
-							'Here man suddenly pulled out a member of you, and walked away, you are afraid, that this was the end. But he was used as the more careful you have to turn. Expanding your tummy, fan of sleeping girls, fell in behind, and has a much bolder broke into your bingo. This sudden movement, It caused such a pleasant wave, that you did not try to hold back, groan escaped your lips.  The guy stopped abruptly, seen frightened, you woke up, even his dick a little lost in size. «Damn, I do not finish», - I flashed you thought, and you began to squeeze his penis, straining the muscles of the vagina. So groan was unable to hold back frightened man. Pretty soon his cock regained the lost ground. And the guy, I grabbed you for the ass, You continued to fuck. And so you were on the brink, and his hands curled ass tore avalanche. Buried in a pillow, you become finish, trying not to dissuade the Night Visitors, that you are still sleeping.'
+							cumprecheck = 1
+							gs 'cum_manage'
+							'<center><img src="images/qwest/alter/parc_ev/placer_sex88.jpg"></center>'
+							'«So, It seems, is enough lubrication», - again whisper to himself the man said, as you think: «If you only knew, as lubricant between my legs», - For his unusual situation you are in earnest whetted, and pussy was burning heat, and flowed like a waterfall. Moving your legs between, Night visitor put a member of your pussy, and also carefully, It seems, still thinking, Why do you sleep, I began to introduce it inside. But your current pussy so easy it launched a, the guy almost fell, collapsed. «Yes, everything is wet, interestingly, she dreams, so that it flows», - he whispered with pleasure, She began to move her hips,  squelching its stake in our lake juices. Hardly contain rushing out moans, You continue to play a limp doll.'
 							Act 'Further':
-								minut += 20
-								horny = 0
-								willpower += 15
-								manna += 15
-								vagina += 1
-								orgasm += 1
-								vaginalOrgasm += 1
-								bj += 1
-								swallow+= 1
-								spafinloc = 12
-gs 'cum_manage'
-								throat+= 1
-								facial+=1
-								gs'stat'
 								*clr & cla
-								'<center><img src="images/qwest/alter/parc_ev/placer_sex90.jpg"></center>'
-								'«Damn finished! In a dream! Hot girl!», - a guy like that has managed to whisper to scream. And trying not to make noise, he hurried , he again moved to the head of the bed. Turning your head, so that the face you again been rampant dick. You opened her mouth,  and then it turned out to be a member, covered with your nipples , and this is even more delicious. «Yes slut earn», - he whispered: «swallow all, what I nakonchal», - And with that man began to fill your mouth.'
+								'<center><img src="images/qwest/alter/parc_ev/placer_sex89.jpg"></center>'
+								'Here man suddenly pulled out a member of you, and walked away, you are afraid, that this was the end. But he was used as the more careful you have to turn. Expanding your tummy, fan of sleeping girls, fell in behind, and has a much bolder broke into your bingo. This sudden movement, It caused such a pleasant wave, that you did not try to hold back, groan escaped your lips.  The guy stopped abruptly, seen frightened, you woke up, even his dick a little lost in size. «Damn, I do not finish», - I flashed you thought, and you began to squeeze his penis, straining the muscles of the vagina. So groan was unable to hold back frightened man. Pretty soon his cock regained the lost ground. And the guy, I grabbed you for the ass, You continued to fuck. And so you were on the brink, and his hands curled ass tore avalanche. Buried in a pillow, you become finish, trying not to dissuade the Night Visitors, that you are still sleeping.'
 								Act 'Further':
+									minut += 20
+									horny = 0
+									willpower += 15
+									manna += 15
+									vagina += 1
+									orgasm += 1
+									vaginalOrgasm += 1
+									bj += 1
+									swallow+= 1
+									spafinloc = 12
+									gs 'cum_manage'
+									throat+= 1
+									facial+=1
+									gs'stat'
 									*clr & cla
-									'<center><img src="images/qwest/alter/parc_ev/placer_sex91.jpg"></center>'
-									'You swallow and swallow, It seems, sleeping, submissive, Puppet, This guy loves more than the sleepless and active. On-else you could not explain the flow, that both the hose poured your mouth. It had to be very excited, to issue a. How did he even have time to bring to orgasm, instead obkonchalsya first minute. While these thoughts flashed in your mind, guy all-still pulled out a member, but it has not ceased to finish, so that more of the sperm gets into your face. Finally finished, so that you even breathed a sigh of relief. He grabbed my things and ran out of the room. You, wiped his muzzle, by adhering to her sperm thought, that did not bother to see, who among men it was. Look at the clock and saw that it was morning, You thinking what to do next.'
-									Act 'Make a breakfast': dynamic $din_breakfast
+									'<center><img src="images/qwest/alter/parc_ev/placer_sex90.jpg"></center>'
+									'«Damn finished! In a dream! Hot girl!», - a guy like that has managed to whisper to scream. And trying not to make noise, he hurried , he again moved to the head of the bed. Turning your head, so that the face you again been rampant dick. You opened her mouth,  and then it turned out to be a member, covered with your nipples , and this is even more delicious. «Yes slut earn», - he whispered: «swallow all, what I nakonchal», - And with that man began to fill your mouth.'
+									Act 'Further':
+										*clr & cla
+										'<center><img src="images/qwest/alter/parc_ev/placer_sex91.jpg"></center>'
+										'You swallow and swallow, It seems, sleeping, submissive, Puppet, This guy loves more than the sleepless and active. On-else you could not explain the flow, that both the hose poured your mouth. It had to be very excited, to issue a. How did he even have time to bring to orgasm, instead obkonchalsya first minute. While these thoughts flashed in your mind, guy all-still pulled out a member, but it has not ceased to finish, so that more of the sperm gets into your face. Finally finished, so that you even breathed a sigh of relief. He grabbed my things and ran out of the room. You, wiped his muzzle, by adhering to her sperm thought, that did not bother to see, who among men it was. Look at the clock and saw that it was morning, You thinking what to do next.'
+										Act 'Make a breakfast': dynamic $din_breakfast
+									end
 								end
 							end
 						end
@@ -741,12 +753,18 @@ gs 'cum_manage'
 				end
 			end
 		end
+		sexunaware = 1
+		gs 'cum_manage'
+		Act 'Make a breakfast': dynamic $din_breakfast
+		Act 'Lie in bed': dynamic $din_stay_in_bed
 	end
 }
 
 
 $din_breakfast_sex = {
 *clr & cla
+$boy = $bname
+sexpartkno = 1
 gs'stat'
 '<center><img src="images/qwest/alter/parc_ev/placer_sex40.gif"></center>'
 'You embarrassed but still took off her bra: "Well, that `s better?", - <<$bname>>, He shook his head affirmatively: «But for my taste on you anyway still a lot of clothes».'
@@ -761,6 +779,8 @@ gs'stat'
 			'You turned around and slowly, showing off, We came to the guy, in the course of removing her panties: «And you? Just look `ll? Or that the same-a snimesh » , - <<$bname>>, quickly pulled off his pants. You just slow down to his knees, giving a guy consider themselves. And bowing his head, We had a tongue on the head, Speaking licked a drop of grease,  and pulled him even not very good standing member, in your mouth. And adopt carefully suck,  your ability to act to take effect, cock stood at the top of, obviously ready to fight. '
 			Act'Become cancer':
 				*clr & cla
+				cumprecheck = 1
+				gs 'cum_manage'
 				'<center><img src="images/qwest/alter/parc_ev/placer_sex42.jpg"></center>'
 				'<<$bname>>  You stood up and turned to his ass pressed on his back causing bend. AND <<$bname>>, gently slapping you on the buttocks, I began to penetrate into your bingo. He introduced cock slowly and gently, slowly yesterday. Lastly <<$bname>>  fully immersed in your narrow hole. '
 				'- Well, how? - He asked. - How does it feel?'
@@ -783,14 +803,16 @@ gs'stat'
 						'Hands Man turn up your feet up...  He eagerly kisses breasts, , He licks the tip of her tongue around the nipple. Member moving inside you like a wound, you scream with pleasure, <<$bname>> starts to move faster. Just a few movements... and you freeze... moaned drawl... <<$bname>>  inserted member as possible. He looks into your eyes. She screamed and bit her lip, You trembled in a powerful orgasm. He grabbed a guy in the ass, you try harder to press him to her, enjoying an orgasm and a member within you.'
 						Act 'Further':
 							horny += 30
-							cumbelly = cumbelly + 1
+							spafinloc = 14
+							gs 'cum_manage'
 							gs'stat'
 							*clr & cla
 							'<center><img src="images/qwest/alter/parc_ev/placer_sex45.jpg"></center>'
 							'After waiting pleasant moments of your orgasm, when your vulva orgazmiruet greedily clenched his cock <<$bname>> if gone mad passion covered head. He began to move, You literally piercing through. He heard a loud bang, the body of the body, when a member of a reason to hide in your pussy. When suddenly stopped and, pulling member, I began to fill your belly with his seed.'
 							Act 'Further':
 								*clr & cla
-								cumbelly =0
+								cumspclnt = 14
+								gs 'cum_cleanup'
 								gs'stat'
 								'<center><img src="images/qwest/alter/parc_ev/placer_sex46.jpg"></center>'
 								'When finished pour <<$bname>>,  gently kissed you, and he said,:' 
@@ -848,7 +870,12 @@ $din_stay_the_night = {
 
 $din_drink_vodca2 = {
 	*clr & cla
-	cumlip = 0
+	cumspclnt = 2
+	gs 'cum_cleanup'
+	$boy = $bname2
+	sexpartkno = 1
+	cumprecheck = 1
+	gs 'cum_manage'
 	gs'stat'
 	'<center><img src="images/qwest/alter/parc_ev/placer_sex25.gif"></center>'
 	'You just know how to face, we heard «Svetik, come here, you see him, there is no more strength to endure», - you turned <<$bname>> I urge you to his friend who is sitting naked on the couch, and jerked off his penis. Smiling, You came to the guy, I turned to him and put my ass pussy, wet from your secretions and semen of the first partner. You groaned simultaneously. '
@@ -886,6 +913,10 @@ $din_drink_vodca2 = {
 				else
 					Act 'Go to the third guy':
 						*clr & cla
+						$boy = $bname3
+						sexpartkno = 1
+						cumprecheck = 1
+						gs 'cum_manage'
 						'<center><img src="images/qwest/alter/parc_ev/placer_sex31.jpg"></center>'
 						'To you came third guy:  «Do not be afraid , my lady , I will save you from nedotraha», - everyone laughed, and he led you in the room you put on the table, and unceremoniously drove by a dick standing count, your pussy filled with sperm. You moaned with pleasure. It seems, this-then what you are missing.'
 						Act 'Further':
@@ -996,6 +1027,8 @@ $din_drink_vodca = {
 								horny +=30
 								bj += 1
 								guy += 1
+								$boy = $bname
+								sexpartkno = 1
 								gs'stat'
 								*clr & cla
 								'<center><img src="images/qwest/alter/parc_ev/placer_sex9.jpg"></center>'
@@ -1008,7 +1041,7 @@ $din_drink_vodca = {
 										Act 'Swallow':
 											swallow+= 1
 											spafinloc = 12
-gs 'cum_manage'
+											gs 'cum_manage'
 											throat+= 1
 											gs'stat'
 											*clr & cla
@@ -1032,6 +1065,8 @@ gs 'cum_manage'
 									end
 									Act 'Moan':
 										sex +=1
+										cumprecheck = 1
+										gs 'cum_manage'
 										minut += 30
 										gs'stat'
 										*clr & cla
@@ -1068,8 +1103,10 @@ gs 'cum_manage'
 																	gs 'cum_manage'
 																	DPorgasm += 1
 																	anal += 1
+																	$boy = $bname2
+																	sexpartkno = 1
 																	spafinloc = 3
-gs 'cum_manage'
+																	gs 'cum_manage'
 																	anus+=1
 																	gs'stat'
 																	*clr & cla
@@ -1105,7 +1142,11 @@ gs 'cum_manage'
 																		vagina =+ 1
 																		orgasm =+ 2
 																		vaginalOrgasm += 1
-																		cumpussy =+ 1
+																		spafinloc = 12
+																		gs 'cum_manage'
+																		$boy = $bname2
+																		sexpartkno = 1
+																		gs 'cum_manage'
 																		gs'stat'
 																		*clr & cla
 																		'<center><img src="images/qwest/alter/parc_ev/placer_sex15.gif"></center>'
@@ -1135,11 +1176,15 @@ gs 'cum_manage'
 															DPorgasm += 1
 															anal += 1
 															anus+=1
+															$boy = $bname2
+															sexpartkno = 1
 															spafinloc = 3
-gs 'cum_manage'
+															gs 'cum_manage'
 															swallow+= 1
+															$boy = $bname3
+															sexpartkno = 1
 															spafinloc = 12
-gs 'cum_manage'
+															gs 'cum_manage'
 															throat+= 1
 															gs'stat'
 															*clr & cla
@@ -1264,7 +1309,8 @@ else
 	if dormrape = 0:
 		cls
 		alko += 20
-		cumlip = 0
+		cumspclnt = 2
+		gs 'cum_cleanup'
 		fbreath = 0
 		minut += 30
 		gs'stat'
@@ -1302,7 +1348,7 @@ else
 		end
 
 		if ciklkm > 0:'Then the space between your legs took the next guy.'
-		if ciklkm > 0 and cumbelly >= 5:cumbelly -= 4 & cumfrot += 4 & 'One of the guys began to resent "Shit, boys, Cho you like this slut zastruhali? By the same approach to her dumb! In short let her clothes, I though it pizden Wipe" You feel as you wipe the stomach and stuck to the vagina which is cloth.'
+		if ciklkm > 0 and cumsumbod >= 200 and spdirtyn > 0: cumspclnt = 6 & gs 'cum_cleanup' & cumspclnt = 14 & gs 'cum_cleanup' & cumspclnt = 15 & gs 'cum_cleanup' & 'One of the guys began to resent "Shit, boys, Cho you like this slut zastruhali? By the same approach to her dumb! In short let her clothes, I though it pizden Wipe" You feel as you wipe the stomach and stuck to the vagina which is cloth.'
 		gs'stat'
 		if ciklkm > 0:jump'markdormrape'
 

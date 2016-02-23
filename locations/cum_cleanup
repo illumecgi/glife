@@ -244,6 +244,23 @@ elseif cumspclnt = 14:
 	cumsptmp += 1
 	jump 'cumsptmploop'
 
+!{ass and pussy external wipe}
+elseif cumspclnt = 15:
+	if sparrloc[cumsptmp] = 0 or sparrloc[cumsptmp] = 3: sparrslc[cumsptmp] = 0
+	if sparrloc[cumsptmp] = 1 or sparrloc[cumsptmp] = 4:
+		KILLVAR 'spafinloc',cumsptmp
+		KILLVAR 'sparrage',cumsptmp
+		KILLVAR 'sparrloc',cumsptmp
+		KILLVAR '$sparrnam',cumsptmp
+		KILLVAR 'sparrppt',cumsptmp
+		KILLVAR 'sparridt',cumsptmp
+		KILLVAR 'sparrvol',cumsptmp
+		KILLVAR 'sparrslc',cumsptmp
+	end
+	cumsumbod -= sparrvol[cumsptmp]
+	cumsptmp += 1
+	jump 'cumsptmploop'
+
 !{Full Clean}
 elseif cumspclnt = 20:
 	KILLVAR 'spafinloc'

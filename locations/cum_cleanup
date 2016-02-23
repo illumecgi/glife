@@ -8,7 +8,7 @@ if arrmodtmp < (cumsptmp+1): cumspclnt = 0
 
 !{Full Body Clean}
 if cumspclnt = 1:
-	if sparrloc = 0 or sparrloc = 1 or sparrloc = 3 or sparrloc = 4 or (sparrloc >= 8 and sparrloc < 12) or sparrloc > 12:
+	if sparrloc[arrmodtmp] = 0 or sparrloc[arrmodtmp] = 1 or sparrloc[arrmodtmp] = 3 or sparrloc[arrmodtmp] = 4 or (sparrloc[arrmodtmp] >= 8 and sparrloc[arrmodtmp] < 12) or sparrloc[arrmodtmp] > 12:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -20,9 +20,9 @@ if cumspclnt = 1:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Teeth Clean}
+	!{Teeth Clean}
 elseif cumspclnt = 2:
-	if sparrloc = 12:
+	if sparrloc[arrmodtmp] = 12:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -34,9 +34,9 @@ elseif cumspclnt = 2:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Internal Clean}
+	!{Internal Clean}
 elseif cumspclnt = 3:
-	if sparrloc = 0 or sparrloc = 3 or sparrloc = 17:
+	if sparrloc[arrmodtmp] = 0 or sparrloc[arrmodtmp] = 3 or sparrloc[arrmodtmp] = 17:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -48,9 +48,10 @@ elseif cumspclnt = 3:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{External Body Clean}
+	!{External Body Clean}
 elseif cumspclnt = 4:
-	if sparrloc = 1 or sparrloc = 4 or (sparrloc >= 8 and sparrloc <= 11) or (sparrloc >= 13 and sparrloc <= 16):
+	if sparrloc[arrmodtmp] = 0 or sparrloc[arrmodtmp] = 3: sparrslc = 0
+	if sparrloc[arrmodtmp] = 1 or sparrloc[arrmodtmp] = 4 or (sparrloc[arrmodtmp] >= 8 and sparrloc[arrmodtmp] <= 11) or (sparrloc[arrmodtmp] >= 13 and sparrloc[arrmodtmp] <= 16):
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -62,9 +63,9 @@ elseif cumspclnt = 4:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Hair Clean}
+	!{Hair Clean}
 elseif cumspclnt = 5:
-	if sparrloc = 16:
+	if sparrloc[arrmodtmp] = 16:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -76,9 +77,9 @@ elseif cumspclnt = 5:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Clothes Clean}
+	!{Clothes Clean}
 elseif cumspclnt = 6:
-	if sparrloc = 2 or (sparrloc >= 5 and sparrloc <= 7):
+	if sparrloc[arrmodtmp] = 2 or (sparrloc[arrmodtmp] >= 5 and sparrloc[arrmodtmp] <= 7):
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -90,9 +91,9 @@ elseif cumspclnt = 6:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Enima}
+	!{Enima}
 elseif cumspclnt = 7:
-	if sparrloc = 3:
+	if sparrloc[arrmodtmp] = 3:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -104,9 +105,9 @@ elseif cumspclnt = 7:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Douche}
+	!{Douche}
 elseif cumspclnt = 8:
-	if sparrloc = 0 or sparrloc >= 17:
+	if sparrloc[arrmodtmp] = 0 or sparrloc[arrmodtmp] >= 17:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -118,9 +119,9 @@ elseif cumspclnt = 8:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Handwashing}
+	!{Handwashing}
 elseif cumspclnt = 9:
-	if sparrloc = 13:
+	if sparrloc[arrmodtmp] = 13:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -132,9 +133,10 @@ elseif cumspclnt = 9:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Full External Clean}
+	!{Full External Clean}
 elseif cumspclnt = 10:
-	if sparrloc = 1 or sparrloc = 2 or (sparrloc >= 4 and sparrloc <= 11) or (sparrloc >= 13 and sparrloc <= 16):
+	if sparrloc[arrmodtmp] = 0 or sparrloc[arrmodtmp] = 3: sparrslc = 0
+	if sparrloc[arrmodtmp] = 1 or sparrloc[arrmodtmp] = 2 or (sparrloc[arrmodtmp] >= 4 and sparrloc[arrmodtmp] <= 11) or (sparrloc[arrmodtmp] >= 13 and sparrloc[arrmodtmp] <= 16):
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -146,9 +148,9 @@ elseif cumspclnt = 10:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Face Cleanup}
+	!{Face Cleanup}
 elseif cumspclnt = 11:
-	if sparrloc = 11:
+	if sparrloc[arrmodtmp] = 11:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -160,9 +162,9 @@ elseif cumspclnt = 11:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Face and Hair Cleanup}
+	!{Face and Hair Cleanup}
 elseif cumspclnt = 12:
-	if sparrloc = 11 or sparrloc = 16:
+	if sparrloc[arrmodtmp] = 11 or sparrloc[arrmodtmp] = 16:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -174,9 +176,9 @@ elseif cumspclnt = 12:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Head clean}
+	!{Head clean}
 elseif cumspclnt = 13:
-	if sparrloc = 11 or sparrloc = 12 or sparrloc = 16:
+	if sparrloc[arrmodtmp] = 11 or sparrloc[arrmodtmp] = 12 or sparrloc[arrmodtmp] = 16:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -188,7 +190,21 @@ elseif cumspclnt = 13:
 	end
 	cumsptmp += 1
 	jump 'cumsptmploop'
-!{Full Clean}
+	!{Belly clean}
+elseif cumspclnt = 14:
+	if sparrloc[arrmodtmp] = 14
+		KILLVAR 'spafinloc',cumsptmp
+		KILLVAR 'sparrage',cumsptmp
+		KILLVAR 'sparrloc',cumsptmp
+		KILLVAR '$sparrnam',cumsptmp
+		KILLVAR 'sparrppt',cumsptmp
+		KILLVAR 'sparridt',cumsptmp
+		KILLVAR 'sparrvol',cumsptmp
+		KILLVAR 'sparrslc',cumsptmp
+	end
+	cumsptmp += 1
+	jump 'cumsptmploop'
+	!{Full Clean}
 elseif cumspclnt = 20:
 	KILLVAR 'spafinloc'
 	KILLVAR 'sparrage'

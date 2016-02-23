@@ -920,7 +920,7 @@ if $ARGS[0] = 'BjBeerAnal':
 		$boy = 'Shulga'
 		sexpartkno = 1
 		spafinloc = 3
-		gs 'cum_manage
+		gs 'cum_manage'
 		minut += 10
 		gs 'stat'
    

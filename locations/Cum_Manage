@@ -51,11 +51,10 @@ if cumprecheck ! 1:
 					else
 						sparrppt[cumarrtemp2] = 10000
 					end
-					if sexvolume > 0:
-						sparrvol[cumarrtemp2] = sexvolume
-					else
-						sparrvol[cumarrtemp2] = 40
-					end
+					sparrvol[cumarrtemp2] = sexvolume
+					cumsumbod += sexvolume
+					cumsumvag += sexvolume
+					if sexvolume <= 0: sparrvol[cumarrtemp2] = 40 & cumsumbod += 40 & cumsumvag += 40
 					sparridt[cumarrtemp2] = sexpartkno
 					sparrslc[cumarrtemp2] = 0
 				elseif temprand < 10:
@@ -70,11 +69,10 @@ if cumprecheck ! 1:
 					else
 						sparrppt[cumarrtemp2] = 10000
 					end
-					if sexvolume > 0:
-						sparrvol[cumarrtemp2] = sexvolume
-					else
-						sparrvol[cumarrtemp2] = 40
-					end
+					sparrvol[cumarrtemp2] = sexvolume
+					cumsumbod += sexvolume
+					cumsumvag += sexvolume
+					if sexvolume <= 0: sparrvol[cumarrtemp2] = 40 & cumsumbod += 40 & cumsumvag += 40
 					sparridt[cumarrtemp2] = sexpartkno
 					sparrslc[cumarrtemp2] = 0
 				else
@@ -93,11 +91,10 @@ if cumprecheck ! 1:
 				else
 					sparrppt[cumarrtemp2] = 10000
 				end
-				if sexvolume > 0:
-					sparrvol[cumarrtemp2] = sexvolume
-				else
-					sparrvol[cumarrtemp2] = 40
-				end
+				sparrvol[cumarrtemp2] = sexvolume
+				cumsumbod += sexvolume
+				cumsumvag += sexvolume
+				if sexvolume <= 0: sparrvol[cumarrtemp2] = 40 & cumsumbod += 40 & cumsumvag += 40
 				sparridt[cumarrtemp2] = sexpartkno
 				sparrslc[cumarrtemp2] = 0
 			elseif sexcontra = 5:
@@ -113,11 +110,10 @@ if cumprecheck ! 1:
 				else
 					sparrppt[cumarrtemp2] = 10000
 				end
-				if sexvolume > 0:
-					sparrvol[cumarrtemp2] = sexvolume
-				else
-					sparrvol[cumarrtemp2] = 40
-				end
+				sparrvol[cumarrtemp2] = sexvolume
+				cumsumbod += sexvolume
+				cumsumvag += sexvolume
+				if sexvolume <= 0: sparrvol[cumarrtemp2] = 40 & cumsumbod += 40 & cumsumvag += 40
 				sparridt[cumarrtemp2] = sexpartkno
 				sparrslc[cumarrtemp2] = 0
 !{!Next it checks for sabotaged condoms. First sabotaged by you, then sabotaged by the guy. If they were sabotaged, it acts similar to a condom failure, but worse.}
@@ -191,10 +187,12 @@ if cumprecheck ! 1:
 		else
 			sparrppt[cumarrtemp2] = 10000
 		end
-		if sexvolume > 0:
-			sparrvol[cumarrtemp2] = sexvolume
-		else
-			sparrvol[cumarrtemp2] = 40
+		sparrvol[cumarrtemp2] = sexvolume
+		cumsumbod += sexvolume
+		if sexvolume <= 0: sparrvol[cumarrtemp2] = 40 & cumsumbod += 40
+		if spafinloc = 3:
+			cumsumass += sexvolume
+			if sexvolume <= 0: cumsumass += 40
 		end
 		sparridt[cumarrtemp2] = sexpartkno
 		sparrslc[cumarrtemp2] = 0
@@ -227,6 +225,15 @@ spafinloc = 0
 sexvolume = 0
 arrmodtmp = 0
 dynamic $din_Update_Condom_Counts
+if cumsumass >= 60:
+	arrmodtmp = arrpos('sparrloc',3)
+	if sparrslc[arrmodtmp] <= 0: sparrslc[arrmodtmp] += 1
+end
+if cumsumvag >= 60:
+	arrmodtmp = arrpos('sparrloc',0)
+	if sparrslc[arrmodtmp] <= 0: sparrslc[arrmodtmp] += 1
+end
+
 
 --- Cum_Manage ---------------------------------
 

@@ -2,6 +2,9 @@
 
 !{Hourly reduction in semen potency}
 !{First it sets the array index to the first index, then it checks to be sure the array tracking the age is less than 200 hours. If it is 200 hours old, it kills that index, which should shift the index up. If it is less than 200 hours old, it sets a current potency drop. The drop is 2x or 3x regularly, but during ovulation it is only 1x, to represent the better environment from fertile cervical mucus.}
+ctemp = 0
+ctemp[1] = 0
+ctemp[2] = 0
 cumarrtemp = 0
 :cummarrpdloop
 if cumarrage[cumarrtemp] < 190 and cumarrcpt[cumarrtemp] > 0:
@@ -120,7 +123,10 @@ if arrsize('sparrvol') > 0:
 		KILLVAR 'sparrslc',cumarrtemp
 		
 	end
-	if sparrloc[cumarrtemp] = 0 or sparrloc[cumarrtemp] = 3 or sparrloc[cumarrtemp] = 12: sparrvol[cumarrtemp] -= sparrage[cumarrtemp]/2
+	if sparrloc[cumarrtemp] = 0 or sparrloc[cumarrtemp] = 3 or sparrloc[cumarrtemp] = 12:
+	sparrvol[cumarrtemp] -= sparrage[cumarrtemp]/2
+	if sparrloc[cumarrtemp] = 0 and cumsumvag > 60: sparrslc = 1
+	if sparrloc[cumarrtemp] = 3 and cumsumass > 60: sparrslc = 1
 	if sparrloc[cumarrtemp] = 17 and sparrage[cumarrtemp] > 48:
 		cumcondslip = 1
 		health -= 3
@@ -129,10 +135,16 @@ if arrsize('sparrvol') > 0:
 	else
 		cumcondslip = 0
 	end
-	if isprok = 0 and sparrage < 5: sparrslc[cumarrtemp] += 1
+	cumsumbod = ctemp
+	cumsumvag = ctemp[1]
+	cumsumass = ctemp[2]
+	if sparrloc[cumarrtemp] ! 0 and sparrloc[cumarrtemp] ! 3 and sparrloc[cumarrtemp] ! 12 and isprok = 0 and sparrage < 5: sparrslc[cumarrtemp] += 1
 	sparrage[cumarrtemp] += 1
 	cumarrtemp += 1
 	if cumarrtemp < arrsize('sparrvol'): jump 'cumspaloop'
+	ctemp += sparrvol[cumarrtemp]
+	if sparrloc[cumarrtemp] = 0: ctemp[1] += sparrvol[cumarrtemp]
+	if sparrloc[cumarrtemp] = 3: ctemp[2] += sparrvol[cumarrtemp]
 end
 
 if lactate > 0:

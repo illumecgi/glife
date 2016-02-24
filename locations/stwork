@@ -117,13 +117,8 @@ if $ARGS[0] = 'start':
 			horny += 1
 			hapri = 0
 			mop = 1
-			cumpussy = 0
-			cumbelly = 0
-			cumass = 0
-			cumanus = 0
-			cumlip = 0
-			cumface = 0
-			cumanus =0
+			cumspclnt = 1
+			gs 'cum_cleanup'
 			'<center><img src="images/pics/dush.jpg"></center>'
 			'You get into the cubicle and turn on the shower. Then lather up your body and wash in the shower.'
 
@@ -167,7 +162,7 @@ if $ARGS[0] = 'start':
 		!!0.2.6 extension: reworked how quick wash and face wash was supposed to work, it is now uniform in all toilet/bathroom locations
 		!!Removed sweat =- 1 when cum is wiped off clothes
 		!!clrbelo: Amount of clean panties available
-		if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+		if spdirtyi > 0 or spdirtyn > 0:
 			act 'Quick wash (0:15)':
 				cla
 				*clr
@@ -190,13 +185,24 @@ if $ARGS[0] = 'start':
 			end
 		end
 
-		if cumlip > 0 or cumface > 0:
+		temp = arrpos('sparrloc',11)
+		if sparrloc[temp] = 11 and sparrvol[temp] > 0:
+			temp = 1
+		else
+			temp = arrpos('sparrloc',16)
+			if sparrloc[temp] = 16 and sparrvol[temp] > 0:
+				temp = 1
+			else
+				temp = 0
+			end
+		end
+		if temp > 0 or spdirtyb > 0 : 
 			act 'Wash cum off face (0:15)':
 				cla
 				*clr
 				mop = 1
-				cumlip = 0
-				cumface = 0
+				cumspclnt = 13
+				gs 'cum_cleanup
 				sweat -= 1
 				minut += 15
 				'<center><img src="images/etogame/facesp.jpg"></center>'
@@ -205,11 +211,12 @@ if $ARGS[0] = 'start':
 			end
 		end
 
-		if cumfrot > 0:
+		if spdirtyc > 0:
 			act 'Wipe the cum off your clothes (0:10)':
 				cla
 				*clr
-				cumfrot = 0
+				cumspclnt = 6
+				gs 'cum_cleanup'
 				minut += 10
 				!!'<center><img src="images/etogame/frotsp.jpg"></center>'
 				'You remove traces of cum from your clothes.'
@@ -246,26 +253,30 @@ if $ARGS[0] = 'start':
 	publichotstart = publichot
 
 	if hour >= 15 or hour <= 2:
-		if mop >= 4:
-			if hapri = 1:
-				if sweat <= 0:
-					if leghair <= 0 and lobok <= 0:
-						if fingal <= 0:
-							act 'Go on stage':stpredmet = 3 & gt 'stwork2'
+		if dirtyn <= 0 and dirtyv <= 0:
+			if mop >= 4:
+				if hapri = 1:
+					if sweat <= 0:
+						if leghair <= 0 and lobok <= 0:
+							if fingal <= 0:
+								act 'Go on stage':stpredmet = 3 & gt 'stwork2'
+							else
+								'With such a black eye as you have, you aren''t allowed on stage.'
+							end
 						else
-							'With such a black eye as you have, you aren''t allowed on stage.'
+							'There is nothing more terrible than a stripper with hairy legs or pubis, have a shave before you can work.'
 						end
 					else
-						'There is nothing more terrible than a stripper with hairy legs or pubis, have a shave before you can work.'
+						'Damn, you stink like a horse, have a wash first.'
 					end
 				else
-					'Damn, you stink like a horse, have a wash first.'
+					'The least you can do is brush your hair.'
 				end
 			else
-				'The least you can do is brush your hair.'
+				'You need to very thick makeup if you want people to see it in this light.'
 			end
 		else
-			'You need to very thick makeup if you want people to see it in this light.'
+			'There is visible semen on your body. Wash yourself off before going on stage.'
 		end
 	else
 		'That''s it for today. Time to go home.'

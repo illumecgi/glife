@@ -160,7 +160,7 @@ $din_vokzalg_toilet_deyst = {
 	!!0.2.6 extension: reworked how quick wash and face wash was supposed to work, it is now uniform in all toilet/bathroom locations
 	!!Removed sweat =- 1 when cum is wiped off clothes
 	!!clrbelo: Amount of clean panties available
-	if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+	if spdirtyi > 0 or spdirtyn > 0:
 		act 'Quick wash (0:15)':
 			cla
 			*clr
@@ -184,7 +184,18 @@ $din_vokzalg_toilet_deyst = {
 		end
 	end
 
-	if cumlip > 0 or cumface > 0:
+	temp = arrpos('sparrloc',11)
+	if sparrloc[temp] = 11 and sparrvol[temp] > 0:
+		temp = 1
+	else
+		temp = arrpos('sparrloc',16)
+		if sparrloc[temp] = 16 and sparrvol[temp] > 0:
+			temp = 1
+		else
+			temp = 0
+		end
+	end
+	if temp > 0 or spdirtyb > 0 :
 		act 'Clean your face from sperm (0:05)':
 			cla
 			*clr
@@ -201,7 +212,7 @@ $din_vokzalg_toilet_deyst = {
 		end
 	end
 
-	if cumfrot > 0:
+	if spdirtyc > 0:
 		act 'Wipe the cum off your clothes (0:10)':
 			cla
 			*clr
@@ -216,6 +227,20 @@ $din_vokzalg_toilet_deyst = {
 	end
 	!!
 
+	if sanpad > 0 and mesec > 0 and isprokp = 0 and tanga = 1:
+		act 'Use a sanitary napkin (0:05)':
+			cla
+			*clr
+			sanpad -= 1
+			isprokp = 1
+			minut += 5
+			manna -= 5
+			'<center><img src="images/pics/wash3.jpg"></center>'
+			'You use a sanitary napkin.'
+			act 'Finish':gt $locM, $metkaM
+		end
+	end
+	
 	if tampon > 0 and mesec > 0 and isprok = 0:
 		act 'Use a tampon (0:05)':
 			cla

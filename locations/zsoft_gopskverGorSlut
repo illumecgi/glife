@@ -211,12 +211,11 @@ if $ARGS[0] = '2':
 	if alko < 6:
 		minut += 5
 		alko += 1
-		cumlip = 0
+		cumspclnt = 2
+		gs 'cum_cleanup'
 		fbreath = 0
 		energy += 5
 		water += 1
-		cumlip = 0
-		fbreath = 0
 		health -= 5
 	end
 	gs'stat'
@@ -409,7 +408,7 @@ if $ARGS[0] = '2':
 			act 'Cum on face':
 				cls
 				spafinloc = 11
-gs 'cum_manage'
+				gs 'cum_manage'
 				facial += 1
 				willpower -=10
 				gs'stat'
@@ -431,7 +430,7 @@ gs 'cum_manage'
 			act 'Cum on face':
 				cls
 				spafinloc = 11
-gs 'cum_manage'
+				gs 'cum_manage'
 				facial += 1
 				willpower -=10
 				gs'stat'
@@ -457,7 +456,7 @@ gs 'cum_manage'
 				cls
 				swallow += 1
 				spafinloc = 12
-gs 'cum_manage'	
+				gs 'cum_manage'	
 				willpower -=10
 				gs'stat'
 				randpgifm=rand(1,100)
@@ -484,7 +483,7 @@ gs 'cum_manage'
 				cls
 				swallow += 1
 				spafinloc = 12
-gs 'cum_manage'	
+				gs 'cum_manage'	
 				willpower -=10
 				gs'stat'
 				randpg=rand(1,100)
@@ -508,7 +507,7 @@ gs 'cum_manage'
 			act 'Come on body':
 				cls
 				spafinloc = 7
-gs 'cum_manage'
+				gs 'cum_manage'
 				manna += 5
 				willpower -=5
 				gs'stat'
@@ -528,7 +527,7 @@ gs 'cum_manage'
 				manna += 5
 				willpower -=5
 				spafinloc = 4
-gs 'cum_manage'
+				gs 'cum_manage'
 				gs'stat'
 				cumass_text = RAND(0,5)
 				if cumass_text = 0:$cumass_text = 'Dick began to cum in your ass, He took out and began to masturbate for you. Remains of sperm flowed to you on the ass, Then he rubbed his dick on your pussy and points, smearing his sperm'
@@ -552,7 +551,7 @@ gs 'cum_manage'
 				manna += 5
 				willpower -=5
 				spafinloc = 4
-gs 'cum_manage'
+				gs 'cum_manage'
 				gs'stat'
 				'<center><img src="images/zsoft/park/gopota/sex/oral/cum/gif/cumass'+rand(1,2)+'.gif"></center>'
 				'Room service is the last you are tired valites on the grass. It suits you <<$shultextrand3>> and asks izdvevkoy: 
@@ -591,7 +590,7 @@ gs 'cum_manage'
 				manna -=30
 				willpower -=30
 				health -=30
-				cumpussy = cumpussy + 1
+				gs 'cum_manage'
 				gs'stat'
 				cumvag_text = RAND(0,1)
 				if cumvag_text = 0:$cumvag_text = 'Finally, his movements are accelerated and drove last on the eggs with a beatific smile, he finished deep in you. You felt like a warm zhikdost poured into your inner.'
@@ -689,6 +688,8 @@ gs 'cum_manage'
 
 		act 'Suck Dan':
 			cls
+			$boy = 'Dan'
+			sexpartkno = 1
 			bj += 1
 			if npcSex[10] = 0:npcSex[10] = 1 & guy += 1
 			dick = 17
@@ -709,6 +710,8 @@ gs 'cum_manage'
 
 		act 'Suck Shulga':
 			cls
+			$boy = 'Shulga'
+			sexpartkno = 1
 			bj += 1
 			if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
 			dick = 15
@@ -730,6 +733,8 @@ gs 'cum_manage'
 
 		act 'Suck Vitka':
 			cls
+			$boy = 'Vitka'
+			sexpartkno = 1
 			bj += 1
 			if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
 			dick = 18
@@ -842,6 +847,7 @@ gs 'cum_manage'
 			if rndpsos>15:	
 				act 'Fuck':
 					cls
+					$boy = 'Guy'
 					gs'stat'
 					sex += 1
 					anal +=1
@@ -917,11 +923,12 @@ if $ARGS[0] = 'piss':
 			act 'Go to the site':schtraf = 500 & minut += 5 & katalkinNoexit = 1 & gt'katalkin'
 			act 'Suck':
 				cls
+				$boy = 'Policeman'
 				horny += 5
 				minut += 5
 				bj += 1
 				spafinloc = 11
-gs 'cum_manage'
+				gs 'cum_manage'
 				facial += 1
 				gs'stat'
 				'<center><img src="images\zsoft\park\gopota\piss\event\p_otsos.gif"></center>'
@@ -957,6 +964,7 @@ gs 'cum_manage'
 		'Suddenly a sharp jolt and you`re lying under whom the body, "Do not shout or even knock" He said a hoarse voice and you began to pull off her skirt with shorts'
 		act 'Do not resist':
 			cls
+			$boy = 'Rapist'
 			horny += 5
 			manna -= 30
 			health -= 30
@@ -976,6 +984,8 @@ gs 'cum_manage'
 			' - Shit, yes this slut fucking machine fucked.'
 			act 'Further':
 				cls
+				cumprecheck = 1
+				gs 'cum_manage'
 				gs'stat'
 				'<center><img src="images\zsoft\park\gopota\piss\event\ev3_2.gif"></center>'
 				'As you`ve been waiting these words, You start to shake, nearly howled.'
@@ -996,6 +1006,13 @@ gs 'cum_manage'
 					'Your body began to shake violently and you finished.'
 					act 'Further':
 						cls
+						spafinloc 12
+						gs 'cum_manage'
+						spafinloc 11
+						gs 'cum_manage'
+						$boy = 'Rapist 2'
+						spafinloc 11
+						gs 'cum_manage'
 						gs'stat'
 						'<center><img src="images\zsoft\park\gopota\piss\event\ev3_4.gif"></center>'
 						'One of the most cock drove the throat and shot you in the throat.'

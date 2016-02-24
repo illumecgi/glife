@@ -70,29 +70,30 @@ money_vnesh = 0
 if vnesh = -10: money_vnesh = 150
 !semen stains on clothing:
 money_cumfrot = 0
-if cumfrot > 0: money_cumfrot = 50
+if spdirtyc > 0: money_cumfrot = 50
 !purity of body (lean or not)
 money_sweat = 0
 if sweat >= 1 and sweat <= 3: money_sweat = 50
 if sweat > 3: money_sweat = 100
 !mouth smells
 money_cumlip = 0
-if cumlip > 0: money_cumlip = 50
+if spdirtyb > 0: money_cumlip = 50
 !face smeared with semen
 money_cumface = 0
-if cumface > 0: money_cumface = 50
+if spdirtyv > 0: money_cumface = 50
 !bandaged body in the semen
 money_cumbelly = 0
-if cumbelly > 0: money_cumbelly = 50
+money_cumass = 0
+if spdirtyn > 0: money_cumbelly = 50 & money_cumass = 50
 !It derives from the sperm pussy
 money_cumpussy = 0
-if cumpussy > 0: money_cumpussy = 50
+if spdirtyi > 0: money_cumpussy = 20
+if cumsumvag > 20: money_cumpussy += 30
 !It follows the sperm of priests
 money_cumanus = 0 
-if cumanus > 0: money_cumanus = 50 
+if spdirtyi > 0: money_cumanus = 20
+if cumsumass > 20: money_cumanus += 30
 !ass smeared in sperm
-money_cumass = 0
-if cumass > 0: money_cumass = 50
 !your energy: 
 money_son = 0
 if son < 5: money_son = 50

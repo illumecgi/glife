@@ -119,7 +119,8 @@ $serge_kuh_buh = {
 			minut += 2
 			if beer_count > 0: 
 				alko += 1
-				cumlip = 0
+				cumspclnt = 2
+				gs 'cum_cleanup'
 				fbreath = 0
 			end
 			beer_day = daystart
@@ -154,6 +155,8 @@ $serge_kuh_buh = {
 				You squeeze his hand in his soft penis and do the upward movement-down, podrachivaya. After a few seconds of action you feel like it grows in size... '
 				act 'Take in the mouth':
 					cls
+					$boy = Sergey
+					sexpartkno = 1
 					minut += 5
 					bj += 1
 					throat += 1
@@ -236,12 +239,16 @@ $serge_kuh_buh = {
 										cls
 										horny += 5
 										minut += 5
+										sexvolume = 5
 										spafinloc = 11
-gs 'cum_manage'
+										gs 'cum_manage'
 										facial += 1
 										swallow += 1
+										$boy = Sergey
+										sexpartkno = 1
+										sexvolume = 35
 										spafinloc = 12
-gs 'cum_manage'
+										gs 'cum_manage'
 										hapri = 0
 										gs'stat'
 										'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/alko9.jpg"></center>'
@@ -848,6 +855,10 @@ $serge_kuh_izdev12 = {
 							cls
 							sex += 1
 							horny += 30
+							$boy = Sergey
+							sexpartkno = 1
+							cumprecheck = 1
+							gs 'cum_manage'
 							gs'stat'
 							'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex1-7.jpg"></center>'
 							'Sergei leaning his have on the table, his fingers on your pussy and slipped them into the first one and then the second. Inside, it was very humid and hot. 
@@ -878,10 +889,19 @@ $serge_kuh_izdev12 = {
 									act 'Further':
 										cls
 										spafinloc = 12
-gs 'cum_manage'
-										cumface +=1
+										sexvolume = 30
+										gs 'cum_manage'
+										$boy = Sergey
+										sexpartkno = 1
+										sexvolume = 5
+										spafinloc = 11
+										gs 'cum_manage'
 										hapri = 0
-										cumfrot = 1
+										$boy = Sergey
+										sexpartkno = 1
+										sexvolume = 5
+										spafinloc = 7
+										gs 'cum_manage'
 										gs'stat'
 										'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex1-10.jpg"></center>'
 										'Grabbing the member Sergei, began his nadrachivat. A few minutes later, he began to finish right on your face, I had a lot of sperm, but you do not let go of his cock until it was pulsing and spewing sperm, He finished twenty seconds long.'	
@@ -929,7 +949,11 @@ $serge_kuh_izdev13 = {
 				You noArticleenenno withoobrazili, hego of you want and ArtaWhether medlenno haChapteratyvabe, a hatem releaseabe tspen ofo Hga...'
 				act 'Further':
 					cls
-					sex += 1				
+					sex += 1
+					$boy = Sergey
+					sexpartkno = 1
+					cumprecheck = 1
+					gs 'cum_manage'
 					horny += 10
 					gs'stat'
 					'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex2-6.jpg"></center>'
@@ -960,15 +984,22 @@ $serge_kuh_izdev13 = {
 							dynamic $orgasm_dyn_serg
 							act 'Further':
 								cls
-								spafinloc = 14
-gs 'cum_manage'
+								sexvolume = 20
+								spafinloc = 7
+								gs 'cum_manage'
 								swallow += 1
 								facial += 1
-								cumface +=1
+								$boy = Sergey
+								sexpartkno = 1
+								sexvolume = 10
+								spafinloc = 11
+								gs 'cum_manage'
+								$boy = Sergey
+								sexpartkno = 1
+								sexvolume = 10
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								hapri = 0
-								cumfrot = 1
 								gs'stat'
 								'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex2-8.jpg"></center>'
 								'Sergei felt the imminent onset of orgasm and left the cozy womb. His cock was burning and was willing to pour out the contents of most of the testicles. He got out of bed, you immediately followed him, He came to Sergei, knelt. 
@@ -1016,6 +1047,8 @@ $serge_kuh_izdev14 = {
 					'Sergei is not taking his eyes staring at your ass.'
 					act 'Further':
 						cls
+						$boy = Sergey
+						sexpartkno = 1
 						bj +=1
 						horny += 5
 						gs'stat'
@@ -1037,12 +1070,17 @@ $serge_kuh_izdev14 = {
 							- Yes, bitch!!! - He shouted, to stop driving the piston in your mouth.'
 							act 'Further':
 								cls
+								sexvolume = 20
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								swallow += 1
 								horny += 5
 								hapri = 0
-								cumfrot = 1
+								$boy = Sergey
+								sexpartkno = 1
+								sexvolume = 20
+								spafinloc = 15
+								gs 'cum_manage'
 								gs'stat'
 								'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex5-8.jpg"></center>'
 								'Soon he felt, as you become proactive and have themselves happy to sit down on his dick, forcing him into her as deeply as possible. So he loosened his grip, I sat back and just have fun.
@@ -1091,6 +1129,8 @@ $serge_kuh_izdev15 = {
 					'You are in full niglyazhe in dense approached Sergei and began to unbutton his pants.'
 					act 'Further':
 						cls
+						$boy = Sergey
+						sexpartkno = 1
 						bj +=1
 						throat += 1
 						horny += 10
@@ -1135,12 +1175,11 @@ $serge_kuh_izdev15 = {
 							act 'Further':
 								cls
 								spafinloc = 14
-gs 'cum_manage'
+								gs 'cum_manage'
 								mastr += 1
 								willpower +=20
 								horny = 0
 								orgasm +=1
-								cumfrot = 1
 								hapri = 0
 								gs'stat'
 								'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex5-8.jpg"></center>'
@@ -1192,6 +1231,8 @@ $serge_kuh_izdev16 = {
 					'You further otklyachila ass for Sergei, which could not just look at you, he abruptly pulls his pants, He takes out his dick and starts podrachivat.'
 					act 'Further':
 						cls
+						$boy = Sergey
+						sexpartkno = 1
 						bj +=1
 						horny += 10
 						gs'stat'
@@ -1208,6 +1249,8 @@ $serge_kuh_izdev16 = {
 							'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex6-7.jpg"></center>'
 							'Turns your ass and hot head with a sweep disclose your pussy, you feel hot throbbing head, it fills you up inside. 
 							Apart rolls skewer her pussy faster and faster.'
+							cumprecheck = 1
+							gs 'cum_manage'
 							if analplugin = 1:
 								analplugin = 0
 								'Sergei pulled out of your ass anal plug.'
@@ -1253,7 +1296,7 @@ $serge_kuh_izdev16 = {
 									act 'Further':
 										cls
 										spafinloc = 4
-gs 'cum_manage'
+										gs 'cum_manage'
 										hapri = 0
 										gs'stat'
 										'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex6-11.jpg"></center>'
@@ -1295,6 +1338,8 @@ $serge_kuh_izdev17 = {
 				'Turning to his ass, You leaned, Sergey hand lowered his pants admiring your ass.'
 				act 'Further':
 					cls
+					$boy = Sergey
+					sexpartkno = 1
 					bj +=1
 					throat += 1
 					horny += 5
@@ -1306,6 +1351,8 @@ $serge_kuh_izdev17 = {
 					act 'Further':
 						cls
 						sex += 1
+						cumprecheck = 1
+						gs 'cum_manage'
 						horny += 10
 						gs'stat'
 						'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex4-6.jpg"></center>'
@@ -1336,7 +1383,13 @@ $serge_kuh_izdev17 = {
 									cls
 									hapri = 0
 									spafinloc = 14
-gs 'cum_manage'
+									sexvolume = 20
+									gs 'cum_manage'
+									$boy = Sergey
+									sexpartkno = 1
+									sexvolume = 20
+									spafinloc = 15
+									gs 'cum_manage'
 									gs'stat'
 									'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/sex4-9.jpg"></center>'
 									'He could not stand, having pulled out a member, he blew a stream of sperm, directly on your stomach and even hit on the chest. Sperm were so many, You gladly smeared it over her body.'	
@@ -1355,6 +1408,8 @@ gs 'cum_manage'
 !-------------------------------------------------------------------------------------! 
 $serge_kuh_izn1 = {
 	cls
+	$boy = Sergey
+	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1
 	rape += 1
@@ -1381,6 +1436,8 @@ $serge_kuh_izn1 = {
 		minut +=10
 		horny += 25
 		sex += 1
+		cumprecheck = 1
+		gs 'cum_manage'
 		gs'stat'
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/event/gif/ra'+rand(1,4)+'.gif"></center>'
 		'He rudely turned your backs to Me. When you try to wrap, strong male hands pushed you back, forcing lean on the table. 
@@ -1442,7 +1499,7 @@ $serge_kuh_izn1 = {
 					cls
 					horny += 10
 					spafinloc = 11
-gs 'cum_manage'
+					gs 'cum_manage'
 					facial += 1
 					minut += 5
 					hapri = 0
@@ -1459,6 +1516,8 @@ gs 'cum_manage'
 
 $serge_kuh_izn2 = {
 	cls
+	$boy = Sergey
+	sexpartkno = 1
 	minut +=10
 	serge_countsex += 1
 	rape += 1
@@ -1482,6 +1541,8 @@ $serge_kuh_izn2 = {
 	act 'Further':
 		cls
 		sex += 1
+		cumprecheck = 1
+		gs 'cum_manage'
 		anal +=1
 		minut +=10
 		orgasm += 1
@@ -1526,7 +1587,7 @@ $serge_kuh_izn2 = {
 				manna = mannamax
 				willpower +=20
 				spafinloc = 4
-gs 'cum_manage'
+				gs 'cum_manage'
 				mastr += 1
 				hapri = 0
 				gs'stat'
@@ -1557,6 +1618,8 @@ gs 'cum_manage'
 !----------------------------------------------------------------! 
 $serge_kuh_sex1	= {
 	cls
+	$boy = Sergey
+	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1
 	horny += 10
@@ -1583,6 +1646,8 @@ $serge_kuh_sex1	= {
 			minut +=10
 			horny += 25
 			sex += 1
+			cumprecheck = 1
+			gs 'cum_manage'
 			gs'stat'
 			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/event/sex1-3.jpg"></center>'
 			'But you want to feel his dick in her pussy, and despite protests, skewer him his hole. 
@@ -1593,14 +1658,13 @@ $serge_kuh_sex1	= {
 				cls
 				minut +=10
 				spafinloc = 11
-gs 'cum_manage'
+				gs 'cum_manage'
 				facial += 1
 				orgasm += 1
 				horny = 0
 				manna = mannamax
 				willpower +=20
 				hapri = 0
-				cumfrot = 1
 				gs'stat'
 				'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/event/sex1-4.jpg"></center>'
 				'He unwraps you cancer, you go to the breast on the table. A member of his coming into your wet pussy.
@@ -1618,6 +1682,8 @@ gs 'cum_manage'
 }
 $serge_kuh_sex2	= {
 	cls
+	$boy = Sergey
+	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1
 	horny += 10
@@ -1650,6 +1716,8 @@ $serge_kuh_sex2	= {
 			minut +=5
 			horny += 25
 			sex += 1
+			cumprecheck = 1
+			gs 'cum_manage'
 			gs'stat'
 			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/event/sex2-3.jpg"></center>'
 			'The line of strong and frequent aspirated forced you to take out his penis from his rotika, That all is not over quickly, You wanted more. Sigh, He licked his lips and winked Sergei...
@@ -1695,6 +1763,8 @@ $serge_kuh_sex2	= {
 }
 $serge_kuh_sex3	= {
 	cls
+	$boy = Sergey
+	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1
 	horny += 15
@@ -1721,6 +1791,8 @@ $serge_kuh_sex3	= {
 			minut +=5
 			horny += 10
 			sex += 1
+			cumprecheck = 1
+			gs 'cum_manage'
 			gs'stat'
 			'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/event/sex3-3.jpg"></center>'
 			'You, meanwhile, stood leaned on the table: apart already luscious labia, finger began to fondle her clitoris, slowly sinking another finger inside her delicious slit. 
@@ -1781,7 +1853,7 @@ $serge_kuh_sex3	= {
 							horny = 0
 							manna = mannamax
 							willpower +=20
-							cumpussy +=1 
+							gs 'cum_manage'
 							hapri = 0
 							gs'stat'
 							'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/help/event/sex3-7.jpg"></center>'

@@ -52,6 +52,8 @@ $ind_stamina_groupnpc = {
 !===================!============================================
 !deduce if gg first time
 $gg_devst_deflor = {
+	cumprecheck = 1
+	gs 'cum_manage'	
 	if vagina <= 0:
 		horny = 0
 		manna = manna - 15
@@ -1029,6 +1031,8 @@ $gopsex_select = {
 !sex selection!
 $shgopsex = {
 	cla
+	$boy = $gop_name_npc
+	sexpartkno = 1
 	gs'stat'
 	'- "Well, what <<$gopsex_name_npc>> like me <<$gop_sextext1>> budesh?. What do I do for you?", playfully ask you.'
 
@@ -1966,7 +1970,7 @@ $shgopsex_group_cumbelly = {
 	$boy = $gop_name_npc
 	sexpartkno = 1
 	spafinloc = 14
-gs 'cum_manage'
+	gs 'cum_manage'
 	hapri = 0
 	minut += ''+rand(2,5)+''
 	gs'stat'
@@ -1992,7 +1996,7 @@ $shgopsex_group_cumanal = {
 	$boy = $gop_name_npc
 	sexpartkno = 1
 	spafinloc = 4
-gs 'cum_manage'
+	gs 'cum_manage'
 	hapri = 0
 	minut += ''+rand(2,5)+''
 	gs'stat'

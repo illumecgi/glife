@@ -9,20 +9,27 @@ if hour < 8:
 	exit
 end
 
+cumlip = 0
+fbreath = 0
+
 if alko < 6:
 	'You drank a glass of vodka with police. You will again pour into a glass of vodka.'
 
 	act 'drink a glass':alko += 2 & minut += 30 & gt $curloc
+elseif alko >= 6:
+	'You definitely tipsy and just sit on a chair.'
 end
 
-if alko >= 6:'You definitely tipsy and just sit on a chair.'
-!!if katGangbang = 0:end
-
-if katGangbang > 0:
-	!!if katGangbangDay = daystart:end
-	!!if katGangbangDay < daystart:end
+!'
+if katGangbang = 0:
+	end
+elseif katGangbang > 0:
+	if katGangbangDay = daystart:end
+	if katGangbangDay < daystart:end
 end
+'!
 
 act 'Leave':minut += 2 & gt 'vokzalGin'
 
 --- katalkinAlko ---------------------------------
+

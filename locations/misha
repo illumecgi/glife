@@ -1,0 +1,115 @@
+# misha
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	gs 'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+	'<center><img src="images/nigma/gor/Misha/Misha.pre0,<<rand(0,1)>>.jpg"></center>'
+	'You enter Uncle Mishas apartment. He closes the door behind you, and takes out his penis. Resignedly you walk over to his bed and sit down.'
+	'"Come on girl, we both know you want to service it.'
+	act 'Suck':
+		cla
+		*clr
+		gs 'stat'
+		'<center><img src="images/nigma/gor/Misha/Misha0,<<rand(0,7)>>.jpg"></center>'
+		'You take uncles'' penis in your mouth and begin to move your head. A few subtle tweeks of your mouth and strokes of your tongue and you feel an odd sense of pride as his stiffness throbs at your throat.'
+		act 'Further':
+			cla
+			*clr
+			dmishaday = daystart
+			dick = 18
+			sex += 1
+			bj += 1
+			$boy='Uncle Misha'
+			throat += 1
+			if vagina < dick:vagina += 1
+			minut = minut + 75
+			money = money + 200
+			gs 'stat'
+			if rand1<=60:'<center><img src="images/nigma/gor/Misha/Misha1,<<rand(0,7)>>.jpg"></center>'
+			if rand1>60:'<center><img src="images/nigma/gor/Misha/Misha1,<<rand(0,3)>>.gif"></center>'
+			'His eyes now filled with lust, Uncle Misha informs you, "Okay, girl, now for the main course."'
+			dynamic $sexstart
+			dynamic $sexstart2
+			act 'Further':
+			cla
+			*clr
+			cumlip += 1
+			cumface+=1
+			'<center><img src="images/nigma/gor/Misha/Misha.cum0,<<rand(0,1)>>.jpg"></center>'
+			'Panting, Misha pulls his penis out of you.'
+			'He motions you to your knees, his breathing is hoarse and his face flushed as he finishes on your face.'
+			'Misha takes a minute to catch his breath and admire his handiwork, before leaning down and kissing you on the forehead. He gives you a couple of crumpled bills for your efforts.'
+			act 'Escape':gt'pod_ezd','etaj_2'
+			end
+		end
+	end
+	if dom=>20 or horny<30:
+		act 'No':
+			cla
+			*clr
+			gs 'stat'
+			'<center><img src="images/nigma/gor/Misha/Misha.exit0,0.jpg"></center>'
+			'You decide that you don''t want to "service it". You turn around and go out the door.'
+			'Uncle Misha calls after you, "Okay girl, not today, but you''ll come back to me!'
+			act 'Escape':gt'pod_ezd','etaj_2'
+		end
+	end
+end
+
+if $ARGS[0] = '2':
+cla
+*clr
+gs 'stat'
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+'<center><img src="images/nigma/gor/Misha/father.misha.pre0,0.jpg"></center>'
+'They take off their pants exposing their still sluggish members.'
+'Your stepfather instructs you, "Well, <<$nickname>>, serve your sentence!"'
+	act 'Suck':
+		cla
+		*clr
+		if fatherandmisha!1:fatherandmisha=1
+		if hadsexwithfather!1:hadsexwithfather=1
+		minut+=5
+		horny+=10
+		bj+=2
+		father+=3
+		gs 'stat'
+		'<center><img src="images/nigma/gor/Misha/father.Misha0,<<rand(0,1)>>.jpg"></center>'
+		'You go to your stepfather and uncle Misha and fall to your knees in front of them.'
+		'You start sucking your stepfathers dick, not forgetting to jerk Uncle Misha.'
+		'After a while you change position, Uncle Mishas dick in your mouth as you masturbate your stepfather with one hand.'
+		act 'Further':
+			cla
+			*clr
+			minut+=30
+			horny+=10
+			guy+=2
+			gs 'stat'
+			if rand1<70:'<center><img src="images/nigma/gor/Misha/father.Misha1,<<rand(0,5)>>.jpg"></center>'
+			if rand1>=70:'<center><img src="images/nigma/gor/Misha/father.Misha1,<<rand(0,1)>>.gif"></center>'
+			'Uncle Misha says, "hmm... this is too mild a punishment."'
+			'You stepfather agrees, "Yes, you should be punished properly. <<$nickname>> spread those cute little legs of yours.'
+			'You open your legs wide and Uncle Misha enters your pussy, while you suck your stepfather. After a while they change positions. Then again changed, and again, you lose count of the different positions and combinations they try, surprised by their extensive repertoire.'
+			act 'Further':
+				cla
+				*clr
+				'<center><img src="images/nigma/gor/Misha/Misha.cum0,<<rand(0,1)>>.jpg"></center>'
+				minut+=3
+				horny+=5
+				cumlip+=1
+				cumface+=1
+				'Finally, they put you on your knees, and both have a go at filling your mouth with their seed.'
+				act 'Escape':gt 'GarGazel'
+			end
+		end
+	end
+end
+
+--- misha ---------------------------------
+

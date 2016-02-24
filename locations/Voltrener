@@ -1,105 +1,135 @@
 # Voltrener
-$din_trener_bj = {
-	act 'Give blowjob':
-		cls
-		bj += 1
-
-		if trenerSex > 0:trenerSex += 1
-		if trenerSex = 0:trenerSex = 1 & guy += 1
-		if volleysostav > 0:trenerepa += 2
-
-		gs 'stat'
-		'<center><img src="images/qwest/alter/ev/tren.jpg"></center>'
-		'You squatted in front of the coach and stroked his crotch and felt how his cock stood up. You reached into his sweatpants gum holding with the other hand and groped hot cock trainer. You pulled the standing member of sweatpants and leaned toward him around his lips.'
-
-		!!if trenerSex >= 5:end
-
-		if tipTrsex = 0:
-			cumlip += 1
-			swallow += 1
-			gs 'stat'
-			'Coach groaned slightly and your mouth spurted warm jet of sperm. You started to swallow warm liquid fills your mouth.'
-		end
-
-		if volleysostav = 0:
-			volleysostav = 1
-			trenerepa = 20
-			'Coach bosses cock in his pants. "Okay <<$surname>>, you are very diligent girl, maybe you will come out of sense, consider that you have a team, but of course in replacement players."'
-		end
-
-		if tipTrsex = 0:act 'Leave':tipTrsex = 0 & gt 'gdksport'
-	end
-}
-$din_trener_gorslut = {
-	gs 'stat'
-	'You reluctantly nodded his head, "It´s true, I really <<$gnikname>>. And what does this have to volleyball?" Coach smiled, "Indirect attitude, very indirectly, we´re now discussing how you get into the team. And I wonder what you can do. You know what I Gauvreau?"'
-
-	act 'No':
-		cls
-		gs 'stat'
-		'You shake your head and told the coach that do not understand the coach sighed, "And you do not mind bleschesh, is not it? Well, I lonely man, and all around a pretty young girl. So clear?"'
-
-		act 'Leave':gt 'gdksport'
-
-		dynamic $din_trener_bj
-	end
-
-	act 'Coach put his hand on her knee':
-		cls
-		gs 'stat'
-		'You leaned forward slightly and put her palm on his knee coach grin you whispered "Need a little demonstration of my other skills? I understand you correctly?" Coach leaned back in his chair, "You´re a smart girl of <<$name>>, go on."'
-		dynamic $din_trener_bj
-	end
-}
-
+CLOSE ALL
 gs 'stat'
-'<center><img src="images/qwest/alter/gdksport.jpg"></center>'
-'You went into the room the coach in which there are cups, balls, sports equipment and a different table where sometimes sitting coach and fills various papers. Coach Mikhail Vlasov does not only lovers but also in the section just coach a professional team volleybolistok.'
+gs 'Voltrener_din'
 
-if volleysostav > 0:
-	if trenerepa < 20:'The coach does not wish you any longer.'
-	if trenerepa >= 20 and trenerepa < 40:'Coach barely tolerates you.'
-	if trenerepa >= 40 and trenerepa < 60:'You have a normal relationship with the coach.'
-	if trenerepa >= 60 and trenerepa < 80:'You have a good relationship with the coach.'
-	if trenerepa >= 80:'Trainer in you doted.'
+if $ARGS[0] = 'start':
+
+	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
+	'You went into the room the coach in which there are cups, balls, sports equipment and a different table where sometimes sitting coach and fills various papers. Coach Mikhail Vlasov does not only lovers but also in the section just coach a professional team volleybolistok.'
 
 	if trenerepa <= 0:
-		volleysostav = -1
-		'Coach menacing appeals to you. "All <<$surname>>, you make me sick with their flourishes. I´ll exclude from the team!"'
+		'The coach hates you.'
+		if volleysostav = 1:
+			volleysostav = -1
+			'Menacingly he says, "<<$surname>>, I''m sick of you attitude. You''re off the team!"'
 
-		act 'Leave':gt 'gdksport'
+			act 'Leave':gt 'gdksport'
 
-		exit
+			exit
+		end
+	elseif trenerepa < 20:
+		'The coach seems to avoid you.'
+	elseif trenerepa < 40:
+		'Coach tolerates you.'
+	elseif trenerepa < 60:
+		'You have a normal relationship with the coach.'
+	elseif trenerepa < 80:
+		'You and the coach get on very well.'
+	else
+		'You and the coach act more like best friends than coach and student.'
 	end
 
+	if trenersex > 0:
+		'You are in a sexual relationship with him.'
+	else
+		if trenerlust >= 80:
+			'Coach can''t take his eyes of you, and he keeps making sexual references in your presence.'
+		elseif trenerlust >= 60:
+			'Coach sometimes makes lewd comments about you and you often catch him ogling your body.'
+		elseif trenerlust >= 40:
+			'Coach seems more interested in watching you practice than the other girls.'
+		elseif trenerlust >= 20:
+			'Sometimes coach looks your body up and down.'
+		elseif trenerlust > 0:
+			'You occasionally catch coach looking at you a second longer than he should.'
+		end
+	end
+
+	if lariskaTrenerTalk > 0:gt'Voltrener', 'Lariska'
+	act 'Talk with the coach':gt'Voltrener', 'talk'
+	act 'Leave':gt 'gdksport'
 end
 
-act 'Talk with the coach':
-	cls
+if $ARGS[0] = 'Lariska':
+	'"Ah, <<$surname>> and Gruzdev, what do you want?"'
+	if lariskaTrenerTalk = 1:
+		'You and Lariska tried to persuade the coach to take Lariska, but he threw all of your arguments to deny you.'
+	elseif lariskaTrenerTalk = 2:
+		if dom >= 10:
+			'You managed to convince the coach to let Lariska join the team.'
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take Lariska, but he refused you.'
+		end
+	elseif lariskaTrenerTalk = 3:
+		if dom >= 20:
+			'You take an agressive approach and although he doesn''t like it, you managed to convince the coach to let you both play.'
+			volleysostav = 1
+			if trenerepa > 30:trenerepa = 30
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to give you both a place in the team, but he threw all of your arguments back in your faces.'
+		end
+	elseif lariskaTrenerTalk = 4:
+		if trenerepa >= 60:
+			'You managed to convince the coach to let Lariska join the team.'
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take Lariska, but he refused to.'
+		end
+	end
+	if LariskaProfi = 1:
+		$npcText[13] = 'Lariska athletic girl, but it is very dependent on other people''s opinions. Lariska has changed a lot, Her sparkle in the eyes, and almost always in a good mood.  After joining the team quickly went into the main part and is now one of the best players'
+		'When you come out of the coach Lariska hugged you and said,: "Thank you, <<$nickname>>!"'
+		grupNPC[13] += 20
+	end
+	minut += 10
 	gs 'stat'
 
-	if volleysostav = -1:
-		if trenerSex = 0:'Coach looked up at you, "<<$surname>>. Did not even come near me. Longer I´ll put you in command!"'
-		if trenerSex > 0:'Coach looked up at you, "<<$surname>>. Did not even come near me. Longer I´ll put you in the team!"'
-	end
+	lariskaTrenerTalk = 0
+	act 'Escape':gt 'gdksport'
+end
 
-	if volleysostav = 0:
-		if volleyboll < 25:'Coach looked at you "And <<$surname>>. Do not distract me from things."'
-		if volleyboll >= 25 and volleyboll < 50:'Coach looked at you "And <<$surname>>. You need to devote more time to training, you are all very bad."'
-		if volleyboll >= 50 and volleyboll < 75:'Coach looked at you "And <<$surname>>. You certainly did not play bad, but not bad for an amateur. Higher level you do not you pull."'
-		if volleyboll >= 75:
-			'Coach looked at you "And <<$surname>>. Do you have the makings of athletes, though I´m not sure that at the professional level you get that either."'
+if $ARGS[0] = 'talk':
+	cls
+	gs 'stat'
+	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
 
-			act 'Asks the pros':
+	if volleysostav < 0:
+		if trenerSex = 0:
+			'Coach looked up at you, "<<$surname>>. Did not even come near me. You are no longer in the team!"'
+		else
+			'Coach looked up at you, "<<$surname>>. Did not even come near me. You''re out of the team!"'
+			act '"Persude" him':
+				volleysostav = 0
+				gt 'Voltrenersex', 'sex'
+			end
+		end
+	elseif volleysostav = 0:
+		if volleyboll < 25:
+			'Coach looks at you "I''m busy girl, do not distract me from my coaching."'
+		elseif volleyboll >= 25 and volleyboll < 50:
+			'Coach looked at you "<<$surname>>. You need to devote more time to training, you are all very bad."'
+		elseif volleyboll >= 50 and volleyboll < 75:
+			'Coach looked at you "<<$surname>>. You certainly did not play bad, not bad for an amateur. With more work you could reach a higher level."'
+		else
+			'Coach looked at you "Ah, <<$surname>>. You have the makings of an athlete, though I''m not sure if you are professional level yet."'
+
+			act 'Ask to join the team':
 				cls
 				gs 'stat'
 
 				if GorSlut = 0:
-					if volleyboll < 100:'You started to ask the coach to include you in command, but he shook his head. "<<$surname>> is not buried, you have a good amateur level. Potyanesh But you do not."'
-					if volleyboll >= 100:
-						'You started to ask the coach to include you in the team, the coach thought. "Of course you can try to include you in the replacement, but I do not even know if I should."'
+					if volleyboll < 100:
+						'You ask the coach about joining the team, but he shakes his head. "<<$surname>> it''s not personal, you have good amateur skill. Just not enough to make the team."'
+					elseif trenerSex = 1:
+						volleysostav = 1
+						'You ask the coach about joining the team, he smiles and says, "<<$nickname>>, honey. I can do that, but you''ll have to start as a sub or people might be suspicious."'
+					else
+						'You ask the coach about joining the team, the coach thinks for a minute. "I have a spot for a substitute, but I do not know if you have what it takes."'
 
-						act 'Persuade':
+						act 'Persuade him':
 							cls
 							dom -= 1
 							gs 'stat'
@@ -107,28 +137,29 @@ act 'Talk with the coach':
 							if dom >= 10:
 								!!if volleysostav > 0:trenerepa -= 1
 								volleysostav = 1
-								trenerepa = 20
-								'You started to prove the coach that you want to include in the team, the coach tried to protest, but your head was so convincing that he eventually gave up. "Okay <<$surname>>, I´ll put you in command until naturally only in the bench."'
+								if trenerepa > 20:trenerepa = 20
+								'You try to prove the coach that he should include in the team, the coach tries to protest, and you get into an arguement. Eventually you shout him down and he gives up. "Okay <<$surname>>, I''ll put you in the team, but you''re on the bench and any more stunts like this and you''re out."'
+							elseif trenerepa >= 60:
+								volleysostav = 1
+								'You appeal to the coach and ask him to at least give you a chance to prove yourself. Since he likes you, he decides to give you a break. "Okay, <<$nickname>>, I do have an opening for a sub. You''re on the team as a substitute player.'
 							else
-								'You started to prove the coach that you want to include in the team, but failed to show sufficient vigor and coach threw all your arguments denying you.'
+								'You try to prove the coach that he should include in the team, but you are no forceful enough and coach countered all your arguments denying you a place in the team.'
 							end
 
 							act 'Leave':gt 'gdksport'
 						end
 					end
-				end
+				else
+					'You ask the coach about joining the team, the coach thinks for a minute, "Hey <<$surname>>, I hear loads of rumours about you. Such as you being a <<$gnikname>>. Is this true?"'
 
-				if GorSlut > 0:
-					'You started to ask the coach to include you in the. Coach thought, "Hey <<$surname>>, then other devchoki about you say different things. Example you <<$gnikname>>. Is that true?"'
-
-					act 'It´s all lies':
+					act 'It''s all lies':
 						cls
 						gs 'stat'
 
 						if dom > 0:
-							'You started to prove the coach that rumors about you it´s all lies and dismiss them envious. You said quite convincingly and coach seems to believe.'
+							'You convince the coach that it''s all rumors and lies and dismiss them as envy. You speak quite convincingly and coach seems to believe you.'
 
-							act 'Make sure to include the team':
+							act 'Persuade him to let you join the team':
 								cls
 								dom -= 1
 								gs 'stat'
@@ -136,56 +167,101 @@ act 'Talk with the coach':
 								if dom >= 10:
 									!!if volleysostav > 0:trenerepa -= 1
 									volleysostav = 1
-									trenerepa = 20
-									'You started to prove the coach that you want to include in the team, the coach tried to protest, but your head was so convincing that he eventually gave up. "Okay <<$surname>>, I´ll put you in command until naturally only in the bench."'
+									if trenerepa > 20:trenerepa = 20
+									'You try to prove the coach that he should include in the team, the coach tries to protest, and you get into an arguement. Eventually you shout him down and he gives up. "Okay <<$surname>>, I''ll put you in the team, but you''re on the bench and any more stunts like this and you''re out."'
 								else
-									'You started to prove the coach that you want to include in the team, but failed to show sufficient vigor and coach threw all your arguments denying you.'
+									'You try to prove the coach that he should include in the team, but you are no forceful enough and coach countered all your arguments denying you a place in the team.'
 								end
 
 								act 'Leave':gt 'gdksport'
 							end
 						else
-							'You started to prove the coach that rumors about you it´s all lies and dismiss them envious. You said not very convincing and coach you frankly do not believe. "<<$surname>>, stop lying, You´re holding me for a fool?"'
+							'You try to convince the coach that it''s all rumors and lies and dismiss them as envy. You are not very convincing and coach does not believe you. "<<$surname>>, stop lying, are you taking me for a fool?"'
 
-							act 'Okay, it´s true, I <<$gnikname>>':
+							act 'Okay, it''s true, I am a <<$gnikname>>':
 								cls
 								gs 'stat'
-								dynamic $din_trener_gorslut
+								gt'Voltrener', 'gorslut'
 							end
 						end
 
 						act 'Leave':gt 'gdksport'
 					end
 
-					act 'It´s true, I <<$gnikname>>':
+					act 'It''s true, I''m a <<$gnikname>>':
 						cls
 						gs 'stat'
-						dynamic $din_trener_gorslut
+						gt'Voltrener', 'gorslut'
 					end
 				end
 
 				act 'Leave':gt 'gdksport'
 			end
 		end
-	end
+	else
+		if trenerSex = 0:
+			'Coach looks at you, "<<$surname>>. Here''s your stats, now go out there and work harder."'
+			'"Your volleyball skill is <<volleyboll>>, the team has played <<volsesongame>> games: Won - <<volsesonwin>>, lost - <<volsesonloss>>."'
+		else
+			'Coach looks at you "Hey <<$name>>. Checking up on your stats?."'
+			'"Your volleyball skill is <<volleyboll>>, the team has played <<volsesongame>> games: Won - <<volsesonwin>>, lost - <<volsesonloss>>."'
 
-	if volleysostav > 0:
-		if trenerSex = 0:'Coach looked at you "And <<$surname>>. Do not distract me from things."'
-		if trenerSex > 0:
-			'Coach looked at you "And <<$surname>>. Done for coming."'
-
-			act 'Coach put his hand on her knee':
+			act 'Put your hand on coach''s knee':
 				cls
 				gs 'stat'
-				'You leaned forward slightly and put her palm on his knee coach grin you whispered "Need a little demonstration of my skills? I understand you correctly?" Coach leaned back in his chair, "You´re a smart girl of <<$name>>, go on."'
-				dynamic $din_trener_bj
+				'You lean forward slightly and put your palm on his knee, coach grins you whisper "That''s not my only skill. Want to score this out of 100?"'
+				'Coach leans back in his chair, smiling, "I would like to see if you can keep up your perfect record."'
+				gt 'Voltrenersex', 'bj'
 			end
+			if son < 6 and tanga = 1: 
+				delact 'Put your hand on coach''s knee' 
+				gt 'Voltrenersex', 'masaj'
+			end
+		end
+
+		n = 20 - volsesongame
+
+		'To qualify for the Junior Cup, we need:'
+
+		r = volsesonloss - volsesonwin
+
+		if volsesongame < 20:
+			'To play a minimum of 20 games, need to play at least <<n>> more games, and we need to win more matches than we lose.'
+		elseif volsesongame => 20 and volsesonwin => volsesonloss:
+			'To keep doing what we are doing, we have good stats and have fulfilled the conditions, but we need to improve the chemistry of the team, or we''ll never get through the qualifiers.'
+		elseif volsesongame => 20 and volsesonwin < volsesonloss:
+			'Win a <<r>> victories, and stop losing, so we need to get it together and to work alot harder.'
+		end
+
+		if rand(0,3) = 0:
+			dynamic $din_trener_speak
 		end
 	end
 
 	act 'Leave':gt 'gdksport'
 end
 
-act 'Leave':gt 'gdksport'
+if $ARGS[0] = 'gorslut':
+	gs 'stat'
+	'You reluctantly nod your head, "It''s true, I really am a <<$gnikname>>. What does this have to do with volleyball?"'
+	'Coach smiles, "Indirect correlation, very indirect, we''re discussing how you get into my team. Now, I wonder what you can do. You know what I mean?"'
 
+	act 'No':
+		cls
+		gs 'stat'
+		'You shake your head and tell the coach that do not understand the coach sighs, "You''re not the smartest girl in the school are you? Well, I''m a lonely man, and you are a pretty young girl. Do I need to draw you a picture?"'
+
+		act 'Leave':gt 'gdksport'
+
+		gt 'Voltrenersex', 'bj'
+	end
+
+	act 'Put your hand on coaches knee':
+		cls
+		gs 'stat'
+		'You lean forward slightly and put your palm on his knee, coach grins and you whisper, "I understand, you need a little demonstration of my other skills?" Coach leans back in his chair, "You''re a smart girl, <<$name>>, carry on."'
+		gt 'Voltrenersex', 'bj'
+	end
+end
 --- Voltrener ---------------------------------
+

@@ -375,7 +375,7 @@ $reputation = {
 		elseif GorSlut = 6:
 			pl 'In Pavlovsky you are known as a prostitute who will take money for the most extreme sex acts.'
 		else
-			pl'In Pavlovo you of considered a decent girl with a good reputation '
+			pl'In Pavlovo you are considered a decent girl with a good reputation.'
 		end
 	nl
 	end
@@ -391,7 +391,7 @@ $reputation = {
 		elseif motherKnowSpravka > 0:
 			pl'Your mother knows that you are sexually active.'
 		else
-			pl'Your mother thinks that you are a virgin'
+			pl'Your mother thinks that you are a virgin.'
 		end
 		if evgenQW = 4 and brotherSex = 1:
 			pl'Your brother thinks you are a total whore.'

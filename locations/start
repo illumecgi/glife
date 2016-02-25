@@ -147,6 +147,8 @@ vshrinkdays = 6
 ashrink = 1
 ashrinkdays = 3
 
+GameUpdate = 1
+update_2014_08_28 = 1
 act '<center><b>Start</b></center>':
 	cla
 	gt 'begin','real_character'

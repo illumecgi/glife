@@ -1230,6 +1230,8 @@ end
 !!!!!!!!!!!!!!!!!!!!!
 !!!Beginning Description!!!
 !!!!!!!!!!!!!!!!!!!!!
+!!pl 'time <b><<hour>></b> hours <b><<$nilmin>><<minut>></b> minutes'
+!!pl 'At_The_Moment <<day>> <<$month>> <<year>>year, <<$week>>.'
 
 if hour < 10:
 	if minut > 9 :
@@ -1244,12 +1246,28 @@ else
 		pl '<b> <<hour>>:0<<minut>></b> <<$week>> <<day>> <<$mons>> <<year>>'
 	end
 end
-pl
 
 pl '<b><<money>></b> rubles in your purse.'
 if karta > 0:pl '<b><<karta>></b> rubles in your bank account.'
 if stolmoney > 0:pl '<b><<stolmoney>></b> rubles in your table drawer.'
-pl
+
+if StoryLine > 0 and SchoolAtestat = 0:pl '<<$holyday>>'
+if birthday = day and birthmonth = month:pl '<b>Today is your birthday.</b>'
+!!if shame > 0:pl '<<$shame>>'
+
+pl '<b><<$manna>></b>'
+
+if horny >= 50:
+	if horny < 90 and tanga = 1:
+		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1.jpg''">itchy</a> from arousal.</font>'
+	elseif horny < 90 and tanga = 0:
+		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a> from arousal.</font>'
+	elseif tanga = 1:
+		pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2.jpg''">soaked</a> from your juices.</font>'
+	else
+		pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
+	end
+end
 
 if ETOmenu = 1:
 	pl '<b><<$health>></b>'
@@ -1281,30 +1299,7 @@ else
 	gs 'indik', '1', son * 4, son
 	pl '<<$ind>> Sleep'
 end
-pl
 
-if StoryLine > 0 and SchoolAtestat = 0: pl '<<$holyday>>' & pl
-
-if birthday = day and birthmonth = month: pl '<b>Today is your birthday.</b>' & pl
-
-!!if shame > 0:pl '<<$shame>>' & pl
-pl '<b><<$manna>></b>'
-pl
-
-if horny >= 50:
-	if horny < 90 and tanga = 1:
-		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1.jpg''">itchy</a> from arousal.</font>'
-	elseif horny < 90 and tanga = 0:
-		pl'<font color = #DB7093>You are a little nervous, feeling nice between your legs <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a> from arousal.</font>'
-	elseif tanga = 1:
-		pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2.jpg''">soaked</a> from your juices.</font>'
-	else
-		pl'<font color = #FF1493>You feel that between your legs you are <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
-	end
-	pl
-end
-
-!MJ: It should be moved up .... Before sentences update.
 if fairycurse >= daystart: horny = 90
 
 $smoker = {
@@ -1338,15 +1333,14 @@ elseif CondomToggle = 0 and Sprezik > 0:
 	Sprezik = 0
 end
 
-if $mud ! '':pl '<font color="green"><b><<$mud>></b></font>.'
-if siga <= 0 and smoker >= 20:pl '<font color="red"><b>You have run out of cigarettes.</b></font>.' & pl
+if $mud ! '':pl '<font color="green"><b><<$mud>></b></font>'
+if siga <= 0 and smoker >= 20:pl '<font color="red"><b>You have run out of cigarettes.</b></font>'
 
 if smokeNeed > 0 and siga > 0 and smoker >= 20:
-	pl '<a href="exec:dynamic $smoker"><font color="red"><b>You want to smoke. You have <<siga>> cigarettes left</b></font></a>.'
+	pl '<a href="exec:dynamic $smoker"><font color="red"><b>You want to smoke. You have <<siga>> cigarettes left</b></font></a>'
 elseif siga > 0 and smoker >= 20:
-	pl '<a href="exec:dynamic $smoker"><font color="blue"><b>You have <<siga>> cigarettes left</b></font></a>.'
+	pl '<a href="exec:dynamic $smoker"><font color="blue"><b>You have <<siga>> cigarettes left</b></font></a>'
 end
-pl
 
 if siga > 0 and smoker < 20:
 	if smokeHour = hour and smokeday = day and smokeminut >= minut:
@@ -1355,7 +1349,7 @@ if siga > 0 and smoker < 20:
 	end
 end
 
-if smokeHour = hour and smokeday = day and smokeminut >= minut:pl '<font color="green">You are smoking a cigarette.</font>'
+if smokeHour = hour and smokeday = day and smokeminut >= minut:pl '<font color="green">You are smoking a cigarette</font>'
 
 if pirs_pain_ton = 1:
 	pl '<font color="red">Your tongue is uncomfortable and it is a little swollen.</font>'
@@ -1368,7 +1362,6 @@ end
 if nippain > 0:pl '<font color="red"><b><<$nippain>></b></font>'
 if painpub > 0:pl '<font color="red"><b><<$painpub>></b></font>'
 if opPRE = 0:pl '<<$mop>> and your hair is <<$hapri>>.'
-
 if sweat = 1:
 	pl '<font color="brown">You''re sweating.</font>'
 elseif sweat = 2:
@@ -1378,9 +1371,6 @@ elseif sweat = 3:
 elseif sweat > 3:
 	pl '<b><font color="red">You really stink.</font></b>'
 end
-
-if sweat > 0: pl
-
 if preg = 1:
 	rodtime = 280 - pregtime
 	if pregtime < 280 and pregtime > 27:knowpreg = 1 & pl '<b><font color="blue">You have been pregnant for <<pregtime>> days. Days until delivery <<rodtime>></font></b>'

@@ -155,7 +155,7 @@ $serge_kuh_buh = {
 				You squeeze his hand in his soft penis and do the upward movement-down, podrachivaya. After a few seconds of action you feel like it grows in size... '
 				act 'Take in the mouth':
 					cls
-					$boy = Sergey
+					$boy = 'Sergey'
 					sexpartkno = 1
 					minut += 5
 					bj += 1
@@ -239,12 +239,12 @@ $serge_kuh_buh = {
 										cls
 										horny += 5
 										minut += 5
+										$boy = 'Sergey'
 										sexvolume = 5
 										spafinloc = 11
 										gs 'cum_manage'
 										facial += 1
 										swallow += 1
-										$boy = Sergey
 										sexpartkno = 1
 										sexvolume = 35
 										spafinloc = 12
@@ -258,7 +258,10 @@ $serge_kuh_buh = {
 										act 'Chat':
 											cls
 											minut += 5
-											cumfrot = 1
+											sexpartkno = 1
+											sexvolume = 15
+											spafinloc = 7
+											gs 'cum_manage'
 											gs'stat'
 											'<center><img src="images/zsoft/pod_ezd/shulgahome/kuh/event/alko10.jpg"></center>'
 											'Sergei, I am sitting on a chair, when you`re hard up from his knees and flopped on another chair.
@@ -855,7 +858,7 @@ $serge_kuh_izdev12 = {
 							cls
 							sex += 1
 							horny += 30
-							$boy = Sergey
+							$boy = 'Sergey'
 							sexpartkno = 1
 							cumprecheck = 1
 							gs 'cum_manage'
@@ -891,13 +894,13 @@ $serge_kuh_izdev12 = {
 										spafinloc = 12
 										sexvolume = 30
 										gs 'cum_manage'
-										$boy = Sergey
+										$boy = 'Sergey'
 										sexpartkno = 1
 										sexvolume = 5
 										spafinloc = 11
 										gs 'cum_manage'
 										hapri = 0
-										$boy = Sergey
+										$boy = 'Sergey'
 										sexpartkno = 1
 										sexvolume = 5
 										spafinloc = 7
@@ -950,7 +953,7 @@ $serge_kuh_izdev13 = {
 				act 'Further':
 					cls
 					sex += 1
-					$boy = Sergey
+					$boy = 'Sergey'
 					sexpartkno = 1
 					cumprecheck = 1
 					gs 'cum_manage'
@@ -989,12 +992,12 @@ $serge_kuh_izdev13 = {
 								gs 'cum_manage'
 								swallow += 1
 								facial += 1
-								$boy = Sergey
+								$boy = 'Sergey'
 								sexpartkno = 1
 								sexvolume = 10
 								spafinloc = 11
 								gs 'cum_manage'
-								$boy = Sergey
+								$boy = 'Sergey'
 								sexpartkno = 1
 								sexvolume = 10
 								spafinloc = 12
@@ -1047,7 +1050,7 @@ $serge_kuh_izdev14 = {
 					'Sergei is not taking his eyes staring at your ass.'
 					act 'Further':
 						cls
-						$boy = Sergey
+						$boy = 'Sergey'
 						sexpartkno = 1
 						bj +=1
 						horny += 5
@@ -1076,7 +1079,7 @@ $serge_kuh_izdev14 = {
 								swallow += 1
 								horny += 5
 								hapri = 0
-								$boy = Sergey
+								$boy = 'Sergey'
 								sexpartkno = 1
 								sexvolume = 20
 								spafinloc = 15
@@ -1129,7 +1132,7 @@ $serge_kuh_izdev15 = {
 					'You are in full niglyazhe in dense approached Sergei and began to unbutton his pants.'
 					act 'Further':
 						cls
-						$boy = Sergey
+						$boy = 'Sergey'
 						sexpartkno = 1
 						bj +=1
 						throat += 1
@@ -1231,7 +1234,7 @@ $serge_kuh_izdev16 = {
 					'You further otklyachila ass for Sergei, which could not just look at you, he abruptly pulls his pants, He takes out his dick and starts podrachivat.'
 					act 'Further':
 						cls
-						$boy = Sergey
+						$boy = 'Sergey'
 						sexpartkno = 1
 						bj +=1
 						horny += 10
@@ -1338,7 +1341,7 @@ $serge_kuh_izdev17 = {
 				'Turning to his ass, You leaned, Sergey hand lowered his pants admiring your ass.'
 				act 'Further':
 					cls
-					$boy = Sergey
+					$boy = 'Sergey'
 					sexpartkno = 1
 					bj +=1
 					throat += 1
@@ -1385,7 +1388,7 @@ $serge_kuh_izdev17 = {
 									spafinloc = 14
 									sexvolume = 20
 									gs 'cum_manage'
-									$boy = Sergey
+									$boy = 'Sergey'
 									sexpartkno = 1
 									sexvolume = 20
 									spafinloc = 15
@@ -1408,7 +1411,7 @@ $serge_kuh_izdev17 = {
 !-------------------------------------------------------------------------------------! 
 $serge_kuh_izn1 = {
 	cls
-	$boy = Sergey
+	$boy = 'Sergey'
 	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1
@@ -1516,7 +1519,7 @@ $serge_kuh_izn1 = {
 
 $serge_kuh_izn2 = {
 	cls
-	$boy = Sergey
+	$boy = 'Sergey'
 	sexpartkno = 1
 	minut +=10
 	serge_countsex += 1
@@ -1618,7 +1621,7 @@ $serge_kuh_izn2 = {
 !----------------------------------------------------------------! 
 $serge_kuh_sex1	= {
 	cls
-	$boy = Sergey
+	$boy = 'Sergey'
 	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1
@@ -1682,7 +1685,7 @@ $serge_kuh_sex1	= {
 }
 $serge_kuh_sex2	= {
 	cls
-	$boy = Sergey
+	$boy = 'Sergey'
 	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1
@@ -1763,7 +1766,7 @@ $serge_kuh_sex2	= {
 }
 $serge_kuh_sex3	= {
 	cls
-	$boy = Sergey
+	$boy = 'Sergey'
 	sexpartkno = 1
 	minut +=5
 	serge_countsex += 1

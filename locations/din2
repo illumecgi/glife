@@ -1,6 +1,6 @@
 # din2
 $din_street_cum = {
-	if cumfrot > 0 or cumface > 0:
+	if spdirtyc > 0 or spdirtyv > 0:
 		if hour >= 7 and hour <= 21:
 			manna -= 5
 			if face_write > 0:
@@ -10,7 +10,7 @@ $din_street_cum = {
 			'Puzzled passerbys turn around and stare at you. Some take pictures on their phones, not entirely hiding that they are giggling at you. The sperm on you is clearly noticeable.'
 			end
 		end
-	elseif cumfrot < 0 and cumface < 0 and face_write > 0:
+	elseif spdirtyc = 0 and spdirtyv = 0 and face_write > 0:
 	manna -= 5
 	'Surrounding look at you with surprise, grin or a slight contempt. Someone just point the finger and laughs. Someone photographed phone. Hair obviously can not hide "art" on your face.'
 	

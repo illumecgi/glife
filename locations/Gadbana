@@ -82,10 +82,11 @@ dynamic $quickwash
 dynamic $wearpan
 dynamic $basin
 
-if cumfrot > 0:
+if spdirtyc > 0:
 	act 'Wipe the cum off your clothes (0:10)':
 		cla
-		cumfrot = 0
+		cumspclnt = 6
+		gs 'cum_cleanup'
 		minut += 10
 		gs 'stat'
 		'<center><img src="images/etogame/frotsp.jpg"></center>'

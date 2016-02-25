@@ -624,9 +624,9 @@ $pod_whore_ev_end = {
 	swallow += 1
 	facial += 1
 	spafinloc = 12
-gs 'cum_manage'
-	cumface +=1
-	if $clothingworntype ! 'nude': cumfrot = 1
+	gs 'cum_manage'
+	spafinloc = 7
+	gs 'cum_manage'
 	if energy >=3: energy -= 1
 	hapri = 0
 	minut += ''+rand(2,5)+''
@@ -836,9 +836,9 @@ $pod_whore_groupsexev1 = {
 					act 'Further':
 					cls
 					spafinloc = 12
-gs 'cum_manage'
-					cumface +=1
-					if $clothingworntype ! 'nude': cumfrot = 1
+					gs 'cum_manage'
+					spafinloc = 7
+					gs 'cum_manage'
 					swallow += 1
 					facial += 1
 					if energy >= 3: energy -= 2
@@ -857,6 +857,7 @@ gs 'cum_manage'
 		end
 	end	
 }
+
 !gangbang event 2
 $pod_whore_groupsexev2 = {
 	cls
@@ -904,9 +905,9 @@ $pod_whore_groupsexev2 = {
 						act 'Further':
 						cls
 						spafinloc = 12
-gs 'cum_manage'
-						cumface +=1
-						if $clothingworntype ! 'nude': cumfrot = 1
+						gs 'cum_manage'
+						spafinloc = 7
+						gs 'cum_manage'
 						swallow += 1
 						facial += 1
 						if energy >= 3: energy -= 2

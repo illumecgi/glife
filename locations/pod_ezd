@@ -46,6 +46,8 @@ $pod_sex_ev1 = {
 			minut +=3
 			horny +=10
 			sex += 1
+			cumprecheck = 1
+			gs 'cum_manage'
 			gs'stat'
 			'<center><img src="images/zsoft/pod_ezd/event/sex_ev1_3.jpg"></center>'
 			'You dutifully turned to the impudent ass kid and bent.'
@@ -95,10 +97,11 @@ $pod_sex_ev1 = {
 						cls
 						minut +=3
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						swallow += 1
 						hapri = 0
-						cumfrot = 1
+						spafinloc = 11
+						gs 'cum_manage'
 						gs'stat'
 						'<center><img src="images/zsoft/pod_ezd/event/sex_ev1_6.jpg"></center>'
 						'You did everything like a real slut with experience, boys quickly poured his sperm into your mouth and face. Silently brought myself up, not paying any attention to you, retired.'
@@ -109,14 +112,15 @@ gs 'cum_manage'
 		end
 	end
 }
+
 $pod_sex_ev2 = {
-!act 'Smer':
-cls
-if gorslut >= 6 and podwhoreQW < 3: podwhoreQW +=1
-minut +=2
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/event/sex_ev2_1.jpg"></center>'
-'One of the boys stood and smoked, and another who told you of brazen commanding voice, What would you undressed.'
+	!act 'Smer':
+	cls
+	if gorslut >= 6 and podwhoreQW < 3: podwhoreQW +=1
+	minut +=2
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/event/sex_ev2_1.jpg"></center>'
+	'One of the boys stood and smoked, and another who told you of brazen commanding voice, What would you undressed.'
 	act 'Further':
 		cls
 		minut +=3
@@ -148,6 +152,8 @@ gs'stat'
 					cls
 					minut +=3
 					sex +=1
+					cumprecheck = 1
+					gs 'cum_manage'
 					horny +=5
 					gs'stat'
 					'<center><img src="images/zsoft/pod_ezd/event/sex_ev2_5.jpg"></center>'
@@ -179,32 +185,31 @@ gs'stat'
 								minut +=3
 								horny +=5
 								spafinloc = 11
-gs 'cum_manage'
+								gs 'cum_manage'
 								facial += 1	
 								spafinloc = 12
-gs 'cum_manage'		
+								gs 'cum_manage'		
 								hapri = 0
-								cumfrot = 1
 								gs'stat'
 								'<center><img src="images/zsoft/pod_ezd/event/sex_ev2_8.jpg"></center>'
 								'The boys are satisfied with your body, obkonchalsya your entire face and let go in peace.'
 								act 'Escape': gt'pod_ezd', 'etaj_2'
-						end		
+							end
+						end
 					end
 				end
 			end
 		end
 	end
-end		
 }
 $pod_sex_ev3 = {
-!act 'Smer':
-cls
-if gorslut >= 6 and podwhoreQW < 3: podwhoreQW +=1
-minut +=2
-gs'stat'
-'<center><img src="images/zsoft/pod_ezd/event/sex_ev3_1.jpg"></center>'
-'-"What are you watching <<$gop_gg_name2>>?, Shows!".'
+	!act 'Smer':
+	cls
+	if gorslut >= 6 and podwhoreQW < 3: podwhoreQW +=1
+	minut +=2
+	gs'stat'
+	'<center><img src="images/zsoft/pod_ezd/event/sex_ev3_1.jpg"></center>'
+	'-"What are you watching <<$gop_gg_name2>>?, Shows!".'
 	act 'Further':
 		cls
 		minut +=3
@@ -228,6 +233,8 @@ gs'stat'
 				cls
 				minut +=3
 				sex += 1
+				cumprecheck = 1
+				gs 'cum_manage'
 				anal +=1
 				horny +=5
 				gs'stat'
@@ -274,19 +281,19 @@ gs'stat'
 					gs'stat'
 					'<center><img src="images/zsoft/pod_ezd/event/sex_ev3_5.jpg"></center>'
 					'You actively podmahivat him, that would quickly topple, yet no one noticed your fall.'
-						if mesec > 0:
-						!periods, orgasm is not possible
-							horny = 0
-							manna = manna - 10
-							willpower = willpower - 10
-							'<br><font color = red><b>You have monthly and while yet a member of the rams you, vaginal blood flows slowly.</b></font>'
-						elseif mesec <= 0 and horny >=70:
-								orgasm += 1
-								horny = 0
-								'You hand masturbate her pussy, You did not even think, that can end up in this situation,.'
-								'Not holding back moans, you loud ends.'
-								'-"Ha, <<$gop_gg_name2>> it ends!", ezvit your stud continuing to ram your anus'
-						end	
+					if mesec > 0:
+					!periods, orgasm is not possible
+						horny = 0
+						manna = manna - 10
+						willpower = willpower - 10
+						'<br><font color = red><b>You have monthly and while yet a member of the rams you, vaginal blood flows slowly.</b></font>'
+					elseif mesec <= 0 and horny >=70:
+						orgasm += 1
+						horny = 0
+						'You hand masturbate her pussy, You did not even think, that can end up in this situation,.'
+						'Not holding back moans, you loud ends.'
+						'-"Ha, <<$gop_gg_name2>> it ends!", ezvit your stud continuing to ram your anus'
+					end	
 					'His friend is away, watching and fingering.'
 					dynamic $accview_ggsex
 					act 'Further':
@@ -294,20 +301,21 @@ gs'stat'
 						minut +=3
 						horny +=5
 						spafinloc = 11
-gs 'cum_manage'
+						gs 'cum_manage'
 						facial += 1
 						hapri = 0
 						swallow += 1
-						cumfrot = 1
+						spafinloc = 12
+						gs 'cum_manage'
 						gs'stat'
 						'<center><img src="images/zsoft/pod_ezd/event/sex_ev3_6.jpg"></center>'
 						'The boys put you down and your face obkonchalsya. Then you mouth brushed their members, When the boys are completely satisfied, they are gone'
 						act 'Escape': gt'pod_ezd', 'etaj_2'
+					end
 				end
 			end
 		end
 	end
-end		
 }
 
 !mini game events on 2 floor
@@ -383,7 +391,10 @@ gs'stat'
 				horny +=5
 				bj +=1
 				swallow += 1
-				cumfrot = 1
+				$boy = 'Uncle Misha'
+				sexpartkno = 1
+				spafinloc = 12
+				gs 'cum_manage'
 				gs'stat'
 				'<center><img src="images/zsoft/pod_ezd/event/otsos_misha.jpg"></center>'
 				'You sat on the steps and began to suck. Do you have enough for five minutes, that would bring Uncle Misha to orgasm, all that he had accumulated poured into your mouth..'
@@ -586,6 +597,10 @@ if rnd_orkaz_bj < 20 or GorSlut <3:
 end
 	act 'Suck':
 		cls
+		$boy = 'Shulga'
+		sexpartkno = 1
+		spafinloc = 12
+		gs 'cum_manage'
 		bj +=1
 		swallow += 1
 		minut +=5

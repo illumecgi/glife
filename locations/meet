@@ -240,12 +240,12 @@ if $ARGS[0] = 'start':
 
 	'<<$boybody>> <<$boybod>> <<$boyface>> walks up to you and wants to kiss you.'
 
-	if venera < 4 and cumface = 0:
+	if venera < 4 and spdirtyv = 0:
 		!!cumlip
 		act 'Kiss with tongue':
 			cla
 
-			if cumlip = 0:
+			if spdirtyb = 0:
 				'<center><img src="images/etogame/kiss.jpg"></center>'
 
 				if harakBoyA = 0:bfa -= 2 & 'You pressed your <<$meetlip>> to solid lips male mouth open and thrust his tongue into his mouth. <<$boyA>> blushed and pulled away.'
@@ -255,7 +255,7 @@ if $ARGS[0] = 'start':
 				act 'Finish the kiss':xgt 'meet', 'a'
 
 				exit
-			elseif cumlip > 0:
+			elseif spdirtyb > 0:
 				'<center><img src="images/etogame/cumlip.jpg"></center>'
 				'<<$boyA>> kissed you in your smelling sperm <<$meetlip>> and pull away. "What is it?" he asked, "Do you smell mouth sperm."'
 
@@ -291,7 +291,7 @@ if $ARGS[0] = 'start':
 				act 'Finish the kiss':xgt 'meet', 'a'
 
 				exit
-			elseif cumlip > 0:
+			elseif spdirtyb > 0:
 				'<center><img src="images/etogame/cumlip.jpg"></center>'
 				'<<$boyA>> kissed you in your smelling sperm <<$meetlip>> and pull away. "What is it?" he asked, "Do you smell mouth sperm."'
 
@@ -364,7 +364,7 @@ if $ARGS[0] = 'start':
 		act 'Leave':gt 'street'
 
 		exit
-	elseif cumface > 0:
+	elseif spdirtyv > 0:
 		'<center><img src="images/etogame/cumface.jpg"></center>'
 		'<<$boyA>> take a closer look at you and said, "What have you got stuck in your hair? Is that sperm?"'
 
@@ -395,7 +395,7 @@ if $ARGS[0] = 'start':
 end
 
 if $ARGS[0] = 'a':
-	if cumfrot > 0:
+	if spdirtyc > 0:
 		'"Hey, what are you smeared?" asked <<$boyA>> looking at your ass. "It''s sperm!"'
 
 		if izvrat = 1:

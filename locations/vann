@@ -45,6 +45,8 @@ if $ARGS[0] = 'start':
 			act 'Give yourself an enema (0:05)':
 				cla
 				*clr
+				cumspclnt = 7
+				gs 'cum_cleanup'
 				minut += 5
 				klismaday = daystart
 				klismaday1= 1
@@ -296,10 +298,12 @@ if $ARGS[0] = 'v2':
 		act 'Continue':
 			cla
 			*clr
+			sexvolume = 10
 			spafinloc = 12
-gs 'cum_manage'
+			gs 'cum_manage'
+			sexvolume = 30
 			spafinloc = 11
-gs 'cum_manage'
+			gs 'cum_manage'
 			'<center><img src="images/img/ob/v4.jpg"></center>'
 			'You continued to work with his hands, a minute later the guy sat on the edge of the bed and then lay down. You actin continued to wield two-handed, and judging by his moans happy he liked it. Once you''ve started thinking about what would caress his hands not only as a member in your hands began to twitch. "Damn, " you said, and immediately realized that nothing opened his mouth, pulled out his penis and flew jet of sperm you right in the face, and some got in my mouth. "Damn, you and skorostrel." told you spitting sperm. "Sorry, " mumbled and quickly gathered guy jumped out of the bathroom.'
 
@@ -335,18 +339,23 @@ if $ARGS[0] = 'v3':
 			cla
 			*clr
 			sex += 1
+			cumprecheck = 1
+			gs 'cum_manage'
 			'<center><img src="images/img/ob/v7.jpg"></center>'
 			'He put his penis in your vagina, and started with the power to penetrate into you, his movements were strong and deep. You do not have time podtiretsya after pee and now drops of urine running down your thighs. You looked down on the toilet and you head climbed thought "What am I doing, fuck me in an almost public toilet, I''m cancer over the toilet full of urine and on my own leg drains urine from behind a complete stranger jerk fucks me like a cheap whore. Horror I sat down, and the most disgusting thing I like how he does it. " These thoughts all your excitement vanished and you just stood and waited as he sated. Soon he pulled out of you penis and commanded that you dropped on the floor.'
 
 			act 'Sit on the floor':
 				cla
 				*clr
+				sexvolume = 10
 				spafinloc = 12
-gs 'cum_manage'
+				gs 'cum_manage'
+				sexvolume = 18
 				spafinloc = 11
-gs 'cum_manage'
-				spafinloc = 14
-gs 'cum_manage'
+				gs 'cum_manage'
+				sexvolume = 12
+				spafinloc = 15
+				gs 'cum_manage'
 				'<center><img src="images/img/ob/v8.jpg"></center>'
 				'You fell to the floor, until you sit down with you, he pulled a T-shirt.'
 				'"Mouth open, now finished, " he said nayarivaya his dick hand. You opened your mouth and you splattered sperm bay you chest and face, in my mouth got a few drops that you spat.'

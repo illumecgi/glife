@@ -59,6 +59,21 @@ if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $
 
 dynamic $bteeth
 
+if sanpad > 0 and mesec > 0 and isprokp = 0 and tanga = 1:
+	act 'Use a sanitary napkin (0:05)':
+		cla
+		*clr
+		sanpad -= 1
+		isprokp = 1
+		minut += 5
+		manna -= 5
+		gs 'stat'
+		'<center><img src="images/pics/wash3.jpg"></center>'
+		'You use a sanitary napkin.'
+		act 'Finish':gt $curloc
+	end
+end
+
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Use a tampon (0:05)':
 		cla
@@ -80,10 +95,11 @@ if clrbelo <= 4: clrbelo = 5
 dynamic $wearpan
 dynamic $basin
 
-if cumfrot > 0:
+if spdirtyc > 0:
 	act 'Wipe the cum off your clothes (0:10)':
 		cla
-		cumfrot = 0
+		cumspclnt = 6
+		gs 'cum_cleanup'
 		minut += 10
 		gs 'stat'
 		'<center><img src="images/etogame/frotsp.jpg"></center>'
@@ -163,6 +179,8 @@ if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':
 		cla
 		*clr
+		cumspclnt = 7
+		gs 'cum_cleanup'
 		minut += 5
 		klismaday = daystart
 		klismaday1 = 1

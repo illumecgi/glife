@@ -71,14 +71,14 @@ if $ARGS[0] = 'vagon':
 
 		if frotrand >= 90 - (frot * 10) and frot < 3:
 			gt 'frot', 'a'
-		elseif frotrand >= 90 - (frot * 10) and frot >= 3 and cumfrot = 0 and ski = 1 or frotrand >= 90 - (frot * 10) and frot >= 3 and cumfrot = 0 and glamur = 1:
+		elseif frotrand >= 90 - (frot * 10) and frot >= 3 and spdirtyc = 0 and ski = 1 or frotrand >= 90 - (frot * 10) and frot >= 3 and spdirtyc = 0 and glamur = 1:
 			tipfrot = rand(0, 1)
 
 			if tipfrot = 0:gt 'frot', 'b'
 			if tipfrot = 1:gt 'frot', 'd1'
 
 			!!gt 'frot', 'b'
-		elseif frotrand >= 90 - (frot * 10) and frot >= 3 and cumfrot = 0 and ski = 0 or frotrand >= 90 - (frot * 10) and frot >= 3 and cumfrot = 0 and glamur = 0:
+		elseif frotrand >= 90 - (frot * 10) and frot >= 3 and spdirtyc = 0 and ski = 0 or frotrand >= 90 - (frot * 10) and frot >= 3 and spdirtyc = 0 and glamur = 0:
 			tipfrot = rand(0, 2)
 
 			if tipfrot =0:gt 'frot', 'c'
@@ -95,7 +95,7 @@ if $ARGS[0] = 'vagon':
 		end
 	end
 
-	if cumfrot > 0 or cumface > 0:
+	if spdirtyc > 0 or spdirtyv > 0:
 		if hour >= 7 and hour <= 21:
 			manna -= 10
 			'Several passengers are shocked, looking at where you are cum smeared.'

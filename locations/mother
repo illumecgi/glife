@@ -182,10 +182,10 @@ pirsEmother=1
 ''
 end
 
-if mother > 65 and mesec > 0 and preg = 0 and tampon = 0:
+if mother > 65 and mesec > 0 and preg = 0 and tampon = 0 and sanpad = 0:
 	act 'Ask for a tampon':
-		'You tell your mother you''re menstruating and ran out of tampons, but really need one right now. She looks at you knowingly, gives you three from her own supply and sternly tells you to next time take care of this in advance.'
-		tampon=3
+		'You tell your mother you''re menstruating and ran out of tampons, but really need one right now. She looks at you knowingly, gives you three sanitary pads from her own supply and sternly tells you to next time take care of this in advance.'
+		sanpad += 3
 		mother -= 15
 		minut += 3
 		cla 
@@ -582,7 +582,7 @@ if alko > 0 and alkomday ! daystart:
 	'Your mother can smell you have been drinking alcohol, and gives you a lecture: "<<$name>>, why do you smell of alcohol? You''re still too young to drink, you could get into all sorts of trouble!"'
 end
 
-if (cumface > 0 or cumfrot > 0) and whoremday ! daystart:
+if (spdirtyv > 0 or spdirtyc > 0) and whoremday ! daystart:
 	cla
 	whoremday = daystart
 	if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:

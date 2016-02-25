@@ -121,13 +121,13 @@ $sischecks = {
 		pregTalkSister = 1
 	end
 
-	if cumlip > 1 or cumface > 0 or cumfrot > 0 and gorslut < 3:
+	if spdirtyb > 1 or spdirtyv > 0 or spdirtyc > 0 and gorslut < 3:
 		sisterknowslut = 1
 		'Sister looks at you, "<<$name>>, what is that?". Suddenly, her eyes narrow, "<<$nickname>>, yes it''s sperm! My little sister, well, well! It''s a good thing I noticed, what if it had been Mom?!"'
-	elseif cumlip > 1 or cumface > 0 or cumfrot > 0 and gorslut >= 3 and sisterknowslut = 0:
+	elseif spdirtyb > 1 or spdirtyv > 0 or spdirtyc > 0 and gorslut >= 3 and sisterknowslut = 0:
 	    sisterknowslut = 1
 	    'Sister looks at you, "<<$name>>, so the rumours are true, you are <<$gnikname>>"'
-	elseif cumlip > 1 or cumface > 0 or cumfrot > 0 and gorslut >= 3 and sisterknowslut > 0:
+	elseif spdirtyb > 1 or spdirtyv > 0 or spdirtyc > 0 and gorslut >= 3 and sisterknowslut > 0:
 	    'Sister looks at you, "<<$name>>, up to your usual tricks? You could atleast wash yourself."'
 	end
 }

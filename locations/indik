@@ -1,4 +1,7 @@
 # indik
+a = ARGS[1]
+a1 = ARGS[2]
+
 if $ARGS[0] = '1':
 	if a >= 100 : $ind = '<font color="green"> ██████████ <<a1>></font>'
 	if a < 100 and a >= 90 :$ind = '<font color="green"> █████████_ <<a1>></font>'

@@ -202,7 +202,7 @@ if $ARGS[0] = 'start':
 				*clr
 				mop = 1
 				cumspclnt = 13
-				gs 'cum_cleanup
+				gs 'cum_cleanup'
 				sweat -= 1
 				minut += 15
 				'<center><img src="images/etogame/facesp.jpg"></center>'

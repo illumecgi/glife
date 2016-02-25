@@ -1,6 +1,6 @@
 # motherkafeboss
 gs 'stat'
-'Cafe owner Glory, a tall, thin man in his forties.'
+'The owner of the cafe, called Borislav. He is a tall, thin man in his forties. Most people call him Slava.'
 
 act 'Leave':gt $loc, $metka
 

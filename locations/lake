@@ -15,7 +15,7 @@ if $ARGS[0] = 'start':
 	end
 
 	gs 'stat'
-	gs 'time'
+	
 
 	'<center><b><font color="maroon">Lake</font></b></center>'
 	'<center><img src="images/etogame/lake2.jpg"></center>'

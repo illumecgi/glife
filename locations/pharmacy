@@ -24,7 +24,7 @@ FUNC ('$stock_item', 1, 'weight loss pill', 2000, 'fatdel', $CURLOC) + _
 *nl
 clr
 gs 'stat'
-gs 'time'
+
 
 
 act 'Leave': gt $loc

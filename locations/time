@@ -1,5 +1,5 @@
 # time
-If month = 1 and pogodaday ! daystart:
+if month = 1 and pogodaday ! daystart:
 	pogodaday = daystart
 	temper = rand(-30, 8)
 
@@ -224,8 +224,6 @@ If month = 12 and pogodaday ! daystart:
 
 	$pogoda = 'The street is covered in snow, the temperature is <<temper>> degrees Celsius. <<$osadki>>'
 end
-
-pl '<<$pogoda>>'
 
 ! WD: Variable not set needed for events in Village Gadyukino
 if osadki < painweather:

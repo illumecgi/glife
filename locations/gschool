@@ -3,7 +3,7 @@ CLOSE ALL
 $metka = $ARGS[0]
 $loc = $CURLOC
 gs 'stat'
-gs 'time'
+
 '<center><b><font color="maroon">School</font></b></center>'
 '<center><img src="images/qwest/alter/gschool.jpg"></center>'
 'Ordinary school where local children learn.'
@@ -15,7 +15,7 @@ if zverRageQW = 1:
 	cls
 	zverRageQW = 2
 	gs 'stat'
-	gs 'time'
+	
 	'As you cross the school yard after school, you are surprised by a powerful kick to your ass. Dumbfounded you turn to see Christina Zverev her face contorted with rage, she yells at you.'
 	'"You fucking bitch! How dare you spread shit about me like that? I''ll break your fucking face!"'
 	$nameV = 'Christina'

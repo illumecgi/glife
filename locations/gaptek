@@ -5,7 +5,7 @@ clr
 CLOSE ALL
 if sound = 0:PLAY 'sound/shop.mp3',30
 gs 'stat'
-gs 'time'
+
 
 '<center><B><font color="maroon">Drugstore</font></B></center>'
 '<center><img src="images/etogame/aptek.jpg"></center>'

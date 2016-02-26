@@ -203,7 +203,7 @@ if $ARGS[0] = '6':
 	cumlip = 1
 	cumface = 1
 	gs 'stat'
-	gs 'time'
+	
 	gs 'preg'
 
 	'<center><img src="images/gevent/6.1.jpg"></center>'

@@ -23,7 +23,7 @@ houseob = 0
 borMir = 0
 gs 'dinam'
 gs 'stat'
-gs 'time'
+
 '<center><b>City center</b></center>'
 '<center><img src="images/etogame/down.jpg"></center>'
 

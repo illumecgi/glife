@@ -449,7 +449,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 clr
 gs 'stat'
-gs 'time'
+
 '<center><h4>Northern Highway</h4></center>'
 '<center><img src="images/etogame/road.jpg"></center>'
 '<center><<nroad>> km</center>'

@@ -1294,7 +1294,7 @@ if StoryLine > 0 and SchoolAtestat = 0 and $holyday ! '': pl '<<$holyday>>' & pl
 if birthday = day and birthmonth = month: pl '<b>Today is your birthday.</b>' & pl
 
 !!if shame > 0:pl '<<$shame>>' & pl
-pl '.<b><<$manna>></b>'
+pl '<b><<$manna>></b>'
 pl
 
 if horny >= 50:

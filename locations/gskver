@@ -13,7 +13,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cls
 gs 'stat'
-
+gs 'time'
 
 if $clothingworntype = 'nude':willpower -= 15 & manna -= 15 & 'You hear how vakrug all whispering and poking a finger -- Look, that <<$surname>> younger chudit.'
 

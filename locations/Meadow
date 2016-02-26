@@ -4,7 +4,7 @@ $loc = $CURLOC
 
 clr
 gs 'stat'
-
+gs 'time'
 
 '<center><H4>Glade</H4></center>'
 '<center><img src="images/qwest/gadukino/meadow.jpg"></center>'

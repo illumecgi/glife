@@ -9,7 +9,7 @@ if $ARGS[0] = 'start':
 	*clr
 	minut += 5
 	gs 'stat'
-	
+	gs 'time'
 	'<center><b><font color="maroon">Hooker</font></b></center>'
 	'<center><img src="images/etogame/park2.jpg"></center>'
 

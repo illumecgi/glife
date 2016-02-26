@@ -149,7 +149,7 @@ if opusk > 0 and housr > 0:'Near the entrance to where you live there is somethi
 
 clr
 gs 'stat'
-
+gs 'time'
 palMir = 0
 bordysh = 0
 housrA = 0
@@ -202,7 +202,7 @@ end
 if workDolgDay <= 0 and workDolg > 0:
 	cls
 	gs 'stat'
-	
+	gs 'time'
 	workDisk = 0
 	'<center><img src="images/sauna/bug.jpg"></center>'
 	'Near the entrance to your home you see two large guys, you notice that both are carrying guns. They notice you and walk up to you. "It''s time for you to pay back your debts."'

@@ -14,7 +14,7 @@ end
 
 clr
 gs 'stat'
-
+gs 'time'
 '<center><h4>Railway station</h4></center>'
 '<center><img src="images/etogame/vokzal.jpg"></center>'
 'Little quiet station. About <a href="exec:minut += 3 & gt ''vokzalGin''">Station</a> worth <a href="exec:minut += 5 & gt ''gkafe''">cafe</a>. Just outside the station is a small hotel, guesthouse, post office and police station.'

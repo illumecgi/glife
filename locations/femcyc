@@ -2,6 +2,9 @@
 
 !{Hourly reduction in semen potency}
 !{First it sets the array index to the first index, then it checks to be sure the array tracking the age is less than 200 hours. If it is 200 hours old, it kills that index, which should shift the index up. If it is less than 200 hours old, it sets a current potency drop. The drop is 2x or 3x regularly, but during ovulation it is only 1x, to represent the better environment from fertile cervical mucus.}
+ctemp = 0
+ctemp[1] = 0
+ctemp[2] = 0
 cumarrtemp = 0
 :cummarrpdloop
 if cumarrage[cumarrtemp] < 190 and cumarrcpt[cumarrtemp] > 0:
@@ -109,11 +112,39 @@ if arrsize('sparrvol') > 0:
 				cumarrcon[sparrtmpv] = 0
 			end
 		end
+	else
+		KILLVAR 'spafinloc',cumarrtemp
+		KILLVAR 'sparrage',cumarrtemp
+		KILLVAR 'sparrloc',cumarrtemp
+		KILLVAR '$sparrnam',cumarrtemp
+		KILLVAR 'sparrppt',cumarrtemp
+		KILLVAR 'sparridt',cumarrtemp
+		KILLVAR 'sparrvol',cumarrtemp
+		KILLVAR 'sparrslc',cumarrtemp
+		
 	end
-	if isprok = 0 and sparrage < 5: sparrslc[cumarrtemp] += 1
+	if sparrloc[cumarrtemp] = 0 or sparrloc[cumarrtemp] = 3 or sparrloc[cumarrtemp] = 12:
+	sparrvol[cumarrtemp] -= sparrage[cumarrtemp]/2
+	if sparrloc[cumarrtemp] = 0 and cumsumvag > 60: sparrslc = 1
+	if sparrloc[cumarrtemp] = 3 and cumsumass > 60: sparrslc = 1
+	if sparrloc[cumarrtemp] = 17 and sparrage[cumarrtemp] > 48:
+		cumcondslip = 1
+		health -= 3
+		'You feel nauseous.'
+		if rand(0,5) < 5: health -= 2
+	else
+		cumcondslip = 0
+	end
+	cumsumbod = ctemp
+	cumsumvag = ctemp[1]
+	cumsumass = ctemp[2]
+	if sparrloc[cumarrtemp] ! 0 and sparrloc[cumarrtemp] ! 3 and sparrloc[cumarrtemp] ! 12 and isprok = 0 and sparrage < 5: sparrslc[cumarrtemp] += 1
 	sparrage[cumarrtemp] += 1
 	cumarrtemp += 1
 	if cumarrtemp < arrsize('sparrvol'): jump 'cumspaloop'
+	ctemp += sparrvol[cumarrtemp]
+	if sparrloc[cumarrtemp] = 0: ctemp[1] += sparrvol[cumarrtemp]
+	if sparrloc[cumarrtemp] = 3: ctemp[2] += sparrvol[cumarrtemp]
 end
 
 if lactate > 0:
@@ -193,7 +224,9 @@ elseif cycle = 2:
 			if TempRand < cumarrcpt[cumarrtemp]:
 				if fertegg = 0:
 					KILLVAR '$wombpotfath'
-					FathpotAdd = 0
+					$wombthfath = 'Unknown'
+					$wombpotfath[0] = 'Unknown'
+					FathpotAdd = 1
 					Fathpotcheck = 0
 					:potfathaddLoop
 					arrmodtmp = arrsize('$cumarrnam')
@@ -312,10 +345,12 @@ elseif cycle = 3:
 		if preg = 1:
 			cycle = 5
 		elseif menoage <= age:
+			KILLVAR '$wombpotfath'
 			cycle = 6
 		else
+			KILLVAR '$wombpotfath'
 			Cycle = 0
-			if cyccustom = 0
+			if cyccustom = 0:
 				daylastperiod = daystart
 			end
 			temprand = rand(0,10)
@@ -335,6 +370,10 @@ elseif cycle = 3:
 elseif cycle = 4:
 	if RecovH <= 0:
 		Cycle = 1
+		if cyccustom = 0:
+			knowpregloss = 0
+			knowpregrecover = 0
+		end
 		if rand(0,1000) = 1000:
 			EggRH = rand(20,80)
 		else
@@ -354,6 +393,17 @@ elseif cycle = 5:
 	temprand -= (babyembryo-1)*588
 	if PregChem > 6720 + temprand:
 		'A sharp pain pierces your abdomen, and you feel something flow down your legs. Your water has broken!'
+		$cycreport_txt = 'In Labor.'
+		:babyfinalpreploop
+		!if $wombthfath ! 'unknown':
+			!arrmodtmp = arrpos('$ChildThFath''Unknown')
+			! if arrmodtmp >= 0:
+				! $ChildThFath[arrmodtmp] = $wombthfath
+				! jump 'babyfinalpreploop'
+			! end
+		!end
+		KILLVAR '$wombpotfath'
+		KILLVAR '$wombthfath'
 		preg = 2
 			if babyembryo > 1:
 				'Your babies are coming...'
@@ -383,7 +433,16 @@ elseif cycle = 5:
 			if lactate < 1: lactate = 1
 		end
 	end
+	!if PregChem > 2350:
+		! if pregchem > 3000 or kid > 0:
+			! if rand(0,7) = 0: dynamic $d_pregmovement
+		! else
+			! if rand(0,500) = 0: dynamic $d_pregmovement
+		! end
+	!end
 end
+
+!dynamic $d_cycreport_update
 
 --- femcyc ---------------------------------
 

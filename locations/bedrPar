@@ -16,8 +16,8 @@ if sisboyday + 1 = daystart and hour = 18:gt'sisterQW','sisboyQW_expel'
 '<center><b><font color="maroon">Your bedroom</font></b></center>'
 ! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
 '<center><img src="images/qwest/alter/bedrPar.jpg"></center>'
-'Small room in which hardly squeezed <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">cabinet</a>, your <a href="exec:gt ''bed2''">bed</a>, <a href="exec:gt ''stol'' ,''stolPar''">desk</a> bed and sisters.'
-if komp = 1:'On the table is your <a href="exec:gorodokKomp = 1 & GT ''Komp'',''start''">laptop</a>.'
+'A small room in which you and your sister live. It contains a <a href="exec:gt ''clothing'', ''view_clothing_list'', ''wardrobe''">wardrobe</a> for your clothes, your <a href="exec:gt ''bed2''">bed</a>, a <a href="exec:gt ''stol'' ,''stolPar''">desk</a> and your sister''s bed.'
+if komp = 1:'Your <a href="exec:gorodokKomp = 1 & GT ''Komp'',''start''">laptop</a> is on the desk.'
 gorodokKomp = 0
 
 gad = 0
@@ -36,13 +36,13 @@ else
 	gs'family'
 
 	if rexCarCount >= 9 and sisterHere = 1 and hour < 3 and rexSmsDay ! daystart and smsForRex < 13:
-		act 'Take your sisters phone':gt 'reks','sms'
+		act 'Take your sister''s phone':gt 'reks','sms'
 	end
 
 ! WD: add Underwear change
 
 	if student > 0 and kursovik < 100:
-		act 'Write coursework (1:00)':
+		act 'Do coursework (1:00)':
 			cla
 			*clr
 			minut += 60
@@ -52,30 +52,30 @@ else
 
 			manna -= 10
 			'<center><img src="images/etogame/study.jpg"></center>'
-			'You sat on the course work and prepared her for <<kursovik>> percent.'
+			'You sit down at the desk and do your coursework, you''ve finished <<kursovik>> percent of it.'
 
-			act 'Leave':gt $curloc
+			act 'Leave your desk':gt $curloc
 		end
 	end
 
 	if horny >= 50 and sisterHere = 0:
 		act 'Masturbate':gt 'selfplay'
 	end
-	if pornMagazine > 0:'Under the mattress you have hidden pornozhurnal.'
+	if pornMagazine > 0:'You have hidden your porn magazines under the mattress of your bed.'
 	if sisterHere = 0 and pornMagazine > 0:dynamic $d_read_porn
 
 	dynamic $d_read_book
 
-	if tovarL > 0:'You have kept <<tovarL>> One unit of small goods. The maximum you can keep in your room 30 One unit of product.'
+	if tovarL > 0:'You currently have <<tovarL>> grams of drugs. The maximum you can keep in your room is 30 grams.'
 
 	if card > 0:
-		act 'Take a deck of cards':gt 'card'
+		act 'Look at your deck of cards':gt 'card'
 	end
 
-	if dur > 0:'You have hidden <<dur>> doses pale lady'
+	if dur > 0:'You have hidden <<dur>> doses of Pale Lady.'
 
 	if dur > 0 and narkday ! daystart:
-		act 'Nyuhnut pale lady 5 min':
+		act 'Use some Pale Lady (0:05)':
 			cla
 			*clr
 			minut += 5
@@ -87,21 +87,21 @@ else
 			nark += 10
 			dur -= 1
 			'<center><img src="images/etogame/dur.jpg"></center>'
-			'You otsypali dose of powder and its nyuhnuli, then you feel just fine.'
+			'You snort some Pale Lady, feeling dizzy for just a moment. After that you feel fantastic, and incredibly horny.'
 
-			act 'Leave':gt $curloc
+			act 'Continue':gt $curloc
 		end
 	end
 end
 
 if tanga = 0:
-	act 'Wear Underwear':
+	act 'Wear underwear':
 		cla
 		tanga = 1
 		gt $curloc
 	end
 elseif tanga = 1:
-	act 'Remove Underwear':
+	act 'Take off your underwear':
 		cla
 		tanga = 0
 		gt $curloc
@@ -111,35 +111,35 @@ end
 sports = 0
 
 if obruch > 0 and obruchday ! daystart:
-	$sitrobr = '<a href="exec: dynamic $sitrobrd ">twist wrap</a>'
+	$sitrobr = '<a href="exec: dynamic $sitrobrd ">Hula hoop</a>'
 	sports = 1
 else
 	$sitrobr = ''
 end
 
 if bookYog > 0 and bookYogday ! daystart:
-	$sitryog = '<a href="exec: dynamic $sitryogd ">Meditation</a>'
+	$sitryog = '<a href="exec: dynamic $sitryogd ">Meditate</a>'
 	sports = 1
 else
 	$sitryog = ''
 end
 
 if skak > 0 and skakday ! daystart:
-	$sitrskak = '<a href="exec: dynamic $sitrskakd ">jumping rope</a>'
+	$sitrskak = '<a href="exec: dynamic $sitrskakd ">Jumping rope</a>'
 	sports = 1
 else
 	$sitrskak = ''
 end
 
 if pressday ! daystart:
-	$sitrpress = '<a href="exec: dynamic $sitrpressd ">abdominal exercises</a>'
+	$sitrpress = '<a href="exec: dynamic $sitrpressd ">Abdominal exercises</a>'
 	sports = 1
 else
 	$sitrpress = ''
 end
 
 if pushday ! daystart:
-	$sitrpush = '<a href="exec: dynamic $sitrpushd ">push-ups</a>'
+	$sitrpush = '<a href="exec: dynamic $sitrpushd ">Push-ups</a>'
 	sports = 1
 else
 	$sitrpush = ''
@@ -152,9 +152,9 @@ if sports = 1:
 	'<center><<$sportsitr>></center>'
 end
 
-if gobelen>0:'Ready Tapestry <<gobelen>> Pieces'
-if poSkill>=50 and tkan>0:'Your cloth will suffice for <<tkan>> lessons'
-if poSkill>=50 and tkan<=0:'You do not have fabric'
+if gobelen>0:'You have <<gobelen>> completed tapestries.'
+if poSkill>=50 and tkan>0:'You have enough fabric for <<tkan>> lessons.'
+if poSkill>=50 and tkan<=0:'You do not have any fabric.'
 if poSkill>=200:
 	if newgobelen=0 and tkan>0:
 		act'Start a new tapestry':
@@ -163,13 +163,13 @@ if poSkill>=200:
 			newgobelen=1
 			minut+=15
 			gs'stat'
-			'You are within 15 minutes prepared tissue on which pattern will embroider and broadly marked out the outlines of a pattern.'
-			act'Set aside':gt $curloc
+			'You spend 15 minutes at the embroidery frame, preparing the fabric and outlining the pattern for the tapestry.'
+			act'Set the tapestry aside':gt $curloc
 		end
 	end
 	if newgobelen>=1:
-		'Tapestry is ready for <<newgobelen/10>> percent'
-		act'Embroidering a tapestry for an hour':
+		'Your tapestry is <<newgobelen/10>> percent finished.'
+		act'Work on the tapestry for an hour':
 			cls
 			minut+=60
 			poSkill+=rand(0,1000)
@@ -177,13 +177,13 @@ if poSkill>=200:
 			gobramin=poSkill/200
 			newgobelen+=rand(gobramin,gobramax)
 			gs'stat'
-			if newgobelen<1000:'You are within an hour embroidered tapestry and now he is ready to <<newgobelen/10>> percent'
+			if newgobelen<1000:'You spent an hour working on your tapestry, which is now <<newgobelen/10>> percent finished.'
 				if newgobelen>=1000:
 				newgobelen=0
 				gobelen+=1
-				'You managed to fully embroidered tapestry.'
+				'Your work on the tapestry is done.'
 			end
-			act'Set aside':gt $curloc
+			act'Set the tapestry aside':gt $curloc
 		end
 	end
 end

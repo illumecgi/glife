@@ -30,6 +30,8 @@ if $ARGS[0] = '1':
 	'<center><img src="images/prost/anal.jpg"></center>'
 	'You got cancer and you put his client in his anus <<dick>> inch dick. <<$analsex>>'
 	'Finally, the client does not stand up and ends in a condom.'
+	spafinloc = 3
+	gs 'cum_manage'
 
 	act 'Escape':gt $locSex, $metkaSex
 end
@@ -76,21 +78,24 @@ if $ARGS[0] = '2':
 		cumanalRand = RAND(0,2)
 		if cumanalRand = 0:
 			anal = anal + 1
-			cumass = cumass + 1
+			spafinloc = 4
+			gs 'cum_manage'
 
 			'Suddenly, in the anus become empty, Client dramatically pulled member, before a drop of his seed watered half of your ass.'
 
 			act 'Escape':gt $locSex, $metkaSex
 		elseif cumanalRand = 1:
 			anal = anal + 1
-			cumfrot = cumfrot + 1
+			spafinloc = 7
+			gs 'cum_manage'
 
 			'Suddenly, in the anus become empty, Client dramatically pulled member, before a drop of his seed rain fell on your body, dirtying clothes traces of milk.'
 
 			act 'Escape':gt $locSex, $metkaSex
 		elseif cumanalRand = 2:
 			anal = anal + 1
-			cumanus = cumanus + 1
+			spafinloc = 3
+			gs 'cum_manage'
 
 			'Movement of the customer has been a sharp and painful it literally rammed you in the ass, Finally you feel like you are inside the sperm flows, do you think it was over.'
 
@@ -124,6 +129,8 @@ if $ARGS[0] = '4':
 
 	'<center><img src="images/prost/bjr.jpg"></center>'
 	'"Listen, I do not understand, I whip my money..." finish you do not give. The man hit you heavy blow to the chest, from which you fell to the ground. "Money wanted, Well, what a bitch, I`ll give them to you, but you have to correct his mistake" After these words he drove you exuding the stench dick in her mouth. You choked on the stench, but there was nothing, eyes closed, how to say yes, you try to keep from vomiting, fear of new beating. The stranger had you in the mouth, trying to touch her every move eggs your lips. His cock soon became clear, but that did not stop him, it seemed an eternity before he once again finished right in the throat. Looking at you roll in a mixture of vomit and saliva, he laughed and said no more words thrown in your face money.'
+	spafinloc = 12
+	gs 'cum_manage'
 
 	act 'Escape':gt $locSex, $metkaSex
 end
@@ -150,6 +157,7 @@ if $ARGS[0] = '6':
 
 	'<center><img src="images/prost/sexcar20.jpg"></center>'
 	'The bitter taste of feces in his mouth you do not dilute the flavor given sperm. Freeing your desktop mouth, customer ordered to lie on the grass. You dutifully and even with a certain touch of acting talent fulfill the role, innocent until you fuck doll. Customer, heated by your skillful mouth, long twitching over you, quickly ended in a condom. While you are lying recovering, your body fall three green paper, he was pleased with, smiling happily do you think.'
+	gs 'cum_manage'
 
 	act 'Escape':gt $locSex, $metkaSex
 end

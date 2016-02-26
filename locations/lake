@@ -53,12 +53,8 @@ if $ARGS[0] = 'start':
 		act 'Swim (1:00)':
 			cla
 			*clr
-			cumpussy = 0
-			cumbelly = 0
-			cumass = 0
-			cumlip = 0
-			cumface = 0
-			cumfrot = 0
+			cumspclnt = 4
+			gs 'cum_cleanup'
 			minut += 60
 			sweat = -3
 			manna += 5
@@ -130,7 +126,10 @@ if $ARGS[0] = 'start':
 								guy += 1
 								anal += 1
 								anus += 1
-								cumass += 1
+								$boy = 'Andrew'
+								sexpartkno = 1
+								spafinloc = 3
+								gs 'cum_manage'
 								horny = 20
 								orgasm += 1
 								'<center><img src="images/picVA/andreiA.jpg"></center>'
@@ -315,6 +314,7 @@ if $ARGS[0] = 'walklake1':
 	'Walking along the beach you hear someone calling you, "Hey beauty, come here." You turn around and see that next to the shore, between the trees, there is a hut and on the threshold sits a guy.'
 
 	$dinribak = {
+		$boy = 'Rude man'
 		act 'Leave the idiot alone':
 			cls
 			minut += 2
@@ -355,8 +355,12 @@ if $ARGS[0] = 'walklake1':
 						cls
 						minut += 2
 						sub += 1
-						cumface += 1
-						cumlip += 1
+						sexvolume = 35
+						spafinloc = 11
+						gs 'cum_manage'
+						sexvolume = 5
+						spafinloc = 12
+						gs 'cum_manage'
 						facial += 1
 						gs 'stat'
 						'<center><img src="images/qwest/sosed/facefuck1.jpg"></center>'
@@ -407,8 +411,12 @@ if $ARGS[0] = 'walklake1':
 					cls
 					minut += 2
 					sub += 1
-					cumface += 1
-					cumlip += 1
+					sexvolume = 35
+					spafinloc = 11
+					gs 'cum_manage'
+					sexvolume = 5
+					spafinloc = 12
+					gs 'cum_manage'
 					facial += 1
 					gs 'stat'
 					'<center><img src="images/qwest/sosed/cum.jpg"></center>'
@@ -440,7 +448,8 @@ if $ARGS[0] = 'walklake1':
 				act 'Try to move out of the way':
 					cls
 					minut += 2
-					cumface += 1
+					spafinloc = 11
+					gs 'cum_manage'
 					$ribakName = 'whore'
 					gs 'stat'
 					'<center><img src="images/qwest/sosed/cum1.jpg"></center>'
@@ -543,8 +552,12 @@ if $ARGS[0] = 'walklake1':
 						cls
 						minut += 2
 						sub += 1
-						cumface += 1
-						cumlip += 1
+						sexvolume = 35
+						spafinloc = 11
+						gs 'cum_manage'
+						sexvolume = 5
+						spafinloc = 12
+						gs 'cum_manage'
 						facial += 1
 						gs 'stat'
 						'<center><img src="images/qwest/sosed/facefuck1.jpg"></center>'
@@ -583,8 +596,12 @@ if $ARGS[0] = 'walklake1':
 					cls
 					minut += 2
 					sub += 1
-					cumface += 1
-					cumlip += 1
+					sexvolume = 35
+					spafinloc = 11
+					gs 'cum_manage'
+					sexvolume = 5
+					spafinloc = 12
+					gs 'cum_manage'
 					facial += 1
 					gs 'stat'
 					'<center><img src="images/qwest/sosed/cum.jpg"></center>'
@@ -616,7 +633,8 @@ if $ARGS[0] = 'walklake1':
 				act 'Try to move out of the way':
 					cls
 					minut += 2
-					cumface += 1
+					spafinloc = 11
+					gs 'cum_manage'
 					$ribakName = 'whore'
 					gs 'stat'
 					'<center><img src="images/qwest/sosed/cum1.jpg"></center>'
@@ -649,6 +667,8 @@ if $ARGS[0] = 'walklake1':
 					cla
 					*clr
 					sex += 1
+					cumprecheck = 1
+					gs 'cum_manage'
 					'<center><img src="images/img/Lake/walk1/walk3.jpg"></center>'
 					'The guy climbed, You turned and swung cancer went into your vagina, you screamed in pain.'
 					'"Well, Fishing is not easy, Needless to suffer" said the man with the power of continuing to fuck your pussy. And you have only squeaked with every jolt.'
@@ -656,7 +676,8 @@ if $ARGS[0] = 'walklake1':
 					act '"Ay-ay-ay"':
 						cla
 						*clr
-						cumbrest += 1
+						spafinloc = 15
+						gs 'cum_manage'
 						money += 2000
 						'<center><img src="images/img/Lake/walk1/walk4.jpg"></center>'
 						'At the end of man shivered and tensed abruptly pulled his dick out of you, expanding you to her face filled your chest with his sperm.'
@@ -701,6 +722,7 @@ if $ARGS[0] = 'walklake2':
 			dick = 15
 			silavag = 1
 			pose = 0
+			sexpartkno = 1
 			dynamic $sexstart
 			'You feel ready as Stasik holding your feet, spreads your legs and and brings his hard penis down to your soft pussy.'
 			dynamic $sexstart2
@@ -711,8 +733,10 @@ if $ARGS[0] = 'walklake2':
 			dynamic $sexcum
 			'Valera groans and his cock shudders in your mouth.'
 			swallow += 1
-			cumlip += 1
-			cumface += 1
+			$boy = 'Valera'
+			sexpartkno = 1
+			spafinloc = 12
+			gs 'cum_manage'
 			dynamic $dinrandswallow
 
 			act 'Further':
@@ -885,6 +909,13 @@ if $ARGS[0] = 'walklake2':
 					cla
 					*clr
 					sex += 1
+					if rand(0,1) = 0
+						$boy = 'Stasik'
+					else
+						$boy = 'Valera'
+					end
+					cumprecheck = 1
+					gs 'cum_manage'
 					'<center><img src="images/img/Lake/walk2/walk4.jpg"></center>'
 					'You succumb to his actions and bend over, a man with forcefully enters your pussy, and you continued to suck the other, but soon he, too, can not resist and tries to take his dick out of your mouth.'
 
@@ -907,9 +938,28 @@ if $ARGS[0] = 'walklake2':
 							act 'Finish':
 								cla
 								*clr
-								cumbrest += 1
-								cumlip += 1
-								cumface += 1
+								temp = rand(0,1)
+								sexpartkno = 1
+								if temp = 0:
+									$boy = 'Valera'
+								else
+									$boy = 'Stasik'
+								end
+								spafinloc = 15
+								gs 'cum_manage'
+								sexpartkno = 1
+								sexvolume = 5
+								if temp = 1:
+									$boy = 'Valera'
+								else
+									$boy = 'Stasik'
+								end
+								spafinloc = 12
+								gs 'cum_manage'
+								sexpartkno = 1
+								sexvolume = 35
+								spafinloc = 11
+								gs 'cum_manage'
 								horny += 10
 								'<center><img src="images/img/Lake/walk2/walk7.jpg"></center>'
 								'Sated the men lower you down, and begin to masturbate on your face, you open your mouth and wait patiently. They both finish, pouring a gulf of sperm in your mouth and on your face and chest.'
@@ -974,6 +1024,9 @@ if $ARGS[0] = 'vlake1':
 					gang += 1
 					sex += 1
 					anal += 1
+					$boy = 'Stranger at the lake'
+					cumprecheck = 1
+					gs 'cum_manage'
 					'<center><img src="images/img/Lake/Vlake1/vlake7.jpg"></center>'
 					'Noticing that you reacted favorably to his fingers in your vagina, the guy took out his fingers, and their place was taken by his hard cock. The others carry on with their blowjobs, but start periodically changing places.'
 
@@ -995,8 +1048,20 @@ if $ARGS[0] = 'vlake1cum':
 	cla
 	*clr
 	gs 'stat'
-	cumlip += 1
-	cumface += 1
+	temp = 4
+
+	:vlake1cumloop
+	$boy = 'Stranger at the lake <<temp>>'
+	sexvolume = 5
+	spafinloc = 12
+	gs 'cum_manage'
+	sexvolume = 35
+	spafinloc = 11
+	gs 'cum_manage'
+	temp -= 1
+
+	if temp > 0: jump 'vlake1cumloop'
+
 	'<center><img src="images/img/Lake/Vlake1/vlake5.jpg"></center>'
 	'Boys begin to cum on your face and mouth. You lick the cum off their dicks and swallow it. Finally satisfied the guys, dress and go, you''re left unsatisfied.'
 
@@ -1052,13 +1117,18 @@ if $ARGS[0] = 'vlake2':
 					cla
 					*clr
 					anal += 1
+					$boy = 'Stranger at the lake'
+					cumprecheck = 1
+					gs 'cum_manage'
 					'<center><img src="images/img/Lake/Vlake2/vlake5.jpg"></center>'
 					'"I want you both." you moan and straddle one of the men, and the second was not deaf to your request and puts his cock in your ass.'
 
 					act 'Change position':
 						cla
 						*clr
-						cumassin += 1
+						$boy = 'Stranger at the lake'
+						spafinloc = 3
+						gs 'cum_manage'
 						'<center><img src="images/img/Lake/Vlake2/vlake6.jpg"></center>'
 						'Changing position, you plant your anus on the man lying down. The second man comes up to you and holding your head with one hand begin to fuck your mouth, penetrating his cock deeper and deeper. After a while you feel hot cum fill your anus and finished with him, the second man gets ready to cum in your mouth.'
 
@@ -1067,7 +1137,8 @@ if $ARGS[0] = 'vlake2':
 						act 'Pull':
 							cla
 							*clr
-							cumface += 1
+							spafinloc = 11
+							gs 'cum_manage'
 							'<center><img src="images/img/Lake/Vlake2/vlake7.jpg"></center>'
 							'You remove the member from your mouth and the man finishes all over your face.'
 
@@ -1084,7 +1155,8 @@ if $ARGS[0] = 'vlake2cum':
 	cla
 	*clr
 	gs 'stat'
-	cumlip += 1
+	spafinloc = 12
+gs 'cum_manage'
 	'<center><img src="images/img/Lake/Vlake2/vlake8.jpg"></center>'
 	'You continued to suck and soon your mouth is filled with streams of semen, you swallow it and carefully lick his cock, leaving not even a drop of sperm.'
 
@@ -1113,6 +1185,10 @@ if $ARGS[0] = 'andrey1':
 			*clr
 			bj += 1
 			sex += 1
+			$boy = 'Andrew'
+			sexpartkno = 1
+			cumprecheck = 1
+			gs 'cum_manage'
 			'<center><img src="images/img/Lake/Andrey1/andrey2.jpg"></center>'
 			'You open your mouth and run your tongue along his shaft, then pull him into you as far as you can. Andrew starts to fuck you in the mouth with gusto. Suddenly your hear a sob came from nearby bushes. You looked up and see in the bushes, a young man spying on you his hand moving up and down in the groin area.'
 			'Andrew also realizes that you have a peeping tom, and turns your head so that the observer can see all the details of how his red head appears and disappears in your mouth. You defiantly lick Andrews member, speed up, then slow the pace, periodically holding his full length in your mouth, your tongue then licking his testicles.'
@@ -1123,8 +1199,11 @@ if $ARGS[0] = 'andrey1':
 				cla
 				*clr
 				guy += 1
-				cumlip += 1
-				cumass += 1
+				spafinloc = 12
+				gs 'cum_manage'
+				$boy = 'Stranger at the lake'
+				spafinloc = 4
+				gs 'cum_manage'
 				anal += 1
 				'<center><img src="images/img/Lake/Andrey1/andrey3.jpg"></center>'
 				'The shy young man comes up to you. "Well, what are you waiting for, briefs off and get against the girl." Andrew shouts at him, turning you over and pulling apart your buttocks with his hands. The young man comes from behind and puts his penis in your anus. Now two members move in you as pistons delivering incredible pleasure. Moaning you ride on the two cocks, until the young man finishes on your ass, and Andrew gets up and cums in your mouth.'
@@ -1135,7 +1214,7 @@ if $ARGS[0] = 'andrey1':
 			act 'Deeper! Stronger!':
 				cla
 				*clr
-				cumpussy += 1
+				gs 'cum_manage'
 				'<center><img src="images/img/Lake/Andrey1/andrey4.jpg"></center>'
 				'"Deeper, Stronger!" You shout, you do not hesitate to enthusiastically absorb the whole man. He answers you with an inarticulate growl escaping to the beat of his ragged breathing. Even before the two of you finish off, the boy has run away.'
 
@@ -1168,6 +1247,7 @@ if $ARGS[0] = 'kater1':
 			cla
 			*clr
 			bj += 1
+			$boy = 'Rescuer at the lake'
 			'<center><img src="images/img/Lake/kater1/kater3.jpg"></center>'
 			'You sit the guy down and lick his cock, then open your lips and start sucking selflessly, in a few minutes you feel like the dick in your mouth is ready to finish.'
 
@@ -1183,6 +1263,9 @@ if $ARGS[0] = 'kater1':
 				act 'Change position':
 					cla
 					*clr
+					cumprecheck = 1
+					sexspecpot = 11000
+					gs 'cum_manage'
 					'<center><img src="images/img/Lake/kater1/kater5.jpg"></center>'
 					'When he gets tired, you push him onto his back, jump on top of him and start riding him like a cowgirl.'
 
@@ -1219,10 +1302,17 @@ if $ARGS[0] = 'kater1cum':
 	cla
 	*clr
 	gs 'stat'
-	cumbelly += 1
-	cumlip += 1
-	cumface += 1
-	cumbrest += 1
+	sexvolume = 5
+	spafinloc = 14
+	gs 'cum_manage'
+	sexvolume 10
+	spafinloc = 15
+	gs 'cum_manage'
+	sexvolume 15
+	spafinloc = 12
+	gs 'cum_manage'
+	spafinloc = 11
+	gs 'cum_manage'
 	'<center><img src="images/img/Lake/kater1/kater9.jpg"></center>'
 	'The flow of sperm in your mouth was so large that you could not keep to all in your mouth and swallowing when filled to the brim, sperm flows out of your mouth, spreads over your chin and drips all down your chest and stomach.'
 
@@ -1258,6 +1348,9 @@ if $ARGS[0] = 'kater2':
 			cla
 			*clr
 			anal += 1
+			$boy = 'Rescuer at the lake'
+			cumprecheck = 1
+			gs 'cum_manage'
 			'<center><img src="images/img/Lake/kater2/kater3.jpg"></center>'
 			'The guy removes his member and turns your back to him, grabs and lifts your buttocks, your legs lift up, and the guy presses into your anus with his dick. You moan, whether from pain inflicted by the huge dick in your ass, whether from the pleasure that he gives you, you don''t care and with each thrust you try to take his cock as deep as possible into yourself.'
 			'"Want deeper?" He asks'
@@ -1286,14 +1379,17 @@ if $ARGS[0] = 'kater2':
 						act 'Turn to one':
 							cla
 							*clr
-							cumlip += 1
+							spafinloc = 12
+							gs 'cum_manage'
 							'<center><img src="images/img/Lake/kater2/kater7.jpg"></center>'
 							'One of the guys groans, you turn to him, your mouth open. His aim is true and his seed fills your mouth, you swallow it with pleasure.'
 
 							act 'Turn to the second':
 								cla
 								*clr
-								cumface += 1
+								$boy = 'Rescuer at the lake 2'
+								spafinloc = 11
+								gs 'cum_manage'
 								'<center><img src="images/img/Lake/kater2/kater8.jpg"></center>'
 								'Soon the second one groans, you turn to him, but even though you opened your mouth, the guy completely covers your face.'
 
@@ -1338,6 +1434,9 @@ if $ARGS[0] = 'kater3':
 				cla
 				*clr
 				anal += 1
+				$boy = 'Rescuer at the lake'
+				cumprecheck = 1
+				gs 'cum_manage'
 				'<center><img src="images/img/Lake/kater3/6.jpg"></center>'
 				'You climb on top of one of them taking his cock in your pussy, and the second one takes you in the ass.'
 
@@ -1351,7 +1450,12 @@ if $ARGS[0] = 'kater3':
 					act 'Change position':
 						cla
 						*clr
-						cumlip += 1
+						$boy = 'Rescuer at the lake'
+						spafinloc = 12
+						gs 'cum_manage'
+						$boy = 'Friend of your Rescuer at the lake'
+						spafinloc = 12
+						gs 'cum_manage'
 						'<center><img src="images/img/Lake/kater3/11.jpg"></center>'
 						'Sated they kneel you down and end in your mouth.'
 
@@ -1405,6 +1509,9 @@ if $ARGS[0] = 'horse1':
 					act 'Change position':
 						cla
 						*clr
+						$boy = 'Quad Rider'
+						cumprecheck = 1
+						gs 'cum_manage'
 						'<center><img src="images/img/Lake/horse1/horse6.jpg"></center>'
 						'You straddle one of the men jumping on him like the horse you tied up a few minutes ago. The second guy comes up to you and starts to tease you with his member, lowering it to you so you can suck it, then lifting it up forcing you to stretch and strain to try and catch it in your mouth.'
 
@@ -1418,13 +1525,15 @@ if $ARGS[0] = 'horse1':
 							act 'Remove from mouth':
 								cla
 								*clr
-								cumlip += 1
+								spafinloc = 12
+								gs 'cum_manage'
 								'<center><img src="images/img/Lake/horse1/horse8.jpg"></center>'
 								'You remove the member from your mouth and begin stroking it with your tongue, in a second your efforts were rewarded and a stream of smerm covers your tongue.'
 
 								act 'Suck second':
 									cla
 									*clr
+									$boy = 'Quad Rider 2'
 									'<center><img src="images/img/Lake/horse1/horse9.jpg"></center>'
 									'You kneel before the second man and lick him from his balls to the head and take him in your mouth, as you suck his dick with pleasure the man trembles. "I''m going to finish."'
 
@@ -1433,7 +1542,8 @@ if $ARGS[0] = 'horse1':
 									act 'Pull':
 										cla
 										*clr
-										cumface += 1
+										spafinloc = 11
+										gs 'cum_manage'
 										'<center><img src="images/img/Lake/horse1/horse10.jpg"></center>'
 										'You remove his member from your mouth and the man had finishes on your face, with the words, "Here''s a babys face cream." You gladly licked the remnants of sperm from his penis.'
 
@@ -1453,6 +1563,8 @@ if $ARGS[0] = 'horse1bj':
 	cla
 	*clr
 	gs 'stat'
+	spafinloc = 12
+	gs 'cum_manage'
 	'<center><img src="images/img/Lake/horse1/horse11.jpg"></center>'
 	'The flow of sperm gushes into your mouth, you swallow it purring with pleasure, lick the remnants of his cock and swallow again.'
 
@@ -1509,20 +1621,30 @@ if $ARGS[0] = 'horse2':
 						act 'Change position':
 							cla
 							*clr
+							$boy = 'Horse Rider'
+							cumprecheck = 1
+							gs 'cum_manage'
 							'<center><img src="images/img/Lake/horse2/horse7.jpg"></center>'
 							'You jumped of their cocks and kneel down, the men crowded around you from both sides, one finishes immediately.'
 
 							act 'Suck the other one':
 								cla
 								*clr
+								spafinloc = 11
+								gs 'cum_manage'
 								'<center><img src="images/img/Lake/horse2/horse8.jpg"></center>'
 								'You turned to the second, and wrap your lips around his cock, but as you pull back, he pushes his cock deeper into your mouth, then the man groans, his cock stiffens ready to pour sperm into your mouth.'
 
 								act 'Remove from your mouth':
 									cla
 									*clr
-									cumface += 1
-									cumlip += 1
+									$boy = 'Horse Rider 2'
+									sexvolume = 10
+									spafinloc = 11
+									gs 'cum_manage'
+									sexvolume = 10
+									spafinloc = 12
+									gs 'cum_manage'
 									'<center><img src="images/img/Lake/horse2/horse9.jpg"></center>'
 									'You remove the cock from your mouth and open wide, ready to catch the stream of sperm, the man does not keep you waiting and sperm splatters into your mouth, painting your tongue and throat.'
 

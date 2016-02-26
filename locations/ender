@@ -85,6 +85,9 @@ if $ARGS[0] = 'loss':
 		vagina = vagina + 1
 		rape = rape + 1
 		horny = 0
+		$boy = 'Kisame'
+		cumprecheck = 1
+		gs 'cum_manage'
 
 		'<center><img src="images/picQW/kisameSex.jpg"></center>'
 		'Kisame swims around you and laughs, I have great fun baby. He grabbed you for utyanul feet to the bottom of the pool, where you thrust your cock in pussy, you try not to drown in the water until you fucks kisame, He blizzards your insides like a member of his hammer and you feel, it can no longer hold your breath, in the eyes of the dark, Kisame smiles and leans over to you, kiss Me, You have stuck her lips to his mouth, and he breathed in you a new portion of air. Finally he finished and his seed shark was swimming in the water.'
@@ -101,7 +104,15 @@ if $ARGS[0] = 'loss':
 		sex = sex + 1
 		vagina = vagina + 1
 		guy = guy + 1
-		cumpussy = cumpussy + 1
+		$boy = 'Rapist'
+		cumprecheck = 1
+		gs 'cum_manage'
+		spafinloc = 1
+		sexvolume = 30
+		gs 'cum_manage'
+		spafinloc = 14
+		sexvolume = 10
+		gs 'cum_manage'
 		manna = 20
 		willpower = 20
 		rape = rape + 1

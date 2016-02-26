@@ -39,10 +39,11 @@ dynamic $quickwash
 dynamic $wearpan
 dynamic $basin
 
-if cumfrot > 0:
+if spdirtyc > 0:
 	act 'Scour semen from clothing':
 		cls
-		cumfrot = 0
+		cumspclnt = 6
+		gs 'cum_cleanup'
 		minut = minut + 15
 		gs'stat'
 
@@ -56,6 +57,8 @@ if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':
 		cla
 		*clr
+		cumspclnt = 7
+		gs 'cum_cleanup'
 		minut += 5
 		klismaday = daystart
 		klismaday1= 1
@@ -369,6 +372,10 @@ $gg_sonya_serg_sex = {
 		cls
 		minut += 5
 		sex += 1
+		$boy = 'Sergei'
+		sexpartkno = 1
+		cumprecheck = 1
+		gs 'cum_manage'
 		horny += 15
 		gs'stat'
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/vanna/sonya/gr/ev1_2_'+rand(1,2)+'.jpg"></center>'
@@ -407,7 +414,9 @@ $gg_sonya_serg_sex = {
 				minut += 5
 				horny += 10
 				swallow += 1
-				cumlip = 1
+				sexvolume = 7
+				spafinloc = 12
+				gs 'cum_manage'
 				fbreath = 0
 				facial += 1
 				hapri = 0

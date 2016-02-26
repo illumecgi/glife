@@ -94,6 +94,7 @@ if hour >= 6 and hour <= 21:
 			money -= 1000
 			minut += 60
 			health = vital * 10 + stren * 5 + 1000
+			if pillcon > 0:pillcon -= rand(0,2)
 			'The doctor did give you a shot and you immediately felt much better'
 
 			act 'Leave':gt $curloc
@@ -110,6 +111,62 @@ if hour >= 6 and hour <= 21:
 			gs 'stat'
 			'You lie down on a couch at the therapist and told him about his troubles, and you immediately become much happier.'
 
+			act 'Leave':gt $curloc
+		end
+	end
+	
+	if preg = 2:
+		act 'Give birth':
+			cla
+			:multikidloop
+			'You lay on the bed and your feet are put in stirups.'
+			if BabyEmbryo > 1:
+				'Your contractions get closer and closer, and after some time (and a lot of swearing) you finally give birth. But as soon as it is out, you are hit with contractions. Another is coming!'
+			else
+				'Your contractions get closer and closer, and after some time (and a lot of swearing) you finally give birth.'
+			end
+			vidage += 1
+			preg = 0
+			pregtalk = 0
+			sterilewb += 1
+			ARRPOS('yearkid',0) = nextbaby
+			kid += 1
+			BabyEmbryo -= 1
+			daykid[nextbaby] = day
+			monthkid[nextbaby] = month
+			yearkid[nextbaby] = year
+			$ImageNeededPlacholder
+			! WD: IMAGE NEEDED ~ '<center><img src="images/etogame/abort.jpg"></center>'
+			if polkid[nextbaby] = 0:$polreb[nextbaby] = 'girl' & '"Congratulations it''s a girl."'
+			if polkid[nextbaby] = 1:$polreb[nextbaby] = 'boy' & '"Congratulations it''s a boy."'
+			
+			act 'Name your child':
+				$kidname[nextbaby] = input ("Enter your babys name")
+
+				if $kidname[nextbaby] <= 0:
+					if polkid[nextbaby] = 0:$kidname[nextbaby] = 'Masha'
+					if polkid[nextbaby] = 1:$kidname[nextbaby] = 'Misha'
+				end
+				if BabyEmbryo > 0:
+					jump 'multikidloop'
+				end
+
+				act 'Leave':gt $curloc
+			end
+		end
+	end
+
+	if tabletkishot < 5 and money >= 1000:
+		act 'Get a birth control shot':
+			cls
+			minut += 15
+			tabletkishot = 40
+			tabletkicheck = 2
+			pillcon = 40
+			money -= 1000
+			gs 'stat'
+			'<center><img src="images/etogame/poli.jpg"></center>'
+			'You are escorted into an examination room, where you are told to sit. After almost fifteen minutes a nurse comes in, sticks a needle in your arm, and depresses the plunger. "All done. Have a nice day." she says to you. You gather your things to leave.'
 			act 'Leave':gt $curloc
 		end
 	end
@@ -277,9 +334,14 @@ if hour >= 6 and hour <= 21:
 						'Taking off her clothes, you sit in a chair.'
 						'Doctor check you.'
 						$gpoli_sick = ''
+						if cumcondslip > 0:
+							$gpoli_sick = 'are suffering from toxic shock from a spent condom in your body which I have removed'
+							cumspclnt = 8
+							gs 'cum_cleanup'
+						end
 						if preg > 0:
 							knowpreg = 1
-							$gpoli_sick = 'pregnant'
+							$gpoli_sick = 'are pregnant'
 						end
 						if venera > 0:
 							if $gpoli_sick ! '':$gpoli_sick = $gpoli_sick + ', you have a sexually transmitted disease'
@@ -346,6 +408,9 @@ if hour >= 6 and hour <= 21:
 									sex += 1
 									horny = horny/2
 									vagina += 1
+									$boy = 'Peter'
+									cumprecheck = 1
+									gs 'cum_manage'
 									gs'stat'
 									'<center><img src="images/Y4enik/gpoli/gpoli_9.jpg"></center>'
 									'The heat began to pour on your body. A doctor started, literally just peck your bosom his command. With each thrust, an increasing pace, but the excitement was growing, too, involuntarily you start to moan, and catch the air. Excitation with groans grew, and a member in all persisted, and have pierced. The pace has become so fast, finish what you started, and lose self-control. Peter was shaking until you have strung. Then he pulled his dick out of you, and you almost fell, but you picked up the powerful arms, and led. On the couch, where once again you feel, as a member of the vagina takes over.'
@@ -389,7 +454,10 @@ if hour >= 6 and hour <= 21:
 														cls
 														minut += 5
 														horny += 5
-														cumlip += 1
+														$boy = 'Peter'
+														sexpartkno = 1
+														spafinloc = 12
+														gs 'cum_manage'
 														swallow += 1
 														gs'stat'
 														'<center><img src="images/Y4enik/gpoli/gpoli_14.jpg"></center>'
@@ -462,9 +530,14 @@ if hour >= 6 and hour <= 21:
 						'You quickly undress and climb into the chair. The leather-like surface feels strangely warm on your bottom and I realize that it is heated. Yuo fidget nervously as you wait for the doctor to return.'
 						'After what seems like hours, the doctor comes back into the room. You notice his face seems redder than it was and his hair seems to be a little damp. He has also taken off the apron-like smock he had on before. He continues with his examination, taking your hands and arms and massaging the joints and flexing them. He does the same with your feet and legs. To your surprise, he also examines your ass and pussy, easing his gloved fingers into first your pussy and then your asshole. He even speads your lips apart and pushes the hood back to expose your clitoris which he gently massages for a moment before suddenly getting to his feet with a deep sigh, his eyes lingering on my exposed pussy for a moment before he seems to give himself a little shake. You''re glad he stopped when he did because you would have started to get wet had he continued.'
 						$gpoli_sick = ''
+						if cumcondslip > 0:
+							$gpoli_sick = 'are suffering from toxic shock from a spent condom in your body which I have removed'
+							cumspclnt = 8
+							gs 'cum_cleanup'
+						end
 						if preg > 0:
 							knowpreg = 1
-							$gpoli_sick = 'pregnant'
+							$gpoli_sick = 'are pregnant'
 						end
 						if venera > 0:
 							if $gpoli_sick ! '':$gpoli_sick = $gpoli_sick + ', you have a sexually transmitted disease'
@@ -544,7 +617,7 @@ if hour >= 6 and hour <= 21:
 							$gpoli_sick = ''
 							if preg > 0:
 								knowpreg = 1
-								$gpoli_sick = 'pregnant'
+								$gpoli_sick = 'are pregnant'
 							end
 							if venera > 0:
 								if $gpoli_sick ! '':$gpoli_sick = $gpoli_sick + ', you have a sexually transmitted disease'
@@ -667,6 +740,9 @@ $gpoli_spravka_arrange = {
 						sex += 1
 						horny = horny/2
 						vagina += 1
+						$boy = 'Peter'
+						cumprecheck = 1
+						gs 'cum_manage'
 						gs'stat'
 						'<center><img src="images/Y4enik/gpoli/gpoli_9.jpg"></center>'
 						'The heat began to pour on your body. A doctor started, literally just peck your bosom his command. With each thrust, an increasing pace, but the excitement was growing, too, involuntarily you start to moan, and catch the air. Excitation with groans grew, and a member in all persisted, and have pierced. The pace has become so fast, finish what you started, and lose self-control. Peter was shaking until you have strung. Then he pulled his dick out of you, and you almost fell, but you picked up the powerful arms, and led. On the couch, where once again you feel, as a member of the vagina takes over.'
@@ -710,7 +786,10 @@ $gpoli_spravka_arrange = {
 											cls
 											minut += 5
 											horny += 5
-											cumlip += 1
+											$boy = 'Peter'
+											sexpartkno = 1
+											spafinloc = 12
+											gs 'cum_manage'
 											swallow += 1
 											gs'stat'
 											'<center><img src="images/Y4enik/gpoli/gpoli_14.jpg"></center>'
@@ -919,7 +998,10 @@ $gpoli_spravka_arrange_pale = {
 											cls
 											minut += 5
 											horny += 5
-											cumlip += 1
+											$boy = 'Peter'
+											sexpartkno = 1
+											spafinloc = 12
+											gs 'cum_manage'
 											swallow += 1
 											gs'stat'
 											'<center><img src="images/Y4enik/gpoli/gpoli_14.jpg"></center>'

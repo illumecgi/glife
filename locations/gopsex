@@ -52,6 +52,8 @@ $ind_stamina_groupnpc = {
 !===================!============================================
 !deduce if gg first time
 $gg_devst_deflor = {
+	cumprecheck = 1
+	gs 'cum_manage'	
 	if vagina <= 0:
 		horny = 0
 		manna = manna - 15
@@ -1029,6 +1031,8 @@ $gopsex_select = {
 !sex selection!
 $shgopsex = {
 	cla
+	$boy = $gop_name_npc
+	sexpartkno = 1
 	gs'stat'
 	'- "Well, what <<$gopsex_name_npc>> like me <<$gop_sextext1>> budesh?. What do I do for you?", playfully ask you.'
 
@@ -1478,6 +1482,10 @@ $shgopsex_swallow = {
 	minut += ''+rand(1,3)+''
 	swallow += 1
 	gs'stat'
+	$boy = $gop_name_npc
+	sexpartkno = 1
+	spafinloc = 12
+	gs 'cum_manage'
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/gopsex/cum/swallow'+rand(1,18)+'.jpg"></center>'
 	dynamic $text_sex_cumm
 	act 'Escape': gt'shulga_room'
@@ -1487,7 +1495,10 @@ $shgopsex_swallow = {
 $shgopsex_cumface = {
 	cls
 	minut += ''+rand(1,3)+''
-	cumface +=1
+	$boy = $gop_name_npc
+	sexpartkno = 1
+	spafinloc = 11
+	gs 'cum_manage'
 	facial +=1
 	gs'stat'
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/gopsex/cum/cumface'+rand(1,25)+'.jpg"></center>'
@@ -1498,8 +1509,11 @@ $shgopsex_cumface = {
 $shgopsex_cumbelly = {
 	cls
 	minut += ''+rand(1,3)+''
-	cumbelly += 1
+	spafinloc = 14
+	gs 'cum_manage'
 	gs'stat'
+	$boy = $gop_name_npc
+	sexpartkno = 1
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/gopsex/cum/cumbody'+rand(1,14)+'.jpg"></center>'
 	dynamic $text_sex_cumbody
 	act 'Escape': gt'shulga_room'
@@ -1509,8 +1523,10 @@ $shgopsex_cumbelly = {
 $shgopsex_cumvag = {
 	cls
 	minut += ''+rand(1,3)+''
-	cumpussy += 1
+	gs 'cum_manage'
 	gs'stat'
+	$boy = $gop_name_npc
+	sexpartkno = 1
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/gopsex/cum/cumpussy'+rand(1,10)+'.jpg"></center>'
 	dynamic $text_sex_cumvag
 	act 'Escape': gt'shulga_room'
@@ -1520,7 +1536,10 @@ $shgopsex_cumvag = {
 $shgopsex_cumanal = {
 	cls
 	minut += ''+rand(1,3)+''
-	cumass += 1
+	$boy = $gop_name_npc
+	sexpartkno = 1
+	spafinloc = 4
+	gs 'cum_manage'
 	gs'stat'
 	'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/gopsex/cum/cumass'+rand(1,13)+'.jpg"></center>'
 	dynamic $text_sex_cumass
@@ -1918,7 +1937,10 @@ $shgopsex_group_tripleanal = {
 !Cum on face
 $shgopsex_group_cumface = {
 	cls
-	cumface +=1
+	$boy = $gop_name_npc
+	sexpartkno = 1
+	spafinloc = 11
+	gs 'cum_manage'
 	facial +=1
 	hapri = 0
 	minut += ''+rand(2,5)+''
@@ -1930,6 +1952,10 @@ $shgopsex_group_cumface = {
 !Cum in mouth
 $shgopsex_group_swallow = {
 	cls
+	$boy = $gop_name_npc
+	sexpartkno = 1
+	spafinloc = 12
+	gs 'cum_manage'
 	swallow += 1
 	hapri = 0
 	minut += ''+rand(2,5)+''
@@ -1941,7 +1967,10 @@ $shgopsex_group_swallow = {
 !Cum on body
 $shgopsex_group_cumbelly = {
 	cls
-	cumbelly += 1
+	$boy = $gop_name_npc
+	sexpartkno = 1
+	spafinloc = 14
+	gs 'cum_manage'
 	hapri = 0
 	minut += ''+rand(2,5)+''
 	gs'stat'
@@ -1952,7 +1981,8 @@ $shgopsex_group_cumbelly = {
 !Cum in pussy
 $shgopsex_group_cumvag = {
 	cls
-	cumpussy +=1
+	$boy = $gop_name_npc
+	gs 'cum_manage'
 	hapri = 0
 	minut += ''+rand(2,5)+''
 	gs'stat'
@@ -1963,7 +1993,10 @@ $shgopsex_group_cumvag = {
 !ending in the ass
 $shgopsex_group_cumanal = {
 	cls
-	cumass += 1
+	$boy = $gop_name_npc
+	sexpartkno = 1
+	spafinloc = 4
+	gs 'cum_manage'
 	hapri = 0
 	minut += ''+rand(2,5)+''
 	gs'stat'

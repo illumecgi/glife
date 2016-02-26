@@ -205,10 +205,11 @@ end
 dynamic $wearpan
 dynamic $basin
 
-if cumfrot > 0:
+if spdirtyc > 0:
 	act 'Scour semen from clothing':
 		cla
-		cumfrot = 0
+		cumspclnt = 6
+		gs 'cum_cleanup'
 		minut = minut + 15
 		gs'stat'
 
@@ -288,6 +289,8 @@ if klisma = 1 and klismaday ! daystart:
 	act 'Make yourself an enema 5 min':
 		cla
 		*clr
+		cumspclnt = 7
+		gs 'cum_cleanup'
 		minut = minut + 5
 		klismaday = daystart
 		klismaday1 = 1

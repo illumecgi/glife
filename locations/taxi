@@ -31,7 +31,7 @@ act 'Taxi':
 
 	if $loc ! 'BDSM_Club' and BDSMClub = 1 and BDSMday ! daystart:
 		act 'Go to the BDSM club':
-      $loc = 'BDSM_Club'
+			$loc = 'BDSM_Club'
 			$metka = 'start'
 			BDSMtaxi = 1
 			dynamic $taxi

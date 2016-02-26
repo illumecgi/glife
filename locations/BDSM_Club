@@ -35,7 +35,6 @@ if $ARGS[0] = 'start':
 			else
 				msg'<b>The Mistrss branch is not yet implemented.</b>'
 				BDSMtaxi = 0
-				gt 'BDSM_Club','start'
 			end
 		end
 	elseif BDSMtaxi = 1 and BDSMmeet > 1 and BDSMmeet < 4:

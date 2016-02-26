@@ -9,56 +9,56 @@ gs 'stat'
 
 if father_go = 1 and hour >= 16 and hour < 21:
 	'<center><img src="images/pic/gargazel.jpg"></center>'
-	'Large garage in which your stepfather keeps his beloved car, a Gazelle.'
+	'A large garage that belongs to your stepfather. He spends time in there working on his beloved Gazelle pickup truck whenever he can in the late afternoons and evenings. You can tell the door is not locked, he''s probably in there now.'
 else
 	'<center><img src="images/pic/gargazel_empty.jpg"></center>'
-	'Large garage in which your stepfather keeps his beloved car, a Gazelle. Right now the garage is closed and locked with a huge padlock.'
+	'A large garage that belongs to your stepfather. He spends time in there working on his beloved Gazelle pickup truck whenever he can in the late afternoons and evenings. Right now the garage is closed, and the door is locked with a large padlock.'
 end
 
-act 'Leave':minut += 5 & gt 'garmassiv'
+act 'Leave the garage':minut += 5 & gt 'garmassiv'
 
 if father_go = 1 and hour >= 16 and hour < 20:
-	'Right now your <a href="exec:GT ''garfather''">stepfather</a> is in the garage, doing car repairs.'
+	'Your <a href="exec:GT ''garfather''">stepfather</a> is in the garage, working on his Gazelle pickup truck.'
 end
 
 if father_go=1 and hour>=20 and hour<21:
-	'Right now your <a href="exec:GT ''garfather''">stepfather and Uncle Misha</a> is in the garage, drinking vodka.'
+	'Your <a href="exec:GT ''garfather''">stepfather and uncle Misha</a> are in the garage, drinking vodka.'
 	set fatherdrunk=1
 end
 
 if YouCanGar > 0:
-	'In the garage there is stored <<GarTorgItem>> One unit of product, with a total capacity 100 One_unit. To, that would be able to sell the product out of the garage, you have to transfer it to your room.'
+	'You have stored <<GarTorgItem>> grams of drugs in the garage currently. Not wanting your stepfather to find it, you don''t think you can get away with storing more than 100 grams in various hiding places in the garage without him finding out. The garage is not very easily accessible; if you want to sell the drugs, you will have to bring it back home first.'
 
 	if tovarL >= 30:
-		'Home and so all culled product, transfer nowhere.'
+		'You already have too much stored at home and do not have any more hiding spots. You can''t bring home more, someone might find it.'
 	elseif tovarL < 30:
 		perenGarTov = 30-tovarL
-		'I could move out of the garage <<perenGarTov>> One unit of the goods in the room.'
+		'You can bring <<perenGarTov>> grams home and hide it somewhere there.'
 
 		if GarTorgItem > 0:
 			if GarTorgItem >= perenGarTov:
-				act 'move <<perenGarTov>> One unit of product':
+				act 'Move <<perenGarTov>> grams to your home':
 					cls
 					minut += 60
 					tovarL += perenGarTov
 					GarTorgItem -= perenGarTov
 					gs 'stat'
-					'You hour dealt with the goods, and transferred it from the garage to the apartment.'
+					'You spend an hour gathering your drugs from various hiding spots, bringing it home and hiding it there.'
 
-					act 'further':gt $curloc
+					act 'Continue':gt $curloc
 				end
 			end
 
 			if GarTorgItem < perenGarTov:
-				act 'move <<GarTorgItem>> One unit of product':
+				act 'Collect <<GarTorgItem>> grams to take with you':
 					cls
-					minut += 60
+					minut += 30
 					tovarL += GarTorgItem
 					GarTorgItem = 0
 					gs 'stat'
-					'You hour dealt with the goods, and transferred it from the garage to the apartment.'
+					'You spend half an hour gathering your drugs from various hiding spots.'
 
-					act 'further':gt $curloc
+					act 'Continue':gt $curloc
 				end
 			end
 		end

@@ -6,11 +6,11 @@ $brother_voyeurism = {
 		if ivrand = 1:
 			cla
 			brother_ev1 = day
-			'Through the noise of water, you pay attention to the barely audible creak of the door to the bathroom and notice a small slit in the doorway of his younger brother Kolka.'
+			'Despite the clattering noise of water, you hear the bathroom door creaking open slightly. Through a small opening in the doorway, you notice your brother Kolka watching you.'
 			if sub < 30:
-				act'Chased him':gt'brother','brother_go_away'
+				act'Tell him to get lost':gt'brother','brother_go_away'
 			end
-			act'Let them look':gt'brother','brother_voyeur_ev1'
+			act'Let him look':gt'brother','brother_voyeur_ev1'
 			exit
 		end
 	end
@@ -21,7 +21,7 @@ elseif vanr_lock = 1:
 	act'<font size = 1>Open the latch on the door</font>':vanr_lock = 0 & gt'vanrPar'
 end
 
-act 'Leave the room':gt 'korrPar'
+act 'Return to the hallway':gt 'korrPar'
 
 $metkaM = $ARGS[0]
 $locM = $CURLOC
@@ -36,16 +36,15 @@ lcolor = rgb(106, 90, 205)
 '<center><b><font color="maroon">Bathroom</font></b></center>'
 ! WD: Correct Image path ~ "images/qwest/alter/<<$loc>>.jpg"
 '<center><img src="images/qwest/alter/vanrPar.jpg"></center>'
-'Bathroom cramped and very unpretentious.'
-'Above the sink hangs a <a href="exec:GT ''mirror'',''start''">mirror</a>.'
-if vanr_hanger = 1: 'Next to the sink neatly folded your <a href="exec:dynamic $vanr_hanger_dress & tanga = tanga_hanger & GT ''vanrPar'' ">clothes</a>'
+'The bathroom is very small and unimpressive. Nevertheless, it has everything you need: a shower, toilet, <a href="exec:GT ''mirror'',''start''">mirror</a>, sink and even a bath tub.'
+if vanr_hanger = 1: 'Next to the sink, you find the neatly folded <a href="exec:dynamic $vanr_hanger_dress & tanga = tanga_hanger & GT ''vanrPar'' ">clothes</a> Mom washed for you'.
 
-if stanok > 0:'Your razor will suffice for <b><<stanok>></b> time.'
+if stanok > 0:'Your razor will last for <b><<stanok>></b> more shavings.'
 !WD: heal chafe
 if mosolmaz>0:'On a shelf is a tube of ointment for chafing, which will be enough for <b><<mosolmaz>><b> applications.'
 
 if dirtbelo > 0 and BuyHous = 0:
-	'In the bathroom you have found, Mom washed your laundry.'
+	'In the bathroom you find the laundry Mom washed for you.'
 	clrbelo += dirtbelo
 	dirtbelo = 0
 end
@@ -55,10 +54,25 @@ dynamic $bath
 
 if pirsA + pirsB + pirsC + pirsD + pirsE + pirsF + pirsN + pirsG + pirsGL > 0:'<a href="exec:dynamic $pirManage">Manage Piercings</a>'
 
-if fillimplant = 1 and siliconeBag >= 1:'<a href="exec:cls & siliconeBag -= 1 & silicone += 10 & gt $curloc">Inject silicone into breast implants.</a>'
-if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $curloc">Drain silicone from breast implants.</a>'
+if fillimplant = 1 and siliconeBag >= 1:'<a href="exec:cls & siliconeBag -= 1 & silicone += 10 & gt $curloc">Inject silicone into breast implants</a>'
+if fillimplant = 1 and silicone >= 20:'<a href="exec:cls & silicone -= 10 & gt $curloc">Drain silicone from breast implants</a>'
 
 dynamic $bteeth
+
+if sanpad > 0 and mesec > 0 and isprokp = 0 and tanga = 1:
+	act 'Use a sanitary napkin (0:05)':
+		cla
+		*clr
+		sanpad -= 1
+		isprokp = 1
+		minut += 5
+		manna -= 5
+		gs 'stat'
+		'<center><img src="images/pics/wash3.jpg"></center>'
+		'You use a sanitary napkin.'
+		act 'Finish':gt $curloc
+	end
+end
 
 if tampon > 0 and mesec > 0 and isprok = 0:
 	act 'Use a tampon (0:05)':
@@ -81,14 +95,15 @@ if clrbelo <= 4: clrbelo = 5
 dynamic $wearpan
 dynamic $basin
 
-if cumfrot > 0:
+if spdirtyc > 0:
 	act 'Wipe the cum off your clothes (0:10)':
 		cla
-		cumfrot = 0
+		cumspclnt = 6
+		gs 'cum_cleanup'
 		minut += 10
 		gs 'stat'
 		'<center><img src="images/etogame/frotsp.jpg"></center>'
-		'You remove traces of cum from your clothes.'
+		'You remove the traces of cum from your clothes.'
 
 		act 'Finish':gt $curloc
 	end
@@ -103,9 +118,9 @@ if leghair > 0 and stanok > 0:
 		horny += 5
 		stanok -= 1
 		'<center><img src="images/pics/shave.jpg"></center>'
-		'You lathered his feet and took a razor. Deft movements you shaved hair on the legs and washed shaving foam.'
+		'You lather your legs up with some soapy water and shave your legs. After a few swift movements, your legs are smooth as silk. The feeling of your smooth legs turns you on a little.'
 
-		act 'postpone machine':gt $curloc
+		act 'Return to showering':gt $curloc
 	end
 end
 
@@ -118,9 +133,9 @@ if lobok > 0 and stanok > 0:
 		horny += 5
 		stanok -= 1
 		'<center><img src="images/pics/shave3.jpg"></center>'
-		'You lathered crotch and took a razor deft movements began to shave pubic hairs and shave pussy vokurug. Finally shaving was finished and you flushed with foam pussy.'
+		'You lather your crotch with some soapy water and carefully shave your pubic hair. After shaving you can''t help but run your fingers over your pussy, enjoying the smooth feeling and getting slightly more aroused by the touch.'
 
-		act 'postpone machine':gt $curloc
+		act 'Return to showering':gt $curloc
 	end
 end
 
@@ -135,12 +150,12 @@ if analplug = 1 and analplugin = 1:
 
 		'<center><img src="images/body/analplug.jpg"></center>'
 
-		'You bent over and took out the butt plug.' & !!0.2.6: Removed unneccessary var check
+		'You squat and tug gently at the butt plug, gasping as you push it out of you. You can''t help but feel a bit empty, now that it''s out.' & !!0.2.6: Removed unneccessary var check
 
 		act 'Finish':gt $curloc
 	end
 elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
-	act 'Insert a butt plug (0:05)':
+	act 'Insert your butt plug (0:05)':
 		cla
 		*clr
 		plugday = daystart
@@ -153,8 +168,8 @@ elseif analplug = 1 and analplugin = 0 and klismaday1= 1 and plugday ! daystart:
 
 		'<center><img src="images/body/analplug.jpg"></center>'
 
-		if butpluguse > 0:'You bent over and inserted the butt plug.'
-		if butpluguse = 0:butpluguse = 1 & '"If I don''t use it then why did I buy it!" you thought. You decided to take a closer look while thinking, "It is necessary to start developing my ass so I could have great adventures someday, you could even say a huge and thick adventures with crimson heads, uh, now I got carried away." You scratched your head. Then you directed it in your ass, it was a bit painful at first, but as soon as the widest part was plunged into the murky depths of your anus it became easier to push it all the way.'
+		if butpluguse > 0:'You squat and gently rub the butt plug against your anus, after lubricating it with a bit of saliva. After a short while, you''ve relaxed enough to be able to push it in. Once it''s in you give it a few gentle tugs, wondering if anyone will catch you wearing it today.'
+		if butpluguse = 0:butpluguse = 1 & '"If I''m not going to use it, then why did I buy it?" you ask yourself. You look at the butt plug for a while, thinking "It is necessary to start developing my ass, so I could have great adventures someday... you could even say huge and thick adventures with crimson heads, uh, now I got carried away..." You''re slightly embarrassed at the thought for a second, but are then overcome by your horny fantasies. Determined to get the plug all the way in, you slowly press it against your asshole after lubricating it with a bit of saliva. It hurts a bit at first, but once the thickest part is in the rest follows rather easily. Patting yourself on your ass once it''s in, you wonder if anyone will notice you''re wearing it today and then immediately feel naughty for even having thought that.'
 
 		act 'Finish':gt $curloc
 	end
@@ -164,11 +179,13 @@ if klisma = 1 and klismaday ! daystart:
 	act 'Give yourself an enema (0:05)':
 		cla
 		*clr
+		cumspclnt = 7
+		gs 'cum_cleanup'
 		minut += 5
 		klismaday = daystart
 		klismaday1 = 1
 		'<center><img src="images/picV/klisma.jpg"></center>'
-		'You put yourself an enema and clean intestines, now your ass is ready for anal sex.'
+		'You give yourself an enema, feeling clean down there. Your ass is now ready for anal sex without any awkward surprises.'
 
 		act 'Finish':gt $curloc
 	end
@@ -184,7 +201,7 @@ if vibrator = 1 and vibratorIN = 1:
 		if vagina < 30:vagina += 1
 
 		'<center><img src="images/etogame/vibrator.jpg"></center>'
-		'You bend over the sink and take the vibrator out of your pussy.'
+		'You spread your legs and take the vibrator out of your pussy, letting out a slight moan as you do so. You feel somewhat empty now.'
 
 		act 'Finish':gt $curloc
 	end
@@ -198,7 +215,7 @@ elseif vibrator = 1 and vibratorIN = 0 and vagina ! 0:
 		if vagina < 30:vagina += 2
 
 		'<center><img src="images/etogame/vibrator.jpg"></center>'
-		'You bend over the sink and inserted the vibrator in your pussy.'
+		'You spread your legs and slowly insert the vibrator in your pussy, wondering if anyone will notice you wearing it today.'
 
 		act 'Finish':gt $curloc
 	end
@@ -212,25 +229,26 @@ if mosolmaz > 0 and mosol > 0:
 		mosol -= 5
 		'You take a tube of cream and rub it onto your itchy vulva.'
 
-		act 'Leave':gt $curloc
+		act 'Finish':gt $curloc
 	end
 end
 
 if pregtest > 0:
-	act 'Do a pregnancy test':
+	act 'Do a pregnancy test (0:05)':
 		cla
+		minut += 5
 		pregtest -= 1
 		gs 'stat'
 
 		if preg = 1:
 			knowpreg = 1
-			'The test showed the two strips. you are pregnant.'
-			'you think, that the father <<$father>>.'
+			'The test showed two strips. You are pregnant.'
+			'You think the father is <<$father>>.'
 		else
 			'The test showed one band.'
 		end
 
-		act 'Further':gt $curloc
+		act 'Finish':gt $curloc
 	end
 end
 

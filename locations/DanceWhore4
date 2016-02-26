@@ -23,7 +23,8 @@ act 'Squat':
 			cls
 			minut += 30
 			$boy = 'Client'
-			cumanus += 1
+			spafinloc = 3
+gs 'cum_manage'
 			gs 'stat'
 			'<center><img src="images/qwest/alter/dance/d.jpg"></center>'
 			'You suck dick absorbing it as deeply as possible.'
@@ -36,7 +37,8 @@ act 'Squat':
 
 				act 'Swallow':
 					cls
-					cumlip += 1
+					spafinloc = 12
+gs 'cum_manage'
 					swallow += 1
 					minut += 10
 					gs 'stat'
@@ -49,7 +51,8 @@ act 'Squat':
 
 				act 'Close your eyes':
 					cls
-					cumface += 1
+					spafinloc = 11
+gs 'cum_manage'
 					facial += 1
 					minut += 10
 					gs 'stat'
@@ -80,7 +83,8 @@ act 'Squat':
 
 				act 'Swallow':
 					cls
-					cumlip += 1
+					spafinloc = 12
+gs 'cum_manage'
 					swallow += 1
 					minut += 10
 					gs 'stat'
@@ -93,7 +97,8 @@ act 'Squat':
 
 				act 'Close your eyes':
 					cls
-					cumface += 1
+					spafinloc = 11
+gs 'cum_manage'
 					facial += 1
 					minut += 10
 					gs 'stat'

@@ -187,7 +187,7 @@ end
 
 shameless = guy + bj + anal + hj + ((slutty + gang) * 2)
 moneySUM = money + karta + stolmoney
-cumSUM = cumbelly + cumpussy + cumass + cumlip + cumface + cumfrot + cumanus
+cumSUM = cumsumbod/40
 
 if husbizvradd > 5:izvratH = 1
 if husbharmin > 10:harakHusb = 0
@@ -505,6 +505,7 @@ if minut >= 60:
 	water -= 1
 	son -= 1
 	minut -= 60
+	gs 'femcyc'
 
 	if alko > 0 and alkoblock = 0:
 		if alko >= 4:
@@ -569,7 +570,10 @@ if minut >= 60:
 		manna -= 5
 	end
 
-	if energy >= 25:energy -= 5 & fat += 1
+	if energy > 25:
+		fat += (energy - 25) / 2
+		energy = 25
+	end
 
 	if mosol > 0:
 		if tanga = 1 or $clothingworntype = 'nude':mosol -= 1
@@ -659,20 +663,68 @@ if hour >= 24:
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd = 30:IvanPodstavaQW = 3
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd > 0 and PodpiskaNeviezd < 30:PodpiskaNeviezd += 1
 
-	if salo > fat:
+	if salo > (fat + 40):
+		salo -= 3
+		fat += 3
+	elseif salo > (fat + 20):
 		salo -= 1
 		fat += 1
-		if salo>fat*2:
-			salo -= 1
-			fat += 1
-		end
-		if salo>fat*4:
-			salo -= 1
-			fat += 1
-		end
-	elseif salo < fat:
+	elseif salo > (fat + 10):
+		fatD2roll = rand(0,1)
+		salo -= fatD2roll
+		fat += fatD2roll
+	end
+
+	if fat > (salo + 40):
+		salo += 3
+		fat -= 3
+	elseif fat > (salo + 20):
 		salo += 1
 		fat -= 1
+	elseif fat > (salo + 10):
+		fatD2roll = rand(0,1)
+		salo += fatD2roll
+		fat -= fatD2roll
+	end
+
+	if salo > 240:
+		salo = 240
+	elseif salo > 180:
+		salo -= 3
+	elseif salo > 120:
+		salo -= 2
+	elseif salo > 60:
+		salo -= 1
+	elseif salo < 30: 
+		salo += 2
+	elseif salo < 60:
+		salo += 1
+	end
+
+	if fat > 240:
+		fat = 240
+	elseif fat > 180:
+		fat -= 3
+	elseif fat > 120:
+		fat -= 2
+	elseif fat > 60:
+		fat -= 1
+	elseif fat < 30:
+		fat += 2
+	elseif fat < 60:
+		fat += 1
+	end
+
+	if strenbuf > 90:
+		strenbuf -= 2
+	elseif strenbuf > 80:
+		strenbuf -= 1
+	end
+
+	if vitalbuf > 90:
+		vitalbuf -= 2
+	elseif vitalbuf > 80:
+		vitalbuf -= 1
 	end
 
 	if strenbuf > stren:strenbuf -= 1
@@ -1383,6 +1435,14 @@ elseif sweat = 3:
 elseif sweat > 3:
 	pl '<b><font color="red">You really stink.</font></b>'
 end
+
+if cyccustom = 0:
+	temp[1] = daystart-daylastperiod
+	pl 'It has been <<temp[1]>> days since you last had a period.'
+else
+	temp[1] = daystart-daylastperiod
+	pl 'It has been <<temp[1]>> days since you last remember having a period.'
+end
 if preg = 1:
 	rodtime = 280 - pregtime
 	if pregtime < 280 and pregtime > 27:knowpreg = 1 & pl '<b><font color="blue">You have been pregnant for <<pregtime>> days. Days until delivery <<rodtime>></font></b>'
@@ -1394,68 +1454,116 @@ if preg = 1:
 	elseif pregtime >= 90:
 		pl'<font color = black>Do you have a barely perceptible <a href="exec:view''images/pregnant/1.jpg''"> tummy</a>, which, however, invisible under clothing</font>'
 	end
-else
-	if isprok = 0 and mesec > 0:pl '<b><font color="red">You are bleeding between your legs, urgently need a tampon.</font></b>'
-	if isprok = 1 and mesec > 0:pl 'You are having your period.'
+end
+if mesec > 0:
+	if isprok = 0 and isprokp = 0:
+		pl '<b><font color="red">You are bleeding between your legs, you need to use feminine hygine products.</font></b>'
+	elseif isprok = 1:
+		pl 'You are having your period.'
+	elseif isprokp = 1:
+		if tenga = 0:
+			pl '<b><font color="red">You are bleeding between your legs, you need to use feminine hygine products.</font></b>'
+		else
+			pl 'You are having your period.'
+		end
+	end
 end
 
+if lactate = 1:
+	if lactatemv >= lactatemm-1:
+		pl'<font color = black>Your breasts are so full they hurt and a little milk is constantly dribbling out.</font>'
+	elseif lactatemv > lactatemm*9/10:
+		pl'<font color = black>Your breasts are firm and full, and starting to hurt from all the milk they contain.</font>'
+	elseif lactatemv > lactatemm*3/4:
+		pl'<font color = black>Your breasts feel firm and heavy, full of milk.</font>'
+	elseif lactatemv > lactatemm/2:
+		pl'<font color = black>Your breasts are heavy, a cargo of milk inside.</font>'
+	elseif lactatemv > lactatemm/4:
+		pl'<font color = black>Your breasts feel a little heavy.</font>'
+	elseif lactatemv > 0:
+		pl'<font color = black>Your breasts tingle a little from the feeling of milk production.</font>'
+	else
+		pl'<font color = black>Your breasts feel soft and empty.</font>'
+	end
+end
 if hour >= 11 and hour < 12 and week > 1 and week < 5 and workKafe = 1:pl '<b><font color="red">It''s time to work your shift as a waitress in a cafe</font></b>'
 if hour >= 8 and hour < 9 and week < 5 and workSec >= 1:pl '<b><font color="red">It''s time to work your shift as a secretary</font></b>'
 if PersSecWork = 1 and week < 6 and hour < 10 and hour >= 5:pl '<b><font color="red">It''s time to work your shift as a secretary</font></b>'
 if workFabrika = 1 and week => 1 and week <= 5 and hour = 8 and age >= 18 or workFabrika = 1 and week => 1 and week <= 5 and hour = 16 and age < 18:pl'<b><font color = red>TheAM To go to work in the factory as a seamstress Pavlovsky</font></b>'
 
-if cumlip = 1:fbreath = 0
-
 $cumeater = {
-	if rand(0,3) = 0: energy += 1
-	cumbelly = 0
-	cumlip += 1
+	spdirtyb = 1
+	fbreath = 0
 	vaf += 1
+	sparrvol[cumloc] -= 20
 	gs 'stat'
-	'You collect the sperm from your stomach with your fingers and lick them feeling the tart taste of semen.'
+	'You collect the sperm from your stomach with your fingers and lick them, feeling the tart taste of semen.'
 }
 $cumeater2 = {
-	if rand(0,3) = 0: energy += 1
-	cumpussy = 0
-	cumlip += 1
+	spdirtyb = 1
+	fbreath = 0
 	vaf += 1
+	sparrvol[cumloc] -= 20
 	gs 'stat'
-	'You collect the sperm from your pussy with your fingers and lick them feeling the tart taste of semen.'
+	'You collect the sperm from your pussy with your fingers and lick them, feeling the tart taste of semen.'
 }
 $cumeater3 = {
-	if rand(0,3) = 0: energy += 1
-	cumass = 0
-	cumlip += 1
+	spdirtyb = 1
+	fbreath = 0
 	vaf += 1
+	sparrvol[cumloc] -= 20
 	gs 'stat'
-	'You collect the sperm from your buttocks with your fingers and lick them feeling the tart taste of semen.'
+	'You collect the sperm from your buttocks with your fingers and lick them, feeling the tart taste of semen.'
 }
 $cumeater4 = {
-	if rand(0,3) = 0: energy += 1
-	cumface = 0
-	cumlip += 1
+	spdirtyb = 1
+	fbreath = 0
 	vaf += 1
+	sparrvol[cumloc] -= 20
 	gs 'stat'
-	'You collect the sperm from your face with your fingers and lick them feeling the tart taste of semen.'
+	'You collect the sperm from your face with your fingers and lick them, feeling the tart taste of semen.'
 }
 $cumeater5 = {
-	if rand(0,3) = 0: energy += 1
-	cumfrot = 0
-	cumlip += 1
+	spdirtyb = 1
+	fbreath = 0
 	vaf += 1
+	sparrvol[cumloc] -= 20
 	gs 'stat'
-	'You collect the sperm from your clothes with your fingers and lick them feeling the tart taste of semen.'
+	'You collect the sperm from your clothes with your fingers and lick them, feeling the tart taste of semen.'
 }
 
 $cumeater6 = {
-	if rand(0,3) = 0: energy += 1
-	cumanus = 0
-	cumlip += 1
+	spdirtyb = 1
+	fbreath = 0
 	vaf += 1
+	sparrvol[cumloc] -= 20
 	gs 'stat'
-	'You collect the sperm from your anus with your fingers and lick them feeling the tart taste of semen.'
+	'You collect the sperm from your anus with your fingers and lick them, feeling the tart taste of semen.'
 }
-
+$cumeater7 = {
+	spdirtyb = 1
+	fbreath = 0
+	vaf += 1
+	sparrvol[cumloc] -= 20
+	gs 'stat'
+	'You collect the sperm from your body with your fingers and lick them, feeling the tart taste of semen.'
+}
+$cumeater8 = {
+	spdirtyb = 1
+	fbreath = 0
+	vaf += 1
+	sparrvol[cumloc] -= 20
+	gs 'stat'
+	'You lick your fingers clean, feeling the tart taste of semen.'
+}
+$cumeater9 = {
+	spdirtyb = 1
+	fbreath = 0
+	vaf += 1
+	sparrvol[cumloc] -= 20
+	gs 'stat'
+	'You collect the sperm from your hair with your fingers and lick them, feeling the tart taste of semen.'
+}
 $clear_write = {
 	body_write = 0
 	face_write = 0
@@ -1482,24 +1590,313 @@ if body_write > 0 and face_write > 0:
 	end
 end
 
-if swallow < 10:
-	if cumbelly > 0:pl '<b><font color="red">Your <a href="exec:view''images/body/cumbelly.jpg''">stomach</a> is smeared with sperm.</font></b>'
-	if cumpussy > 0:pl '<b><font color="red">Sperm slowly flows from your <a href="exec:view''images/body/cumpussy.jpg''">pussy</a>.</font></b>'
-	if cumass > 0:pl '<b><font color="red">Your <a href="exec:view''images/body/cumass.jpg''">ass</a> is smeared with semen.</font></b>'
-	if cumface > 0:pl '<b><font color="red">Your <a href="exec:view''images/body/cumface.jpg''">face</a> and hair are smeared with sperm.</font></b>'
-	if cumfrot > 0:pl '<b><font color="red">You have semen stains on your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.</font></b>'
-	if cumanus > 0:pl '<b><font color="red">Sperm slowly flows from your <a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
-else
-	if cumbelly > 0:pl '<a href="exec:view''images/body/cumbelly.jpg''"><b><font color="red">Your stomach is smeared with </font></b></a><a href="exec:dynamic $cumeater"><b><font color="blue">sperm.</font></b></a>'
-	if cumpussy > 0:pl '<a href="exec:view''images/body/cumpussy.jpg''"><a href="exec:dynamic $cumeater2"><b><font color="blue">Sperm</font></b></a><b><font color="red"> slowly flows from your pussy</font></b></a>.'
-	if cumass > 0:pl '<a href="exec:view''images/body/cumass.jpg''"><b><font color="red">Your ass is smeared with </font></b></a><a href="exec:dynamic $cumeater3"><b><font color="blue">semen.</font></b></a>'
-	if cumface > 0:pl '<a href="exec:view''images/body/cumface.jpg''"><b><font color="red">Your face and hair are smeared with </font></b></a><a href="exec:dynamic $cumeater4"><b><font color="blue">sperm.</font></b></a>'
-	if cumfrot > 0:pl '<a href="exec:view''images/body/cumfrot.jpg''"><b><font color="red">You have <a href="exec:dynamic $cumeater5"><b><font color="blue">semen</font></b></a> stains on your clothes</font></b></a>.'
-	if cumanus > 0:pl '<a href="exec:view''images/body/cumanal.jpg''"><a href="exec:dynamic $cumeater6"><b><font color="blue">Sperm</font></b></a><b><font color="red"> slowly flows from your ass</font></b></a>.'
+$temp[1] = {
+	if sparridt[temp1arr] = 1:
+		temp2arr = temp1arr + 1
+		temp3arr = arrpos(#temp2arr,'sparrloc',i)
+		if temp3arr > 0 and sparrvol[temp3arr] > 0 and sparrloc[temp3arr] = i and $sparrnam[temp3arr] ! $sparrnam[temp1arr]:
+			$cumtemp[1] = 'Multiple men'
+		else
+			$cumtemp[1] = $sparrnam[temp1arr]
+		end
+	else
+		$cumtemp[1] = 'Somebody'
+	end
+	if sparrage[temp1arr] < temp[2]:
+		$cumtemp[2] = 'fresh '
+	elseif sparrage[temp1arr] < temp[3]:
+		$cumtemp[2] = ''
+	else
+		temp[4] = sparrloc[temp1arr]
+		if temp[4] ! 0 and temp ! 3:
+			$cumtemp[2] = 'crusty '
+		else
+			$cumtemp[2] = 'stale '
+		end
+	end
+}
+temp = arrsize('sparrvol')
+if temp > 0:
+	!{index for use in dynamic}
+	i = 0
+	!{values for fresh and crusty, only updated where needed}
+	temp[2] = 4
+	temp[3] = 10
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		$cumtemp[3] = 'fills your '
+		if sparrslc[temp1arr] > 0:
+			$cumtemp[3] = 'slowly flows from your '
+			spdirtyn = 1
+		elseif sparrslc[temp] > 0 and sparrloc[temp] = 0:
+			$cumtemp[3] = 'slowly flows from your '
+			spdirtyn = 1
+		end
+		if swallow >= 10:
+			pl '<a href="exec:view''images/body/cumpussy.jpg''"><b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',0) & dynamic $cumeater2"><b><font color="blue">sperm</font></b></a><b> <<$cumtemp[3]>>pussy</font></b></a>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm <<$cumtemp[3]>><a href="exec:view''images/body/cumpussy.jpg''">pussy</a>.</font></b>'
+		end
+		spdirty = 1
+		spdirtyi = 1
+	end
+	i = 1
+	temp[2] = 1
+	temp[3] = 5
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',1) & dynamic $cumeater2"><b><font color="blue">sperm</font></b></a><b> is smeared across your pussy lips.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your pussy lips.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 2
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',2) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the crotch of your panties.</font></b>.'
+		else
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>>semen stains on the crotch of your panties.'
+		end
+		spdirtyc = 1
+	end
+	i = 3
+	temp[2] = 4
+	temp[3] = 10
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if analplugin = 1:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is stuffed in your ass, corked in by your anal plug.</font></b>'
+		else
+			$cumtemp[3] = 'fills your '
+			if sparrslc[temp1arr] > 0:
+				$cumtemp[3] = 'slowly flows from your '
+				spdirtyn = 1
+			elseif sparrslc[temp] > 0 and sparrloc[temp] = 3:
+				$cumtemp[3] = 'slowly flows from your '
+				spdirtyn = 1
+			end
+			if swallow >= 10:
+				pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos('sparrloc',3) & dynamic $cumeater6"><b><font color="blue">sperm</font></b></a><b> <<$cumtemp[3]>><a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
+			else
+				pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm <<$cumtemp[3]>><a href="exec:view''images/body/cumanal.jpg''">ass</a>.</font></b>'
+			end
+		end
+		spdirty = 1
+		spdirtyi = 1
+	end
+	i = 4
+	temp[2] = 1
+	temp[3] = 5
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',4) & dynamic $cumeater3"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumass.jpg''">ass</a>.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your <a href="exec:view''images/body/cumass.jpg''">ass</a>.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 5
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',5) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the ass of your panties.</font></b>.'
+		else
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>>semen stains on the ass of your panties.'
+		end
+		spdirtyc = 1
+	end
+	i = 6
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',6) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on the crotch of your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.</font></b>.'
+		else
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>>semen stains on the crotch of your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.'
+		end
+		spdirtyc = 1
+	end
+	i = 7
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',7) & dynamic $cumeater5"><b><font color="blue">semen</font></b></a><b> stains on your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.</font></b>.'
+		else
+			pl '<b><font color="red">You have <<$cumtemp[1]>>''s <<$cumtemp[2]>>semen stains on your <a href="exec:view''images/body/cumfrot.jpg''">clothes</a>.'
+		end
+		spdirtyc = 1
+	end
+	i = 8
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',8) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your back.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your back.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 9
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',9) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your legs.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your legs.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 10
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',10) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your arms.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your arms.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 11
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',11) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumface.jpg''">face</a>.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your <a href="exec:view''images/body/cumface.jpg''">face</a>.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 12
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		pl '<b><font color="red">Your mouth smells like <<$cumtemp[1]>>''s sperm.</a>.'
+		spdirty = 1
+		spdirtyb = 1
+		fbreath = 0
+	end
+	i = 13
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',13) & dynamic $cumeater8"><b><font color="blue">sperm</font></b></a><b> is smeared across your hands.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your hands.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+		spdirtyv = 1
+	end
+	i = 14
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',14) & dynamic $cumeater"><b><font color="blue">sperm</font></b></a><b> is smeared across your <a href="exec:view''images/body/cumbelly.jpg''">stomach</a>.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your <a href="exec:view''images/body/cumbelly.jpg''">stomach</a>.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 15
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',15) & dynamic $cumeater7"><b><font color="blue">sperm</font></b></a><b> is smeared across your breasts.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared across your breasts.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+	end
+	i = 16
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		dynamic $temp[1]
+		if swallow >= 10 and sparrage[temp1arr] < 5:
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>><a href="exec:temp1arr = arrpos(''sparrloc'',16) & dynamic $cumeater9"><b><font color="blue">sperm</font></b></a><b> is smeared in your hair.</font></b>.'
+		else
+			pl '<b><font color="red"><<$cumtemp[1]>>''s <<$cumtemp[2]>>sperm is smeared in your hair.'
+		end
+		spdirty = 1
+		spdirtyn = 1
+		spdirtyv = 1
+	end
+	i = 17
+	temp1arr = arrpos('sparrloc',i)
+	if temp1arr >= 0 and sparrloc[temp1arr] = i and sparrvol[temp1arr] > 0:
+		if sparridt[temp1arr] = 1:
+			$cumtemp[1] = $sparrnam[temp1arr]
+		else
+			$cumtemp[1] = 'Somebody'
+		end
+		if sparrage[temp1arr] < 1:
+			$cumtemp[2] = 'freshly buried'
+		elseif sparrage[temp1arr] < 13:
+			$cumtemp[2] = 'buried'
+		else
+			$cumtemp[2] = 'marinating '
+		end
+		pl '<b><font color="red">A spent condom full of <<$cumtemp[1]>>''s sperm is <<$cumtemp[2]>> deep in your vagina.'
+		spdirty = 1
+		spdirtyi = 1
+	end
 end
+!{should kill all temp values}
+killvar '$temp'
+killvar '$cumtemp'
+temp1arr = 0
+temp2arr = 0
+temp3arr = 0
+cumfrot = 0
+cumpussy = 0
+cumbelly = 0
+cumass = 0
+cumlip = 0
+cumface = 0
+cumanus = 0
 
-if cumlip > 0:pl '<b><font color="red">Your mouth smells like sperm.</font></b>'
-
+if $clothingworntype = 'nude' and lactatemess > 0:
+	if lactatemess < 3:
+		pl'<font color = black>You have a little milk residue around your nipples.</font>'
+	elseif if lactatemess < 7:
+		pl'<font color = black>You have a lot of milk residue around your nipples.</font>'
+	else
+		pl'<font color = black>Your breasts are drenched with milk residue.</font>'
+	end
+elseif lactatemess > 0:
+	if lactatemess < 3:
+		pl'<font color = black>You have tiny wet spots on your clothes above your nippes.</font>'
+	elseif if lactatemess < 7:
+		pl'<font color = black>Milk has soaked through your clothes and made visible circles on your breasts.</font>'
+	else
+		pl'<font color = black>Your shirt is drenched with milk from your breasts.</font>'
+	end	
+end
 if vgape > 0:
 	if vgape >= 3:
 		pl '<b><font color="red">You have very sore vagina, you can hardly even walk, while trying to keep your feet apart.</font></b>'
@@ -1648,6 +2045,8 @@ if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and (sisboyQW = 3 or
 if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and sisboytrioQW = 1:pl'' & pl'You promised my sister to come into your room in  18 hours'
 
 
+
+dynamic $brotherSexCount
 
 if bag > 0:pl '<a href="exec:dynamic $d_bag"><b>Handbag</b></a>'
 

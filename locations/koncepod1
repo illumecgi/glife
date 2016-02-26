@@ -123,16 +123,14 @@ if $ARGS[0]='vnr2x':
 		end
 	end
 
-	if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+	if spdirtyi = 0 or spdirtyn = 0:
 		act 'Substitution 15 min':
 			cla
 			*clr
-			cumpussy = 0
-			cumbelly = 0
-			cumass = 0
-			cumanus = 0
-			cumlip = 0
-			cumface = 0
+			cumspclnt = 3
+			gs 'cum_cleanup'
+			cumspclnt = 4
+			gs 'cum_cleanup'
 			sweat = sweat - 1
 			minut = minut + 15
 
@@ -147,13 +145,15 @@ if $ARGS[0]='vnr2x':
 		end
 	end
 
-	if cumlip > 0 or cumface > 0:
+	if spdirtyv > 0:
 		act 'Wash off with facial cum 15 min':
 			cla
 			*clr
 			mop = 1
-			cumlip = 0
-			cumface = 0
+			cumspclnt = 12
+			gs 'cum_cleanup'
+			cumspclnt = 9
+			gs 'cum_cleanup'
 			sweat = sweat - 1
 			minut = minut + 15
 
@@ -165,16 +165,6 @@ if $ARGS[0]='vnr2x':
 		end
 	end
 
-	if cumfrot > 0:
-		act 'Clear semen from clothing 15 min':
-			cla
-			cumfrot = 0
-			sweat = sweat - 1
-			minut = minut + 15
-			'You have erased the traces of semen from clothing.'
-			act 'Logout':gt'koncepod1','vnr2x'
-		end
-	end
 	if tampon > 0 and mesec > 0 and isprok = 0:
 		act 'Change swab':
 			cla

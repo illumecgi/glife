@@ -25,6 +25,9 @@ if $ARGS[0] = 'var':
 		if paysxsex = 0:
 			sex += 1
 			paysxsex = 1
+			$boy = 'Man from a gang bang used as payment'
+			cumprecheck = 1
+			gs 'cum_manage'
 		end
 
 		'<center><img src="images/img/paysex/vag<<picrand>>.jpg"></center>'
@@ -72,6 +75,9 @@ if $ARGS[0] = 'var':
 		if paysxsex = 0:
 			sex += 1
 			paysxsex = 1
+			$boy = 'Man from a gang bang used as payment'
+			cumprecheck = 1
+			gs 'cum_manage'
 		end
 
 		if paysxanal = 0:
@@ -97,11 +103,39 @@ if $ARGS[0] = 'end':
 	paysxsex = 0
 	paysxanal = 0
 	colpaysex = 0
-	cumbelly = 1
-	cumpussy = 1
-	cumass = 1
-	cumlip = 1
-	cumface = 1
+	temp = 2
+
+	:paysexloop
+
+	$boy = 'Man from a gang bang used as payment <<temp>>'
+	gs 'cum_manage'
+	spafinloc = 1
+	gs 'cum_manage'
+	spafinloc = 3
+	gs 'cum_manage'
+	spafinloc = 4
+	gs 'cum_manage'
+	spafinloc = 8
+	gs 'cum_manage'
+	spafinloc = 9
+	gs 'cum_manage'
+	spafinloc = 10
+	gs 'cum_manage'
+	spafinloc = 11
+	gs 'cum_manage'
+	spafinloc = 12
+	gs 'cum_manage'
+	spafinloc = 13
+	gs 'cum_manage'
+	spafinloc = 14
+	gs 'cum_manage'
+	spafinloc = 15
+	gs 'cum_manage'
+	spafinloc = 16
+	gs 'cum_manage'
+	temp -= 1
+
+	if temp > 0: jump 'paysexloop'
 
 	if horny >= 80:
 		horny = 0

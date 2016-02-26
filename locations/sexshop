@@ -388,11 +388,12 @@ if $ARGS[0] = 'toi':
 		end
 	end
 
-	if cumfrot > 0:
+	if spdirtyc > 0:
 		act 'Wipe the cum off your clothes (0:10)':
 			cla
 			*clr
-			cumfrot = 0
+			cumspclnt = 6
+			gs 'cum_cleanup'
 			minut += 10
 			!!'<center><img src="images/etogame/frotsp.jpg"></center>'
 			'You remove traces of cum from your clothes.'
@@ -482,7 +483,8 @@ if $ARGS[0] = 'pip':
 						bj += 1
 						gloryhole += 1
 						swallow += 1
-						cumlip += 1
+						spafinloc = 12
+gs 'cum_manage'
 						mistressqwest += 1
 						dynamic $venerasiak
 						ghprand = rand(1, 38)

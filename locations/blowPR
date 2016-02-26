@@ -18,7 +18,7 @@ if $ARGS[0] = 'start':
 	'<center><img src="images/prost/bj.jpg"></center>'
 	'Your hand slips to the crotch of the man and unzips his pants. You thrust your hand into his pants and pull out his penis.'
 
-	if prezik > 0:act 'Slide a condom on his penis with your mouth':gt'blowPR','1'
+	if prezik > 0:act 'Slide a condom on his penis with your mouth':sexcontra = 3 & gt'blowPR','1'
 	if prezik = 0:act 'Take his penis in your mouth':gt'blowPR','2'
 end
 
@@ -45,7 +45,9 @@ if $ARGS[0] = '1':
 	'You slide a condom over his penis with your lips.'
 
 	if prosti = 0:
-		'Your lips glide over the client`s trunk, until he ends up coming in the condom'
+		'Your lips glide over the client`s trunk, until he ends up coming in the condom.'
+		spafinloc = 12
+		gs 'cum_manage'
 
 		act 'Escape':gt $locSex, $metkaSex
 	elseif prosti = 1:
@@ -87,7 +89,8 @@ if $ARGS[0] = '12':
 	if prosti = 0:
 		bjrand = RAND(1,100)
 		if bjrand <= 50:
-			cumlip += 1
+			spafinloc = 12
+			gs 'cum_manage'
 			fbreath = 0
 
 			if bj <= 15:
@@ -102,7 +105,8 @@ if $ARGS[0] = '12':
 				act 'Escape':gt $locSex, $metkaSex
 			end
 		elseif bjrand <= 80:
-			cumface += 1
+			spafinloc = 11
+			gs 'cum_manage'
 			if bj <= 15:
 				mop = 0
 
@@ -119,7 +123,8 @@ if $ARGS[0] = '12':
 			end
 		elseif bjrand <= 100:
 			if bj <= 15:
-				cumfrot += 1
+				spafinloc = 7
+				gs 'cum_manage'
 
 				'<center><img src="images/prost/bjt2.jpg"></center>'
 				'With clumsy movements you suck on the customer''s dick, He stretches his hands to your chest tries to expose your breasts. You yell, implying that you do not agree. The Customer is dissatisfied but continues to have you in the mouth. You relax, as the client pulls his saliva drenched member out. You close your eyes and you feel drops of semen fall not on your face but your chest! Surprised you open your eyes, horrified to see your semen-stained clothes, and a smiling customer.'
@@ -130,6 +135,8 @@ if $ARGS[0] = '12':
 
 				'<center><img src="images/prost/bjt.jpg"></center>'
 				'Your trained lips slide up and down, delivering customer delight. He stretches his hands to your chest and impatiently tries to expose your breasts. You understand, and without words, Expose your tits. He becomes thoroughly hard in your mouth. when he''s on the brink, you step back sharply, and stroke his hard member. In an instant the client shoots his sperm carefully on your breasts. Satisfied, he hands you another Pjatihatki.'
+				spafinloc = 15
+				gs 'cum_manage'
 
 				act 'Escape':gt $locSex, $metkaSex
 			end

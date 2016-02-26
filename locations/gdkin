@@ -402,7 +402,7 @@ if hour >= 20 and hour <= 23:
 		frost = 0
 		gs 'stat'
 
-		if cumface > 0 or cumfrot > 0:
+		if spdirtyc > 0 or spdirtyv > 0:
 			if GorSlut < 2:GorSlut = 2
 
 			manna -= 100
@@ -468,7 +468,7 @@ if hour >= 20 and hour <= 23:
 		gs 'stat'
 		'<center><img src="images/etogame/club_yaho.jpg"></center>'
 
-		if cumface > 0 or cumfrot > 0:
+		if spdirtyc > 0 or spdirtyv > 0:
 			if GorSlut < 2:GorSlut = 2
 
 			manna -= 100

@@ -107,6 +107,8 @@ if klisma = 1 and klismaday ! daystart:
 	act 'Make yourself an enema 5 min':
 		cla
 		*clr
+		cumspclnt = 7
+		gs 'cum_cleanup'
 		minut = minut + 5
 		klismaday = daystart
 		klismaday1 = 1

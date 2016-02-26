@@ -20,7 +20,7 @@ bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 $fname = 'Tahoma'
 fsize = 12
-$version = '0.3.1 The, like, bimbo version.'
+$version = '0.3.2 The X and O''s version.'
 
 *nl
 *nl
@@ -45,6 +45,14 @@ $version = '0.3.1 The, like, bimbo version.'
 !!!! Recent Version Tracking Block !!!!!
 *nl
 'Recent Version Tracking:'
+*nl
+"0.3.2"
+'- New cum management system'
+'- Text edits by Lantera'
+'- Bug fixes and code clean up'
+'- Timer for Mistress spanking now sets'
+'- Volleyball trainer should now work'
+'- Reinstated a couple of events for increasing rep in Pavlovski'
 *nl
 "0.3.1"
 '- Bug fixes and code clean up'

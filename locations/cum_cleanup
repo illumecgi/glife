@@ -1,16 +1,18 @@
 # cum_cleanup
 
-cumsptmp = 0
+temp = 0
 cumsumbod = 0
 cumsumvag = 0
 cumsumass = 0
 
+
+
 :cumsptmploop
-arrmodtmp = arrsize('sparrvol')
-if arrmodtmp < (cumsptmp+1): cumspclnt = 0
-cumsumbod += sparrvol[cumsptmp]
-if sparrloc[cumsptmp] = 0: cumsumvag += sparrvol[cumsptmp]
-if sparrloc[cumsptmp] = 3: cumsumass += sparrvol[cumsptmp]
+if temp < 0: cumspclnt = 0
+
+cumsumbod += sparrvol[temp]
+if sparrloc[temp] = 0: cumsumvag += sparrvol[temp]
+if sparrloc[temp] = 3: cumsumass += sparrvol[temp]
 
 !{Full Body Clean}
 if cumspclnt = 1:
@@ -27,7 +29,7 @@ if cumspclnt = 1:
 	cumsumbod -= sparrvol[cumsptmp]
 	if sparrloc[cumsptmp] = 0: cumsumvag -= sparrvol[cumsptmp]
 	if sparrloc[cumsptmp] = 3: cumsumass -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Teeth Clean}
@@ -43,7 +45,7 @@ elseif cumspclnt = 2:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Internal Clean}
@@ -61,7 +63,7 @@ elseif cumspclnt = 3:
 	cumsumbod -= sparrvol[cumsptmp]
 	if sparrloc[cumsptmp] = 0: cumsumvag -= sparrvol[cumsptmp]
 	if sparrloc[cumsptmp] = 3: cumsumass -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{External Body Clean}
@@ -78,7 +80,7 @@ elseif cumspclnt = 4:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Hair Clean}
@@ -94,7 +96,7 @@ elseif cumspclnt = 5:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Clothes Clean}
@@ -110,7 +112,7 @@ elseif cumspclnt = 6:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Enima}
@@ -127,7 +129,7 @@ elseif cumspclnt = 7:
 	end
 	cumsumbod -= sparrvol[cumsptmp]
 	cumsumass -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Douche}
@@ -144,7 +146,7 @@ elseif cumspclnt = 8:
 	end
 	cumsumbod -= sparrvol[cumsptmp]
 	cumsumvag -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Handwashing}
@@ -160,7 +162,7 @@ elseif cumspclnt = 9:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Full External Clean}
@@ -177,7 +179,7 @@ elseif cumspclnt = 10:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Face Cleanup}
@@ -193,7 +195,7 @@ elseif cumspclnt = 11:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Face and Hair Cleanup}
@@ -209,7 +211,7 @@ elseif cumspclnt = 12:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Head clean}
@@ -225,12 +227,12 @@ elseif cumspclnt = 13:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Belly clean}
 elseif cumspclnt = 14:
-	if sparrloc[cumsptmp] = 14
+	if sparrloc[cumsptmp] = 14:
 		KILLVAR 'spafinloc',cumsptmp
 		KILLVAR 'sparrage',cumsptmp
 		KILLVAR 'sparrloc',cumsptmp
@@ -241,7 +243,7 @@ elseif cumspclnt = 14:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{ass and pussy external wipe}
@@ -258,7 +260,7 @@ elseif cumspclnt = 15:
 		KILLVAR 'sparrslc',cumsptmp
 	end
 	cumsumbod -= sparrvol[cumsptmp]
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 
 !{Full Clean}
@@ -274,7 +276,7 @@ elseif cumspclnt = 20:
 	cumsumbod = 0
 	cumsumvag = 0
 	cumsumass = 0
-	cumsptmp += 1
+	temp -= 1
 	jump 'cumsptmploop'
 else
 	cumsptmp = 0

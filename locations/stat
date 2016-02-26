@@ -1273,12 +1273,6 @@ pl '<b><<money>></b> rubles in your purse.'
 if karta > 0:pl '<b><<karta>></b> rubles in your bank account.'
 if stolmoney > 0:pl '<b><<stolmoney>></b> rubles in your table drawer.'
 
-if StoryLine > 0 and SchoolAtestat = 0:pl '<<$holyday>>'
-if birthday = day and birthmonth = month:pl '<b>Today is your birthday.</b>'
-!!if shame > 0:pl '<<$shame>>'
-
-pl '<b><<$manna>></b>'
-
 if fairycurse >= daystart: horny = 90
 
 if ETOmenu = 1:
@@ -1311,6 +1305,18 @@ else
 	gs 'indik', '1', son * 4, son
 	pl '<<$ind>> Sleep'
 end
+pl
+
+if  pogodaday = daystart: pl '<<$pogoda>>' & pl
+
+if opPRE = 0: pl '<<$mop>> and your hair is <<$hapri>>.' & pl
+
+if StoryLine > 0 and SchoolAtestat = 0:pl '<<$holyday>>'
+if birthday = day and birthmonth = month:pl '<b>Today is your birthday.</b>'
+
+!!if shame > 0:pl '<<$shame>>'
+pl '<b><<$manna>></b>'
+pl
 
 if horny >= 50:
 	if horny < 90 and tanga = 1:
@@ -1360,14 +1366,17 @@ if siga <= 0 and smoker >= 20:pl '<font color="red"><b>You have run out of cigar
 
 if smokeNeed > 0 and siga > 0 and smoker >= 20:
 	pl '<a href="exec:dynamic $smoker"><font color="red"><b>You want to smoke. You have <<siga>> cigarettes left.</b></font></a>'
+	pl
 elseif siga > 0 and smoker >= 20:
 	pl '<a href="exec:dynamic $smoker"><font color="blue"><b>You have <<siga>> cigarettes left.</b></font></a>'
+	pl
 end
 
 if siga > 0 and smoker < 20:
 	if smokeHour = hour and smokeday = day and smokeminut >= minut:
 	else
 		pl'<a href="exec:dynamic $smoker"><font color = blue><b>You have <<siga>> cigarettes.</b></font></a>'
+		pl
 	end
 end
 
@@ -1381,6 +1390,7 @@ elseif pirs_pain_ton > 2:
 	pl '<font color="red"><b>You have a sore tongue, it is very swollen and almost fills your mouth.</b></font>'
 end
 
+if pirs_pain_ton > 0: pl
 if nippain > 0:pl '<font color="red"><b><<$nippain>></b></font>'
 if painpub > 0:pl '<font color="red"><b><<$painpub>></b></font>'
 if opPRE = 0:pl '<<$mop>> and your hair is <<$hapri>>.'

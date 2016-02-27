@@ -1393,7 +1393,6 @@ end
 if pirs_pain_ton > 0: pl
 if nippain > 0:pl '<font color="red"><b><<$nippain>></b></font>'
 if painpub > 0:pl '<font color="red"><b><<$painpub>></b></font>'
-if opPRE = 0:pl '<<$mop>> and your hair is <<$hapri>>.'
 
 if sweat = 1:
 	pl '<font color="brown">You''re sweating.</font>'

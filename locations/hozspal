@@ -11,7 +11,7 @@ minut += 5
 gs 'stat'
 sexpartkno = 1
 $boy = 'Nicholas'
-$boy1 = 'Nicholas's Friend'
+$boy1 = 'Nicholas''s Friend'
 '<center><b>Master bedroom</b></center>'
 '<center><img src="images/img/centr/hozspaln.jpg"></center>'
 

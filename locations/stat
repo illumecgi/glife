@@ -1283,7 +1283,7 @@ else
 end
 pl
 
-if  pogodaday = daystart: pl '<<$pogoda>>' & pl
+if  weatherDay = daystart: pl '<<$weather>>' & pl
 
 if opPRE = 0: pl '<<$mop>> and your hair is <<$hapri>>.' & pl
 

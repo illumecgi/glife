@@ -17,7 +17,7 @@ $santehnikend3 = {
 	SUB += 1
 	facial += 1
 	spafinloc = 11
-gs 'cum_manage'
+	gs 'cum_manage'
 	if GrishaSex = 0:GrishaSex = 1 & guy += 1
 	if mop > 1:mop = 0
 	gs 'stat'
@@ -173,6 +173,10 @@ $santehnik = {
 
 	if husband = 0 or husbandrink = 10:dynamic $santehnik1 & exit
 	if husband > 0 and week < 6 and hour < 17 and hour > 7:dynamic $santehnik1 & exit
+
+	sexpartkno = 1
+	$boy = $husname
+	$boy1 = 'Joe the Plumber'
 
 	if husband > 0 and husbandrink ! 10:
 		cla

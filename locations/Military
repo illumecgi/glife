@@ -58,6 +58,7 @@ end
 if $ARGS[0] = 'san0':
 	cla
 	*clr
+	$boy = 'Military Patient'
 	'<center><img src="images/img/military/san0.jpg"></center>'
 	'During the examination, the patient shows you your erection and looks at you in anticipation of responses.'
 
@@ -73,6 +74,7 @@ end
 if $ARGS[0] = 'san1':
 	cla
 	*clr
+	$boy = 'Military Doctor'
 
 	'<center><img src="images/img/military/san1.jpg"></center>'
 	'While in the infirmary is unoccupied, the doctor begins to pester you.'
@@ -88,6 +90,8 @@ end
 
 if $ARGS[0] = 'pro0':
 	cla
+	$boy = 'Military Man'
+	$boy1 = 'Military Man 2'
 
 	'To suit you two guys and offer to help them in one game, play the role of a captive spy.'
 
@@ -140,6 +144,7 @@ if $ARGS[0] = 'pro1':
 end
 
 if $ARGS[0] = 'rape':
+	$boy = 'Rapist'
 	cla
 	*clr
 	rape += 1

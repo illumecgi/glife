@@ -185,7 +185,7 @@ if $ARGS[0] = '1':
 			act 'Leave':gt 'WorkHosp', 'start'
 		end
 
-		act 'Amuse':guy += 2 & xgt 'sexdvoe', 'var'
+		act 'Amuse':guy += 2 & $boy = 'Doctor' & $boy1 = 'Doctor 1' & xgt 'sexdvoe', 'var'
 	end
 end
 

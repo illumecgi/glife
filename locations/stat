@@ -1465,74 +1465,137 @@ $cumeater = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your stomach with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your stomach in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your stomach with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $cumeater2 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your pussy with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your pussy in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your pussy with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $cumeater3 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your buttocks with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your buttocks in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your buttocks with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $cumeater4 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your face with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your face in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your face with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $cumeater5 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your clothes with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your clothes in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your clothes with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 
 $cumeater6 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your anus with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your anus in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your anus with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $cumeater7 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your body with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your body in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your body with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $cumeater8 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You lick your fingers clean, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 100:
+		sparrvol[temp1arr] = 0
+		gs 'stat'
+		'You lick up the whole mouthful of sperm, feeling the tart taste as you eat it.'
+	else
+		sparrvol[temp1arr] = 0
+		gs 'stat'
+		'You lick your fingers clean, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $cumeater9 = {
 	spdirtyb = 1
 	fbreath = 0
 	vaf += 1
-	sparrvol[cumloc] -= 20
-	gs 'stat'
-	'You collect the sperm from your hair with your fingers and lick them, feeling the tart taste of semen.'
+	if sparrvol[temp1arr] > 150:
+		sparrvol[temp1arr] -= 100
+		gs 'stat'
+		'You collect a handful of sperm from your hair in your hand and lick it all up, feeling the tart taste of semen.'
+	else
+		sparrvol[temp1arr] -= 20
+		gs 'stat'
+		'You collect the sperm from your hair with your fingers and lick them, feeling the tart taste of semen.'
+	end
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
 }
 $clear_write = {
 	body_write = 0

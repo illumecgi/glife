@@ -1,16 +1,14 @@
 # lesbidomhouse
-gs'stat'
-cla
-*clr
+cls
 minut += 5
-temp = RAND(1,3)
 gs'stat'
+temp = RAND(0,2)
 
-if temp = 1:
+if temp = 0:
 	'You ring the doorbell and no one answers, you ring it again, still no response.'
 
 	act 'Escape':gt'street'
-elseif temp >= 2:
+elseif temp > 0:
 	'You ring the doorbell several times. Finally the door opens.'
 	if lesbiQW > 1:gt'lesbidomhouse','ev1'
 

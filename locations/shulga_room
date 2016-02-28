@@ -464,7 +464,8 @@ $gang_sex_room_ev1 = {
 											cls
 											minut += 10
 											alko += 2
-											cumlip = 0
+											cumspclnt = 2
+											gs 'cum_cleanup'
 											fbreath = 0
 											gs'stat'
 											'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/sex/1_11.jpg"></center>'
@@ -700,7 +701,8 @@ $shulga_beer = {
 		cls
 		minut += 5 
 		alko += RAND(1,2)
-		cumlip = 0
+		cumspclnt = 2
+		gs 'cum_cleanup'
 		fbreath = 0
 		gs'stat'
 		'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/drunk_ev/beer'+rand(1,8)+'.jpg"></center>'

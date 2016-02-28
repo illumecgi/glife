@@ -1,6 +1,6 @@
 # cum_cleanup
 
-temp = 0
+temp = arrsize('sparrvol')
 cumsumbod = 0
 cumsumvag = 0
 cumsumass = 0

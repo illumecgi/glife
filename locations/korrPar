@@ -172,7 +172,8 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			elseif energy >= 20 and energy < 30:
 				if water < 20:
 					water += 20
-					cumlip = 0
+					cumspclnt = 2
+					gs 'cum_cleanup'
 					fbreath = 0
 				end
 				fat += 3
@@ -181,7 +182,8 @@ if hour >= 16 and hour <= 20 and indorf = 0:
 			elseif energy < 20:
 				if water < 20:
 					water += 20
-					cumlip = 0
+					cumspclnt = 2
+					gs 'cum_cleanup'
 					fbreath = 0
 				end
 				energy += 20

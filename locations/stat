@@ -1563,7 +1563,7 @@ end
 $temp[1] = {
 	if sparridt[temp1arr] = 1:
 		temp2arr = temp1arr + 1
-		temp3arr = arrpos(#temp2arr,'sparrloc',i)
+		temp3arr = arrpos(temp2arr,'sparrloc',i)
 		if temp3arr > 0 and sparrvol[temp3arr] > 0 and sparrloc[temp3arr] = i and $sparrnam[temp3arr] ! $sparrnam[temp1arr]:
 			$cumtemp[1] = 'Multiple men'
 		else

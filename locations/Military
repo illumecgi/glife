@@ -34,13 +34,14 @@ if $ARGS[0] = 'start':
 		act 'Finish':gt 'Military', 'start'
 	end
 
-	act 'There is a field kitchen':
+	act 'Get some food and drink from the field kitchen':
 		minut += 30
 		health += 10
 		manna += 20
 		energy += 20
 		water += 20
-		cumlip = 0
+		cumspclnt = 2
+		gs 'cum_cleanup'
 		fbreath = 0
 		gs 'stat'
 	end

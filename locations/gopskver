@@ -140,7 +140,8 @@ if kotovLoveQW > 0:
 			cls
 			minut += 15
 			alko += 1
-			cumlip = 0
+			cumspclnt = 2
+			gs 'cum_cleanup'
 			fbreath = 0
 			fat += 2
 			salo += 1
@@ -262,7 +263,8 @@ else
 					cls
 					minut += 15
 					alko += 1
-					cumlip = 0
+					cumspclnt = 2
+					gs 'cum_cleanup'
 					fbreath = 0
 					fat += 2
 					salo += 1
@@ -283,7 +285,8 @@ else
 						cls
 						minut += 15
 						alko += 1
-						cumlip = 0
+						cumspclnt = 2
+						gs 'cum_cleanup'
 						fbreath = 0
 						fat += 2
 						salo += 1

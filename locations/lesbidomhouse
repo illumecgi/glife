@@ -64,7 +64,8 @@ elseif temp >= 2:
 					minut += 35
 					horny += 20
 					alko += 6
-					cumlip = 0
+					cumspclnt = 2
+					gs 'cum_cleanup'
 					fbreath = 0
 					gs'stat'
 						

@@ -392,7 +392,8 @@ $pranik = {
 		manna += 100
 		energy += 20
 		water += 20
-		cumlip = 0
+		cumspclnt = 2
+		gs 'cum_cleanup'
 		fbreath = 0
 		fat += 50
 		frost = 0
@@ -421,7 +422,8 @@ $food = {
 	frost = 0
 	minut += 30
 	health += 10
-	cumlip = 0
+	cumspclnt = 2
+	gs 'cum_cleanup'
 	fbreath = 0
 	'<center><img src="images/pics/food.jpg"></center>'
 
@@ -467,12 +469,14 @@ $snack = {
 	end
 
 	if water >= 20:
-		cumlip = 0
+		cumspclnt = 2
+		gs 'cum_cleanup'
 		fbreath = 0
 		'The coffee doesn''t affect your thirst.'
 	elseif water < 20:
 		water += 20
-		cumlip = 0
+		cumspclnt = 2
+		gs 'cum_cleanup'
 		fbreath = 0
 		'You aren''t thirsty, so you don''t have any coffee.'
 	end
@@ -506,7 +510,8 @@ $driwater = {
 			'You don''t need any more water.'
 		else
 			water += 20
-			cumlip = 0
+			cumspclnt = 2
+			gs 'cum_cleanup'
 			fbreath = 0
 			'You gladly drink a glass of water.'
 		end

@@ -897,10 +897,11 @@ if kid > 0:
 	i = 1
 	:LoopKidAgeCounter
 	if i <= kid:
-		if year > yearkid[i] and markyear[i] ! year:
-			if monthkid[i] = month and daykid[i] = day:
-				markyear[i] = year
+		if monthkid[i] = month and daykid[i] = day:
+			if daystartkid[i] ! daystart:
+				daystartkid[i] = daystart
 				kidage[i] += 1
+				msg'It is <<$kidname[i]>>s birthday today.'
 			end
 		end
 		i += 1

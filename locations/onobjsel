@@ -428,6 +428,17 @@ $din_exhibiHideNewCloth = {
 	*pl 'To change to your bimbo look use your wardrobe'
 }
 
+$din_cheat_statusbars = {
+	if cheatStatusBars = 0:
+		cheatStatusBars = 1
+		dynamic $din_cheat_menu_permanent
+		exit
+	elseif cheatStatusBars = 1:
+		cheatStatusBars = 0
+		dynamic $din_cheat_menu_permanent
+	end
+}
+
 $din_cheat_work = {
 	if cheatWork = 0:
 		cheatWork = 1
@@ -569,6 +580,8 @@ $din_cheat_Slutshot = {
 $din_cheat_menu_permanent = {
 	gs'stat'
 	clr
+	if cheatStatusBars = 0:$cheatStatusBars = 'OFF'
+	if cheatStatusBars = 1:$cheatStatusBars = '<b>ON</b>'
 	if cheatWork = 0:$cheatWork = 'OFF'
 	if cheatWork = 1:$cheatWork = '<b>ON</b>'
 	if cheatHapri = 0:$cheatHapri = 'OFF'
@@ -592,6 +605,7 @@ $din_cheat_menu_permanent = {
 
 	pl'<center><a href="exec:dynamic $objcheat_menu"><b>Cheat menu</b></a></center>'
 	pl''
+	pl'<a href="exec:dynamic $din_cheat_statusbars">Switch to smaller status bars</a>: <<$cheatStatusBars>>'
 	pl'<a href="exec:dynamic $din_cheat_work">Disable the requirement of labor</a>: <<$cheatWork>>'
 	pl'<a href="exec:dynamic $din_cheat_hapri">Always combed</a>: <<$cheatHapri>>'
 	pl'<a href="exec:dynamic $din_cheat_klisma">Always do an enema</a>: <<$cheatKlisma>>'

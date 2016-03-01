@@ -1273,6 +1273,7 @@ pl
 pl '<b><<money>></b> rubles in your purse.'
 if karta > 0:pl '<b><<karta>></b> rubles in your bank account.'
 if stolmoney > 0:pl '<b><<stolmoney>></b> rubles in your table drawer.'
+pl
 
 if fairycurse >= daystart: horny = 90
 
@@ -1308,14 +1309,14 @@ else
 end
 pl
 
-if  pogodaday = daystart: pl '<<$pogoda>>' & pl
+if  weatherDay = daystart: pl '<<$weather>>' & pl
 
 if opPRE = 0: pl '<<$mop>> and your hair is <<$hapri>>.' & pl
 
-if StoryLine > 0 and SchoolAtestat = 0:pl '<<$holyday>>'
-if birthday = day and birthmonth = month:pl '<b>Today is your birthday.</b>'
+if StoryLine > 0 and SchoolAtestat = 0 and $holyday ! '': pl '<<$holyday>>' & pl
+if birthday = day and birthmonth = month: pl '<b>Today is your birthday.</b>' & pl
 
-!!if shame > 0:pl '<<$shame>>'
+!!if shame > 0:pl '<<$shame>>' & pl
 pl '<b><<$manna>></b>'
 pl
 
@@ -1363,7 +1364,7 @@ elseif CondomToggle = 0 and Sprezik > 0:
 end
 
 if $mud ! '':pl '<font color="green"><b><<$mud>></b></font>.'
-if siga <= 0 and smoker >= 20:pl '<font color="red"><b>You have run out of cigarettes.</b></font>' & pl
+if siga <= 0 and smoker >= 20:pl '<font color="red"><b>You have run out of cigarettes.</b></font>.' & pl
 
 if smokeNeed > 0 and siga > 0 and smoker >= 20:
 	pl '<a href="exec:dynamic $smoker"><font color="red"><b>You want to smoke. You have <<siga>> cigarettes left.</b></font></a>'
@@ -1406,7 +1407,7 @@ elseif sweat > 3:
 end
 
 !! MJ: Add a line before the next message.
-if sweat = 0: pl
+if sweat > 0: pl
 
 if cyccustom = 0:
 	temp[1] = daystart-daylastperiod
@@ -1429,7 +1430,7 @@ if preg = 1:
 		pl'<font color = black>Do you have a barely perceptible <a href="exec:view''images/pregnant/1.jpg''"> tummy</a>, which, however, invisible under clothing</font>'
 	end
 !! MJ: Add a line before the next message.
-	if knowpreg = 1:pl
+	if knowpreg = 1: pl
 end
 
 if mesec > 0:

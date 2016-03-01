@@ -73,7 +73,7 @@ $din_vokzalg_kabinet = {
 	cls
 	gs 'stat'
 	'You go to the office of the station manager. Next to the door hangs an ad:'
-	'"Cleaner wanted! 2 hours of work at any time, the salary of 50 rubles a day."'
+	'"Cleaner wanted! 2 hours of work at any time, the salary of 250 rubles a day."'
 
 	act 'Leave':minut += 1 & gt 'vokzalGin'
 

@@ -1004,7 +1004,7 @@ if $ARGS[0] = 'manager':
 
 		act 'I don''t think I''m ready':gt 'pornstudio', 'start'
 	elseif film > 0:
-		if daystart > pffilmday and pfilm = 0:
+		if daystart > next_film_day and pfilm = 0:
 			'Come on <<$pfname>>. Let''s see what I can offer for you.'
 			frand = rand(1, 6)
 			if frand = 1:'Jerk a guy, until he cums on your chest. 2000.'
@@ -1015,7 +1015,7 @@ if $ARGS[0] = 'manager':
 			if frand = 6:'Threesome with dp, double facial. 9000.'
 
 			act 'I''ll wait for something else':
-				pffilmday = daystart + 1
+				next_film_day = daystart + 1
 				gt 'pornstudio', 'start'
 			end
 
@@ -1028,9 +1028,9 @@ if $ARGS[0] = 'manager':
 				act 'Leave':gt 'pornstudio', 'start'
 			end
 		else
-			if pffilmday - daystart > 0:
-				'Sorry <<$pfname>>, there is no work for you now. Come back in <<pffilmday-daystart>> days.'
-			elseif pffilmday - daystart = 0:
+			if next_film_day - daystart > 0:
+				'Sorry <<$pfname>>, there is no work for you now. Come back in <<next_film_day-daystart>> days.'
+			elseif next_film_day - daystart = 0:
 				'Sorry <<$pfname>>, there is no work for you now. Come back tomorrow.'
 			end
             
@@ -1071,14 +1071,16 @@ if $ARGS[0] = 'postvideo':
 
 	pfilm = 0
 
-	if film < 10:filmkoef = 2
-	if film >= 10 and film < 20:filmkoef = 5
-	if film >= 20:filmkoef = 10
-
-	pffilmday = daystart+(film + filmkoef)
+	! if film < 10:filmkoef = 2
+	! if film >= 10 and film < 20:filmkoef = 5
+	! if film >= 20:filmkoef = 10
+	! next_film_day = daystart+(film + filmkoef)
+	
+	next_film_day = daystart + rand(10,30)
+	
 	pfilmday = 0
 
-	'I think we will have a job for you in no less than <<pffilmday-daystart>> day(s).'
+	'I think we will have a job for you in no less than <<next_film_day-daystart>> day(s).'
 
 	act 'Leave':gt 'pornstudio', 'start'
 end

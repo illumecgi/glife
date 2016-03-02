@@ -1295,8 +1295,13 @@ else
 	gs 'indik', '1', willpower * 100 / willpowermax, willpower
 	pl '<<$ind>> Willpower'
 
-	gs 'indik', '1', manna * 100 / mannamax, manna
-	pl '<<$ind>> Mood'
+	if mannamax <=0:
+		gs 'indik', '1', 0, manna
+		pl '<<$ind>> Mood'
+	else
+		gs 'indik', '1', manna * 100 / mannamax, manna
+		pl '<<$ind>> Mood'
+	end
 
 	gs 'indik', '1', energy * 4, energy
 	pl '<<$ind>> Hunger'

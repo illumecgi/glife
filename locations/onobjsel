@@ -35,7 +35,7 @@ $objdescrip = {
 	pl '<a href="exec:dynamic $objbody"><<grudi>> - <<talia>> - <<bedra>> </a>, <a href="exec:dynamic $din_show_tits">you have <<$titsize>> breasts</a>, the difference between your hips and your waist is <<bedra-talia>> cm'
 	pl '<<$vnesh>>'
 	if avatar_hair = 1:
-		pl'У вас <<$av_hair>>.'
+		pl'Your hair: <<$av_hair>>.'
 	else
 		pl'<<$hair>>'
 	end
@@ -154,7 +154,7 @@ $objskills = {
 		if Suspeh >= 60 and Suspeh < 70:pl 'You are the typical average student. You''re good in the fields you like, but can''t be bothered with the rest.'
 		if Suspeh >= 50 and Suspeh < 60:pl 'You''re not very good in school, you wish you could be somewhere else and your grades show it.'
 		if Suspeh >= 40 and Suspeh < 50:pl 'You are not cut out for school, you skip out most of the time. You wonder how you''re going to manage to get passing grades.'
-		if Suspeh < 40:pl 'You are th class nitwit. You''re still not sure how you got this far in the first place.'
+		if Suspeh < 40:pl 'You are the class nitwit. You''re still not sure how you got this far in the first place.'
 
 		if schoolprogul > 1:pl 'Absenteeism in school - <<schoolprogul>> days'
 	end
@@ -393,15 +393,15 @@ $reputation = {
 		else
 			pl'Your mother thinks that you are a virgin.'
 		end
-		if evgenQW = 4 and brotherSex = 1:
+		if evgenQW >= 4 and brotherSex >= 1:
 			pl'Your brother thinks you are a total whore.'
-		elseif brotherSex = 1:
+		elseif brotherSex >= 1:
 			pl'Your brother thinks you are a slut.'
-		elseif evgenQW = 3:
+		elseif evgenQW >= 3:
 			pl'Your brother thinks you are a slut.'
 		elseif brotherknowslut = 1:
 			pl'Your brother saw semen on your body and thinks you fuck around.'
-		elseif brotherknowslut = 2:
+		elseif brotherknowslut >= 2:
 			pl'Your brother saw you in the park screwing Gopnik.'
 		else
 			pl'Your brother has a good opinion of you.'
@@ -580,8 +580,6 @@ $din_cheat_Slutshot = {
 $din_cheat_menu_permanent = {
 	gs'stat'
 	clr
-	if cheatStatusBars = 0:$cheatStatusBars = 'OFF'
-	if cheatStatusBars = 1:$cheatStatusBars = '<b>ON</b>'
 	if cheatWork = 0:$cheatWork = 'OFF'
 	if cheatWork = 1:$cheatWork = '<b>ON</b>'
 	if cheatHapri = 0:$cheatHapri = 'OFF'
@@ -1114,6 +1112,9 @@ $objcheat_menu = {
 	nl
 	pl '<a href="exec:dynamic $din_cheat_dynamic">Dynamic Input Command</a>'
 	nl
+	if cheatStatusBars = 0:$cheatStatusBars = 'OFF'
+	if cheatStatusBars = 1:$cheatStatusBars = '<b>ON</b>'
+	pl
    	pl'<a href="exec:gt''gorodok''">Teleport to Pavlovsky</a>'
    	pl'<a href="exec:gt''street''">Teleport to City</a>'
    	pl'<a href="exec:gt''gadukino''">Teleport to Gadukino</a>'
@@ -1567,11 +1568,13 @@ $menu_lookon[2] = 'Clothing:$menu_clothes'
 $menu_lookon[3] = 'Tattoos:$menu_tattoos'
 $menu_lookon[4] = 'Piercing:$menu_pirs'
 
-$menu_other[0] = 'Refresh:$menu_obnovit'
-$menu_other[1] = 'Notebook:$menu_bloknot'
-$menu_other[2] = 'Emergency exit:$menu_avariya'
-$menu_other[3] = 'The old menu:$menu_addoldmenu'
-$menu_other[4] = 'Cheat menu:$menu_cheat'
+$menu_view[0] = 'The old menu:$menu_addoldmenu'
+$menu_view[1] = 'Cheat menu:$menu_cheat'
+$menu_view[2] = 'Refresh:$menu_obnovit'
+
+killvar 'menu_other'
+$menu_other[0] = 'Notebook:$menu_bloknot'
+$menu_other[1] = 'Emergency exit:$menu_avariya'
 if disable_autosave = 1:
 	$menu_other[5] = 'Enable autosave:$menu_autosave'
 else
@@ -1607,6 +1610,7 @@ if $selobj = '<img src="images/pic/icon/look.png">':menu '$menu_lookon'
 if $selobj = '<img src="images/pic/icon/Proch.png">':menu '$menu_other'
 if $selobj = '<img src="images/pic/icon/Phone.png">':gs 'din_bad' & dynamic $Phone_menu
 if $selobj = '<img src="images/pic/icon/Purse.png">':dynamic $d_bag
+if $selobj = '<img src="images/pic/icon/menu.png">':menu '$menu_view'
 !The new menu: end
 
 if $selobj = 'Player':
@@ -1616,9 +1620,7 @@ if $selobj = 'Player':
 	pl'Growth <<rost>> see, weight 100 kg.'
 end
 
-if $selobj = '<img src="images/pic/icon/menu.png">':
-	clr
-	gs 'stat'
+
 !'
 	gs'Menu.Create','mainMenu'
 	gs'Menu.Add','mainMenu','Status Bar','','MenuMainLoc','0'

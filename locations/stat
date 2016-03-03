@@ -1295,7 +1295,11 @@ else
 	gs 'indik', '1', willpower * 100 / willpowermax, willpower
 	pl '<<$ind>> Willpower'
 
-	gs 'indik', '1', manna * 100 / mannamax, manna
+	if mannamax <=0:
+		gs 'indik', '1', 0, manna
+	else
+		gs 'indik', '1', manna * 100 / mannamax, manna
+	end
 	pl '<<$ind>> Mood'
 
 	gs 'indik', '1', energy * 4, energy
@@ -1486,7 +1490,7 @@ $cumeater = {
 		gs 'stat'
 		'You collect the sperm from your stomach with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $cumeater2 = {
 	spdirtyb = 1
@@ -1501,7 +1505,7 @@ $cumeater2 = {
 		gs 'stat'
 		'You collect the sperm from your pussy with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $cumeater3 = {
 	spdirtyb = 1
@@ -1516,7 +1520,7 @@ $cumeater3 = {
 		gs 'stat'
 		'You collect the sperm from your buttocks with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $cumeater4 = {
 	spdirtyb = 1
@@ -1531,7 +1535,7 @@ $cumeater4 = {
 		gs 'stat'
 		'You collect the sperm from your face with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $cumeater5 = {
 	spdirtyb = 1
@@ -1546,7 +1550,7 @@ $cumeater5 = {
 		gs 'stat'
 		'You collect the sperm from your clothes with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 
 $cumeater6 = {
@@ -1562,7 +1566,7 @@ $cumeater6 = {
 		gs 'stat'
 		'You collect the sperm from your anus with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $cumeater7 = {
 	spdirtyb = 1
@@ -1577,7 +1581,7 @@ $cumeater7 = {
 		gs 'stat'
 		'You collect the sperm from your body with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $cumeater8 = {
 	spdirtyb = 1
@@ -1592,7 +1596,7 @@ $cumeater8 = {
 		gs 'stat'
 		'You lick your fingers clean, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $cumeater9 = {
 	spdirtyb = 1
@@ -1607,7 +1611,7 @@ $cumeater9 = {
 		gs 'stat'
 		'You collect the sperm from your hair with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr]
+	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
 }
 $clear_write = {
 	body_write = 0

@@ -19,7 +19,7 @@ if miraingop = 0 and alko < 8:
 
 		act 'Catching your breath':gt $curloc
 	end
-elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
+elseif miraingop = 0 and alko >= 8 and mitkadaybuh = daystart:
 		cls
 	if mitkadaybuh ! daystart:
 		mitkadaybuh = daystart
@@ -28,31 +28,29 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 		if mirasextimes >= 13:'You got drunk in the trash, leg practically no longer hold you. One of the boys, noticing your condition, demanding offers perepihnutsya.'
 		
 		if mitkasextimes < 3:
-		act 'Slurred mumble':
-			cls
-			minut += 15
-			if mitkasex = 0:mitkasex = 1 & guy += 1
-			$boy = 'Mitka'
-			silavag = 0
-			dick = 18
-			pose = 0
-			mitkasextimes += 1
-			gs 'stat'
+			act 'Slurred mumble':
+				cls
+				minut += 15
+				if mitkasex = 0:mitkasex = 1 & guy += 1
+				$boy = 'Mitka'
+				silavag = 0
+				dick = 18
+				pose = 0
+				mitkasextimes += 1
+				gs 'stat'
 
-			'<center><img src="images/qwest/gadukino/mitka.jpg"></center>'
-			'Mitka took you to his house and led to the veranda, There he laid you on the couch and began unceremoniously undressed.'
+				'<center><img src="images/qwest/gadukino/mitka.jpg"></center>'
+				'Mitka took you to his house and led to the veranda, There he laid you on the couch and began unceremoniously undressed.'
 
-			dynamic $sexstart
-			dynamic $sexstart2
-			dynamic $sexcum
+				dynamic $sexstart
+				dynamic $sexstart2
+				dynamic $sexcum
 
-			'Mitka, I lay down on his side and lit "Fucking!"'
+				'Mitka, I lay down on his side and lit "Fucking!"'
 
-			act 'Leave':gt 'Gaddvor'
-		end
-		end
-		
-		if mitkasextimes >= 3 and mitkasextimes < 10:
+				act 'Leave':gt 'Gaddvor'
+			end
+		elseif mitkasextimes < 10:
 			temp = RAND(0,5)
 			if temp < 3:
 				act 'Slurred mumble':
@@ -81,8 +79,7 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 
 					act 'Escape':gt'Gaddvor'
 				end
-			end
-			if temp >= 3 and temp < 5:
+			elseif temp < 5:
 				act 'Suck':
 					cls
 					$nameV = 'Mitya'
@@ -97,13 +94,13 @@ elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 					
 					gs'oral','start'
 					
-					if temp < 3:
+					if RAND(0,2) = 0:
 						act 'Swallow':
 							cls
 							minut += 10
 							horny += 10
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							swallow += 1
 							mitkasextimes += 1
 							gs'stat'
@@ -113,13 +110,13 @@ gs 'cum_manage'
 							
 							act 'Escape':gt'Gaddvor'
 						end
-					elseif temp >= 3 and temp < 5:
+					elseif RAND(0,1) = 0:
 						act 'Swallow':
 							cls
 							minut += 10
 							horny += 10
 							spafinloc = 11
-gs 'cum_manage'
+							gs 'cum_manage'
 							mitkasextimes += 1
 							gs'stat'
 							
@@ -128,13 +125,13 @@ gs 'cum_manage'
 							
 							act 'Escape':gt'Gaddvor'
 						end
-					elseif temp = 5:
+					else
 						act 'Swallow':
 							cls
 							minut += 10
 							horny += 10
 							spafinloc = 11
-gs 'cum_manage'
+							gs 'cum_manage'
 							mitkasextimes += 1
 							sub += 1
 							gs'stat'
@@ -146,8 +143,7 @@ gs 'cum_manage'
 						end
 					end
 				end
-			end
-			if temp = 5:
+			else
 				act 'Slurred mumble':
 					cls
 					minut += 15
@@ -156,7 +152,7 @@ gs 'cum_manage'
 					dick = 18
 					pose = 0
 					spafinloc = 3
-gs 'cum_manage'
+					gs 'cum_manage'
 					anus += 1
 					if anus < 10:sub += 1
 					mitkasextimes += 1
@@ -174,9 +170,7 @@ gs 'cum_manage'
 					act 'Escape':gt'Gaddvor'
 				end
 			end
-		end
-		
-		if mitkasextimes = 10:
+		elseif mitkasextimes = 10:
 			act 'Slurred mumble':
 				cls
 				minut += 5
@@ -213,8 +207,7 @@ gs 'cum_manage'
 						
 						act 'Escape':gt'Gaddvor'
 					end
-				end
-				if sub <= 0:
+				else
 					act 'Protest':
 						cls
 						minut += 10
@@ -247,9 +240,7 @@ gs 'cum_manage'
 					end
 				end		
 			end	
-		end	
-		
-		if mitkasextimes = 11:
+		elseif mitkasextimes = 11:
 			temp = RAND(0,5)
 			if temp < 5:
 				act 'Bend':
@@ -283,20 +274,19 @@ gs 'cum_manage'
 					bj += 1
 					minut += 10
 					horny += 10
-					temp = RAND(0,5)
 					gs'stat'
 
 					'<center><img src="images/qwest/gadukino/MitkaBjPublic.jpg"></center>'
 					
 					gs'oral','start'
-					
-					if temp < 5:
+
+					if RAND(0,5) < 5:
 						act 'Swallow':
 							cls
 							minut += 10
 							horny += 10
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							swallow += 1
 							sub += 1
 							gs'stat'
@@ -313,7 +303,7 @@ gs 'cum_manage'
 							minut += 10
 							horny += 30
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							swallow += 1
 							mitkasextimes += 1
 							sub += 2
@@ -327,11 +317,8 @@ gs 'cum_manage'
 					end
 				end
 			end
-		end
-		
-		if mitkasextimes = 12:
-			temp = RAND(0,5)
-			if temp < 4:
+		elseif mitkasextimes = 12:
+			if RAND(0,5) < 4:
 				act 'Bend':
 					cls
 					minut += 15
@@ -362,20 +349,19 @@ gs 'cum_manage'
 					$nameV = 'Mitya'
 					minut += 10
 					horny += 10
-					temp = RAND(0,5)
 					gs'stat'
 
 					'<center><img src="images/qwest/gadukino/MitkaBjPublic.jpg"></center>'
 					
 					gs'oral','start'
 					
-					if temp < 4:
+					if RAND(0,5) < 4:
 						act 'Swallow':
 							cls
 							minut += 10
 							horny += 10
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							swallow += 1
 							sub += 1
 							gs'stat'
@@ -392,7 +378,7 @@ gs 'cum_manage'
 							horny += 10
 							swallow += 1
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							sub += 1
 							gs'stat'
 							
@@ -422,9 +408,7 @@ gs 'cum_manage'
 					end
 				end
 			end
-		end
-		
-		if mitkasextimes = 13:
+		elseif mitkasextimes = 13:
 			temp = RAND(0,5)
 			if temp < 3:
 				act 'Bend':
@@ -468,7 +452,7 @@ gs 'cum_manage'
 						minut += 10
 						horny += 10
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						swallow += 1
 						sub += 1
 						gs'stat'
@@ -528,7 +512,7 @@ gs 'cum_manage'
 							horny += 10
 							minut += 10
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							dick = 16
 							gs'stat'
 							
@@ -558,7 +542,7 @@ gs 'cum_manage'
 									minut += 5
 									dick = 15
 									spafinloc = 12
-gs 'cum_manage'
+									gs 'cum_manage'
 									bj += 1
 									gs'stat'
 									
@@ -573,9 +557,7 @@ gs 'cum_manage'
 					end
 				end
 			end	
-		end
-		
-		if mitkasextimes = 14:
+		elseif mitkasextimes = 14:
 			temp = RAND(0,5)
 			if temp < 2:
 				act 'Suck':
@@ -596,7 +578,7 @@ gs 'cum_manage'
 						swallow += 1
 						horny += 10
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						sub += 1
 						gs'stat'
 						
@@ -677,7 +659,7 @@ gs 'cum_manage'
 							horny += 10
 							minut += 10
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							dick = 16
 							gs'stat'
 							
@@ -706,7 +688,7 @@ gs 'cum_manage'
 									minut += 5
 									dick = 15
 									spafinloc = 12
-gs 'cum_manage'
+									gs 'cum_manage'
 									bj += 1
 									gs'stat'
 									
@@ -723,7 +705,6 @@ gs 'cum_manage'
 			elseif temp = 5:
 				act 'Slurred mumble':
 					cls
-					temp = RAND(0,5)
 					minut += 15
 					$boy = 'Kolyamba'
 					silavag = 0
@@ -736,7 +717,7 @@ gs 'cum_manage'
 					'<center><img src="images/qwest/gadukino/MitkaGuys2.jpg"></center>'
 					'Vasya Kolyamboy took you to Vasyanya in the summer kitchen, where he quickly began to take off your clothes...'
 					
-					if temp < 4:
+					if RAND(0,5) < 4:
 						act 'Moan':
 							cls
 							$boy = 'Vasya'
@@ -758,7 +739,7 @@ gs 'cum_manage'
 								minut += 5
 								dick = 16
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								bj += 1
 								gs'stat'
 								
@@ -775,7 +756,7 @@ gs 'cum_manage'
 							horny += 10
 							minut += 10
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							anus += 1
 							dick = 16
 							gs'stat'
@@ -792,7 +773,7 @@ gs 'cum_manage'
 								dick = 15
 								bj += 1
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								gs'stat'
 								
 								'<center><img src="images/qwest/gadukino/MitkaGuys2.jpg"></center>'	
@@ -805,9 +786,7 @@ gs 'cum_manage'
 					end				
 				end
 			end		
-		end
-		
-		if mitkasextimes >= 15:
+		elseif mitkasextimes >= 15:
 			temp = RAND(0,5)
 			if temp = 0:
 				act 'Suck':
@@ -828,7 +807,7 @@ gs 'cum_manage'
 						horny += 10
 						swallow += 1
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						sub += 1
 						gs'stat'
 						
@@ -909,7 +888,7 @@ gs 'cum_manage'
 							horny += 10
 							minut += 10
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							dick = 16
 							gs'stat'
 							
@@ -939,7 +918,7 @@ gs 'cum_manage'
 									minut += 5
 									dick = 15
 									spafinloc = 12
-gs 'cum_manage'
+									gs 'cum_manage'
 									gs'stat'
 									
 									'<center><img src="images/qwest/gadukino/MitkaGroupCum2.jpg"></center>'	
@@ -991,7 +970,7 @@ gs 'cum_manage'
 								minut += 5
 								dick = 16
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								gs'stat'
 								
 								'<center><img src="images/qwest/gadukino/MitkaGuys2.jpg"></center>'	
@@ -1007,7 +986,7 @@ gs 'cum_manage'
 							horny += 10
 							minut += 10
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							anus += 1
 							dick = 16
 							gs'stat'
@@ -1024,7 +1003,7 @@ gs 'cum_manage'
 								dick = 15
 								bj += 1
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								gs'stat'
 								
 								'<center><img src="images/qwest/gadukino/MitkaGuys2.jpg"></center>'	
@@ -1036,7 +1015,7 @@ gs 'cum_manage'
 						end
 					end				
 				end
-			elseif temp = 5:
+			else
 				act 'Stand in the position':
 					cls
 					minut += 15
@@ -1050,7 +1029,7 @@ gs 'cum_manage'
 					'<center><img src="images/qwest/gadukino/MitkaPublicGuys2.jpg"></center>'
 					'You climb up on the bench, legs and obediently get up on all fours. The boys immediately, drunkenly talking among themselves about what-that their affairs, you begin to undress and get a job at your hole...'
 					
-					if temp < 4:
+					if RAND(0,5) < 4:
 						act 'Moan':
 							cls
 							$boy = 'Vasya'
@@ -1073,7 +1052,7 @@ gs 'cum_manage'
 								bj += 1
 								dick = 16
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								gs'stat'
 								
 								'<center><img src="images/qwest/gadukino/MitkaPublicGuys2.jpg"></center>'	
@@ -1089,7 +1068,7 @@ gs 'cum_manage'
 							horny += 10
 							minut += 10
 							spafinloc = 3
-gs 'cum_manage'
+							gs 'cum_manage'
 							anus += 1
 							dick = 16
 							gs'stat'
@@ -1106,7 +1085,7 @@ gs 'cum_manage'
 								dick = 15
 								bj += 1
 								spafinloc = 12
-gs 'cum_manage'
+								gs 'cum_manage'
 								gs'stat'
 								
 								'<center><img src="images/qwest/gadukino/MitkaPublicGuys2.jpg"></center>'	
@@ -1172,21 +1151,20 @@ if miraingop = 1 and miragopQW > 0:
 
 				act 'Escape':miraingop = 0 & gt'Gaddvor'
 			end
-		end
-		if temp >= 3 and temp < 5:
+		elseif temp < 5:
 			act 'Suck':
 				cls
 				$nameV = 'Mitya'
 				minut += 10
 				horny += 10
 				bj += 1
-				temp = RAND(0,5)
 				gs'stat'
 
 				'<center><img src="images/qwest/gadukino/MitkaBj.jpg"></center>'
 				'Mitya, last wink done Not noticing the kind of world, I drive you to your home, where demanded, I began to put pressure on your shoulders, kneeling...'
 				
 				gs'oral','start'
+				temp = RAND(0,5)
 				
 				if temp < 3:
 					act 'Swallow':
@@ -1195,7 +1173,7 @@ if miraingop = 1 and miragopQW > 0:
 						horny += 10
 						swallow += 1
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						gs'stat'
 						
 						'<center><img src="images/qwest/gadukino/MitkaBjCum.jpg"></center>'
@@ -1203,13 +1181,13 @@ gs 'cum_manage'
 						
 						act 'Escape':miraingop = 0 & gt'Gaddvor'
 					end
-				elseif temp >= 3 and temp < 5:
+				elseif temp < 5:
 					act 'Swallow':
 						cls
 						minut += 10
 						horny += 10
 						spafinloc = 11
-gs 'cum_manage'
+						gs 'cum_manage'
 						gs'stat'
 						
 						'<center><img src="images/qwest/gadukino/MitkaBjCum1.jpg"></center>'
@@ -1217,13 +1195,13 @@ gs 'cum_manage'
 						
 						act 'Escape':miraingop = 0 & gt'Gaddvor'
 					end
-				elseif temp = 5:
+				else
 					act 'Swallow':
 						cls
 						minut += 10
 						horny += 10
 						spafinloc = 11
-gs 'cum_manage'
+						gs 'cum_manage'
 						sub += 1
 						gs'stat'
 						
@@ -1234,8 +1212,7 @@ gs 'cum_manage'
 					end
 				end
 			end
-		end
-		if temp = 5:
+		else
 			act 'Slurred mumble':
 				cls
 				minut += 15
@@ -1244,7 +1221,7 @@ gs 'cum_manage'
 				dick = 18
 				pose = 0
 				spafinloc = 3
-gs 'cum_manage'
+				gs 'cum_manage'
 				anus += 1
 				if anus < 10:sub += 1
 				gs'stat'
@@ -1276,7 +1253,7 @@ gs 'cum_manage'
 				minut += 10
 				gs 'stat'
 				'<center><img src="images/qwest/gadukino/Mirawish1_2.jpg"></center>'
-				'Drunk naked Miroslav was lying on a wooden table, leaning against a fence, and Mitya was measured nailed in her his cock. Each time you push, sickly sickly, softly moaned Peace, and then udaras the top of the fence, and hysterically boards creaked. Peering, you get the idea, what the World has kept its promise, - a member of the Mitki to the eggs included in her ass, which sometimes heard strange squelch, NAC which, however, no one, except you, didn`t pay attention. The loud slaps of the contacting bodies wedged into this animal musical bacchanalia two snoshayuschimisya young people, adding even more spice. Mitka ten minutes was busting my ass wriggling and Miroslav mooing, until finally the whole length of the latter not jerk drove into the girl of his cock and began noisily to erupt... The world at this time drunken eyes searched the surrounding area, sure you looking, but never noticed. Half a minute later Mitya pulled out of her ass his cock and lit, started watching, as the World wipes wipes oozing from the anus sperm...'
+				'Drunk naked Miroslav was lying on a wooden table, leaning against a fence, and Mitya was measured nailed in her his cock. Each time you push, sickly sickly, softly moaned Peace, and then udaras the top of the fence, and hysterically boards creaked. Peering, you get the idea, what Mira has kept its promise, - a member of the Mitki to the eggs included in her ass, which sometimes heard strange squelch, NAC which, however, no one, except you, didn`t pay attention. The loud slaps of the contacting bodies wedged into this animal musical bacchanalia two snoshayuschimisya young people, adding even more spice. Mitka ten minutes was busting my ass wriggling and Miroslav mooing, until finally the whole length of the latter not jerk drove into the girl of his cock and began noisily to erupt... Mira at this time drunken eyes searched the surrounding area, sure you looking, but never noticed. Half a minute later Mitya pulled out of her ass his cock and lit, started watching, as Mira wipes wipes oozing from the anus sperm...'
 				act 'Escape':miraingop = 0 & minut += 15 & gt'Gaddvor'
 			end
 		else
@@ -1289,6 +1266,7 @@ gs 'cum_manage'
 		act 'Escape':miraingop = 0 & gt'Gaddvor'
 		end
 	else
+		temp = RAND(0,3)
 		if temp = 0:
 			act 'Give a glass to Miroslav':
 				cls
@@ -1300,8 +1278,7 @@ gs 'cum_manage'
 				'You give a glass of moonshine and that Miroslav, after a moment, begins, coughing and sickly, strain it through your teeth. You are so lively time talking with the village.'
 				act 'Further':gt $curloc
 			end
-		end
-		if temp = 0:
+		elseif temp = 1:
 			act 'To drink itself':
 				cls
 				minut += 15
@@ -1315,8 +1292,7 @@ gs 'cum_manage'
 				'You take a glass of moonshine and start, coughing and sickly, strain it through your teeth. Miroslav meanwhile shyly responds to impudent questions rural youth.'
 				act 'Catching his breath':gt $curloc
 			end
-		end
-		if temp = 2:
+		elseif temp = 2:
 			act 'Give a glass to Miroslav':
 				cls
 				miralko += RAND(3,4)
@@ -1324,6 +1300,7 @@ gs 'cum_manage'
 				temp = 1
 				mirapiss = RAND(0,10)
 				gs 'stat'
+
 				if miragopQW >= 8 and mirapiss <= 2:
 					minut += 5
 					if miragopQW < 10: miragopQW += 1
@@ -1374,7 +1351,7 @@ gs 'cum_manage'
 												mirasextimes += 3
 												gs 'stat'
 												'<center><img src="images/qwest/gadukino/MiraQW10_4.jpg"></center>'
-												'But Mitka, slapped her on the butt, roughly pulls her pants up to the knees and, opened my pants, starts to fuck her roughly. The world sighs and postanyvat, sometimes Stukas head into a tree, about which took, and trying to sign Mitike. You mark, as Osada you Vasya with Kalambay and saying goodbye, decide to go away from sin...'
+												'But Mitka, slapped her on the butt, roughly pulls her pants up to the knees and, opened my pants, starts to fuck her roughly. Mira sighs and postanyvat, sometimes Stukas head into a tree, about which took, and trying to sign Mitike. You mark, as Osada you Vasya with Kalambay and saying goodbye, decide to go away from sin...'
 												act 'Escape':miraingop = 0 & minut += 30 & gt'Gaddvor'
 											end
 										end
@@ -1420,7 +1397,7 @@ gs 'cum_manage'
 								mirasextimes += 1
 								gs 'stat'
 								'<center><img src="images/qwest/gadukino/MiraQW11_3.jpg"></center>'
-								'Vasya takes the World a little aside and orders her to take off clothes, then, completely naked, starts davidlee his dick...'
+								'Vasya takes Mira a little aside and orders her to take off clothes, then, completely naked, starts davidlee his dick...'
 							end
 							act 'Escape':miraingop = 0 & minut += 10 & gt'Gaddvor'
 						end						
@@ -1471,7 +1448,7 @@ gs 'cum_manage'
 							minut += 5
 							gs 'stat'
 							'<center><img src="images/qwest/gadukino/MiraQW15.jpg"></center>'
-							'Miroslav piano postanyvat and lingering moans, awkwardly thrusting the fingers in the holes. Vasya asks you silly, could you too, but you only contemptuous snorts in response and he remains  - The world finally brings himself to first orgasm.'
+							'Miroslav piano postanyvat and lingering moans, awkwardly thrusting the fingers in the holes. Vasya asks you silly, could you too, but you only contemptuous snorts in response and he remains  - Mira finally brings himself to first orgasm.'
 							act 'Further':gt $curloc
 						end
 					else
@@ -1497,8 +1474,7 @@ gs 'cum_manage'
 					act 'Further':gt $curloc
 				end
 			end
-		end
-		if temp = 1:
+		else
 			act 'To drink itself':
 				cls
 				minut += 15

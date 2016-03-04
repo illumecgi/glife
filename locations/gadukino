@@ -40,8 +40,8 @@ if hour >= 6 and hour < 20:
 		act 'Walking through the village':
 			cls
 			minut += 15
-			temp = RAND(0,100)
 			gs 'stat'
+			temp = RAND(0,100)
 			if temp < 4 and meadow = 0:
 				'<center><img src="images/qwest/gadukino/trail_meadow.jpg"></center>'
 				'Walking through the village, do you notice between the two neighbor`s houses for a small path, leading between the kitchen gardens where-in thickets...'

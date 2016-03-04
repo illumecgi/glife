@@ -1422,6 +1422,7 @@ if Enable_showrelation = 1:
 		if father > 0:gs'show_table','<<father>> Father','2'
 		if brother > 0:gs'show_table','<<brother>> Brother','2'
 	end
+	if nastjaqw > 0:gs'show_table','<<nastjaqw>> Nastja','2'
 	if tanya > 0:gs'show_table','<<tanya>> Tanya','2'
 	if kat > 0:gs'show_table','<<kat>> Kate','2'
 	if vika > 0:gs'show_table','<<vika>> Vika','2'

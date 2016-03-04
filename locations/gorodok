@@ -46,7 +46,7 @@ if marudatestinterface = 1:
 	*p '<a href="exec:GT ''gskver'',''park''">A small park</a>'
 	*p ' - '
 	if SchoolBlock = 0: 
-		*p '<a href="exec: GT ''gschool''">Local school</a>'
+		*p '<a href="exec: gt ''gschool'', ''start''">Local school</a>'
 		elseif SchoolBlock = 1: *p 'You have been expelled from school'
 	end
 	*p ' - '
@@ -312,7 +312,7 @@ if marudatestinterface = 0:
 		$Pharmname = '.'
 	end
 	if SchoolBlock = 0:
-		$schoolname = ' and the local <a href="exec:gt ''gschool''">school</a>.'
+		$schoolname = ' and the local <a href="exec:gt ''gschool'', ''start''">school</a>.'
 	else
 		'.'
 	end

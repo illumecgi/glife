@@ -93,7 +93,7 @@ if $ARGS[0] = 'Mira':
 				'<center><img src="images/qwest/gadukino/mira3,<<rand(0,3)>>.jpg"></center>'
 			end
 			'You are responsible, what you and she can come over, when it pleases, but take her word, so she never told anyone about this place. Miroslav, happy as an elephant, actively nodding you head and says, I`ll take this secret to the grave, and if not, then, as gin, will perform any three of your desires...'
-			act 'Finish':gt 'meadow'
+			act 'Finish':gt 'meadow', 'start'
 		end
 		act 'Do not allow':
 			cls
@@ -127,7 +127,7 @@ if $ARGS[0] = 'Mira':
 					'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
 				end
 				'You agree intrigued waiting, What is so you can tell Mirka, and it tells you soon, I saw, her father masturbates... Turns, after, his wife died - Mirkin mom - he did not have a single woman, here they are... Generally, Mirka both sorry father, but also to help him , she could do nothing, Though very much loves. Did you expect that-something more, and therefore, heard such nonsense, of course, said, you do not need these secrets, or so she tells that-or else everything will remain, as before. Mirka hurt pouted and said no more, his whole appearance shows injured innocence. A few minutes later, to my surprise, you feel, unexpectedly nice itch and vlazhneet you in the crotch of the thoughts of his father Miroslavinom...'
-				act 'Finish':gt 'meadow'
+				act 'Finish':gt 'meadow', 'start'
 			end
 		end
 	elseif mirainmeadow = 1:
@@ -169,7 +169,7 @@ if $ARGS[0] = 'Mira':
 							gs 'stat'
 							'<center><img src="images/qwest/gadukino/MiraLick2.jpg"></center>'
 							'A couple of minutes you eagerly get rid of the panties and covered his eyes, wait, while Mira, pulling his tongue on your Clit, brings you to orgasm.'
-							act 'Finish':gt 'meadow'
+							act 'Finish':gt 'meadow', 'start'
 						end
 					end
 				else
@@ -179,12 +179,12 @@ if $ARGS[0] = 'Mira':
 						gs 'stat'
 						'<center><img src="images/qwest/gadukino/MiraLick2.jpg"></center>'
 						'Mira obediently kneels and  , pulling his tongue on your Clit, brings you to orgasm.'
-						act 'Finish':gt 'meadow'
+						act 'Finish':gt 'meadow', 'start'
 					end
 				end
 			end
 		end
-		act 'Finish':gt 'meadow'
+		act 'Finish':gt 'meadow', 'start'
 	end
 end
 

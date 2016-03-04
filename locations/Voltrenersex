@@ -463,7 +463,7 @@ if $ARGS[0] = 'discoSex':
 					end
 					act 'To expose the ass':
 						cls
-						hory += 10
+						horny += 10
 						minut += 20
 						gs 'stat'
 						'<center><img src="images/qwest/alter/volley/voitrensexdisco4.gif"></center>'

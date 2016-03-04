@@ -9,7 +9,7 @@ if month>=3 and month<=5:
 	else
 		'<center><img src="images/nigma/gor/lake/lake.spring.night.jpg"></center>'
 	end
-	'<center>A small lake, located not far from Pavlovsky. You''re not sure whether Pavlovsky was built near the lake on purpose or not.</center>'
+	'<center>A small lake, located not far from Pavlovsk. You''re not sure whether Pavlovsk was built near the lake on purpose or not.</center>'
 	''
 end
 if month>=6 and month<=8:
@@ -18,7 +18,7 @@ if month>=6 and month<=8:
 	else
 		'<center><img src="images/nigma/gor/lake/lake.summer.night.jpg"></center>'
 	end
-	'<center>A small lake, located not far from Pavlovsky. You''re not sure whether Pavlovsky was built near the lake on purpose or not.</center>'
+	'<center>A small lake, located not far from Pavlovsk. You''re not sure whether Pavlovsk was built near the lake on purpose or not.</center>'
 	''
 end
 if month>=9 and month<=11:
@@ -27,7 +27,7 @@ if month>=9 and month<=11:
 	else
 		'<center><img src="images/nigma/gor/lake/lake.autumn.night.jpg"></center>'
 	end
-	'<center>A small lake, located not far from Pavlovsky. You''re not sure whether Pavlovsky was built near the lake on purpose or not.</center>'
+	'<center>A small lake, located not far from Pavlovsk. You''re not sure whether Pavlovsk was built near the lake on purpose or not.</center>'
 	''
 end
 if month=1 or month=2 or month=12:
@@ -36,8 +36,8 @@ if month=1 or month=2 or month=12:
 	else
 		'<center><img src="images/nigma/gor/lake/lake.winter.night.jpg"></center>'
 	end
-	'<center>A small lake, located not far from Pavlovsky. You''re not sure whether Pavlovsky was built near the lake on purpose or not.</center>'
-	'<center>Ever since winter arrived, the lake in Pavlovsky has been frozen over. The lake is being used as a skating rink and lots of people go to skate there every day; if you have skates you could join them.</center>'
+	'<center>A small lake, located not far from Pavlovsk. You''re not sure whether Pavlovsk was built near the lake on purpose or not.</center>'
+	'<center>Ever since winter arrived, the lake in Pavlovsk has been frozen over. The lake is being used as a skating rink and lots of people go to skate there every day; if you have skates you could join them.</center>'
 	''
 end
 

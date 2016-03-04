@@ -6,6 +6,8 @@
     <Location name="begin"/>
     <Location name="begin1"/>
     <Location name="onobjsel"/>
+    <Location name="obj_din"/>
+    <Location name="Cheatmenu_din"/>
     <Location name="scale.table"/>
     <Folder name="System">
       <Location name="counter"/>
@@ -335,6 +337,7 @@
       <Location name="soniaDisco"/>
       <Location name="gschool"/>
       <Location name="gschool2"/>
+      <Location name="gschool3"/>
       <Location name="gkafe"/>
       <Location name="motherkafeboss"/>
       <Location name="gLake"/>
@@ -849,5 +852,7 @@
     <Location name="cum_arrcheat"/>
     <Location name="cum_cleanup"/>
     <Location name="femcyc"/>
+    <Location name="street_event"/>
+    <Location name="show_table"/>
   </Structure>
 </QGen-project>

@@ -1,150 +1,152 @@
 # gadriver
-$metka = $ARGS[0]
-$loc = $CURLOC
 
-clr
-gs 'stat'
-gs 'time'
+if $ARGS[0] = 'Start':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
 
-'<center><H4>River Slavka</H4></center>'
+	clr
+	gs 'stat'
+	gs 'time'
 
-if month >= 5 and month <= 9:
-	if hour >= 6 and hour < 22:
-		'<center><img src="images/qwest/gadukino/river/Gadriver.jpg"></center>'
-	else
-		'<center><img src="images/qwest/gadukino/river/Gadriver_night.jpg"></center>'
-	end
-else
-	if hour >= 8 and hour < 18:
-		'<center><img src="images/qwest/gadukino/river/Gadriver_winter.jpg"></center>'
-	else
-		'<center><img src="images/qwest/gadukino/river/Gadriver_winter_night.jpg"></center>'
-	end
-end
+	'<center><H4>River Slavka</H4></center>'
 
-'A small village creek flowing just off Gadyukino.'
-temp = RAND(0,20)
-if temp = 0 and hour >= 6 and hour < 22 and month >= 5 and month <= 9 and sunWeather = 1:'On the banks spread their fishing rods <a href="exec: dynamic $fishers ">local fishermen</a>.'
-if temp = 1 and hour < 5 and month >= 5 and month <= 9 and miragopQW >= 20:'Right next to the path leading to the river, is completely naked <a href="exec: dynamic $mirapunish ">Mira</a>, crucified between two trees...'
-
-
-if temp = 2 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and sub > 0:
-	if mitkaguysriver ! daystart:
-		mitkaguysriver = daystart
-		'Along the way you meet with Kolyambu Vasyanya those persistently invite you to go with them.'
-		
-		act 'To go with them':
-			cls
-			minut += 40
-			horny = RAND(40,80)
-			$boy = 'Kolyamba'
-			silavag = 0
-			dick = 16
-			pose = 1
-			sub += 2
-			gs 'cum_manage'
-			gs 'stat'
-			
-			'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex17.jpg"></center>'
-			'The boys will take you to the home Vasyanya, where, unceremoniously, put your belly on the table...'
-			
-			dynamic $sexstart
-			dynamic $sexstart2
-			dynamic $sexcum
-			
-			$boy = 'Vasya'
-			dick = 15
-			
-			dynamic $sexstart
-			dynamic $sexstart2
-			dynamic $sexcum
-			
-			act 'Finish':minut += 10 & gt'gadukino'
+	if month >= 5 and month <= 9:
+		if hour >= 6 and hour < 22:
+			'<center><img src="images/qwest/gadukino/river/Gadriver.jpg"></center>'
+		else
+			'<center><img src="images/qwest/gadukino/river/Gadriver_night.jpg"></center>'
 		end
 	else
-		act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
-		act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
-	end
-elseif temp = 3 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and sub > 0:
-	if mitkaguysriver ! daystart:
-		mitkaguysriver = daystart
-		'Along the way you meet the kids and those persistently invite you to go with them.'
-		
-		act 'To go with them':
-			cls
-			minut += 60
-			horny = RAND(40,80)
-			$boy = 'Mitya'
-			silavag = 0
-			dick = 18
-			pose = 0
-			sub += 5
-			anus += 3
-			gs 'stat'
-			
-			'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex18.jpg"></center>'
-			'The boys will take you to the home Vasyanya, where an hour hammering you in the ass...'
-			
-			dynamic $analsexrude
-			
-			$boy = 'Kolyamba'
-			dick = 16
-			
-			dynamic $analsexrude
-			
-			$boy = 'Vasya'
-			dick = 15
-			
-			dynamic $analsexrude
-			
-			act 'Leave':minut += 10 & gt'gadukino'
+		if hour >= 8 and hour < 18:
+			'<center><img src="images/qwest/gadukino/river/Gadriver_winter.jpg"></center>'
+		else
+			'<center><img src="images/qwest/gadukino/river/Gadriver_winter_night.jpg"></center>'
 		end
-	else
-		act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
-		act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
 	end
-elseif temp = 4 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and sub > 0:
-	if mitkaguysriver ! daystart:
-		mitkaguysriver = daystart
-		'Along the way you meet the demanding and Bob invites you to his home...'
-		
-		act 'Go with him':
-			cls
-			minut += 20
-			horny = RAND(40,70)
-			$boy = 'Vasya'
-			silavag = 0
-			dick = 15
-			pose = 1
-			sub += 2
-			gs 'stat'
+
+	'A small village creek flowing just off Gadyukino.'
+	temp = RAND(0,20)
+	if temp = 0 and hour >= 6 and hour < 22 and month >= 5 and month <= 9 and sunWeather = 1:'On the banks spread their fishing rods <a href="exec: dynamic $fishers ">local fishermen</a>.'
+	if temp = 1 and hour < 5 and month >= 5 and month <= 9 and miragopQW >= 20:'Right next to the path leading to the river, is completely naked <a href="exec: dynamic $mirapunish ">Mira</a>, crucified between two trees...'
+
+
+	if temp = 2 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and sub > 0:
+		if mitkaguysriver ! daystart:
+			mitkaguysriver = daystart
+			'Along the way you meet with Kolyambu Vasyanya those persistently invite you to go with them.'
 			
-			if mesec = 0:
-				'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex20.jpg"></center>'
-				'As soon after you open the door, he rudely you undress and put his knees on the sofa...'
-			else
-				'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex21.jpg"></center>'
-				'As soon after you open the door, he undresses you roughly and throws on the bed. Noticing, that you have a month, He angrily curses and begins to get a job in your anus...'
-			end
-			if mesec = 0:
+			act 'To go with them':
+				cls
+				minut += 40
+				horny = RAND(40,80)
+				$boy = 'Kolyamba'
+				silavag = 0
+				dick = 16
+				pose = 1
+				sub += 2
+				gs 'cum_manage'
+				gs 'stat'
+				
+				'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex17.jpg"></center>'
+				'The boys will take you to the home Vasyanya, where, unceremoniously, put your belly on the table...'
+				
 				dynamic $sexstart
 				dynamic $sexstart2
 				dynamic $sexcum
-			else
-				dynamic $analsexrude
+				
+				$boy = 'Vasya'
+				dick = 15
+				
+				dynamic $sexstart
+				dynamic $sexstart2
+				dynamic $sexcum
+				
+				act 'Finish':minut += 10 & gt'gadukino'
 			end
+		else
+			act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
+			act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
+		end
+	elseif temp = 3 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and sub > 0:
+		if mitkaguysriver ! daystart:
+			mitkaguysriver = daystart
+			'Along the way you meet the kids and those persistently invite you to go with them.'
 			
-			act 'Finish':minut += 10 & gt'gadukino'
+			act 'To go with them':
+				cls
+				minut += 60
+				horny = RAND(40,80)
+				$boy = 'Mitya'
+				silavag = 0
+				dick = 18
+				pose = 0
+				sub += 5
+				anus += 3
+				gs 'stat'
+				
+				'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex18.jpg"></center>'
+				'The boys will take you to the home Vasyanya, where an hour hammering you in the ass...'
+				
+				dynamic $analsexrude
+				
+				$boy = 'Kolyamba'
+				dick = 16
+				
+				dynamic $analsexrude
+				
+				$boy = 'Vasya'
+				dick = 15
+				
+				dynamic $analsexrude
+				
+				act 'Leave':minut += 10 & gt'gadukino'
+			end
+		else
+			act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
+			act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
+		end
+	elseif temp = 4 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and sub > 0:
+		if mitkaguysriver ! daystart:
+			mitkaguysriver = daystart
+			'Along the way you meet the demanding and Bob invites you to his home...'
+			
+			act 'Go with him':
+				cls
+				minut += 20
+				horny = RAND(40,70)
+				$boy = 'Vasya'
+				silavag = 0
+				dick = 15
+				pose = 1
+				sub += 2
+				gs 'stat'
+				
+				if mesec = 0:
+					'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex20.jpg"></center>'
+					'As soon after you open the door, he rudely you undress and put his knees on the sofa...'
+				else
+					'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex21.jpg"></center>'
+					'As soon after you open the door, he undresses you roughly and throws on the bed. Noticing, that you have a month, He angrily curses and begins to get a job in your anus...'
+				end
+				if mesec = 0:
+					dynamic $sexstart
+					dynamic $sexstart2
+					dynamic $sexcum
+				else
+					dynamic $analsexrude
+				end
+				
+				act 'Finish':minut += 10 & gt'gadukino'
+			end
+		else
+			act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
+			act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
 		end
 	else
-		act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
-		act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
+			act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
+			act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
 	end
-else
-		act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
-		act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
 end
-
 
 if $ARGS[0] = 'Gadbitch':
 	cla
@@ -165,9 +167,11 @@ if $ARGS[0] = 'Gadbitch':
 	end
 
 	'A small country beach, where you can sunbathe and swim.'
-	if mirainriver = 1:temp = RAND(0,20)
-	if mirainriver = 1 and temp < 10:'On the beach sunning razomlevshie<a href="exec: dynamic $mirameadow ">Mira</a>.'
-	if mirainriver = 1 and temp >= 10:'The river splashing fun <a href="exec: dynamic $mirameadow ">Mira</a>.'
+	if mirainriver = 1 and RAND(0,20) < 10:
+		'On the beach sunning razomlevshie<a href="exec:sun = 1 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
+	else
+		'The river splashing fun <a href="exec:sun = 0 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
+	end
 	if mirainriver = 0 and mitkasextimes >= 13:temp = RAND(0,10)
 	if mirainriver = 0 and mitkasextimes >= 13 and temp = 0 and hour >= 8 and hour < 20 and month >= 5 and month <= 9 and temper >= 20 and sunWeather = 1:'On the river rest <a href="exec: dynamic $MitkaGuysRiver ">Bob Colby</a>.'
 
@@ -468,16 +472,16 @@ if $ARGS[0] = 'Gadbitch':
 		end
 	end
 
-	act 'Leave':minut += 5 & gt 'Gadriver'
+	act 'Leave':minut += 5 & gt 'gadriver', 'start'
 end
 
-$mirameadow = {
+if $ARGS[0] = 'Mira':
 	cls
 	minut += 2
 	gs 'stat'
 
 
-	if temp < 10:
+	if sun = 1:
 		if miragopQW < 12:
 			'<center><img src="images/qwest/gadukino/river/MiraBeach.jpg"></center>'
 		else
@@ -497,7 +501,7 @@ $mirameadow = {
 	minut += 10
 	manna += 10
 	gs 'stat'
-		if temp < 10:
+		if sun = 1:
 			if miragopQW < 12:
 				'<center><img src="images/qwest/gadukino/river/MiraBeach.jpg"></center>'
 			else
@@ -513,7 +517,7 @@ $mirameadow = {
 	 'You are chatting with Mira about trivial things.'
 	act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
 	end
-}
+end
 
 $fishers = {
 	cls
@@ -542,8 +546,8 @@ $MitkaGuysRiver = {
 	cls
 	minut += 5
 	horny += 10
-	temp = RAND(0,10)
 	gs 'stat'
+	temp = RAND(0,10)
 	
 	'<center><img src="images/qwest/gadukino/river/MitkaGuysRiver.jpg"></center>'
 	' - Oh, <<$nickname>>, us-that`s just you and not enough, - smiled Kolyamba.'
@@ -715,8 +719,8 @@ $MitkaGuysRiver = {
 				dick = 15
 				minut += 10
 				horny += RAND(25,75)
-				temp = RAND(0,2)
 				gs 'stat'
+				temp = RAND(0,2)
 				
 				if temp = 0:
 				

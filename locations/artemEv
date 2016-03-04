@@ -968,7 +968,7 @@ if $ARGS[0] = 'start':
 			gs 'stat'
 			'You silent pondering what to do. And then there was cotton and Artem fell to the ground. You do not understand what happened but obviously Witek punched Artem. Artem closed hands and squealed like a little girl "Witek, well, do not!" Witek leaned over Artem "Once again I see you together, teeth will strike. Understood?" Artem wailed "Got it figured." Witek gave a kick in the ass lifted from the ground to Artem. "And now sebis horrified pimples!" Artem grabbed an armful their stuff running drapanul from Vic. Witek spat on the ground and turned around went somewhere.'
 
-			act 'Leave':gt 'gschool'
+			act 'Leave':gt 'gschool', 'start'
 		end
 
 		exit

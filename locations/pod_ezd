@@ -1109,7 +1109,16 @@ if $ARGS[0] = 'etaj_1':
 		
 	     'Residents of the home: <a href="exec: dynamic $housemates">read</a>'
 		'Hanging Ads: <a href="exec:GT ''pod_ezd'',''pod_objava''">read</a>'
-	act '<font color = maroon><b>To go out</b></font>': gt'gorodok'     
+	act '<font color = maroon><b>To go out</b></font>':
+		if hour < 4 and motherWorry = 0 and age < 18:
+			'<font color=red>Are you sure? Your mother will worry if you go out at this time.</font>'
+			cla
+			act '<font color=red>Yes, go outside</font>':gt'gorodok'
+			act 'No, stay inside':gt $curloc
+		else
+			gt'gorodok'
+		end	
+	end    
 	if ArtemBeInHome > 0 and artemblok = 0: 
 		act 'Apartment number2 Artem Chebotarev': CLOSE ALL & gt'artemhome'
 	end

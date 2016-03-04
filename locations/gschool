@@ -6,7 +6,7 @@ gs 'stat'
 gs 'time'
 '<center><b><font color="maroon">School</font></b></center>'
 '<center><img src="images/qwest/alter/gschool.jpg"></center>'
-'Pavlovsky''s only school, all the local children go here for their education.'
+'Pavlovsk''s only school, all the local children go here for their education.'
 
 
 act 'Return to town':gt 'gorodok'
@@ -211,7 +211,7 @@ if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli =
 		gs 'stat'
 		'Everyone from your year is assembled in the classroom. Your teachers have gathered in front of the class, and congratulate all of you on completing high school. As they hand everyone their well-earned diplomas, they wish you luck for the future.'
 
-		act 'Leave to town':gt 'gorodok'
+		act 'Return to town':gt 'gorodok'
 
 		act 'Go to the prom party':
 			cls

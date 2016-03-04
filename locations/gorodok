@@ -21,7 +21,7 @@ alkoblock = 0
 boynumBlock = 0
 !music_on = 0
 
-'<center><h4>Pavlovsky<a href="exec:dynamic $objnewmenu">.</a></h4></center>'
+'<center><h4>Pavlovsk<a href="exec:dynamic $objnewmenu">.</a></h4></center>'
 '<center><img src="images/etogame/gorodok.jpg"></center>'
 '<center>A quiet province town in a rural area of Russia. Population: about 10000 inhabitants.</center>'
 '<center>It has nothing in particular going for it, and looks just like all the other towns in the area. The tallest building in town is the church tower.</center>'
@@ -176,7 +176,7 @@ if belgangQW=100 and hour>=16 and hour<21 and daybelisex!daystart:
 			'Afraid of what might happen if you decline, you meekly nod: "Yes mister Bely", and enter the jeep. The next few minutes you drive around town seemingly at random, and you''re not sure where he''s taking you.'
 			tiperand=rand(1,100)
             if tiperand<=30:
-				'As Vadim drives the car through the streets of Pavlovsky, he unbuttons his pants and pulls out his hard cock.
+				'As Vadim drives the car through the streets of Pavlovsk, he unbuttons his pants and pulls out his hard cock.
 				"Go on <<$name>>, start sucking. I don''t have much time, make it quick."'
 				act'Suck his cock while he drives':
 					cls
@@ -208,7 +208,7 @@ if belgangQW=100 and hour>=16 and hour<21 and daybelisex!daystart:
 end
 
 if 	belgangQW=9000 and belgangday<daystart:
-	'As you walk through Pavlovsky, a shabby Mitsubishi Pajero stops near you. Vadim Bely steps out, along with several of his henchmen. He gives you a smile that you know is 100% fake, and behaves amicably while he asks: "<<$name>>, well well! How are you? I hope you have good news for me?"'
+	'As you walk through Pavlovsk, a shabby Mitsubishi Pajero stops near you. Vadim Bely steps out, along with several of his henchmen. He gives you a smile that you know is 100% fake, and behaves amicably while he asks: "<<$name>>, well well! How are you? I hope you have good news for me?"'
 	if money>=belgangPay:
 		act'Give him the money':
 			cls
@@ -290,9 +290,9 @@ end
 if marudatestinterface = 0:
 
 	if StoryLine = 1 and ParHomeBlock = 0:
-		'You live in one of the apartment blocks in the old part of Pavlovsky, and the door to the <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''" class=plain>apartment building</a> is right there. Your <a href="exec:minut += 5 & GT ''korrPar''" class=plain>parents'' home</a> is on the second floor there. <<$gcartext>>'
+		'You live in one of the apartment blocks in the old part of Pavlovsk, and the door to the <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''" class=plain>apartment building</a> is right there. Your <a href="exec:minut += 5 & GT ''korrPar''" class=plain>parents'' home</a> is on the second floor there. <<$gcartext>>'
 	elseif StoryLine = 1:
-		'One of the apartment blocks in the old part of Pavlovsky, and the door to the <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''" class=plain>apartment building</a> is right there. Your parents live here, but you are no longer welcome in their home. <<$gcartext>>'
+		'One of the apartment blocks in the old part of Pavlovsk, and the door to the <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''" class=plain>apartment building</a> is right there. Your parents live here, but you are no longer welcome in their home. <<$gcartext>>'
 	else
 		'<<$gcartext>>'
 	end
@@ -324,11 +324,11 @@ if marudatestinterface = 0:
 	'The town square features a <a href="exec:gt ''gdk''">community center</a><<$schoolname>>'
 	
 	if hour >= 8 and hour <= 17:'The local <a href="exec: minut += 3 & gt ''barbershop'', ''start''">barbershop</a> is within walking distance, merely a few minutes away.'
-	if hour >= 7 and hour <= 18:'Pavlovsky also has a <a href="exec:gt ''etoexhib'', ''pos20''">vocational school</a>, where young adults can learn a trade.'
+	if hour >= 7 and hour <= 18:'Pavlovsk also has a <a href="exec:gt ''etoexhib'', ''pos20''">vocational school</a>, where young adults can learn a trade.'
 	if hour >= 8 and hour <= 22:'Right outside your apartment, a <a href="exec:dynamic $kiosksig">kiosk</a> sells cigarettes and magazines.'
 	if hour >= 8 and hour <= 20:'The only major store in town is the <a href="exec:gt ''shop'', ''start''">supermarket</a>.'
 
-	'A <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">garment factory</a> named Paris Commune is situated near the outskirts of town, close to the highway. Inhabitants of Pavlovsky who own a car can store it in the <a href="exec:minut += 5 & gt ''garmassiv''">garages</a>.'
+	'A <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">garment factory</a> named Paris Commune is situated near the outskirts of town, close to the highway. Inhabitants of Pavlovsk who own a car can store it in the <a href="exec:minut += 5 & gt ''garmassiv''">garages</a>.'
 
 ''
 	if ArtemBeInHome > 0 and artemblok = 0:'<a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarev</a>, one of your classmates, lives in the same apartment building as your parents, on the first floor.'
@@ -337,7 +337,7 @@ if marudatestinterface = 0:
 	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:'<a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>, one of your classmates, lives in one of the fancier houses in town.'
 	if katjaFirstKiss >= 1:'<a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a>, one of your classmates, lives in the richer part of town.'
 	if LariskaHomeIn > 0: '<a href="exec:minut += 15 & GT ''LariskaHome''" class=plain>Larissa Gruzdev</a>, one of your classmates, lives about 15 minutes away from your parents.'
-	if beinalbinahome > 0:'<a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>, one of your classmates, lives in one of the few luxurious mansions Pavlovsky has to offer.'
+	if beinalbinahome > 0:'<a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>, one of your classmates, lives in one of the few luxurious mansions Pavlovsk has to offer.'
 
 
 	if workPTU > 2:act '<b>Go to the hostel</b>':gt 'etoexhib', 'pos40'
@@ -364,7 +364,7 @@ if StoryLine = 1 and hour >= 8 and hour < 23 and cumface > 0 and rand(0, 3) = 0 
 
 	if sosedknow = 0:
 		sosedknow = 1
-		'As you walk though Pavlovsky, someone calls out to you "<<$name>>!" You turn around and see uncle Misha, your neighbor. He looks at your face in amazement: "Your face looks like a mess! What is that?"'
+		'As you walk though Pavlovsk, someone calls out to you "<<$name>>!" You turn around and see uncle Misha, your neighbor. He looks at your face in amazement: "Your face looks like a mess! What is that?"'
 		'You blush and hesitate, trying to inconspicuously wipe the sperm off your face. It''s obviously not working; he already noticed. You see his eyes widen when he realizes what it is. "I see. Looks like you had fun", he grins as he continues on his way.'
 	else
 		'Once again you run into uncle Misha, your neighbor. He notices the sperm on your face: "Again? Looks like you''ve been busy, girl. Nice look, it suits you."'

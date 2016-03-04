@@ -1287,7 +1287,7 @@ if hour >= 8 and hour < 16 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 
 end
 
 if workFabrika = 1 and week => 1 and week <= 5 and hour > 8 and age => 16 and age < 18 and FabrikaProgulDay ! day or workFabrika = 1 and week => 1 and week <= 5 and hour > 16 and age > 18 and FabrikaProgulDay ! day:
-	!absence from work in a factory in Pavlovsky
+	!absence from work in a factory in Pavlovsk
 	FabrikaProgul += 1
 	FabrikaProgulDay = day
 end
@@ -1600,7 +1600,7 @@ end
 if hour >= 11 and hour < 12 and week > 1 and week < 5 and workKafe = 1:pl '<b><font color="red">It''s time to work your shift as a waitress in a cafe</font></b>'
 if hour >= 8 and hour < 9 and week < 5 and workSec >= 1:pl '<b><font color="red">It''s time to work your shift as a secretary</font></b>'
 if PersSecWork = 1 and week < 6 and hour < 10 and hour >= 5:pl '<b><font color="red">It''s time to work your shift as a secretary</font></b>'
-if workFabrika = 1 and week => 1 and week <= 5 and hour = 8 and age >= 18 or workFabrika = 1 and week => 1 and week <= 5 and hour = 16 and age < 18:pl'<b><font color = red>TheAM To go to work in the factory as a seamstress Pavlovsky</font></b>'
+if workFabrika = 1 and week => 1 and week <= 5 and hour = 8 and age >= 18 or workFabrika = 1 and week => 1 and week <= 5 and hour = 16 and age < 18:pl'<b><font color = red>This morning you have work in the garment factory in Pavlovsk</font></b>'
 
 if Enable_Hymenrestore = 1: vagina = 0
 if Enable_tightrestore = 1: anus = 0 & if vagina > 0:vagina = 1

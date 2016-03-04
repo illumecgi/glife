@@ -524,124 +524,127 @@ $d_class_leason = {
 		$teacher[1] = 'Ilya Yenotin'
 		$teacher[2] = 'Ilya Yenotin'
 	end
-
-	act'Listen attentively to <<$teacher[1]>>':
-		cla
-		Suspeh += 1
-		if $teacher = 'Anatoly E.': grupNPC[26] += 1
-
-		if RAND(1,2) = 1:
-			$school_class_txtrand = 'You listen attentively to <<$teacher[1]>> for the duration of the class. Today''s lesson was interesting and informative, and you feel smarter for it.'
-		else
-			$school_class_txtrand = 'You listen attentively to <<$teacher[1]>> for the duration of the class. You particularly enjoy the debate section.'
-		end
-
-		act'Ask a question about the lesson':
+	if Enable_skipnoevclass > 0 and ($teacher = 'Ilya Yenotin' or RAND(1,100) > Enable_skipnoevclass):
+		dynamic $din_bigperemena & !skip class ev if 1.not Anatoly E. or 2. rand < set chance by illume
+	else
+		act'Listen attentively to <<$teacher[1]>>':
 			cla
+			Suspeh += 1
 			if $teacher = 'Anatoly E.': grupNPC[26] += 1
 
-			if RAND(1,4) = 1:
-				'You ask a question about the lesson, hoping to learn even more on the subject. Unfortunately, the constant chatter of your classmates drowns out the teacher''s answer, and you don''t catch much of it. Maybe if you didn''t sit so far towards the back of the class, it would have been easier to hear.'
-				dynamic $d_class_leason[1]
+			if RAND(1,2) = 1:
+				$school_class_txtrand = 'You listen attentively to <<$teacher[1]>> for the duration of the class. Today''s lesson was interesting and informative, and you feel smarter for it.'
 			else
-				Suspeh += 1
-				'<<$teacher>> nods approvingly, always happy to see his students engaged in his class. He happily spends some extra time explaining the topic again, and answers any extra questions you might have. You feel smarter, thoroughly understanding today''s topics now.'
+				$school_class_txtrand = 'You listen attentively to <<$teacher[1]>> for the duration of the class. You particularly enjoy the debate section.'
 			end
-			act'Wait for the end of the lesson':dynamic $din_bigperemena
-		end
 
-		if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
-			if grupNPC[26] >= 40 and grupNPC[26] < 60:
-				ivrand = 1
-			elseif grupNPC[26] >= 60 and grupNPC[26] < 80:
-				ivrand = RAND (1,3)
-			elseif grupNPC[26] >= 80:
-				ivrand = RAND (1,4)
-			end
-			if ivrand = 1:
-				grupNPC[26] += 1
-				if RAND(1,3) = 1:
-					$school_class_txtrand = 'Today, there''s a test about the homework you hopefully did. Anatoly E. calls you forward a lot, having you write your answers down on the board. When he asks you for the fourth time today, you begin to suspect he keeps asking you just because of how cute you look in your school uniform, and blush a little as you pick up the crayon once more.'
-				elseif RAND(1,2) = 1:
-					$school_class_txtrand = 'Today, school turns out to be quite interesting. Instead of just teaching, <<$teacher>> spends the hours engaging the students in a discussion about all sorts of topics. Whenever you say anything, he compliments the eloquent way you engage in discussion and uses you as an example for the rest of the class.'
-				else
-					$school_class_txtrand = 'Today, you had to work hard at school. It certainly pays off though, and <<$teacher>> does his best to involve you in the lessons.'
-				end
-			elseif ivrand = 2:
-				grupNPC[26] += 1
-				$school_class_txtrand = 'You listen closely to every word <<$teacher[1]>> says, doing your best to learn. You are however somewhat distracted by the way he keeps glancing at you when he thinks you''re not looking. You notice he keeps looking at your legs, which stick out from under your desk.'
-				dynamic $teacher_class_legs
-			elseif ivrand = 3:
-				$school_class_txtrand = '<<$teacher>> notices you appear to be stuck at one of the assignments and sits down next to you. He patiently explains to you what you are doing wrong, and slowly but surely you begin to understand.'
-				dynamic $teacher_help
-			elseif ivrand = 4:
-				grupNPC[26] += 1
-				if RAND(1,2) = 1:
-					$school_class_txtrand = 'You sit at your desk, writing a summary on today''s lesson to help you study later. Suddenly, <<$teacher>> comes up from behind you and puts his hand on your shoulder. He takes his time and patiently corrects your mistakes, leaning in a bit closer than is appropriate from a teacher. You don''t mind though, <<$teacher>> is always nice to you.'
-				else
-					$school_class_txtrand = 'As you are solving some math dilemmas in your text book, you notice <<$teacher>> walking past your table. When you hear a suspicious *click* you quickly look to your side, and see that he has his phone in his hand, and was quietly trying to make a photo of your legs from the side! He notices you looking at his hand, very embarrassed by the fact that you caught him. As he tries to walk away, you call him towards you and whisper in his ear, "Let me know next time, so I can get into a more elegant pose first..." before sending him off with a lewd wink.'
-				end
-			end
-		end
-		'<<$school_class_txtrand>>'
-		act'Wait for the end of the lesson':dynamic $din_bigperemena
-	end
-	act'Daydream':
-		cla
-		Suspeh -= 1
-		if RAND(1,2) = 1:
-			'Today''s lessons don''t particularly interest you, and you find yourself drifting off constantly. After a while you notice <<$teacher>> has stopped teaching and is looking at you intently, asking you to pay attention. Apparently this is already the third time he asked; you missed the first two completely when you were stuck in your own thoughts. The whole class is looking at you now.'
-			if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
+			act'Ask a question about the lesson':
 				cla
-				if sub < 30:
-					act'Don''t pay attention':
-						cla
-						if dom > 70:
-							'<<$teacher>> tries to sell you on the importance of today, "<<$name>>, please pay attention, this is very important. Today''s topic is going to be on the exam for sure."'
-							'"Of course, sir. Please continue your super fascinating lesson. Just keep it a bit up-beat please... if you talk any slower, I might fall asleep!" you answer boldly.'
-							'The whole class bursts into loud laughter, and <<$teacher>> has a rough time getting everyone to quiet down.'
-							'"<<$surname>>, get out of class! I should call your parents, and let the principal know you''re being impossible! Out, now!"'
-							act'Don''t leave the classroom':
-								'"What good would that do? Are you trying to get me to start smoking to pass the time? I''m not interrupting your classes, just leave me alone. I''m having some... girl problems. Would you like me to talk about those?" you answer brashly, not having any intentions of getting up.'
-								'Your teacher doesn''t know what to say, and after a while just decides to continue his classes. You obviously don''t learn anything today.'
-								act'Wait for the end of the lesson':dynamic $din_bigperemena
-							end
-							act'Leave the classroom':school_event_hour = day & dynamic $din_bigperemena
-							exit
-						else
-							'The eyes of <<$teacher>> grow narrower, and even though you roll your eyes at him, you sit through the rest of the lesson in silence, at least pretending to pay attention sometimes. You don''t learn anything today.'
-							act'Wait for the end of the lesson':dynamic $din_bigperemena
-						end
+				if $teacher = 'Anatoly E.': grupNPC[26] += 1
+
+				if RAND(1,4) = 1:
+					'You ask a question about the lesson, hoping to learn even more on the subject. Unfortunately, the constant chatter of your classmates drowns out the teacher''s answer, and you don''t catch much of it. Maybe if you didn''t sit so far towards the back of the class, it would have been easier to hear.'
+					dynamic $d_class_leason[1]
+				else
+					Suspeh += 1
+					'<<$teacher>> nods approvingly, always happy to see his students engaged in his class. He happily spends some extra time explaining the topic again, and answers any extra questions you might have. You feel smarter, thoroughly understanding today''s topics now.'
+				end
+				act'Wait for the end of the lesson':dynamic $din_bigperemena
+			end
+
+			if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
+				if grupNPC[26] >= 40 and grupNPC[26] < 60:
+					ivrand = 1
+				elseif grupNPC[26] >= 60 and grupNPC[26] < 80:
+					ivrand = RAND (1,3)
+				elseif grupNPC[26] >= 80:
+					ivrand = RAND (1,4)
+				end
+				if ivrand = 1:
+					grupNPC[26] += 1
+					if RAND(1,3) = 1:
+						$school_class_txtrand = 'Today, there''s a test about the homework you hopefully did. Anatoly E. calls you forward a lot, having you write your answers down on the board. When he asks you for the fourth time today, you begin to suspect he keeps asking you just because of how cute you look in your school uniform, and blush a little as you pick up the crayon once more.'
+					elseif RAND(1,2) = 1:
+						$school_class_txtrand = 'Today, school turns out to be quite interesting. Instead of just teaching, <<$teacher>> spends the hours engaging the students in a discussion about all sorts of topics. Whenever you say anything, he compliments the eloquent way you engage in discussion and uses you as an example for the rest of the class.'
+					else
+						$school_class_txtrand = 'Today, you had to work hard at school. It certainly pays off though, and <<$teacher>> does his best to involve you in the lessons.'
+					end
+				elseif ivrand = 2:
+					grupNPC[26] += 1
+					$school_class_txtrand = 'You listen closely to every word <<$teacher[1]>> says, doing your best to learn. You are however somewhat distracted by the way he keeps glancing at you when he thinks you''re not looking. You notice he keeps looking at your legs, which stick out from under your desk.'
+					dynamic $teacher_class_legs
+				elseif ivrand = 3:
+					$school_class_txtrand = '<<$teacher>> notices you appear to be stuck at one of the assignments and sits down next to you. He patiently explains to you what you are doing wrong, and slowly but surely you begin to understand.'
+					dynamic $teacher_help
+				elseif ivrand = 4:
+					grupNPC[26] += 1
+					if RAND(1,2) = 1:
+						$school_class_txtrand = 'You sit at your desk, writing a summary on today''s lesson to help you study later. Suddenly, <<$teacher>> comes up from behind you and puts his hand on your shoulder. He takes his time and patiently corrects your mistakes, leaning in a bit closer than is appropriate from a teacher. You don''t mind though, <<$teacher>> is always nice to you.'
+					else
+						$school_class_txtrand = 'As you are solving some math dilemmas in your text book, you notice <<$teacher>> walking past your table. When you hear a suspicious *click* you quickly look to your side, and see that he has his phone in his hand, and was quietly trying to make a photo of your legs from the side! He notices you looking at his hand, very embarrassed by the fact that you caught him. As he tries to walk away, you call him towards you and whisper in his ear, "Let me know next time, so I can get into a more elegant pose first..." before sending him off with a lewd wink.'
 					end
 				end
-				act'Try to focus on the lesson':
-					act'Wait for the end of the lesson':dynamic $din_bigperemena
-				end
-				exit
 			end
-
-			act'Wait for the end of the lesson':dynamic $din_bigperemena
-		else
-			act'Wait for the end of the lesson':dynamic $din_bigperemena
-		end
-	end
-	act'Play with your phone':
-		cla
-		Suspeh -= 1
-		if RAND(1,3) = 1:
-			$school_class_txtrand = 'This lesson is so boring, you have to do something to keep yourself entertained. You take out your phone and begin to play a mobile game, hoping the lesson will be over soon.'
-		elseif RAND(1,2) = 1:
-			$school_class_txtrand = '<<$teacher>> notices you''re not listening at all, and asks you to put your phone away. You decide not to make things worse, and put your phone back in your pocket. The lesson feels like it takes forever to end, and you''re glad when it''s finally over.'
-		else
-			$school_class_txtrand = 'This lesson is so boring, you have to do something to keep yourself entertained. You take out your phone and begin to play a mobile game, hoping the lesson will be over soon.'
-		end
-		if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
-			cla
-			dynamic $d_class_phone
-		else
 			'<<$school_class_txtrand>>'
+			act'Wait for the end of the lesson':dynamic $din_bigperemena
 		end
-		act'Wait for the end of the lesson':dynamic $din_bigperemena
+		act'Daydream':
+			cla
+			Suspeh -= 1
+			if RAND(1,2) = 1:
+				'Today''s lessons don''t particularly interest you, and you find yourself drifting off constantly. After a while you notice <<$teacher>> has stopped teaching and is looking at you intently, asking you to pay attention. Apparently this is already the third time he asked; you missed the first two completely when you were stuck in your own thoughts. The whole class is looking at you now.'
+				if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
+					cla
+					if sub < 30:
+						act'Don''t pay attention':
+							cla
+							if dom > 70:
+								'<<$teacher>> tries to sell you on the importance of today, "<<$name>>, please pay attention, this is very important. Today''s topic is going to be on the exam for sure."'
+								'"Of course, sir. Please continue your super fascinating lesson. Just keep it a bit up-beat please... if you talk any slower, I might fall asleep!" you answer boldly.'
+								'The whole class bursts into loud laughter, and <<$teacher>> has a rough time getting everyone to quiet down.'
+								'"<<$surname>>, get out of class! I should call your parents, and let the principal know you''re being impossible! Out, now!"'
+								act'Don''t leave the classroom':
+									'"What good would that do? Are you trying to get me to start smoking to pass the time? I''m not interrupting your classes, just leave me alone. I''m having some... girl problems. Would you like me to talk about those?" you answer brashly, not having any intentions of getting up.'
+									'Your teacher doesn''t know what to say, and after a while just decides to continue his classes. You obviously don''t learn anything today.'
+									act'Wait for the end of the lesson':dynamic $din_bigperemena
+								end
+								act'Leave the classroom':school_event_hour = day & dynamic $din_bigperemena
+								exit
+							else
+								'The eyes of <<$teacher>> grow narrower, and even though you roll your eyes at him, you sit through the rest of the lesson in silence, at least pretending to pay attention sometimes. You don''t learn anything today.'
+								act'Wait for the end of the lesson':dynamic $din_bigperemena
+							end
+						end
+					end
+					act'Try to focus on the lesson':
+						act'Wait for the end of the lesson':dynamic $din_bigperemena
+					end
+					exit
+				end
+
+				act'Wait for the end of the lesson':dynamic $din_bigperemena
+			else
+				act'Wait for the end of the lesson':dynamic $din_bigperemena
+			end
+		end
+		act'Play with your phone':
+			cla
+			Suspeh -= 1
+			if RAND(1,3) = 1:
+				$school_class_txtrand = 'This lesson is so boring, you have to do something to keep yourself entertained. You take out your phone and begin to play a mobile game, hoping the lesson will be over soon.'
+			elseif RAND(1,2) = 1:
+				$school_class_txtrand = '<<$teacher>> notices you''re not listening at all, and asks you to put your phone away. You decide not to make things worse, and put your phone back in your pocket. The lesson feels like it takes forever to end, and you''re glad when it''s finally over.'
+			else
+				$school_class_txtrand = 'This lesson is so boring, you have to do something to keep yourself entertained. You take out your phone and begin to play a mobile game, hoping the lesson will be over soon.'
+			end
+			if $teacher = 'Anatoly E.' and vnesh > 15 and grupNPC[26] >= 40:
+				cla
+				dynamic $d_class_phone
+			else
+				'<<$school_class_txtrand>>'
+			end
+			act'Wait for the end of the lesson':dynamic $din_bigperemena
+		end
 	end
 }
 

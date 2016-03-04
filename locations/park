@@ -1,8 +1,11 @@
 # park
 if $ARGS[0] = 'start':
-	cla
-	*clr
 	CLOSE ALL
+
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
 	if sound = 0:
 		if month >=11 and month <= 12 or month >=1 and month <=3:
 			if hour >= 8 and hour <= 23: PLAY 'sound/street2.mp3',30 & PLAY 'sound/zima.mp3',30
@@ -26,22 +29,21 @@ if $ARGS[0] = 'start':
 
 	$sexloc = $CURLOC
 	
-	if WalkInsidePark = 0:
-		WalkInsidePark = 1
-	end
-	minut += 30
-	clr
+	if WalkInsidePark = 0:WalkInsidePark = 1
+	cls
 	gs 'stat'
 	gs 'time'
 	'<center><b><font color="maroon">Park</font></b></center>'
 	'<center><img src="images/etogame/park.jpg"></center>'
-	'The central park is huge, sandy paths go into all directions and ever so often you''ll find a bench to sit on. In the summer you''ll see a lot people playing ball, relax or have a picnic in the more open areas, while in the winter you''ll meet families with their children sledding down the humps.'
-	'Despite it''s almost paradise-like appearence, the park can be very dangerous once the sun goes down.'
+	'The central park is huge, sandy paths spread out in every direction and every so often you''ll find a bench to sit on. In the summer you''ll see a lot people playing ball, relaxing or have a picnic in the more open areas, while in the winter you''ll meet families with their children sledding down the grass banks.'
+	'Despite it''s almost paradise-like appearance, the park can be very dangerous once the sun goes down.'
 	''
-	'There is a sign that points into general direction of the <a href="exec:minut += 47 & gt ''down''">City Center</a>. You estimate the walk to the city center would take about 40 to 50 minutes.'
-	'The second sign points into the direction of the <a href="exec:minut += 20 & gt ''street''">Residential Area</a>. If you have to guess, the walk to the residential are should take about 20 minutes.'
-	'The third sign says <a href="exec:minut += 60 & gt ''Nord''">Northern District</a> on it and points north, you suppose. You know the Northern District is rather far away from here, you estimate taht a walk would take almost one hour'
+	'There is a sign that points into general direction of the city center. You estimate the walk to the city center would take 45 minutes.'
+	'The second sign points into the direction of the residential area. If you have to guess, the walk to the residential are should take 20 minutes.'
+	'The third sign says northern district on it. You know the Northern District is rather far away from here, you estimate that the walk would take an hour.'
 	''
+	'You could spend an hour <a href="exec:minut += 60 & gt ''parkdin''">walking in the park</a>.'
+	if hour >= 10 and hour <= 22:'The small café in the park is open, you could <a href="exec:minut += 30 & gt ''ParkKafe'', ''food''">sit there and have some food</a> (30 minutes).'
 
 	if SNarkPriton = 0:'Near one of the shops roll <a href="exec:dynamic $torchki">junkies</a>.'
 
@@ -63,29 +65,7 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	act 'Leave the park':
-		cla
-		minut += 30
-		gt 'street'
-	end
-
-	if hour >= 10 and hour <= 22:
-		act 'Sit in a Café':
-			cla
-			*clr
-			minut += 30
-			gt 'ParkKafe', 'food'
-		end
-	end
-
-	act 'Walk in the park (1:00)':
-		cla
-		minut += 60
-		gt 'parkdin'
-	end
-
-	
-	act 'Sit on the bench':
+	act 'Sit on a bench':
 		cla
 		*clr
 		'<center><img src="images/lmps/сидит.jpg"></center>'
@@ -189,6 +169,9 @@ if $ARGS[0] = 'start':
 
 	act 'Go to the highway near the park':gt 'park', 'whore'
 	act 'Go to the fair':gt 'park', 'luna'
+	act 'Go to the Residential Area':minut += 20 & gt 'street'
+	act 'Go to the City center':minut += 45 & gt 'down'
+	act 'Go to the Northern region':minut += 60 & gt 'Nord'
 end
 
 if $ARGS[0] = 'luna':
@@ -667,9 +650,9 @@ if $ARGS[0] = 'rape1':
 			*clr
 			bj += 1
 			spafinloc = 12
-gs 'cum_manage'
+			gs 'cum_manage'
 			spafinloc = 11
-gs 'cum_manage'
+			gs 'cum_manage'
 			SUB += 5
 			'<center><img src="images/img/spaln/cum.jpg"></center>'
 			'"Give me a blowjob and you''ll get your reward for not resisting, woman.", he tells you. You nod obidiently and move on your knees and begin to give him head. It doesn''t take long for him to groan out in pleasure, "You better swallow it all, slut!" Shortly after that you can taste his hot cum inside your mouth and you swallow every drip of it, somehow enjoying the taste. Then he stand up, buttons up his pants and takes your money. While you were still liking your fingers clean from any drips of cum, he smiles and says to you, "Have a nice day slut."'

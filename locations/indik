@@ -5,6 +5,8 @@ else
 	i = 3
 end
 
+if Enable_statfsize > 0 and Enable_statfsize < i:i = Enable_statfsize
+
 a = ARGS[1]
 a1 = ARGS[2]
 

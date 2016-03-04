@@ -261,7 +261,7 @@ lipkoef -= 1
 !!!!!!!!!!!!
 !!!jobs!!!
 !!!!!!!!!!!!
-if isprok = 1:isprok = 0 & 'You threw away your used tampon.'
+if Enable_autotampon = 0 and isprok = 1:isprok = 0 & 'You threw away your used tampon.'
 
 if preg = 1 and pregtime < 280:
 	pregtime += 1
@@ -380,6 +380,7 @@ elseif nark > 0:
 end
 
 if pregtime > 10:fat += 1
+if kanicont > 0:kanicont -= 1 & !kanicont countdown. set and display in [stat]
 
 --- cikl ---------------------------------
 

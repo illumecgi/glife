@@ -849,5 +849,7 @@
     <Location name="cum_arrcheat"/>
     <Location name="cum_cleanup"/>
     <Location name="femcyc"/>
+    <Location name="street_event"/>
+    <Location name="show_table"/>
   </Structure>
 </QGen-project>

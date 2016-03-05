@@ -7,63 +7,63 @@ if $ARGS[0] = 'maid':
 	'<center><img src="images/nigma/gor/hotel/hotel.corr.jpg"></center>'
 	'You were sent to serve the next issue.'
 
-	if hour>=19:
+	if hour >= 19:
 		cla
 		*clr
-		maid_cloth=0
-		maidtime+=1
+		maid_cloth = 0
+		maidtime += 1
 		'Your change came to nonza. You passed the uniform and went out into the lobby.'
-		act'Escape':gt'hotelhole'
+		act'Escape':gt 'hotelhole'
 	end
 
 	if hour<19:
 		act'In Room':
 			cla
 			*clr
-			manna-=10
+			manna -= 10
 			
 			gs'stat'
 			
-			if soniaPS!5:maidrand=rand(0,100)
-			if soniaPS=5:maidrand=rand(0,130)
+			if soniaPS ! 5:maidrand = rand(0,100)
+			if soniaPS = 5:maidrand = rand(0,130)
 			
-			if maidstat<100:maidstat+=rand(0,1)
+			if maidstat < 100:maidstat+=rand(0,1)
 			
 			!! MJ: from 0,100 to 0,50 -- roughly the same as before.
 			chai1 = rand(0,100 - (maidstat/2))
 			
 			!! MJ: from 50,51 to 50,150 -- More often but less.
-			if chai1<15:chai=50 + rand(0, maidstat)
+			if chai1 < 25:chai = 50 + rand(0, maidstat)
 			
-			if maidrand<=20:
-				minut+=35
-				gs'stat'
+			if maidrand <= 20:
+				minut += 35
+				gs 'stat'
 				'<center><img src="images/nigma/gor/hotel/work/maid/maid.work0,'+rand(0,3)+'.jpg"></center>'
 				'You put it in the room, and lay a clean sheet.'
-				if maidstat<20:'It turned you disgusting: sheets lay crookedly, you just smeared mud.'
-				if maidstat>=20 and maidstat<50:'It turned out you have bad, but your skills have increased a lot. Stake-in the mud is much lower, what remains after your work early. Yes, and the bed looks a little better.'
-				if maidstat>=50 and maidstat<70:'You already pretty well controlled scrubbing stains, removing dust and dirt. From bed you coped quite well, and there was all not bad.'
-				if maidstat>=70:'You are already very experienced in their field. You is not difficult to deal with all spots, mud, and dust. Bed is perfectly smooth and well-groomed.'
+				if maidstat < 20:'It turned you disgusting: sheets lay crookedly, you just smeared mud.'
+				if maidstat >= 20 and maidstat<50:'It turned out you have bad, but your skills have increased a lot. Stake-in the mud is much lower, what remains after your work early. Yes, and the bed looks a little better.'
+				if maidstat >= 50 and maidstat<70:'You already pretty well controlled scrubbing stains, removing dust and dirt. From bed you coped quite well, and there was all not bad.'
+				if maidstat >= 70:'You are already very experienced in their field. You is not difficult to deal with all spots, mud, and dust. Bed is perfectly smooth and well-groomed.'
 				
-				if chai>0:money+=chai & 'Cleaning in the room, under the pillow, You found the money. It looks like you left <<chai>>r. tip' & chai=0
+				if chai > 0:money += chai & 'Cleaning in the room, under the pillow, You found the money. It looks like you left <<chai>>r. tip' & chai=0
 
-				act'Escape':gt'hotelwork','maid'
+				act'Escape':gt 'hotelwork', 'maid'
 			end
 
-			if maidrand>20 and maidrand<=40:
-				minut+=35
-				gs'stat'
+			if maidrand > 20 and maidrand <= 40:
+				minut += 35
+				gs 'stat'
 				'<center><img src="images/nigma/gor/hotel/work/maid/maid.work1,0.jpg"></center>'
 				'You bring in the dinner room.'
 				
-				if chai>0:money+=chai &'Coming out of the room, on a tray, under plate, You found the money. It looks like you left <<chai>>r. tip'&chai=0
+				if chai > 0:money += chai &'Coming out of the room, on a tray, under plate, You found the money. It looks like you left <<chai>>r. tip'&chai=0
 
-				act'Escape':gt'hotelwork','maid'
+				act'Escape':gt 'hotelwork', 'maid'
 			end
 
-			if maidrand>40 and maidrand<=60:
-				minut+=35
-				gs'stat'
+			if maidrand > 40 and maidrand <= 60:
+				minut += 35
+				gs 'stat'
 				'<center><img src="images/nigma/gor/hotel/work/maid/maid.work2,'+rand(0,4)+'.jpg"></center>'
 				'You clean the room, wipe the dust furniture.'
 				

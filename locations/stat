@@ -1493,7 +1493,7 @@ elseif CondomToggle = 0 and Sprezik > 0:
 	Sprezik = 0
 end
 
-if $mud ! '':pl '<font color="green"><b><<$mud>></b></font>.'
+if $mud ! '':pl '<font color="green"><b><<$mud>></b></font>' & pl
 if siga <= 0 and smoker >= 20:pl '<font color="red"><b>You have run out of cigarettes.</b></font>' & pl
 
 if smokeNeed > 0 and siga > 0 and smoker >= 20:

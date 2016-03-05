@@ -117,6 +117,7 @@
             <File name="locations\carF1" />
             <File name="locations\casino" />
             <File name="locations\cfnm" />
+            <File name="locations\Cheatmenu_din" />
             <File name="locations\chessplay" />
             <File name="locations\cikl" />
             <File name="locations\clener" />
@@ -263,6 +264,7 @@
             <File name="locations\Grinok" />
             <File name="locations\gschool" />
             <File name="locations\gschool2" />
+            <File name="locations\gschool3" />
             <File name="locations\Gshveyfab" />
             <File name="locations\gskino" />
             <File name="locations\gskver" />
@@ -454,6 +456,7 @@
             <File name="locations\number4" />
             <File name="locations\obekt" />
             <File name="locations\obekt2" />
+            <File name="locations\obj_din" />
             <File name="locations\obkitchen" />
             <File name="locations\obroom" />
             <File name="locations\office" />
@@ -574,6 +577,7 @@
             <File name="locations\SgrupDisco" />
             <File name="locations\shop" />
             <File name="locations\shopdacha" />
+            <File name="locations\show_table" />
             <File name="locations\shulgabath" />
             <File name="locations\shulgabed" />
             <File name="locations\shulgahall" />
@@ -609,6 +613,7 @@
             <File name="locations\stol" />
             <File name="locations\stolPar" />
             <File name="locations\street" />
+            <File name="locations\street_event" />
             <File name="locations\strela" />
             <File name="locations\strelba" />
             <File name="locations\stripclub" />

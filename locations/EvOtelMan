@@ -139,7 +139,7 @@ if $ARGS[0] = 'Blow':
 	end
 end
 
-if $ARGS[0] = 'beforesex'
+if $ARGS[0] = 'beforesex':
 	if horny < 75 and vagina = 0 and sex = 0 or dom > 0 and vagina = 0 and sex = 0:
 		act 'I have a girl and a bank of virginity':
 			cls

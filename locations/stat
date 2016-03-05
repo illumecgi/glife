@@ -1128,19 +1128,17 @@ if health < 0:
 	end
 end
 
-if willpower < 0 and mana = 1:
-	if manna < 1:
-		if Enable_nogameover = 0 :
-			if StoryLine = 0:
-				over = 2
-			else
-				over = 10
-			end
-			gt'gameover'
-			exit & !nogameover by illume
+if willpower < 0 and manna <= 1:
+	if Enable_nogameover = 0 :
+		if StoryLine = 0:
+			over = 2
 		else
-			pl '<font color=red><B>You are insane, but Cheat Mode keeps you Alive.</B></font>'
+			over = 10
 		end
+		gt'gameover'
+		exit & !nogameover by illume
+	else
+		pl '<font color=red><B>You are insane, but Cheat Mode keeps you Alive.</B></font>'
 	end
 	willpower = 0
 end

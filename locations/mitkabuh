@@ -19,7 +19,7 @@ if miraingop = 0 and alko < 8:
 
 		act 'Catching your breath':gt $curloc
 	end
-elseif miraingop = 0 and alko >= 8 and mitkadaybuh = daystart:
+elseif miraingop = 0 and alko >= 8 and mirasextimes > 0:
 		cls
 	if mitkadaybuh ! daystart:
 		mitkadaybuh = daystart
@@ -1108,7 +1108,7 @@ elseif miraingop = 0 and alko >= 8 and mitkadaybuh = daystart:
 		end
 		act 'Escape':gt'Gaddvor'	
 	end
-elseif miraingop = 0 and alko >= 8 and mirasextimes > 0:
+elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
 	'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
 	'You got drunk in the trash, leg practically no longer hold you. Mitya, noticing your condition, holds you by the waist. It seems, you`ve had enough...'
 	act 'Escape':gt'Gaddvor'	

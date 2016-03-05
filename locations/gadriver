@@ -1,6 +1,6 @@
 # gadriver
 
-if $ARGS[0] = 'Start':
+if $ARGS[0] = 'start':
 	$metka = $ARGS[0]
 	$loc = $CURLOC
 
@@ -26,8 +26,8 @@ if $ARGS[0] = 'Start':
 
 	'A small village creek flowing just off Gadyukino.'
 	temp = RAND(0,20)
-	if temp = 0 and hour >= 6 and hour < 22 and month >= 5 and month <= 9 and sunWeather = 1:'On the banks spread their fishing rods <a href="exec: dynamic $fishers ">local fishermen</a>.'
-	if temp = 1 and hour < 5 and month >= 5 and month <= 9 and miragopQW >= 20:'Right next to the path leading to the river, is completely naked <a href="exec: dynamic $mirapunish ">Mira</a>, crucified between two trees...'
+	if temp = 0 and hour >= 6 and hour < 22 and month >= 5 and month <= 9 and sunWeather = 1:'On the banks spread their fishing rods <a href="exec: gt ''Gadriver'', ''fishers'' ">local fishermen</a>.'
+	if temp = 1 and hour < 5 and month >= 5 and month <= 9 and miragopQW >= 20:'Right next to the path leading to the river, is completely naked <a href="exec: gt ''Gadriver'', ''mirapunish'' ">Mira</a>, crucified between two trees...'
 
 
 	if temp = 2 and mirainriver = 0 and mitkasextimes >= 13 and hour >= 5 and sub > 0:
@@ -143,8 +143,8 @@ if $ARGS[0] = 'Start':
 			act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
 		end
 	else
-			act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
-			act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
+		act 'To the beach':minut += 5 & gt 'Gadriver', 'Gadbitch'
+		act 'To the village':minut += 20 & mirainriver = 0 & gt 'gadukino'
 	end
 end
 
@@ -174,8 +174,7 @@ if $ARGS[0] = 'Gadbitch':
 			'The river splashing fun <a href="exec:sun = 0 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
 		end
 	end
-	if mirainriver = 0 and mitkasextimes >= 13:temp = RAND(0,10)
-	if mirainriver = 0 and mitkasextimes >= 13 and temp = 0 and hour >= 8 and hour < 20 and month >= 5 and month <= 9 and temper >= 20 and sunWeather = 1:'On the river rest <a href="exec: dynamic $MitkaGuysRiver ">Bob Colby</a>.'
+	if mirainriver = 0 and mitkasextimes >= 13 and RAND(0,10) = 0 and hour >= 8 and hour < 20 and month >= 5 and month <= 9 and temper >= 20 and sunWeather = 1:'On the river rest <a href="exec: gt ''Gadriver'', ''GuysRiver'' ">Bob Colby</a>.'
 
 	if temper >= 20 and month >= 5 and month <= 9:
 
@@ -499,10 +498,10 @@ if $ARGS[0] = 'Mira':
 	act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
 
 	act 'Chat':
-	cls
-	minut += 10
-	manna += 10
-	gs 'stat'
+		cls
+		minut += 10
+		manna += 10
+		gs 'stat'
 		if sun = 1:
 			if miragopQW < 12:
 				'<center><img src="images/qwest/gadukino/river/MiraBeach.jpg"></center>'
@@ -516,12 +515,12 @@ if $ARGS[0] = 'Mira':
 				'<center><img src="images/qwest/gadukino/river/MiraRiverNude.jpg"></center>'
 			end
 		end
-	 'You are chatting with Mira about trivial things.'
-	act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
+		'You are chatting with Mira about trivial things.'
+		act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
 	end
 end
 
-$fishers = {
+if $ARGS[0] = 'fishers':
 	cls
 	minut += 2
 	gs 'stat'
@@ -529,9 +528,9 @@ $fishers = {
 	'<center><img src="images/qwest/gadukino/river/GadRiverFishers.jpg"></center>'
 
 	act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
-}
+end
 
-$mirapunish = {
+if $ARGS[0] = 'mirapunish':
 	cls
 	minut += 10
 	horny += RAND(25,75)
@@ -542,9 +541,9 @@ $mirapunish = {
 	'- Thank God - with a sigh of relief she adds to her story. - Well, it was you got to me and not someone else, and then imagine what would have been a picture - naked Mirka, Crucified night among the trees, stay away and do what you want, even fuck, even beat, kill ... Well had passed, thank you, she asks, you did great was saved!'
 
 	act 'Leave':minut += 5 & gt 'Gadriver', 'Gadbitch'
-}
+end
 
-$MitkaGuysRiver = {
+if $ARGS[0] = 'GuysRiver':
 	cls
 	minut += 5
 	horny += 10
@@ -555,7 +554,7 @@ $MitkaGuysRiver = {
 	' - Oh, <<$nickname>>, us-that`s just you and not enough, - smiled Kolyamba.'
 	if temp < 4:
 		' - It seems nobody around, and I want to fuck, so let`s, Spreads legs, After working her pussy...'
-	elseif temp >= 4 and temp < 8:
+	elseif temp < 8:
 		' - suck us, and? And we `ll be thankful you age, ha-ha!'
 	else
 		' - To substitute its zhopku, and that to me oh as hunting finished it...'
@@ -574,7 +573,7 @@ $MitkaGuysRiver = {
 			
 			'<center><img src="images/qwest/gadukino/river/MitkaGuysRiverSex.jpg"></center>'
 			'You quickly took off pants and climbed on U Mosta Kolyambu, hand groping his cock.'
-			
+
 			dynamic $sexstart
 			dynamic $sexstart2
 			dynamic $sexcum
@@ -587,8 +586,8 @@ $MitkaGuysRiver = {
 				dick = 15
 				minut += 10
 				horny += RAND(25,75)
-				temp = RAND(0,2)
 				gs 'stat'
+				temp = RAND(0,2)
 				
 				if temp = 0:
 				
@@ -630,7 +629,7 @@ $MitkaGuysRiver = {
 				act 'Escape':minut += 5 & gt'Gadriver', 'Gadbitch'
 			end
 		end
-	elseif temp >= 4 and temp < 8:
+	elseif temp < 8:
 		act 'serve Kolyambu':
 			cls
 			$nameV = 'Kolyamba'
@@ -655,8 +654,8 @@ $MitkaGuysRiver = {
 				dick = 15
 				minut += 10
 				horny += RAND(25,75)
-				temp = RAND(0,2)
 				gs 'stat'
+				temp = RAND(0,2)
 				
 				if temp = 0:
 				
@@ -768,7 +767,7 @@ $MitkaGuysRiver = {
 	if dom > 0:
 		act 'Escape':minut += 5 & gt'Gadriver', 'Gadbitch'
 	end
-}
+end
 
 --- gadriver ---------------------------------
 

@@ -27,7 +27,7 @@ if $ARGS[0] = '':
 				gs 'stat'
 				'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
 				'You drank with the man and he got up from his chair walked up to you. His lips began to kiss your hands and began to pull off your clothes.'
-				gs 'EvOtelMan','$din_otel_man_beforesex'
+				gt 'EvOtelMan', 'beforesex'
 			end
 		end
 	end
@@ -41,12 +41,12 @@ if $ARGS[0] = '':
 			'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
 			'You entered the room and closed the door barely a man as he stared at you with a kiss, and his hands began to fumble through your body trying to steal your clothes.'
 
-			gs 'EvOtelMan','$din_otel_man_beforesex'
+			gt 'EvOtelMan', 'beforesex'
 		end
 	end
 end
 
-if $ARGS[0] = '$din_otel_man_end':
+if $ARGS[0] = 'End':
 	act 'Brush up':
 		cls
 		minut += 15
@@ -62,7 +62,7 @@ if $ARGS[0] = '$din_otel_man_end':
 	end
 end
 
-if $ARGS[0] = '$din_otel_man_blow':
+if $ARGS[0] = 'Blow':
 	act 'Squat':
 		cls
 		bj += 1
@@ -92,7 +92,7 @@ if $ARGS[0] = '$din_otel_man_blow':
 				gs 'stat'
 				'<center><img src="images/qwest/alter/Ev/bj3.jpg"></center>'
 				'You continued to suck cock and swallow cum sperm gets into your mouth. Semen was so much that you do not have time to swallow everything and it flows out of your mouth over the penis. Finally <<$bname>> ceases to finish and you get the dick out of your mouth smelling sperm. In the mouth, the taste of nasty cumshot obliznuvshis you realize that your <<$liptalk3>> wet with semen.'
-				gs 'EvOtelMan','$din_otel_man_end'
+				gt 'EvOtelMan', 'End'
 			end
 
 			act 'Remove the mouth':
@@ -104,7 +104,7 @@ if $ARGS[0] = '$din_otel_man_blow':
 				gs 'stat'
 				'<center><img src="images/qwest/alter/Ev/bj4.jpg"></center>'
 				'You remove a member from his mouth and jet of sperm immediately slapped you in the face. You shut his eyes for fear that the sperm gets into your eyes and feel as another spurt of hot Cum landed on your face.'
-				gs 'EvOtelMan','$din_otel_man_end'
+				gt 'EvOtelMan', 'End'
 			end
 		end
 
@@ -119,7 +119,7 @@ if $ARGS[0] = '$din_otel_man_blow':
 			'<center><img src="images/qwest/alter/Ev/anal.jpg"></center>'
 			dynamic $sexstart
 			dynamic $analsex
-			gs 'EvOtelMan','$din_otel_man_end'
+			gt 'EvOtelMan', 'End'
 		end
 
 		act 'Lie on your back.':
@@ -134,12 +134,12 @@ if $ARGS[0] = '$din_otel_man_blow':
 			dynamic $sexstart
 			dynamic $sexstart2
 			dynamic $sexcum
-			gs 'EvOtelMan','$din_otel_man_end'
+			gt 'EvOtelMan', 'End'
 		end
 	end
 end
 
-if $ARGS[0] = '$din_otel_man_beforesex':
+if $ARGS[0] = 'beforesex':
 	if horny < 75 and vagina = 0 and sex = 0 or dom > 0 and vagina = 0 and sex = 0:
 		act 'I have a girl and a bank of virginity':
 			cls
@@ -149,7 +149,7 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 
 			if tiprandeom < 2:
 				'You have admitted that you like men, but you are still a girl would want to keep your virginity. The man smiled and said that sex can be engaged and remaining girl. <<$bname>> took a cock from his pants.'
-				gs 'EvOtelMan','$din_otel_man_blow'
+				gt 'EvOtelMan', 'Blow'
 
 				if dom > 0:
 					act 'Not even hope':
@@ -163,7 +163,7 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 							money += 500
 							gs 'stat'
 							'You reached your palm and the man gave you five hundred rubles.'
-							gs 'EvOtelMan','$din_otel_man_blow'
+							gt 'EvOtelMan', 'Blow'
 						end
 
 						act 'Leave':gt 'vokzalG'
@@ -187,7 +187,7 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 							gs 'stat'
 							'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
 							'You reached your palm and the man gave you five hundred rubles.'
-							gs 'EvOtelMan','$din_otel_man_blow'
+							gt 'EvOtelMan', 'Blow'
 						end
 
 						act 'Leave':gt 'vokzalG'
@@ -215,7 +215,7 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 						dynamic $sexstart
 						dynamic $sexstart2
 						dynamic $sexcum
-						gs 'EvOtelMan','$din_otel_man_end'
+						gt 'EvOtelMan', 'End'
 					end
 
 					if dom > 0:
@@ -230,7 +230,7 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 								money += 500
 								gs 'stat'
 								'You reached your palm and the man gave you five hundred rubles.'
-								gs 'EvOtelMan','$din_otel_man_blow'
+								gt 'EvOtelMan', 'Blow'
 							end
 
 							act 'Leave':gt 'vokzalG'
@@ -266,7 +266,7 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 				dynamic $sexstart
 				dynamic $sexstart2
 				dynamic $sexcum
-				gs 'EvOtelMan','$din_otel_man_end'
+				gt 'EvOtelMan', 'End'
 			end
 
 			if dom > 0:
@@ -282,7 +282,7 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 						money += 500
 						gs 'stat'
 						'You reached your palm and the man gave you five hundred rubles.'
-						gs 'EvOtelMan','$din_otel_man_blow'
+						gt 'EvOtelMan', 'Blow'
 					end
 
 					act 'Leave':gt 'vokzalG'
@@ -307,9 +307,9 @@ if $ARGS[0] = '$din_otel_man_beforesex':
 		dynamic $sexstart
 		dynamic $sexstart2
 		dynamic $sexcum
-		gs 'EvOtelMan','$din_otel_man_end'
+		gt 'EvOtelMan', 'End'
 	end
-	if dom > 0: gs 'EvOtelMan','$din_otel_man_blow'
+	if dom > 0: gt 'EvOtelMan', 'Blow'
 end
 
 --- EvOtelMan ---------------------------------

@@ -217,7 +217,7 @@ if $ARGS[0] = 'break':
 		exit
 	end
 	if hour > 13: 
-		gt'gschool'
+		gt 'gschool', 'start'
 		exit
 	end
 	gs'stat'

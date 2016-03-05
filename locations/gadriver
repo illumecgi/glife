@@ -167,10 +167,12 @@ if $ARGS[0] = 'Gadbitch':
 	end
 
 	'A small country beach, where you can sunbathe and swim.'
-	if mirainriver = 1 and RAND(0,20) < 10:
-		'On the beach sunning razomlevshie<a href="exec:sun = 1 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
-	else
-		'The river splashing fun <a href="exec:sun = 0 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
+	if sunWeather = 1:
+		if mirainriver = 1 and RAND(0,20) < 10:
+			'On the beach sunning razomlevshie<a href="exec:sun = 1 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
+		else
+			'The river splashing fun <a href="exec:sun = 0 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
+		end
 	end
 	if mirainriver = 0 and mitkasextimes >= 13:temp = RAND(0,10)
 	if mirainriver = 0 and mitkasextimes >= 13 and temp = 0 and hour >= 8 and hour < 20 and month >= 5 and month <= 9 and temper >= 20 and sunWeather = 1:'On the river rest <a href="exec: dynamic $MitkaGuysRiver ">Bob Colby</a>.'
@@ -245,7 +247,7 @@ if $ARGS[0] = 'Gadbitch':
 				end
 			end
 		else
-			act 'Bathe':
+			act 'Bathe naked':
 				cla
 				*clr
 				temp = RAND(0,15)
@@ -319,8 +321,8 @@ if $ARGS[0] = 'Gadbitch':
 				end
 			end
 		end
-		if hour >= 8 and hour < 20:
-			if bikini > 0 and sunWeather = 1:
+		if hour >= 8 and hour < 20 and sunWeather = 1:
+			if bikini > 0:
 				act 'Sunbathing (1:00)':
 					cla
 					*clr

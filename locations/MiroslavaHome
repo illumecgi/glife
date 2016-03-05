@@ -82,7 +82,7 @@ if hour >= 8 and hour <= 22:
 					gs 'stat'
 					'<center><img src="images/qwest/gadukino/trail_meadow.jpg"></center>'
 					'You lead Mira through the thickets to a hidden meadow and all the way she talks about everything, merrily chirping and telling stories from her past urban life.'
-					act 'Come':gt 'meadow'
+					act 'Come':gt 'meadow', 'start'
 				end
 			elseif meadow > 1 and hour >= 8 and hour < 19:
 				act 'Offer to go to the Meadow':
@@ -97,7 +97,7 @@ if hour >= 8 and hour <= 22:
 						'<center><img src="images/qwest/gadukino/trail_meadow.jpg"></center>'
 						'You offer Miroslava take a stroll in your secret place and she readily agrees. On the way you tell each other different stories.'
 						
-						act 'Further':gt 'meadow'
+						act 'Further':gt 'meadow', 'start'
 					else
 						minut += 5
 						gs 'stat'

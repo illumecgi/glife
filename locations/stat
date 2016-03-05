@@ -1128,17 +1128,21 @@ if health < 0:
 	end
 end
 
-if willpower < 0 and manna <= 1:
-	if Enable_nogameover = 0 :
-		if StoryLine = 0:
-			over = 2
+if willpower <= 0 :
+	!this will set willpower to 0 correctly; then check mana =1 for insane-gameover(willpower=0&mana=1).
+	if manna <= 1:
+		if Enable_nogameover = 0 :
+			if StoryLine = 0:
+				over = 2
+			else
+				over = 10
+			end
+			gt'gameover'
+			exit & !nogameover by illume
 		else
-			over = 10
+			pl '<font color=red><B>You are insane, but Cheat Mode keeps you Alive.</B></font>'
+			!manna already checked for >=1 in line 1113 if manna <= 0, no need to set another one
 		end
-		gt'gameover'
-		exit & !nogameover by illume
-	else
-		pl '<font color=red><B>You are insane, but Cheat Mode keeps you Alive.</B></font>'
 	end
 	willpower = 0
 end
@@ -1356,15 +1360,15 @@ if Enable_showattr = 1:
 	gs 'indik', '1',stren , stren
 	pl '<<$ind>> Power'
 	gs'indik','1',speed,speed
-	pl '<<$ind>> Speed'		
+	pl '<<$ind>> Speed'
 	gs'indik','1',agil,agil
-	pl '<<$ind>> Agility'	
+	pl '<<$ind>> Agility'
 	gs'indik','1',vital,vital
-	pl '<<$ind>> Endurance'	
+	pl '<<$ind>> Endurance'
 	gs'indik','1',intel,intel
-	pl '<<$ind>> Intelligence'	
+	pl '<<$ind>> Intelligence'
 	gs'indik','1',will,will
-	pl '<<$ind>> Willpower'		
+	pl '<<$ind>> Spirit'
 	gs'indik','1',react,react
 	pl '<<$ind>> Reaction'
 	gs'indik','1',vnesh,vnesh

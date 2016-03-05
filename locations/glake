@@ -42,7 +42,8 @@ if month=1 or month=2 or month=12:
 	'<center>A small lake, located not far from Pavlovsk. You''re not sure whether Pavlovsk was built near the lake on purpose or not.</center>'
 	end
 	'<center>Ever since winter arrived, the lake in Pavlovsk has been frozen over. The lake is being used as a skating rink and lots of people go to skate there every day; if you have skates you could join them.</center>'
-	''	
+	''
+	if konki_stat>0: 'Your ice-skating skill is <<konki_stat>>.'
 end
 
 if $clothingworntype = 'nude': 

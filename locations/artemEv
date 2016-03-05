@@ -11,6 +11,8 @@ $din_artem_bj = {
 
 		sub += 1
 		swallow += 1
+		$boy = 'Artem'
+		sexpartkno = 1	
 		spafinloc = 12
 		gs 'cum_manage'
 		dick = 16
@@ -36,6 +38,10 @@ $din_artem_leghump = {
 		dom += 1
 		dick = 16
 		!{he removes all cum from the players clothes after orgasming}
+		$boy = 'Artem'
+		sexpartkno = 1
+		spafinloc = 7
+		gs 'cum_manage'
 		cumspclnt = 6
 		gs 'cum_cleanup'
 		artempower -= 1
@@ -60,6 +66,8 @@ $din_artem_leghump2 = {
 			leghumpArtem += 1
 			dom += 1
 			dick = 16
+			$boy = 'Artem'
+			sexpartkno = 1	
 			spafinloc = 4
 			gs 'cum_manage'
 			gs 'stat'
@@ -370,6 +378,8 @@ $din_artem_lern = {
 							artemBJQW += 1
 							sub += 1
 							swallow += 1
+							$boy = 'Artem'
+							sexpartkno = 1	
 							spafinloc = 12
 							gs 'cum_manage'
 							gang += 1
@@ -393,7 +403,16 @@ $din_artem_lern = {
 				if npcSex[6] = 0:npcSex[6] = 1 & guy += 1
 				vagina += 1
 				sub += 1
-				cumass += 2
+				$boy = 'Artem'
+				precumcheck = 1
+				gs 'cum_manage'
+				sexpartkno = 1
+				spafinloc = 4
+				gs 'cum_manage'
+				$boy = 'Peter'
+				sexpartkno = 1
+				spafinloc = 8
+				gs 'cum_manage'
 				gang += 1
 				gs 'stat'
 				'<center><img src="images/qwest/alter/artom/ap_anatomy3.jpg"></center>'
@@ -437,6 +456,8 @@ $din_artem_lern = {
 					artemBJQW += 1
 					sub += 1
 					swallow += 1
+					$boy = 'Artem'
+					sexpartkno = 1	
 					spafinloc = 11
 					gs 'cum_manage'
 					gang += 1
@@ -465,14 +486,20 @@ $din_artem_lern = {
 					minut += 15
 					horny += 10
 					bj += 1
+					cumspclnt = 7
+					gs 'cum_cleanup'
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
 					if npcSex[6] = 0:npcSex[6] = 1 & guy += 1
 					artemBJQW += 1
 					swallow += 1
+					$boy = 'Artem'
+					sexpartkno = 1	
 					spafinloc = 12
 					gs 'cum_manage'
 					anus += 1
 					sub += 1
+					$boy = 'Peter'
+					sexpartkno = 1
 					spafinloc = 3
 					gs 'cum_manage'
 					gang += 1
@@ -513,6 +540,14 @@ $din_artem_lern = {
 					if npcSex[6] = 0:npcSex[6] = 1 & guy += 1
 					artemBJQW += 1
 					swallow += 1
+					$boy = 'Artem'
+					precumcheck = 1
+					sexpartkno = 1
+					gs 'cum_manage'
+					spafinloc = 12
+					gs 'cum_manage'
+					$boy = 'Peter'
+					sexpartkno = 1
 					spafinloc = 12
 					gs 'cum_manage'
 					vagina += 1
@@ -530,6 +565,8 @@ $din_artem_lern = {
 						minut += 5
 						water += 10
 						fbreath = 0
+						cumspclnt = 2
+						gs 'cum_cleanup'	
 						gs 'stat'
 						'<center><img src="images/qwest/alter/artom/ap_anatomy6_3.jpg"></center>'
 						'You swallow the sperm and drink all the urine does not even wince. Guys put you out the door, saying that the next time prizodili right into the garage, and you quietly go home knowing that this is just the beginning.'
@@ -585,6 +622,12 @@ $artemKiss = {
 					sub += 1
 					manna = manna/2
 					minut += 15
+					$boy = 'Artem'
+					sexpartkno = 1
+					spafinloc = 13
+					gs 'cum_manage'
+					cumspclnt = 9
+					gs 'cum_cleanup'
 					hj += 1
 					hja += 1
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
@@ -598,6 +641,12 @@ $artemKiss = {
 				act 'Jerk off Artem':
 					cls
 					minut += 15
+					$boy = 'Artem'
+					sexpartkno = 1
+					spafinloc = 13
+					gs 'cum_manage'
+					cumspclnt = 9
+					gs 'cum_cleanup'
 					hj += 1
 					hja += 1
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
@@ -616,6 +665,12 @@ $artemKiss = {
 				act 'Jerk off Artem':
 					cls
 					minut += 15
+					$boy = 'Artem'
+					sexpartkno = 1
+					spafinloc = 13
+					gs 'cum_manage'
+					cumspclnt = 9
+					gs 'cum_cleanup'
 					hj += 1
 					hja += 1
 					if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
@@ -648,6 +703,8 @@ $artemKiss = {
 								minut += 15
 								anala += 1
 								artemanal += 1
+								cumspclnt = 7
+								gs 'cum_cleanup'
 								gs 'stat'
 
 								'<center><img src="images/qwest/alter/artom/anal.jpg"></center>'
@@ -671,6 +728,8 @@ $artemKiss = {
 									cls
 									minut += 5
 									swallow += 1
+									$boy = 'Artem'
+									sexpartkno = 1
 									spafinloc = 12
 									gs 'cum_manage'
 									gs 'stat'
@@ -688,6 +747,8 @@ $artemKiss = {
 									minut += 15
 									anala += 1
 									artemanal += 1
+									cumspclnt = 7
+									gs 'cum_cleanup'
 									gs 'stat'
 
 									'<center><img src="images/qwest/alter/artom/anal.jpg"></center>'
@@ -741,6 +802,8 @@ $artemKiss = {
 						end
 
 						swallow += 1
+						$boy = 'Artem'
+						sexpartkno = 1
 						spafinloc = 12
 						gs 'cum_manage'
 						gs 'stat'
@@ -790,6 +853,8 @@ $artemSkver = {
 			bj += 1
 			bja += 1
 			swallow += 1
+			$boy = 'Artem'
+			sexpartkno = 1
 			spafinloc = 12
 			gs 'cum_manage'
 			artemKinoKiss += 1
@@ -862,6 +927,13 @@ $artemGopSkver = {
 						bj += 3
 						guy += 3
 						eggs += 3
+						$boy = 'Gopnik'
+						spafinloc = 11
+						gs 'cum_manage'
+						$boy = 'Gopnik 1'
+						spafinloc = 11
+						gs 'cum_manage'
+						$boy = 'Gopnik 2'
 						spafinloc = 11
 						gs 'cum_manage'
 						facial += 1
@@ -910,6 +982,18 @@ $artemGopSkver = {
 							rape += 1
 							gang += 1
 							sub += 3
+							$boy = 'Gopnik'
+							cumprecheck = 1
+							gs 'cum_manage'
+							spafinloc = 12
+							gs 'cum_manage
+							$boy = 'Gopnik 1'
+							spafinloc = 12
+							gs 'cum_manage'
+							$boy = 'Gopnik 2'
+							spafinloc = 12
+							gs 'cum_manage'
+							$boy = 'Gopnik 3'
 							spafinloc = 12
 							gs 'cum_manage'
 							gs 'stat'

@@ -105,7 +105,7 @@ $objskills = {
 	pl 'Agility <<agil>>'
 	pl 'Endurance <<vital>>'
 	pl 'Intelligence <<intel>>'
-	pl 'Willpower <<will>>'
+	pl 'Spirit <<will>>'
 	pl 'Reaction <<react>>'
 	pl '<<$fat>>'
 	!!pl 'Bezstydstvo <<shameless>>'
@@ -230,6 +230,8 @@ $objstatistika = {
 		nl
 	end
 
+	
+	if chess_win > 0 or chess_loss > 0:pl'Chess Record: Win <<chess_win>>, Loss <<chess_loss>>'
 	if chess_rank > 0:
 		if chess_rank = 1:pl'You have mastered the basics of chess'
 		if chess_rank = 2:pl'You are starting to get good at chess'
@@ -657,6 +659,11 @@ $objpirsing = {
 		view 'images/picb/pirscligub.jpg'
 	}
 	clr
+	if pirsA = 0 and pirsB = 0 and pirsC = 0 and pirsD = 0 and pirsE = 0 and pirsF = 0 and pirsN = 0 and pirsG = 0 and pirsGL = 0:
+		pl 'You have no piercings.'
+	elseif pirsA ! 1 and pirsB ! 1 and pirsC ! 1 and pirsD ! 1 and pirsE ! 1 and pirsF ! 1 and pirsN ! 1 and pirsG ! 1 and pirsGL ! 1:
+		pl 'You are not wearing any piercings'
+	end
 	if pirsA = 1:pl 'Your tongue pierced and inserted to a small bar that is constantly felt in the mouth. <a href="exec:dynamic $dipirsA">See</a>'
 	if pirsB = 1:pl 'You pierced lower lip, and there vdet ring. <a href="exec:dynamic $dipirsB">See</a>'
 	if pirsC = 1:pl 'On your ears hang earrings. <a href="exec:dynamic $dipirsC">See</a>'

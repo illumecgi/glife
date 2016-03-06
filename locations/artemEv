@@ -986,7 +986,7 @@ $artemGopSkver = {
 							cumprecheck = 1
 							gs 'cum_manage'
 							spafinloc = 12
-							gs 'cum_manage
+							gs 'cum_manage'
 							$boy = 'Gopnik 1'
 							spafinloc = 12
 							gs 'cum_manage'

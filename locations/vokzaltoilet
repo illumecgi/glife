@@ -21,11 +21,12 @@ act 'Exit out of the closet':gt'vokzalholle'
 
 act 'Look in the mirror':gt 'mirror', 'start'
 
-if cumfrot > 0:
+if spdirtyc > 0:
 	act 'Wipe the cum off your clothes (0:10)':
 		cla
 		*clr
-		cumfrot = 0
+		cumspclnt = 6
+		gs 'cum_cleanup'
 		minut += 10
 
 		'You have washed out all traces of semen from your clothing.'

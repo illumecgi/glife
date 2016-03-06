@@ -203,8 +203,8 @@ $din_vokzalg_toilet_deyst = {
 			cla
 			*clr
 			mop = 1
-			cumlip = 0
-			cumface = 0
+			cumspclnt = 12
+			gs 'cum_cleanup'
 			sweat -= 1
 			minut += 5
 			'<center><img src="images/etogame/facesp.jpg"></center>'
@@ -219,7 +219,8 @@ $din_vokzalg_toilet_deyst = {
 		act 'Wipe the cum off your clothes (0:10)':
 			cla
 			*clr
-			cumfrot = 0
+			cumspclnt = 6
+			gs 'cum_cleanup'
 			minut += 10
 			'<center><img src="images/etogame/frotsp.jpg"></center>'
 			'You remove traces of cum from your clothes.'

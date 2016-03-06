@@ -183,7 +183,7 @@ $din_cheat_menu_permanent = {
 	pl'<a href="exec:dynamic $din_cheat_Nosweat">Never sweat</a>: <<$cheatNosweat>>'
 	pl'<a href="exec:dynamic $din_cheat_NoEat">Never eat or drink</a>: <<$cheatNoEat>>'
 	pl'<a href="exec:dynamic $din_cheat_NoSleep">Never sleep</a>: <<$cheatNoSleep>>'
-	pl'<a href="exec:dynamic $din_cheat_Health">Never catch STDs</a>: <<$cheatHealth>>'
+	pl'<a href="exec:dynamic $din_cheat_Health">Disable STDs</a>: <<$cheatHealth>>'
 	pl'<a href="exec:dynamic $din_cheat_Immune_Nark">Never get addicted</a>: <<$NarkImmune>>'
     pl''
 	pl'<a href="exec:alko = 0 & dynamic $din_cheat_menu_permanent">Sober</a>'

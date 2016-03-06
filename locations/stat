@@ -41,6 +41,8 @@ end
 
 if year_start ! year and katjaPreg = 0 and month >= 2:katjaPreg = 1
 
+if cheatHealth = 1:dynamic $din_std_cure
+
 if analplay >= 2 and anus <= 10:anus += 1 & analplay = 0
 if analplay >= 4 and anus <= 15:anus += 1 & analplay = 0
 if analplay >= 8 and anus <= 20:anus += 1 & analplay = 0
@@ -1257,7 +1259,7 @@ elseif (month = 12 and day >= 29) or (month = 1 and day <= 13):
 elseif (month = 3 and day >= 25):
 	$holyday = '<b>Spring Break</b>'
 	kanikuli = 3
-	if month = 3 and day = 25:$holyday += ' <b>Back to school tomorrow.</b>'
+	if month = 3 and day = 31:$holyday += ' <b>Back to school tomorrow.</b>'
 elseif (month = 5 and day >= 25) or month = 6 or month = 7 or month = 8:
 	if month = 5 and day = 25 and age = 17:
 		$holyday = '<b>Your graduation is today. Be there by 8h.</b>'

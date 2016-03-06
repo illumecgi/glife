@@ -55,7 +55,7 @@ if numnpc = 23 and artemIzdev = 1:
 		artemIzdev = 2
 		'You ask Albina if she knew where to get microchamber, referring to the fact, you want to play the parents. It, smile, advises to contact the photo studio in the City.'
 
-		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 	end
 end
@@ -131,7 +131,7 @@ act 'Chat':
 	if numnpc = 1 and grupNPC[numnpc] = 0:
 		'Dimka sniffed. "Get off me pimply pig."'
 
-		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 
 		exit
@@ -144,26 +144,26 @@ act 'Chat':
 			IvanShowerYes = 1
 			cla
 			'"I agree" you said.'
-			if $curloc ! 'gdkin':dynamic $din_sekondparturok
+			if $curloc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $curloc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 		act 'Refuse':
 			IvanShowerYes = 2
 			cla
 			'Having thought you said "No"'
-			if $curloc ! 'gdkin':dynamic $din_sekondparturok
+			if $curloc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $curloc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 	elseif numnpc = 13 and lariskaHelp = -1:
 		'Leave me alone, fool!'
 
-		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 	else
 		gs 'nogorslut'
 		gs 'yesgorslut'
 
-		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 	end
 end
@@ -190,7 +190,7 @@ if numnpc = 2:
 
 			if GorSlut < 3:'You came to Artem and asked him to help you to learn. Artem was a bit surprised and said to you "Okay. Come after school to my home, work."'
 			if GorSlut >= 3:'You came to Artem and asked him to help you to learn. Artem outraged "Bah, I''ll spend my time on this as you are, of course, and no more can not fit me."'
-			if $loc ! 'gdkin':dynamic $din_sekondparturok
+			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 	end
@@ -215,7 +215,7 @@ if numnpc = 12:
 
 			if GorSlut < 1:'You came to Julia and asked you to pull up a little learning, She thought agreed.'
 			if GorSlut >= 1:'You came to Julia and asked you to pull up a little learning, she snorted indignantly, well, and then think, we are friends.'
-			if $loc ! 'gdkin':dynamic $din_sekondparturok
+			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 	end
@@ -238,7 +238,7 @@ if numnpc = 14 and meynoldQW = 1:
 		'<center><img src="images/qwest/alter/npc/<<numnpc>>.jpg"></center>'
 		'You came to Katja and thanked her for what she stole you from the disco home when you have touched. Katja smiled at you. "Not at all, only you do not get drunk. Drunkenness could end badly."'
 
-		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 	end
 end
@@ -280,7 +280,7 @@ if numnpc = 14 and meynoldQW > 1 and mop <= 1:
 			'Katja legonechko your eyes and let the little tint the lips.'
 
 			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja blushes and depart from your eyes.'
-			if $loc ! 'gdkin':dynamic $din_sekondparturok
+			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 
@@ -290,7 +290,7 @@ if numnpc = 14 and meynoldQW > 1 and mop <= 1:
 			'Katja has made up your lips, eyes and let the eyelids.'
 
 			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja blushes and depart from your eyes.'
-			if $loc ! 'gdkin':dynamic $din_sekondparturok
+			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 
@@ -300,7 +300,7 @@ if numnpc = 14 and meynoldQW > 1 and mop <= 1:
 			'Katja painted her lips bright lipstick you thickly painted her eyes and eyelashes, eyebrows and summed imposed deep shadows.'
 
 			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja blushes and depart from your eyes.'
-			if $loc ! 'gdkin':dynamic $din_sekondparturok
+			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 	end
@@ -318,7 +318,7 @@ if numnpc = 14 and apmeet = 3 and artemIzdev = 0:
 		'You tell her a story about nerds. She does not believe you. But you convince her this - telling nasty details. Kate is shocked. You talk to her, that came up with a solution how to get rid of blackmail - we must find them dirt. But where can I get it. Kate advises you to take where-a microchamber and shoot all bullying, but only to make it look as violence.'
 		'"Perhaps Albina can help you."'
 
-		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 	end
 end
@@ -356,13 +356,13 @@ if numnpc = 16:
 
 			if GorSlut < 1:'You came to Natasha and asked you to pull up a little learning, She thought agreed.'
 			if GorSlut >= 1:'You came to Natasha and asked you to pull up a little learning, she snorted indignantly, well, and then think, we are friends.'
-			if $loc ! 'gdkin':dynamic $din_sekondparturok
+			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 	end
 end
 
-if $loc ! 'gdkin':dynamic $din_sekondparturok
+if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 
 --- Snpc ---------------------------------

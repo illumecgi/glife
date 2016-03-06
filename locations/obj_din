@@ -6,6 +6,7 @@ $din_show_tits = {
 }
 
 $objdescrip = {
+	gs 'body'
 	clr
 	pl'<center><img src="images/pic/icon/description.png"><br></center>'
 	pl 'Your name is <<$name>> <<$surname>>.'

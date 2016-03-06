@@ -2142,18 +2142,11 @@ if fingal > 0:pl '<b><font color="red">You have a black eye.</font></b>'
 
 ! WD: Bimbo look
 if cloth_vid = 1:
-	pl '<b><a href="exec:dynamic $din_exhibiTakeOffBimbo">You look like a bimbo</a></b>'
-elseif exhibiHideNewCloth ! 1 and hcol = 3 and (exhibi + lip + skin + mop + tits) >= 15 and (ski + glamur + sexual) >= 1:
-	pl '<b><a href="exec:dynamic $din_exhibiHideNewCloth">You could wear a bimbo outfit</a></b>'
+	pl '<b>You look like a bimbo</b>'
+elseif hcol = 3 and (exhibi + lip + skin + mop + tits) >= 15 and (ski + glamur + sexual) >= 1:
+	pl '<b>You could wear a bimbo outfit</b>'
 end
-!{
-if cloth_vid = 1:
-	!pl '<b><a href="exec:dynamic $din_exhibiTakeOffBimbo">You are dressed up like a bimbo</a></b>'
-end
-if exhibi >= 4 and exhibiHideNewCloth ! 1:
-	pl '<b><a href="exec:dynamic $din_exhibiHideNewCloth">You have opened a new outfit</a></b>'
-end
-}
+
 if tanga = 1 and $clothingworntype = 'nude':
 	pl'<b><font color = red>You are stripped down to your panties and your boobs sway invitingly as you walk</font></b>'
 elseif tanga = 0:

@@ -5,8 +5,8 @@ $boy = 'Artem'
 dick = 16
 silavag = 0
 
-if artemhomemark = 0:
-	'You came to the house Artem Chebotarev.'
+if $ARGS[0] = '':
+	'You go to Artem Chebotarev''s apartment.'
 
 	if week < 6:
 		if hour < 16 and hour >= 7:
@@ -14,7 +14,7 @@ if artemhomemark = 0:
 		elseif hour >= 16 and hour < 20:
 			'Artem opens the door and invites you to enter.'
 
-			act 'Enter':artemhomemark = 1 & gt $curloc
+			act 'Enter':gt 'artemhome', 'inside'
 		elseif hour >= 20 or hour < 7:
 			'Too late, that would go to visit.'
 		end
@@ -24,15 +24,18 @@ if artemhomemark = 0:
 		elseif hour >= 10 and hour < 20:
 			'Artem opens the door and invites you to enter.'
 
-			act 'Enter':artemhomemark = 1 & gt $curloc
+			act 'Enter':gt 'artemhome', 'inside'
 		elseif hour >= 20 or hour < 5:
 			'Too late, that would go to visit.'
 		end
 	end
 	act 'Escape':minut += 15 & gt'pod_ezd','etaj_1'
+end
 
-elseif artemhomemark = 1:
+if $ARGS[0] = 'inside':
 	if ArtemBeInHome = 0:ArtemBeInHome = 1
+	'<center><b><font color="maroon"><<$npcName[2]>> <<$npcSurName[2]>></font></b></center>'
+	'<center><img src="images/qwest/alter/npc/2.jpg"></center>'
 	if artQW = 21:
 		gt'ArtemEv3','slut_talk'
 		exit
@@ -53,7 +56,7 @@ elseif artemhomemark = 1:
 
 			swallow += 1
 			spafinloc = 12
-gs 'cum_manage'
+			gs 'cum_manage'
 			gs 'stat'
 			'<center><img src="images/qwest/alter/artom/facefuck.jpg"></center>'
 			'After these words, you choke, you are sick and flow snot, tears and saliva, Artem not stand for a long time and ends you right in the throat. You choking convulsively swallow sperm.'
@@ -151,14 +154,14 @@ gs 'cum_manage'
 				'You agree, quickly packed up and went for a walk on the square.'
 				act 'Walk':dynamic $artemSkver
 			end
-			act 'Refuse': gt $curloc
+			act 'Refuse': gt 'artemhome', 'inside'
 		else
 			'"<<$name>>, Let`s go to bibleotek, to write the essay?"'
 			act 'Agree':
 				'You agreed and went with Artem in bibleotek.'
 				act 'Go':dynamic $artemBibl
 			end
-			act 'Refuse': gt $curloc
+			act 'Refuse': gt 'artemhome', 'inside'
 		end
 	end
 
@@ -206,7 +209,7 @@ gs 'cum_manage'
 				if lernHome > 0:
 					dynamic $din_artem_lern
 				else
-					act 'Leave':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
+					act 'Leave':minut += 15 & gt'pod_ezd','etaj_1'
 				end
 			end
 
@@ -222,7 +225,7 @@ gs 'cum_manage'
 				if lernHome > 0:
 					dynamic $din_artem_lern
 				else
-					act 'Leave':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
+					act 'Leave':minut += 15 & gt'pod_ezd','etaj_1'
 				end
 			end
 		end
@@ -241,13 +244,13 @@ gs 'cum_manage'
 			'<center><img src="images/qwest/alter/npc/<<2>>.jpg"></center>'
 			'You talked for an hour with Artem. Rather you are talking, and Artem listened to your stream of consciousness.'
 
-			act 'Return':gt 'artemhome'
+			act 'Return':gt 'artemhome', 'inside'
 		end
 	end
 
 	if lernHome > 0:dynamic $din_artem_lern
 
-	act 'Leave':artemhomemark = 0 & minut += 15 & gt'pod_ezd','etaj_1'
+	act 'Leave':minut += 15 & gt'pod_ezd','etaj_1'
 end
 
 --- artemhome ---------------------------------

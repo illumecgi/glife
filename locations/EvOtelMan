@@ -6,9 +6,9 @@ if $ARGS[0] = '':
 	gs 'tboyopr'
 	gs 'stat'
 
+	'A man walked up to standing next to the club and exchange a taxi driver with him a few words turned to you. "<<$name>> go." You with the man got into a taxi and quickly drove to the hotel. The man led you to your room.'
+	act 'Walk into the room':
 	if DPtipe = 1:
-		'A man walked up to standing next to the club and exchange a taxi driver with him a few words turned to you. "<<$name>> go." You with the man got into a taxi and quickly drove to the hotel. The man led you to your room.'
-		act 'Walk into the room':
 			cls
 			BeInOtel += 1
 			minut += 5
@@ -17,36 +17,31 @@ if $ARGS[0] = '':
 			'The room was quite decent. The man went to the fridge and began to spread on the table. Misted bottle of whiskey servilat banking caviar, fruit plate. Laying everything on the table, the man tripped you a chair on which you sat. He sat in the chair next to you and poured whiskey glasses. "Well, let''s drink to <<$name>> acquaintance. I''m so glad to have met such a beautiful and wonderful girl like you."'
 
 			act 'Have a drink':gt 'EvOtelMan', 'sex'
-			end
 		end
-	end
-
-	if DPtipe = 2:
-		'A man walked up to standing next to the club and exchange a taxi driver with him a few words turned to you. "<<$name>> go." You with the man got into a taxi and quickly drove to the hotel. The man led you to your room.'
-		act 'Walk into the room':
-			cls
-			minut += 5
-			gs 'stat'
-			'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
-			'You entered the room and closed the door barely a man as he stared at you with a kiss, and his hands began to fumble through your body trying to steal your clothes.'
-
-			gt 'EvOtelMan', 'sex'
-		end
+	else
+		gt 'EvOtelMan', 'sex'
 	end
 end
 
 if $ARGS[0] = 'sex':
 	cls
-	horny += 20
-	alko += 2
-	cumspclnt = 2
-	gs 'cum_cleanup'
-	fbreath = 0
 	minut += 5
-	gs 'stat'
-	'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
-	'You drank with the man and he got up from his chair walked up to you. His lips began to kiss your hands and began to pull off your clothes.'
-				
+
+	if DPtipe = 1:
+		horny += 20
+		alko += 2
+		cumspclnt = 2
+		gs 'cum_cleanup'
+		fbreath = 0
+		gs 'stat'
+		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+		'You drank with the man and he got up from his chair walked up to you. His lips began to kiss your hands and began to pull off your clothes.'
+	else
+		gs 'stat'
+		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+		'You entered the room and closed the door barely a man as he stared at you with a kiss, and his hands began to fumble through your body trying to steal your clothes.'
+	end
+
 	if (horny < 75 and vagina = 0 and sex = 0) or (dom > 0 and vagina = 0 and sex = 0):
 		act 'I have a girl and a bank of virginity':
 			cls

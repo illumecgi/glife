@@ -332,7 +332,7 @@ if marudatestinterface = 0:
 
 ''
 if Enable_tablemap = 0:
-	if storyline = 1:'The Shulgin family live in the <a href="exec:minut += 15 & gt ''shulgahome''">Artem Chebotarev</a>apartment</a> above your parents.'
+	if storyline = 1:'The Shulgin family live in the <a href="exec:minut += 15 & gt ''shulgahome''">apartment</a> above your parents.'
 	if ArtemBeInHome > 0 and artemblok = 0:'<a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarev</a>, one of your classmates, lives in the same apartment building as your parents, on the first floor.'
 	if BeInJulMilHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'<a href="exec:minut += 15 & gt ''JuliaMilVhod''">Julia Milova</a>, one of your classmates, lives in the same apartment building as your parents, on the third floor.'
 	if BeInNatBelHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'<a href="exec:minut += 15 & gt ''NatBelHome''">Natasha Belova</a>, one of your classmates, lives in the same apartment building as your parents, on the fourth floor.'

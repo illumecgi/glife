@@ -1,7 +1,7 @@
 # mitkabuh
 gs 'stat'
 
-if hour <= 17:
+if hour >= 17:
 	if miraingop = 0 and alko < 8:
 		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
 		'Set in a secluded spot three village boy, Mitka kingpin, Bob Package and Kolyamba drink moonshine without snacks. Mitka brew pours into a glass and takes you.'
@@ -1492,6 +1492,8 @@ if hour <= 17:
 			end
 		end
 	end
+else
+	gt $loc, $metka
 end
 
 --- mitkabuh ---------------------------------

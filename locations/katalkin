@@ -169,8 +169,6 @@ elseif hour >= 22:
 			end
 		end
 	elseif katalkinSexOnce = 0:
-		'IF THIS MESSAGE climbed it BAG'
-
 		if schtraf = 0:
 			'When Katalkin sees you walk by, he waves you over and drunkenly says: <<$name>>! Come here, join me for a drink!"'
 

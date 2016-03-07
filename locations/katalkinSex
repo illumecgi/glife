@@ -156,6 +156,7 @@ elseif katsexetap = 1:
 				act 'Swallow his cum':
 					cls
 					swallow += 1
+					sexpartkno = 1
 					spafinloc = 12
 					gs 'cum_manage'
 					KatalkinSwallow += 1
@@ -169,6 +170,7 @@ elseif katsexetap = 1:
 				act 'Take his load on your face':
 					cls
 					facial += 1
+					sexpartkno = 1
 					spafinloc = 11
 					gs 'cum_manage'
 					KatalkinFacial += 1

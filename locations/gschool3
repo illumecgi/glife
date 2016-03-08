@@ -229,7 +229,7 @@ if $ARGS[0] = 'rand_scoolboy':
 				end
 			end
 
-			if katja_scool_sex = 1:
+			if katschoolsex = 1:
 				act 'Go to the back room with the guy':
 					*clr & cla
 					'<center><img src="images/qwest/alter/Ev/kiss.gif"></center>'

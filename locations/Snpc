@@ -250,7 +250,7 @@ if numnpc = 14 and rand(1,5) = 1 and Katja_tanga_end=1  and horny > 60 :
 		minut += 1
 		gs'stat'
 		'<center><img src="images/qwest/alter/katja/katja_disco1.jpg"></center>'
-	elseif $loc = 'gdkin':
+	elseif $loc ! 'gdkin':
 		minut += 1
 		gs'stat'
 		'<center><img src="images/qwest/alter/katja/tanga_Kiss.jpg"></center>'
@@ -272,14 +272,14 @@ if numnpc = 14 and meynoldQW > 1 and mop <= 1:
 		'<center><b><font color="maroon"><<$npcName[numnpc]>> <<$npcSurName[numnpc]>></font></b></center>'
 		! WD: Remove Dupe Images ~ '<center><img src="images/qwest/alter/npc<<numnpc>>.jpg"></center>'
 		'<center><img src="images/qwest/alter/npc/<<numnpc>>.jpg"></center>'
-		'Katja quickly straightened your hair and asked. "You what? Little tint, usually distribute or shovel?"'
+		'Katja quickly straightens your hair and asks, "What do you want? Light makeup, normal makeup or shall I just shovel it on?"'
 
 		act 'Light makeup':
 			cla
 			mop = 2
-			'Katja legonechko your eyes and let the little tint the lips.'
+			'Katja lightens your eyes and applies a natural coloured lipstick.'
 
-			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja blushes and depart from your eyes.'
+			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja suddenly becomes aware that she is staring into your eyes and blushes.'
 			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
@@ -287,19 +287,19 @@ if numnpc = 14 and meynoldQW > 1 and mop <= 1:
 		act 'Normal makeup':
 			cla
 			mop = 3
-			'Katja has made up your lips, eyes and let the eyelids.'
+			'Katja applies make up to your lips and around your eyes before carefully brushing some mascara on your lashes.'
 
-			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja blushes and depart from your eyes.'
+			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja suddenly becomes aware that she is staring into your eyes and blushes.'
 			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end
 
-		act 'Bright makeup':
+		act 'Heavy makeup':
 			cla
 			mop = 4
-			'Katja painted her lips bright lipstick you thickly painted her eyes and eyelashes, eyebrows and summed imposed deep shadows.'
+			'Katja paints your lips with a bright lipstick, thickly paints your eyelashes and shovels on the eye shadow.'
 
-			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja blushes and depart from your eyes.'
+			if KatjaOTN > 0:KatjaHorny += 10 & 'Katja suddenly becomes aware that she is staring into your eyes and blushes.'
 			if $loc ! 'gdkin':act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			if $loc = 'gdkin':act 'Move away':gt $loc, $metka
 		end

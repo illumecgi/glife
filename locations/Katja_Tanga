@@ -1,7 +1,7 @@
 # Katja_Tanga
 $din_katja_secretroom = {
 	*clr & cla
-	katja_scool_sex = 1 & ! Flag sex with Kate at the school
+	if katschoolsex = 0: katschoolsex = 1 & ! Flag sex with Kate at the school
 	'<center><img src="images/qwest/alter/katja/tanga4_4.jpg"></center>'
 	'You skipped react to the body mladsheklassnikov, fun laughing and swinging skirts of school uniforms as a flag. Waiting when Katja close you up inside, You went to Katja...'
 	Act 'Baring breasts':
@@ -102,7 +102,7 @@ act 'Show':
 				KatjaSlut += 1
 				'<center><img src="images/qwest/alter/katja/tanga3_<<i>>.jpg"></center>'
 				'Katja looked around furtively, and lifted up her skirt school, He said: «No, today, do not skip».'
-			elseif KatjaSlut > 40 and katja_scool_sex = 0:
+			elseif KatjaSlut > 40 and katschoolsex = 0:
 				'<center><img src="images/qwest/alter/katja/tanga4_1.jpg"></center>'
 				'"Oh, and you`re back in shorts, you are not interested", - Katja, She blushed and said quietly, but that it does not have a bra.'
 				Act 'Share':
@@ -119,8 +119,8 @@ act 'Show':
 					end
 					dynamic $din_sekondparturok	
 				end
-			elseif  katja_scool_sex = 1 and KatjaSlut > 60 and param = 0: 
-				!katja_scool_sex=1 Flag sex with Katja at the school
+			elseif  katschoolsex = 1 and KatjaSlut > 60 and param = 0: 
+				!katschoolsex=1 Flag sex with Katja at the school
 				*clr & cla
 				KatjaSlut += 1
 				'<center><img src="images/qwest/alter/katja/tanga5_1.jpg"></center>'

@@ -256,22 +256,23 @@ if $ARGS[0] = 'break':
 				gs 'Katja_Tanga'
 				*clr & cla
 				dynamic  $din_katja_secretroom
-			end
+			else
 
-			act 'Eat Katja out':
-				cls
-				lesbian += 1
-				sub += 1
-				KatjaDom += 1
-				katschoolsex += 1
-				KatjaSlut += 1
-				KatjaHorny = 0
-				gs 'stat'
-				'<center><img src="images/qwest/alter/katja/lesbian.jpg"></center>'
-				'You get down on your haunches in front of Katya, as she lifts her skirt up and pulls her panties to the side. You waste no time and dig right in, nuzzling her groin as your tongue deftly licks her tiny clitoris. You can tell her pussy gets wetter and wetter from your thorough licking, and enjoy her taste a lot.'
-				'As Katya gets closer to her orgasm, she firmly clutches your hair and roughly pulls your face even harder into her groin, encouraging you to keep going. A short while later, you can feel her pussy convulge against your mouth and a few drops of squirt come out, landing on your tongue and lips. You slowly keep lapping at her pussy while she recovers from her orgasm. When you look up into her eyes, you see her staring down at you lovingly for a second, before pushing your face away and quickly straightening her clothes.'
-				'"Damn, next period is about to start! I''m sorry <<$nickname>>, I owe you one!" she apologizes, as she quickly gathers her things and leaves the closet. You''re hornier than ever, but also need to get going.'
-				act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+				act 'Eat Katja out':
+					cls
+					lesbian += 1
+					sub += 1
+					KatjaDom += 1
+					katschoolsex += 1
+					KatjaSlut += 1
+					KatjaHorny = 0
+					gs 'stat'
+					'<center><img src="images/qwest/alter/katja/lesbian.jpg"></center>'
+					'You get down on your haunches in front of Katya, as she lifts her skirt up and pulls her panties to the side. You waste no time and dig right in, nuzzling her groin as your tongue deftly licks her tiny clitoris. You can tell her pussy gets wetter and wetter from your thorough licking, and enjoy her taste a lot.'
+					'As Katya gets closer to her orgasm, she firmly clutches your hair and roughly pulls your face even harder into her groin, encouraging you to keep going. A short while later, you can feel her pussy convulge against your mouth and a few drops of squirt come out, landing on your tongue and lips. You slowly keep lapping at her pussy while she recovers from her orgasm. When you look up into her eyes, you see her staring down at you lovingly for a second, before pushing your face away and quickly straightening her clothes.'
+					'"Damn, next period is about to start! I''m sorry <<$nickname>>, I owe you one!" she apologizes, as she quickly gathers her things and leaves the closet. You''re hornier than ever, but also need to get going.'
+					act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+				end
 			end
 		end
 

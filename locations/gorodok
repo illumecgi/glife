@@ -24,7 +24,7 @@ boynumBlock = 0
 '<center><h4>Pavlovsk<a href="exec:dynamic $objnewmenu">.</a></h4></center>'
 '<center><img src="images/etogame/gorodok.jpg"></center>'
 '<center>A quiet province town in a rural area of Russia. Population: about 10000 inhabitants.</center>'
-'<center>It has nothing in particular going for it, and looks just like all the other towns in the area. The tallest building in town is the church tower.</center>'
+'<center>Apart from the old palace and fort, it looks much like all the other towns in the area. The tallest building in town is the <a href="exec:gt ''ParChurch'',''start''">church of St Nikolas</a></center>.'
 ''
 
 if marudatestinterface = 1:
@@ -317,14 +317,14 @@ if marudatestinterface = 0:
 		'.'
 	end
 	
-	'The town is situated by a <a href="exec:GT ''Glake''">lake</a> and includes a large public <a href="exec:gt ''gskver'', ''park''">park</a>.'
-	'It is serviced by a <a href="exec:minut += 15 & gt ''vokzalG''">train station</a>, which lies next to the highway. Near the highway you can also find a <a href="exec:gt ''zaprF'', ''start''">gas station</a>.'
+	'The town is situated by a <a href="exec:GT ''Glake''">lake</a> and the old palace grounds are now a large <a href="exec:gt ''gskver'', ''park''">public park</a>.'
+	'It is serviced by a <a href="exec:minut += 15 & gt ''vokzalG''">train station</a>, next to the highway. Near the highway you can also find a <a href="exec:gt ''zaprF'', ''start''">gas station</a>.'
 	'There is a small <a href="exec:minut += 15 & gt ''gpoli''">clinic</a><<$Pharmname>>'
 
 	'The town square features a <a href="exec:gt ''gdk''">community center</a><<$schoolname>>'
 	
 	if hour >= 8 and hour <= 17:'The local <a href="exec: minut += 3 & gt ''barbershop'', ''start''">barbershop</a> is within walking distance, merely a few minutes away.'
-	if hour >= 7 and hour <= 18:'Pavlovsk also has a <a href="exec:gt ''etoexhib'', ''pos20''">vocational school</a>, where young adults can learn a trade.'
+	if hour >= 7 and hour <= 18:'Pavlovsk has a <a href="exec:gt ''etoexhib'', ''pos20''">vocational school</a>, where young adults can learn a trade.'
 	if hour >= 8 and hour <= 22:'Right outside your apartment, a <a href="exec:dynamic $kiosksig">kiosk</a> sells cigarettes and magazines.'
 	if hour >= 8 and hour <= 20:'There is a big chain <a href="exec:gt ''shop'', ''start''">supermarket</a> nearby.'
 

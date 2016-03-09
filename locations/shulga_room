@@ -529,9 +529,16 @@ $gang_sex_room_ev1 = {
 															cls
 															horny +=10
 															minut +=10
-															cumfrot +=1
-															cumlip +=1
-															cumface +=1
+															$boy = 'Vitka'
+															sexpartkno = 1
+															spafinloc = 11
+															gs 'cum_manage'
+															$boy = 'Dan'
+															spafinloc = 7
+															gs 'cum_manage'
+															$boy = 'Shulga'
+															spafinloc = 7
+															gs 'cum_manage'
 															swallow += 1
 															facial += 1
 															energy -= 2
@@ -820,7 +827,19 @@ act 'Watch porn channel':
 							minut += 10
 							horny += 5
 							son -= 1
-							cumface +=1
+							temp = rand(0,2)
+							$boy = 'Dan'
+							spafinloc = 11
+							sexpartkno = 1
+							gs 'cum_manage'
+							$boy = 'Shulga'
+							sexpartkno = 1
+							spafinloc = 11
+							gs 'cum_manage'
+							$boy = 'Vitka'
+							sexpartkno = 1
+							spafinloc = 11
+							gs 'cum_manage'
 							swallow += 1
 							facial += 1
 							gs'stat'
@@ -836,9 +855,20 @@ act 'Watch porn channel':
 						minut += 10
 						horny += 5
 						son -= 1
-						cumface +=1
+						temp = rand(0,2)
+						$boy = 'Dan'
+						spafinloc = 11
+						sexpartkno = 1
+						gs 'cum_manage'
+						$boy = 'Shulga'
+						sexpartkno = 1
+						spafinloc = 11
+						gs 'cum_manage'
+						$boy = 'Vitka'
+						sexpartkno = 1
+						spafinloc = 11
+						gs 'cum_manage'
 						swallow += 1
-						cumfrot += 1
 						gs'stat'
 						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex_group/cum'+rand(1,7)+'.jpg"></center>'
 						'Guys you obkonchalsya'
@@ -883,8 +913,12 @@ $view_pornotv_vasya = {
 				act 'Further':
 					cls
 					minut += 10
-					cumface += 1
-					cumfrot += 1
+					$boy = 'Shulga'
+					sexpartkno = 1
+					spafinloc = 11
+					gs 'cum_manage'
+					spafinloc = 6
+					gs 'cum_manage'
 					gs'stat'
 					'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/cum'+rand(1,10)+'.jpg"></center>'
 					'<<$shulga_name_rnd>> I could not long endure such bliss and pour all, he has accumulated on your face.'
@@ -898,7 +932,10 @@ $view_pornotv_vasya = {
 			cls
 			minut += 20
 			horny += 5
-			cumfrot += 1
+			$boy = 'Shulga'
+			sexpartkno = 1
+			spafinloc = 13
+			gs 'cum_manage'
 			gs'stat'
 			'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/hj'+rand(1,7)+'.jpg"></center>'
 			'<<$shulga_name_rnd>> I put your hand on his penis and began to move up-down showing, that you need to do. When he removed his hands, you continued to move.'
@@ -930,7 +967,10 @@ $view_pornotv_vasya = {
 					act 'Further':
 						cls
 						minut += 5
-						cumface += 1
+						$boy = 'Shulga'
+						sexpartkno = 1
+						spafinloc = 11
+						gs 'cum_manage'
 						gs'stat'	
 						'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/tv_ev/sex/cum'+rand(1,10)+'.jpg"></center>'
 						'Cum on you, <<$shulga_name_rnd>> Member tucked in his pants and changed the channel, I stared into zombies box, is not showing interest in you.'
@@ -1401,7 +1441,14 @@ $shulga_lern_sex_yes = {
 				horny += 15
 				hapri = 0
 				swallow += 1
-				cumface +=1
+				$boy = 'Vitka'
+				sexpartkno = 1
+				spafinloc = 11
+				sexvolume = 30
+				gs 'cum_manage'
+				spafinloc = 12
+				sexvolume = 10
+				gs 'cum_manage'
 				gs'stat'
 				'<center><img src="images/zsoft/pod_ezd/shulgahome/bigroom/lern/ev<<lern_imgset>>_5.jpg"></center>'
 				''

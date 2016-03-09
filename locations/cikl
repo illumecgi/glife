@@ -173,7 +173,7 @@ if tabletkicheck = 1 and tabletkichday < daystart:
 				pillcon += 1+(pillcon+15)/40
 				if pillcon > 40: pillcon = 40
 			else
-				if vitaminday ! daystart
+				if vitaminday ! daystart:
 					vitaminday = daystart
 					skinvan += 1
 				end

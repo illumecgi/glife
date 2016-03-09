@@ -365,6 +365,7 @@
       <Location name="annafrends2"/>
       <Location name="MagEncounterFairy"/>
       <Location name="annafrendtoilet"/>
+      <Location name="ParChurch"/>
     </Folder>
     <Folder name="House of Culture">
       <Location name="gdk"/>

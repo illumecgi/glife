@@ -87,11 +87,11 @@ gs 'stat'
 opPRE = 0
 daystart = 1
 
-addobj '<img src="images/pic/icon/Pers.png">'
-addobj '<img src="images/pic/icon/look.png">'
-addobj '<img src="images/pic/icon/Proch.png">'
-addobj '<img src="images/pic/icon/menu.png">'
-addobj '<img src="images/pic/icon/Phone.png">'
+if oldobjmenu = 0:
+	dynamic $objnewmenu
+else
+	dynamic $objoldmenu
+end
 
 --- begin1 ---------------------------------
 

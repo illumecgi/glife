@@ -30,7 +30,7 @@ if blockBedrPar = 0:
 	end
 end
 
-act 'Go to my parents'' room':gt 'bedrPar2'
+act 'Go to your parents'' room':gt 'bedrPar2'
 act 'Go to the living room':gt 'sitrPar'
 act 'Go to the bathroom':gt 'vanrPar'
 act 'Go to the kitchen':gt 'kuhrPar'

@@ -24,7 +24,7 @@ boynumBlock = 0
 '<center><h4>Pavlovsk<a href="exec:dynamic $objnewmenu">.</a></h4></center>'
 '<center><img src="images/etogame/gorodok.jpg"></center>'
 '<center>A quiet province town in a rural area of Russia. Population: about 10000 inhabitants.</center>'
-'<center>It has nothing in particular going for it, and looks just like all the other towns in the area. The tallest building in town is the church tower.</center>'
+'<center>Apart from the old palace and fort, it looks much like all the other towns in the area. The tallest building in town is the <a href="exec:gt ''ParChurch'',''start''">church of St Nikolas</a></center>.'
 ''
 
 if marudatestinterface = 1:
@@ -317,20 +317,22 @@ if marudatestinterface = 0:
 		'.'
 	end
 	
-	'The town is situated by a <a href="exec:GT ''Glake''">lake</a> and includes a fairly large <a href="exec:gt ''gskver'', ''park''">park</a>.'
-	'It is serviced by a <a href="exec:minut += 15 & gt ''vokzalG''">train station</a>, which lies next to the highway. Near the highway you can also find a <a href="exec:gt ''zaprF'', ''start''">gas station</a>.'
+	'The town is situated by a <a href="exec:GT ''Glake''">lake</a> and the old palace grounds are now a large <a href="exec:gt ''gskver'', ''park''">public park</a>.'
+	'It is serviced by a <a href="exec:minut += 15 & gt ''vokzalG''">train station</a>, next to the highway. Near the highway you can also find a <a href="exec:gt ''zaprF'', ''start''">gas station</a>.'
 	'There is a small <a href="exec:minut += 15 & gt ''gpoli''">clinic</a><<$Pharmname>>'
 
 	'The town square features a <a href="exec:gt ''gdk''">community center</a><<$schoolname>>'
 	
 	if hour >= 8 and hour <= 17:'The local <a href="exec: minut += 3 & gt ''barbershop'', ''start''">barbershop</a> is within walking distance, merely a few minutes away.'
-	if hour >= 7 and hour <= 18:'Pavlovsk also has a <a href="exec:gt ''etoexhib'', ''pos20''">vocational school</a>, where young adults can learn a trade.'
+	if hour >= 7 and hour <= 18:'Pavlovsk has a <a href="exec:gt ''etoexhib'', ''pos20''">vocational school</a>, where young adults can learn a trade.'
 	if hour >= 8 and hour <= 22:'Right outside your apartment, a <a href="exec:dynamic $kiosksig">kiosk</a> sells cigarettes and magazines.'
-	if hour >= 8 and hour <= 20:'The only major store in town is the <a href="exec:gt ''shop'', ''start''">supermarket</a>.'
+	if hour >= 8 and hour <= 20:'There is a big chain <a href="exec:gt ''shop'', ''start''">supermarket</a> nearby.'
 
-	'A <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">garment factory</a> named Paris Commune is situated near the outskirts of town, close to the highway. Inhabitants of Pavlovsk who own a car can store it in the <a href="exec:minut += 5 & gt ''garmassiv''">garages</a>.'
+	'A <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">garment factory</a> named Paris Commune is situated in the industrial area on the outskirts of town, close to the highway. Inhabitants of Pavlovsk can store their cars in the <a href="exec:minut += 5 & gt ''garmassiv''">garages</a>.'
 
 ''
+if Enable_tablemap = 0:
+	if storyline = 1:'The Shulgin family live in the <a href="exec:minut += 15 & gt ''shulgahome''">apartment</a> above your parents.'
 	if ArtemBeInHome > 0 and artemblok = 0:'<a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarev</a>, one of your classmates, lives in the same apartment building as your parents, on the first floor.'
 	if BeInJulMilHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'<a href="exec:minut += 15 & gt ''JuliaMilVhod''">Julia Milova</a>, one of your classmates, lives in the same apartment building as your parents, on the third floor.'
 	if BeInNatBelHome = 1 and hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:'<a href="exec:minut += 15 & gt ''NatBelHome''">Natasha Belova</a>, one of your classmates, lives in the same apartment building as your parents, on the fourth floor.'
@@ -338,7 +340,34 @@ if marudatestinterface = 0:
 	if katjaFirstKiss >= 1:'<a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a>, one of your classmates, lives in the richer part of town.'
 	if LariskaHomeIn > 0: '<a href="exec:minut += 15 & GT ''LariskaHome''" class=plain>Larissa Gruzdev</a>, one of your classmates, lives about 15 minutes away from your parents.'
 	if beinalbinahome > 0:'<a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>, one of your classmates, lives in one of the few luxurious mansions Pavlovsk has to offer.'
-
+else
+	st_count=0 & $show_table=''
+	if (serge_shulgin >=70) or (serge_shulgin >=30 and week < 6 and hour >= 16 and hour <= 23) or (week >= 6 and hour >= 10 and hour < 16) or (week < 6 and hour >= 16 and hour <= 23) or (hour >= 0 and hour < 2):
+		gs'show_table','Apartment of Uncle <a href="exec:minut += 15 & GT ''shulgahome''" >Shulgin</a>.','3'
+	else
+		gs'show_table','Apartment of Uncle Shulgin. Not now.','3'
+	end
+	if ArtemBeInHome > 0 and artemblok = 0:gs'show_table','Apartment of <a href="exec:minut += 15 & gt ''artemhome''">Artem Chebotarev</a>.','3'
+	if BeInJulMilHome = 1:
+		if hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:
+			gs'show_table','apartment of <a href="exec:minut += 15 & gt ''JuliaMilHome''">Julia Milova</a>.','3'
+		else
+			gs'show_table','apartment of Julia Milova. Not now.','3'
+		end
+	end
+	if BeInNatBelHome = 1:
+		if hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:
+			gs'show_table','apartment of <a href="exec:minut += 15 & gt ''NatBelHome''">Natasha Belova</a>.','3'
+		else
+			gs'show_table','apartment of Natasha Belova. Not now.','3'
+		end
+	end
+	if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:gs'show_table','Fancier house of <a href="exec:minut += 15 & gt ''dimaGoHome2''">Dimka Nosov</a>.','3'
+	if katjaFirstKiss >= 1:gs'show_table','house of <a href="exec:minut += 15 & gt ''KatjaHome''">Katja Meynold</a>.','3'
+	if LariskaHomeIn > 0:gs'show_table','House of <a href="exec:minut += 15 & GT ''LariskaHome''" >Lariska Gruzdevaya</a>, in richer part','3'
+	if beinalbinahome > 0:gs'show_table','Luxurious mansion of <a href="exec:minut += 15 & gt ''albinaporog''">Albina Barlovskaya</a>.','3'
+	if st_count > 0 :'<TABLE BORDER=1><<$show_table>></TR></TABLE>'
+end
 
 	if workPTU > 2:act '<b>Go to the hostel</b>':gt 'etoexhib', 'pos40'
 

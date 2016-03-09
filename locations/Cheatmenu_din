@@ -183,7 +183,7 @@ $din_cheat_menu_permanent = {
 	pl'<a href="exec:dynamic $din_cheat_Nosweat">Never sweat</a>: <<$cheatNosweat>>'
 	pl'<a href="exec:dynamic $din_cheat_NoEat">Never eat or drink</a>: <<$cheatNoEat>>'
 	pl'<a href="exec:dynamic $din_cheat_NoSleep">Never sleep</a>: <<$cheatNoSleep>>'
-	pl'<a href="exec:dynamic $din_cheat_Health">Never catch STDs</a>: <<$cheatHealth>>'
+	pl'<a href="exec:dynamic $din_cheat_Health">Disable STDs</a>: <<$cheatHealth>>'
 	pl'<a href="exec:dynamic $din_cheat_Immune_Nark">Never get addicted</a>: <<$NarkImmune>>'
     pl''
 	pl'<a href="exec:alko = 0 & dynamic $din_cheat_menu_permanent">Sober</a>'
@@ -456,6 +456,15 @@ $din_cheat_menu_stats = {
 	if volleyboll >= 0:pl'<a href="exec:volleyboll += 25 & dynamic $din_cheat_menu_stats">Volleyball+25: <<volleyboll>></a>'
 	if volleyboll >= 25:pl'<a href="exec:volleyboll -= 25 & dynamic $din_cheat_menu_stats">Volleyball-25: <<volleyboll>></a>'
 	pl''
+	if shoot >= 0:pl' <a href="exec:shoot += 25 & dynamic $din_cheat_menu_stats">Shoot+25: <<shoot>></a>'
+	if shoot > 0:pl' <a href="exec:shoot -= 25 & dynamic $din_cheat_menu_stats">Shoot-25: <<shoot>></a>'
+	if poSkill >= 0:pl' <a href="exec:poSkill += 25 & dynamic $din_cheat_menu_stats">sewing+25: <<poSkill>></a>'
+	if poSkill > 0:pl' <a href="exec:poSkill -= 25 & dynamic $din_cheat_menu_stats">sewing-25: <<poSkill>></a>'
+	if chess >= 0:pl' <a href="exec:chess += 25 & dynamic $din_cheat_menu_stats">Chess+25: <<chess>></a>'
+	if chess > 0:pl' <a href="exec:chess -= 25 & dynamic $din_cheat_menu_stats">Chess-25: <<chess>></a>'
+	if oficiant >= 0:pl' <a href="exec:oficiant += 25 & dynamic $din_cheat_menu_stats">Waitress+25: <<oficiant>></a>'
+	if oficiant > 0:pl' <a href="exec:oficiant -= 25 & dynamic $din_cheat_menu_stats">Waitress-25: <<oficiant>></a>'
+	pl''
 	if dance >= 0:pl'<a href="exec:dance += 25 &dynamic $din_cheat_menu_stats">Dancing+25: <<dance>></a>'
 	if dance > 0:pl'<a href="exec:dance -= 25 &dynamic $din_cheat_menu_stats">Dancing-25: <<dance>></a>'
 	if dancePRO >= 0:pl'<a href="exec:dancePRO += 25 & dynamic $din_cheat_menu_stats">Prof.. Dancing+25: <<dancePRO>></a>'
@@ -501,6 +510,15 @@ $din_cheat_menu_reputation = {
 	gs'stat'
 	clr
 	pl'<center><a href="exec:dynamic $objcheat_menu"><b>Cheat menu</b></a></center>'
+	pl''
+	if storyline = 1:
+		pl ' <a href="exec:mother += 10 & dynamic $din_cheat_menu_reputation">Friendship +10 : Mother: <<mother>></a>'
+		pl ' <a href="exec:mother = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with Mother: <<mother>></a>'
+		pl ' <a href="exec:sister += 10 & dynamic $din_cheat_menu_reputation">Friendship +10 : Sister: <<brother>></a>'
+		pl ' <a href="exec:sister = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with : Sister: <<brother>></a>'
+		pl ' <a href="exec:brother += 10 & dynamic $din_cheat_menu_reputation">Friendship +10 : Brother: <<brother>></a>'
+		pl ' <a href="exec:brother = 0 & dynamic $din_cheat_menu_reputation">Reset friendship with : Brother: <<brother>></a>'
+	end
 	pl''
 	if nastjaQW >= 0:
     pl '<a href="exec:nastjaQW += 10 & dynamic $din_cheat_menu_reputation">Friendship with Nastya: <<nastjaQW>></a>'
@@ -590,6 +608,20 @@ $din_cheat_menu_reputation = {
 	if GorSlut ! 6:pl'<a href="exec:GorSlut = 6 & dynamic $din_cheat_menu_reputation">Change reputation "Prostitute" (6)</a>'
 	if GorSlut > 0:pl'<a href="exec:GorSlut = 0 & dynamic $din_cheat_menu_reputation">Clear reputation in Pavlovsk (0)</a>'
 	if opusk > 0 or sipovka > 0 or rozetka > 0:pl'<a href="exec:opusk = 0 & sipovka = 0 & rozetka = 0 & dynamic $din_cheat_menu_reputation">Clear reputation with Gopnik</a>'
+	if StoryLine = 1:
+		pl''
+		pl'<B>WARNIG</B>clean repution flag with familys. MAY CAUSE BUG!!'
+		if motherKnowWhore > 0:pl'Your mother thinks you are a whore. <a href="exec:motherKnowWhore = 0 & dynamic $din_cheat_menu_reputation">Clear</a>'
+		if motherKnowSpravka > 0:pl'Your mother thinks that you are a virgin. <a href="exec:motherKnowSpravka = 0 & dynamic $din_cheat_menu_reputation">Clear</a>'
+		pl''
+		if brotherSex >= 1:      pl'Your brother thinks you are a slut. <a href="exec:brotherSex = 0 & dynamic $din_cheat_menu_reputation">Clear</a>'
+		if evgenQW >= 3:         pl'Your brother thinks you are a slut. <a href="exec:evgenQW = 0 & dynamic $din_cheat_menu_reputation">Clear</a>'
+		if brotherknowslut = 1:         pl'Your brother saw semen on your body and thinks you f*** around. <a href="exec:brotherknowslut = 0 & dynamic $din_cheat_menu_reputation">Clear</a>'
+		if brotherknowslut >= 2:         pl'Your brother saw you in the park screwing Gopnik. <a href="exec:brotherknowslut = 1 & dynamic $din_cheat_menu_reputation">Clear</a>'
+		pl''
+		if sisterknowslut > 1 and sisboypartyQW > 1:      pl'Your sister says you are a slut <a href="exec:sisboypartyQW = 0 & dynamic $din_cheat_menu_reputation">Clear</a>'
+		if sisterknowslut > 0:         pl'Your sister knows, you sleep around. <a href="exec:sisterknowslut = 0 & dynamic $din_cheat_menu_reputation">Clear</a>'
+	end
 }
 
 $din_cheat_menu_documents = {
@@ -761,6 +793,18 @@ $din_cheat_dynamic = {
    dynamic $dynamicCommand
 }
 
+$din_std_cure = {
+	venera = 0
+	GerpesOnce = 0
+	Gerpes = 0
+	SifacOnce = 0
+	Sifilis = 0
+	TriperOnce = 0
+	Triper = 0
+	KandidozOnce = 0
+	Kandidoz = 0
+}
+
 $din_cheat_menu_view = {
 	gs'stat'
 	clr
@@ -832,6 +876,8 @@ $objcheat_menu = {
 	pl'<a href="exec:health = vital*10 + stren*5+1000 & willpower = intel*5 + will*5+1000 & manna = (intel*magik) + magik*100 + vital*10 + rikudo & vgape = 0 & agape = 0 & nippain = 0 & dynamic $objcheat_menu">Full restoration of health, manna, Reason.</a>'
 	pl'<a href="exec:dynamic $din_cheat_money">Change money</a>'
 	pl'<a href="exec:money = 0 & dynamic $din_cheat">Zero money</a>'
+	pl'<a href="exec:dynamic $din_std_cure">Cure all stds</a>'
+	pl'<a href="exec:vgape = 0 & agape = 0 & nippain = 0 & painpub = 0 & pirs_pain_ton = 0 & mesec = 0 & spanked = 0 & SLomka = 0 & Narkoman = 0 & nark = 0 & fingal = 0 & mosol = 0 & frost = 0 & sick = 0 & dynamic $din_std_cure">Cure all ailments.</a>'
 	nl
 	if Enable_nogameover = 1:
 		pl' <a href="exec:Enable_nogameover = 0 & dynamic $objcheat_menu">Prevent Non-Drama GAMEOVER: ON</a>'

@@ -4,7 +4,6 @@ if $ARGS[0] = 'slut_talk':
 	cla
 	gs'stat'
 	minut += RAND (10,15)
-	artemhomemark = 1
 	'<center><img src="images/qwest/alter/artom/talk1.jpg"></center>'
 	'You go to Artem`s room and silently sit on the couch.'
 	'Artem: "<<$name>>..."'
@@ -35,7 +34,7 @@ if $ARGS[0] = 'slut_talk':
 		'Artem: "I love you"'
 		'Pressing your lips to their, Artem kisses you, very much embracing.'
 		'What-While both of you just keep silent lie, scrolling in mind all that happened.'
-		act 'Escape':artemhomemark = 0 & minut += 5 & gt'pod_ezd','etaj_1'
+		act 'Escape':minut += 5 & gt'pod_ezd','etaj_1'
 	end
 	act 'Throw it':
 		cls
@@ -47,7 +46,7 @@ if $ARGS[0] = 'slut_talk':
 		'Artem: "Where are you going?"'
 		'You: "Sorry... I do not want you to suffer. Surely, we should no longer see'
 		'After taking away all their belongings, I do not say anything you leave in silence, leaving Artyom alone.'
-		act 'Escape':artemhomemark = 0 & minut += 5 & artemblok = 1 & gt'pod_ezd','etaj_1'
+		act 'Escape':minut += 5 & artemblok = 1 & gt'pod_ezd','etaj_1'
 	end
 end
 

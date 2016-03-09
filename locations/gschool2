@@ -252,26 +252,27 @@ if $ARGS[0] = 'break':
 			'<center><img src="images/qwest/alter/katja/petting.jpg"></center>'
 			'You quietly nod and Katja takes you by the hand, leading you to a small storage closet. The door is barely closed behind you when she pulls you tightly against her, giving you an aggressive kiss on the lips. She whispers passionately, "<<$nickname>>, I want you..."'
 
-			if rand(1,2) = 1 and katja_scool_sex = 1:
+			if rand(1,2) = 1 and katschoolsex = 1:
 				gs 'Katja_Tanga'
 				*clr & cla
 				dynamic  $din_katja_secretroom
-			end
+			else
 
-			act 'Eat Katja out':
-				cls
-				lesbian += 1
-				sub += 1
-				KatjaDom += 1
-				katschoolsex += 1
-				KatjaSlut += 1
-				KatjaHorny = 0
-				gs 'stat'
-				'<center><img src="images/qwest/alter/katja/lesbian.jpg"></center>'
-				'You get down on your haunches in front of Katya, as she lifts her skirt up and pulls her panties to the side. You waste no time and dig right in, nuzzling her groin as your tongue deftly licks her tiny clitoris. You can tell her pussy gets wetter and wetter from your thorough licking, and enjoy her taste a lot.'
-				'As Katya gets closer to her orgasm, she firmly clutches your hair and roughly pulls your face even harder into her groin, encouraging you to keep going. A short while later, you can feel her pussy convulge against your mouth and a few drops of squirt come out, landing on your tongue and lips. You slowly keep lapping at her pussy while she recovers from her orgasm. When you look up into her eyes, you see her staring down at you lovingly for a second, before pushing your face away and quickly straightening her clothes.'
-				'"Damn, next period is about to start! I''m sorry <<$nickname>>, I owe you one!" she apologizes, as she quickly gathers her things and leaves the closet. You''re hornier than ever, but also need to get going.'
-				act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+				act 'Eat Katja out':
+					cls
+					lesbian += 1
+					sub += 1
+					KatjaDom += 1
+					katschoolsex += 1
+					KatjaSlut += 1
+					KatjaHorny = 0
+					gs 'stat'
+					'<center><img src="images/qwest/alter/katja/lesbian.jpg"></center>'
+					'You get down on your haunches in front of Katya, as she lifts her skirt up and pulls her panties to the side. You waste no time and dig right in, nuzzling her groin as your tongue deftly licks her tiny clitoris. You can tell her pussy gets wetter and wetter from your thorough licking, and enjoy her taste a lot.'
+					'As Katya gets closer to her orgasm, she firmly clutches your hair and roughly pulls your face even harder into her groin, encouraging you to keep going. A short while later, you can feel her pussy convulge against your mouth and a few drops of squirt come out, landing on your tongue and lips. You slowly keep lapping at her pussy while she recovers from her orgasm. When you look up into her eyes, you see her staring down at you lovingly for a second, before pushing your face away and quickly straightening her clothes.'
+					'"Damn, next period is about to start! I''m sorry <<$nickname>>, I owe you one!" she apologizes, as she quickly gathers her things and leaves the closet. You''re hornier than ever, but also need to get going.'
+					act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+				end
 			end
 		end
 
@@ -443,7 +444,7 @@ if $ARGS[0] = 'break':
 		if rand(1,6) = 1 and tanga = 1 and vagina > 12 and mesec <= 0:
 			'<center><img src="images/qwest/alter/uroc/boysex_tualet.jpg"></center>'
 			'When you enter the class, you feel someone moving up behind you and pulling up your skirt. Then you feel their hand pawing at your panty-clad ass. When you move to turn around, the hand quickly pulls away. By the time you can see who''s behind you, you find half the guys in your class standing there: all looking in different directions inconspicuously, a few of them even having the gall to whistle innocently. You try to tell from their faces which one of them just touched you.'
-			gt 'gschool3', 'rand_scoolboy'
+			act 'Identify the perpetrator':gt 'gschool3', 'rand_scoolboy'
 		end
 		act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 	end

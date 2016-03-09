@@ -41,6 +41,8 @@ end
 
 if year_start ! year and katjaPreg = 0 and month >= 2:katjaPreg = 1
 
+if cheatHealth = 1:dynamic $din_std_cure
+
 if analplay >= 2 and anus <= 10:anus += 1 & analplay = 0
 if analplay >= 4 and anus <= 15:anus += 1 & analplay = 0
 if analplay >= 8 and anus <= 20:anus += 1 & analplay = 0
@@ -643,8 +645,8 @@ if hour >= 24:
 
 	if BuyHous = 2 and ArendHouseSL <= 0:ArendHouseSL = 0 & BuyHous = 0 & housr = 0
 	if BuyHous = 2 and ArendHouseSL > 0:ArendHouseSL -= 1
-	if Gspravka <= 0 and GspravkaT > 0:GspravkaT = 0 & Gspravka = 0
-	if GspravkaT > 0:Gspravka -= 1
+	if Gspravka <= 0 and GspravkaT = 1:GspravkaT = 0 & Gspravka = 0
+	if GspravkaT = 1:Gspravka -= 1
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd = 30:IvanPodstavaQW = 3
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd > 0 and PodpiskaNeviezd < 30:PodpiskaNeviezd += 1
 
@@ -1128,17 +1130,21 @@ if health < 0:
 	end
 end
 
-if willpower < 0 and manna <= 1:
-	if Enable_nogameover = 0 :
-		if StoryLine = 0:
-			over = 2
+if willpower <= 0 :
+	!this will set willpower to 0 correctly; then check mana =1 for insane-gameover(willpower=0&mana=1).
+	if manna <= 1:
+		if Enable_nogameover = 0 :
+			if StoryLine = 0:
+				over = 2
+			else
+				over = 10
+			end
+			gt'gameover'
+			exit & !nogameover by illume
 		else
-			over = 10
+			pl '<font color=red><B>You are insane, but Cheat Mode keeps you Alive.</B></font>'
+			!manna already checked for >=1 in line 1113 if manna <= 0, no need to set another one
 		end
-		gt'gameover'
-		exit & !nogameover by illume
-	else
-		pl '<font color=red><B>You are insane, but Cheat Mode keeps you Alive.</B></font>'
 	end
 	willpower = 0
 end
@@ -1253,7 +1259,7 @@ elseif (month = 12 and day >= 29) or (month = 1 and day <= 13):
 elseif (month = 3 and day >= 25):
 	$holyday = '<b>Spring Break</b>'
 	kanikuli = 3
-	if month = 3 and day = 25:$holyday += ' <b>Back to school tomorrow.</b>'
+	if month = 3 and day = 31:$holyday += ' <b>Back to school tomorrow.</b>'
 elseif (month = 5 and day >= 25) or month = 6 or month = 7 or month = 8:
 	if month = 5 and day = 25 and age = 17:
 		$holyday = '<b>Your graduation is today. Be there by 8h.</b>'
@@ -1356,15 +1362,15 @@ if Enable_showattr = 1:
 	gs 'indik', '1',stren , stren
 	pl '<<$ind>> Power'
 	gs'indik','1',speed,speed
-	pl '<<$ind>> Speed'		
+	pl '<<$ind>> Speed'
 	gs'indik','1',agil,agil
-	pl '<<$ind>> Agility'	
+	pl '<<$ind>> Agility'
 	gs'indik','1',vital,vital
-	pl '<<$ind>> Endurance'	
+	pl '<<$ind>> Endurance'
 	gs'indik','1',intel,intel
-	pl '<<$ind>> Intelligence'	
+	pl '<<$ind>> Intelligence'
 	gs'indik','1',will,will
-	pl '<<$ind>> Willpower'		
+	pl '<<$ind>> Spirit'
 	gs'indik','1',react,react
 	pl '<<$ind>> Reaction'
 	gs'indik','1',vnesh,vnesh
@@ -2136,18 +2142,11 @@ if fingal > 0:pl '<b><font color="red">You have a black eye.</font></b>'
 
 ! WD: Bimbo look
 if cloth_vid = 1:
-	pl '<b><a href="exec:dynamic $din_exhibiTakeOffBimbo">You look like a bimbo</a></b>'
-elseif exhibiHideNewCloth ! 1 and hcol = 3 and (exhibi + lip + skin + mop + tits) >= 15 and (ski + glamur + sexual) >= 1:
-	pl '<b><a href="exec:dynamic $din_exhibiHideNewCloth">You could wear a bimbo outfit</a></b>'
+	pl '<b>You look like a bimbo</b>'
+elseif hcol = 3 and (exhibi + lip + skin + mop + tits) >= 15 and (ski + glamur + sexual) >= 1:
+	pl '<b>You could wear a bimbo outfit</b>'
 end
-!{
-if cloth_vid = 1:
-	!pl '<b><a href="exec:dynamic $din_exhibiTakeOffBimbo">You are dressed up like a bimbo</a></b>'
-end
-if exhibi >= 4 and exhibiHideNewCloth ! 1:
-	pl '<b><a href="exec:dynamic $din_exhibiHideNewCloth">You have opened a new outfit</a></b>'
-end
-}
+
 if tanga = 1 and $clothingworntype = 'nude':
 	pl'<b><font color = red>You are stripped down to your panties and your boobs sway invitingly as you walk</font></b>'
 elseif tanga = 0:

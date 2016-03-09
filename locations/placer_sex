@@ -1291,6 +1291,7 @@ $din_sleep = {
 		minut = 0
 		gs'stat'
 		'You woke up on, that slept'
+		InSleep = 0
 		exit
 	end
 

@@ -1,6 +1,6 @@
 # trFatherMisha
 !cum on face
-if cumface > 0:
+if spdirtyv > 0:
 	cls
 	minut += 5
 	gs'stat'
@@ -13,7 +13,7 @@ if cumface > 0:
 	exit
 end
 !cum on clothes
-if cumfrot > 0:
+if spdirtyc > 0:
 	cls
 	minut += 5
 	gs'stat'

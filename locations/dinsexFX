@@ -163,7 +163,7 @@ $vagend = {
 }
 
 $veneracheck = {
-	if cheathealth = 0:
+	if cheatHealth = 0:
 		tipvenerarand = rand(1, 10)
 		if tipvenerarand = 8:
 			!!herpes
@@ -185,7 +185,7 @@ $veneracheck = {
 				Sifilis += 1
 			end
 		elseif tipvenerarand >= 5 and tipvenerarand < 7:
-			!!gonorrhea/triper
+			!!gonorrhea
 
 			if rand(1, 100) > 90:
 				Venera += 1
@@ -195,7 +195,7 @@ $veneracheck = {
 				Triper += 1
 			end
 		elseif tipvenerarand < 5:
-			!!candidiasis/thrush
+			!!thrush
 
 			if rand(1, 100) > 85:
 				if KandidozOnce = 0:KandidozOnce = 1

@@ -153,13 +153,13 @@ if $ARGS[0] = 'dekanat':
 
 	if hour < 8 and student > 0:
 		act 'At the lecture':
-			cla
-			*clr
+			cls
 			minut += 360
 			hour = 14
 			minut = 0
 			lektor += 1
 			intel += 1
+			gs 'stat'
 			'<center><img src="images/etogame/Classroom1.jpg"></center>'
 			'You were sitting in lectures and recorded for teacher notes.'
 			zanrand = rand(0, 9)
@@ -170,8 +170,8 @@ if $ARGS[0] = 'dekanat':
 				'Classes are over, but you have to stay.'
 
 				act 'Remain in the classroom':
-					cla
-					*clr
+					cls
+					gs 'stat'
 					zanpicrand = rand(1, 3)
 					$ImageNeededPlacholder
 					! WD: IMAGE NEEDED ~ '<center><img src="images/img/oldtown/zan<<zanpicrand>>.jpg"></center>'
@@ -200,8 +200,8 @@ if $ARGS[0] = 'dekanat':
 				'Classes are over, but you have to stay.'
 
 				act 'Remain in the classroom':
-					cla
-					*clr
+					cls
+					gs 'stat'
 					zanpicrand = rand(4, 6)
 					$ImageNeededPlacholder
 					! WD: IMAGE NEEDED ~ '<center><img src="images/img/oldtown/zan<<zanpicrand>>.jpg"></center>'

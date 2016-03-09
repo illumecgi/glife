@@ -628,7 +628,7 @@ if $ARGS[0] = 'kickboxing':
 				KikDefV = rand(60, 80)
 				!!parameters
 				healthV = vitalV * 10 + strenV * 5
-				$nameV = 'Excelent rival'
+				$nameV = 'Excellent rival'
 				formula = 3
 				amateur = 1
 			elseif razradKik + razrand >= 5:

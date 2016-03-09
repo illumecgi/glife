@@ -8,7 +8,7 @@ if $ARGS[0] = '':
 
 	'A man walked up to standing next to the club and exchange a taxi driver with him a few words turned to you. "<<$name>> go." You with the man got into a taxi and quickly drove to the hotel. The man led you to your room.'
 	act 'Walk into the room':
-	if DPtipe = 1:
+		if DPtipe = 1:
 			cls
 			BeInOtel += 1
 			minut += 5
@@ -17,9 +17,9 @@ if $ARGS[0] = '':
 			'The room was quite decent. The man went to the fridge and began to spread on the table. Misted bottle of whiskey servilat banking caviar, fruit plate. Laying everything on the table, the man tripped you a chair on which you sat. He sat in the chair next to you and poured whiskey glasses. "Well, let''s drink to <<$name>> acquaintance. I''m so glad to have met such a beautiful and wonderful girl like you."'
 
 			act 'Have a drink':gt 'EvOtelMan', 'sex'
+		else
+			gt 'EvOtelMan', 'sex'
 		end
-	else
-		gt 'EvOtelMan', 'sex'
 	end
 end
 

@@ -317,7 +317,7 @@ if marudatestinterface = 0:
 		'.'
 	end
 	
-	'The town is situated by a <a href="exec:GT ''Glake''">lake</a> and includes a fairly large <a href="exec:gt ''gskver'', ''park''">park</a>.'
+	'The town is situated by a <a href="exec:GT ''Glake''">lake</a> and includes a large public <a href="exec:gt ''gskver'', ''park''">park</a>.'
 	'It is serviced by a <a href="exec:minut += 15 & gt ''vokzalG''">train station</a>, which lies next to the highway. Near the highway you can also find a <a href="exec:gt ''zaprF'', ''start''">gas station</a>.'
 	'There is a small <a href="exec:minut += 15 & gt ''gpoli''">clinic</a><<$Pharmname>>'
 
@@ -326,9 +326,9 @@ if marudatestinterface = 0:
 	if hour >= 8 and hour <= 17:'The local <a href="exec: minut += 3 & gt ''barbershop'', ''start''">barbershop</a> is within walking distance, merely a few minutes away.'
 	if hour >= 7 and hour <= 18:'Pavlovsk also has a <a href="exec:gt ''etoexhib'', ''pos20''">vocational school</a>, where young adults can learn a trade.'
 	if hour >= 8 and hour <= 22:'Right outside your apartment, a <a href="exec:dynamic $kiosksig">kiosk</a> sells cigarettes and magazines.'
-	if hour >= 8 and hour <= 20:'The only major store in town is the <a href="exec:gt ''shop'', ''start''">supermarket</a>.'
+	if hour >= 8 and hour <= 20:'There is a big chain <a href="exec:gt ''shop'', ''start''">supermarket</a> nearby.'
 
-	'A <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">garment factory</a> named Paris Commune is situated near the outskirts of town, close to the highway. Inhabitants of Pavlovsk who own a car can store it in the <a href="exec:minut += 5 & gt ''garmassiv''">garages</a>.'
+	'A <a href="exec:minut += 15 & gt ''Gshveyfab'', ''start''">garment factory</a> named Paris Commune is situated in the industrial area on the outskirts of town, close to the highway. Inhabitants of Pavlovsk can store their cars in the <a href="exec:minut += 5 & gt ''garmassiv''">garages</a>.'
 
 ''
 if Enable_tablemap = 0:

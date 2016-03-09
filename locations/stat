@@ -645,8 +645,8 @@ if hour >= 24:
 
 	if BuyHous = 2 and ArendHouseSL <= 0:ArendHouseSL = 0 & BuyHous = 0 & housr = 0
 	if BuyHous = 2 and ArendHouseSL > 0:ArendHouseSL -= 1
-	if Gspravka <= 0 and GspravkaT > 0:GspravkaT = 0 & Gspravka = 0
-	if GspravkaT > 0:Gspravka -= 1
+	if Gspravka <= 0 and GspravkaT = 1:GspravkaT = 0 & Gspravka = 0
+	if GspravkaT = 1:Gspravka -= 1
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd = 30:IvanPodstavaQW = 3
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd > 0 and PodpiskaNeviezd < 30:PodpiskaNeviezd += 1
 

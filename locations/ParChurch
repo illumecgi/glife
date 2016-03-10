@@ -25,7 +25,7 @@ if $ARGS[0] = 'start':
 	'Vigil is held Saturdays at 19h.'
 	'The Divine Liturgy is on Sundays between 9h and 12h.'
 
-	if week = 6 and hour >=19 and hour <= 22 and churchday ! daystart: :
+	if week = 6 and hour >=19 and hour <= 22 and churchday ! daystart:
 		act 'Attend vigil':
 			cls
 			CLOSE ALL
@@ -64,7 +64,7 @@ if $ARGS[0] = 'start':
 			end
 			act 'Leave': gt 'ParChurch', 'start'
 		end
-	elseif week = 7 and hour >= 9 and hour < 12 and churchday ! daystart: :
+	elseif week = 7 and hour >= 9 and hour < 12 and churchday ! daystart:
 		act 'Attend Divine Litugy':
 			cls
 			CLOSE ALL

@@ -3,7 +3,9 @@ gs 'stat'
 $boy = 'Pirate'
 sexpartkno = 1
 if args[0] = '':
-	if piratfrend = 0:
+	if piratHorny >= 20:
+		gt 'pirat', 'horny'
+	elseif piratfrend = 0:
 		'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 		'Purebred dog named Pirate indifferently sitting near the barn.'
 	else
@@ -19,8 +21,6 @@ if args[0] = '':
 				'<center><img src="images/qwest/gadukino/sniff.jpg"></center>'
 				'Purebred dog named Pirate revolves around you wagging his tail and nuzzle you between the legs.'
 			end
-		else
-			gt 'pirat', 'horny'
 		end
 	end
 	act 'Pat Pirate':

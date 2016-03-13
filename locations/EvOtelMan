@@ -42,7 +42,8 @@ if $ARGS[0] = 'sex':
 		'You entered the room and closed the door barely a man as he stared at you with a kiss, and his hands began to fumble through your body trying to steal your clothes.'
 	end
 
-	if (horny < 75 and vagina = 0 and sex = 0) or (dom > 0 and vagina = 0 and sex = 0):
+	!! MJ: Same condition.
+	if ((horny < 75 or dom > 0) and vagina = 0 and sex = 0):
 		act 'I have a girl and a bank of virginity':
 			cls
 			minut += 5
@@ -51,7 +52,6 @@ if $ARGS[0] = 'sex':
 
 			if tiprandeom < 2:
 				'You have admitted that you like men, but you are still a girl would want to keep your virginity. The man smiled and said that sex can be engaged and remaining girl. <<$bname>> took a cock from his pants.'
-				gt 'EvOtelMan', 'Blow'
 
 				if dom > 0:
 					act 'Not even hope':
@@ -72,7 +72,9 @@ if $ARGS[0] = 'sex':
 
 					end
 				end
-			elseif tiprandeom = 2:
+				
+				act 'Squat': gt 'EvOtelMan', 'Blow'
+			else
 				'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
 				'<<$bname>> interested, "Really? Are you a virgin? I will give you five hundred if you show me your pussy"'
 
@@ -89,7 +91,7 @@ if $ARGS[0] = 'sex':
 							gs 'stat'
 							'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
 							'You reached your palm and the man gave you five hundred rubles.'
-							gt 'EvOtelMan', 'Blow'
+							act 'Squat': gt 'EvOtelMan', 'Blow'
 						end
 
 						act 'Leave':gt 'vokzalG'
@@ -132,7 +134,7 @@ if $ARGS[0] = 'sex':
 								money += 500
 								gs 'stat'
 								'You reached your palm and the man gave you five hundred rubles.'
-								gt 'EvOtelMan', 'Blow'
+								act 'Squat': gt 'EvOtelMan', 'Blow'
 							end
 
 							act 'Leave':gt 'vokzalG'
@@ -184,7 +186,7 @@ if $ARGS[0] = 'sex':
 						money += 500
 						gs 'stat'
 						'You reached your palm and the man gave you five hundred rubles.'
-						gt 'EvOtelMan', 'Blow'
+						act'Squat': gt 'EvOtelMan', 'Blow'
 					end
 
 					act 'Leave':gt 'vokzalG'
@@ -193,7 +195,9 @@ if $ARGS[0] = 'sex':
 		end
 	end
 
-	act 'Next':
+	if dom > 0: act'Squat': gt 'EvOtelMan', 'Blow'
+
+	act 'Sex':
 		cls
 		minut += 30
 		!!sex += 1
@@ -211,83 +215,81 @@ if $ARGS[0] = 'sex':
 		dynamic $sexcum
 		act 'Brush up':gt 'EvOtelMan', 'End'
 	end
-	if dom > 0: gt 'EvOtelMan', 'Blow'
+	
 end
 
 if $ARGS[0] = 'Blow':
-	act 'Squat':
-		cls
-		bj += 1
-		if boynumBlock = 0:guy += 1
-		if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
-		sub += 1
-		minut += 10
-		bmBJ[Tboynum] += 1
-		gs 'stat'
-		'<center><img src="images/qwest/alter/Ev/bj.jpg"></center>'
-		'You squatted in front of the man and took his cock hand. Slightly moving the skin on the penis you licked the head. Your nimble tongue began to caress hot and hard cock male. <<$bname>> said "<<$name>>, I will soon be over."'
+	cls
+	bj += 1
+	if boynumBlock = 0:guy += 1
+	if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+	sub += 1
+	minut += 10
+	bmBJ[Tboynum] += 1
+	gs 'stat'
+	'<center><img src="images/qwest/alter/Ev/bj.jpg"></center>'
+	'You squatted in front of the man and took his cock hand. Slightly moving the skin on the penis you licked the head. Your nimble tongue began to caress hot and hard cock male. <<$bname>> said "<<$name>>, I will soon be over."'
 
-		act 'Suck':
+	act 'Suck':
+		cls
+		spafinloc = 12
+		gs 'cum_manage'
+		minut += 10
+		gs 'stat'
+		'<center><img src="images/qwest/alter/Ev/bj2.jpg"></center>'
+		'You lips wrapped around his cock and started sucking carefully clasping his solid shaft <<$liptalk2>>. <<$bname>> groans and you feel like your mouth hits the jet of sperm.'
+
+		act 'Sucking swallowing sperm':
 			cls
-			spafinloc = 12
-			gs 'cum_manage'
+			swallow += 1
+			water -= 10
 			minut += 10
 			gs 'stat'
-			'<center><img src="images/qwest/alter/Ev/bj2.jpg"></center>'
-			'You lips wrapped around his cock and started sucking carefully clasping his solid shaft <<$liptalk2>>. <<$bname>> groans and you feel like your mouth hits the jet of sperm.'
-
-			act 'Sucking swallowing sperm':
-				cls
-				swallow += 1
-				water -= 10
-				minut += 10
-				gs 'stat'
-				'<center><img src="images/qwest/alter/Ev/bj3.jpg"></center>'
-				'You continued to suck cock and swallow cum sperm gets into your mouth. Semen was so much that you do not have time to swallow everything and it flows out of your mouth over the penis. Finally <<$bname>> ceases to finish and you get the dick out of your mouth smelling sperm. In the mouth, the taste of nasty cumshot obliznuvshis you realize that your <<$liptalk3>> wet with semen.'
-				act 'Brush up':gt 'EvOtelMan', 'End'
-			end
-
-			act 'Remove the mouth':
-				cls
-				spafinloc = 11
-				gs 'cum_manage'
-				facial += 1
-				minut += 10
-				gs 'stat'
-				'<center><img src="images/qwest/alter/Ev/bj4.jpg"></center>'
-				'You remove a member from his mouth and jet of sperm immediately slapped you in the face. You shut his eyes for fear that the sperm gets into your eyes and feel as another spurt of hot Cum landed on your face.'
-				act 'Brush up':gt 'EvOtelMan', 'End'
-			end
+			'<center><img src="images/qwest/alter/Ev/bj3.jpg"></center>'
+			'You continued to suck cock and swallow cum sperm gets into your mouth. Semen was so much that you do not have time to swallow everything and it flows out of your mouth over the penis. Finally <<$bname>> ceases to finish and you get the dick out of your mouth smelling sperm. In the mouth, the taste of nasty cumshot obliznuvshis you realize that your <<$liptalk3>> wet with semen.'
+			act 'Brush up':gt 'EvOtelMan', 'End'
 		end
 
-		act 'Substitute ass':
+		act 'Remove the mouth':
 			cls
-			minut += 30
-			spafinloc = 3
+			spafinloc = 11
 			gs 'cum_manage'
-			$boy = $bname
-			bmANAL[Tboynum] += 1
+			facial += 1
+			minut += 10
 			gs 'stat'
-			'<center><img src="images/qwest/alter/Ev/anal.jpg"></center>'
-			dynamic $sexstart
-			dynamic $analsex
+			'<center><img src="images/qwest/alter/Ev/bj4.jpg"></center>'
+			'You remove a member from his mouth and jet of sperm immediately slapped you in the face. You shut his eyes for fear that the sperm gets into your eyes and feel as another spurt of hot Cum landed on your face.'
 			act 'Brush up':gt 'EvOtelMan', 'End'
 		end
+	end
 
-		act 'Lie on your back.':
-			cls
-			minut += 30
-			!!sex += 1
-			$boy = $bname
-			bmSEX[Tboynum] += 1
-			gs 'stat'
-			'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
-			'You lay on your back. <<$bname>> lay on top and spread your legs.'
-			dynamic $sexstart
-			dynamic $sexstart2
-			dynamic $sexcum
-			act 'Brush up':gt 'EvOtelMan', 'End'
-		end
+	act 'Substitute ass':
+		cls
+		minut += 30
+		spafinloc = 3
+		gs 'cum_manage'
+		$boy = $bname
+		bmANAL[Tboynum] += 1
+		gs 'stat'
+		'<center><img src="images/qwest/alter/Ev/anal.jpg"></center>'
+		dynamic $sexstart
+		dynamic $analsex
+		act 'Brush up':gt 'EvOtelMan', 'End'
+	end
+
+	act 'Lie on your back.':
+		cls
+		minut += 30
+		!!sex += 1
+		$boy = $bname
+		bmSEX[Tboynum] += 1
+		gs 'stat'
+		'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
+		'You lay on your back. <<$bname>> lay on top and spread your legs.'
+		dynamic $sexstart
+		dynamic $sexstart2
+		dynamic $sexcum
+		act 'Brush up':gt 'EvOtelMan', 'End'
 	end
 end
 

@@ -1305,10 +1305,10 @@ if $ARGS[0] = 'kater1cum':
 	sexvolume = 5
 	spafinloc = 14
 	gs 'cum_manage'
-	sexvolume 10
+	sexvolume = 10
 	spafinloc = 15
 	gs 'cum_manage'
-	sexvolume 15
+	sexvolume = 15
 	spafinloc = 12
 	gs 'cum_manage'
 	spafinloc = 11

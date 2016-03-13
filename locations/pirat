@@ -2,7 +2,7 @@
 gs 'stat'
 $boy = 'Pirate'
 sexpartkno = 1
-if args[0] = '':
+if $args[0] = '':
 	if piratHorny >= 20:
 		gt 'pirat', 'horny'
 	elseif piratfrend = 0:
@@ -48,7 +48,7 @@ if args[0] = '':
 	act 'Escape':gt 'Gadsarai'
 end
 
-if args[0] = 'horny':
+if $args[0] = 'horny':
 	piratfrend = 1
 	if piratsuka < 3:
 		gt 'pirat', '1'
@@ -67,7 +67,7 @@ if args[0] = 'horny':
 	end
 end
 
-if args[0] = '1':
+if $args[0] = '1':
 	'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 	'Purebred dog named Pirate pounces on your leg and rubs against her.'
 
@@ -98,7 +98,7 @@ if args[0] = '1':
 	end
 end
 
-if args[0] = '2':
+if $args[0] = '2':
 	'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 	'Purebred dog named pirate stands on his hind legs and puts his front paws on your shoulder. You chustvuete like you in the ass rests like an awl member of the Pirate.'
 
@@ -144,7 +144,7 @@ if args[0] = '2':
 	end
 end
 
-if args[0] = '3':
+if $args[0] = '3':
 	'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 	'Pirate pogavkivaya happily, playfully circling around you, sometimes throwing your legs at the hip, wildly excited tychas member in the leg, then in the ass...'
 
@@ -205,7 +205,7 @@ if args[0] = '3':
 	end
 end
 
-if args[0] = '4':
+if $args[0] = '4':
 	'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 	'Pirate happily barking and spinning around you.'
 
@@ -270,7 +270,7 @@ if args[0] = '4':
 	end
 end
 
-if args[0] = '5':
+if $args[0] = '5':
 	'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 	'Pirate pogavkivaya happily, playfully circling around you, sometimes throwing your legs at the hip and wildly excited tychas member in the leg, then in the ass, the thighs...'
 
@@ -293,7 +293,7 @@ if args[0] = '5':
 	end
 end
 
-if args[0] = '5a':
+if $args[0] = '5a':
 	'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 	'Pirate pogavkivaya happily, playfully circling around you, sometimes throwing your legs at the hip and wildly excited tychas member in the leg, then in the ass, the thighs...'
 
@@ -642,7 +642,7 @@ if args[0] = '5a':
 	end
 end
 
-if args[0] = '5b':
+if $args[0] = '5b':
 	act 'Suck Pirate':
 		cls
 		horny += RAND(10,20)
@@ -1278,7 +1278,7 @@ if args[0] = '5b':
 end
 
 
-if args[0] = '6':
+if $args[0] = '6':
 	'<center><img src="images/qwest/gadukino/pirat.jpg"></center>'
 			act 'Suck Pirate':
 				cls
@@ -1566,7 +1566,7 @@ if args[0] = '6':
 	end
 end
 
-if args[0] = 'lick':
+if $args[0] = 'lick':
 	act 'Lick Pirates ass':
 		cls
 		piratHorny += 5

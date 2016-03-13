@@ -1978,6 +1978,7 @@ if temp > 0:
 		end
 		spdirty = 1
 		spdirtyn = 1
+		spdirtyv = 1
 	end
 	i = 12
 	temp1arr = arrpos('sparrloc',i)

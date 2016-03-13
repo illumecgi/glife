@@ -53,7 +53,7 @@ if arrsize('sparrvol') > 0:
 		if sparrloc[cumarrtemp] = 3: ctemp[2] += sparrvol[cumarrtemp]
 		sparrtmpv = arrsize('$cumarrnam')
 		if dirtyplay = 1 and sparrloc[cumarrtemp] = 13 and sparrage[cumarrtemp] < 5:
-			cumarrcpt[cumarrtemp] = cumarrppt[cumarrtemp]/((4+sparrage[cumarrtemp]*4)*(40/sparrvol[cumarrtemp]))
+			if ((4+sparrage[cumarrtemp]*4)*(40/sparrvol[cumarrtemp])) > 0:cumarrcpt[cumarrtemp] = cumarrppt[cumarrtemp]/((4+sparrage[cumarrtemp]*4)*(40/sparrvol[cumarrtemp]))
 			cumarrppt[sparrtmpv] = sparrppt[cumarrtemp]
 			$cumarrnam[sparrtmpv] = $sparrnam[cumarrtemp]
 			cumarrage[sparrtmpv] = sparrage[cumarrtemp]

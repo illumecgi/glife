@@ -252,7 +252,7 @@ if $ARGS[0] = 'break':
 			'<center><img src="images/qwest/alter/katja/petting.jpg"></center>'
 			'You quietly nod and Katja takes you by the hand, leading you to a small storage closet. The door is barely closed behind you when she pulls you tightly against her, giving you an aggressive kiss on the lips. She whispers passionately, "<<$nickname>>, I want you..."'
 
-			if rand(1,2) = 1 and katschoolsex = 1:
+			if rand(1,2) = 1 and katschoolsex >= 1:
 				gs 'Katja_Tanga'
 				*clr & cla
 				dynamic  $din_katja_secretroom
@@ -643,25 +643,27 @@ if $ARGS[0] = 'afternoon':
 						'<center><img src="images/qwest/alter/fizra/fizra3.jpg"></center>'
 						'Making sure no one else is near you, you pull up your shirt and reveal your <<$titsize>> boobs to Ivan. You almost immediately notice his erection growing in his tight shorts, and he awkwardly tries to hide his boner. As you pull your shirt back where it belongs you give him a sweet smile and say, "Try hiding that while you''re running past everyone!"'
 						'He grimaces as he sprints away from you, carefully checking to make sure no one is near him. You have a knowing smile on your face when, at the end of the class, his friends ask him why his lap time was so much slower than usual.'
-						act 'Change and leave the school':gt'gschool'
+						act 'Finish run':gt 'gschool2', 'postphys'
 					end
 					act 'Laugh it off and let him go':
 						cla
 						'"Very funny, Ivan" you tell him as you give him a wink. He salutes you theatrically as he sprints off again, finishing the run well before anyone else.'
-						act 'Change and leave the school':gt'gschool'
+						act 'Finish run':gt 'gschool2', 'postphys'
 					end
 				end
 			else
 				'<center><img src="images/qwest/alter/fizra/fizra1.jpg"></center>'
 			end
 			'You join the class in running laps around the gymnasium. Half-way into the fourteenth lap, you wonder if there''s any way gym class could be more boring than this.'
-			elseif fizrarand = 1:
+			act 'Finish run':gt 'gschool2', 'postphys'
+		elseif fizrarand = 1:
 			agil += rand(1, 3)
 			fat -= 5
 			manna -= 5
 			sweat += 3
 			'After the roll call, mr. Pavlovich announces that you will be taking turns performing vaults.'
-			gt 'gschool3', 'fiz_rand'
+			gs 'gschool3', 'fiz_rand'
+			act 'End of lesson':gt 'gschool2', 'postphys'
 		elseif fizrarand = 2:
 			stren += rand(1, 3)
 			manna -= 5
@@ -676,14 +678,16 @@ if $ARGS[0] = 'afternoon':
 			end
 			'You wait for your turn and then do your best to do as many pull-ups as you can.'
 
-			gt 'gschool3', 'fiz_rand'
+			gs 'gschool3', 'fiz_rand'
+			act 'End of lesson':gt 'gschool2', 'postphys'
 		elseif fizrarand = 3:
 			vital += rand(1, 3)
 			manna -= 5
 			fat -= 2
 			sweat += 3
 			'After the roll call, mr. Pavlovich announces that you will all be doing abdominal exercises today.'
-			gt 'gschool3', 'fiz_rand'
+			gs 'gschool3', 'fiz_rand'
+			act 'End of lesson':gt 'gschool2', 'postphys'
 		elseif fizrarand = 4:
 			cls
 			stren += rand(1, 3)
@@ -705,135 +709,138 @@ if $ARGS[0] = 'afternoon':
 				horny += 20
 				'You climb the rope as instructed, and can''t help but feel the rough robe rubbing against your pussy through your clothes. You do your best to climb up, but the rubbing of the rope against your pussy gets more and more intense as you try to climb higher. You manage to reach the top, but the rubbing of the rope has got you all worked up. With a bright blush on your face you slide back down, making sure the rope doesn''t rub against your most sensitive spots.'
 			end
-			gt 'gschool3', 'fiz_rand'
+			gs 'gschool3', 'fiz_rand'
+			act 'End of lesson':gt 'gschool2', 'postphys'
 		end
+	end
+end
 
-		if week = 5 and razradbeg = 0:
-			if schoolSorev = 0:schoolSorev = 1
+if $ARGS[0] = 'postphys':
+	if week = 5 and razradbeg = 0:
+		if schoolSorev = 0:schoolSorev = 1
 
-			'Mr. Pavlovich announces that the inter-school running competition will be held this Saturday at 11:00. If you want to participate, you should come to school between 10:00 and 11:00.'
-		elseif week = 5 and razradbeg = 1:
-			if schoolSorev = 0:schoolSorev = 2
+		'Mr. Pavlovich announces that the inter-school running competition will be held this Saturday at 11:00. If you want to participate, you should come to school between 10:00 and 11:00.'
+	elseif week = 5 and razradbeg = 1:
+		if schoolSorev = 0:schoolSorev = 2
 
-			'Mr. Pavlovich announces that the inter-school running competition will be held this Saturday at 11:00. If you want to participate, you should come to school between 10:00 and 11:00.'
+		'Mr. Pavlovich announces that the inter-school running competition will be held this Saturday at 11:00. If you want to participate, you should come to school between 10:00 and 11:00.'
+	end
+
+	if fizrukSex > 0 and kristinaSex > 0:
+		'When the class is dismissed, Christina approaches you, "<<$nickname>>, sweetie, Mr. Pavlovich wants you to join me again in his office. He wants us to... ''entertain him'', if you know what I mean. Want to join me?"'
+
+		act 'Entertain Mr. Pavlovich with Christina':
+			cls
+			bj += 1
+			!!spafinloc = 12
+			gs 'cum_manage'
+
+			if fizrukSex = 0:fizrukSex = 1 & guy += 1
+			if kristinaSex = 0:kristinaSex = 1
+
+			grupNPC[18] = 100
+			gs 'stat'
+			'<center><img src="images/qwest/alter/Ev/fiz.jpg"></center>'
+			'You follow Christina, and follow her lead as she squats before your teacher. She diligently takes off his clothes and takes his penis in her hand, sucking on it for a little while before offering it to you. You follow her lead and obediently take his cock in your mouth, sucking on it and trying to take it down as far down your throat as you are comfortable with. After a while she pushes your face away and closes her lips around it, sucking him off until he shoots his load inside her mouth. Unwilling to share, she swallows it and then goes to the changing room to get dressed.'
+
+			act 'Change and leave the school':gt 'gschool', 'start'
 		end
+	end
+	if zverRageQW = 10:
+		cla
+		!!Christina broke SG
+		act 'In the locker room...':gt 'gKristinaZv'
 
-		if fizrukSex > 0 and kristinaSex > 0:
-			'When the class is dismissed, Christina approaches you, "<<$nickname>>, sweetie, Mr. Pavlovich wants you to join me again in his office. He wants us to... ''entertain him'', if you know what I mean. Want to join me?"'
+		exit
+	end
 
-			act 'Entertain Mr. Pavlovich with Christina':
+	!!if zverevaQW = 2:end
+	!!if zverevaQW = 3 and fizrukSex = 0:end
+
+	if zverevaQW = 1:
+		'After class, Mr. Pavlovich returns to his office. For some reason, Christina Zvereva is following him while all other students go to the locker rooms as usual.'
+
+		act 'Listen in on Christina and Mr. Pavlovich':
+			cls
+			gs 'stat'
+			'You quietly move up to Mr. Pavlovich''s office, to listen to what they''re talking about. You hear Christina saying, "Please sir, you can''t let <<$name>> go to the regional competition!"'
+			'He replies, "<<$name>> beat you fair and square, Christina. There''s not a whole lot I can do about it."'
+			'Christina''s voice again, "But you promised! Please? I''ll make it worth your while if you choose me over her, sir..."'
+			'After a few seconds of silence, you hear him smirk, "Is that so, Christina? You know what to do then, this is not your first time here..." Seconds later you hear a gasp from your teacher, and then soft moaning from him.'
+
+			act 'Try to see what''s happening':
 				cls
-				bj += 1
-				!!spafinloc = 12
-				gs 'cum_manage'
-
-				if fizrukSex = 0:fizrukSex = 1 & guy += 1
-				if kristinaSex = 0:kristinaSex = 1
-
-				grupNPC[18] = 100
+				zverevaQW = 2
+				horny += 10
 				gs 'stat'
-				'<center><img src="images/qwest/alter/Ev/fiz.jpg"></center>'
-				'You follow Christina, and follow her lead as she squats before your teacher. She diligently takes off his clothes and takes his penis in her hand, sucking on it for a little while before offering it to you. You follow her lead and obediently take his cock in your mouth, sucking on it and trying to take it down as far down your throat as you are comfortable with. After a while she pushes your face away and closes her lips around it, sucking him off until he shoots his load inside her mouth. Unwilling to share, she swallows it and then goes to the changing room to get dressed.'
+				'<center><img src="images/qwest/alter/Ev/zver.jpg"></center>'
+				'You lean over and try to look through the keyhole. You''re flabbergasted by what you see: Christina is on her knees in front of Mr. Pavlovich, and is sucking him off like her life depended on it.'
 
-				act 'Change and leave the school':gt 'gschool', 'start'
-			end
-		end
-		if zverRageQW = 10:
-			cla
-			!!Christina broke SG
-			act 'In the locker room...':gt 'gKristinaZv'
-
-			exit
-		end
-
-		!!if zverevaQW = 2:end
-		!!if zverevaQW = 3 and fizrukSex = 0:end
-
-		if zverevaQW = 1:
-			'After class, Mr. Pavlovich returns to his office. For some reason, Christina Zvereva is following him while all other students go to the locker rooms as usual.'
-
-			act 'Listen in on Christina and Mr. Pavlovich':
-				cls
-				gs 'stat'
-				'You quietly move up to Mr. Pavlovich''s office, to listen to what they''re talking about. You hear Christina saying, "Please sir, you can''t let <<$name>> go to the regional competition!"'
-				'He replies, "<<$name>> beat you fair and square, Christina. There''s not a whole lot I can do about it."'
-				'Christina''s voice again, "But you promised! Please? I''ll make it worth your while if you choose me over her, sir..."'
-				'After a few seconds of silence, you hear him smirk, "Is that so, Christina? You know what to do then, this is not your first time here..." Seconds later you hear a gasp from your teacher, and then soft moaning from him.'
-
-				act 'Try to see what''s happening':
+				act 'Burst into the room':
 					cls
-					zverevaQW = 2
+					zverevaQW = 3
+					gs 'stat'
+					!!'<center><img src="images/qwest/alter/Ev/zver.jpg"></center>'
+					if GorSlut = 0:
+						'You open the door and enter Mr. Pavlovich''s room. Christine is startled, jumping up from her kneeled position and desperately wiping her mouth while your teacher quickly stuffs his erection back into his shorts. "<<$surname>>, has no one taught you you should knock!? Me and Christina were just discussing some important matters!" he exclaims, pretending to be insulted by your sudden intrusion.'
+						'You can''t believe he''s even trying! You tell him just that, "Christina was using her mouth, but it certainly wasn''t for talking! You''re letting her suck you off so she can go to the regional competition instead of me!"'
+						'He drops the charade, but has a confident grin on his face, "Who would believe you? It''s your word against mine, and the word of our school''s star athlete Christina Zvereva. The principal would consider it slander! Your parents would be outraged! Face it... you don''t have shit on me, get out of my office. Christina, get back on your knees, we''re not done." The last part was directed at Christina.'
+						'Christina obliges, rubbing his cock through his shorts as she looks you in the eye. Having regained her confidence in knowing that she''ll be your school''s admission for the contest, she parrots, "Face it bitch, you can''t prove a thing. Now get the fuck out, Mr. Pavlovich and I have more to... discuss."'
+					elseif GorSlut > 0:
+						'You open the door and burst into Mr. Pavlovich''s room. Christina pulls off her teacher''s dick in a panic reaction, but regains her confidence when she sees it''s you, "Look what the cat dragged in, it''s <<$name>> the <<$gnikname>>. I recognize that look... you want to suck him off too, don''t you? That''s okay, we can share."'
+
+						act 'Give him a blowjob with Christina':
+							cls
+							bj += 1
+							!!spafinloc = 12
+							gs 'cum_manage'
+
+							if fizrukSex = 0:fizrukSex = 1 & guy += 1
+							if kristinaSex = 0:kristinaSex = 1
+
+							grupNPC[18] = 100
+							gs 'stat'
+							'<center><img src="images/qwest/alter/Ev/fiz.jpg"></center>'
+							'You nod and get down on your knees next to Christina, thinking maybe if you outperform her, he will still pick you for the competition. She diligently takes off his clothes and takes his penis in her hand, sucking on it for a little while before offering it to you. You follow her lead and obediently take his cock in your mouth, sucking on it and trying to take it down as far down your throat as you are comfortable with. After a while she pushes your face away and closes her lips around it, sucking him off until he shoots his load inside her mouth. Unwilling to share, she swallows it and then goes to the changing room to get dressed. You might be faster than Christina, but she definitely outperformed you here.'
+
+							act 'Change and leave the school':gt 'gschool', 'start'
+						end
+					end
+
+					act 'Change and leave the school':gt 'gschool', 'start'
+				end
+
+				act 'Keep looking':
+					cls
 					horny += 10
 					gs 'stat'
 					'<center><img src="images/qwest/alter/Ev/zver.jpg"></center>'
-					'You lean over and try to look through the keyhole. You''re flabbergasted by what you see: Christina is on her knees in front of Mr. Pavlovich, and is sucking him off like her life depended on it.'
-
-					act 'Burst into the room':
-						cls
-						zverevaQW = 3
-						gs 'stat'
-						!!'<center><img src="images/qwest/alter/Ev/zver.jpg"></center>'
-						if GorSlut = 0:
-							'You open the door and enter Mr. Pavlovich''s room. Christine is startled, jumping up from her kneeled position and desperately wiping her mouth while your teacher quickly stuffs his erection back into his shorts. "<<$surname>>, has no one taught you you should knock!? Me and Christina were just discussing some important matters!" he exclaims, pretending to be insulted by your sudden intrusion.'
-							'You can''t believe he''s even trying! You tell him just that, "Christina was using her mouth, but it certainly wasn''t for talking! You''re letting her suck you off so she can go to the regional competition instead of me!"'
-							'He drops the charade, but has a confident grin on his face, "Who would believe you? It''s your word against mine, and the word of our school''s star athlete Christina Zvereva. The principal would consider it slander! Your parents would be outraged! Face it... you don''t have shit on me, get out of my office. Christina, get back on your knees, we''re not done." The last part was directed at Christina.'
-							'Christina obliges, rubbing his cock through his shorts as she looks you in the eye. Having regained her confidence in knowing that she''ll be your school''s admission for the contest, she parrots, "Face it bitch, you can''t prove a thing. Now get the fuck out, Mr. Pavlovich and I have more to... discuss."'
-						elseif GorSlut > 0:
-							'You open the door and burst into Mr. Pavlovich''s room. Christina pulls off her teacher''s dick in a panic reaction, but regains her confidence when she sees it''s you, "Look what the cat dragged in, it''s <<$name>> the <<$gnikname>>. I recognize that look... you want to suck him off too, don''t you? That''s okay, we can share."'
-
-							act 'Give him a blowjob with Christina':
-								cls
-								bj += 1
-								!!spafinloc = 12
-								gs 'cum_manage'
-
-								if fizrukSex = 0:fizrukSex = 1 & guy += 1
-								if kristinaSex = 0:kristinaSex = 1
-
-								grupNPC[18] = 100
-								gs 'stat'
-								'<center><img src="images/qwest/alter/Ev/fiz.jpg"></center>'
-								'You nod and get down on your knees next to Christina, thinking maybe if you outperform her, he will still pick you for the competition. She diligently takes off his clothes and takes his penis in her hand, sucking on it for a little while before offering it to you. You follow her lead and obediently take his cock in your mouth, sucking on it and trying to take it down as far down your throat as you are comfortable with. After a while she pushes your face away and closes her lips around it, sucking him off until he shoots his load inside her mouth. Unwilling to share, she swallows it and then goes to the changing room to get dressed. You might be faster than Christina, but she definitely outperformed you here.'
-
-								act 'Change and leave the school':gt 'gschool', 'start'
-							end
-						end
-
-						act 'Change and leave the school':gt 'gschool', 'start'
-					end
-
-					act 'Keep looking':
-						cls
-						horny += 10
-						gs 'stat'
-						'<center><img src="images/qwest/alter/Ev/zver.jpg"></center>'
-						'Mr. Pavlovich groans, and after a few minutes he can''t hold back any more shoots his load in Christina''s mouth. She diligently swallows his sperm without even taking her mouth off his cock, giving it a thorough tongue bath before tucking it back into his shorts. You hear her ask, "Did I do a good job, sir? Did I earn my spot in the regional championships?"'
-						'He groans, petting her head as he instructs her to stay on her knees for a while longer, "Absolutely, babe... as long as you keep taking care of me, I''ll make sure you''ll be running those championships. Don''t get up, stay there and keep nuzzling. I think I can go again in a minute."'
-
-						act 'Admit defeat and go get changed':
-							cls
-							gs 'stat'
-							'As you see Christina happily dig her face into his groin, you quietly close the door and leave. It looks like, despite being the better runner, you won''t be going to the regional championships.'
-
-							act 'Leave the school':gt 'gschool', 'start'
-						end
-					end
+					'Mr. Pavlovich groans, and after a few minutes he can''t hold back any more shoots his load in Christina''s mouth. She diligently swallows his sperm without even taking her mouth off his cock, giving it a thorough tongue bath before tucking it back into his shorts. You hear her ask, "Did I do a good job, sir? Did I earn my spot in the regional championships?"'
+					'He groans, petting her head as he instructs her to stay on her knees for a while longer, "Absolutely, babe... as long as you keep taking care of me, I''ll make sure you''ll be running those championships. Don''t get up, stay there and keep nuzzling. I think I can go again in a minute."'
 
 					act 'Admit defeat and go get changed':
 						cls
 						gs 'stat'
-						'Yea, you''re not willing to do that. As you see Christina happily dig her face into his groin, you quietly close the door and leave. It looks like, despite being the better runner, you won''t be going to the regional championships.'
+						'As you see Christina happily dig her face into his groin, you quietly close the door and leave. It looks like, despite being the better runner, you won''t be going to the regional championships.'
 
 						act 'Leave the school':gt 'gschool', 'start'
 					end
 				end
+
+				act 'Admit defeat and go get changed':
+					cls
+					gs 'stat'
+					'Yea, you''re not willing to do that. As you see Christina happily dig her face into his groin, you quietly close the door and leave. It looks like, despite being the better runner, you won''t be going to the regional championships.'
+
+					act 'Leave the school':gt 'gschool', 'start'
+				end
 			end
 		end
-
-		gs 'stat'
-
-		act 'Change and leave the school':gt 'gschool', 'start'
 	end
+
+	gs 'stat'
+
+	act 'Change and leave the school':gt 'gschool', 'start'
 end
 
 --- gschool2 ---------------------------------

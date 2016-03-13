@@ -1054,7 +1054,7 @@ if $ARGS[0] = 'popala':
 				act 'Take by mouth':
 					cla
 					*clr
-					spafinloc 12
+					spafinloc = 12
 					gs 'Cum_Manage'
 					'<center><img src="images/img/hasb/p3.jpg"></center>'
 					'"So you''re married, you cheated on me, and I loved you so, you despicable liar, goodbye!" your guy shouted and ran out of the room.'

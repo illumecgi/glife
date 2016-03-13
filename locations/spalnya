@@ -19,10 +19,10 @@ if komp = 1:
 else
 	$komp = ''
 end
-'A luxury <a href="exec:gt ''divan'', ''start''">a leather sofa</a> against a wall. Mounted on the wall opposite the sofa is a huge plasma <a href="exec:gt ''TV'', ''start''">TV</a>. Under the window is a new <a href="exec:gt ''stol'', ''start''">desk</a><<$komp>>.'
-+if obruch > 0:'<br>A hula hoop stands in corner of the room. '
-+if skak > 0:'A jump rope is on a shelf. '
-+if bookYog > 0:'A yoga mat is rolled up in a corner. '
+'A luxury <a href="exec:gt ''divan'', ''start''">leather sofa</a> against a wall. Mounted on the wall opposite the sofa is a huge plasma <a href="exec:gt ''TV'', ''start''">TV</a>. Under the window is a new <a href="exec:gt ''stol'', ''start''">desk</a><<$komp>>.'
+if obruch > 0:'<br>A hula hoop stands in corner of the room. '
+if skak > 0:'A jump rope is on a shelf. '
+if bookYog > 0:'A yoga mat is rolled up in a corner. '
 
 if mishka > 0:'On a shelf is <<mishka>> teddy bear'
 

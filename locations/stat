@@ -643,8 +643,6 @@ if hour >= 24:
 
 	dmishaevent = 0
 
-	if BuyHous = 2 and ArendHouseSL <= 0:ArendHouseSL = 0 & BuyHous = 0 & housr = 0
-	if BuyHous = 2 and ArendHouseSL > 0:ArendHouseSL -= 1
 	if Gspravka <= 0 and GspravkaT = 1:GspravkaT = 0 & Gspravka = 0
 	if GspravkaT = 1:Gspravka -= 1
 	if IvanPodstavaQW = 2 and PodpiskaNeviezd = 30:IvanPodstavaQW = 3
@@ -1441,6 +1439,8 @@ if Enable_showrelation = 1:
 	if trenerepa > 0:gs'show_table','<<trenerepa>> Mikhail Nikolaevich','2'
 	if st_count > 0 :pl 'Relations: <BR><TABLE BORDER=1> <<$show_table>></TR></TABLE>'
 end
+
+if BuyHous = 2 and ArendHouseSL <= 0:'<font color="red"><b>The rent on your apartment expires today.</b></font>
 
 if  weatherDay = daystart: pl '<<$weather>>' & pl
 

@@ -1620,6 +1620,18 @@ if Enable_fbreath > 0:
 end
 }
 
+$cumeatercleanup = {
+	KILLVAR 'spafinloc',temp
+	KILLVAR 'sparrage',temp
+	KILLVAR 'sparrloc',temp
+	KILLVAR '$sparrnam',temp
+	KILLVAR 'sparrppt',temp
+	KILLVAR 'sparridt',temp
+	KILLVAR 'sparrvol',temp
+	KILLVAR 'sparrslc',temp
+	cumsumbod -= sparrvol[temp]
+}
+
 $cumeater = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1633,8 +1645,9 @@ $cumeater = {
 		gs 'stat'
 		'You collect the sperm from your stomach with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:temp = 14 & dynamic $cumeatercleanup
 }
+
 $cumeater2 = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1648,8 +1661,12 @@ $cumeater2 = {
 		gs 'stat'
 		'You collect the sperm from your pussy with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:
+		temp = 0 & dynamic $cumeatercleanup
+		temp = 1 & dynamic $cumeatercleanup
+	end
 }
+
 $cumeater3 = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1663,8 +1680,9 @@ $cumeater3 = {
 		gs 'stat'
 		'You collect the sperm from your buttocks with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:temp = 4 & dynamic $cumeatercleanup
 }
+
 $cumeater4 = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1678,8 +1696,9 @@ $cumeater4 = {
 		gs 'stat'
 		'You collect the sperm from your face with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:temp = 11 & dynamic $cumeatercleanup
 }
+
 $cumeater5 = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1693,7 +1712,12 @@ $cumeater5 = {
 		gs 'stat'
 		'You collect the sperm from your clothes with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:
+		temp = 2 & dynamic $cumeatercleanup
+		temp = 5 & dynamic $cumeatercleanup
+		temp = 6 & dynamic $cumeatercleanup
+		temp = 7 & dynamic $cumeatercleanup
+	end
 }
 
 $cumeater6 = {
@@ -1709,8 +1733,9 @@ $cumeater6 = {
 		gs 'stat'
 		'You collect the sperm from your anus with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:temp = 3 & dynamic $cumeatercleanup
 }
+
 $cumeater7 = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1724,8 +1749,15 @@ $cumeater7 = {
 		gs 'stat'
 		'You collect the sperm from your body with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:
+		temp = 8 & dynamic $cumeatercleanup
+		temp = 9 & dynamic $cumeatercleanup
+		temp = 10 & dynamic $cumeatercleanup
+		temp = 11 & dynamic $cumeatercleanup
+		temp = 15 & dynamic $cumeatercleanup
+	end
 }
+
 $cumeater8 = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1739,8 +1771,9 @@ $cumeater8 = {
 		gs 'stat'
 		'You lick your fingers clean, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:temp = 13 & dynamic $cumeatercleanup
 }
+
 $cumeater9 = {
 	spdirtyb = 1
 	fbreath = 0
@@ -1754,8 +1787,9 @@ $cumeater9 = {
 		gs 'stat'
 		'You collect the sperm from your hair with your fingers and lick them, feeling the tart taste of semen.'
 	end
-	if sparrvol[temp1arr] <= 0:sparrvol[temp1arr] = 0
+	if sparrvol[temp1arr] <= 0:temp = 16 & dynamic $cumeatercleanup
 }
+
 $clear_write = {
 	body_write = 0
 	face_write = 0

@@ -27,8 +27,8 @@ if $ARGS[0] = 'start':
 
 	if week = 6 and hour >=19 and hour <= 22 and churchday ! daystart:
 		act 'Attend vigil': gt 'ParChurch', 'vigil'
-	elseif week = 7 and hour >= 9 and hour < 12 and churchday ! daystart: :
-		act 'Attend Divine Litugy': gt 'ParChurch' , 'liturgy'
+	elseif week = 7 and hour >= 9 and hour < 12 and churchday ! daystart:
+		act 'Attend Divine Liturgy': gt 'ParChurch' , 'liturgy'
 	else
 		act 'Enter the church': gt 'ParChurch' , 'Narthex'
 	end

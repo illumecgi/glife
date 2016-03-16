@@ -2249,8 +2249,18 @@ end
 
 if $mudnerd ! '':pl '<<$mudnerd>>'
 
-if hour < meethour and svidanieA = 1:pl '<<$boyA>> will be waiting for you near your home at <<meethour>> hours'
-if hour = meethour and svidanieA = 1:pl '<b><font color="red"><<$boyA>> is waiting for you by your home.</font></b>'
+if housr = 1:
+	$streetev_home = 'your apartment'
+elseif tanwork = 1:
+	$streetev_home = 'Tanya''s apartment'
+elseif student > 0:
+	$streetev_home = 'your dorm'
+else
+	$streetev_home = 'the train station'
+end
+
+if hour < meethour and svidanieA = 1:pl '<<$boyA>> will be waiting for you near <<$streetev_home>> at <<meethour>>:00.'
+if hour = meethour and svidanieA = 1:pl '<b><font color="red"><<$boyA>> is waiting for you by <<$streetev_home>>.</font></b>'
 
 if meetday < daystart and svidanieA = 1:bfA -= 10 & svidanieA = 0
 if StrongNarkota > 20:pl '<b><font color="red">You are stoned.</font></b>'

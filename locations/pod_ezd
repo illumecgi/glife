@@ -1,4 +1,5 @@
 # pod_ezd
+
 !SETTINGS:
 CLOSE ALL
 FColor = RGB(0,0,0)
@@ -825,7 +826,7 @@ gs'stat'
 			horny +=5
 			gs'stat'
 			'<center><img src="images/zsoft/pod_ezd/event/cherdak/ev3_3.jpg"></center>'
-			'The man holding the camera is tired of being left out, and he asks his friend to swing her around she can use her mouth at the same time. He does, and tells the girl to lean against the other man''s chest while she sucks him off. The girl does, and from the look in her eyes you can tell she''s thrilled by all this.'
+			'The man holding the camera is tired of being left out, and he asks his friend to swing her around she can use her pussy at the same time. He does, and tells the girl to lean against the other man''s chest while she sucks him off. The girl does, and from the look in her eyes you can tell she''s thrilled by all this.'
 			'After about five minutes the body of the guy behind her tenses, and from his grunting you can only assume he finished right in her pussy.'
 			dynamic $masturb_gg
 			act 'Continue':
@@ -1356,5 +1357,6 @@ if $ARGS[0] = 'pod_objava':
 		'<center><img src="images/zsoft/pod_ezd/pod_ob'+rand(1,2)+'.jpg"></center>'
 	act 'Continue': gt'pod_ezd','etaj_1'
 end
+
 --- pod_ezd ---------------------------------
 

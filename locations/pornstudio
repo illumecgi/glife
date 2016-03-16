@@ -1035,7 +1035,7 @@ if $ARGS[0] = 'manager':
 				end
 			end
 			if rand(0,2) ! 0:
-				pfcash = 500 * fmulti
+				pfcash = 50 * fmulti
 				act 'Classic, first blowjob, then sex, finish with a facial (<<pfcash>>rub)':
 					cla
 					pfilm = 3

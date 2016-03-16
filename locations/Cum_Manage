@@ -1,4 +1,23 @@
 # Cum_Manage
+!{	Locations to be defined by 'spafinloc'
+	0 = 'In your Vagina'
+	1 = 'On your labia'
+	2 = 'On your panties over your vagina'
+	3 = 'In your anus'
+	4 = 'On your butt'
+	5 = 'On your panties over your butt'
+	6 = 'On your clothes in your groin area'
+	7 = 'On your clothes'
+	8 = 'On your back'
+	9 = 'On your legs'
+	10 = 'On your arms'
+	11 = 'On your face'
+	12 = 'Inside your mouth'
+	13 = 'On your hands'
+	14 = 'On your stomach'
+	15 = 'On your breasts'
+	16 = 'In your hair'
+	17 = 'In a condom in your vagina'}
 !{Sets the cum array temp to the current size of the cum array, to add a new entry to the end of file. Then checks to see if you are on the pill. If you are and there is no contraception used, it flags this as a "done with pill" act, which means a pregnancy will be a pill failure.}
 cumarrtemp = arrsize('$cumarrnam')
 if sexcontra = 0 and pillcon > 0: sexcontra = 2

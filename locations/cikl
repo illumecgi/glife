@@ -4,6 +4,9 @@ daystart += 1
 week += 1
 hour -= 24
 
+if BuyHous = 2 and ArendHouseSL <= 0:ArendHouseSL = 0 & BuyHous = 0 & housr = 0
+if BuyHous = 2 and ArendHouseSL > 0:ArendHouseSL -= 1
+
 vidageday -= 1
 if workDolgDay > 0:workDolgDay -= 1
 if QWdogreiqTimer > 0:QWdogreiqTimer -= 1

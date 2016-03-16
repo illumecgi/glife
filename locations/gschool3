@@ -330,6 +330,7 @@ end
 
 if $ARGS[0] = 'help':
 	'<center><img src="images/qwest/alter/urok<<urand>>.jpg"></center>'
+	'<<$school_class_txtrand>>'
 	act'Wait for the end of the lesson':gt 'gschool2', 'break'
 	act'Gently touch his hand':
 		cla
@@ -377,6 +378,7 @@ end
 
 if $ARGS[0] = 'legs':
 	'<center><img src="images/qwest/alter/urok<<urand>>.jpg"></center>'
+	'<<$school_class_txtrand>>'
 	act'Ignore his stares and wait for the break': gt 'gschool2', 'break'
 	if sub < 30:
 		act'Straighten your skirt':

@@ -193,7 +193,7 @@ cumSUM = cumsumbod/40
 
 if husbizvradd > 5:izvratH = 1
 if husbharmin > 10:harakHusb = 0
-if clrbelo <= 0:clrbelo = 0 & tanga = 0
+if clrbelo < 0:clrbelo = 0 & tanga = 0
 
 if husband = 0:
 	husbizvradd = 0
@@ -1419,11 +1419,6 @@ end
 if Enable_showrelation = 1:
 	st_count=0
 	$show_table=''
-	if StoryLine > 0:	
-		if mother > 0:gs'show_table','<<mother>> Mother','2'
-		if father > 0:gs'show_table','<<father>> Father','2'
-		if brother > 0:gs'show_table','<<brother>> Brother','2'
-	end
 	if nastjaqw > 0:gs'show_table','<<nastjaqw>> Nastja','2'
 	if tanya > 0:gs'show_table','<<tanya>> Tanya','2'
 	if kat > 0:gs'show_table','<<kat>> Kate','2'
@@ -1437,6 +1432,12 @@ if Enable_showrelation = 1:
 	if Dmitry > 0:gs'show_table','<<Dmitry>> Dima','2'
 	if afra > 0:gs'show_table','<<afra>> Blacks','2'
 	if trenerepa > 0:gs'show_table','<<trenerepa>> Mikhail Nikolaevich','2'
+	if StoryLine > 0:	
+		if mother > 0:gs'show_table','<<mother>> Mother','2'
+		if father > 0:gs'show_table','<<father>> Father','2'
+		if sister > 0:gs'show_table','<<sister>> Sister','2'
+		if brother > 0:gs'show_table','<<brother>> Brother','2'
+	end
 	if st_count > 0 :pl 'Relations: <BR><TABLE BORDER=1> <<$show_table>></TR></TABLE>'
 end
 

@@ -1,4 +1,5 @@
 # parkdin
+gs 'stat'
 gs 'parkivent'
 
 parkrand = rand(1,20)

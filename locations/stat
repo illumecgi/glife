@@ -562,7 +562,7 @@ if minut >= 60:
 		manna -= 10
 	end
 
-	if tanga = 0 and ski =0 and glamur = 0 and $clothingworntype ! 'nude':mosolpred += 1
+	if tanga = 0 and CloPantsShortness > 0 and $clothingworntype ! 'nude':mosolpred += 1
 	
 
 	if mosolpred >= 10:
@@ -2179,17 +2179,17 @@ if fingal > 0:pl '<b><font color="red">You have a black eye.</font></b>'
 ! WD: Bimbo look
 if cloth_vid = 1:
 	pl '<b>You look like a bimbo</b>'
-elseif hcol = 3 and (exhibi + lip + skin + mop + tits) >= 15 and (ski + glamur + sexual) >= 1:
+elseif hcol = 3 and (exhibi + lip + skin + mop + tits) >= 15 and CloBimbo = 1:
 	pl '<b>You could wear a bimbo outfit</b>'
 end
 
 if tanga = 1 and $clothingworntype = 'nude':
 	pl'<b><font color = red>You are stripped down to your panties and your boobs sway invitingly as you walk</font></b>'
 elseif tanga = 0:
-	if (ski = 1 or glamur = 1):
-		pl '<b><font color="red">Your face is flushed with shame, you are not wearing panties and your naked ass flashes from under your short skirt.</font></b>'
-	elseif $clothingworntype = 'hooker':
+	if $clothingworntype = 'naughty' and CloQuality = 2:
 		pl '<b><font color="red">you are not wearing panties, but you are dressed as a hooker, so that''s hardly surprising.</font></b>'
+	elseif CloSkirtShortness > 3:
+		pl '<b><font color="red">Your face is flushed with shame, you are not wearing panties and your naked ass flashes from under your short skirt.</font></b>'
 	elseif opPRE = 0 and $clothingworntype ! 'nude':
 		pl '<b><font color="red">you are not wearing panties.</font></b>'
 	elseif towel = 1:

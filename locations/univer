@@ -16,6 +16,8 @@ if $ARGS[0] = 'start':
 
 	'Examinations for admission to the University are held in August.'
 	'All lectures begin with a 8:00, late for a lecture is not allowed.'
+	'First semester: September, October, November.'
+	'Second semester: February, March, April.'
 
 	if student > 0:'You learn how to <<semestr>> semester <<kurs>> course'
 

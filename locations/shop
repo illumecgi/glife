@@ -71,7 +71,7 @@ if $shoplocation = 'main':
 							oral += 1
 							throat += 1
 							spafinloc = 12
-gs 'cum_manage'
+							gs 'cum_manage'
 							swallow += 1
 							horny = 0
 							minut += 10
@@ -85,7 +85,7 @@ gs 'cum_manage'
 							sex += 1
 							anal += 1
 							spafinloc = 4
-gs 'cum_manage'
+							gs 'cum_manage'
 							spank += 1
 							boom = 5
 							horny = 0

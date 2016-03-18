@@ -29,7 +29,7 @@ if $ARGS[0] = 'street':
 	streetev_pantie = 10
 	if housr = 1:
 		streetev_home = 1
-		$streetev_home = 'Your apartment'
+		$streetev_home = 'your apartment'
 	end
 elseif $ARGS[0] = 'down':
 	$streetev_title = '<center><b>City center</b><br><img src="images/etogame/down.jpg"></center>'
@@ -40,7 +40,7 @@ elseif $ARGS[0] = 'down':
 	streetev_pantie = 20
 	if tanwork = 1 or student > 0:
 		streetev_home = 1
-		$streetev_home = 'Your home'
+		$streetev_home = 'your home'
 	end
 elseif $ARGS[0] = 'Nord':
 	$streetev_title = '<center><b>Northern region</b><br><img src="images/etogame/nord.jpg"></center>'
@@ -51,7 +51,7 @@ elseif $ARGS[0] = 'Nord':
 	streetev_pantie = 5
 	if housr = 0 and tanwork = 0 and student = 0:
 		streetev_home = 1
-		$streetev_home = 'Train station'
+		$streetev_home = 'the train station'
 	end
 else
 	$streetev_title = '<center><b>in dark</b>'
@@ -322,7 +322,7 @@ dynamic $din_street_cum
 if rand (0,2) ! 0:gs 'din_bad' & dynamic $mobile_check
 
 !start home-related events check
-if streetev_home=1:
+if streetev_home = 1:
 	if workDolgDay <= 0 and workDolg > 0:
 		cls
 		gs 'stat'

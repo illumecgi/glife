@@ -248,9 +248,9 @@ if osadki >= painweather and umbrella = 0:
 end
 
 if isprok = 0 and mesec > 0 and preg = 0:
-	'<b><font color="red">You have the blood flowing in the legs and staining the linen clothes.</font></b>'
+	'<b><font color="red">You have the blood flowing down your legs and staining your clothes.</font></b>'
 
-	if clrbelo > 0:clrbelo -= 1
+	if clrbelo > 0 and tanga = 1:clrbelo -= 1 & tanga = 0 & '<b><font color="red">Your panties have been ruined and you discreetly remove and dispose of them.</font></b>'
 
 	sweat += 1
 	manna -= 10

@@ -650,7 +650,7 @@ if $ARGS[0] = 'kiss':
 	'When you finally end the kiss, he shyly says: "<<$nickname>>, I really like you."'
 
 	if artemtimes >= 20 and leghumpArtem = 0:
-		'Artem trips over his words when he tries to suggest something: "<<$nickname, maybe we could... maybe I... I really want you... can I touch your ass? Please?"'
+		'Artem trips over his words when he tries to suggest something: "<<$nickname>>, maybe we could... maybe I... I really want you... can I touch your ass? Please?"'
 		act 'Let him caress your ass': gt 'artemEv', 'leghump'
 	elseif leghumpArtem >= 1:
 		'Artem looks at you with embarrassment, but gathers the courage to ask: "<<$nickname>>, you''re the best thing that''s ever happened to me. I enjoyed last time so much... could we play like that again?"'

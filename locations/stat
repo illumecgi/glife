@@ -1558,11 +1558,11 @@ if preg = 1:
 	if pregtime < 280 and pregtime > 27:knowpreg = 1 & pl '<b><font color="blue">You have been pregnant for <<pregtime>> days. Days until delivery <<rodtime>></font></b>'
 	if pregtime = 280:pl '<b><font color="red">You urgently need to go to the hospital</font></b>'
 	if pregtime >= 210:
-		pl'<font color = black>You have a huge <a href="exec:view''images/pregnant/3.jpg''"> stomach</a> pregnant woman</font>'
+		pl'<font color = black>You have the huge <a href="exec:view''images/pregnant/3.jpg''">stomach</a> of a pregnant woman.</font>'
 	elseif pregtime >= 150:
-		pl'<font color = black>Your <a href="exec:view''images/pregnant/2.jpg''"> tummy</a> rounded and very noticeable. surrounding see, you are pregnant</font>'
+		pl'<font color = black>Your <a href="exec:view''images/pregnant/2.jpg''">tummy</a> is rounded and very noticeable. It is clear to anyone who sees you, that you are pregnant.</font>'
 	elseif pregtime >= 90:
-		pl'<font color = black>Do you have a barely perceptible <a href="exec:view''images/pregnant/1.jpg''"> tummy</a>, which, however, invisible under clothing</font>'
+		pl'<font color = black>Do you have a barely perceptible <a href="exec:view''images/pregnant/1.jpg''">tummy</a>, which is not noticable under your clothing.</font>'
 	end
 !! MJ: Add a line before the next message.
 	if knowpreg = 1: pl

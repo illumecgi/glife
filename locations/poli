@@ -349,7 +349,7 @@ if $ARGS[0] = 'start':
 			act 'Name your child':
 				$kidname[nextbaby] = input ("Enter your babys name")
 
-				if $kidname[nextbaby] <= 0:
+				if $kidname[nextbaby] ! '':
 					if polkid[nextbaby] = 0:$kidname[nextbaby] = 'Masha'
 					if polkid[nextbaby] = 1:$kidname[nextbaby] = 'Misha'
 				end

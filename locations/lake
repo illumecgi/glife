@@ -909,7 +909,7 @@ if $ARGS[0] = 'walklake2':
 					cla
 					*clr
 					sex += 1
-					if rand(0,1) = 0
+					if rand(0,1) = 0:
 						$boy = 'Stasik'
 					else
 						$boy = 'Valera'

@@ -167,6 +167,9 @@ if $ARGS[0] = 'Gadbitch':
 	end
 
 	'A small country beach, where you can sunbathe and swim.'
+
+	act 'Get changed':gt 'changingroom', 'view_swim_list'
+
 	if sunWeather = 1:
 		if mirainriver = 1 and RAND(0,20) < 10:
 			'On the beach sunning razomlevshie<a href="exec:sun = 1 & gt ''Gadriver'', ''Mira'' ">Mira</a>.'
@@ -178,7 +181,7 @@ if $ARGS[0] = 'Gadbitch':
 
 	if temper >= 20 and month >= 5 and month <= 9:
 
-		if bikini > 0:
+		if $clothingworntype = 'swimwear':
 			act 'Bathe':
 				cla
 				*clr
@@ -321,7 +324,7 @@ if $ARGS[0] = 'Gadbitch':
 			end
 		end
 		if hour >= 8 and hour < 20 and sunWeather = 1:
-			if bikini > 0:
+			if $clothingworntype = 'swimwear':
 				act 'Sunbathing (1:00)':
 					cla
 					*clr
@@ -473,7 +476,16 @@ if $ARGS[0] = 'Gadbitch':
 		end
 	end
 
-	act 'Leave':minut += 5 & gt 'gadriver', 'start'
+	act'Leave':
+		if $clothingworntype = 'swimwear':
+			cla
+			'You need to get dressed in regular clothing first.'
+			act'Return':gt'Gadriver', 'Gadbitch'
+		else
+			minut += 5
+			gt 'Gadriver'
+		end
+	end
 end
 
 if $ARGS[0] = 'Mira':

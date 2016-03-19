@@ -30,7 +30,7 @@ if $ARGS[0] = 'start':
 
 	act 'Use changing room':gt 'changingroom', 'view_swim_list'
 
-	if nastjaqw = 3 and temper >= 20 and bikini > 0 and hour >= 6 and hour <= 20:'Waving her hand at you is <a href="exec:gt ''nastja'', ''pos14''">Anastasia</a>.'
+	if nastjaqw = 3 and temper >= 20 and $clothingworntype = 'swimwear' and hour >= 6 and hour <= 20:'Waving her hand at you is <a href="exec:gt ''nastja'', ''pos14''">Anastasia</a>.'
 
 	if hour >= 6 and hour <= 20:
 		'Nearby are the <a href="exec:gt ''lake'', ''aquapark''">water attractions</a>.'
@@ -181,9 +181,14 @@ if $ARGS[0] = 'start':
 	end
 
 	act 'Leave':
-		cla
-		minut += 40
-		gt 'street'
+		if $clothingworntype = 'swimwear':
+			cla
+			'You need to get dressed in regular clothing first.'
+			act'Return':gt 'lake','start'
+		else
+			minut += 40
+			gt 'street'
+		end
 	end
 end
 

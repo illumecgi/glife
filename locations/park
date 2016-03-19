@@ -112,7 +112,7 @@ if $ARGS[0] = 'start':
 		end
 	end
 
-	if sport > 0 and parkrunday ! daystart:
+	if $clothingworntype = 'exercise' and parkrunday ! daystart:
 		act 'Jog through the park (1:00)':
 			cla
 			*clr

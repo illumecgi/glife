@@ -374,6 +374,7 @@ if $ARGS[0] = 'wear':
 	PCloPants = CloPantsShortness
 	PCloSkirt = CloSkirtShortness
 	PCloStyle = CloStyle
+	PCloBimbo = CloBimbo
 
 	if PCloTopCut > 1:
 		if tits = 2 or tits = 3:PCloTopCut += 1

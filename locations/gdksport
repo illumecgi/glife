@@ -317,7 +317,7 @@ if hour < 16 or hour > 20:
 	exit
 end
 
-if albinaQWdance > 0 and AlbinaBlokDance = 0 and ZvezdEnd = 0 and sport = 1:
+if albinaQWdance > 0 and AlbinaBlokDance = 0 and ZvezdEnd = 0 and $clothingworntype = 'exercise':
 	act 'Train with Starlets':
 		cls
 		minut += 120
@@ -489,7 +489,7 @@ if albinaQWdance > 0 and AlbinaBlokDance = 0 and ZvezdEnd = 0 and sport = 1:
 	end
 end
 
-if gsAboDance > 0 and sport = 1:
+if gsAboDance > 0 and $clothingworntype = 'exercise':
 	act 'Section dance ticket is valid for <<gsAboDance>> visits':
 		cla
 		*clr
@@ -605,7 +605,7 @@ if gsAboDance > 0 and sport = 1:
 	end
 end
 
-if gsAboBeg > 0 and sport = 1:
+if gsAboBeg > 0 and $clothingworntype = 'exercise':
 	act 'Section races, subscription is valid for <<gsAboBeg>> visits':
 		cla
 		*clr
@@ -627,7 +627,7 @@ if gsAboBeg > 0 and sport = 1:
 	end
 end
 
-if gsAboVolley > 0 and volleysostav = 0 and sport = 1:
+if gsAboVolley > 0 and volleysostav = 0 and $clothingworntype = 'exercise':
 	if week ! 5:
 		act 'Section volleyball ticket is valid for <<gsAboVolley>> visits':
 			cla
@@ -717,7 +717,7 @@ if gsAboVolley > 0 and volleysostav = 0 and sport = 1:
 	end
 end
 
-if volleysostav > 0 and sport = 1:
+if volleysostav > 0 and $clothingworntype = 'exercise':
 	if week ! 6 and volkomday ! daystart:
 		act 'To engage with the team':
 			cla

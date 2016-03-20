@@ -58,8 +58,9 @@ end
 
 if eda > 0:
 	if cltarelka = 0 or edahot > 0:$edagot = ''
-	if cltarelka > 0 and edahot = 0:$edagot = '<a href="exec: dynamic $edagotd ">It can be prepared</a>'
-	'The refrigerator kept food that will last for <b><<eda>></b> Servings. <<$edagot>>'
+	if cltarelka > 0 and edahot = 0:$edagot = '<a href="exec:dynamic $edagotd">Cook meal (0:30)</a>'
+
+	'In the refrigerator there''s food, enough for <b><<eda>></b> servings. <<$edagot>>'
 end
 
 if edaD = 0 and eda = 0:
@@ -188,7 +189,7 @@ if zoo >= 6 and sobaka ! 0:
 						bj += 1
 						swallow += 1
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 
 						'"If you can not or do not want to" I asked <<$husName>> smiling and continues to sit and watch as the dog licks you.'
 						'"Already probably do not want to" You are responsible and deliberately pushes the wider legs. <<$husName>> It looks like you moan, while dog licks you and suddenly gets up and pulls a member brings it to your mouth.'
@@ -260,7 +261,7 @@ gs 'cum_manage'
 						bj += 1
 						swallow += 1
 						spafinloc = 12
-gs 'cum_manage'
+						gs 'cum_manage'
 						SUB += 2
 
 						'"What do you mean I can not, you what you like he licks" shouts <<$husName>>.'

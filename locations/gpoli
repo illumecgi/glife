@@ -129,7 +129,7 @@ if hour >= 6 and hour <= 21:
 			preg = 0
 			pregtalk = 0
 			sterilewb += 1
-			ARRPOS('yearkid',0) = nextbaby
+			nextbaby = ARRPOS('yearkid',0)
 			kid += 1
 			BabyEmbryo -= 1
 			daykid[nextbaby] = day
@@ -143,7 +143,7 @@ if hour >= 6 and hour <= 21:
 			act 'Name your child':
 				$kidname[nextbaby] = input ("Enter your babys name")
 
-				if $kidname[nextbaby] <= 0:
+				if $kidname[nextbaby] ! '':
 					if polkid[nextbaby] = 0:$kidname[nextbaby] = 'Masha'
 					if polkid[nextbaby] = 1:$kidname[nextbaby] = 'Misha'
 				end
@@ -243,9 +243,7 @@ if hour >= 6 and hour <= 21:
 	
 				if GerpesNapr = 0:Gerpes = -10 & 'You have completed the course.'
 				act 'Leave':gt 'gpoli'
-	
 			end
-
 		end
 
 		if TriperNapr > 0 and money >= 1500 and TriperUkolDay ! daystart:

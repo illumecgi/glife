@@ -20,7 +20,7 @@ bcolor = rgb(255, 255, 255)
 lcolor = rgb(106, 90, 205)
 $fname = 'Tahoma'
 fsize = 12
-$version = '0.4.0 The X and O''s version.'
+$version = '0.4.2 The X and O''s and fixes and babies version.'
 
 *nl
 *nl
@@ -45,6 +45,12 @@ $version = '0.4.0 The X and O''s version.'
 !!!! Recent Version Tracking Block !!!!!
 *nl
 'Recent Version Tracking:'
+*nl
+"0.4.2"
+'- More bugfixes'
+*nl
+"0.4.1"
+'- Bugfixes'
 *nl
 "0.4.0"
 '- New cum management system, inc. system wide changes, tracking and new consequences'

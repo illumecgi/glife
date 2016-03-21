@@ -64,13 +64,23 @@ if $ARGS[0] = 'start':
 			minut += 5
 
 			if vidage < 20:
-				if skin < 2:
-					'Girl, your face is covered in acne unless you improve your appearence there is no chance of working here.'
-				else
-					'Hmm, undress, I''ll take a look at you.'
-
+				!from 1.2.3 fix2
+				if age >= 18:
+					'- "Yes I am." - you answer, handing the passport.'
+					'- Hmm, undress, I''ll take a look at you.'
 					act 'Undress':gt 'foto', 'model'
+				elseif fakepassport = 1:
+					'- "Yes I am." - you answer, handing the fake passport.'
+					'You see He frown, checking your passport with suspicion.'
+					'- Hmm, undress, I''ll take a look at you.'
+					act 'Undress':gt 'foto', 'model' 
+				else
+					'- "Nearly..." - stretch you.'
+					'- Clear. Then here`s my business card, be sure to come after the age of majority.'
+					fakepassport = -1
+					!idea from sourimp
 				end
+				!end from 1.2.3 fix2
 			end
 
 			if vidage >= 20:'You ask about working as a model, but the photographer says to you, "I''m sorry, but you look like a pretty mature woman, we need young girls." This is his way of telling you that you look too old for this business.'

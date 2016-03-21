@@ -71,9 +71,27 @@ if $ARGS[0] = 'start':
 	end
 	
 	act 'Sit on a bench':
+		if alko > 3 and vnesh >= 20 : gt'placer_sex','sleeping_parc_alco'
 		cla
 		*clr
 		'<center><img src="images/lmps/сидит.jpg"></center>'
+!port from 1.2.3 fix 2
+!cloth-dependent, wail til new cloth system done
+		if odetjeans = 1: 
+			'<center><img src="images/gevent/bench_3.jpg"></center>'
+		elseif odetnewclo = 1 and newclo[131] = 1: 
+			'<center><img src="images/gevent/bench_5.jpg"></center>'
+		elseif ski = 1 or glamur = 1: 
+			'<center><img src="images/gevent/bench_2.jpg"></center>'
+		elseif odetshort = 1:  
+			'<center><img src="images/gevent/bench_1.jpg"></center>'
+		elseif  odetyoga = 1: 
+			'<center><img src="images/gevent/bench_5.jpg"></center>'
+		else 
+			'<center><img src="images/gevent/bench_2.jpg"></center>'
+		end
+}
+!end port from 1.2.3 fix 2
 		waiting = input ("How many minutes to sit down? (Not more 120 minutes)")
 
 		if waiting <= 0 or waiting > 120:
@@ -84,7 +102,70 @@ if $ARGS[0] = 'start':
 			willpower = willpower + 10
 			if son < 30:son += 2
 		end
-		
+!port from 1.2.3 fix2
+		if alko > 0:
+			act 'Sleep on a bench': 
+				if alko > 3 and vnesh >= 20 : gt'placer_sex','sleeping_parc_alco'
+				cla & *clr
+				health += 5
+				hapri = 0
+				InSleep = 1
+				gs'time'
+	!{
+	!cloth-dependent, wail til new cloth system done
+				if odetjeans = 1: 
+					'<center><img src="images/gevent/sleeping_park_jeans.jpg"></center>'
+				elseif odetnewclo = 1 and newclo[131] = 1: 
+					'<center><img src="images/gevent/sleeping_park_form.jpg"></center>'
+				elseif ski = 1 or glamur = 1: 
+					'<center><img src="images/gevent/sleeping_park_dress.jpg"></center>'
+				elseif odetshort = 1:  
+					'<center><img src="images/gevent/sleeping_park_shorts.jpg"></center>'
+				else 
+					'<center><img src="images/gevent/sleeping_park_dress.jpg"></center>'
+				end
+	}
+					if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
+			
+					'You slept through the night on a bench in the park, and surprisingly enough sleep itself.'
+					''
+				
+				act 'Wake up':
+					cla & *clr
+	!{
+	!cloth-dependent, wail til new cloth system done
+					if odetnewclo = 1 and newclo[131] = 1:
+						'<center><img src="images/gevent/sleeping_park1.jpg"></center>'
+						if tanga = 1: 
+							tanga = 0
+							'You sweetly smiled, spreading his arms and legs, and felt, that panties, where-so share, clenching his legs frightened you frightened thought: «I hope whoever took them panties only and limited, and did not take advantage of your condition and not made of something better».'
+						else
+							'You sweetly smiled, spreading his arms and legs, flashing her bare pussy for the entire Park.'
+						end
+					elseif ski = 1 or glamur = 1:
+						'<center><img src="images/gevent/sleeping_park.jpg"></center>'
+						if tanga = 1: 
+							tanga = 0
+							'You sweetly smiled, spreading his arms and legs, and felt, that panties, where-so share, clenching his legs frightened you frightened thought: «I hope whoever took them panties only and limited, and did not take advantage of your condition and not made of something better».'
+						else
+							'You sweetly smiled, spreading his arms and legs, flashing her bare pussy for the entire Park.'
+						end
+					else 
+						'<center><img src="images/gevent/sleeping_park2.jpg"></center>'
+						'You sweetly smiled.'
+					end	
+	}
+					act 'Up':
+						cla
+						InSleep = 0
+						minut += 480
+						son = 24
+						gt 'park', 'start'
+					end
+				end
+			end
+		end
+	!end port from 1.2.3 fix2		
 		act 'Consult a watch':gt'park','start'
 	end
 
@@ -666,6 +747,65 @@ if $ARGS[0] = 'rape1':
 		end
 	end
 end
+
+if $ARGS[0] = 'prohorov_sex':
+	cla & *clr
+	'<center><img src="images/qwest/alter/katja/prohorov_sex_1_1.jpg"></center>'
+	'You, embracing Kate moved out into the corridor, from time to time casting upon him a look, he followed you as bound. Offer, and turning to him and removing her arm from Katia`s neck, you asked:'
+	'- Ready?'
+	Act 'Kiss':
+		cla & *clr
+		'<center><img src="images/qwest/alter/katja/prohorov_sex_1_2.jpg"></center>'
+		'You pulled Katya to yourself, and they fell to her lips, she readily responded to your kiss, crazy like a spark danced not only in your eyes.'
+		if KatjaHorny >= 50:
+			Act 'Kiss chest':
+				cla & *clr
+				'<center><img src="images/qwest/alter/katja/prohorov_sex_1_3.jpg"></center>'
+				'Lips gliding on lips Katin, you gradually descended lower, first chin, then the neck, then...and then you pulled Katina breast from her dress and began to caress. Katya`s breath merged with the breath watching you guy.'
+				if KatjaHorny >= 60:
+					Act 'Expose breasts':
+						cla & *clr
+						'<center><img src="images/qwest/alter/katja/prohorov_sex_1_4.jpg"></center>'
+						'You pulled away from Katina chest and, by ratcheting down dress, put on display their Breasts. Kate didn`t have to beg, she immediately reached out with her tongue to the nipple on one of your Breasts.  Now was your turn to moan with pleasure.'
+						if KatjaHorny >= 70:
+							Act 'Rub breasts':
+								cla & *clr
+								'<center><img src="images/qwest/alter/katja/prohorov_sex_1_5.jpg"></center>'
+								'You clung to his chest Katina Boobs, enjoying the, as they RUB against each other. Greedily kissing with Kate, while kissing your tongues are intertwined like the legs of lovers, you hardly could react to the surrounding reality. Only heavy breathing Vani, remind you, what you do in the school corridor. Although it seems this fact you just started.'
+								if KatjaHorny >= 80:
+									Act 'Lift skirt':
+										cla & *clr
+										'<center><img src="images/qwest/alter/katja/prohorov_sex_1_6.jpg"></center>'
+										'Katya, moaning from each your touch, school corridor which may at any time, someone pass, Vanya, not knowing, where to put hands, you it`s just maddening, you, while Katina breast, grabbed the hem of your skirt, and slowly pulled her up. Stripping beautiful ass. Behind came, what a roar, and you felt on his ass Vanino hands.'
+										'- Just watch, - you cried, turning around and ogres hands.' 
+										'In his view, was read the universal anguish, but he moved his hands. Turning to Kate, you are surprised to notice, her eyes read the same disappointment with your decision.'
+										'It, It seems, wanted, to say something, but then suddenly the bell rang. You some-how, clean yourself up, ran to class.'
+										'The campaign overtook Ivan, turned around and shouted:'
+										'- Girls it was great.'
+										act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+									end
+								end
+								'You wanted, to add something to this jerk, but then suddenly the bell rang. You some-how, clean yourself up, ran to class.'
+								'The campaign overtook Ivan, turned around and shouted: '
+								'- Girls it was great.'
+								act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+							end
+						end
+						'Only you are going to continue the fun, as then suddenly, the bell rang. You some-how, clean yourself up, ran to class.'
+						'The campaign overtook Ivan, turned around and shouted:' 
+						'- Girls it was great.'
+						act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+					end
+				end
+				'Only you are going to continue the fun, as then suddenly, the bell rang. You some-how, clean yourself up, ran to class.'
+				'The campaign overtook Ivan, turned around and shouted:' 
+				'- Girls it was great.'
+				act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
+			end
+		end
+	end
+end		
+!end port from 1.2.3 fix2
 
 --- park ---------------------------------
 

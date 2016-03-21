@@ -85,37 +85,13 @@ end
 
 if hour > 6 and hour < 23 and month >= 5 and month <= 10:
 	act 'Rest on the bench':
+		if alko > 3 and vnesh >= 20 : gt'placer_sex','sleeping_parc_alco'
 		cla
        	*clr
        	gs'time'
        	gs'stat'
         '<center><img src="images/lmps/сидит.jpg"></center>'
 		waiting = input ("How many minutes of sitting? (Not more 120 minutes)")
-		if alco > 0:
-        	act 'Sleep on a bench':
-                cla
-                *clr
-			health = health + 5
-			hapri = 0
-			InSleep = 1
-			cloth_vid = 0
-			if tanga = 1:tanga = 0
-			gs'time'
-                '<center><img src="images/lmps/спитл.jpg"></center>'
-        
-                if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
-        
-                'You slept through the night on a bench in the park, and surprisingly enough sleep itself.'
-                ''
-		        act 'Up':
-				cla
-				InSleep = 0
-				minut += 480
-				son = 30
-				gt'gskver'
-			end
-        	end
-	end		
 
 		if waiting <= 0 or waiting > 120:
 			minut = minut + 15
@@ -125,10 +101,72 @@ if hour > 6 and hour < 23 and month >= 5 and month <= 10:
 			willpower = willpower + 10
 			if son < 30:son += 2
 		end
-
+	!port from 1.2.3 fix2
+		if alko > 0:
+			act 'Sleep on the bench': 
+				if alko > 3 and vnesh >= 20 : gt'placer_sex','sleeping_parc_alco'
+				cla & *clr
+				health += 5
+				hapri = 0
+				InSleep = 1
+				gs'time'
+			!{
+				!cloth-dependent, wail til new cloth system done
+				if odetjeans = 1: 
+					'<center><img src="images/gevent/sleeping_park_jeans.jpg"></center>'
+				elseif odetnewclo = 1 and newclo[131] = 1: 
+					'<center><img src="images/gevent/sleeping_park_form.jpg"></center>'
+				elseif ski = 1 or glamur = 1: 
+					'<center><img src="images/gevent/sleeping_park_dress.jpg"></center>'
+				elseif odetshort = 1:  
+					'<center><img src="images/gevent/sleeping_park_shorts.jpg"></center>'
+				else 
+					'<center><img src="images/gevent/sleeping_park_dress.jpg"></center>'
+				end
+			}
+					if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
+			
+					'You slept through the night on a bench in the park, and surprisingly enough sleep itself.'
+					''
+				
+				act 'Wake up':
+					cla & *clr
+					!{
+					!cloth-dependent, wail til new cloth system done
+					if odetnewclo = 1 and newclo[131] = 1:
+						'<center><img src="images/gevent/sleeping_park1.jpg"></center>'
+						if tanga = 1: 
+							tanga = 0
+							'You sweetly smiled, spreading his arms and legs, and felt, that panties, where-so share, clenching his legs frightened you frightened thought: «I hope whoever took them panties only and limited, and did not take advantage of your condition and not made of something better».'
+						else
+							'You sweetly smiled, spreading his arms and legs, flashing her bare pussy for the entire Park.'
+						end
+					elseif ski = 1 or glamur = 1:
+						'<center><img src="images/gevent/sleeping_park.jpg"></center>'
+						if tanga = 1: 
+							tanga = 0
+							'You sweetly smiled, spreading his arms and legs, and felt, that panties, where-so share, clenching his legs frightened you frightened thought: «I hope whoever took them panties only and limited, and did not take advantage of your condition and not made of something better».'
+						else
+							'You sweetly smiled, spreading his arms and legs, flashing her bare pussy for the entire Park.'
+						end
+					else 
+						'<center><img src="images/gevent/sleeping_park2.jpg"></center>'
+						'You sweetly smiled.'
+					end	
+					}
+					act 'Up':
+						cla
+						InSleep = 0
+						minut += 480
+						son = 24
+						gt'gskver'
+					end
+				end
+			end
+		end
+	!end port from 1.2.3 fix2
 		act 'Consult a watch':gt curloc
 	end	
-
 end
 
 act 'Walk (0:15)':

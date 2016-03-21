@@ -612,6 +612,9 @@ if horny > 10:
 					cls
 					minut += 15
 					selfplaytime += 15
+					!port from 1.2.3 fix2
+					if husband > 0 and housrA = 1 and husbandrink ! 10 and $locM = 'bedr': gt 'husbsex','husb_mastr_vtor'
+					!end port from 1.2.3 fix2
 					dick = dildohand
 
 					!!if $loc = 'bedrPar':'<center><img src="images/qwest/selfplay/dildo.jpg"></center>'

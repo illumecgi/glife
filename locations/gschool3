@@ -1,4 +1,3 @@
-
 # gschool3
 
 if $ARGS[0] = 'rand_gopnic':
@@ -80,7 +79,13 @@ if $ARGS[0] = 'rand_scoolboy':
 				*clr & cla
 				grupNPC[i] -= 5
 				'<center><img src="images/qwest/alter/uroc/rand_scoolboy1.jpg"></center>'
-				'"You fucking pervert!" you shout angrily, and you slap him across the face as hard as you can. You shake the sting out of your hand afterwards, while he clutches his cheek in agony. When he finally pulls his hands away from his face, the outline of your hand is clearly visible on his cheek... that''s going to leave a bruise. The other boys laugh loudly, this is the best entertainment they''ve had during the break in a long time.'
+				!from 1.2.3 fix2
+				if mesec > 0:
+					'You and so troubled period, and here, some moron lifts up her skirt you, turning, you slapped <<$npcSurName[i]>>at, under the laughter of other kids.'
+				else
+					'"You fucking pervert!" you shout angrily, and you slap him across the face as hard as you can. You shake the sting out of your hand afterwards, while he clutches his cheek in agony. When he finally pulls his hands away from his face, the outline of your hand is clearly visible on his cheek... that''s going to leave a bruise. The other boys laugh loudly, this is the best entertainment they''ve had during the break in a long time.'
+				end
+				!end from 1.2.3 fix2
 				act 'Go to afternoon lessons': gt 'gschool2', 'afternoon'
 			end
 		elseif grupNPC[i] > 50 and grupNPC[i] <= 90:

@@ -314,6 +314,7 @@
       <Location name="KatjaHomeTalk"/>
       <Location name="KatjaHomeDin"/>
       <Location name="Katja_Tanga"/>
+	  <Location name="katja_sex"/>
     </Folder>
     <Folder name="Village">
       <Location name="famdorfride"/>
@@ -392,6 +393,7 @@
       <Location name="FedorEv"/>
       <Location name="strela"/>
       <Location name="kotovSex"/>
+      <Location name="kotovdom"/>
       <Location name="BnameGen"/>
       <Location name="boymass"/>
       <Location name="tboyopr"/>

@@ -46,6 +46,12 @@ $version = '0.4.1 The X and O''s and closed brackets too version.'
 *nl
 'Recent Version Tracking:'
 *nl
+"0.5.0"
+'- Rewrite of volleyball trainer events to improve flow by EKay'
+*nl
+"0.4.2"
+'- More bug fixes'
+*nl
 "0.4.1"
 '- Bug fixes'
 *nl
@@ -53,7 +59,7 @@ $version = '0.4.1 The X and O''s and closed brackets too version.'
 '- New cum management system, inc. system wide changes, tracking and new consequences'
 '- Text edits by Lantera'
 '- New cheat menu and appearance options by Illume'
-'- Church is open, only basic options for now, more to come, thanks to EKay'
+'- Church is open, only basic options for now, more to come, thanks to Jeftest and EKay'
 '- Bug fixes and code clean up'
 '- Timer for Mistress spanking now sets'
 '- Volleyball trainer should now work'
